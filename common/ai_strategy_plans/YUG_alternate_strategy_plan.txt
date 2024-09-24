@@ -1,0 +1,2747 @@
+YUG_SMALLER_NEUTRAL = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SMALLER_NEUTRAL
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SMALLER_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_purchase_foreign
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_crush_the_ustasa #35
+		YUG_slovenia_for_support
+		YUG_develop_civilian_industry
+		
+		#1939 
+		YUG_surrender_macedonia
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_invite_german_military_mission
+		
+		#1940
+		YUG_coastal_defense
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		YUG_enforced_neutrality
+
+		#1941
+		YUG_fortress_yugoslavia
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+
+		#1943
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SMALLER_ALLIES = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SMALLER_ALLIES
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SMALLER_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_reinforce_old_alliances
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_crush_the_ustasa #35
+		YUG_slovenia_for_support
+		
+		#1939 
+		YUG_develop_civilian_industry
+		YUG_surrender_macedonia
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		
+		#1940
+		YUG_small_arms 
+		YUG_join_allies
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		
+		#1941
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+
+		#1943
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 10
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SMALLER_ALLIANCE = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SMALLER_ALLIANCE
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SMALLER_ALLIANCE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_crush_the_ustasa #35
+		YUG_slovenia_for_support
+		YUG_develop_military_industry
+
+		#1939 
+		YUG_surrender_macedonia
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		YUG_join_allies
+		
+		#1940
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		
+		#1941
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+
+		#1943
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SMALLER_AXIS = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SMALLER_AXIS
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SMALLER_AXIS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_crush_the_ustasa #35
+		YUG_slovenia_for_support
+		YUG_develop_military_industry
+
+		#1939 
+		YUG_surrender_macedonia
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		
+		#1940
+		YUG_invite_german_military_mission
+		YUG_join_axis
+		YUG_surrender_italian_claims
+		YUG_invite_italian_naval_experts
+		YUG_allied_air_combat_school
+
+		#1941
+		YUG_coronation
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+
+		#1943
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	focus_factors = {
+		YUG_claim_macedonia = 0
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 10
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_BIGGER_NEUTRAL = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_BIGGER_NEUTRAL
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = BIGGER_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_purchase_foreign
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_establish_the_banovina_of_croatia
+		YUG_ban_slovene_nationalist_parties
+		
+		#1939 
+		YUG_concessions_for_macedonians
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_invite_german_military_mission
+		
+		#1940
+		YUG_coastal_defense
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		YUG_enforced_neutrality
+
+		#1941
+		YUG_fortress_yugoslavia
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_expand_the_university_of_ljubljana
+
+		#1943
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_BIGGER_ALLIES = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_BIGGER_ALLIES
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = BIGGER_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_reinforce_old_alliances
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_brigadistas
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_establish_the_banovina_of_croatia
+		
+		#1939 
+		YUG_ban_slovene_nationalist_parties
+		YUG_rare_minerals_exploitation
+		YUG_concessions_for_macedonians
+		YUG_end_the_regency
+		YUG_royal_wedding
+		
+		#1940
+		YUG_coronation
+		YUG_join_allies
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		
+		#1941
+		YUG_coastal_defense
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		
+		#1942
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_expand_the_university_of_ljubljana
+
+		#1943
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 10
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_BIGGER_ALLIANCE = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_BIGGER_ALLIANCE
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = BIGGER_ALLIANCE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_military_industry
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_brigadistas
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_establish_the_banovina_of_croatia
+		YUG_ban_slovene_nationalist_parties
+		
+		#1939 
+		YUG_concessions_for_macedonians
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		YUG_join_allies
+		
+		#1940
+		YUG_mountain_brigades
+		YUG_rare_minerals_exploitation
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		
+		#1941
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_expand_the_university_of_ljubljana
+
+		#1943
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_BIGGER_AXIS = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_BIGGER_AXIS
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = BIGGER_AXIS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_establish_the_banovina_of_croatia
+		YUG_ban_slovene_nationalist_parties
+		
+		#1939 
+		YUG_develop_military_industry
+		YUG_concessions_for_macedonians
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		
+		#1940
+		YUG_coastal_defense
+		YUG_invite_german_military_mission
+		YUG_join_axis
+		YUG_surrender_italian_claims
+		YUG_invite_italian_naval_experts
+		YUG_allied_air_combat_school
+
+		#1941
+		YUG_coronation
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		
+		#1942
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_expand_the_university_of_ljubljana
+
+		#1943
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	focus_factors = {
+		YUG_claim_macedonia = 0
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 10
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_BIGGER_AXIS_EXPANSION = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_BIGGER_AXIS_EXPANSION
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = BIGGER_AXIS_EXPANSION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_evolution
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_brigadistas
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_establish_the_banovina_of_croatia
+		
+		#1939 
+		YUG_ban_slovene_nationalist_parties
+		YUG_develop_military_industry
+		YUG_concessions_for_macedonians
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		
+		#1940
+		YUG_invite_german_military_mission
+		YUG_join_axis
+		YUG_zara_for_axis
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+
+		#1941
+		YUG_claim_macedonia
+		YUG_allied_air_combat_school
+		YUG_coronation
+		YUG_greater_yugoslavia
+		YUG_all_yugoslavian_regiments
+
+		#1942
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+
+		#1943
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+
+		#1944
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 10
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_I_NEUTRAL = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_I_NEUTRAL
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_I_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_rare_minerals_exploitation
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_purchase_foreign
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_united_autonomous_croatia
+		YUG_safeguard_bosnia
+		
+		#1939 
+		YUG_dissolve_serbia
+		YUG_fortify_banat #35
+		YUG_invite_german_military_mission
+		YUG_end_the_regency
+		YUG_royal_wedding
+		
+		#1940
+		YUG_coronation
+		YUG_enforced_neutrality
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		
+		#1941
+		YUG_coastal_defense
+		YUG_fortress_yugoslavia
+		YUG_towards_independence
+		YUG_defence_army_of_yugoslavia
+		YUG_independent_kingdoms #35
+		YUG_anti_tank_defenses
+
+		#1942
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+
+		#1943
+		YUG_improve_light_industry
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+
+		#1944
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_I_ALLIES = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_I_ALLIES
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_I_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_reinforce_old_alliances
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_devolved_croatia
+		YUG_divide_bosnia
+		
+		#1939 
+		YUG_rare_minerals_exploitation
+		YUG_dissolve_serbia
+		YUG_autonomous_transylvania #35
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		
+		#1940
+		YUG_small_arms 
+		YUG_join_allies
+		YUG_towards_independence
+		YUG_defence_army_of_yugoslavia
+		YUG_independent_kingdoms #35
+		YUG_domestic_artillery_production
+		
+		#1941
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		
+		#1942
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+
+		#1943
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+
+		#1944
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 10
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_I_ALLIANCE = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_I_ALLIANCE
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_I_ALLIANCE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_military_industry
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+		YUG_local_developers
+
+		#1938
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_united_autonomous_croatia
+		YUG_divide_bosnia
+		YUG_dissolve_serbia
+		
+		#1939 
+		YUG_fortify_banat #35
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		YUG_join_allies
+		
+		#1940
+		YUG_rare_minerals_exploitation
+		YUG_towards_independence
+		YUG_defence_army_of_yugoslavia
+		YUG_independent_kingdoms #35
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		
+		#1941
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		
+		#1942
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+
+		#1943
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+
+		#1944
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_I_AXIS = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_I_AXIS
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_I_AXIS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+		YUG_local_developers
+
+		#1938
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_devolved_croatia
+		YUG_safeguard_bosnia
+		YUG_develop_military_industry
+
+		#1939 
+		YUG_dissolve_serbia
+		YUG_banat_for_support #35
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		
+		#1940
+		YUG_coastal_defense
+		YUG_invite_german_military_mission
+		YUG_join_axis
+		YUG_surrender_italian_claims
+		YUG_coronation
+
+		#1941
+		YUG_towards_independence
+		YUG_defence_army_of_yugoslavia
+		YUG_independent_kingdoms #35
+		YUG_invite_italian_naval_experts
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		
+		#1942
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+		YUG_improve_light_industry
+
+		#1943
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+
+		#1944
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	focus_factors = {
+		YUG_claim_macedonia = 0
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 10
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_I_NEUTRAL_LEAGUE = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_I_NEUTRAL_LEAGUE
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_I_NEUTRAL_LEAGUE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_rare_minerals_exploitation
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_purchase_foreign
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_united_autonomous_croatia
+		YUG_safeguard_bosnia
+		
+		#1939 
+		YUG_dissolve_serbia
+		YUG_fortify_banat #35
+		YUG_invite_german_military_mission
+		YUG_end_the_regency
+		YUG_royal_wedding
+		
+		#1940
+		YUG_coronation
+		YUG_enforced_neutrality
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		
+		#1941
+		YUG_coastal_defense
+		YUG_fortress_yugoslavia
+		YUG_towards_independence
+		YUG_defence_army_of_yugoslavia
+		YUG_defence_league #35
+		YUG_anti_tank_defenses
+
+		#1942
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_improve_serbian_rail_network
+
+		#1943
+		YUG_improve_light_industry
+		YUG_serbian_steel
+		YUG_expand_the_university_of_belgrad
+		YUG_central_management
+		YUG_expand_the_sarajevo_arsenals
+
+		#1944
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_U_NEUTRAL = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_U_NEUTRAL
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_U_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_rare_minerals_exploitation
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_purchase_foreign
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_united_autonomous_croatia
+		YUG_safeguard_bosnia
+		
+		#1939 
+		YUG_dissolve_serbia
+		YUG_fortify_banat #35
+		YUG_invite_german_military_mission
+		YUG_end_the_regency
+		YUG_royal_wedding
+		
+		#1940
+		YUG_coronation
+		YUG_enforced_neutrality
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		
+		#1941
+		YUG_coastal_defense
+		YUG_fortress_yugoslavia
+		YUG_united_kingdom
+		YUG_guarantee_religious_liberties
+		YUG_anti_tank_defenses
+		
+		#1942
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+
+		#1943
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_reunite_the_kingdom
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+
+		#1944
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_U_ALLIES = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_U_ALLIES
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_U_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_reinforce_old_alliances
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_civilian_industry
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+
+		#1938
+		YUG_local_developers
+		YUG_brigadistas
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_devolved_croatia
+		
+		#1939 
+		YUG_divide_bosnia
+		YUG_rare_minerals_exploitation
+		YUG_dissolve_serbia
+		YUG_autonomous_transylvania #35
+		YUG_end_the_regency
+		YUG_royal_wedding
+		
+		#1940
+		YUG_coronation
+		YUG_join_allies
+		YUG_small_arms 
+		YUG_united_kingdom
+		YUG_guarantee_religious_liberties
+		
+		#1941
+		YUG_domestic_artillery_production
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		
+		#1942
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+
+		#1943
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_reunite_the_kingdom
+		YUG_expand_the_university_of_belgrad
+		YUG_local_self_management
+
+		#1944
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 10
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_U_ALLIANCE = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_U_ALLIANCE
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_U_ALLIANCE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_allied_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_develop_military_industry
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_modernize_the_air_force
+		YUG_local_developers
+
+		#1938
+		YUG_brigadistas
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_united_autonomous_croatia
+		YUG_divide_bosnia
+		YUG_dissolve_serbia
+		
+		#1939 
+		YUG_banat_for_support #35
+		YUG_end_the_regency
+		YUG_royal_wedding
+		YUG_coronation
+		YUG_join_allies
+		
+		#1940
+		YUG_mountain_brigades
+		YUG_rare_minerals_exploitation
+		YUG_united_kingdom
+		YUG_guarantee_religious_liberties
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		
+		#1941
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		YUG_allied_air_combat_school
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		
+		#1942
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+
+		#1943
+		YUG_develop_slovenian_industry
+		YUG_reunite_the_kingdom
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+		
+		#1944
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_U_AXIS = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_U_AXIS
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_U_AXIS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+		YUG_local_developers
+
+		#1938
+		YUG_ikarus
+		YUG_the_ik_3 
+		YUG_united_autonomous_croatia
+		YUG_safeguard_bosnia
+
+		#1939 
+		YUG_develop_military_industry
+		YUG_dissolve_serbia
+		YUG_banat_for_support #35
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+			
+		#1940
+		YUG_expand_the_serbian_shipyards
+		YUG_coastal_defense
+		YUG_invite_german_military_mission
+		YUG_join_axis
+		YUG_surrender_italian_claims
+		
+		#1941
+		YUG_coronation
+		YUG_united_kingdom
+		YUG_guarantee_religious_liberties
+		YUG_invite_italian_naval_experts
+		YUG_anti_tank_defenses
+		
+		#1942
+		YUG_local_militias
+		YUG_independent_engineer_regiments 
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+
+		#1943
+		YUG_develop_slovenian_industry
+		YUG_reunite_the_kingdom
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+	
+		#1944
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	focus_factors = {
+		YUG_claim_macedonia = 0
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 10
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_SPLIT_U_AXIS_EXPANSION = {
+	name = "Yugoslavian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_SPLIT_U_AXIS_EXPANSION
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = SPLIT_U_AXIS_EXPANSION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	
+	ai_national_focuses = {
+		#1936
+		YUG_western_focus
+		YUG_industrialization_program
+		YUG_friendship_treaty_with_italy #35
+		YUG_attract_axis_capital
+		YUG_expand_the_mining_industry
+
+		#1937
+		YUG_rare_minerals_exploitation
+		YUG_limited_self_government #35
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_modernize_the_air_force
+		YUG_local_developers
+
+		#1938
+		YUG_ikarus
+		YUG_brigadistas
+		YUG_the_ik_3 
+		YUG_devolved_croatia
+		YUG_divide_bosnia
+
+		#1939 
+		YUG_develop_military_industry
+		YUG_dissolve_serbia
+		YUG_autonomous_transylvania #35
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+			
+		#1940
+		YUG_expand_the_serbian_shipyards
+		YUG_invite_german_military_mission
+		YUG_join_axis
+		YUG_zara_for_axis
+		YUG_coastal_defense
+		
+		#1941
+		YUG_claim_macedonia
+		YUG_coronation
+		YUG_united_kingdom
+		YUG_greater_yugoslavia
+		YUG_all_yugoslavian_regiments
+
+		#1942
+		YUG_guarantee_religious_liberties
+		YUG_invite_italian_naval_experts
+		YUG_anti_tank_defenses
+		YUG_local_militias
+		YUG_expand_the_university_of_zagreb
+
+		#1943
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_develop_slovenian_industry
+		YUG_reunite_the_kingdom
+		YUG_independent_engineer_regiments 
+	
+		#1944
+		YUG_motorize_the_cavalry
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+
+		#1945
+		YUG_armored_cavalry
+		YUG_tank_conversions #35
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 10
+		YUG_ivo_lola_ribar = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_communist = {
+	name = "Yugoslavian communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_COMMUNIST
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#1936
+		YUG_industrialization_program
+		YUG_recognize_the_soviet_union
+		YUG_modernize_the_air_force
+		YUG_mutual_economic_aid
+		YUG_form_peasant_councils
+		
+		#1937
+		YUG_expand_the_mining_industry
+		YUG_develop_military_industry
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_purchase_foreign
+
+		#1938
+		YUG_abolish_the_monarchy
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_rare_minerals_exploitation
+		YUG_small_arms 
+
+		#1939
+		YUG_domestic_artillery_production
+		YUG_join_comintern
+		YUG_form_the_federal_republic
+		YUG_federal_defense_council
+		YUG_expand_the_university_of_zagreb
+		
+
+		#1940
+		YUG_integrated_rail_network
+		YUG_research_collaboration
+		YUG_improve_light_industry
+		YUG_expand_the_serbian_shipyards
+		YUG_develop_slovenian_industry
+
+		#1941
+		YUG_coastal_defense
+		YUG_anti_tank_defenses
+		YUG_independent_engineer_regiments 
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+		YUG_motorize_the_cavalry
+		YUG_expand_the_sarajevo_arsenals
+
+		#1942
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_modern_tanks
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 10
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+YUG_communist_pan_slav = {
+	name = "Yugoslavian communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_COMMUNIST_SLAVIC
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = COMMUNIST_SLAVIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#1936
+		YUG_industrialization_program
+		YUG_recognize_the_soviet_union
+		YUG_modernize_the_air_force
+		YUG_form_peasant_councils
+		YUG_mutual_economic_aid
+		
+		#1937
+		YUG_expand_the_mining_industry
+		YUG_develop_civilian_industry
+		YUG_abolish_the_monarchy
+		YUG_yugoslavian_path_to_communism
+		YUG_pan_slavic_workers_congress
+
+		#1938
+		YUG_army_modernization 			
+		YUG_invite_albania #asap 35
+		YUG_invite_bulgaria #asap 35
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3
+	
+		#1939
+		YUG_mountain_brigades
+		YUG_rare_minerals_exploitation
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_form_the_federal_republic		
+
+		#1940
+		YUG_federal_defense_council
+		YUG_expand_the_university_of_zagreb
+		YUG_integrated_rail_network
+		YUG_local_militias
+		YUG_improve_light_industry
+
+		#1941
+		YUG_expand_the_serbian_shipyards
+		YUG_develop_slovenian_industry
+		YUG_coastal_defense
+		YUG_anti_tank_defenses
+		YUG_independent_engineer_regiments
+
+		#1942
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+		YUG_motorize_the_cavalry
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+
+		#1943
+		YUG_armored_cavalry
+		YUG_modern_tanks
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 10
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		YUG_pan_balkan_workers_congress = 0
+	}
+
+}
+
+YUG_communist_pan_balkan = {
+	name = "Yugoslavian communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_COMMUNIST_BALKAN
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = COMMUNIST_BALKAN
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#1936
+		YUG_industrialization_program
+		YUG_recognize_the_soviet_union
+		YUG_modernize_the_air_force
+		YUG_form_peasant_councils
+		YUG_mutual_economic_aid
+		
+		#1937
+		YUG_expand_the_mining_industry
+		YUG_develop_civilian_industry
+		YUG_abolish_the_monarchy
+		YUG_yugoslavian_path_to_communism
+		YUG_pan_slavic_workers_congress
+
+		#1938
+		YUG_army_modernization 			
+		YUG_invite_albania #asap 35
+		YUG_invite_bulgaria #asap 35
+		YUG_pan_balkan_workers_congress #asap
+		YUG_form_the_federal_republic	
+		YUG_federal_defense_council
+		YUG_invite_greece #asap 35
+		YUG_invite_hungary #asap 35
+		YUG_invite_romania #asap 35
+		YUG_invite_turkey  #asap 35
+	
+		#1939
+		YUG_local_developers
+		YUG_ikarus
+		YUG_the_ik_3
+		YUG_mountain_brigades
+		YUG_rare_minerals_exploitation	
+
+		#1940
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_university_of_zagreb
+
+		#1941
+		YUG_integrated_rail_network
+		YUG_local_militias
+		YUG_improve_light_industry
+		YUG_expand_the_serbian_shipyards
+		YUG_develop_slovenian_industry
+
+		#1942
+		YUG_coastal_defense
+		YUG_anti_tank_defenses
+		YUG_independent_engineer_regiments
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+
+		#1943
+		YUG_motorize_the_cavalry
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_modern_tanks
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 10
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+
+	}
+}
+
+YUG_communist_neutral = {
+	name = "Yugoslavian communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	enable = {
+		OR = {
+			has_country_flag = YUG_AI_RANDOM_COMMUNIST_NEUTRAL
+			has_game_rule = {
+				rule = YUG_ai_behavior
+				option = COMMUNIST_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#1936
+		YUG_industrialization_program
+		YUG_recognize_the_soviet_union
+		YUG_modernize_the_air_force
+		YUG_mutual_economic_aid
+		YUG_form_peasant_councils
+		
+		#1937
+		YUG_expand_the_mining_industry
+		YUG_develop_military_industry
+		YUG_army_modernization 			
+		YUG_mountain_brigades
+		YUG_purchase_foreign
+
+		#1938
+		YUG_abolish_the_monarchy
+		YUG_license_production 
+		YUG_fighter_license 
+		YUG_yugoslavian_path_to_communism
+		YUG_form_the_federal_republic
+
+		#1939
+		YUG_federal_defense_council
+		YUG_rare_minerals_exploitation
+		YUG_small_arms 
+		YUG_domestic_artillery_production
+		YUG_expand_the_university_of_zagreb
+
+
+		#1940
+		YUG_integrated_rail_network
+		YUG_improve_light_industry
+		YUG_expand_the_serbian_shipyards
+		YUG_develop_slovenian_industry
+		YUG_coastal_defense
+
+
+		#1941
+		YUG_anti_tank_defenses
+		YUG_independent_engineer_regiments 
+		YUG_expand_the_university_of_ljubljana
+		YUG_local_self_management
+		YUG_motorize_the_cavalry
+
+		#1942
+		YUG_expand_the_sarajevo_arsenals
+		YUG_motorized_logistics
+		YUG_armored_cavalry
+		YUG_modern_tanks
+		YUG_army_maneuvers
+		YUG_supremacy_of_defense
+		YUG_artillery_regiments
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		YUG_milovan_djilas = 0
+		YUG_dimitrije_ljotic = 0
+		YUG_ivo_lola_ribar = 10
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		YUG_join_comintern = 0
+		YUG_pan_slavic_workers_congress = 0
+		YUG_pan_balkan_workers_congress = 0
+	}
+
+}

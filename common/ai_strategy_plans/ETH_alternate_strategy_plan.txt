@@ -1,0 +1,1007 @@
+# By Blood Alone
+ETH_BBA_alternative_imperialist_plan = {
+	name = "ETH imperialist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_IMPERIAL_JAH
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = IMPERIAL_JAH
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+		# is_subject = yes # Maybe re-enable... 
+	}
+
+	ai_national_focuses = {
+		# Always try to do these as soon as it is available
+		ETH_fait_accompli
+		ETH_the_king_of_kings
+
+		# 1936
+		ETH_rally_around_the_emperor # 35
+		ETH_the_second_italo-ethiopian_war # 35
+		ETH_the_emperor_stays # 35
+		ETH_the_lion_stands_firm # 70 
+		ETH_ecole_militaire_haile_selassie_1er # 35
+		ETH_renewed_offensive # 35
+
+		# in between focuses when fighting
+		ETH_mercenaries
+		ETH_the_lessons_of_war
+		ETH_scavenging_tactics
+		ETH_volunteers
+		ETH_tactical_training
+		ETH_reintegrate_aussa
+		ETH_jah
+		ETH_expand_the_mehal_sefari
+		ETH_expand_the_kebur_zabagna
+		ETH_learning_from_the_enemy
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		ETH_support_anti-colonialist_resistance = 0
+		ETH_empower_the_ras = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ETH_BBA_alternative_imperialist_plan_2 = {
+	name = "ETH imperialist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_IMPERIAL_SOLOMON
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = IMPERIAL_SOLOMON
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+		# is_subject = yes # Maybe re-enable... 
+	}
+
+	ai_national_focuses = {
+		# Always try to do these as soon as it is available
+		ETH_fait_accompli
+		ETH_the_king_of_kings
+
+		# 1936
+		ETH_rally_around_the_emperor # 35
+		ETH_the_second_italo-ethiopian_war # 35
+		ETH_the_emperor_stays # 35
+		ETH_the_lion_stands_firm # 70 
+		ETH_ecole_militaire_haile_selassie_1er # 35
+		ETH_renewed_offensive # 35
+
+		# in between focuses when fighting
+		ETH_mercenaries
+		ETH_the_lessons_of_war
+		ETH_scavenging_tactics
+		ETH_expand_the_mehal_sefari
+		ETH_expand_the_kebur_zabagna
+		ETH_learning_from_the_enemy
+		ETH_volunteers
+		ETH_tactical_training
+		ETH_reintegrate_aussa
+		ETH_the_one_true_heir_of_solomon
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		ETH_support_anti-colonialist_resistance = 0
+		ETH_empower_the_ras = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ETH_BBA_alternative_imperialist_plan_3 = {
+	name = "ETH imperialist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_IMPERIAL_PAN_AFRICAN
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = IMPERIAL_PAN_AFRICAN
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+		# is_subject = yes # Maybe re-enable... 
+	}
+
+	ai_national_focuses = {
+		# Always try to do these as soon as it is available
+		ETH_fait_accompli
+		ETH_the_king_of_kings
+
+		# 1936
+		ETH_rally_around_the_emperor # 35
+		ETH_the_second_italo-ethiopian_war # 35
+		ETH_the_emperor_stays # 35
+		ETH_the_lion_stands_firm # 70 
+		ETH_ecole_militaire_haile_selassie_1er # 35
+		ETH_renewed_offensive # 35
+
+		# in between focuses when fighting
+		ETH_mercenaries
+		ETH_the_lessons_of_war
+		ETH_scavenging_tactics
+		ETH_keep_the_chitet
+		ETH_expand_the_kebur_zabagna
+		ETH_the_heroes_of_ethiopia
+		ETH_volunteers
+		ETH_regional_training_centers
+		ETH_support_anti-colonialist_resistance
+		ETH_reintegrate_aussa
+		ETH_pan-africanism
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		ETH_empower_the_ras = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ETH_BBA_alternative_imperialist_plan_4 = {
+	name = "ETH imperialist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_IMPERIAL_AFRICAN_UNION
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = IMPERIAL_AFRICAN_UNION
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+		# is_subject = yes # Maybe re-enable... 
+	}
+
+	ai_national_focuses = {
+		# Always try to do these as soon as it is available
+		ETH_fait_accompli
+		ETH_the_king_of_kings
+
+		# 1936
+		ETH_rally_around_the_emperor # 35
+		ETH_the_second_italo-ethiopian_war # 35
+		ETH_the_emperor_stays # 35
+		ETH_the_lion_stands_firm # 70 
+		ETH_ecole_militaire_haile_selassie_1er # 35
+		ETH_renewed_offensive # 35
+
+		# in between focuses when fighting
+		ETH_mercenaries
+		ETH_the_lessons_of_war
+		ETH_scavenging_tactics
+		ETH_keep_the_chitet
+		ETH_expand_the_kebur_zabagna
+		ETH_the_heroes_of_ethiopia
+		ETH_volunteers
+		ETH_regional_training_centers
+		ETH_support_anti-colonialist_resistance
+		ETH_reintegrate_aussa
+		ETH_unite_the_afar
+		ETH_the_african_union
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		ETH_empower_the_ras = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ETH_BBA_alternative_imperialist_plan_5 = {
+	name = "ETH imperialist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_IMPERIAL_AFRICAN_UNION_FEDERAL
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = IMPERIAL_AFRICAN_UNION_FEDERAL
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+		# is_subject = yes # Maybe re-enable... 
+	}
+
+	ai_national_focuses = {
+		# Always try to do these as soon as it is available
+		ETH_fait_accompli
+		ETH_the_king_of_kings
+
+		# 1936
+		ETH_rally_around_the_emperor # 35
+		ETH_the_second_italo-ethiopian_war # 35
+		ETH_the_emperor_stays # 35
+		ETH_the_lion_stands_firm # 70 
+		ETH_ecole_militaire_haile_selassie_1er # 35
+		ETH_renewed_offensive # 35
+
+		# in between focuses when fighting
+		ETH_mercenaries
+		ETH_the_lessons_of_war
+		ETH_scavenging_tactics
+		ETH_keep_the_chitet
+		ETH_expand_the_kebur_zabagna
+		ETH_the_heroes_of_ethiopia
+		ETH_volunteers
+		ETH_regional_training_centers
+		ETH_support_anti-colonialist_resistance
+		ETH_reintegrate_aussa
+		ETH_unite_the_afar
+		ETH_empower_the_ras
+		ETH_a_federal_empire
+		ETH_the_african_union
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+#Ethiopia overthrows HS, requests soviet aid and becomes a puppet.
+ETH_stalinist_plan = {
+	name = "Ethiopian Communist Plan"
+	desc = "RULE_OPTION_ETH_STALINIST_desc"
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_STALINIST
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = STALINIST
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		#AI should prio getting to Soviet Aid and Soviet Mediation. If nothing available, then do Italo-Ethiopian war focuses
+
+		#1936
+		
+		ETH_military_communism
+		ETH_the_second_italo-ethiopian_war
+		ETH_anti_imperialist_agitation
+		ETH_in_the_name_of_the_people		
+		ETH_soviet_aid	
+		ETH_soviet_rifles
+		#ETH_military_advisors
+		ETH_counter_the_armored_threat
+		ETH_soviet_mediation
+		ETH_liberate_aussa		
+
+		#ETH_renewed_offensive
+		#ETH_northern_thrust
+		ETH_falling_back
+		ETH_the_defense_of_addis_ababa	
+		ETH_a_last_stand
+
+		# AI should focus on building industry after war, then start doing Stalinist mischief across East Africa.
+
+		ETH_red_army_engineers
+		#1938
+		ETH_transformation_of_nature
+		ETH_heavy_industry
+		ETH_arms_production
+		ETH_develop_the_capital_region
+		ETH_state_owned_industry
+		#1939
+		ETH_infrastructure_projects
+		ETH_ecole_militaire_haile_selassie_1er
+		ETH_expand_the_mehal_sefari
+		ETH_tactical_training
+		ETH_mytishchi-ababa_plant
+		ETH_soviet-ethiopian_trade_agreement
+		#1940
+		ETH_a_port_of_our_own
+		ETH_ethiopian_shipbuilding
+		ETH_request_soviet_hulls
+		ETH_freedom_at_gunpoint
+		#1941
+		ETH_increased_factory_output
+		ETH_rapid_industrial_expansion
+		#1942
+				
+		#1943
+	}
+
+	focus_factors = {
+		ETH_send_home_advisors = 0
+		ETH_seek_new_trading_partners = 0
+		ETH_our_own_path = 0
+	}
+}
+
+ETH_stalinist_plan_2 = {
+	name = "Ethiopian Communist Plan"
+	desc = "RULE_OPTION_ETH_STALINIST_desc"
+
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_STALINIST_REBEL
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = STALINIST_REBEL
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		#AI should prio getting to Soviet Aid and Soviet Mediation. If nothing available, then do Italo-Ethiopian war focuses
+
+		#1936
+		
+		ETH_military_communism
+		ETH_the_second_italo-ethiopian_war
+		ETH_anti_imperialist_agitation
+		ETH_in_the_name_of_the_people		
+		ETH_soviet_aid	
+		ETH_soviet_rifles
+		#ETH_military_advisors
+		ETH_clearing_the_skies
+		ETH_soviet_mediation
+		ETH_liberate_aussa		
+
+		#ETH_renewed_offensive
+		#ETH_northern_thrust
+		ETH_falling_back
+		ETH_the_defense_of_addis_ababa	
+		ETH_a_last_stand
+
+		# AI should focus on building industry after war, then start doing Stalinist mischief across East Africa.
+
+		ETH_red_army_engineers
+		#1938
+		ETH_laying_the_tracks
+		ETH_heavy_industry
+		ETH_arms_production
+		ETH_develop_the_capital_region
+		ETH_state_owned_industry
+		#1939
+		ETH_infrastructure_projects
+		ETH_ecole_militaire_haile_selassie_1er
+		ETH_expand_the_mehal_sefari
+		ETH_tactical_training
+		ETH_send_home_advisors
+		ETH_seek_new_trading_partners
+		#1940
+		ETH_a_port_of_our_own
+		ETH_ethiopian_shipbuilding
+		ETH_request_soviet_hulls
+		ETH_our_own_path
+		ETH_freedom_at_gunpoint
+		#1941
+		ETH_increased_factory_output
+		ETH_rapid_industrial_expansion
+		#1942
+				
+		#1943
+	}
+
+}
+
+ETH_anarcho_communist_plan = {
+	name = "Ethiopian Anarchist Plan"
+	desc = "RULE_OPTION_ETH_ANARCHIST_desc"
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_ANARCHIST
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = ANARCHIST
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_military_communism
+		ETH_the_second_italo-ethiopian_war		
+		ETH_defending_our_homes
+		ETH_in_the_name_of_the_people
+		ETH_callout_to_the_world
+		ETH_support_from_the_japanese_communists
+		ETH_peoples_army
+		ETH_peace_negotiations
+		ETH_falling_back
+		ETH_a_last_stand
+		# Only do these if the above are unavailable 
+	
+		#Focus on Industrial Stuff after war
+		ETH_support_spain
+		ETH_the_rif
+		ETH_refuge_for_the_spanish_exiles
+		ETH_transformation_of_nature
+		ETH_heavy_industry
+		ETH_arms_production
+		ETH_ecole_militaire_haile_selassie_1er
+		ETH_scavenging_tactics
+		ETH_develop_the_capital_region
+		ETH_encourage_local_development
+		ETH_local_committees
+		ETH_seize_the_means
+		ETH_communal_agriculture
+		ETH_increased_factory_output
+		ETH_rapid_industrial_expansion
+		ETH_infrastructure_projects
+		ETH_preparing_for_the_inevitable
+		ETH_communal_education
+		ETH_mass_transit
+		#Make a more anarchist military
+		ETH_keep_the_chitet		
+		#Should only start spreading the revolution after making it work in Ethiopia
+		ETH_african_wildfire
+		ETH_organization_of_african_unity
+		ETH_flames_across_the_sea
+	}
+}
+
+ETH_anarcho_communist_plan_2 = {
+	name = "Ethiopian Anarchist Plan"
+	desc = "RULE_OPTION_ETH_ANARCHIST_desc"
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_ANARCHIST_ALT
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = ANARCHIST_ALT
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_military_communism
+		ETH_the_second_italo-ethiopian_war		
+		ETH_defending_our_homes
+		ETH_in_the_name_of_the_people
+		ETH_callout_to_the_world
+		ETH_support_from_the_japanese_communists
+		ETH_international_brigades_communist
+		ETH_peace_negotiations
+		ETH_falling_back
+		ETH_a_last_stand
+		# Only do these if the above are unavailable 
+	
+		#Focus on Industrial Stuff after war
+		ETH_support_spain
+		ETH_the_rif
+		ETH_refuge_for_the_spanish_exiles
+		ETH_transformation_of_nature
+		ETH_heavy_industry
+		ETH_arms_production
+		ETH_ecole_militaire_haile_selassie_1er
+		ETH_scavenging_tactics
+		ETH_develop_the_capital_region
+		ETH_encourage_local_development
+		ETH_a_guiding_hand
+		ETH_seize_the_means
+		ETH_communal_agriculture
+		ETH_increased_factory_output
+		ETH_rapid_industrial_expansion
+		ETH_infrastructure_projects
+		ETH_preparing_for_the_inevitable
+		ETH_communal_education
+		ETH_mass_transit
+		#Make a more anarchist military
+		ETH_keep_the_chitet		
+		#Should only start spreading the revolution after making it work in Ethiopia
+		ETH_african_wildfire
+		ETH_organization_of_african_unity
+	}
+
+	focus_factors = {
+		ETH_flames_across_the_sea = 0
+	}
+}
+
+ETH_fascist_collaborationist_plan = {
+	name = "Ethiopian Collaborationist Plan"
+	desc = "RULE_OPTION_ETH_COLLABORATIONIST_desc"
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_COLLABORATIONIST			
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = COLLABORATIONIST
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_reach_out_to_the_italians
+		ETH_sway_the_warlords
+		ETH_expand_the_bodyguard
+		ETH_declare_for_italy
+
+		# Only do these if the above are unavailable 
+		ETH_falling_back
+		ETH_the_defense_of_addis_ababa	
+		ETH_a_last_stand
+		#Focus on Industrial Stuff after war
+		ETH_restore_the_country
+		ETH_invite_italian_settlers
+		ETH_the_capital_victory_parade
+		ETH_amedeos_feast_of_maskal
+		ETH_invite_italian_investors
+		ETH_cooperation
+		ETH_recruit_mercenaries		
+		ETH_develop_the_capital_region
+		ETH_encourage_local_development
+		ETH_increased_factory_output
+		ETH_rapid_industrial_expansion
+		ETH_infrastructure_projects
+		ETH_ecole_militaire_haile_selassie_1er
+		ETH_expand_the_mehal_sefari
+		ETH_replace_the_abuna
+		ETH_italian_general_staff
+		ETH_adopt_the_lira
+		ETH_request_italian_equipment
+		ETH_outsourced_production
+		
+	}
+	focus_factors = {
+		ETH_keep_the_chitet = 0
+		ETH_encourage_local_development = 0
+	}
+}
+
+ETH_fascist_independent_plan = {
+	name = "Ethiopian Independent Fascist Plan"
+	desc = "RULE_OPTION_ETH_INDEPENDENT_FASCIST_desc"
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_AI_RANDOM_INDEPENDENT_FASCIST			
+			has_game_rule = {
+				rule = ETH_ai_behavior
+				option = INDEPENDENT_FASCIST
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_reach_out_to_the_italians
+		ETH_sway_the_warlords
+		ETH_expand_the_bodyguard
+		ETH_declare_for_italy
+
+		# Only do these if the above are unavailable 
+		ETH_falling_back
+		ETH_the_defense_of_addis_ababa	
+		ETH_a_last_stand
+		#Restore country and build up a bit of a military again
+		ETH_restore_the_country
+		ETH_the_capital_victory_parade
+		ETH_exploit_french_weakness
+		ETH_assertiveness
+		ETH_cooperation
+		ETH_recruit_mercenaries		
+		ETH_reinforce_dynamic_identity
+		ETH_replace_the_abuna
+		#Focus on industry for a while
+		ETH_develop_the_capital_region
+		ETH_encourage_local_development
+		ETH_increased_factory_output
+		ETH_rapid_industrial_expansion
+		ETH_infrastructure_projects
+		#Improve military again and prepare for breaking away from Italy
+		ETH_ecole_militaire_haile_selassie_1er
+		ETH_expand_the_mehal_sefari
+		ETH_underground_wargames
+		ETH_set_up_a_customs_barrier
+		ETH_contact_the_exiles
+		ETH_together_for_victory
+		ETH_our_enemys_enemy
+		ETH_raid_italian_depots
+		#Declare Independence
+		ETH_negusa_nagast
+		ETH_the_liberator_of_country_short
+		ETH_reclaim_the_empire
+		ETH_consolidate_east_africa
+	}
+}
+
+ETH_ENG_plan_1 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_ENG_SOMALIA		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = ENG_SOMALIA
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_the_american_radio_address
+		ETH_protector_of_the_somalis
+	}
+
+	focus_factors = {
+		ETH_the_heir_of_solomon = 0
+	}
+}
+
+ETH_ENG_plan_2 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_ENG_PALESTINE		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = ENG_PALESTINE
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_the_american_radio_address
+		ETH_the_heir_of_solomon
+	}
+
+	focus_factors = {
+		ETH_protector_of_the_somalis = 0
+	}
+}
+
+ETH_SWE_plan_1 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_SWE_NEUTRAL		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = SWE_NEUTRAL
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_the_american_radio_address
+		ETH_joint_swedish-ethiopian_intelligence_program
+	}
+
+	focus_factors = {
+		ETH_ethiopias_cause_is_ours = 0
+	}
+}
+
+ETH_SWE_plan_2 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_SWE_ALLIES		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = SWE_ALLIES
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_the_american_radio_address
+		ETH_anti-tank_guns
+		ETH_ethiopias_cause_is_ours
+	}
+}
+
+ETH_JAP_plan_1 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_JAP_ISLAND		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = JAP_ISLAND
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_the_lion_and_the_sun
+		ETH_an_empire_in_the_shade_of_the_sun
+	}
+	focus_factors = {
+		ETH_an_arabic_base = 0
+	}
+}
+ETH_JAP_plan_2 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_JAP_ARABIA		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = JAP_ARABIA
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_the_lion_and_the_sun
+		ETH_an_arabic_base
+	}
+	focus_factors = {
+		ETH_an_empire_in_the_shade_of_the_sun = 0
+	}
+}
+
+ETH_GER_plan_1 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_GER_MEDIATE		
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = GER_MEDIATE
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_an_audience_with_countryleadertitle
+		ETH_befriend_goring
+		ETH_german_mediation
+	}
+	focus_factors = {
+		ETH_steel_lions = 0
+		ETH_sabotage_italo-german_relations = 0
+	}
+}
+
+ETH_GER_plan_2 = {
+	name = ""
+	desc = ""
+	allowed = {
+		original_tag = ETH
+	}
+	enable = {
+		OR = {
+			has_country_flag = ETH_HOST_AI_RANDOM_GER_SABOTAGE	
+			has_game_rule = {
+				rule = ETH_ai_host_behavior
+				option = GER_SABOTAGE
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort =  {
+		
+	}
+	ai_national_focuses = {
+		ETH_an_audience_with_countryleadertitle
+		ETH_steel_lions
+		ETH_sabotage_italo-german_relations
+	}
+	focus_factors = {
+		ETH_befriend_goring = 0
+		ETH_german_mediation = 0
+	}
+}

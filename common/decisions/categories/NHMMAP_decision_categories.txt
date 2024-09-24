@@ -1,0 +1,457 @@
+TUR_influence_category = {
+	
+	icon = tur_unifying_the_country
+
+	allowed = {
+		has_variable = TUR_influence
+	}
+	priority = {
+		base = 10
+	}
+	
+	custom_icon = {
+		tag = ENG
+		value = TUR_ENG_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = ENG
+				has_variable = TUR_influence
+			}
+		}
+	}
+	
+	custom_icon = {
+		tag = USA
+		value = TUR_USA_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = USA
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = GER
+		value = TUR_GER_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = GER
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = ITA
+		value = TUR_ITA_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = ITA
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = SOV
+		value = TUR_SOV_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = SOV
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = FRA
+		value = TUR_FRA_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = FRA
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = GRE
+		value = TUR_GRE_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = GRE
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = YUG
+		value = TUR_YUG_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = YUG
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = SPR
+		value = TUR_SPR_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = SPR
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = POR
+		value = TUR_POR_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = POR
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = HOL
+		value = TUR_HOL_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = HOL
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = CZE
+		value = TUR_CZE_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = CZE
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = HUN
+		value = TUR_HUN_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = HUN
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = ROM
+		value = TUR_ROM_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = ROM
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = BUL
+		value = TUR_BUL_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = BUL
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = AUS
+		value = TUR_AUS_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = AUS
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = SWI
+		value = TUR_SWI_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = SWI
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = POL
+		value = TUR_POL_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = POL
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = LIT
+		value = TUR_LIT_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = LIT
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = LAT
+		value = TUR_LAT_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = LAT
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = EST
+		value = TUR_EST_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = EST
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	custom_icon = {
+		tag = DEN
+		value = TUR_DEN_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = DEN
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+	custom_icon = {
+		tag = NOR
+		value = TUR_NOR_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = NOR
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+	custom_icon = {
+		tag = SWE
+		value = TUR_SWE_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = SWE
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+	custom_icon = {
+		tag = FIN
+		value = TUR_FIN_inf
+		desc = TUR_influence_icon_desc
+
+		visible = {
+			any_country = {
+				original_tag = FIN
+				has_variable = TUR_influence
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				has_capitulated = no
+				NOT = { has_war_with = TUR }
+				is_subject = no
+			}
+		}
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		has_variable = TUR_influence
+		has_capitulated = no
+		NOT = { has_war_with = TUR }
+		is_subject = no
+		NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+		TUR = {
+			is_in_faction = no
+			has_capitulated = no
+			is_subject = no
+			NOT = {
+				OR = {
+					has_completed_focus = TUR_pivot_to_the_past
+					has_completed_focus = TUR_join_the_minor_democracies
+					has_completed_focus = TUR_join_the_allies
+					has_completed_focus = TUR_the_mediterranean_entente
+					has_completed_focus = TUR_join_the_axis
+					has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc
+					has_completed_focus = TUR_readdress_the_montreux_convention
+					has_completed_focus = TUR_continue_to_prioritise_balkan_integrity
+				}
+			}
+		}
+	}
+}

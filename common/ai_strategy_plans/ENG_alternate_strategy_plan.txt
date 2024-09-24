@@ -1,0 +1,1044 @@
+ENG_alternate_democratic_plan = {
+	name = "United Kingdom Anti-German Interventionist Democratic plan"
+	desc = "UK comes after the continental warmongerers. No more appeasement!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			AND = {
+				has_completed_focus = ENG_steady_as_she_goes
+				has_completed_focus = ENG_global_defense
+				GER = { has_war = yes }
+				GER = { has_government = fascism }
+			}
+			OR = {
+				has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
+				has_game_rule = {
+					rule = ENG_ai_behavior 
+					option = DEMOCRATIC_ALTERNATE
+				}
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		limited_rearmament_focus
+		shadow_scheme_focus
+		ENG_steady_as_she_goes
+		air_defense_focus
+		ENG_global_defense
+
+		radar_focus
+		ENG_motion_of_no_confidence
+		uk_industrial_focus
+		uk_extra_tech_slot
+		ENG_every_man_will_do_his_duty
+		
+		ENG_no_further_appeasement
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		
+		ENG_kickstart_the_war_industry
+		uk_empire_focus
+		ENG_secure_the_oil_imports
+		ENG_embargo_ussr
+		uk_service_focus
+		
+		uk_colonial_focus
+		uk_commonwealth_focus
+		naval_rearmament_focus
+		ENG_british_commonwealth_air_training_plan
+		uk_asia_focus
+		
+		uk_burma_focus
+	}
+
+	focus_factors = {
+		ENG_maintaining_imperial_integrity = 20
+		ENG_maintaining_the_balance_of_power = 20
+		uk_sanction_japan_focus = 5
+		uk_mediterranean_focus = 5
+		uk_rock_focus = 0
+	}
+
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_decolonize_democratic = {
+	name = "United Kingdom decolonize plan"
+	desc = "decolonize"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_DECOLONIZE
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = DEMOCRATIC_DECOLONIZE
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = { #some extra focuses are in here if no decolonization option is picked
+		limited_rearmament_focus #March 10 1936	
+		ENG_revisit_colonial_policy #May 20 1936
+		uk_empire_focus #if no decolonization option is picked
+		ENG_guide_the_colonies #July 30 1936
+		uk_service_focus 
+		shadow_scheme_focus #October 10 1936
+		uk_industrial_focus #October 10 1936	
+		uk_extra_tech_slot #December 20 1936
+
+		ENG_towards_dominion_independence
+		uk_colonial_focus
+		ENG_withdraw_from_contested_territories
+		uk_commonwealth_focus
+		ENG_foundations_for_an_indian_state
+		uk_india_focus
+		ENG_steady_as_she_goes
+		ENG_self_government_for_the_middle_east
+		ENG_british_commonwealth_air_training_plan
+		ENG_self_government_for_the_americas		 #September 30 1937	
+		uk_mediterranean_focus
+		ENG_self_government_for_the_mediterranean #December 10 1937
+		uk_malta_focus
+
+
+		royal_ordinance_focus #February 30 1937
+		uk_small_arms_focus #May 10 1937	
+		general_rearmament_focus #July 20 1937 
+		ENG_the_three_nation_solution
+		uk_australia_focus
+		ENG_towards_indian_independence
+		uk_free_india_focus
+
+		air_defense_focus
+		radar_focus
+		air_rearmament_focus
+		ENG_home_defence
+		ENG_prepare_for_the_inevitable
+		
+		ENG_issue_gasmasks #February 10 1939
+		ENG_military_training_act #April 20 1939
+		ENG_embargo_germany #skipped alot
+		ENG_self_government_for_asia
+		uk_asia_focus
+		ENG_self_government_for_africa
+		uk_protect_suez
+		ENG_decolonization
+		ENG_secure_the_imperial_shipping_routes
+
+		bomber_command_focus #January 30 1940
+		coastal_command_focus #April 10 1940
+		aircraft_production_focus #June 20 1940	
+		naval_rearmament_focus #August 30 1940
+		ENG_motorized_focus #November 10 1940
+		crypto_bomb_focus #January 20 1941	
+		tizard_mission_focus#March 30 1941	
+		ENG_special_air_service#June 10 1941
+		uk_destroyer_focus#August 20 1941
+		uk_waves_focus#October 30 1941	
+		uk_convoy_focus#January 10
+		ENG_chiefs_of_staff_committee
+		maud_focus
+		uk_carrier_focus
+ 		
+ 		uk_amphibious_focus
+	
+		UK_secret_focus
+		uk_jet_focus
+		ENG_tank_focus
+	}
+
+	focus_factors = {
+		uk_iraq_focus = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		home_defence_spirit = 1
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+ENG_alternate_communist_plan = {  #some extra focuses are in here if no decolonization option is picked
+	name = "United Kingdom Communist plan"
+	desc = "UK becomes communist and will spread the Revolution!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = COMMUNIST_COMINTERN
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ENG_a_change_in_course
+		ENG_concessions_to_the_trade_unions
+		limited_rearmament_focus
+		shadow_scheme_focus
+		uk_industrial_focus
+
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		ENG_revisit_colonial_policy
+		uk_empire_focus #if no decolonization option is picked
+
+		ENG_guide_the_colonies
+		uk_service_focus 
+		ENG_towards_dominion_independence
+		uk_colonial_focus
+		ENG_withdraw_from_contested_territories
+		uk_commonwealth_focus
+		ENG_self_government_for_the_mediterranean
+		uk_mediterranean_focus
+		ENG_self_government_for_the_middle_east
+		uk_protect_suez
+		ENG_self_government_for_the_americas
+		ENG_british_commonwealth_air_training_plan
+		ENG_self_government_for_africa
+		uk_asia_focus
+		
+		ENG_self_government_for_asia
+		ENG_foundations_for_an_indian_state
+		ENG_the_three_nation_solution
+		ENG_towards_indian_independence
+		ENG_decolonization
+		
+		ENG_the_fate_of_the_royal_family
+		ENG_eliminate_the_upper_class
+		ENG_for_the_good_of_the_revolution
+		ENG_follow_moscow
+		uk_burma_focus
+		uk_malta_focus
+		ENG_secure_the_imperial_shipping_routes
+		uk_india_focus
+		singapore_focus
+		air_defense_focus
+		radar_focus
+		
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		ENG_tackle_fascism
+		ENG_preparing_the_second_front
+
+		ENG_liberate_the_home_of_marx
+		ENG_spirit_of_the_industrial_revolution
+		ENG_socialist_science_pool
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_alternate_communist_plan_2 = { #some extra focuses are in here if no decolonization option is picked
+	name = "United Kingdom Communist plan 2"
+	desc = "UK becomes communist and will spread the Revolution!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN_2
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = COMMUNIST_COMINTERN_2
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		ENG_a_change_in_course
+		ENG_concessions_to_the_trade_unions
+		limited_rearmament_focus
+		shadow_scheme_focus
+		uk_industrial_focus
+
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		ENG_revisit_colonial_policy
+		uk_empire_focus #if no decolonization option is picked
+
+		ENG_guide_the_colonies
+		uk_service_focus 
+		ENG_towards_dominion_independence
+		uk_colonial_focus
+		ENG_withdraw_from_contested_territories
+		uk_commonwealth_focus
+		ENG_self_government_for_the_mediterranean
+		uk_mediterranean_focus
+		ENG_self_government_for_the_middle_east
+		uk_protect_suez
+		ENG_self_government_for_the_americas
+		ENG_british_commonwealth_air_training_plan
+		ENG_self_government_for_africa
+		uk_asia_focus
+		
+		ENG_self_government_for_asia
+		ENG_foundations_for_an_indian_state
+		ENG_the_three_nation_solution
+		ENG_towards_indian_independence
+		ENG_decolonization
+		
+		ENG_the_fate_of_the_royal_family
+		ENG_eliminate_the_upper_class
+		ENG_for_the_good_of_the_revolution
+		ENG_follow_moscow
+		uk_burma_focus
+		uk_malta_focus
+		ENG_secure_the_imperial_shipping_routes
+		uk_india_focus
+		singapore_focus
+		air_defense_focus
+		radar_focus
+		
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		ENG_tackle_capitalism
+		ENG_bermuda_invasion_launch_point
+
+		uk_amphibious_focus
+		uk_destroyer_focus
+		uk_convoy_focus
+		ENG_a_s_warfare
+		ENG_crush_the_dream
+
+		ENG_spirit_of_the_industrial_revolution
+		ENG_socialist_science_pool
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_alternate_communist_plan_3 = { #some extra focuses are in here if no decolonization option is picked
+	name = "United Kingdom Communist plan 3"
+	desc = "UK becomes communist and will spread the Revolution!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = COMMUNIST_BCA
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ENG_a_change_in_course
+		ENG_concessions_to_the_trade_unions
+		limited_rearmament_focus
+		shadow_scheme_focus
+		uk_industrial_focus
+
+		#ASAP
+		ENG_the_fate_of_the_royal_family #not taken until later
+		ENG_eliminate_the_upper_class
+		ENG_for_the_good_of_the_revolution
+		ENG_the_british_communist_alternative
+
+		#1937
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		ENG_revisit_colonial_policy
+		uk_empire_focus #if no decolonization option is picked
+
+		ENG_guide_the_colonies
+		uk_service_focus 
+		ENG_towards_dominion_independence
+		uk_colonial_focus
+		ENG_withdraw_from_contested_territories
+		uk_commonwealth_focus
+		ENG_self_government_for_the_mediterranean
+		uk_mediterranean_focus
+		ENG_self_government_for_the_middle_east
+		uk_protect_suez
+		ENG_self_government_for_the_americas
+		ENG_british_commonwealth_air_training_plan
+		ENG_self_government_for_africa
+		uk_asia_focus
+		
+		ENG_self_government_for_asia
+		ENG_foundations_for_an_indian_state
+		ENG_the_three_nation_solution
+		ENG_towards_indian_independence
+		ENG_decolonization
+		
+		uk_burma_focus
+		uk_malta_focus
+		ENG_secure_the_imperial_shipping_routes
+		uk_india_focus
+		singapore_focus
+		air_defense_focus
+		radar_focus
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		uk_amphibious_focus
+		
+		ENG_enforce_decolonization
+		uk_destroyer_focus
+		ENG_soviet_cooperation
+		uk_convoy_focus
+		ENG_a_s_warfare
+
+		ENG_spirit_of_the_industrial_revolution
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_alternate_communist_plan_4 = { #some extra focuses are in here if no decolonization option is picked
+	name = "United Kingdom Communist plan 4"
+	desc = "UK becomes communist and will spread the Revolution!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA_2
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = COMMUNIST_BCA_2
+			}
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		#1936
+		ENG_a_change_in_course
+		ENG_concessions_to_the_trade_unions
+		limited_rearmament_focus
+		shadow_scheme_focus
+		uk_industrial_focus
+
+		#ASAP
+		ENG_the_fate_of_the_royal_family #not taken until later
+		ENG_eliminate_the_upper_class
+		ENG_for_the_good_of_the_revolution
+		ENG_the_british_communist_alternative
+
+		#1937
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		ENG_revisit_colonial_policy
+		uk_empire_focus #if no decolonization option is picked
+
+		ENG_guide_the_colonies
+		uk_service_focus 
+		ENG_towards_dominion_independence
+		uk_colonial_focus
+		ENG_withdraw_from_contested_territories
+		uk_commonwealth_focus
+		ENG_self_government_for_the_mediterranean
+		uk_mediterranean_focus
+		ENG_self_government_for_the_middle_east
+		uk_protect_suez
+		ENG_self_government_for_the_americas
+		ENG_british_commonwealth_air_training_plan
+		ENG_self_government_for_africa
+		uk_asia_focus
+		
+		ENG_self_government_for_asia
+		ENG_foundations_for_an_indian_state
+		ENG_the_three_nation_solution
+		ENG_towards_indian_independence
+		ENG_decolonization
+		
+		uk_burma_focus
+		uk_malta_focus
+		ENG_secure_the_imperial_shipping_routes
+		uk_india_focus
+		singapore_focus
+		air_defense_focus
+		radar_focus
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		uk_amphibious_focus
+		
+		ENG_reach_out_across_the_channel
+
+		air_defense_focus
+		radar_focus
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		
+		ENG_the_one_true_revolution
+		ENG_spirit_of_the_industrial_revolution
+		ENG_liberate_the_home_of_marx
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+ENG_alternate_unaligned_plan = {
+	name = "United Kingdom Monarchist plan"
+	desc = "UK becomes an authoritarian monarchy and will reconquer the Empire!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_NEUTRALITY
+			has_game_rule = {
+				rule = ENG_ai_behavior
+				option = NEUTRALITY
+			}
+			AND = {
+				GER = {
+					has_completed_focus = GER_reestablish_free_elections
+				}
+				has_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS
+			}
+		}
+	}
+	abort = {
+		AND = {
+			has_country_flag = ENG_AI_RANDOM_NEUTRALITY
+			GER = {
+				has_completed_focus = GER_revive_the_kaiserreich
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		limited_rearmament_focus
+		ENG_a_change_in_course
+		ENG_the_kings_party
+		shadow_scheme_focus
+		air_defense_focus
+		radar_focus
+
+		uk_industrial_focus
+		ENG_god_save_the_king
+		ENG_reassess_continental_commitments
+		ENG_isolate_the_mediterranean_threat
+		general_rearmament_focus
+
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		uk_empire_focus
+		ENG_noninterference_treaty_with_germany
+
+		ENG_consolidate_the_british_isles
+		ENG_ceylon_forward_operating_base
+		ENG_appeal_to_imperial_loyalists
+		ENG_bring_the_dominions_back_into_the_fold
+		ENG_reclaim_the_jewel_in_the_crown
+		
+		uk_service_focus
+		uk_colonial_focus
+		uk_asia_focus
+		uk_mediterranean_focus
+		ENG_motorized_focus
+
+		ENG_tank_focus
+		ENG_special_air_service
+		naval_rearmament_focus
+		ENG_chiefs_of_staff_committee
+		air_rearmament_focus
+
+		fighter_command_focus
+		aircraft_production_focus
+		ENG_imperial_conscription
+		ENG_the_sun_never_sets	
+		ENG_unite_the_anglosphere
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_alternate_unaligned_plan_2 = {
+	name = "United Kingdom Monarchist plan"
+	desc = "UK becomes an authoritarian monarchy and will reconquer the Empire!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS
+			has_game_rule = {
+				rule = ENG_ai_behavior
+				option = NEUTRALITY_AXIS
+			}
+			AND = {
+				has_country_flag = ENG_AI_RANDOM_NEUTRALITY
+				GER = {
+					has_completed_focus = GER_revive_the_kaiserreich
+				}
+			}
+		}
+	}
+	abort = {
+		AND = {
+			GER = {
+				has_completed_focus = GER_reestablish_free_elections
+			}
+			has_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS
+		}
+	}
+
+	ai_national_focuses = {
+		limited_rearmament_focus
+		ENG_a_change_in_course
+		ENG_the_kings_party
+		shadow_scheme_focus
+		air_defense_focus
+		radar_focus
+
+		uk_industrial_focus
+		ENG_god_save_the_king
+		ENG_reassess_continental_commitments
+		ENG_isolate_the_mediterranean_threat
+		general_rearmament_focus
+
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_extra_tech_slot
+		uk_empire_focus
+		ENG_alliance_with_germany
+
+		ENG_consolidate_the_british_isles
+		ENG_take_out_the_regia_marina
+		ENG_ceylon_forward_operating_base
+		ENG_appeal_to_imperial_loyalists
+		uk_service_focus
+		
+		ENG_bring_the_dominions_back_into_the_fold
+		uk_colonial_focus
+		ENG_reclaim_the_jewel_in_the_crown
+		uk_asia_focus
+		uk_mediterranean_focus
+		ENG_motorized_focus
+		
+		ENG_tank_focus
+		ENG_special_air_service
+		naval_rearmament_focus
+		ENG_chiefs_of_staff_committee
+		air_rearmament_focus
+
+		fighter_command_focus
+		aircraft_production_focus
+		ENG_imperial_conscription
+		ENG_the_sun_never_sets	
+		ENG_pre_empt_the_ideological_threat
+
+		ENG_expose_the_belly_of_the_bear
+		ENG_pre_empt_the_strategic_threat
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_alternate_fascist_plan = {
+	name = "United Kingdom Fascist plan"
+	desc = "UK becomes fascist and will reconquer the Empire!"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_completed_focus = ENG_organize_the_blackshirts
+			has_country_flag = ENG_AI_RANDOM_FASCIST
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = FASCIST
+			}
+			
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ENG_a_change_in_course
+		limited_rearmament_focus
+		shadow_scheme_focus
+		ENG_organize_the_blackshirts
+		uk_industrial_focus
+		
+
+		uk_extra_tech_slot
+		ENG_move_to_secure_the_dominions
+		ENG_the_british_path_to_fascism
+		ENG_god_save_the_king
+		ENG_consolidate_the_british_isles
+		
+		ENG_ceylon_forward_operating_base
+		ENG_reclaim_the_jewel_in_the_crown
+		ENG_secure_the_italian_alliance
+		air_defense_focus
+		radar_focus
+
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_empire_focus
+		ENG_appeal_to_imperial_loyalists
+		
+		ENG_bring_the_dominions_back_into_the_fold
+		uk_service_focus
+		uk_colonial_focus
+		uk_asia_focus
+		uk_mediterranean_focus
+
+		ENG_motorized_focus
+		ENG_tank_focus
+		ENG_special_air_service
+		naval_rearmament_focus
+		ENG_chiefs_of_staff_committee
+
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		ENG_imperial_conscription
+		ENG_the_sun_never_sets
+
+		ENG_gibraltar_for_spanish_support
+		ENG_pre_empt_spanish_alignment
+		ENG_anti_non_contact_committee
+		uk_destroyer_focus
+		uk_waves_focus
+
+		uk_battleship_focus
+		ENG_pre_empt_the_ideological_threat
+		ENG_expose_the_belly_of_the_bear
+	}
+
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_alternate_fascist_plan_anti_german = {
+	name = "United Kingdom Fascist antigerman plan"
+	desc = "UK becomes fascist and will take an anti-german stance"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_country_flag = ENG_AI_RANDOM_FASCIST_ANTI_GERMAN
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = FASCIST_ANTI_GERMAN
+			}
+			
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		ENG_a_change_in_course
+		limited_rearmament_focus
+		shadow_scheme_focus
+		ENG_organize_the_blackshirts
+		uk_industrial_focus
+
+		uk_extra_tech_slot
+		ENG_move_to_secure_the_dominions
+		ENG_the_british_path_to_fascism
+		ENG_god_save_the_king
+		ENG_consolidate_the_british_isles
+		
+		ENG_ceylon_forward_operating_base
+		ENG_secure_the_italian_alliance
+		ENG_appeal_to_imperial_loyalists
+		ENG_bring_the_dominions_back_into_the_fold
+		air_defense_focus
+
+		radar_focus
+		general_rearmament_focus
+		royal_ordinance_focus
+		uk_small_arms_focus
+		uk_empire_focus
+		
+		uk_service_focus
+		uk_colonial_focus
+		uk_asia_focus
+		ENG_gibraltar_for_spanish_support
+		ENG_pre_empt_spanish_alignment
+		ENG_prevent_a_continental_hegemony
+
+		uk_mediterranean_focus
+		ENG_motorized_focus
+		ENG_tank_focus
+		ENG_special_air_service
+		naval_rearmament_focus
+
+		ENG_chiefs_of_staff_committee
+		air_rearmament_focus
+		fighter_command_focus
+		aircraft_production_focus
+		ENG_imperial_conscription
+
+		ENG_the_sun_never_sets
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ENG_no_decolonization_option_is_picked = {
+	name = "United Kingdom will never decolonize"
+	desc = ""
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = ENG_ai_decolonize 
+				option = NO_DECOLONIZE
+			}
+			has_game_rule = {
+				rule = ENG_ai_decolonize 
+				option = NO_DECOLONIZE_NO_CIVILWAR
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	focus_factors = {
+		ENG_revisit_colonial_policy = 0
+		ENG_guide_the_colonies = 0
+		ENG_towards_dominion_independence = 0
+		ENG_withdraw_from_contested_territories = 0
+		ENG_move_to_secure_the_dominions = 50
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

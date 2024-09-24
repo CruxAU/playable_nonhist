@@ -1,0 +1,1405 @@
+LAT_entente_union = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_DEMOCRATIC_BALTIC_UNION
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = DEMOCRATIC_BALTIC_UNION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		BALTIC_rejoin_the_railways
+		
+
+		BALTIC_renew_allied_trade
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_restore_saeima
+		LAT_establish_chambers_of_professions
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_what_is_socialism
+		LAT_renew_the_constitution
+
+		LAT_aizsargi
+		LAT_formalize_baltic_entente
+		LAT_baltic_economic_union
+		LAT_baltic_defence_army
+		LAT_pan_baltic_bank
+		LAT_propose_baltic_union
+
+		LAT_baltic_unification
+		LAT_look_north
+		BALTIC_school_of_aviation
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+
+		BALTIC_allied_shipments
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		LAT_threat_on_our_border
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+	}
+
+}
+
+LAT_entente = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_DEMOCRATIC_BALTIC_ENTENTE
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = DEMOCRATIC_BALTIC_ENTENTE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		BALTIC_rejoin_the_railways
+		
+
+		BALTIC_renew_allied_trade
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_restore_saeima
+		LAT_establish_chambers_of_professions
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_what_is_socialism
+		LAT_renew_the_constitution
+
+		LAT_aizsargi
+		LAT_formalize_baltic_entente
+		LAT_baltic_economic_union
+		LAT_baltic_defence_army
+		LAT_pan_baltic_bank
+		LAT_propose_baltic_union
+
+		LAT_baltic_stronger_together
+		BALTIC_school_of_aviation
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+
+		BALTIC_allied_shipments
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		LAT_threat_on_our_border
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+		LAT_look_north = 0
+	}
+
+}
+
+LAT_dem_allies = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = DEMOCRATIC_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		BALTIC_rejoin_the_railways
+		
+
+		BALTIC_renew_allied_trade
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_restore_saeima
+		LAT_establish_chambers_of_professions
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_what_is_socialism
+		LAT_renew_the_constitution
+
+		LAT_aizsargi
+		BALTIC_school_of_aviation
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		LAT_beyond_the_baltic
+		
+		LAT_join_the_allies		
+		BALTIC_allied_shipments
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		
+		LAT_threat_on_our_border
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+	}
+
+}
+
+LAT_dem = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		BALTIC_rejoin_the_railways
+		
+
+		BALTIC_renew_allied_trade
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_restore_saeima
+		LAT_establish_chambers_of_professions
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_what_is_socialism
+		LAT_renew_the_constitution
+
+		LAT_aizsargi
+		BALTIC_school_of_aviation
+		BALTIC_ford_motors
+		BALTIC_british_aircraft	
+		BALTIC_allied_shipments
+
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		LAT_threat_on_our_border
+		BALTIC_natural_resources
+		
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+		LAT_beyond_the_baltic = 0
+		LAT_formalize_baltic_entente = 0
+	}
+
+}
+
+LAT_farmers_union = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FP_BALTIC_UNION
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FP_BALTIC_UNION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+
+		BALTIC_axis_investments
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_restore_saeima
+		LAT_establish_chambers_of_professions
+
+		
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_integrate_farmers_party
+		LAT_what_is_socialism
+
+		LAT_aizsargi
+		LAT_formalize_baltic_entente
+		LAT_baltic_economic_union
+		LAT_baltic_defence_army
+		LAT_pan_baltic_bank
+		LAT_propose_baltic_union
+
+		LAT_baltic_unification
+		LAT_look_north
+		BALTIC_school_of_aviation
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+
+		BALTIC_autobahn
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		LAT_threat_on_our_border
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+	}
+
+}
+
+LAT_farmers_entente = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FP_BALTIC_ENTENTE
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FP_BALTIC_ENTENTE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		BALTIC_rejoin_the_railways
+		
+
+		BALTIC_axis_investments
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_establish_chambers_of_professions
+		BALTIC_attract_workers_to_capital
+		
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_restore_saeima
+		LAT_integrate_farmers_party
+		LAT_what_is_socialism
+		
+		LAT_aizsargi
+		LAT_formalize_baltic_entente
+		LAT_baltic_economic_union
+		LAT_baltic_defence_army
+		LAT_pan_baltic_bank
+		LAT_propose_baltic_union
+
+		LAT_baltic_stronger_together
+		BALTIC_school_of_aviation
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+
+		BALTIC_autobahn
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		LAT_threat_on_our_border
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+		LAT_look_north = 0
+	}
+
+}
+
+LAT_fp = {
+	name = "Latvian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = LAT
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FP
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FP
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		BALTIC_rejoin_the_railways
+		
+
+		BALTIC_axis_investments
+		LAT_appease_democrats
+		LAT_renew_kviesis_term
+		LAT_establish_chambers_of_professions
+		BALTIC_attract_workers_to_capital
+		
+		BALTIC_modernize_industry
+		LAT_what_is_capitalism
+		LAT_restore_saeima
+		LAT_integrate_farmers_party
+		LAT_what_is_socialism
+		
+		LAT_aizsargi
+		BALTIC_school_of_aviation
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_autobahn
+		
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		LAT_threat_on_our_border
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_cave_to_enemy_pressure = 0
+		LAT_beyond_the_baltic = 0
+		LAT_formalize_baltic_entente = 0
+	}
+
+}
+
+
+LAT_occupation = {
+	name = "Latvian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_OCCUPATION
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = OCCUPATION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		LAT_the_sun_shines_equally
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+
+		LAT_banish_clemens
+		LAT_appease_democrats
+		LAT_martial_prime_minister
+		LAT_improve_military_life
+		LAT_establish_chambers_of_professions
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_nationalised_industry
+		LAT_merge_presidential_titles
+		BALTIC_school_of_aviation
+
+		LAT_supply_forest_brothers
+		LAT_threat_on_our_border
+		LAT_cave_to_enemy_pressure
+		LAT_aizsargi
+		BALTIC_german_war_economics
+
+		BALTIC_german_tank_licences
+		BALTIC_autobahn
+		LAT_womens_aizsargi
+		LAT_supply_forest_brothers
+		LAT_multicultural_latvia
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		LAT_military_diarchy
+		
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_formalize_baltic_entente = 0
+		LAT_beyond_the_baltic = 0
+		LAT_enforce_military_rule = 0
+		LAT_ready_the_resistance = 0
+	}
+
+}
+
+LAT_Military_dict = {
+	name = "Latvian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_JUNTA_RULE
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = JUNTA_RULE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		LAT_latvia_for_latvians
+		
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_military_industrial_complex
+		LAT_anti_german_propaganda
+		LAT_appease_democrats
+
+		LAT_martial_prime_minister
+		LAT_improve_military_life
+		LAT_establish_chambers_of_professions
+		LAT_nationalised_industry
+		LAT_military_diarchy
+
+		LAT_military_dictatorship
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		LAT_threat_on_our_border
+
+		LAT_enforce_military_rule
+		LAT_supply_forest_brothers
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_formalize_baltic_entente = 0
+		LAT_beyond_the_baltic = 0
+		LAT_cave_to_enemy_pressure = 0
+		LAT_the_old_ways = 0
+		LAT_alignment_with_germany = 0
+		LAT_the_thunder_strikes_alone = 0
+	}
+
+}
+
+LAT_Military_allies = {
+	name = "Latvian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_JUNTA_ALLIES
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = JUNTA_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		LAT_latvia_for_latvians
+		
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_military_industrial_complex
+		LAT_anti_german_propaganda
+		LAT_appease_democrats
+
+		LAT_martial_prime_minister
+		LAT_improve_military_life
+		LAT_establish_chambers_of_professions
+		LAT_nationalised_industry
+		LAT_military_diarchy
+
+		LAT_beyond_the_baltic
+		LAT_join_the_allies
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		LAT_threat_on_our_border
+
+		LAT_supply_forest_brothers
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_formalize_baltic_entente = 0
+		LAT_cave_to_enemy_pressure = 0
+		LAT_the_old_ways = 0
+		LAT_alignment_with_germany = 0
+		LAT_the_thunder_strikes_alone = 0
+	}
+
+}
+
+
+LAT_ostlands = {
+	name = "Latvian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FASCIST_RK_OSTLAND
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FASCIST_RK_OSTLAND
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		LAT_latvia_for_latvians
+
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_the_old_ways
+		LAT_military_industrial_complex
+		LAT_alignment_with_germany
+		LAT_the_thunder_strikes_alone #if germany is not fascist
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_appease_democrats
+		LAT_martial_prime_minister
+		LAT_free_the_ugonskrusts
+		
+		LAT_reorganize_forest_brothers
+		LAT_support_baltic_fascists
+		BALTIC_school_of_aviation
+		LAT_improve_military_life
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		
+		LAT_establish_chambers_of_professions
+		LAT_nationalised_industry
+		LAT_ostland
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		LAT_dievs_keepers
+		LAT_merge_presidential_titles
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_consecrate_the_brotherhood = 0
+		LAT_beyond_the_baltic = 0
+	}
+
+}
+
+LAT_baltic_empire_axis = {
+	name = "Latvian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FASCIST_RK_BALTIC
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FASCIST_RK_BALTIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		LAT_latvia_for_latvians
+
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_the_old_ways
+		LAT_military_industrial_complex
+		LAT_alignment_with_germany
+		LAT_the_thunder_strikes_alone #if germany is not fascist
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_appease_democrats
+		LAT_martial_prime_minister
+		LAT_free_the_ugonskrusts
+		
+		LAT_reorganize_forest_brothers
+		LAT_lightning_strike
+		LAT_united_baltic_empire
+		BALTIC_school_of_aviation
+		LAT_improve_military_life
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		
+		LAT_dievs_keepers
+		LAT_establish_chambers_of_professions
+		LAT_nationalised_industry
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		LAT_merge_presidential_titles
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_consecrate_the_brotherhood = 0
+		LAT_avenge_the_ancestors = 0
+		LAT_beyond_the_baltic = 0
+	}
+
+}
+
+LAT_baltic_empire_lonesome = {
+	name = "Latvian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FASCIST_BALTIC
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FASCIST_BALTIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		LAT_latvia_for_latvians
+
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_the_old_ways
+		LAT_military_industrial_complex
+		LAT_the_thunder_strikes_alone
+
+		LAT_dievs_keepers
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_appease_democrats
+		LAT_martial_prime_minister
+		
+		LAT_free_the_ugonskrusts
+		LAT_reorganize_forest_brothers
+		LAT_lightning_strike
+		LAT_united_baltic_empire
+		LAT_state_paganism
+		LAT_improve_military_life
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		
+		LAT_establish_chambers_of_professions
+		LAT_wrath_of_the_old_gods
+		LAT_nationalised_industry
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		LAT_merge_presidential_titles
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_consecrate_the_brotherhood = 0
+		LAT_avenge_the_ancestors = 0
+		LAT_beyond_the_baltic = 0
+		LAT_cave_to_enemy_pressure = 0
+	}
+
+}
+
+LAT_baltic_empire_crazy = {
+	name = "Latvian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FASCIST_BALTIC_2
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FASCIST_BALTIC_2
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		LAT_latvia_for_latvians
+
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_the_old_ways
+		LAT_military_industrial_complex
+		LAT_the_thunder_strikes_alone
+
+		LAT_dievs_keepers
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_appease_democrats
+		LAT_martial_prime_minister
+		
+		LAT_free_the_ugonskrusts
+		LAT_reorganize_forest_brothers
+		LAT_lightning_strike
+		LAT_united_baltic_empire
+		LAT_state_paganism
+		LAT_improve_military_life
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		
+		LAT_establish_chambers_of_professions
+		LAT_wrath_of_the_old_gods
+		LAT_avenge_the_ancestors
+		LAT_nationalised_industry
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		LAT_merge_presidential_titles
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_consecrate_the_brotherhood = 0
+		LAT_beyond_the_baltic = 0
+		LAT_cave_to_enemy_pressure = 0
+	}
+
+}
+
+LAT_baltic_brotherhood = {
+	name = "Latvian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LAT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LAT_AI_RANDOM_FASCIST_BALTIC_3
+			has_game_rule = {
+				rule = LAT_ai_behavior
+				option = FASCIST_BALTIC_3
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LAT_suspend_the_constitution
+		LAT_empower_paramilitarists
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		LAT_latvia_for_latvians
+
+		LAT_lift_ban_on_perkonkrusts
+		LAT_fanatic_recruitment
+		LAT_the_old_ways
+		LAT_military_industrial_complex
+		LAT_the_thunder_strikes_alone 
+
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LAT_free_the_ugonskrusts
+		LAT_support_baltic_fascists
+		LAT_appease_democrats
+		LAT_martial_prime_minister
+
+		LAT_reorganize_forest_brothers	
+		LAT_dievs_keepers
+		LAT_state_paganism
+		LAT_improve_military_life
+		BALTIC_german_war_economics
+
+		LAT_consecrate_the_brotherhood
+		LAT_wrath_of_the_old_gods
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		LAT_establish_chambers_of_professions
+		LAT_nationalised_industry
+
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		LAT_dievs_keepers
+		LAT_merge_presidential_titles
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LAT_united_baltic_empire = 0
+		LAT_ostland = 0
+		LAT_beyond_the_baltic = 0
+		LAT_avenge_the_ancestors = 0
+	}
+
+}

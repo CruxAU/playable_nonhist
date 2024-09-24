@@ -1,0 +1,191 @@
+TUR_ideology_kemalist_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ideo_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_country_flag = TUR_AI_RANDOM_IDEO_KEMALIST_NEUTRAL
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = KEMALIST_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		TUR_the_montreux_convention
+		TUR_continue_the_policy_of_etatism
+		TUR_ratify_the_six_arrows
+		TUR_peace_at_home #35
+		TUR_turkish_state_railways
+		TUR_the_sanayiciler #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_hava_okulu #35
+		TUR_the_second_five_year_plan
+		TUR_treaty_of_saadabad #35
+		TUR_learning_from_the_great_war #35
+		TUR_the_guardians_of_kemalism #35
+		TUR_assess_our_future #35
+		#1938
+		TUR_the_hatay_issue #35
+		TUR_turk_ulusu
+		TUR_modernising_the_army #35
+		TUR_expand_the_air_bases #35
+		TUR_expand_the_golcuk_naval_base
+		TUR_peace_in_the_world #35
+		TUR_variant_turkish_tax_focus #35
+		#1939
+		TUR_abuse_the_office_of_soil_products
+		#end 35 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 15
+		TUR_ismet_inonu = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_historical_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_country_flag = TUR_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+TUR_peaceful_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_aggr_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_country_flag = TUR_AI_RANDOM_FP_PEACE
+			has_game_rule = {
+				rule = TUR_aggr_ai_behavior
+				option = PEACE
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	focus_factors = {
+		TUR_press_the_austro_hungarian_claim = 0.01
+		TUR_the_red_apples_of_sevres = 0
+		TUR_seizing_the_romanian_oil_fields = 0
+		TUR_securing_iran = 0.01
+		TUR_victory_or_death_against_communism = 0
+		TUR_carve_up_greece = 0
+		TUR_end_the_british_hegemony = 0
+		TUR_punish_french_weakness = 0
+		TUR_the_tuz_golu_training_facility = 0
+		#TUR_avenge_the_treaty_of_sevres TUR_strike_at_the_fascist_menace in national_focus file not needed here
+		TUR_stop_the_stalinist_charade = 0
+		TUR_strike_the_british_imperialists = 0
+		TUR_capitalise_on_rising_kurdish_nationalism = 0
+		TUR_issue_an_ultimatium_to_the_bulgarians = 0
+		TUR_preempt_bulgarian_alignment = 0
+		TUR_crush_the_warmongers_in_rome = 0
+		TUR_brace_against_the_red_menace = 0
+		TUR_misak_i_milli = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -1,0 +1,707 @@
+ideas = {
+	country = {
+		NHMMAP_suprise_attack = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -0.3
+				army_org_factor = -0.35
+				army_speed_factor = -0.35
+				training_time_factor = -0.25
+				minimum_training_level = -0.2
+				army_core_defence_factor = -0.4
+				army_core_attack_factor = -0.75
+			}
+		}
+		NHMMAP_repaying_debts_5 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.02
+				industrial_capacity_dockyard = -0.02
+				production_speed_buildings_factor = -0.02
+				political_power_gain = -0.05
+			}
+		}
+		NHMMAP_repaying_debts_10 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+		NHMMAP_repaying_debts_15 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.07
+				industrial_capacity_dockyard = -0.07
+				production_speed_buildings_factor = -0.07
+				political_power_gain = -0.15
+			}
+		}
+		NHMMAP_repaying_debts_20 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				political_power_gain = -0.2
+			}
+		}
+		NHMMAP_repaying_debts_25 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.12
+				industrial_capacity_dockyard = -0.12
+				production_speed_buildings_factor = -0.12
+				political_power_gain = -0.25
+			}
+		}
+		NHMMAP_repaying_debts_30 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.15
+				political_power_gain = -0.3
+			}
+		}
+		NHMMAP_repaying_debts_35 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.35
+				industrial_capacity_factory = -0.17
+				industrial_capacity_dockyard = -0.17
+				production_speed_buildings_factor = -0.17
+				political_power_gain = -0.35
+			}
+		}
+		NHMMAP_repaying_debts_40 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.4
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+				production_speed_buildings_factor = -0.2
+				political_power_gain = -0.4
+			}
+		}
+		NHMMAP_repaying_debts_JAP = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.15
+				political_power_gain = -0.3
+			}
+		}
+		NHMMAP_getting_paid_5 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+				production_speed_buildings_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+		NHMMAP_getting_paid_10 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		NHMMAP_getting_paid_15 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.07
+				industrial_capacity_dockyard = 0.07
+				production_speed_buildings_factor = 0.07
+				political_power_gain = 0.15
+			}
+		}
+		NHMMAP_getting_paid_20 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation2
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.2
+			}
+		}
+		NHMMAP_getting_paid_25 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation2
+
+			modifier = {
+				consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
+				production_speed_buildings_factor = 0.12
+				political_power_gain = 0.25
+			}
+		}
+		NHMMAP_getting_paid_30 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation2
+
+			modifier = {
+				consumer_goods_factor = -0.3
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				political_power_gain = 0.3
+			}
+		}
+		NHMMAP_getting_paid_35 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+
+			modifier = {
+				consumer_goods_factor = -0.35
+				industrial_capacity_factory = 0.17
+				industrial_capacity_dockyard = 0.17
+				production_speed_buildings_factor = 0.17
+				political_power_gain = 0.35
+			}
+		}
+		NHMMAP_getting_paid_40 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+
+			modifier = {
+				consumer_goods_factor = -0.4
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.20
+				production_speed_buildings_factor = 0.2
+				political_power_gain = 0.4
+			}
+		}
+		NHMMAP_getting_paid_SOV = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation2
+
+			modifier = {
+				consumer_goods_factor = -0.3
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				political_power_gain = 0.3
+			}
+		}
+		NHMMAP_supporting_kmt = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				send_volunteer_size = 2
+				send_volunteer_divisions_required = -1
+				lend_lease_tension = -0.40
+				send_volunteers_tension = -0.1
+			}
+		}
+		NHMMAP_nazis_in_government = {
+
+			picture = ast_abandon_the_westminster_system_fascism
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				research_speed_factor = 0.05
+				training_time_factor = -0.1
+				fascism_drift = 0.07
+				neutrality_drift = 0.01
+			}
+		}
+		NHMMAP_treaty_of_toyohara = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+				set_rule = { can_join_factions = no }
+				set_rule = { can_create_factions = no }
+			}
+
+			on_remove = {
+				set_rule = { can_join_factions = yes }
+				set_rule = { can_create_factions = yes }
+			}
+
+			targeted_modifier = {
+				tag = SOU
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+
+			modifier = {
+				war_support_factor = -0.05
+				research_speed_factor = -0.05
+				training_time_factor = 0.1
+				communism_drift = 0.02
+				neutrality_drift = -0.05
+			}
+		}
+		NHMMAP_treaty_of_harbin_1 = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.05
+			}
+
+			modifier = {
+				war_support_factor = -0.05
+				research_speed_factor = -0.05
+				training_time_factor = 0.1
+				communism_drift = -0.1
+				neutrality_drift = 0.02
+				fascism_drift = 0.01
+			}
+		}
+		NHMMAP_treaty_of_harbin_2 = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.1
+			}
+
+			modifier = {
+				war_support_factor = -0.05
+				research_speed_factor = -0.05
+				training_time_factor = 0.1
+				communism_drift = -0.1
+				neutrality_drift = 0.02
+				fascism_drift = 0.01
+			}
+		}
+		NHMMAP_treaty_of_harbin_3 = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.2
+			}
+
+			modifier = {
+				war_support_factor = -0.05
+				research_speed_factor = -0.05
+				training_time_factor = 0.1
+				communism_drift = -0.1
+				neutrality_drift = 0.02
+				fascism_drift = 0.01
+			}
+		}
+		NHMMAP_tired_in_the_east_SOV = {
+
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.2
+			}
+
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.2
+			}
+
+			modifier = {
+				communism_drift = -0.1
+				neutrality_drift = 0.02
+				fascism_drift = 0.01
+				war_support_factor = -0.1
+				org_loss_when_moving = 0.15
+				army_org_factor = -0.05
+			}
+		}
+		NHMMAP_tired_in_the_east_JAP = {
+
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.2
+			}
+
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.2
+			}
+
+			modifier = {
+				neutrality_drift = -0.1
+				communism_drift = 0.04
+				war_support_factor = -0.1
+				org_loss_when_moving = 0.15
+				army_org_factor = -0.05
+			}
+		}
+		NHMMAP_time_to_finish_the_east_SOV = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against =  0.2
+				defense_bonus_against = 0.1
+			}
+
+			modifier = {
+				war_support_factor = 0.1
+				org_loss_when_moving = -0.15
+				army_org_factor = 0.05
+			}
+		}
+		NHMMAP_time_to_finish_the_east_JAP = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against =  0.2
+				defense_bonus_against = 0.1
+			}
+
+			modifier = {
+				war_support_factor = 0.1
+				org_loss_when_moving = -0.15
+				army_org_factor = 0.05
+			}
+		}
+		TUR_turkish_interventionism_NHMMAP = { #debuff this spirit since it gave turkey 8 bloody volunteers in spain, i have reduced it to 3, might do 4 in the future but i think 3 is plenty
+				
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_flexible_foreign_policy
+			
+			removal_cost = -1
+
+			modifier = {
+				lend_lease_tension = -0.40
+				send_volunteers_tension = -0.40
+				send_volunteer_size = 1
+				justify_war_goal_time = -0.6
+				generate_wargoal_tension = -0.4
+			}
+		}
+	}
+}

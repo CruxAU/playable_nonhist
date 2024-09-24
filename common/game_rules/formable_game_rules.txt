@@ -1,0 +1,1083 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+ ##   ##  #   # ###      ## ### ### #  # ###  
+#    #  # ## ## #       #   #    #  #  # #  # 
+# ## #### # # # ##       #  ##   #  #  # ###  
+#  # #  # #   # #         # #    #  #  # #    
+ ##  #  # #   # ###     ##  ###  #   ##  #    
+
+rom_fragmentation_status = {
+	name = "ROM_FRAGMENTATION_STATUS"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = ROM_FRAGMENTED
+		text = "RULE_OPTION_ROM_FRAGMENTED"
+		desc = "RULE_OPTION_ROM_FRAGMENTED_DESC"
+	}
+}
+andalusia_formation_status = {
+	name = "ANDALUSIA_FORMATION_STATUS"
+	required_dlc = "La Resistance"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Morocco & south Iberia
+		name = ANDALUSIA_FORMED
+		text = "RULE_OPTION_BARE_MINIMUM"
+		desc = "RULE_OPTION_ANDALUSIA_FORMED_DESC"
+	}
+	option = { #Morocco & Iberia
+		name = ANDALUSIA_FORMED_IBERIA
+		text = "RULE_OPTION_ANDALUSIA_FORMED_IBERIA"
+		desc = "RULE_OPTION_ANDALUSIA_FORMED_IBERIA_DESC"
+	}
+	option = { #Umayyad Caliphate
+		name = ANDALUSIA_FORMED_UMAYYAD
+		text = "RULE_OPTION_ANDALUSIA_FORMED_UMAYYAD"
+		desc = "RULE_OPTION_ANDALUSIA_FORMED_UMAYYAD_DESC"
+	}
+}
+arabia_formation_status = {
+	name = "ARABIA_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Iraq
+		name = ARABIA_FORMED_IRQ
+		text = "RULE_OPTION_ARABIA_FORMED_IRQ"
+		desc = "RULE_OPTION_ARABIA_FORMED_IRQ_DESC"
+	}
+	option = { #Saudi Arabia
+		name = ARABIA_FORMED_SAU
+		text = "RULE_OPTION_ARABIA_FORMED_SAU"
+		desc = "RULE_OPTION_ARABIA_FORMED_SAU_DESC"
+	}
+}
+aus_hun_formation_status = {
+	name = "AUS_HUN_FORMATION_STATUS"
+	required_dlc = "Death or Dishonor"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Austria-Hungary Austria
+		name = AUS_HUN_AUS
+		required_dlc = "Waking the Tiger"
+		text = "RULE_OPTION_AUS_HUN_AUS"
+		desc = "RULE_OPTION_AUS_HUN_AUS_DESC"
+	}
+	option = { #Austria-Hungary bare minimum (formerly fascist)
+		name = AUS_HUN_FASCIST
+		text = "RULE_OPTION_AUS_HUN_FASCIST"
+		desc = "RULE_OPTION_AUS_HUN_FASCIST_DESC"
+	}
+	option = { #Austria-Hungary neutral
+		name = AUS_HUN_OTTO
+		text = "RULE_OPTION_AUS_HUN_OTTO"
+		desc = "RULE_OPTION_AUS_HUN_OTTO_DESC"
+	}
+	option = { #Greater Hungary bare minimum (formerly fascist)
+		name = HUN_GREATER_HUNGARY_FASCIST
+		text = "RULE_OPTION_HUN_GREATER_FASCIST"
+		desc = "RULE_OPTION_HUN_GREATER_FASCIST_DESC"
+	}
+	option = { #Greater Hungary neutral
+		name = HUN_GREATER_HUNGARY_HORTHY
+		text = "RULE_OPTION_HUN_GREATER_HORTHY"
+		desc = "RULE_OPTION_HUN_GREATER_HORTHY_DESC"
+	}
+}
+belarus_formation_status = {
+	name = "BELARUS_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Lithuania
+		name = BELARUS_FORMED_LIT
+		text = "RULE_OPTION_BELARUS_FORMED_LIT"
+		desc = "RULE_OPTION_BELARUS_FORMED_LIT_DESC"
+	}
+	option = { #Latvia
+		name = BELARUS_FORMED_LAT
+		text = "RULE_OPTION_BELARUS_FORMED_LAT"
+		desc = "RULE_OPTION_BELARUS_FORMED_LAT_DESC"
+	}
+	option = { #Estonia
+		name = BELARUS_FORMED_EST
+		text = "RULE_OPTION_BELARUS_FORMED_EST"
+		desc = "RULE_OPTION_BELARUS_FORMED_EST_DESC"
+	}
+}
+bul_formation_status = {
+	name = "BUL_FORMATION_STATUS"
+	required_dlc = "Battle for the Bosporus"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #TBE - Fascist
+		name = BUL_FORMED_TBE_FASCISM
+		text = "RULE_OPTION_BUL_FORMED_TBE_FASCISM"
+		desc = "RULE_OPTION_BUL_FORMED_TBE_FASCISM_DESC"
+	}
+	option = { #TBE - Boris
+		name = BUL_FORMED_TBE_BORIS
+		text = "RULE_OPTION_BUL_FORMED_TBE_BORIS"
+		desc = "RULE_OPTION_BUL_FORMED_TBE_BORIS_DESC"
+	}
+	option = { #TBE - Ferdinand
+		name = BUL_FORMED_TBE_FERDINAND
+		text = "RULE_OPTION_BUL_FORMED_TBE_FERDINAND"
+		desc = "RULE_OPTION_BUL_FORMED_TBE_FERDINAND_DESC"
+	}
+	option = { #TBE - Ferdinand Max
+		name = BUL_FORMED_TBE_FERDINAND_MAX
+		text = "RULE_OPTION_BUL_FORMED_TBE_FERDINAND_MAX"
+		desc = "RULE_OPTION_BUL_FORMED_TBE_FERDINAND_MAX_DESC"
+	}
+	option = { #UBF - Communist
+		name = BUL_FORMED_UBF_COMMUNISM
+		text = "RULE_OPTION_BUL_FORMED_UBF_COMMUNISM"
+		desc = "RULE_OPTION_BUL_FORMED_UBF_COMMUNISM_DESC"
+	}
+	option = { #UBF - Democratic
+		name = BUL_FORMED_UBF_DEMOCRATIC
+		text = "RULE_OPTION_BUL_FORMED_UBF_DEMOCRATIC"
+		desc = "RULE_OPTION_BUL_FORMED_UBF_DEMOCRATIC_DESC"
+	}
+}
+china_formation_status = {
+	name = "CHINA_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #ROC
+		name = CHINA_FORMED_ROC
+		text = "RULE_OPTION_CHINA_FORMED_ROC"
+		desc = "RULE_OPTION_CHINA_FORMED_ROC_DESC"
+	}
+	option = { #PRC
+		name = CHINA_FORMED_PRC
+		text = "RULE_OPTION_CHINA_FORMED_PRC"
+		desc = "RULE_OPTION_CHINA_FORMED_PRC_DESC"
+	}
+	option = { #Qing
+		name = CHINA_FORMED_QING
+		text = "RULE_OPTION_CHINA_FORMED_QING"
+		desc = "RULE_OPTION_CHINA_FORMED_QING_DESC"
+	}
+	option = { #Qing max
+		name = CHINA_FORMED_QING_MAX
+		text = "RULE_OPTION_CHINA_FORMED_QING_MAX"
+		desc = "RULE_OPTION_CHINA_FORMED_QING_MAX_DESC"
+	}
+}
+csa_formation_status = {
+	name = "CSA_FORMATION_STATUS"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Fascist
+		name = CSA_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_CSA_FORMED_DESC"
+	}
+	option = { #Max
+		name = CSA_FORMED_MAX
+		text = "RULE_OPTION_FORMED_MAX"
+		desc = "RULE_OPTION_CSA_FORMED_MAX_DESC"
+	}
+}
+cze_formation_status = {
+	name = "CZE_FORMATION_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Split
+		name = CZE_FORMED
+		text = "RULE_OPTION_SPLIT"
+		desc = "RULE_OPTION_CZE_FORMED_DESC"
+	}
+}
+dna_formation_status = {
+	name = "DNA_FORMATION_STATUS"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = DNA_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+egy_formation_status = {
+	name = "EGY_FORMATION_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = EGY_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_EGY_FORMED_DESC"
+	}
+	option = { #Ali's Conquests
+		name = EGY_FORMED_ALI
+		text = "RULE_OPTION_FORMED_MAX"
+		desc = "RULE_OPTION_EGY_FORMED_ALI_DESC"
+	}
+}
+est_formation_status = {
+	name = "EST_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Estonia-Finland
+		name = EST_FORMED_EST_FIN
+		text = "RULE_OPTION_EST_FORMED_EST_FIN"
+		desc = "RULE_OPTION_EST_FORMED_EST_FIN_DESC"
+	}
+	option = { #Finno-Ugria
+		name = EST_FORMED_FINNO_UGRIA
+		text = "RULE_OPTION_EST_FORMED_FINNO_UGRIA"
+		desc = "RULE_OPTION_EST_FORMED_FINNO_UGRIA_DESC"
+	}
+	option = { #Finno-Ugria max
+		name = EST_FORMED_FINNO_UGRIA_MAX
+		text = "RULE_OPTION_EST_FORMED_FINNO_UGRIA_MAX"
+		desc = "RULE_OPTION_EST_FORMED_FINNO_UGRIA_MAX_DESC"
+	}
+}
+eu_formation_status = {
+	name = "EU_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = EU_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_EU_FORMED_DESC"
+	}
+	option = { #Modern-day with 1936 borders
+		name = EU_FORMED_MODERN
+		text = "RULE_OPTION_EU_FORMED_MODERN"
+		desc = "RULE_OPTION_EU_FORMED_MODERN_DESC"
+	}
+	option = { #Modern-day with modern borders
+		name = EU_FORMED_MODERN_II
+		text = "RULE_OPTION_EU_FORMED_MODERN_II"
+		desc = "RULE_OPTION_EU_FORMED_MODERN_II_DESC"
+	}
+	option = { #Germany
+		name = EU_FORMED_GER
+		text = "RULE_OPTION_EU_FORMED_GER"
+		desc = "RULE_OPTION_EU_FORMED_GER_DESC"
+	}
+	option = { #Mosley UK
+		name = EU_FORMED_MOSLEY
+		required_dlc = "Man the Guns"
+		text = "RULE_OPTION_EU_FORMED_MOSLEY"
+		desc = "RULE_OPTION_EU_FORMED_MOSLEY_DESC"
+	}
+}
+fra_spr_formation_status = {
+	name = "FRA_SPR_FORMATION_STATUS"
+	required_dlc = "La Resistance"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #France
+		name = FRA_SPR_FORMED_FRA
+		text = "RULE_OPTION_FRA_SPR_FORMED_FRA"
+		desc = "RULE_OPTION_FRA_SPR_FORMED_FRA_DESC"
+	}
+	option = { #Spain
+		name = FRA_SPR_FORMED_SPR
+		text = "RULE_OPTION_FRA_SPR_FORMED_SPR"
+		desc = "RULE_OPTION_FRA_SPR_FORMED_SPR_DESC"
+	}
+}
+ger_formation_status = {
+	name = "GER_FORMATION_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #German Empire
+		required_dlc = "Waking the Tiger"
+		name = GER_FORMED
+		text = "RULE_OPTION_GER_FORMED"
+		desc = "RULE_OPTION_GER_FORMED_DESC"
+	}
+	option = { #German Empire + colonies
+		required_dlc = "Waking the Tiger"
+		name = GER_FORMED_COLONIAL
+		text = "RULE_OPTION_GER_FORMED_COLONIAL"
+		desc = "RULE_OPTION_GER_FORMED_COLONIAL_DESC"
+	}
+	option = { #GGR
+		required_dlc = "Waking the Tiger"
+		name = GGR_FORMED
+		text = "RULE_OPTION_GGR_FORMED"
+		desc = "RULE_OPTION_GGR_FORMED_DESC"
+	}
+	option = { #HRE fascist
+		required_dlc = "Waking the Tiger"
+		name = HRE_FORMED
+		text = "RULE_OPTION_HRE_FORMED"
+		desc = "RULE_OPTION_HRE_FORMED_DESC"
+	}
+	option = { #HRE neutral - Wilhelm II
+		required_dlc = "Waking the Tiger"
+		name = HRE_FORMED_WILHELM
+		text = "RULE_OPTION_HRE_FORMED_WILHELM"
+		desc = "RULE_OPTION_HRE_FORMED_WILHELM_DESC"
+	}
+	option = { #HRE neutral - Victoria
+		required_dlc = "Waking the Tiger"
+		name = HRE_FORMED_VIC
+		text = "RULE_OPTION_HRE_FORMED_VIC"
+		desc = "RULE_OPTION_HRE_FORMED_VIC_DESC"
+	}
+	option = { #Disunite Germany
+		required_dlc = "La Resistance"
+		name = GER_FORMED_SPLIT
+		text = "RULE_OPTION_GER_FORMED_SPLIT"
+		desc = "RULE_OPTION_GER_FORMED_SPLIT_DESC"
+	}
+	option = { #Yalta Conference
+		name = GER_FORMED_YALTA
+		text = "RULE_OPTION_GER_FORMED_YALTA"
+		desc = "RULE_OPTION_GER_FORMED_YALTA_DESC"
+	}
+	option = { #Yalta Conference II
+		name = GER_FORMED_YALTA_II
+		text = "RULE_OPTION_GER_FORMED_YALTA_II"
+		desc = "RULE_OPTION_GER_FORMED_YALTA_II_DESC"
+	}
+}
+gran_formation_status = {
+	name = "GRAN_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Colombia
+		name = GRAN_FORMED_COL
+		text = "RULE_OPTION_FORMED_DEMOCRATIC"
+		desc = "RULE_OPTION_GRAN_FORMED_COL_DESC"
+	}
+	option = { #Venezuela
+		name = GRAN_FORMED_VEN
+		text = "RULE_OPTION_FORMED_FASCISM"
+		desc = "RULE_OPTION_GRAN_FORMED_VEN_DESC"
+	}
+}
+gre_formation_status = {
+	name = "GRE_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Byz bare minimum (Legacy)
+		name = BYZ_BARE_MINIMUM
+		text = "RULE_OPTION_BYZ_BARE_MINIMUM"
+		desc = "RULE_OPTION_BYZ_BARE_MINIMUM_DESC"
+	}
+	option = { #Byzantium (BftB)
+		name = GRE_FORMED_BYZANTIUM
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_BYZANTIUM"
+		desc = "RULE_OPTION_GRE_FORMED_BYZANTIUM_DESC"
+	}
+	option = { #Byz formed (Legacy)
+		name = BYZ_FORMED
+		text = "RULE_OPTION_BYZ_FORMED"
+		desc = "RULE_OPTION_BYZ_FORMED_DESC"
+	}
+	option = { #Byzantium - Maximum (BtfB)
+		name = GRE_FORMED_BYZANTIUM_MAX
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_BYZANTIUM_MAX"
+		desc = "RULE_OPTION_GRE_FORMED_BYZANTIUM_MAX_DESC"
+	}
+	option = { #Byz max (Legacy)
+		name = BYZ_FORMED_MAX
+		text = "RULE_OPTION_BYZ_FORMED_MAX"
+		desc = "RULE_OPTION_BYZ_FORMED_MAX_DESC"
+	}
+	option = { #Greater Greece - Communist
+		name = GRE_FORMED_GREATER_COMMUNISM
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_GREATER_COMMUNISM"
+		desc = "RULE_OPTION_GRE_FORMED_GREATER_COMMUNISM_DESC"
+	}
+	option = { #Greater Greece - Fascist
+		name = GRE_FORMED_GREATER_FASCISM
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_GREATER_FASCISM"
+		desc = "RULE_OPTION_GRE_FORMED_GREATER_FASCISM_DESC"
+	}
+	option = { #Greater Greece - Metaxa
+		name = GRE_FORMED_GREATER_NEUTRALITY
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_GREATER_NEUTRALITY"
+		desc = "RULE_OPTION_GRE_FORMED_GREATER_NEUTRALITY_DESC"
+	}
+	option = { #Macedonia - Fascist
+		name = GRE_FORMED_MACEDONIA_FASCISM
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_MACEDONIA_FASCISM"
+		desc = "RULE_OPTION_GRE_FORMED_MACEDONIA_FASCISM_DESC"
+	}
+	option = { #Macedonia - Non-Aligned
+		name = GRE_FORMED_MACEDONIA_NEUTRALITY
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_GRE_FORMED_MACEDONIA_NEUTRALITY"
+		desc = "RULE_OPTION_GRE_FORMED_MACEDONIA_NEUTRALITY_DESC"
+	}
+}
+majapahit_formation_status = {
+	name = "MAJAPAHIT_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #British Malaysia
+		name = MAJAPAHIT_FORMED_MAL
+		text = "RULE_OPTION_MAJAPAHIT_FORMED_MAL"
+		desc = "RULE_OPTION_MAJAPAHIT_FORMED_MAL_DESC"
+	}
+	option = { #Dutch East Indies
+		name = MAJAPAHIT_FORMED_INS
+		text = "RULE_OPTION_MAJAPAHIT_FORMED_INS"
+		desc = "RULE_OPTION_MAJAPAHIT_FORMED_INS_DESC"
+	}
+}
+iberia_formation_status = {
+	name = "IBERIA_FORMATION_STATUS"
+	required_dlc = "La Resistance"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Portugal
+		name = IBERIA_FORMED_POR
+		text = "RULE_OPTION_IBERIA_FORMED_POR"
+		desc = "RULE_OPTION_IBERIA_FORMED_POR_DESC"
+	}
+	option = { #Spain
+		name = IBERIA_FORMED_SPR
+		text = "RULE_OPTION_IBERIA_FORMED_SPR"
+		desc = "RULE_OPTION_IBERIA_FORMED_SPR_DESC"
+	}
+}
+ural_formation_status = {
+	name = "URAL_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = URAL_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_URAL_FORMED_DESC"
+	}
+}
+jap_formation_status = {
+	name = "JAP_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = JAP_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+kalmar_nordic_formation_status = {
+	name = "KALMAR_NORDIC_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Kalmar Union
+		name = KALMAR_FORMED
+		text = "RULE_OPTION_KALMAR_FORMED"
+		desc = "RULE_OPTION_KALMAR_FORMED_DESC"
+	}
+	option = { #Nordic League
+		name = NORDIC_FORMED
+		text = "RULE_OPTION_NORDIC_FORMED"
+		desc = "RULE_OPTION_NORDIC_FORMED_DESC"
+	}
+	option = { #Estonia
+		name = KALMAR_FORMED_EST
+		required_dlc = "No Step Back"
+		text = "RULE_OPTION_KALMAR_FORMED_EST"
+		desc = "RULE_OPTION_KALMAR_FORMED_EST_DESC"
+	}
+}
+kur_formation_status = {
+	name = "KUR_FORMATION_STATUS"
+	required_dlc = "Battle for the Bosporus"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = KUR_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_KUR_FORMED_DESC"
+	}
+}
+lat_formation_status = {
+	name = "LAT_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Baltic Union (WtT)
+		name = BALTIC_FORMED
+		text = "RULE_OPTION_BALTIC_FORMED"
+		desc = "RULE_OPTION_BALTIC_FORMED_DESC"
+	}
+	option = { #Ostland
+		name = LAT_FORMED_OST
+		required_dlc = "No Step Back"
+		text = "RULE_OPTION_LAT_FORMED_OST"
+		desc = "RULE_OPTION_LAT_FORMED_OST_DESC"
+	}
+}
+lit_formation_status = {
+	name = "LIT_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = {
+		name = LIT_FORMED_GREATER
+		text = "RULE_OPTION_LIT_FORMED_GREATER"
+		desc = "RULE_OPTION_LIT_FORMED_GREATER_DESC"
+	}
+	option = {
+		name = LIT_FORMED_GREATER_MAX
+		text = "RULE_OPTION_LIT_FORMED_GREATER_MAX"
+		desc = "RULE_OPTION_LIT_FORMED_GREATER_MAX_DESC"
+	}
+	option = {
+		name = LIT_FORMED_LIVONIA
+		text = "RULE_OPTION_LIT_FORMED_LIVONIA"
+		desc = "RULE_OPTION_LIT_FORMED_LIVONIA_DESC"
+	}
+	option = { #Poland-Lithuania (NSB)
+		name = LIT_FORMED_POL
+		text = "RULE_OPTION_LIT_FORMED_POL"
+		desc = "RULE_OPTION_LIT_FORMED_POL_DESC"
+	}
+	option = { #P-L max (NSB)
+		name = LIT_FORMED_POL_MAX
+		text = "RULE_OPTION_LIT_FORMED_POL_MAX"
+		desc = "RULE_OPTION_LIT_FORMED_POL_MAX_DESC"
+	}
+}
+mexico_formation_status = {
+	name = "MEXICO_FORMATION_STATUS"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Mexican Empire
+		name = MEX_FORMED_EMPIRE
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+	option = { #Max Mex
+		name = MEX_FORMED_MAX
+		text = "RULE_OPTION_FORMED_MAX"
+		desc = "RULE_OPTION_FORMED_MAX_DESC"
+	}
+}
+mutapa_formation_status = {
+	name = "MUTAPA_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = MUTAPA_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+norcauc_formation_status = {
+	name = "NORCAUC_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = NORCAUC_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_NORCAUC_FORMED_DESC"
+	}
+}
+persia_formation_status = {
+	name = "PERSIA_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = PERSIA_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+pol_formation_status = {
+	name = "BALTIC_POL_LIT_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Bermontian Kingdom
+		name = POL_FORMED_BERMONDT
+		required_dlc = "No Step Back"
+		text = "RULE_OPTION_POL_FORMED_BERMONDT"
+		desc = "RULE_OPTION_POL_FORMED_BERMONDT_DESC"
+	}
+	option = { #Poland-Lithuania (WtT)
+		name = POL_LIT_FORMED
+		text = "RULE_OPTION_POL_LIT_FORMED"
+		desc = "RULE_OPTION_POL_LIT_FORMED_DESC"
+	}
+	option = { #P-L max (WtT)
+		name = POL_LIT_FORMED_MAX
+		text = "RULE_OPTION_POL_LIT_FORMED_MAX"
+		desc = "RULE_OPTION_POL_LIT_FORMED_MAX_DESC"
+	}
+	option = { #Poland-Romania
+		name = POL_FORMED_ROM
+		required_dlc = "No Step Back"
+		text = "RULE_OPTION_POL_FORMED_ROM"
+		desc = "RULE_OPTION_POL_FORMED_ROM_DESC"
+	}
+	option = { #Polish Empire
+		name = POL_FORMED_EMPIRE
+		required_dlc = "No Step Back"
+		text = "RULE_OPTION_POL_FORMED_EMPIRE"
+		desc = "RULE_OPTION_POL_FORMED_EMPIRE_DESC"
+	}
+	option = { #Slavic Union
+		name = POL_FORMED_SLAVIC
+		required_dlc = "No Step Back"
+		text = "RULE_OPTION_POL_FORMED_SLAVIC"
+		desc = "RULE_OPTION_POL_FORMED_SLAVIC_DESC"
+	}
+}
+porto_brazil_formation_status = {
+	name = "PORTO_BRAZIL_FORMATION_STATUS"
+	required_dlc = "La Resistance"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Brazil
+		name = PORTO_BRAZIL_FORMED_BRA
+		text = "RULE_OPTION_PORTO_BRAZIL_FORMED_BRA"
+		desc = "RULE_OPTION_PORTO_BRAZIL_FORMED_BRA_DESC"
+	}
+	option = { #Portugal
+		name = PORTO_BRAZIL_FORMED_POR
+		text = "RULE_OPTION_PORTO_BRAZIL_FORMED_POR"
+		desc = "RULE_OPTION_PORTO_BRAZIL_FORMED_POR_DESC"
+	}
+	option = { #Portugal Fifth Empire
+		name = PORTO_BRAZIL_FORMED_PORTUGAL
+		text = "RULE_OPTION_PORTO_BRAZIL_FORMED_PORTUGAL"
+		desc = "RULE_OPTION_PORTO_BRAZIL_FORMED_PORTUGAL_DESC"
+	}
+}
+rattanakosin_formation_status = {
+	name = "RATTANAKOSIN_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = RATTANAKOSIN_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+rome_formation_status = {
+	name = "ROME_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Rome bare minimum
+		name = ROME_BARE_MINIMUM
+		text = "RULE_OPTION_BARE_MINIMUM"
+		desc = "RULE_OPTION_ROME_BARE_MINIMUM_DESC"
+	}
+	option = { #Rome formed
+		name = ROME_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+	option = { #Byz + Rome split
+		name = BYZ_ROME_2
+		text = "RULE_OPTION_BYZ_ROME_2"
+		desc = "RULE_OPTION_BYZ_ROME_2_DESC"
+	}
+	option = { #Byz + Rome + HRE
+		name = BYZ_ROME_HRE
+		text = "RULE_OPTION_BYZ_ROME_HRE"
+		desc = "RULE_OPTION_BYZ_ROME_HRE_DESC"
+	}
+	option = { #Byz + Rome + HRE + 3rd Rome
+		name = BYZ_ROME_HRE_3RD
+		text = "RULE_OPTION_BYZ_ROME_HRE_3RD"
+		desc = "RULE_OPTION_BYZ_ROME_HRE_3RD_DESC"
+	}
+}
+siberia_formation_status = {
+	name = "SIBERIA_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = SIBERIA_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_SIBERIA_FORMED_DESC"
+	}
+	option = { #Max
+		name = SIBERIA_FORMED_MAX
+		text = "RULE_OPTION_FORMED_MAX"
+		desc = "RULE_OPTION_FORMED_MAX_DESC"
+	}
+}
+sov_formation_status = {
+	name = "SOV_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Pan-Slavic Union
+		name = SOV_FORMED_PANSLAVIC
+		text = "RULE_OPTION_SOV_FORMED_PANSLAVIC"
+		desc = "RULE_OPTION_SOV_FORMED_PANSLAVIC_DESC"
+	}
+	option = { #Third Rome
+		name = SOV_FORMED_ROME
+		text = "RULE_OPTION_SOV_FORMED_ROME"
+		desc = "RULE_OPTION_SOV_FORMED_ROME_DESC"
+	}
+}
+spr_formation_status = {
+	name = "SPR_FORMATION_STATUS"
+	required_dlc = "La Resistance"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Pre-1898
+		name = SPR_FORMED_1898
+		text = "RULE_OPTION_SPR_FORMED_1898"
+		desc = "RULE_OPTION_SPR_FORMED_1898_DESC"
+	}
+	option = { #Pre-1808
+		name = SPR_FORMED_1808
+		text = "RULE_OPTION_SPR_FORMED_1808"
+		desc = "RULE_OPTION_SPR_FORMED_1808_DESC"
+	}
+	option = { #Pre-1713
+		name = SPR_FORMED_1713
+		text = "RULE_OPTION_SPR_FORMED_1713"
+		desc = "RULE_OPTION_SPR_FORMED_1713_DESC"
+	}
+}
+transcauc_formation_status = {
+	name = "TRANSCAUC_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = TRANSCAUC_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_TRANSCAUC_FORMED_DESC"
+	}
+	option = { #Max
+		name = TRANSCAUC_FORMED_MAX
+		text = "RULE_OPTION_FORMED_MAX"
+		desc = "RULE_OPTION_TRANSCAUC_FORMED_MAX_DESC"
+	}
+	option = { #Max + Khanates
+		name = TRANSCAUC_FORMED_KHANATES
+		text = "RULE_OPTION_TRANSCAUC_FORMED_KHANATES"
+		desc = "RULE_OPTION_TRANSCAUC_FORMED_KHANATES_DESC"
+	}
+}
+turkestan_formation_status = {
+	name = "TURKESTAN_FORMATION_STATUS"
+	required_dlc = "No Step Back"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = TURKESTAN_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+turkey_formation_status = {
+	name = "TURKEY_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Ottoman Empire (BftB)
+		name = TUR_FORMED_OTTOMAN
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_TUR_FORMED_OTTOMAN"
+		desc = "RULE_OPTION_TUR_FORMED_OTTOMAN_DESC"
+	}
+	option = { #Ottoman Empire (WtT)
+		name = TUR_FORMED_OTTOMAN_II
+		text = "RULE_OPTION_TUR_FORMED_OTTOMAN_II"
+		desc = "RULE_OPTION_TUR_FORMED_OTTOMAN_II_DESC"
+	}
+	option = { #Ottoman - Max (BftB)
+		name = TUR_FORMED_OTTOMAN_MAX
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_TUR_FORMED_OTTOMAN_MAX"
+		desc = "RULE_OPTION_TUR_FORMED_OTTOMAN_MAX_DESC"
+	}
+	option = { #Ottoman - Max (WtT)
+		name = TUR_FORMED_OTTOMAN_MAX_II
+		text = "RULE_OPTION_TUR_FORMED_OTTOMAN_MAX_II"
+		desc = "RULE_OPTION_TUR_FORMED_OTTOMAN_MAX_II_DESC"
+	}
+	option = { #Turan
+		name = TUR_FORMED_TURAN
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_TUR_FORMED_TURAN"
+		desc = "RULE_OPTION_TUR_FORMED_TURAN_DESC"
+	}
+	option = { #Turan - Max
+		name = TUR_FORMED_TURAN_MAX
+		required_dlc = "Battle for the Bosporus"
+		text = "RULE_OPTION_TUR_FORMED_TURAN_MAX"
+		desc = "RULE_OPTION_TUR_FORMED_TURAN_MAX_DESC"
+	}
+}
+united_kingdom_formation_status = {
+	name = "UNITED_KINGDOM_FORMATION_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_CHANGED"
+		desc = "RULE_OPTION_NOT_CHANGED_DESC"
+	}
+	option = { #Franco-British Union
+		name = FRA_ENG_FORMED
+		text = "RULE_OPTION_FRA_ENG_FORMED"
+		desc = "RULE_OPTION_FRA_ENG_FORMED_DESC"
+	}
+	option = { #Imperial Federation
+		name = IMP_FED_FORMED
+		required_dlc = "Man the Guns"
+		text = "RULE_OPTION_IMP_FED_FORMED"
+		desc = "RULE_OPTION_IMP_FED_FORMED_DESC"
+	}
+	option = { #Imperial Federation - Maximum
+		name = IMP_FED_FORMED_MAX
+		required_dlc = "Man the Guns"
+		text = "RULE_OPTION_IMP_FED_FORMED_MAX"
+		desc = "RULE_OPTION_IMP_FED_FORMED_MAX_DESC"
+	}
+}
+united_hol_formation_status = {
+	name = "UNITED_HOL_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Formed
+		name = UNITED_HOL_FORMED
+		text = "RULE_OPTION_FORMED"
+		desc = "RULE_OPTION_FORMED_DESC"
+	}
+}
+centroamerica_formation_status = {
+	name = "CENTROAMERICA_FORMATION_STATUS"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_NOT_FORMED"
+		desc = "RULE_OPTION_NOT_FORMED_DESC"
+	}
+	option = { #Honduras
+		name = CENTROAMERICA_FORMED_HON
+		text = "RULE_OPTION_FORMED_DEMOCRATIC"
+		desc = "RULE_OPTION_CENTROAMERICA_FORMED_HON_DESC"
+	}
+	option = { #Nicaragua
+		name = CENTROAMERICA_FORMED_NIC
+		text = "RULE_OPTION_FORMED_NEUTRALITY"
+		desc = "RULE_OPTION_CENTROAMERICA_FORMED_NIC_DESC"
+	}
+	option = { #El Salvador
+		name = CENTROAMERICA_FORMED_ELS
+		text = "RULE_OPTION_FORMED_FASCISM"
+		desc = "RULE_OPTION_CENTROAMERICA_FORMED_ELS_DESC"
+	}
+}

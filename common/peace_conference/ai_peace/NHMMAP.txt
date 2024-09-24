@@ -1,0 +1,364 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+
+	ITA_no_puppet_cw = {
+        peace_action_type = { puppet liberate force_government }
+        enable = {
+            original_tag = ITA  # Negotiatior is italy
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+			OR = {
+				FROM.FROM.FROM = { is_core_of = LBA }  # Libyan Territory
+				FROM.FROM.FROM = { is_core_of = SOM }  # Somali Territory
+				FROM.FROM.FROM = { is_core_of = ERI }  # Eritrean Territory
+				FROM.FROM.FROM = { is_core_of = CRO }  # Croatian Territory
+				FROM.FROM.FROM = { is_core_of = ALB }  # Albanian Territory
+				FROM.FROM.FROM = { is_core_of = TUN }  # Tunisian Territory
+				FROM.FROM.FROM = { is_core_of = MLT }  # Maltan Territory
+				FROM.FROM.FROM = { is_core_of = ITA }  # Italian Territory
+			}
+            
+        }
+
+        ai_desire = -100  # 100 percent lower desire
+    }
+
+	ITA_annex_africa_cw = {
+        peace_action_type = take_states
+        enable = {
+            original_tag = ITA  # Negotiatior is italy
+			FROM = { tag = ROOT }  # And the negotiator is also taking for themselves
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+			OR = {
+				FROM.FROM.FROM = { is_core_of = LBA }  # Libyan Territory
+				FROM.FROM.FROM = { is_core_of = SOM }  # Somali Territory
+				FROM.FROM.FROM = { is_core_of = ERI }  # Eritrean Territory
+			}
+			NOT = {
+                any_subject_country = {
+                    original_tag = LBA #if libya is a puppet already don't bother with this
+                }
+            }
+        }
+
+        ai_desire = 100  # 100 percent higher desire
+    }
+
+	ITA_annex_zara_cw = {
+        peace_action_type = take_states
+        enable = {
+            original_tag = ITA  # Negotiatior is italy
+			FROM = { tag = ROOT }  # And the negotiator is also taking for themselves
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+			FROM.FROM.FROM = { 
+				OR = {
+					is_core_of = CRO  # Croatian Territory	
+					is_core_of = ITA  # Italian Territory	
+					is_core_of = YUG  # Yugoslavia Territory	
+				} 
+			}
+			NOT = {
+                any_subject_country = {
+					OR = {
+						original_tag = YUG #if Yugoslavia is a puppet already don't bother with this
+						original_tag = CRO #if Croatia is a puppet already don't bother with this
+					}
+                    
+                }
+            }
+        }
+
+        ai_desire = 100  # 100 percent higher desire
+    }
+
+	baltics_eat_all_baltics = { # so baltic countries arent left with one state or smth
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = LIT
+					original_tag = LAT
+					original_tag = EST
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					is_core_of = LIT
+					is_core_of = LAT
+					is_core_of = EST
+				}
+            }
+            ROOT = { 
+				OR = {
+					original_tag = LIT
+					original_tag = LAT
+					original_tag = EST
+					original_tag = POL
+				}
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+					has_government = communism
+				}
+			}
+        }
+        ai_desire = 300
+    }
+
+	democratic_baltics_puppet_all_baltics = { # so baltic countries arent left with one state or smth
+        peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = LIT
+					original_tag = LAT
+					original_tag = EST
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					is_core_of = LIT
+					is_core_of = LAT
+					is_core_of = EST
+				}
+            }
+            ROOT = { 
+				OR = {
+					original_tag = LIT
+					original_tag = LAT
+					original_tag = EST
+					original_tag = POL
+				}
+				has_government = democratic
+			}
+        }
+        ai_desire = 300
+    }
+
+	carlists_eat_portugal = { # as name implies
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				original_tag = POR
+            }
+            FROM.FROM.FROM = {
+				is_owned_by = POR
+            }
+            ROOT = { 
+				OR = {
+					original_tag = SPR
+					original_tag = SPB
+				}
+				has_completed_focus = SPA_restore_the_iberian_union
+			}
+        }
+        ai_desire = 300
+    }
+	
+	Yugoslavia_small_kingdoms_puppet_balkans = { # so balkans can be integrated by yugo!
+        peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+				BUL_is_balkan_nation = yes
+            }
+            FROM.FROM.FROM = {
+				BUL_is_balkan_state = yes
+            }
+            ROOT = { 
+				original_tag = YUG
+				OR = {
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = SPLIT_U_AXIS_EXPANSION
+					}
+					has_country_flag = YUG_AI_RANDOM_SPLIT_U_AXIS_EXPANSION
+				}
+				NOT = {
+					has_completed_focus = YUG_reunite_the_kingdom
+				}
+			}
+        }
+        ai_desire = 300
+    }
+
+	Soviets_like_to_eat_BLR_and_UKR = { #don't puppet this stuff holy shit
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = POL
+					original_tag = UKR
+					original_tag = BLR
+					original_tag = LIT
+					original_tag = GER
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					is_core_of = UKR
+					is_core_of = BLR
+					state = 784 #wilno
+				}
+            }
+            ROOT = { 
+				original_tag = SOV
+				has_government = communism
+			}
+        }
+        ai_desire = 200
+    }
+	
+	Soviets_like_to_eat_BLR_and_UKR_reverse = { #don't puppet this stuff holy shit
+        peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = GRE
+					original_tag = UKR
+					original_tag = BLR
+					original_tag = LIT
+					original_tag = GER
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					is_core_of = UKR
+					is_core_of = BLR
+					state = 784 #wilno
+				}
+            }
+            ROOT = { 
+				original_tag = SOV
+				has_government = communism
+			}
+        }
+        ai_desire = -200
+    }
+
+	Turkey_actually_uses_the_state_flags = { #the hoi4 devs made some state flags but never actually used them :(
+		peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = GRE
+					original_tag = FRA
+					original_tag = ENG
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					has_state_flag = TUR_turkey_greece_state_flag
+					has_state_flag = TUR_turkey_france_state_flag
+					has_state_flag = TUR_turkey_england_state_flag
+				}
+            }
+            ROOT = { 
+				original_tag = TUR
+			}
+        }
+        ai_desire = 300
+	}
+
+	Turkey_actually_uses_the_state_flags_p = { #cont
+		peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = GRE
+					original_tag = FRA
+					original_tag = ENG
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					has_state_flag = TUR_turkey_greece_puppet_state_flag
+					has_state_flag = TUR_turkey_france_puppet_state_flag
+					has_state_flag = TUR_turkey_england_puppet_state_flag
+				}
+            }
+            ROOT = { 
+				original_tag = TUR
+			}
+        }
+        ai_desire = 300
+	}
+
+	Turkey_ally_actually_uses_the_state_flags = {#cont
+		peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = GRE
+					original_tag = FRA
+					original_tag = ENG
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					has_state_flag = TUR_ally_greece_state_flag
+					has_state_flag = TUR_ally_france_state_flag
+					has_state_flag = TUR_ally_england_state_flag
+				}
+            }
+            ROOT = { 
+				is_in_faction_with = TUR
+			}
+        }
+        ai_desire = 300
+	}
+
+	Spain_wants_to_join_african_holdings = { #spain wants to eat morrocco in peace conference
+		peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				OR = {
+					owns_state = 461
+					owns_state = 462
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					state = 461
+					state = 462
+				}
+            }
+            ROOT = { 
+				original_tag = SPR
+				owns_state = 290
+				owns_state = 783
+			}
+        }
+        ai_desire = 300
+	}
+
+	Spain_wants_gab = { #cont. Gabon
+		peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				owns_state = 539
+            }
+            FROM.FROM.FROM = {
+				state = 539
+            }
+            ROOT = { 
+				original_tag = SPR
+				owns_state = 297
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+        }
+        ai_desire = 100
+	}
+}

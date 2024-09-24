@@ -1,0 +1,715 @@
+BLT_communist_SSR = {
+	name = "Baltic communist plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				original_tag = LAT
+				has_dlc = "No Step Back"
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = LAT_ai_behavior
+							option = COMMUNIST_SSR
+						}
+					}
+					has_country_flag = LAT_AI_RANDOM_COMMUNIST_SSR
+					has_game_rule = {
+						rule = LAT_ai_behavior
+						option = COMMUNIST_SSR
+					}
+				}
+			}
+			AND = {
+				original_tag = LIT
+				has_dlc = "No Step Back"
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = LIT_ai_behavior
+							option = COMMUNIST_SSR
+						}
+					}
+					has_country_flag = LIT_AI_RANDOM_COMMUNIST_SSR
+					has_game_rule = {
+						rule = LIT_ai_behavior
+						option = COMMUNIST_SSR
+					}
+				}
+			}
+			AND = {
+				original_tag = EST
+				has_dlc = "No Step Back"
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = EST_ai_behavior
+							option = COMMUNIST_SSR
+						}
+					}
+					has_country_flag = EST_AI_RANDOM_COMMUNIST_SSR
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = COMMUNIST_SSR
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		BALTIC_restore_workers_republic
+		BALTIC_seek_support_of_soviets
+		BALTIC_soviet_volunteer_forces
+		BALTIC_soviet_equipment
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		BALTIC_overthrow_the_government
+		BALTIC_revolutionary_cabinet
+		BALTIC_squash_resistance
+		BALTIC_purge_of_our_own
+		BALTIC_crush_forest_brothers
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_focus_on_the_interior
+		BALTIC_focus_on_the_interior_2
+		BALTIC_school_of_aviation
+		BALTIC_red_army
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		BALTIC_align_paramilitarists
+		BALTIC_sieze_the_means_of_production
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+BLT_communist_SSR_belarus = {
+	name = "Baltic communist plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				original_tag = LAT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LAT_AI_RANDOM_COMMUNIST_BELARUS_SSR
+					has_game_rule = {
+						rule = LAT_ai_behavior
+						option = COMMUNIST_BELARUS_SSR
+					}
+				}
+			}
+			AND = {
+				original_tag = LIT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LIT_AI_RANDOM_COMMUNIST_BELARUS_SSR
+					has_game_rule = {
+						rule = LIT_ai_behavior
+						option = COMMUNIST_BELARUS_SSR
+					}
+				}
+			}
+			AND = {
+				original_tag = EST
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = EST_AI_RANDOM_COMMUNIST_BELARUS_SSR
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = COMMUNIST_BELARUS_SSR
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		BALTIC_restore_workers_republic
+		BALTIC_seek_support_of_soviets
+		BALTIC_soviet_volunteer_forces
+		BALTIC_soviet_equipment
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		BALTIC_soviet_military_staff
+		BALTIC_overthrow_the_government
+		BALTIC_revolutionary_cabinet
+		BALTIC_direct_intervention
+		BALTIC_squash_resistance
+		BALTIC_purge_of_our_own
+		BALTIC_crush_forest_brothers
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_belarus_ssr
+		BALTIC_focus_on_the_interior #selected if someone is already going for belarus
+		BALTIC_school_of_aviation
+		BALTIC_red_army
+		BALTIC_end_bourgeouis_dictatorships
+		BALTIC_focus_on_the_interior_2 #selected if someone is already going for belarus
+		BALTIC_united_baltic_ssr
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		BALTIC_align_paramilitarists
+		BALTIC_sieze_the_means_of_production
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+BLT_communist_SSR_baltics = {
+	name = "Baltic communist plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				original_tag = LAT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LAT_AI_RANDOM_COMMUNIST_BALTIC_SSR
+					has_game_rule = {
+						rule = LAT_ai_behavior
+						option = COMMUNIST_BALTIC_SSR
+					}
+				}
+			}
+			AND = {
+				original_tag = LIT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LIT_AI_RANDOM_COMMUNIST_BALTIC_SSR
+					has_game_rule = {
+						rule = LIT_ai_behavior
+						option = COMMUNIST_BALTIC_SSR
+					}
+				}
+			}
+			AND = {
+				original_tag = EST
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = EST_AI_RANDOM_COMMUNIST_BALTIC_SSR
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = COMMUNIST_BALTIC_SSR
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		BALTIC_restore_workers_republic
+		BALTIC_seek_support_of_soviets
+		BALTIC_soviet_volunteer_forces
+		BALTIC_soviet_equipment
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		BALTIC_soviet_military_staff
+		BALTIC_overthrow_the_government
+		BALTIC_revolutionary_cabinet
+		BALTIC_direct_intervention
+		BALTIC_squash_resistance
+		BALTIC_purge_of_our_own
+		BALTIC_crush_forest_brothers
+		BALTIC_influence_neighbours
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_arm_baltic_reds
+		BALTIC_red_army
+		BALTIC_united_baltic_ssr
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_german_baltic_industry
+		BALTIC_align_paramilitarists
+		BALTIC_sieze_the_means_of_production
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+
+
+BLT_communist = {
+	name = "Baltic communist plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				original_tag = LAT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LAT_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = LAT_ai_behavior
+						option = COMMUNIST
+					}
+				}
+			}
+			AND = {
+				original_tag = LIT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LIT_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = LIT_ai_behavior
+						option = COMMUNIST
+					}
+				}
+			}
+			AND = {
+				original_tag = EST
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = EST_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = COMMUNIST
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		BALTIC_restore_workers_republic
+		BALTIC_communist_opposition
+		BALTIC_secure_military_support
+		BALTIC_concessions_for_catholics
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		BALTIC_forment_disloyalty
+		BALTIC_overthrow_the_government
+		BALTIC_revolutionary_cabinet
+		BALTIC_squash_resistance
+		BALTIC_purge_of_our_own
+		BALTIC_crush_forest_brothers
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_focus_on_the_interior
+		BALTIC_focus_on_the_interior_2
+		BALTIC_school_of_aviation
+		BALTIC_red_army
+		BALTIC_british_aircraft
+		BALTIC_ford_motors
+		BALTIC_allied_shipments
+		BALTIC_align_paramilitarists
+		BALTIC_sieze_the_means_of_production
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+BLT_communist_belarus = {
+	name = "Baltic communist plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				original_tag = LAT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LAT_AI_RANDOM_COMMUNIST_BELARUS
+					has_game_rule = {
+						rule = LAT_ai_behavior
+						option = COMMUNIST_BELARUS
+					}
+				}
+			}
+			AND = {
+				original_tag = LIT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LIT_AI_RANDOM_COMMUNIST_BELARUS
+					has_game_rule = {
+						rule = LIT_ai_behavior
+						option = COMMUNIST_BELARUS
+					}
+				}
+			}
+			AND = {
+				original_tag = EST
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = EST_AI_RANDOM_COMMUNIST_BELARUS
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = COMMUNIST_BELARUS
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		BALTIC_restore_workers_republic
+		BALTIC_communist_opposition
+		BALTIC_concessions_for_catholics
+		BALTIC_secure_military_support
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		BALTIC_forment_disloyalty
+		BALTIC_overthrow_the_government
+		BALTIC_revolutionary_cabinet
+		BALTIC_squash_resistance
+		BALTIC_purge_of_our_own
+		BALTIC_crush_forest_brothers
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_red_army
+		BALTIC_belarus_ssr
+		BALTIC_end_bourgeouis_dictatorships
+		BALTIC_british_aircraft
+		BALTIC_ford_motors
+		BALTIC_united_baltic_ssr
+		BALTIC_allied_shipments
+		BALTIC_align_paramilitarists
+		BALTIC_sieze_the_means_of_production
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+BLT_communist_baltics = {
+	name = "Baltic communist plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				original_tag = LAT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LAT_AI_RANDOM_COMMUNIST_BALTIC
+					has_game_rule = {
+						rule = LAT_ai_behavior
+						option = COMMUNIST_BALTIC
+					}
+				}
+			}
+			AND = {
+				original_tag = LIT
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = LIT_AI_RANDOM_COMMUNIST_BALTIC
+					has_game_rule = {
+						rule = LIT_ai_behavior
+						option = COMMUNIST_BALTIC
+					}
+				}
+			}
+			AND = {
+				original_tag = EST
+				has_dlc = "No Step Back"
+				OR = {
+					has_country_flag = EST_AI_RANDOM_COMMUNIST_BALTIC
+					has_game_rule = {
+						rule = EST_ai_behavior
+						option = COMMUNIST_BALTIC
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		BALTIC_restore_workers_republic
+		BALTIC_communist_opposition
+		BALTIC_secure_military_support
+		BALTIC_concessions_for_catholics
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		BALTIC_forment_disloyalty
+		BALTIC_overthrow_the_government
+		BALTIC_revolutionary_cabinet
+		BALTIC_squash_resistance
+		BALTIC_purge_of_our_own
+		BALTIC_crush_forest_brothers
+		BALTIC_influence_neighbours
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_arm_baltic_reds
+		BALTIC_red_army
+		BALTIC_united_baltic_ssr
+		BALTIC_british_aircraft
+		BALTIC_ford_motors
+		BALTIC_allied_shipments
+		BALTIC_align_paramilitarists
+		BALTIC_sieze_the_means_of_production
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+

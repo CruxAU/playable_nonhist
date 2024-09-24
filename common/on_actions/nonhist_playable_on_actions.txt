@@ -1,0 +1,336 @@
+on_actions = {
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {	
+			if = { # communist cze capitulating will peace out germany and soviets 
+				limit = {
+					ROOT = {
+						original_tag = CZE
+						has_government = communism
+						is_in_faction_with = SOV
+						NOT = { is_in_faction_with = POL }
+						NOT = { is_in_faction_with = HUN }
+					}
+					FROM = {
+						original_tag = GER
+					}
+					NOT = {
+						any_country = {
+							is_major = yes
+							has_government = democratic
+							has_war_with = GER
+						}
+					}
+				}	
+				SOV = { country_event = czech.60 }
+			}
+			
+			if = { # making sure japan eats ALL of Manchuria if they rebel. Otherwise the AI annoyingly just leaves half the country there
+				limit = {
+					ROOT = {
+						original_tag = MAN
+						has_completed_focus = MAN_independence_war
+						is_in_faction = no
+					}
+					FROM = {
+						original_tag = JAP
+					}
+				}	
+				JAP = { annex_country = { target = MAN transfer_troops = no } }
+			}
+
+			if = { # Soviets peace out allies if germany & soviet double team poland and signed ribbentrop pact
+			limit = {
+				ROOT = {
+					original_tag = POL
+					has_war_with = GER
+					has_war_with = SOV
+					is_in_faction_with = ENG
+					NOT = { is_in_faction_with = LIT }
+					NOT = { is_in_faction_with = LAT }
+					NOT = { is_in_faction_with = EST }
+					NOT = { is_in_faction_with = FIN }
+					NOT = { is_in_faction_with = ROM }
+					NOT = { is_in_faction_with = USA }
+					NOT = { is_in_faction_with = JAP }
+					NOT = { is_in_faction_with = TUR }
+					ENG = {
+						is_faction_leader = yes
+						has_war_with = GER
+						has_war_with = SOV
+					}
+				}
+				FROM = {
+					OR = {
+						AND = {
+							original_tag = SOV
+							has_war_with = POL
+							has_government = communism
+							has_global_flag = sov_yes_pact
+							NOT =  { has_war_with = GER }
+						}
+						AND = {
+							original_tag = GER
+							has_war_with = POL
+							has_government = fascism
+							has_global_flag = sov_yes_pact
+							NOT =  { has_war_with = SOV }
+						}
+					}
+					
+				}
+			}	
+			ENG = { country_event = nonhist_ENG.2 }
+		}
+		}
+	}
+	on_civil_war_end = {
+		effect = {
+			if = { #AST actually puppets INS if they started a civil war
+				limit = {
+					ROOT = {
+						original_tag = INS
+						has_government = fascism
+						controls_state = 334
+						controls_state = 673
+						controls_state = 669
+						controls_state = 668
+						controls_state = 738
+						controls_state = 667
+						controls_state = 672
+						controls_state = 335
+					}
+					FROM = {
+						original_tag = INS
+						NOT = { has_government = fascism }
+					}
+					AST = { has_completed_focus = AST_support_indonesian_uprising } 
+				}
+				AST = {
+					country_event = { id = tfv_australia.41 }
+				}
+			}
+			if = { #if SAF civil war loses, become eng puppet again
+				limit = {
+					ROOT = {
+						original_tag = SAF
+						has_government = democratic
+						is_subject = no
+						controls_state = 681  
+						controls_state = 275
+						controls_state = 719
+					}
+					FROM = {
+						original_tag = SAF
+						NOT = { has_government = democratic }
+					}
+				}
+				ENG = { 
+					add_to_faction = ROOT
+					diplomatic_relation = {
+						country = ROOT
+						relation = puppet
+						active = yes
+					}
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_integrated_puppet
+					}
+				}
+			}
+			if = {
+				limit = { #if raj civilwar loses, become eng puppet again
+					ROOT = {
+						original_tag = RAJ
+						has_government = neutrality
+						is_subject = no
+						controls_state = 439
+						controls_state = 433
+						controls_state = 428
+						controls_state = 437
+						controls_state = 429
+						controls_state = 436
+						controls_state = 427
+						controls_state = 423
+						controls_state = 425
+						controls_state = 426
+						controls_state = 438
+					}
+					FROM = {
+						original_tag = RAJ
+						NOT = { has_government = neutrality }
+					}
+					ENG = { NOT = { has_completed_focus = ENG_revisit_colonial_policy } }
+					ENG = { NOT = { has_completed_focus = ENG_a_change_in_course } }
+					OR = {
+						has_global_flag = RAJ_seek_help_from_germany_promised
+						has_global_flag = RAJ_seek_help_from_soviet_promised
+					}
+				}
+				ENG = { 
+					add_to_faction = PREV
+					diplomatic_relation = {
+						country = PREV
+						relation = puppet
+						active = yes
+					}
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_integrated_puppet
+					}
+				}
+				PREV = { 
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.5
+					}
+					set_politics = {
+						ruling_party = neutrality
+					} 
+				}
+			}
+			# STOP italy being at war with eth if they won and italy had a civil war
+			if = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+					any_country = {
+						OR = {
+							original_tag = ETH
+							original_tag = AFA
+						}
+						has_war_with = ROOT
+						has_capitulated = no
+					}
+					NOT = {
+						any_country = {
+							NOT = { 
+								OR = {
+									original_tag = ETH
+									original_tag = AFA
+								}
+							}
+							has_war_with = ROOT
+							has_capitulated = no
+						}
+					}
+				}
+				set_country_flag = ITA_defeat_in_ethiopia_flag
+				unlock_national_focus = ITA_the_abyssinian_fiasco
+				unlock_national_focus = ITA_servizio_informazione_militare
+				unlock_national_focus = ITA_triumph_in_africa_bba
+				unlock_national_focus = ITA_culto_del_duce
+
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = ETH
+							original_tag = AFA
+						}
+						has_war_with = ROOT
+						has_capitulated = no
+					}
+					every_controlled_state = {
+						limit = {
+							is_on_continent = africa 
+							is_owned_by = ROOT 
+						}
+						ROOT = { transfer_state = PREV.PREV }
+					}
+					white_peace = ROOT
+				}
+				set_global_flag = ethiopia_recognized_flag
+				
+			}	
+			if = { #True Union communsts won civil war in england, free scotland and wales
+				limit = {
+					original_tag = ENG
+					has_government = communism
+					has_country_flag = ENG_communist_civil_war_rebels
+				}
+				country_event = { id = nonhist_ENG.1 }
+			}
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = ROM
+					}
+					FROM = { has_country_flag = ROM_allies_guarantee_sanitaire }
+					FROM = { is_faction_leader = yes }
+					any_country = {
+						original_tag = POL
+						is_in_faction_with = FROM
+						has_capitulated = yes
+					}
+					FROM.FROM = {
+						OR = {
+							state = 81
+							state = 79
+						}	
+					}
+					OR = {
+						ENG = {
+							has_government = FROM
+							has_war_with = ROOT
+							is_faction_leader = yes
+						}
+						FRA = {
+							has_government = FROM
+							has_war_with = ROOT
+							is_faction_leader = yes
+						}
+						GER = {
+							has_government = FROM
+							has_war_with = ROOT
+							is_faction_leader = yes
+						}
+						ITA = {
+							has_government = FROM
+							has_war_with = ROOT
+							is_faction_leader = yes
+						}
+
+					}
+					
+				}
+				FROM = {
+					country_event = DOD_romania.400
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = CHI
+					}
+					FROM = { is_faction_leader = no }
+					FROM = { has_war_with = PRC }
+					FROM = { has_war_with = JAP }
+					FROM.FROM = {
+						OR = {
+							state = 597
+							state = 743
+							state = 613
+						}	
+					}
+					ROOT = {
+						original_tag = JAP
+					}
+
+
+					
+				}
+				CHI = {
+					country_event = wtt_xian_incident.300
+				}
+			}
+			
+		}
+	}
+
+}

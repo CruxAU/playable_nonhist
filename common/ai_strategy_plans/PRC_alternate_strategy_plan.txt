@@ -1,0 +1,311 @@
+PRC_alternate_plan_1 = {
+	name = "Communist China Alternate 1: Japan Communist"
+	desc = "With Japan Communist, Communist China will try to not antagonize them"
+
+	allowed = {
+		OR = {
+			original_tag = PRC
+			is_chinese_warlord = yes
+		}
+	}
+	enable = {
+		OR = {
+			original_tag = PRC
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_communist_focus
+			}
+		}
+		has_game_rule = {
+			rule = PRC_ai_behavior
+			option = DEFAULT
+		}
+		JAP = {
+			has_government = communism
+		}
+	}
+	abort = {
+		always = no
+	}
+
+
+	focus_factors = {
+		PRC_anti_japanese_expedition = 5 #goes against Manchuria
+		PRC_provoke_japan = 0
+		PRC_prepare_for_war_with_japan = 5
+		CHI_collaboration_with_the_japanese = 5
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "JAP"			
+		value = 200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "JAP"			
+		value = 200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+PRC_Maoism_non_historical = {
+	name = "Communist China Maoist behavior if Japan is not a threat AND non hist focus is on "
+	desc = "Landlords are N*ggrz, Join Nazmao Gang"
+
+	allowed = {
+		OR = {
+			original_tag = PRC
+			is_chinese_warlord = yes
+		}
+	}
+	enable = {
+		OR = {
+			original_tag = PRC
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_communist_focus
+			}
+		}
+		OR = {
+			has_completed_focus = PRC_agrarian_socialism
+			has_country_flag = PRC_AI_RANDOM_MAOIST
+			has_game_rule = {
+				rule = PRC_ai_behavior
+				option = Maoist
+			}
+		}
+		is_historical_focus_on = no
+		JAP = { NOT = { has_government = fascism } }
+	}
+
+	abort = {
+		has_war_together_with = event_target:WTT_current_china_leader
+	}
+
+
+	ai_national_focuses = {
+		CHI_invite_foreign_investors
+		PRC_land_redistribution
+		PRC_literacy_programs
+		PRC_strengthen_the_central_secretariat
+		PRC_agrarian_socialism
+		#1937
+		PRC_the_yanan_base_area
+		PRC_focus_on_china
+		PRC_exploit_the_weak_neighbours
+		CHI_mission_to_the_soviet_union
+		CHI_invite_soviet_advisers
+		#1938
+		CHI_the_soviet_volunteer_group
+		PRC_rectification_campaign
+		PRC_maoism
+		PRC_enforce_the_three_rules
+		PRC_ban_the_opium_trade
+		#1939
+		PRC_abolish_the_land_rent
+		PRC_prepare_for_war_with_japan
+		PRC_infiltration
+		PRC_revolutionary_military_commission
+		PRC_peoples_liberation_army
+		#1940
+		PRC_mobile_warfare
+		CHI_rapprochement_with_soviet_union
+		CHI_purchase_tanks
+		CHI_experimental_mechanised_unit
+		CHI_combined_arms_warfare
+		#1941
+		CHI_renegotiate_the_unequal_treaties
+		CHI_one_china_policy
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "CHI"			
+		value = -200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "CHI"			
+		value = -200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+PRC_alternate_plan_2 = {
+	name = "Communist China Alternate 2: Social Democracy"
+	desc = "Ai choose to go social democrat, tone down antagonism to Nationalists"
+
+	allowed = {
+		OR = {
+			original_tag = PRC
+			is_chinese_warlord = yes
+		}
+	}
+	enable = {
+		OR = {
+			original_tag = PRC
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_communist_focus
+			}
+		}
+		OR = {
+			has_completed_focus = PRC_social_democracy
+			has_country_flag = PRC_AI_RANDOM_SOCIAL_DEMOCRACY
+			has_game_rule = {
+				rule = PRC_ai_behavior
+				option = SOCIAL_DEMOCRACY
+			}
+		}
+	}
+	abort = {
+
+	}
+
+
+	focus_factors = {
+		PRC_provoke_japan = 0
+		PRC_infiltration = 0
+		PRC_agrarian_socialism = 0
+		PRC_marxist_orthodoxy = 0
+		PRC_social_democracy = 3
+		PRC_coalition_government = 4
+		PRC_purge_the_radicals = 4
+		PRC_strengthen_the_left_wing_of_the_kmt = 4
+		PRC_remove_chiang_kai_shek = 4
+		PRC_socialist_market_economy = 1
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "CHI"			
+		value = 200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "CHI"			
+		value = 200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+PRC_alternate_plan_3 = {
+	name = "Communist China Alternate 2: Marxist orthodoxy"
+	desc = "Ai choose to go marxist"
+
+	allowed = {
+		OR = {
+			original_tag = PRC
+			is_chinese_warlord = yes
+		}
+	}
+	enable = {
+		OR = {
+			original_tag = PRC
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_communist_focus
+			}
+		}
+		OR = {
+			has_game_rule = {
+				rule = PRC_ai_behavior
+				option = MARXIST_ORTHODOXY
+			}
+			has_completed_focus = PRC_marxist_orthodoxy
+			has_country_flag = PRC_AI_RANDOM_MARXIST_ORTHODOXY
+		}
+	}
+	abort = {
+
+	}
+
+
+	focus_factors = {
+		PRC_marxist_orthodoxy = 10
+		PRC_agrarian_socialism = 0
+		PRC_social_democracy = 0
+		PRC_prepare_for_war_with_japan = 4
+		PRC_anti_japanese_expedition = 4
+		PRC_agrarian_socialism = 1
+		PRC_soviet_leadership = 4
+		PRC_soviet_economic_aid = 4
+		PRC_internationalism = 4
+		PRC_proclaim_the_peoples_republic = 4
+		PRC_permit_opium_trade = 4
+		PRC_exploit_the_weak_neighbours = 2
+		PRC_infiltration = 2
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

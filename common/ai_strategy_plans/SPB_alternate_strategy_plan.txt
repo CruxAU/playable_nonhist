@@ -1,0 +1,203 @@
+SPB_alternate_plan = {
+	name = "Spanish Carlist alternate plan"
+	desc = "Alternate behavior for Carlist Spain"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPB
+			tag = SPA
+			tag = SPR
+		}
+		OR = {
+			has_country_flag = SPB_AI_RANDOM_CARLIST
+			has_game_rule = {
+				rule = SPB_ai_behavior 
+				option = CARLIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPD
+			tag = SPC
+			has_government = communism
+			has_completed_focus = SPA_unify_the_nationalist_front
+			has_completed_focus = SPA_the_phalanx_ascendant
+		}
+	}
+
+	ai_national_focuses = {
+		#July 36
+		SPA_supremacy_of_the_communion
+		SPA_prepare_the_carlist_insurrection
+		SPA_the_war_in_the_north
+		#37
+		SPA_contact_the_union_militar_espanola
+		SPA_head_the_junta_nacional
+		SPA_unite_the_requetes
+		SPA_no_compromise_on_carlist_ideals #split
+		SPA_revive_the_spirit_of_the_carlist_wars
+		SPA_the_crusade_against_democracy
+		#38
+		SPA_arms_modernization
+		SPA_expand_the_requetes
+		SPA_confirm_the_fueros
+		SPA_defenders_of_catholicism
+		SPA_utilize_the_intellectuals
+		#39
+		SPA_battle_rites
+		SPA_encourage_local_industrialization
+		SPA_militarize_the_masses
+		SPA_encourage_local_mining
+		SPA_cultivate_fanaticism #all done between
+		#40
+		SPA_settle_the_succession_question
+		SPA_restore_the_monarchy
+		SPA_stamp_out_the_maquis
+		SPA_dios_patria_rey
+		SPA_found_the_academia_vazquez_de_mella
+		#41
+		SPA_restore_the_empire
+		SPA_a_fleet_worthy_of_a_king
+		SPA_rebuild_the_battlefleet
+		SPA_imperial_security
+		SPA_strengthen_the_empire
+		#42
+		SPA_prosperity_of_the_empire
+		SPA_restore_the_iberian_union
+		SPA_the_third_dimension_of_warfare
+		SPA_a_modern_fighter_fleet
+		SPA_defenses_against_strategic_bombing
+		#43
+		SPA_defenses_against_invasion	
+	}
+
+	focus_factors = {
+		SPA_claim_the_french_throne = 0
+		SPA_the_war_of_vengeance = 0
+		SPA_press_the_gibraltar_claim = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPB_aggro_plan = {
+	name = "Spanish Carlist alternate plan 2"
+	desc = "Alternate behavior for Carlist Spain but more angry this time"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPB
+			tag = SPA
+			tag = SPR
+		}
+		OR = {
+			has_country_flag = SPB_AI_RANDOM_CARLIST_AGGRESSIVE
+			has_game_rule = {
+				rule = SPB_ai_behavior 
+				option = CARLIST_AGGRESSIVE
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPD
+			tag = SPC
+			has_government = communism
+			has_completed_focus = SPA_unify_the_nationalist_front
+			has_completed_focus = SPA_the_phalanx_ascendant
+		}
+	}
+
+	ai_national_focuses = {
+		#July 36
+		SPA_supremacy_of_the_communion
+		SPA_prepare_the_carlist_insurrection
+		SPA_the_war_in_the_north
+		#37
+		SPA_contact_the_union_militar_espanola
+		SPA_head_the_junta_nacional
+		SPA_unite_the_requetes
+		SPA_no_compromise_on_carlist_ideals #split
+		SPA_revive_the_spirit_of_the_carlist_wars
+		SPA_the_crusade_against_democracy
+		#38
+		SPA_arms_modernization
+		SPA_expand_the_requetes
+		SPA_confirm_the_fueros
+		SPA_defenders_of_catholicism
+		SPA_utilize_the_intellectuals
+		#39
+		SPA_battle_rites
+		SPA_encourage_local_industrialization
+		SPA_militarize_the_masses
+		SPA_encourage_local_mining
+		SPA_cultivate_fanaticism #all done between
+		#40
+		SPA_settle_the_succession_question
+		SPA_restore_the_monarchy
+		SPA_stamp_out_the_maquis
+		SPA_dios_patria_rey
+		SPA_restore_the_empire
+		#41
+		SPA_found_the_academia_vazquez_de_mella
+		SPA_strengthen_the_empire
+		SPA_prosperity_of_the_empire
+		SPA_restore_the_iberian_union
+		SPA_defenses_against_strategic_bombing
+		#42
+		SPA_defenses_against_invasion
+		SPA_claim_the_french_throne
+		SPA_the_third_dimension_of_warfare
+		SPA_a_fleet_worthy_of_a_king
+		SPA_press_the_gibraltar_claim
+		#43
+		SPA_a_modern_fighter_fleet
+		SPA_rebuild_the_battlefleet
+		SPA_retake_the_spanish_netherlands
+		SPA_imperial_security
+		SPA_the_war_of_vengeance	
+		
+		# if you havent been taken out by now i'd be amazed.
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

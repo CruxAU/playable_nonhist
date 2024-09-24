@@ -1,0 +1,518 @@
+SPD_alternate_plan = {
+	name = "Spanish Democratic alternate plan"
+	desc = "Alternate behavior for Democratic Spain" # Actually smart!
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPD
+		}
+		OR = {
+			SPR = { has_country_flag = SPD_AI_RANDOM_SECOND_REPUBLIC_ALLIES }
+			has_game_rule = {
+				rule = SPD_ai_behavior 
+				option = SECOND_REPUBLIC_ALLIES
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = fascism
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			has_completed_focus = SPR_regional_defense_council_of_aragon
+			AND = {
+				SPR = { has_country_flag = SPD_AI_RANDOM_SECOND_REPUBLIC_ALLIES }
+				NOT = { ENG = { has_government = democratic } }
+				NOT = { USA = { has_government = democratic } }
+				NOT = { FRA = { has_government = democratic } }
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		#Nov 1936 to 20 Jan 1937 at the latest
+		SPR_maintain_the_second_republic
+		SPR_strengthen_the_euzko_gudarostea #35
+		SPR_new_leadership #70
+		SPR_the_future_of_the_republic #70
+		SPR_reaffirm_the_popular_front_strategy #35
+		SPR_anti_fascist_unity #35
+		SPR_petition_for_french_aid #70
+		SPR_fortify_the_iron_ring #35
+		#1938
+		SPR_relocate_the_gold_reserves #35
+		SPR_enlist_the_carabineros #35
+		SPR_crush_the_revolution #35
+		SPR_ensure_loyalty #70
+		SPR_expand_soviet_aid #70
+		SPR_the_popular_army #70
+		SPR_take_the_initiative #35
+		#1939
+		SPR_no_pasaran #70
+		SPR_soviet_equipment_shipments #70
+		SPR_a_frontline_suited_for_intellectuals #70 sometimes skipped
+		SPR_soviet_military_advisors #sometimes skipped
+		SPR_soviet_industrial_aid  #sometimes skipped
+		SPR_soviet_technological_advancements #70 sometimes skipped
+		#1940 - civil war over by now
+		SPR_strengthen_the_anti_fascist_coalition
+		SPR_oppose_the_communists
+		SPR_soviet_recovery_aid
+		SPR_fortify_the_central_government
+		SPR_stabilize_the_nation
+		#1941
+		SPR_provide_for_the_people
+		SPR_collectivize_industry
+		SPR_connect_the_country
+		SPR_transplant_soviet_industry
+		SPR_the_five_year_plan
+		#1942
+		SPR_secure_democratic_principles
+		SPR_subvert_soviet_control
+		SPR_war_of_independence
+		SPR_those_who_would_not_help_us
+		SPR_ideological_allies
+		#1943
+		SPR_engineering_advances
+		SPR_restore_higher_education
+		SPR_reprofessionalize_the_military
+		SPR_experiences_from_the_civil_war
+		SPR_a_new_military_academy
+		#1944
+		SPR_foreign_industrial_aid	
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPD_alternate_plan_axis = {
+	name = "Spanish Democratic alternate plan"
+	desc = "Axis behavior for Democratic Spain" 
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPD
+		}
+		OR = {
+			SPR = { has_country_flag = SPD_AI_RANDOM_SECOND_REPUBLIC_AXIS }
+			has_game_rule = {
+				rule = SPD_ai_behavior 
+				option = SECOND_REPUBLIC_AXIS
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			has_completed_focus = SPR_regional_defense_council_of_aragon
+			AND = {
+				SPR = { has_country_flag = SPD_AI_RANDOM_SECOND_REPUBLIC_AXIS }
+				NOT = { GER = { has_government = fascism } }
+				NOT = { ITA = { has_government = fascism } }
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		#Nov 1936 to 20 Jan 1937 at the latest
+		SPR_maintain_the_second_republic
+		SPR_strengthen_the_euzko_gudarostea #35
+		SPR_new_leadership #70
+		SPR_the_future_of_the_republic #70
+		SPR_reaffirm_the_popular_front_strategy #35
+		SPR_anti_fascist_unity #35
+		SPR_petition_for_french_aid #70
+		SPR_fortify_the_iron_ring #35
+		#1938
+		SPR_relocate_the_gold_reserves #35
+		SPR_enlist_the_carabineros #35
+		SPR_crush_the_revolution #35
+		SPR_ensure_loyalty #70
+		SPR_expand_soviet_aid #70
+		SPR_the_popular_army #70
+		SPR_take_the_initiative #35
+		#1939
+		SPR_no_pasaran #70
+		SPR_soviet_equipment_shipments #70
+		SPR_a_frontline_suited_for_intellectuals #70 sometimes skipped
+		SPR_soviet_military_advisors #sometimes skipped
+		SPR_soviet_industrial_aid  #sometimes skipped
+		SPR_soviet_technological_advancements #70 sometimes skipped
+		#1940 - civil war over by now
+		SPR_strengthen_the_anti_fascist_coalition
+		SPR_oppose_the_communists
+		SPR_soviet_recovery_aid
+		SPR_fortify_the_central_government
+		SPR_stabilize_the_nation
+		#1941
+		SPR_provide_for_the_people
+		SPR_collectivize_industry
+		SPR_connect_the_country
+		SPR_transplant_soviet_industry
+		SPR_the_five_year_plan
+		#1942
+		SPR_secure_democratic_principles
+		SPR_subvert_soviet_control
+		SPR_war_of_independence
+		SPR_enemies_of_our_enemy
+		SPR_deal_with_the_devil
+		#1943
+		SPR_engineering_advances
+		SPR_restore_higher_education
+		SPR_reprofessionalize_the_military
+		SPR_experiences_from_the_civil_war
+		SPR_a_new_military_academy	
+	}
+
+	focus_factors = {
+		SPR_foreign_industrial_aid = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPD_alternate_plan_loyal = {
+	name = "Spanish Democratic alternate plan"
+	desc = "Alternate behavior for Democratic Spain" # Actually smart!
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPD
+		}
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SPD_ai_behavior 
+					option = DEFAULT
+				}
+			}
+			SPR = { has_country_flag = SPD_AI_RANDOM_SECOND_REPUBLIC_LOYALIST }
+			has_game_rule = {
+				rule = SPD_ai_behavior 
+				option = SECOND_REPUBLIC_LOYALIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			has_completed_focus = SPR_the_anti_fascist_workers_revolution
+			has_completed_focus = SPR_regional_defense_council_of_aragon
+			AND = {
+				SPR = { has_country_flag = SPD_AI_RANDOM_SECOND_REPUBLIC_LOYALIST }
+				SOV = { NOT = { has_government = communism } }
+			}
+			
+		}
+		
+	}
+
+	ai_national_focuses = {
+		#Nov 1936 to 20 Jan 1937 at the latest
+		SPR_maintain_the_second_republic
+		SPR_strengthen_the_euzko_gudarostea #35
+		SPR_new_leadership #70
+		SPR_the_future_of_the_republic #70
+		SPR_reaffirm_the_popular_front_strategy #35
+		SPR_anti_fascist_unity #35
+		SPR_petition_for_french_aid #70
+		SPR_fortify_the_iron_ring #35
+		#1938
+		SPR_relocate_the_gold_reserves #35
+		SPR_enlist_the_carabineros #35
+		SPR_crush_the_revolution #35
+		SPR_ensure_loyalty #70
+		SPR_expand_soviet_aid #70
+		SPR_the_popular_army #70
+		SPR_take_the_initiative #35
+		#1939
+		SPR_no_pasaran #70
+		SPR_soviet_equipment_shipments #70
+		SPR_a_frontline_suited_for_intellectuals #70 sometimes skipped
+		SPR_soviet_military_advisors #sometimes skipped
+		SPR_soviet_industrial_aid  #sometimes skipped
+		SPR_soviet_technological_advancements #70 sometimes skipped
+		#1940 - civil war over by now
+		SPR_strengthen_the_anti_fascist_coalition
+		SPR_end_fascism_at_all_costs
+		SPR_soviet_recovery_aid
+		SPR_communists_in_the_government
+		SPR_stabilize_the_nation
+		#1941
+		SPR_provide_for_the_people
+		SPR_collectivize_industry
+		SPR_connect_the_country
+		SPR_transplant_soviet_industry
+		SPR_the_five_year_plan
+		#1942
+		SPR_revive_the_republican_navy
+		SPR_navy_modernization
+		SPR_slipway_enlargement
+		SPR_a_red_fleet
+		SPR_engineering_advances
+		#1943
+		SPR_restore_higher_education
+		SPR_rebuild_the_nation
+		SPR_reprofessionalize_the_military
+		SPR_experiences_from_the_civil_war
+		SPR_a_new_military_academy
+		#1944	
+		SPR_prepare_for_the_next_war
+		SPR_wartime_industry
+		SPR_fuel_for_the_war_machine
+		SPR_join_the_global_fight_against_fascism
+		SPR_the_anti_fascist_crusade
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPD_alternate_plan_2 = {
+	name = "Spanish Stalinist alternate plan"
+	desc = "Alternate behavior for Stalinist Spain"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPD
+			tag = SPR
+		}
+		OR = {
+			SPR = { has_country_flag = SPD_AI_RANDOM_STALINIST }
+			has_game_rule = {
+				rule = SPD_ai_behavior 
+				option = STALINIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			has_completed_focus = SPR_maintain_the_second_republic
+			has_completed_focus = SPR_hinder_nkvd_interference
+			has_completed_focus = SPR_regional_defense_council_of_aragon
+		}
+	}
+
+	ai_national_focuses = {
+		#Nov 1936 to 20 Jan 1937 at the latest
+		SPR_the_anti_fascist_workers_revolution
+		SPR_strengthen_the_euzko_gudarostea
+		SPR_fortify_the_iron_ring
+		SPR_arm_the_workers_militias
+		SPR_demand_ministerial_positions
+		SPR_the_stalinist_doctrine
+		SPR_reaffirm_the_popular_front_strategy
+		SPR_crush_the_revolution
+		SPR_international_brigades
+		SPR_relocate_the_gold_reserves
+		SPR_expand_soviet_aid
+		SPR_soviet_equipment_shipments
+		SPR_soviet_military_advisors
+		SPR_soviet_industrial_aid
+		SPR_soviet_technological_advancements
+		SPR_an_army_of_all_classes
+		SPR_secularize_the_new_state
+		SPR_appropriate_church_riches
+		SPR_invite_socialist_intellectuals
+		SPR_solidify_government_control
+		SPR_reeducate_the_bourgeoisie
+		SPR_soviet_recovery_aid
+		SPR_provide_for_the_people
+		SPR_collectivize_industry
+		SPR_connect_the_country
+		SPR_transplant_soviet_industry
+		SPR_the_five_year_plan
+		SPR_nationalize_the_industry
+		SPR_beacon_of_socialism
+		SPR_the_spanish_red_army
+		SPR_red_bulwark_in_the_west
+		SPR_exploit_spains_riches
+	}
+
+	focus_factors = {
+		SPR_appeal_for_increased_autonomy = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SPD_alternate_autonomy = {
+	name = "Spanish Stalinist alternate plan 2"
+	desc = "Alternate behavior for Stalinist Spain 2"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPD
+			tag = SPR
+		}
+		OR = {
+		 	SPR = { has_country_flag = SPD_AI_RANDOM_STALINIST_FREE }
+			has_game_rule = {
+				rule = SPD_ai_behavior 
+				option = STALINIST_FREE
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			has_completed_focus = SPR_maintain_the_second_republic
+			has_completed_focus = SPR_hinder_nkvd_interference
+			has_completed_focus = SPR_regional_defense_council_of_aragon
+		}
+	}
+
+	ai_national_focuses = {
+		#Nov 1936 to 20 Jan 1937 at the latest
+		SPR_the_anti_fascist_workers_revolution
+		SPR_strengthen_the_euzko_gudarostea
+		SPR_fortify_the_iron_ring
+		SPR_arm_the_workers_militias
+		SPR_demand_ministerial_positions
+		SPR_the_stalinist_doctrine
+		SPR_reaffirm_the_popular_front_strategy
+		SPR_crush_the_revolution
+		SPR_international_brigades
+		SPR_relocate_the_gold_reserves
+		SPR_expand_soviet_aid
+		SPR_soviet_equipment_shipments
+		SPR_soviet_military_advisors
+		SPR_soviet_industrial_aid
+		SPR_soviet_technological_advancements
+		SPR_an_army_of_all_classes
+		SPR_secularize_the_new_state
+		SPR_appropriate_church_riches
+		SPR_invite_socialist_intellectuals
+		SPR_solidify_government_control
+		SPR_reeducate_the_bourgeoisie
+		SPR_soviet_recovery_aid
+		SPR_provide_for_the_people
+		SPR_collectivize_industry
+		SPR_connect_the_country
+		SPR_transplant_soviet_industry
+		SPR_the_five_year_plan
+		SPR_the_spanish_red_army
+		SPR_red_bulwark_in_the_west
+		SPR_appeal_for_increased_autonomy
+		SPR_nationalize_the_industry
+		SPR_beacon_of_socialism
+		SPR_exploit_spains_riches
+		SPR_modernize_the_armed_forces
+		SPR_a_red_iberia
+		SPR_support_french_communists
+		SPR_avenge_foreign_interference
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

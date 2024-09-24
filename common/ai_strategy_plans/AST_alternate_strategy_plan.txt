@@ -1,0 +1,629 @@
+AST_alternate_democratic = {
+	name = "Australia does it alone!"
+	desc = ""
+
+	allowed = {
+		original_tag = AST
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = AST_AI_RANDOM_DEMOCRATIC_ALTERNATE 
+			has_game_rule = {
+				rule = AST_ai_behavior
+				option = DEMOCRATIC_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		AST_establish_advisory_war_council
+		AST_national_security_act						
+		AST_army_inventions_directorate
+		AST_civil_construction_corps
+		AST_invest_in_victory
+		AST_squash_the_squanderbugs
+		AST_fight_work_or_perish
+		AST_allied_works_council
+		AST_protect_the_dutch_colonies	
+		AST_fund_australian_defense_research
+		AST_research_collaboration	
+		#36
+		AST_standard_gauge_railway						
+		AST_industries_assistance_corporation			
+		AST_western_australian_government_railways		
+		AST_south_australian_housing_trust
+		AST_never_another_gallipoli									
+		#1937
+		AST_protect_the_homeland
+		AST_sever_ties_with_uk
+		AST_cockatoo_island_shipyards
+		AST_kangaroo_point_shipyards
+		AST_expand_lithgow_small_arms_factory
+		AST_additional_militia_training			
+		#1938
+		AST_the_swpa_menace
+		AST_woo_usa
+		AST_the_south_west_pacific_initiative
+		AST_volunteer_defence_corps
+		AST_citizen_military_forces																			
+		#1939
+		AST_research_cooperation
+		AST_expand_the_raaf
+		AST_royal_australian_artillery
+		AST_expand_the_northern_railway	
+		AST_daimler_dingo						
+		#1940
+		AST_cac_woomera	
+		AST_department_of_supply_and_development
+		AST_promote_reservists																		
+		AST_cac_boomerang									
+		AST_swpa_protector						
+		#1941						
+		AST_specialize_equipment		
+		AST_hmas_assault						
+		#1942		
+		AST_rationing_and_recycling				
+		AST_introduce_unconventional_warfare				
+		AST_sentinel_tank_project									
+		#1943								
+		AST_classify_aliens		
+		AST_fly_the_jolly_roger					
+		AST_expand_northern_presence								
+		AST_scrap_iron_flotilla
+		#1944							
+		AST_naval_auxiliary_patrol						
+		AST_pacific_area_navy							
+		AST_cruisers												
+		AST_royal_australian_submarine_service			
+		AST_airborne_defence							
+		AST_australian_army_catering_corps				
+		AST_australian_arms_production					
+		AST_naval_bombers								
+		AST_death_from_down_under						
+		AST_dominate_the_skies							
+		AST_uranium_mining								
+		AST_z_special_unit								
+		AST_m_special_unit	
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+AST_fascist = {
+	name = "Australia goes fascist"
+	desc = ""
+
+	allowed = {
+		original_tag = AST
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = AST_AI_RANDOM_FASCIST 
+			has_game_rule = {
+				rule = AST_ai_behavior
+				option = FASCIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		AST_supply_indonesian_nationalists
+		AST_support_indonesian_uprising
+		AST_protect_the_south_west_pacific
+		AST_national_security_act						
+		AST_army_inventions_directorate
+		AST_civil_construction_corps
+		AST_invest_in_victory
+		AST_squash_the_squanderbugs
+		AST_fight_work_or_perish
+		AST_allied_works_council
+		AST_fund_australian_defense_research
+		AST_research_collaboration		
+		#36
+		AST_never_another_gallipoli
+		AST_abandon_the_westminster_system						
+		AST_support_the_centre_party										
+		#1937
+		AST_standard_gauge_railway						
+		AST_industries_assistance_corporation
+		AST_cockatoo_island_shipyards
+		AST_western_australian_government_railways
+		AST_south_australian_housing_trust
+		AST_kangaroo_point_shipyards
+		#1938
+		AST_a_deal_with_japan
+		AST_establish_advisory_war_council 
+		AST_expand_lithgow_small_arms_factory
+		AST_additional_militia_training	
+		AST_volunteer_defence_corps
+																				
+		#1939
+		AST_citizen_military_forces	
+		AST_expand_the_raaf
+		AST_japan_tech_sharing
+		AST_royal_australian_artillery
+		AST_expand_the_northern_railway								
+		#1940
+		AST_daimler_dingo
+		AST_cac_woomera
+		AST_department_of_supply_and_development
+		AST_promote_reservists																		
+		AST_cac_boomerang												
+		#1942
+		AST_specialize_equipment								
+		AST_hmas_assault						
+		#1943		
+		AST_rationing_and_recycling				
+		AST_introduce_unconventional_warfare				
+		AST_sentinel_tank_project
+		AST_demand_new_zealand									
+		#1944								
+		AST_classify_aliens		
+		AST_fly_the_jolly_roger					
+		AST_expand_northern_presence								
+		AST_scrap_iron_flotilla
+		#1945							
+		AST_naval_auxiliary_patrol						
+		AST_pacific_area_navy							
+		AST_cruisers												
+		AST_royal_australian_submarine_service			
+		AST_airborne_defence							
+		AST_australian_army_catering_corps				
+		AST_australian_arms_production					
+		AST_naval_bombers								
+		AST_death_from_down_under						
+		AST_dominate_the_skies							
+		AST_uranium_mining								
+		AST_z_special_unit								
+		AST_m_special_unit	
+	}
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+AST_isolation_fascist = {
+	name = "Australia goes isolationist fascist"
+	desc = ""
+
+	allowed = {
+		original_tag = AST
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = AST_AI_RANDOM_FASCIST_ALTERNATE 
+			has_game_rule = {
+				rule = AST_ai_behavior
+				option = FASCIST_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		AST_supply_indonesian_nationalists
+		AST_support_indonesian_uprising
+		AST_protect_the_south_west_pacific
+		AST_national_security_act						
+		AST_army_inventions_directorate
+		AST_civil_construction_corps
+		AST_invest_in_victory
+		AST_squash_the_squanderbugs
+		AST_fight_work_or_perish
+		AST_allied_works_council
+		AST_fund_australian_defense_research
+		AST_research_collaboration		
+		#36
+		AST_never_another_gallipoli
+		AST_abandon_the_westminster_system						
+		AST_support_the_centre_party										
+		#1937
+		AST_standard_gauge_railway						
+		AST_industries_assistance_corporation
+		AST_cockatoo_island_shipyards
+		AST_western_australian_government_railways
+		AST_south_australian_housing_trust
+		AST_kangaroo_point_shipyards
+		#1938
+		AST_establish_advisory_war_council 
+		AST_expand_lithgow_small_arms_factory
+		AST_additional_militia_training	
+		AST_volunteer_defence_corps														
+		#1939
+		AST_citizen_military_forces	
+		AST_expand_the_raaf
+		AST_royal_australian_artillery
+		AST_expand_the_northern_railway								
+		#1940
+		AST_daimler_dingo
+		AST_cac_woomera
+		AST_australian_arms_production
+		AST_demand_new_zealand
+		AST_our_own_empire	
+		AST_department_of_supply_and_development									
+		#1942
+		AST_promote_reservists																		
+		AST_cac_boomerang	
+		AST_specialize_equipment								
+		AST_hmas_assault						
+		#1943		
+		AST_rationing_and_recycling
+		AST_classify_aliens				
+		AST_introduce_unconventional_warfare				
+		AST_sentinel_tank_project								
+		#1944										
+		AST_fly_the_jolly_roger					
+		AST_expand_northern_presence								
+		AST_scrap_iron_flotilla
+		#1945							
+		AST_naval_auxiliary_patrol						
+		AST_pacific_area_navy							
+		AST_cruisers												
+		AST_royal_australian_submarine_service			
+		AST_airborne_defence							
+		AST_australian_army_catering_corps									
+		AST_naval_bombers								
+		AST_death_from_down_under						
+		AST_dominate_the_skies							
+		AST_uranium_mining
+		AST_war_on_japan								
+		AST_z_special_unit								
+		AST_m_special_unit	
+	}
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+AST_communist = {
+	name = "Australia goes communist"
+	desc = ""
+
+	allowed = {
+		original_tag = AST
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = AST_AI_RANDOM_COMMUNIST 
+			has_game_rule = {
+				rule = AST_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		AST_invest_in_victory
+		AST_squash_the_squanderbugs
+		AST_fight_work_or_perish
+		AST_fund_australian_defense_research
+		AST_research_collaboration		
+		#36
+		AST_never_another_gallipoli
+		AST_abandon_the_westminster_system
+		AST_standard_gauge_railway						
+		AST_industries_assistance_corporation
+		AST_cockatoo_island_shipyards										
+		#1937
+		AST_empower_the_workers	
+		AST_western_australian_government_railways
+		AST_kangaroo_point_shipyards
+		AST_delegation_to_china
+		AST_south_australian_housing_trust
+		AST_expand_lithgow_small_arms_factory
+		#1938
+		AST_commitment_to_the_cause
+		AST_establish_advisory_war_council
+		AST_national_security_act						
+		AST_army_inventions_directorate
+		AST_civil_construction_corps 									
+		#1939
+		AST_additional_militia_training	
+		AST_volunteer_defence_corps	
+		AST_citizen_military_forces
+		AST_department_of_supply_and_development
+		AST_allied_works_council
+		#1941
+		AST_indirect_support
+		AST_join_comintern
+		AST_research_city_excursions	
+		AST_expand_the_raaf
+		#1942
+		AST_nz_puppet
+		AST_royal_australian_artillery
+		AST_expand_the_northern_railway								
+		AST_daimler_dingo
+		AST_cac_woomera
+		AST_promote_reservists																										
+		#1943
+		AST_australian_arms_production
+		AST_cac_boomerang
+		AST_specialize_equipment								
+		AST_hmas_assault						
+		#1944		
+		AST_rationing_and_recycling
+		AST_classify_aliens				
+		AST_introduce_unconventional_warfare				
+		AST_sentinel_tank_project								
+		#1945								
+		AST_fly_the_jolly_roger					
+		AST_expand_northern_presence								
+		AST_scrap_iron_flotilla
+		#1946
+		AST_demand_new_zealand							
+		AST_naval_auxiliary_patrol						
+		AST_pacific_area_navy							
+		AST_cruisers												
+		AST_royal_australian_submarine_service			
+		AST_airborne_defence							
+		AST_australian_army_catering_corps									
+		AST_naval_bombers								
+		AST_death_from_down_under						
+		AST_dominate_the_skies							
+		AST_uranium_mining								
+		AST_z_special_unit								
+		AST_m_special_unit	
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+
+AST_Isolation_communist = {
+	name = "Australia goes isolationist communist"
+	desc = ""
+
+	allowed = {
+		original_tag = AST
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = AST_AI_RANDOM_COMMUNIST_ALTERNATE
+			has_game_rule = {
+				rule = AST_ai_behavior
+				option = COMMUNIST_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		AST_invest_in_victory
+		AST_squash_the_squanderbugs
+		AST_fight_work_or_perish
+		AST_fund_australian_defense_research
+		AST_research_collaboration		
+		#36
+		AST_never_another_gallipoli
+		AST_abandon_the_westminster_system
+		AST_standard_gauge_railway						
+		AST_industries_assistance_corporation
+		AST_cockatoo_island_shipyards										
+		#1937
+		AST_empower_the_workers	
+		AST_western_australian_government_railways
+		AST_kangaroo_point_shipyards
+		AST_delegation_to_china
+		AST_south_australian_housing_trust
+		AST_expand_lithgow_small_arms_factory
+		#1938
+		AST_commitment_to_the_cause
+		AST_establish_advisory_war_council
+		AST_national_security_act						
+		AST_army_inventions_directorate
+		AST_civil_construction_corps 									
+		#1939
+		AST_additional_militia_training	
+		AST_volunteer_defence_corps	
+		AST_citizen_military_forces
+		AST_department_of_supply_and_development
+		AST_allied_works_council
+		#1941
+		AST_direct_support
+		AST_workers_paradise
+		AST_research_city_excursions	
+		AST_expand_the_raaf
+		#1942
+		AST_nz_puppet
+		AST_royal_australian_artillery
+		AST_expand_the_northern_railway								
+		AST_daimler_dingo
+		AST_cac_woomera
+		AST_promote_reservists																										
+		#1943
+		AST_australian_arms_production
+		AST_cac_boomerang
+		AST_specialize_equipment								
+		AST_hmas_assault						
+		#1944		
+		AST_rationing_and_recycling
+		AST_classify_aliens
+		AST_the_threat_against_the_people				
+		AST_introduce_unconventional_warfare				
+		AST_sentinel_tank_project								
+		#1945								
+		AST_fly_the_jolly_roger					
+		AST_expand_northern_presence								
+		AST_scrap_iron_flotilla
+		#1946
+		AST_demand_new_zealand							
+		AST_naval_auxiliary_patrol						
+		AST_pacific_area_navy							
+		AST_cruisers												
+		AST_royal_australian_submarine_service			
+		AST_airborne_defence							
+		AST_australian_army_catering_corps									
+		AST_naval_bombers								
+		AST_death_from_down_under						
+		AST_dominate_the_skies							
+		AST_uranium_mining								
+		AST_z_special_unit								
+		AST_m_special_unit	
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

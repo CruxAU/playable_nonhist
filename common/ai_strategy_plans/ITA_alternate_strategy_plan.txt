@@ -1,0 +1,7606 @@
+ITA_historical_aggressive_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_POS_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_POS_AGGR
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF_AGGR
+				FRA = {
+					OR = {
+						has_completed_focus = FRA_invite_communist_ministers
+						has_completed_focus = FRA_leftist_rhetoric
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF_AGGR
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_POS_AGGR
+		}
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_solid_progress
+		ITA_struggle_in_ethiopia
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+
+		#1937
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_culto_del_duce
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_oto_naval_guns #35
+
+		#1938
+		ITA_develop_libya #35
+		ITA_steel_industry_in_terni
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_balkan_ambition #35 
+
+		#1939
+		ITA_increase_artillery_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_expand_naval_facilities #35
+		ITA_italian_irredentism
+		ITA_support_albanian_irredentism #35
+		ITA_albanian_fascist_militia #35
+
+		#1940
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_treaty_with_germany #35
+		ITA_request_control_of_french_territories #35
+		ITA_war_with_greece #35
+		ITA_a_bandits_war
+		ITA_regional_development
+		ITA_superaereo #35 
+		 
+		#1941 
+		ITA_demand_ticino
+		ITA_superesercito #35
+		ITA_demand_balearic_islands_bba #35	
+		ITA_war_with_france #only if france is not at war with germany
+		ITA_milizia_marittima_di_artiglieria
+		ITA_supermarina #35 Jun 40
+		ITA_prospect_for_oil #35
+		ITA_army_leaders
+
+		#1942		
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_ministero_della_cultura_popolare #35
+		ITA_believe_obey_fight #35
+		ITA_claims_on_turkey_bba
+		ITA_investments_in_edison
+
+		#1943
+		ITA_expand_national_universities
+		ITA_legge_bottai #35
+		ITA_self_propelled_guns
+		ITA_banda_carita
+		ITA_modernize_ansaldo_facilities
+
+		#1944
+		ITA_war_with_the_uk #only if not already at war with them
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_polizia_dell_africa_italiana
+		ITA_increase_production #35
+
+		#1945
+		ITA_banda_koch
+		ITA_to_live_as_a_lion #35
+		ITA_devotion #35
+		ITA_capo_supremo
+		ITA_la_battaglia_del_grano
+		ITA_la_battaglia_per_le_nascite #35
+		ITA_strengthen_the_regime
+		ITA_towards_a_greater_italy #35
+
+		#1946
+		ITA_bend_the_bars  #35
+		ITA_subdue_the_sentinels #35
+		ITA_a_colonial_empire
+		ITA_by_blood_alone
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_mussolini_italy_first_diplomatic_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_IF_DIPLO
+			}
+			AND = {
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = ITA_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_country_flag = ITA_AI_RANDOM_FASCIST_HISTORICAL
+				}
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF
+				FRA = {
+					OR = {
+						has_completed_focus = FRA_invite_communist_ministers
+						has_completed_focus = FRA_leftist_rhetoric
+					}
+				}
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_solid_progress
+		ITA_struggle_in_ethiopia
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+
+		#1937
+		ITA_potential_allies_in_the_balkans #35
+		ITA_army_primacy_bba #35
+		ITA_culto_del_duce
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_oto_naval_guns #35
+
+		#1938
+		ITA_develop_libya #35
+		ITA_develop_ethiopia #35
+		ITA_steel_industry_in_terni
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+
+		#1939
+		ITA_italy_first
+		ITA_befriend_greece
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_spanish_italian_alliance #35
+		ITA_increase_artillery_production
+		ITA_befriend_portugal #35
+		
+		#1940
+		ITA_italian_irredentism
+		ITA_support_albanian_irredentism #35
+		ITA_albanian_fascist_militia #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_befriend_turkey
+		ITA_a_bandits_war
+		
+		#1941 
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_regional_development
+		ITA_war_with_the_uk 
+		ITA_milizia_marittima_di_artiglieria
+		ITA_prospect_for_oil #35
+		
+		#1942	
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_ministero_della_cultura_popolare #35
+		ITA_believe_obey_fight #35
+		ITA_investments_in_edison
+
+		#1943
+		ITA_expand_national_universities
+		ITA_legge_bottai #35
+		ITA_self_propelled_guns
+		ITA_banda_carita
+		ITA_modernize_ansaldo_facilities
+
+		#1944
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_polizia_dell_africa_italiana
+		ITA_increase_production #35
+
+		#1945
+		ITA_banda_koch
+		ITA_boost_the_grand_council_of_fascism #35
+		ITA_devotion #35
+		ITA_heroes_of_the_nation
+		ITA_la_battaglia_per_la_terra
+		ITA_la_battaglia_per_le_nascite #35
+		ITA_strengthen_the_regime
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_mussolini_italy_first_roman_empire_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_IF_ROME
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_solid_progress
+		ITA_struggle_in_ethiopia
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_army_primacy_bba #35
+		ITA_culto_del_duce
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_oto_naval_guns #35
+
+		#1938
+		ITA_develop_libya #35
+		ITA_develop_ethiopia #35
+		ITA_steel_industry_in_terni
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+
+		#1939
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_increase_artillery_production
+		ITA_la_battaglia_per_la_terra
+		ITA_la_battaglia_per_le_nascite
+	
+		
+		#1940
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_albanian_fascist_militia #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_strengthen_the_regime
+		ITA_a_bandits_war
+		
+		#1941 
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_regional_development
+		ITA_war_with_the_uk 
+		ITA_incrociatori_leggeri #35
+		ITA_cacciatorpediniere_di_scorta #35
+		ITA_prospect_for_oil #35
+		
+		#1942	
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_ministero_della_cultura_popolare #35
+		ITA_mare_nostrum_bba #35
+		ITA_investments_in_edison
+
+		#1943
+		ITA_expand_national_universities
+		ITA_iberian_protection #35
+		ITA_self_propelled_guns
+		ITA_the_italian_legions
+		ITA_modernize_ansaldo_facilities
+		ITA_claims_on_turkey_bba #35
+
+		#1944
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_polizia_dell_africa_italiana
+		ITA_increase_production #35
+
+		#1945
+		ITA_all_roads_lead_to_rome
+		ITA_to_live_as_a_lion #35
+		ITA_devotion #35
+		ITA_capo_supremo
+		ITA_the_king_of_the_skies
+
+		#1946
+		ITA_modern_musculus 
+		ITA_caligulas_pride #35
+		ITA_auxiliaries #35
+		ITA_new_roman_citizens #35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_mussolini_italy_first_greater_italy_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_GI
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_IF_GI
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_POS_AGGR
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF_AGGR
+				FRA = {
+					OR = {
+						has_completed_focus = FRA_invite_communist_ministers
+						has_completed_focus = FRA_leftist_rhetoric
+					}
+				}
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_solid_progress
+		ITA_struggle_in_ethiopia
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_army_primacy_bba #35
+		ITA_culto_del_duce
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_oto_naval_guns #35
+
+		#1938
+		ITA_develop_libya #35
+		ITA_develop_ethiopia #35
+		ITA_steel_industry_in_terni
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+
+		#1939
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_increase_artillery_production
+		ITA_la_battaglia_per_la_terra
+		ITA_la_battaglia_per_le_nascite
+	
+		
+		#1940
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_albanian_fascist_militia #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_strengthen_the_regime
+		ITA_a_bandits_war
+		
+		#1941 
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_regional_development
+		ITA_war_with_france 
+		ITA_incrociatori_leggeri #35
+		ITA_cacciatorpediniere_di_scorta #35
+		ITA_prospect_for_oil #35
+		
+		#1942	
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_ministero_della_cultura_popolare #35
+		ITA_towards_a_greater_italy #35
+		ITA_investments_in_edison
+
+		#1943
+		ITA_expand_national_universities
+		ITA_bend_the_bars #35
+		ITA_self_propelled_guns
+		ITA_subdue_the_sentinels
+		ITA_modernize_ansaldo_facilities
+		ITA_a_colonial_empire #35
+
+		#1944
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_polizia_dell_africa_italiana
+		ITA_increase_production #35
+
+		#1945
+		ITA_by_blood_alone
+		ITA_to_live_as_a_lion #35
+		ITA_devotion #35
+		ITA_capo_supremo
+		ITA_the_king_of_the_skies
+
+		#1946
+		ITA_masters_of_the_aegean 
+		ITA_masters_of_the_mediterranean #35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_mussolini_guarantee_austria_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_GA
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_moschettieri_del_duce #35
+
+		#1937
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_expand_rome_flying_school 
+		ITA_oto_naval_guns #35
+		ITA_guarantee_austrian_independence #35
+		ITA_superesercito #35 #asap
+		
+		#1938
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		
+		#1939
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_culto_del_duce
+		ITA_albanian_occupation #35
+		
+		#1940
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_supermarina #35
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+
+		#1941
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_the_new_emperor_of_ethiopia #35
+		ITA_italian_tankettes
+
+		#1942
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+
+		#1943
+		ITA_thermojet_research
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_ministero_della_cultura_popolare #35
+		ITA_believe_obey_fight #35
+		ITA_strengthen_the_blackshirts
+		
+		#1944
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_ratify_the_stresa_front = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_mussolini_stresa_front_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_GA_SF
+			}
+		}
+	}
+	abort = { #first try basic historical plan, then IF_DIPLO
+		has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF
+		FRA = {
+			OR = {
+				has_completed_focus = FRA_invite_communist_ministers
+				has_completed_focus = FRA_leftist_rhetoric
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+
+		#1937
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_moschettieri_del_duce #35
+
+		#1938
+		ITA_expand_rome_flying_school 
+		ITA_oto_naval_guns #35
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+
+		#1939
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		
+		#1940
+		ITA_culto_del_duce
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+
+		#1941
+		ITA_supermarina #35
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_joint_military_programs
+		ITA_railway_innovations
+		ITA_investments_in_edison
+
+		#1942
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_the_new_emperor_of_ethiopia #35
+		ITA_italian_tankettes
+		ITA_increase_production
+		ITA_self_propelled_guns
+
+		#1943
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_thermojet_research
+		ITA_strengthen_northern_industry
+		
+		#1944
+		ITA_new_industrialization_program
+		ITA_ministero_della_cultura_popolare #35
+		ITA_believe_obey_fight #35
+		ITA_strengthen_the_blackshirts
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+
+		#1945
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_italys_destiny = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_mussolini_stresa_front_aggro_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_MUSSOLINI_GA_SF_AGGR
+			}
+		}
+	}
+	abort = {
+		has_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_GA_SF_AGGR
+		FRA = {
+			OR = {
+				has_completed_focus = FRA_invite_communist_ministers
+				has_completed_focus = FRA_leftist_rhetoric
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		
+		#1937
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_balkan_ambition #35 
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_moschettieri_del_duce #35
+
+		#1938
+		ITA_expand_rome_flying_school 
+		ITA_oto_naval_guns #35
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+
+		#1939
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_italys_destiny
+		ITA_bersaglieri
+		
+		#1940
+		ITA_divisioni_alpine
+		ITA_culto_del_duce
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+
+		#1941
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_supermarina #35
+		ITA_the_man_of_providence #35
+		ITA_security_militias #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_joint_military_programs
+		ITA_demand_balearic_islands_bba #35
+		ITA_railway_innovations
+		
+
+		#1942
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_the_new_emperor_of_ethiopia #35
+		ITA_italian_tankettes
+		ITA_increase_production
+		
+		#1943
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_thermojet_research
+		ITA_the_eastern_threat
+		
+		#1944
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_ministero_della_cultura_popolare #35
+		ITA_believe_obey_fight #35
+		ITA_strengthen_the_blackshirts
+
+		#1945
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_convene_the_grand_council = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_pact_diplomatic_plan = { #prio air - historical but for balbo
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_POS_DIPLO
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_GA_SF
+				FRA = {
+					OR = {
+						has_completed_focus = FRA_invite_communist_ministers
+						has_completed_focus = FRA_leftist_rhetoric
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_DIPLO
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		
+		#1937
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_citta_dell_aria
+		ITA_reggianes_exports
+		ITA_develop_libya #35
+		ITA_steel_industry_in_terni
+		ITA_stop_the_squandering 
+		ITA_security_militias #35
+
+		#1939
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_develop_eritrea #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_the_fourth_shore
+
+		#1940 (Oct -> Invasion of Greece)
+		ITA_german_military_cooperation #35
+		ITA_italian_irredentism
+		ITA_support_albanian_irredentism #35
+		ITA_a_bandits_war
+		ITA_superaereo #35 #Jun 40
+		ITA_treaty_with_germany #35
+		ITA_war_with_greece #35
+		ITA_superesercito #35 #Jun 40
+
+		#1941 (Apr -> Invasion of Yugoslavia)
+		ITA_supermarina #35 Jun 40
+		ITA_army_leaders
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_regional_development
+		ITA_litoranea_balbo #35
+
+		#1942
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_consolidate_power
+
+		#1943
+		ITA_purge_the_party #35
+		ITA_the_fate_of_mussolini #35
+		ITA_standardization #35
+		ITA_albanian_fascist_militia #35
+		ITA_fighter_designs
+		ITA_supremacy_in_the_skies		
+		ITA_expand_rome_flying_school
+
+		#1944
+		ITA_expand_national_universities
+		ITA_expand_foggia_farm_fields	
+		ITA_oil_in_tripoli
+		ITA_novus_ordo
+		ITA_divino_duce
+
+		#1945
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_dino_grandi_focus = 0
+		ITA_monarchia_d_italia = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_pact_aggressive_plan = { #prio air
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_POS_AGGR
+			}
+		}
+	}
+	abort = {
+		has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_AGGR
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_citta_dell_aria
+		ITA_reggianes_exports
+		ITA_develop_libya #35
+		ITA_steel_industry_in_terni
+		ITA_stop_the_squandering 
+		ITA_security_militias #35
+		
+		#1939
+		ITA_balkan_ambition #35 
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_italian_irredentism
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_the_fourth_shore
+
+		#1940
+		ITA_superaereo #35 
+		ITA_consolidate_power		
+		ITA_request_control_of_french_territories #35
+		ITA_war_with_greece #35
+		ITA_a_bandits_war
+		ITA_oil_in_tripoli
+		ITA_novus_ordo
+
+		#1941 
+		ITA_demand_ticino
+		ITA_superesercito #35
+		ITA_regional_development
+		ITA_demand_balearic_islands_bba #35	
+		ITA_expand_rome_flying_school
+		ITA_treaty_with_germany #35
+		ITA_war_with_france #only if france is not at war with germany
+
+		#1942
+		ITA_litoranea_balbo #35
+		ITA_purge_the_party #35
+		ITA_the_fate_of_mussolini #35
+		ITA_divino_duce
+		ITA_claims_on_turkey_bba
+		ITA_standardization #35
+		ITA_railway_innovations
+
+		#1943
+		ITA_support_albanian_irredentism #35
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_fascist_militia #35
+		ITA_fighter_designs
+		ITA_supremacy_in_the_skies		
+		ITA_army_leaders
+
+		#1944
+		ITA_war_with_the_uk #only if not already at war with them		
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_self_propelled_guns
+		
+		#1945
+		ITA_modernize_ansaldo_facilities #35
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+		ITA_reinforce_regia_aeronautica
+		ITA_compagnie_auto_avio_sahariane
+
+		#1946
+		ITA_combined_land_and_air_warfare
+		ITA_blackshirt_loyalty
+		ITA_towards_a_greater_italy #35
+		ITA_bend_the_bars  #35
+		ITA_subdue_the_sentinels #35
+		ITA_a_colonial_empire
+
+		#1947
+		ITA_by_blood_alone
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_dino_grandi_focus = 0
+		ITA_monarchia_d_italia = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_italy_first_roman_empire_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_IF_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_IF_ROME
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+
+		#1938
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_reggianes_exports
+		ITA_develop_libya #35
+		ITA_steel_industry_in_terni
+		ITA_stop_the_squandering 
+		
+		#1939
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		
+		#1940
+		ITA_increase_artillery_production
+		ITA_consolidate_power
+		ITA_purge_the_party #35
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_stockpile_fuel #35
+		ITA_the_fate_of_mussolini #35
+		
+		#1941 
+		ITA_a_bandits_war
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_divino_duce
+		ITA_war_with_the_uk 
+		ITA_standardization #35
+	
+		#1942	
+		ITA_fighter_designs #35
+		ITA_litoranea_balbo #35
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_blackshirt_loyalty
+		ITA_mare_nostrum_bba #35
+
+		#1943
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_iberian_protection #35
+		ITA_self_propelled_guns
+		ITA_the_italian_legions
+		ITA_end_fiat_ansaldo_duopoly #35
+
+		#1944
+		ITA_claims_on_turkey_bba #35
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_increase_production #35
+		ITA_all_roads_lead_to_rome
+		ITA_reinforce_regia_aeronautica
+		ITA_compagnie_auto_avio_sahariane
+		ITA_combined_land_and_air_warfare
+		ITA_the_king_of_the_skies
+		 
+		#1946
+		ITA_modern_musculus
+		ITA_caligulas_pride #35
+		ITA_auxiliaries #35
+		ITA_new_roman_citizens #35
+		ITA_the_fourth_shore
+		ITA_oil_in_tripoli
+		ITA_novus_ordo
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_dino_grandi_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_italy_first_greater_italy_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_IF_GI
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_IF_GI
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_AGGR
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+
+		#1938
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_reggianes_exports
+		ITA_develop_libya #35
+		ITA_steel_industry_in_terni
+		ITA_stop_the_squandering 
+		
+		#1939
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		
+		#1940
+		ITA_increase_artillery_production
+		ITA_consolidate_power
+		ITA_purge_the_party #35
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_stockpile_fuel #35
+		ITA_the_fate_of_mussolini #35
+		
+		#1941 
+		ITA_a_bandits_war
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_divino_duce
+		ITA_war_with_france
+		ITA_standardization #35
+	
+		#1942	
+		ITA_fighter_designs #35
+		ITA_litoranea_balbo #35
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_blackshirt_loyalty
+		ITA_towards_a_greater_italy #35
+
+		#1943
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_bend_the_bars #35
+		ITA_self_propelled_guns
+		ITA_subdue_the_sentinels
+		ITA_end_fiat_ansaldo_duopoly #35
+
+		#1944
+		ITA_a_colonial_empire #35
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_increase_production #35
+		ITA_by_blood_alone
+		ITA_reinforce_regia_aeronautica
+		ITA_compagnie_auto_avio_sahariane
+		ITA_combined_land_and_air_warfare
+		ITA_the_king_of_the_skies
+		 
+		#1946
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean #35
+		ITA_the_fourth_shore
+		ITA_oil_in_tripoli
+		ITA_novus_ordo
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_dino_grandi_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_italy_first_diplomatic_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_IF_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_IF_DIPLO
+			}
+			AND = {
+				has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_DIPLO
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_potential_allies_in_the_balkans #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+	
+		#1938
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_reggianes_exports
+		ITA_develop_libya #35
+		ITA_steel_industry_in_terni
+		ITA_stop_the_squandering 
+		
+		
+		#1939
+		ITA_italy_first
+		ITA_befriend_greece
+		ITA_security_militias #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_spanish_italian_alliance #35
+		ITA_italian_irredentism
+		ITA_befriend_portugal #35
+		
+		#1940
+		ITA_expand_naval_facilities #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_the_fourth_shore
+		ITA_befriend_turkey
+		ITA_consolidate_power		
+
+		#1941 
+		ITA_a_bandits_war
+		ITA_oil_in_tripoli
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_regional_development
+		ITA_war_with_the_uk
+		ITA_litoranea_balbo #35
+		
+		#1942
+		ITA_novus_ordo
+		ITA_expand_rome_flying_school
+		ITA_purge_the_party #35
+		ITA_the_fate_of_mussolini #35
+		ITA_a_greater_purpose
+		ITA_standardization #35
+		ITA_support_albanian_irredentism #35
+		
+		#1943
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_fighter_designs
+		ITA_supremacy_in_the_skies
+		ITA_army_leaders
+		
+		#1944
+		ITA_albanian_fascist_militia #35	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_self_propelled_guns
+		
+		#1945
+		ITA_modernize_ansaldo_facilities #35
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+		ITA_reinforce_regia_aeronautica
+		
+
+		#1946
+		ITA_compagnie_auto_avio_sahariane
+		ITA_combined_land_and_air_warfare
+		ITA_spreading_the_eagles_wings
+		ITA_italian_hegemony
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_dino_grandi_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_guarantee_austria_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_GA
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_GA
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_guarantee_austrian_independence #35
+		ITA_potential_allies_in_the_balkans #35 
+		
+		#1938
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		
+		#1939
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		
+		#1940
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_stop_the_squandering
+
+		#1941
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+
+		#1942
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+
+		#1943
+		ITA_consolidate_power
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_purge_the_party
+		ITA_the_fate_of_mussolini
+		ITA_a_greater_purpose
+		
+		#1944
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+		
+	
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_ratify_the_stresa_front = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_stresa_front_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_GA_SF
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_GA_SF
+			}
+		}
+	}
+	abort = {
+		has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_GA_SF
+		FRA = {
+			OR = {
+				has_completed_focus = FRA_invite_communist_ministers
+				has_completed_focus = FRA_leftist_rhetoric
+			}
+		}
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_preserve_army_traditions
+
+		
+		#1938
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		
+		#1939
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_bersaglieri
+
+		#1940
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		
+
+		#1941
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_stop_the_squandering
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		
+
+		#1942
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+
+
+		#1943
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_consolidate_power
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		
+		#1944
+		ITA_purge_the_party
+		ITA_the_fate_of_mussolini
+		ITA_a_greater_purpose
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_italys_destiny = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_balbo_stresa_front_aggro_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_GA_SF_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_BALBO_GA_SF_AGGR
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_italo_balbo_focus #35
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_preserve_army_traditions
+
+		#1938
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_balkan_ambition #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		
+		#1939
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_bersaglieri
+
+		#1940
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_italys_destiny
+
+		#1941
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_stop_the_squandering
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison		
+
+		#1942
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+		ITA_increase_production
+		ITA_self_propelled_guns
+
+		#1943
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_consolidate_power
+		ITA_strengthen_northern_industry
+		ITA_the_eastern_threat
+	
+		#1944
+		ITA_new_industrialization_program
+		ITA_purge_the_party
+		ITA_the_fate_of_mussolini
+		ITA_a_greater_purpose
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+
+
+ITA_grandi_pact_diplomatic_plan = { #prio navy - historical but for Grandi
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_POS_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_POS_DIPLO
+			}
+		}
+	}
+	abort = {
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		
+		#1937
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_intensify_torpedo_manufacturing
+		ITA_develop_libya #35
+		ITA_power_plants_in_terni
+		ITA_consolidate_power 
+		ITA_security_militias #35
+
+		#1939
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_develop_ethiopia #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_brescia_small_arms_industry #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_reorganize_the_party
+
+		#1940 (Oct -> Invasion of Greece)
+		ITA_german_military_cooperation #35
+		ITA_italian_irredentism
+		ITA_support_albanian_irredentism #35
+		ITA_preserve_army_traditions
+		ITA_supermarina #35 #Jun 40
+		ITA_treaty_with_germany #35
+		ITA_war_with_greece #35
+		ITA_superesercito #35 #Jun 40
+
+		#1941 (Apr -> Invasion of Yugoslavia)
+		ITA_superaereo #35 Jun 40
+		ITA_army_leaders
+		ITA_italian_tankettes
+		ITA_modernize_the_mezzogiorno
+		ITA_regional_development
+		ITA_prospect_for_oil #35
+
+		#1942
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly
+		ITA_stop_the_squandering
+
+		#1943
+		ITA_purge_the_party #35
+		ITA_the_fate_of_mussolini #35
+		ITA_incrociatori_leggeri #35
+		ITA_albanian_fascist_militia #35
+		ITA_cacciatorpediniere_di_scorta #35
+		ITA_ispettorato_dei_mezzi_antisommergibili #35
+		ITA_flotta_d_evasione		
+		ITA_decima_flottiglia_mas #35
+		ITA_expand_naval_intelligence #35
+
+		#1944
+		ITA_expand_national_universities
+		ITA_expand_foggia_farm_fields	
+		ITA_meritocracy
+		ITA_economic_reforms
+		ITA_divino_duce
+
+		#1945
+		ITA_improve_the_industries
+		ITA_expanded_corporatism
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_monarchia_d_italia = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_pact_aggressive_plan = { #prio navy
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_POS_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_POS_AGGR
+			}
+		}
+	}
+	abort = {
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_improve_overseas_naval_bases
+		ITA_brescia_small_arms_industry #35
+		ITA_steel_industry_in_terni
+		ITA_consolidate_power 
+		ITA_security_militias #35
+		
+		#1939
+		ITA_balkan_ambition #35 
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_italian_irredentism
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_reorganize_the_party
+
+		#1940
+		ITA_supermarina #35 
+		ITA_stop_the_squandering		
+		ITA_request_control_of_french_territories #35
+		ITA_war_with_greece #35
+		ITA_a_bandits_war
+		ITA_economic_reforms
+		ITA_meritocracy
+
+		#1941 
+		ITA_demand_ticino
+		ITA_superesercito #35
+		ITA_develop_libya #35
+		ITA_regional_development
+		ITA_demand_balearic_islands_bba #35	
+		ITA_incrociatori_pesanti #35	
+		ITA_treaty_with_germany #35
+		ITA_war_with_france #only if france is not at war with germany
+
+		#1942
+		ITA_prospect_for_oil #35
+		ITA_purge_the_party #35
+		ITA_the_fate_of_mussolini #35
+		ITA_divino_duce
+		ITA_claims_on_turkey_bba
+		ITA_navi_da_battaglia #35
+		ITA_railway_innovations
+
+		#1943
+		ITA_support_albanian_irredentism #35
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_fascist_militia #35
+		ITA_improve_the_industries
+		ITA_expanded_corporatism
+		ITA_flotta_d_evasione
+		
+
+		#1944
+		ITA_war_with_the_uk #only if not already at war with them		
+		ITA_expand_naval_intelligence #35
+		ITA_ispettorato_dei_mezzi_antisommergibili #35	
+		ITA_army_leaders
+		ITA_italian_tankettes
+		ITA_modernize_the_mezzogiorno
+		ITA_investments_in_edison
+		
+		
+		#1945
+		ITA_expand_national_universities
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly #35
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+
+		#1946
+		ITA_blackshirt_loyalty
+		ITA_towards_a_greater_italy #35
+		ITA_bend_the_bars  #35
+		ITA_subdue_the_sentinels #35
+		ITA_a_colonial_empire
+		ITA_by_blood_alone
+
+		#1947
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_monarchia_d_italia = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_italy_first_roman_empire_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_IF_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_IF_ROME
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+
+		#1938
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_develop_libya #35
+		ITA_power_plants_in_terni
+		ITA_consolidate_power 
+		
+		#1939
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_stockpile_fuel #35
+		
+		#1940
+		ITA_increase_artillery_production
+		ITA_stop_the_squandering
+		ITA_purge_the_party #35
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_incrociatori_leggeri #35 #after ITA_supermarina is done
+		ITA_the_fate_of_mussolini #35
+		
+		#1941 
+		ITA_a_bandits_war
+		ITA_supermarina #35
+		ITA_superesercito #35
+		ITA_superaereo #35 
+		ITA_divino_duce
+		ITA_war_with_the_uk 
+		ITA_cacciatorpediniere_di_scorta #35
+	
+		#1942	
+		ITA_ispettorato_dei_mezzi_antisommergibili #35
+		ITA_prospect_for_oil #35
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_blackshirt_loyalty
+		ITA_mare_nostrum_bba #35
+
+		#1943
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_iberian_protection #35
+		ITA_self_propelled_guns
+		ITA_the_italian_legions
+		ITA_end_fiat_ansaldo_duopoly #35
+
+		#1944
+		ITA_claims_on_turkey_bba #35
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_increase_production #35
+		ITA_all_roads_lead_to_rome
+		ITA_reorganize_the_party
+		ITA_economic_reforms
+		ITA_improve_the_industries
+		ITA_meritocracy
+		 
+		#1946
+		ITA_modern_musculus
+		ITA_caligulas_pride #35
+		ITA_auxiliaries #35
+		ITA_new_roman_citizens #35
+		ITA_expanded_corporatism
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_italo_balbo_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_italy_first_greater_italy_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_IF_GI
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_IF_GI
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+
+		#1938
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_develop_libya #35
+		ITA_power_plants_in_terni
+		ITA_consolidate_power 
+		
+		#1939
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_stockpile_fuel #35
+		
+		#1940
+		ITA_increase_artillery_production
+		ITA_stop_the_squandering
+		ITA_purge_the_party #35
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_incrociatori_leggeri #35 #after ITA_supermarina is done
+		ITA_the_fate_of_mussolini #35
+		
+		#1941 
+		ITA_a_bandits_war
+		ITA_supermarina #35
+		ITA_superesercito #35
+		ITA_superaereo #35 
+		ITA_divino_duce
+		ITA_war_with_france 
+		ITA_cacciatorpediniere_di_scorta #35
+	
+		#1942	
+		ITA_ispettorato_dei_mezzi_antisommergibili #35
+		ITA_prospect_for_oil #35
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_blackshirt_loyalty
+		ITA_towards_a_greater_italy #35
+
+		#1943
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_bend_the_bars #35
+		ITA_self_propelled_guns
+		ITA_subdue_the_sentinels
+		ITA_end_fiat_ansaldo_duopoly #35
+
+		#1944
+		ITA_a_colonial_empire
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_increase_production #35
+		ITA_by_blood_alone
+		ITA_reorganize_the_party
+		ITA_economic_reforms
+		ITA_improve_the_industries
+		ITA_meritocracy
+		 
+		#1946
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean
+		ITA_expanded_corporatism
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_italo_balbo_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_italy_first_diplomatic_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_IF_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_IF_DIPLO
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_potential_allies_in_the_balkans #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+	
+		#1938
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_improve_overseas_naval_bases
+		ITA_brescia_small_arms_industry #35
+		ITA_steel_industry_in_terni
+		ITA_consolidate_power 
+		ITA_security_militias #35
+		
+		#1939
+		ITA_italy_first
+		ITA_befriend_greece
+		ITA_albanian_occupation #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_spanish_italian_alliance #35
+		ITA_italian_irredentism
+		ITA_befriend_portugal #35
+		
+		#1940
+		ITA_a_bandits_war
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_reorganize_the_party
+		ITA_befriend_turkey
+		ITA_stop_the_squandering		
+
+		#1941 
+		ITA_meritocracy
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_invite_france_to_military_partnership
+		ITA_franco_italian_pact #35 (NAP with FRA) 
+		ITA_war_with_the_uk
+		
+		#1942
+		ITA_develop_libya #35
+		ITA_regional_development
+		ITA_incrociatori_pesanti #35
+		ITA_prospect_for_oil #35
+		ITA_economic_reforms
+		ITA_navi_da_battaglia #35
+		ITA_purge_the_party #35
+		ITA_the_fate_of_mussolini #35
+		
+		#1943
+		ITA_a_greater_purpose
+		ITA_railway_innovations
+		ITA_support_albanian_irredentism #35
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_fascist_militia #35
+		ITA_improve_the_industries
+		
+		#1944
+		ITA_expanded_corporatism
+	   	ITA_flotta_d_evasione
+		ITA_expand_naval_intelligence #35
+		ITA_ispettorato_dei_mezzi_antisommergibili #35	
+	   	ITA_army_leaders
+		ITA_italian_tankettes
+		
+		#1945
+		ITA_strengthen_northern_industry
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly #35
+		ITA_ferrea_mole_ferreo_cuore		
+
+		#1946
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+		ITA_spreading_the_eagles_wings
+		ITA_italian_hegemony
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_guarantee_austrian_independence = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_guarantee_austria_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_GA
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_GA
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_guarantee_austrian_independence #35
+		ITA_potential_allies_in_the_balkans #35 
+		
+		#1938
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		
+		#1939
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_seek_british_military_cooperation
+		ITA_anglo_italian_pact #35
+		ITA_army_leaders
+		ITA_bersaglieri
+		
+		#1940
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		
+		#1941
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_consolidate_power
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+
+		#1942
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+
+
+		#1943
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_stop_the_squandering
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_purge_the_party
+
+		
+		#1944
+		ITA_the_fate_of_mussolini
+		ITA_a_greater_purpose
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+		
+	
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_ratify_the_stresa_front = 0
+		ITA_proclaim_the_italian_empire = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_stresa_front_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_GA_SF
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_GA_SF
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_preserve_army_traditions
+		
+		#1938
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		
+		#1939
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_seek_british_military_cooperation
+		ITA_anglo_italian_pact #35
+
+		#1940
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_proclaim_the_italian_empire
+		ITA_brescia_small_arms_industry #35
+		
+		#1941
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_consolidate_power
+		ITA_supermarina #35
+		ITA_railway_innovations
+		
+		#1942
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+		ITA_increase_production
+
+		#1943
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_stop_the_squandering
+		
+		#1944
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_purge_the_party
+		ITA_the_fate_of_mussolini
+		ITA_a_greater_purpose
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_italys_destiny = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_grandi_stresa_front_aggro_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_GA_SF_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_GRANDI_GA_SF_AGGR
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_dino_grandi_focus #35
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_preserve_army_traditions
+
+		#1938
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_balkan_ambition #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		
+		#1939
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		ITA_bersaglieri
+
+		#1940
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_invite_france_to_military_partnership
+		ITA_franco_italian_pact #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+
+		#1941
+		ITA_industria_della_gomma_sintetica #35
+		ITA_italys_destiny
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_consolidate_power
+		ITA_proclaim_the_italian_empire	
+
+		#1942
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison	
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+
+		#1943
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_stop_the_squandering
+	
+		#1944
+		ITA_strengthen_northern_industry
+		ITA_the_eastern_threat
+		ITA_new_industrialization_program
+		ITA_purge_the_party
+		ITA_the_fate_of_mussolini
+		ITA_a_greater_purpose
+		ITA_milizia_coloniale
+		ITA_legge_bottai #35
+		ITA_banda_carita
+		ITA_banda_koch
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_christian_democracy_pact_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_POS
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_POS
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_pact_of_steel							#35
+		ITA_develop_libya							#35
+		ITA_treaty_with_germany						#35
+		ITA_italian_irredentism
+		ITA_german_military_cooperation				#35
+		ITA_expand_intelligence_services			#35
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course
+
+		#1942						
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+
+		#1943
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0 #italy first is ok
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_christian_democracy_italy_first_diplomatic_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_IF_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_IF_DIPLO
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_italy_first
+		ITA_develop_libya							#35
+		ITA_italian_irredentism
+		ITA_befriend_greece
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_befriend_turkey
+		ITA_spanish_italian_alliance 				#35
+		ITA_war_with_france
+		
+		#1942		
+		ITA_increase_artillery_production			
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course	
+		ITA_modernize_ansaldo_facilities			#35
+		
+		#1943
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_christian_democracy_italy_first_greater_italy_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_IF_GI
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_IF_GI
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_balkan_ambition							#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_italy_first
+		ITA_develop_libya							#35
+		ITA_italian_irredentism
+		ITA_war_with_greece							#35
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_war_with_france
+		ITA_spanish_italian_alliance 				#35
+		ITA_demand_ticino
+		
+		#1942		
+		ITA_increase_artillery_production			
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course	
+		ITA_modernize_ansaldo_facilities			#35
+		
+		#1943
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_towards_a_greater_italy					#35
+		ITA_bend_the_bars							#35
+		ITA_expand_naval_facilities					#35
+		ITA_subdue_the_sentinels					#35
+
+		#1944
+		ITA_army_leaders
+		ITA_supermarina								#35
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_a_colonial_empire
+		ITA_by_blood_alone
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_mare_nostrum_bba = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_christian_democracy_italy_first_roman_empire_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_IF_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_IF_ROME
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_balkan_ambition							#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_italy_first
+		ITA_develop_libya							#35
+		ITA_italian_irredentism
+		ITA_war_with_greece							#35
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_war_with_france
+		ITA_spanish_italian_alliance 				#35
+		ITA_demand_ticino
+		
+		#1942		
+		ITA_increase_artillery_production			
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course	
+		ITA_modernize_ansaldo_facilities			#35
+		
+		#1943
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_mare_nostrum_bba						#35
+		ITA_the_italian_legions					
+		ITA_expand_naval_facilities					#35
+		ITA_all_roads_lead_to_rome
+
+		#1944
+		ITA_army_leaders
+		ITA_supermarina								#35
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_auxiliaries
+		ITA_the_king_of_the_skies
+		ITA_modern_musculus
+		ITA_new_roman_citizens
+
+		ITA_iberian_protection
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_towards_a_greater_italy = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_christian_democracy_guarantee_austria_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_GA
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_GA
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_guarantee_austrian_independence			#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+
+		#1938
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_crush_opposition						#35
+				
+		#1939
+		ITA_develop_libya							#35
+		ITA_regional_development		
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+
+		#1940	
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+
+		#1941	
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+
+		#1942						
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+
+		#1943
+		ITA_ferrea_mole_ferreo_cuore				#35		
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_negotiate_italian_claims = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_christian_democracy_stresa_front_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_GA_SF
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_GA_SF
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_foreign_affairs 						#35
+		ITA_guarantee_austrian_independence			#35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_the_new_emperor_of_ethiopia				#35
+			
+		#1938
+		ITA_cooperate_with_moderates				#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+				
+		#1939
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_crush_opposition						#35
+		ITA_regional_development
+
+		#1940	
+		ITA_develop_libya							#35
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		
+		#1941	
+		ITA_expand_national_universities
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+
+		#1942				
+		ITA_self_propelled_guns
+		ITA_setting_course		
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+
+		#1943
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_italys_destiny = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_christian_democracy_stresa_front_aggro_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_GA_SF_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_CHRISTIAN_DEMOCRACY_GA_SF_AGGR
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_christian_democracy						#35
+		ITA_balkan_ambition							#35
+		ITA_foreign_affairs 						#35
+		ITA_guarantee_austrian_independence			#35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_the_new_emperor_of_ethiopia				#35
+			
+		#1938
+		ITA_cooperate_with_moderates				#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+				
+		#1939
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_crush_opposition						#35
+		ITA_regional_development
+
+		#1940	
+		ITA_develop_libya							#35
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_italys_destiny
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		
+		#1941	
+		ITA_expand_national_universities
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+
+		#1942				
+		ITA_self_propelled_guns
+		ITA_setting_course		
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+
+		#1943
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_the_eastern_threat
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_power_to_the_king = 0
+		ITA_democratic_king = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_pact_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_POS
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_POS
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_pact_of_steel							#35
+		ITA_develop_libya							#35
+		ITA_treaty_with_germany						#35
+		ITA_italian_irredentism
+		ITA_german_military_cooperation				#35
+		ITA_expand_intelligence_services			#35
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course
+
+		#1942						
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+
+		#1943
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0 #italy first is ok
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_italy_first_diplomatic_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_IF_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_IF_DIPLO
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king						#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_italy_first
+		ITA_develop_libya							#35
+		ITA_italian_irredentism
+		ITA_befriend_greece
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_befriend_turkey
+		ITA_spanish_italian_alliance 				#35
+		ITA_war_with_france
+		
+		#1942		
+		ITA_increase_artillery_production			
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course	
+		ITA_modernize_ansaldo_facilities			#35
+		
+		#1943
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_italy_first_greater_italy_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_IF_GI
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_IF_GI
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king							#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_balkan_ambition							#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_italy_first
+		ITA_develop_libya							#35
+		ITA_italian_irredentism
+		ITA_war_with_greece							#35
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_war_with_france
+		ITA_spanish_italian_alliance 				#35
+		ITA_demand_ticino
+		
+		#1942		
+		ITA_increase_artillery_production			
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course	
+		ITA_modernize_ansaldo_facilities			#35
+		
+		#1943
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_towards_a_greater_italy					#35
+		ITA_bend_the_bars							#35
+		ITA_expand_naval_facilities					#35
+		ITA_subdue_the_sentinels					#35
+
+		#1944
+		ITA_army_leaders
+		ITA_supermarina								#35
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_a_colonial_empire
+		ITA_by_blood_alone
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_mare_nostrum_bba = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_italy_first_roman_empire_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_IF_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_IF_ROME
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king							#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+			
+		#1938
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_balkan_ambition							#35
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+				
+		#1939
+		ITA_crush_opposition						#35
+		ITA_italy_first
+		ITA_develop_libya							#35
+		ITA_italian_irredentism
+		ITA_war_with_greece							#35
+		ITA_regional_development
+
+		#1940	
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		
+		#1941	
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_war_with_france
+		ITA_spanish_italian_alliance 				#35
+		ITA_demand_ticino
+		
+		#1942		
+		ITA_increase_artillery_production			
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course	
+		ITA_modernize_ansaldo_facilities			#35
+		
+		#1943
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_mare_nostrum_bba						#35
+		ITA_the_italian_legions					
+		ITA_expand_naval_facilities					#35
+		ITA_all_roads_lead_to_rome
+
+		#1944
+		ITA_army_leaders
+		ITA_supermarina								#35
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_auxiliaries
+		ITA_the_king_of_the_skies
+		ITA_modern_musculus
+		ITA_new_roman_citizens
+
+		ITA_iberian_protection
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_towards_a_greater_italy = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_guarantee_austria_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_GA
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_GA
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king							#35
+		ITA_cooperate_with_moderates				#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_guarantee_austrian_independence			#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+
+		#1938
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_crush_opposition						#35
+				
+		#1939
+		ITA_develop_libya							#35
+		ITA_regional_development		
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+
+		#1940	
+		ITA_strengthen_ascari_corps
+		ITA_expand_national_universities
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+
+		#1941	
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+		ITA_self_propelled_guns
+		ITA_setting_course
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+
+		#1942						
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+
+		#1943
+		ITA_ferrea_mole_ferreo_cuore				#35		
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_negotiate_italian_claims = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_stresa_front_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_GA_SF
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_GA_SF
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king							#35
+		ITA_potential_allies_in_the_balkans			#35
+		ITA_foreign_affairs 						#35
+		ITA_guarantee_austrian_independence			#35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_the_new_emperor_of_ethiopia				#35
+			
+		#1938
+		ITA_cooperate_with_moderates				#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+				
+		#1939
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_crush_opposition						#35
+		ITA_regional_development
+
+		#1940	
+		ITA_develop_libya							#35
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		
+		#1941	
+		ITA_expand_national_universities
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+
+		#1942				
+		ITA_self_propelled_guns
+		ITA_setting_course		
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+
+		#1943
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_italys_destiny = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_king_stresa_front_aggro_plan = {
+	name = "Christian Democracy"
+	desc = "King Vittorio Emanuele will depose Mussolini, attempt to form an independent faction and lead Italy towards a constitutional monarchy favoring the Christian Democratic party, led by Alcide de Gasperi."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_GA_SF_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_KING_GA_SF_AGGR
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_revoke_the_acerbo_law					#35
+		ITA_democratic_king						#35
+		ITA_balkan_ambition							#35
+		ITA_foreign_affairs 						#35
+		ITA_guarantee_austrian_independence			#35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_the_new_emperor_of_ethiopia				#35
+			
+		#1938
+		ITA_cooperate_with_moderates				#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+		ITA_disband_the_blackshirts					#35
+		ITA_expand_intelligence_services			#35
+		ITA_steel_industry_in_terni
+				
+		#1939
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_crush_opposition						#35
+		ITA_regional_development
+		ITA_gloria_al_regno_d_italia				#35
+
+		#1940	
+		ITA_develop_libya							#35
+		ITA_a_bandits_war
+		ITA_italian_tankettes						#35
+		ITA_italys_destiny
+		ITA_extraction_industry
+		ITA_new_corporations
+		ITA_strengthen_ascari_corps
+		
+		#1941	
+		ITA_expand_national_universities
+		ITA_prepare_for_the_coming_wars
+		ITA_superesercito							#35
+		ITA_air_innovations_bba						#35
+		ITA_increase_artillery_production
+		ITA_comandante_diavolo
+
+		#1942				
+		ITA_self_propelled_guns
+		ITA_setting_course		
+		ITA_modernize_ansaldo_facilities			#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_gloria_al_regno_d_italia				#35
+
+		#1943
+		ITA_expand_naval_facilities					#35
+		ITA_supermarina								#35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_the_eastern_threat
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_power_to_the_king = 0
+		ITA_christian_democracy = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_king_pact_diplomatic_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_POS_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_POS_DIPLO
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		
+		#1937
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_intensify_torpedo_manufacturing
+		ITA_develop_ethiopia #35
+		ITA_power_plants_in_terni
+		ITA_utilize_the_blackshirts  #35
+		ITA_expand_the_royal_guard
+
+		#1939
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_develop_eritrea #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_brescia_small_arms_industry #35
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_extraction_industry
+
+		#1940 (Oct -> Invasion of Greece)
+		ITA_german_military_cooperation #35
+		ITA_italian_irredentism
+		ITA_support_albanian_irredentism #35
+		ITA_preserve_army_traditions
+		ITA_supermarina #35 #Jun 40
+		ITA_treaty_with_germany #35
+		ITA_war_with_greece #35
+		ITA_superesercito #35 #Jun 40
+
+		#1941 (Apr -> Invasion of Yugoslavia)
+		ITA_superaereo #35 Jun 40
+		ITA_army_leaders
+		ITA_italian_tankettes
+		ITA_modernize_the_mezzogiorno
+		ITA_regional_development
+		ITA_litoranea_balbo #35
+
+		#1942
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_prepare_for_the_coming_wars
+
+		#1943
+		ITA_new_corporations
+		ITA_incrociatori_pesanti #35
+		ITA_albanian_fascist_militia #35
+		ITA_navi_da_battaglia #35
+		ITA_ispettorato_dei_mezzi_antisommergibili #35
+		ITA_flotta_d_evasione		
+		ITA_decima_flottiglia_mas #35
+		ITA_expand_naval_intelligence #35
+
+		#1944
+		ITA_expand_national_universities
+		ITA_expand_foggia_farm_fields	
+		ITA_paramilitary_training
+		ITA_gloria_al_regno_d_italia #35
+		ITA_setting_course
+		ITA_mobilize_the_railway_guns #35
+
+		#1945
+		ITA_bring_back_old_glories
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_seek_papal_support = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_king_pact_expansion_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_POS_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_POS_AGGR
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_fiocchi_munizioni #35
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_improve_overseas_naval_bases
+		ITA_brescia_small_arms_industry #35
+		ITA_power_plants_in_terni
+		ITA_utilize_the_blackshirts  #35
+		ITA_expand_the_royal_guard
+
+		#1939
+		ITA_balkan_ambition #35 
+		ITA_industria_della_gomma_sintetica #35
+		ITA_albanian_occupation #35 #Apr 1939
+		ITA_pact_of_steel #35 #May 39
+		ITA_italian_irredentism
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_extraction_industry
+
+		#1940 
+		ITA_supermarina #35 #Jun 40
+		ITA_utilize_the_blackshirts #35
+		ITA_request_control_of_french_territories #35
+		ITA_war_with_greece
+		ITA_preserve_army_traditions
+		ITA_expand_the_royal_guard
+		ITA_paramilitary_training
+
+		#1941 
+		ITA_demand_ticino
+		ITA_superesercito #35
+		ITA_develop_ethiopia #35
+		ITA_regional_development
+		ITA_demand_balearic_islands_bba #35	
+		ITA_incrociatori_pesanti #35	
+		ITA_treaty_with_germany #35
+		ITA_war_with_france #only if france is not at war with germany
+
+		#1942
+		ITA_prospect_for_oil #35
+		ITA_gloria_al_regno_d_italia #35
+		ITA_superaereo #35 Jun 40
+		ITA_citta_dell_aria
+		ITA_claims_on_turkey_bba
+		ITA_navi_da_battaglia #35
+		ITA_railway_innovations
+
+		#1943
+		ITA_support_albanian_irredentism #35
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_fascist_militia #35
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_flotta_d_evasione
+
+		#1944
+		ITA_war_with_the_uk #only if not already at war with them		
+		ITA_expand_naval_intelligence #35
+		ITA_ispettorato_dei_mezzi_antisommergibili #35	
+		ITA_army_leaders
+		ITA_italian_tankettes
+		ITA_modernize_the_mezzogiorno
+		ITA_investments_in_edison
+
+		#1945
+		ITA_expand_national_universities
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly #35
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+
+		#1946
+		ITA_prepare_for_the_coming_wars
+		ITA_setting_course
+		ITA_towards_a_greater_italy #35
+		ITA_bend_the_bars  #35
+		ITA_subdue_the_sentinels #35
+		ITA_a_colonial_empire
+		ITA_by_blood_alone
+		
+		#1947
+		ITA_masters_of_the_aegean
+		ITA_masters_of_the_mediterranean		
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_seek_papal_support = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_guarantee_austrian_independence = 0 #Italy First is okay to take if Pact of Steel is unavailable
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_king_italy_first_roman_empire_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_IF_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_IF_ROME
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_power_to_the_king #35 
+		ITA_fiocchi_munizioni #35
+		
+		#1938
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_develop_libya #35
+		ITA_power_plants_in_terni
+		ITA_utilize_the_blackshirts #35
+		
+		#1939
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_stockpile_fuel #35
+		
+		#1940
+		ITA_increase_artillery_production
+		ITA_extraction_industry
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_incrociatori_leggeri #35 #after ITA_supermarina is done
+		ITA_prepare_for_the_coming_wars
+		
+		#1941 
+		ITA_a_bandits_war
+		ITA_supermarina #35
+		ITA_superesercito #35
+		ITA_superaereo #35 
+		ITA_expand_the_royal_guard
+		ITA_war_with_the_uk 
+		ITA_cacciatorpediniere_di_scorta #35
+	
+		#1942	
+		ITA_ispettorato_dei_mezzi_antisommergibili #35
+		ITA_prospect_for_oil #35
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_gloria_al_regno_d_italia #35
+		ITA_setting_course #35
+		ITA_mare_nostrum_bba #35
+
+		#1943
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_iberian_protection #35
+		ITA_self_propelled_guns
+		ITA_the_italian_legions
+		ITA_end_fiat_ansaldo_duopoly #35
+
+		#1944
+		ITA_claims_on_turkey_bba #35
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_increase_production #35
+		ITA_all_roads_lead_to_rome
+		ITA_paramilitary_training
+		ITA_new_corporations
+		ITA_bring_back_old_glories
+		ITA_mobilize_the_railway_guns
+		 
+		#1946
+		ITA_modern_musculus
+		ITA_caligulas_pride #35
+		ITA_auxiliaries #35
+		ITA_new_roman_citizens #35
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_seek_papal_support = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_guarantee_austrian_independence = 0 
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_king_italy_first_greater_italy_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_IF_GI
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_IF_GI
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+
+		#1937
+		ITA_balkan_ambition #35
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_power_to_the_king #35 
+		ITA_fiocchi_munizioni #35
+		
+		#1938
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_citta_dell_aria
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_develop_libya #35
+		ITA_power_plants_in_terni
+		ITA_utilize_the_blackshirts #35
+		
+		#1939
+		ITA_railway_innovations
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_occupation #35 
+		ITA_italy_first
+		ITA_demand_balearic_islands_bba #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_stockpile_fuel #35
+		
+		#1940
+		ITA_increase_artillery_production
+		ITA_extraction_industry
+		ITA_italian_irredentism
+		ITA_war_with_greece #35
+		ITA_incrociatori_leggeri #35 #after ITA_supermarina is done
+		ITA_prepare_for_the_coming_wars
+		
+		#1941 
+		ITA_a_bandits_war
+		ITA_supermarina #35
+		ITA_superesercito #35
+		ITA_superaereo #35 
+		ITA_expand_the_royal_guard
+		ITA_war_with_france
+		ITA_cacciatorpediniere_di_scorta #35
+	
+		#1942	
+		ITA_ispettorato_dei_mezzi_antisommergibili #35
+		ITA_prospect_for_oil #35
+		ITA_army_leaders	
+		ITA_italian_tankettes
+		ITA_strengthen_northern_industry
+		ITA_gloria_al_regno_d_italia #35
+		ITA_setting_course #35
+		ITA_towards_a_greater_italy #35
+
+		#1943
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_bend_the_bars #35
+		ITA_self_propelled_guns
+		ITA_subdue_the_sentinels #35
+		ITA_end_fiat_ansaldo_duopoly #35
+
+		#1944
+		ITA_claims_on_turkey_bba #35
+		ITA_bersaglieri
+		ITA_ferrea_mole_ferreo_cuore #35
+		ITA_brescia_small_arms_industry #35
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_increase_production #35
+		ITA_a_colonial_empire
+		ITA_paramilitary_training
+		ITA_new_corporations
+		ITA_bring_back_old_glories
+		ITA_mobilize_the_railway_guns
+		 
+		#1946
+		ITA_by_blood_alone
+		ITA_masters_of_the_aegean #35
+		ITA_masters_of_the_mediterranean
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_seek_papal_support = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_guarantee_austrian_independence = 0 
+	}	
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_king_italy_first_diplomatic_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_IF_DIPLO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_IF_DIPLO
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Asap and skipped focuses 
+		ITA_struggle_in_ethiopia
+		ITA_solid_progress
+		ITA_the_abyssinian_fiasco
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_undermine_the_duce #35
+		ITA_conspiracies_in_the_shadows #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_convene_the_grand_council #35
+
+		#1937
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_power_to_the_king #35
+		ITA_potential_allies_in_the_balkans #35
+		ITA_the_new_emperor_of_ethiopia #35 #May 36 - ASAP after winning in Ethiopia
+		ITA_devaluate_the_lire #35 #Oct 1936 - ASAP after winning in Ethiopia
+		ITA_topple_amhara_rulers #35 ASAP after winning in Ethiopia
+		ITA_corpo_di_truppe_volontarie #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+	
+		#1938
+		ITA_naval_power_projection #35
+		ITA_expand_naval_facilities #35
+		ITA_oto_naval_guns #35
+		ITA_improve_overseas_naval_bases
+		ITA_brescia_small_arms_industry #35
+		ITA_steel_industry_in_terni
+		ITA_extraction_industry
+		
+		#1939
+		ITA_italy_first
+		ITA_befriend_greece
+		ITA_albanian_occupation #35
+		ITA_industria_della_gomma_sintetica #35
+		ITA_spanish_italian_alliance #35
+		ITA_italian_irredentism
+		ITA_befriend_portugal #35
+		
+		#1940
+		ITA_a_bandits_war
+		ITA_stockpile_fuel #35
+		ITA_albanian_oil #35
+		ITA_disband_the_blackshirts #35
+		ITA_security_militias #35
+		ITA_befriend_turkey
+		ITA_expand_the_royal_guard		
+
+		#1941 
+		ITA_prepare_for_the_coming_wars
+		ITA_superaereo #35 
+		ITA_superesercito #35
+		ITA_supermarina #35
+		ITA_invite_france_to_military_partnership
+		ITA_franco_italian_pact #35 (NAP with FRA) 
+		ITA_war_with_the_uk
+		
+		#1942
+		ITA_develop_libya #35
+		ITA_regional_development
+		ITA_incrociatori_pesanti #35
+		ITA_prospect_for_oil #35
+		ITA_new_corporations
+		ITA_navi_da_battaglia #35
+		ITA_gloria_al_regno_d_italia #35
+		ITA_setting_course #35
+		
+		#1943
+		ITA_mobilize_railway_guns
+		ITA_railway_innovations
+		ITA_support_albanian_irredentism #35
+		ITA_expand_foggia_farm_fields
+		ITA_albanian_fascist_militia #35
+		ITA_proclaim_the_italian_empire
+		
+		#1944
+		ITA_bring_back_old_glories
+	   	ITA_flotta_d_evasione
+		ITA_expand_naval_intelligence #35
+		ITA_ispettorato_dei_mezzi_antisommergibili #35	
+	   	ITA_army_leaders
+		ITA_italian_tankettes
+		
+		#1945
+		ITA_strengthen_northern_industry
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly #35
+		ITA_ferrea_mole_ferreo_cuore		
+
+		#1946
+		ITA_milan_comms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_increase_production #35
+		ITA_paramilitary_training
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_culto_del_duce = 0
+		ITA_seek_papal_support = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_guarantee_austrian_independence = 0 
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_king_guarantee_austria_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_GA
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_GA
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_power_to_the_king #35
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_guarantee_austrian_independence #35
+		ITA_air_innovations_bba #35
+		
+		#1938
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		
+		#1939
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_seek_british_military_cooperation
+		ITA_anglo_italian_pact #35
+		ITA_army_leaders
+		ITA_bersaglieri
+		
+		#1940
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		
+		#1941
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_extraction_industry
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+
+		#1942
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+
+		#1943
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_new_corporations
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_utilize_the_blackshirts #35
+
+		#1944
+		ITA_expand_the_royal_guard
+		ITA_prepare_for_the_coming_wars
+		
+	
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_seek_papal_support = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_ratify_the_stresa_front = 0
+		ITA_proclaim_the_italian_empire = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_king_stresa_front_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_GA_SF
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_GA_SF
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_power_to_the_king #35
+		
+		#1938
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_potential_allies_in_the_balkans #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria
+		
+		#1939
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_seek_british_military_cooperation
+
+		#1940
+		ITA_anglo_italian_pact #35
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_proclaim_the_italian_empire
+		
+		#1941
+		ITA_brescia_small_arms_industry #35
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_extraction_industry
+		
+		#1942
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+		ITA_italian_tankettes
+
+		#1943
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+		ITA_ferrea_mole_ferreo_cuore
+
+		#1944
+		ITA_prepare_for_the_coming_wars
+		ITA_strengthen_northern_industry
+		ITA_new_industrialization_program
+		ITA_new_corporations
+		ITA_utilize_the_blackshirts #35
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_italys_destiny = 0
+		ITA_dino_grandi_focus = 0
+		ITA_italo_balbo_focus = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_seek_papal_support = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_towards_a_greater_italy = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_king_stresa_front_aggro_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_MONARCHIST_GA_SF_AGGR
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = MONARCHIST_GA_SF_AGGR
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+		ITA_struggle_in_ethiopia #skipped	
+
+		#1936
+		ITA_ethiopian_war_logistics_bba #35
+		ITA_italian_highways_bba #35
+		ITA_servizio_informazione_militare #ASAP after Solid Progress / Struggle in Ethiopia
+		ITA_triumph_in_africa_bba #35 ASAP after winning in Ethiopia
+		ITA_ministry_of_italian_africa #35 ASAP after winning in Ethiopia
+		ITA_foreign_affairs #35 ASAP after winning in Ethiopia
+		ITA_army_primacy_bba #35
+		ITA_fiocchi_munizioni #35
+		ITA_undermine_the_duce #35
+
+		#1937
+		ITA_conspiracies_in_the_shadows #35
+		ITA_convene_the_grand_council #35
+		ITA_depose_mussolini #35
+		ITA_monarchia_d_italia #35
+		ITA_guarantee_austrian_independence #35
+		ITA_negotiate_italian_claims
+		ITA_ratify_the_stresa_front
+		ITA_power_to_the_king #35
+		
+		#1938
+		ITA_preserve_army_traditions
+		ITA_naval_power_projection #35
+		ITA_air_innovations_bba #35
+		ITA_balkan_ambition #35 
+		ITA_expand_rome_flying_school 
+		ITA_superesercito #35 #asap
+		ITA_citta_dell_aria	
+		
+		#1939
+		ITA_steel_industry_in_terni
+		ITA_reggianes_exports
+		ITA_superaereo #35 #asap
+		ITA_milan_comms_industry  #35
+		ITA_increase_artillery_production
+		ITA_vallo_alpino_del_littorio #35
+		ITA_army_leaders
+		
+		#1940
+		ITA_bersaglieri
+		ITA_divisioni_alpine
+		ITA_albanian_occupation #35
+		ITA_invite_france_to_military_partnership
+		ITA_franco_italian_pact #35
+		ITA_brescia_small_arms_industry #35
+
+		#1941
+		ITA_redirect_alfa_romeo_production
+		ITA_industria_della_gomma_sintetica #35
+		ITA_italys_destiny
+		ITA_expand_naval_facilities #35
+		ITA_stockpile_fuel #35
+		ITA_topple_amhara_rulers #35 if you still own ethiopia
+		ITA_extraction_industry
+			
+		#1942
+		ITA_proclaim_the_italian_empire
+		ITA_supermarina #35
+		ITA_railway_innovations
+		ITA_investments_in_edison	
+		ITA_expand_national_universities
+		ITA_milizia_marittima_di_artiglieria
+
+		#1943
+		ITA_italian_tankettes
+		ITA_increase_production
+		ITA_self_propelled_guns
+		ITA_modernize_ansaldo_facilities
+		ITA_fanti_dell_aria
+
+		#1944
+		ITA_ferrea_mole_ferreo_cuore
+		ITA_new_corporations
+		ITA_strengthen_northern_industry
+		ITA_the_eastern_threat
+		ITA_new_industrialization_program
+
+		#1945
+		ITA_prepare_for_the_coming_wars
+		ITA_utilize_the_blackshirts #35
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_defy_the_duce = 0
+		ITA_unite_the_opposition = 0
+		ITA_liberate_gramsci = 0
+		ITA_culto_del_duce = 0
+		ITA_undermine_the_duce = 0
+		ITA_pact_of_steel = 0 
+		ITA_dino_grandi_focus = 0
+		ITA_italo_balbo_focus = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_seek_papal_support = 0
+		ITA_mare_nostrum_bba = 0
+	}				
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+ITA_communist_plan_comintern = {
+	name = "Italian Communism comintern"
+	desc = "Italian anti-fascists will join forces to overthrow the fascist regime by force, forming a communist government, keeping the colonies and seeking to join the Comintern."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_COMMUNIST_PLAN
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_COMMUNIST_PLAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#ASAP 
+		ITA_the_abyssinian_fiasco #skipped
+		ITA_struggle_in_ethiopia #skipped
+		ITA_solid_progress #skipped
+
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_unite_the_opposition					#35
+		ITA_the_southern_farmlands					#35
+		ITA_liberate_gramsci						#35
+		ITA_servizio_informazione_militare
+		ITA_italian_highways_bba					#35
+		ITA_railway_innovations
+
+		#1937
+		ITA_defy_the_duce							#35
+		ITA_seize_old_equipment						#35
+		ITA_appeal_to_the_bourgeoisie				#35
+		ITA_army_primacy_bba						#35
+		ITA_preserve_army_traditions
+		ITA_the_italian_republic					#35
+		ITA_the_popular_front						#35 (as soon as possible)
+		ITA_the_garibaldi_legion					#35 (as soon as possible)
+		ITA_a_leader_steps_forward					#35
+		
+		#1938
+		ITA_a_new_era_for_the_red_shirts			#35 (as soon as possible)
+		ITA_gruppi_di_difesa_della_donna			#35 (as soon as possible)
+		ITA_industrial_socialization
+		ITA_the_ethiopian_question					#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_institute_the_five_year_plan
+		ITA_new_colonial_policies 					#35
+		ITA_negotiations_with_albania				#35
+
+		#1939
+		ITA_develop_libya							#35
+		ITA_develop_eritrea							#35
+		ITA_develop_ethiopia						#35
+		ITA_develop_somaliland						#35
+		ITA_regional_development
+		ITA_the_path_to_progress					#35
+		ITA_union_in_the_party						#35
+		ITA_new_ricostruzione_industriale					
+		
+
+		#1940
+		ITA_litoranea_balbo							#35
+		ITA_enlist_the_bashkimi_kombetar			#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_follow_the_soviet_union					#35
+		ITA_the_italian_confederation
+		ITA_increase_artillery_production
+		ITA_milan_comms_industry					#35
+		ITA_vallo_alpino_del_littorio				#35
+
+		#1941
+		ITA_military_cooperation 					#35
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		ITA_political_commissars
+		ITA_crush_the_mafia
+		ITA_special_brigades						#35
+
+		#1942		
+		ITA_combined_research_effort				#35
+		ITA_il_sol_dell_avvenire		
+		ITA_defense_against_capitalism		
+		ITA_army_leaders
+		ITA_superesercito							#35
+		ITA_planned_economy
+		
+		#1943
+		ITA_bersaglieri
+		ITA_moschettieri_del_duce					#35
+		ITA_divisioni_alpine						#35
+		ITA_air_innovations_bba						#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_brescia_small_arms_industry				#35
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_monarchia_d_italia = 0
+		ITA_italian_socialism = 0
+		ITA_abolish_the_colonies = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_communist_plan_anti_stalinist = {
+	name = "Italian Communism"
+	desc = "Italian anti-fascists will join forces to overthrow the fascist regime by force, forming a communist government, keeping the colonies and making an italian Confederation."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_COMMUNIST_GRAMSCI_PLAN
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_COMMUNIST_GRAMSCI_PLAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#ASAP 
+		ITA_the_abyssinian_fiasco #skipped
+		ITA_struggle_in_ethiopia #skipped
+		ITA_solid_progress #skipped
+
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_unite_the_opposition					#35
+		ITA_organize_strikes_in_the_north			#35
+		ITA_liberate_gramsci						#35
+		ITA_servizio_informazione_militare
+		ITA_italian_highways_bba					#35
+		ITA_railway_innovations
+
+		#1937
+		ITA_defy_the_duce							#35
+		ITA_seize_old_equipment						#35
+		ITA_appeal_to_the_bourgeoisie				#35
+		ITA_army_primacy_bba						#35
+		ITA_a_bandits_war
+		ITA_the_italian_republic					#35
+		ITA_the_popular_front						#35 (as soon as possible)
+		ITA_the_garibaldi_legion					#35 (as soon as possible)
+		ITA_a_leader_steps_forward					#35
+		
+
+		#1938
+		ITA_a_new_era_for_the_red_shirts			#35 (as soon as possible)
+		ITA_gruppi_di_difesa_della_donna			#35 (as soon as possible)
+		ITA_industrial_socialization
+		ITA_the_ethiopian_question					#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_institute_the_five_year_plan
+		ITA_new_colonial_policies 					#35
+		ITA_negotiations_with_albania				#35
+
+		#1939
+		ITA_the_italian_confederation
+		ITA_planned_economy 						#35 (ASAP)
+		ITA_develop_libya							#35
+		ITA_develop_eritrea							#35
+		ITA_develop_ethiopia						#35
+		ITA_develop_somaliland						#35
+		ITA_regional_development
+		ITA_the_path_to_progress					#35
+		
+		#1940
+		ITA_union_in_the_party						#35
+		ITA_united_anarchist_confederations			#35
+		ITA_special_brigades						#35
+		ITA_raise_the_peoples
+		ITA_defend_the_land							#35
+		ITA_litoranea_balbo							#35
+		ITA_new_ricostruzione_industriale
+		ITA_enlist_the_bashkimi_kombetar			#35
+
+		#1941
+		ITA_fiocchi_munizioni 						#35
+		ITA_increase_artillery_production
+		ITA_milan_comms_industry					#35
+		ITA_vallo_alpino_del_littorio				#35
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		
+		
+
+		#1942		
+		ITA_common_ground							#35
+		ITA_appease_the_military					#35
+		ITA_cooperate_with_the_mafia				#35
+		ITA_mafia_abroad   
+		ITA_il_sol_dell_avvenire		
+		ITA_army_modernization 						#35
+		ITA_italian_tankettes
+		
+		
+		#1943
+		ITA_superesercito							#35
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_air_innovations_bba						#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_brescia_small_arms_industry				#35
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_monarchia_d_italia = 0
+		ITA_italian_socialism = 0
+		ITA_abolish_the_colonies = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_communist_plan_anti_colonial = {
+	name = "Italian Communism"
+	desc = "Italian anti-fascists will join forces to overthrow the fascist regime by force, forming a communist government, keeping the colonies and making an italian Confederation."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_COMMUNIST_PERTINI_PLAN
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_COMMUNIST_PERTINI_PLAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#ASAP 
+		ITA_the_abyssinian_fiasco #skipped
+		ITA_struggle_in_ethiopia #skipped
+		ITA_solid_progress #skipped
+
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_unite_the_opposition					#35
+		ITA_the_southern_farmlands					#35
+		ITA_liberate_gramsci						#35
+		ITA_servizio_informazione_militare
+		ITA_italian_highways_bba					#35
+		ITA_railway_innovations
+
+		#1937
+		ITA_defy_the_duce							#35
+		ITA_seize_old_equipment						#35
+		ITA_appeal_to_the_bourgeoisie				#35
+		ITA_army_primacy_bba						#35
+		ITA_a_bandits_war
+		ITA_the_italian_republic					#35
+		ITA_the_popular_front						#35 (as soon as possible)
+		ITA_the_garibaldi_legion					#35 (as soon as possible)
+		ITA_a_leader_steps_forward					#35
+
+		
+		#1938
+		ITA_a_new_era_for_the_red_shirts			#35 (as soon as possible)
+		ITA_gruppi_di_difesa_della_donna			#35 (as soon as possible)
+		ITA_industrial_socialization
+		ITA_the_ethiopian_question					#35
+		ITA_institute_the_five_year_plan
+		ITA_abolish_the_colonies 					#35
+		ITA_negotiations_with_albania				#35
+		ITA_crush_the_mafia
+
+		#1939
+		ITA_empower_the_carabinieri
+		ITA_army_modernization						#35
+		ITA_the_path_to_progress					#35
+		ITA_new_ricostruzione_industriale
+		ITA_union_in_the_party						#35
+		ITA_united_anarchist_confederations			#35
+		ITA_special_brigades						#35
+		
+		#1940
+		ITA_raise_the_peoples
+		ITA_defend_the_land							#35
+		ITA_litoranea_balbo							#35
+		ITA_cooperatives_for_intensive_exploitation
+		ITA_enlist_the_bashkimi_kombetar			#35
+		ITA_the_fight_overseas
+		ITA_fiocchi_munizioni 						#35
+
+		#1941
+		ITA_increase_artillery_production
+		ITA_milan_comms_industry					#35
+		ITA_vallo_alpino_del_littorio				#35
+		
+		ITA_investments_in_edison
+		ITA_expand_national_universities
+		
+		
+
+		#1942		
+		ITA_il_sol_dell_avvenire		
+		ITA_army_modernization 						#35
+		ITA_italian_tankettes
+		
+		
+		#1943
+		ITA_superesercito							#35
+		ITA_self_propelled_guns
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_air_innovations_bba						#35
+		ITA_citta_dell_aria
+		ITA_superaereo								#35
+		ITA_brescia_small_arms_industry				#35
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_monarchia_d_italia = 0
+		ITA_italian_socialism = 0
+		ITA_new_colonial_policies = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_plan = {
+	name = "Italian Socialism"
+	desc = "Italian anti-fascists will join forces to overthrow the fascist regime by force, forming a social-democratic government and seeking to form a Confederation with former colonies in Africa."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_PLAN
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_PLAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+
+	ai_national_focuses = {
+		#ASAP 
+		ITA_the_abyssinian_fiasco #skipped
+		ITA_struggle_in_ethiopia #skipped
+		ITA_solid_progress #skipped
+
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_unite_the_opposition					#35
+		ITA_organize_strikes_in_the_north			#35
+		ITA_servizio_informazione_militare 					
+		ITA_italian_highways_bba					#35
+		ITA_railway_innovations
+		ITA_army_primacy_bba						#35
+
+		#1937
+		ITA_defy_the_duce							#35
+		ITA_appeal_to_the_bourgeoisie				#35
+		ITA_seize_old_equipment						#35
+		ITA_the_italian_republic					#35
+		ITA_italian_socialism						#35 (as soon as possible)
+		ITA_aid_for_the_spanish_republic			#35 (as soon as possible)
+		ITA_the_republics_leadership				#35 (as soon as possible)
+		ITA_cooperate_with_the_mafia				#35
+		ITA_investments_in_edison		
+
+		#1938
+		ITA_the_ethiopian_question					#35
+		ITA_new_colonial_policies					#35
+		ITA_negotiations_with_albania				#35
+		ITA_the_italian_confederation
+		ITA_expand_national_universities
+		ITA_empower_the_unions
+		ITA_ministry_of_italian_africa 				#35
+
+		#1939
+		ITA_naval_power_projection					#35
+		ITA_expand_naval_facilities					#35
+		ITA_steel_industry_in_terni
+		ITA_a_bandits_war
+		ITA_italian_tankettes
+		ITA_production_lines
+
+		#1940
+		ITA_fiocchi_munizioni 						#35
+		ITA_planned_economy							#35
+		ITA_enlist_the_bashkimi_kombetar			#35
+		ITA_increase_artillery_production
+		ITA_bring_back_exiled_intellectuals
+		ITA_social_stability						#35
+		ITA_italia_libera							#35
+		ITA_industria_della_gomma_sintetica			#35
+
+		#1941
+		ITA_the_fight_overseas
+		ITA_ascari
+		ITA_irregulars
+		ITA_mafia_abroad
+		ITA_european_democracies
+		ITA_scientific_cooperation
+
+		#1942						
+		ITA_superesercito							#35
+		ITA_supermarina								#35
+		ITA_self_propelled_guns
+		ITA_incrociatori_leggeri					#35
+		ITA_midget_submarines						#35
+		ITA_end_fiat_ansaldo_duopoly				#35
+		ITA_ferrea_mole_ferreo_cuore				#35
+		ITA_air_innovations_bba						#35
+		ITA_citta_dell_aria
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_monarchia_d_italia = 0
+		ITA_the_popular_front = 0
+		ITA_abolish_the_colonies = 0
+	}	
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_plan_free_states_europe = {
+	name = "Italian Socialism"
+	desc = "Italian anti-fascists will join forces to overthrow the fascist regime by force, forming a social-democratic government and seeking to form a Confederation with former colonies in Africa."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_FREESTATES_PLAN
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_FREESTATES_PLAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+
+	ai_national_focuses = {
+		#ASAP 
+		ITA_the_abyssinian_fiasco #skipped
+		ITA_struggle_in_ethiopia #skipped
+		ITA_solid_progress #skipped
+
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_unite_the_opposition					#35
+		ITA_the_southern_farmlands					#35
+		ITA_servizio_informazione_militare 					
+		ITA_italian_highways_bba					#35
+		ITA_railway_innovations
+		ITA_army_primacy_bba						#35
+
+		#1937
+		ITA_defy_the_duce							#35
+		ITA_appeal_to_the_bourgeoisie				#35
+		ITA_seize_old_equipment						#35
+		ITA_the_italian_republic					#35
+		ITA_italian_socialism						#35 (as soon as possible)
+		ITA_aid_for_the_spanish_republic			#35 (as soon as possible)
+		ITA_the_republics_leadership				#35 (as soon as possible)
+		ITA_crush_the_mafia				
+		ITA_investments_in_edison		
+
+		#1938
+		ITA_the_ethiopian_question					#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_develop_libya							#35
+		ITA_abolish_the_colonies					#35
+		ITA_negotiations_with_albania				#35
+		ITA_cooperatives_for_intensive_exploitation
+		ITA_expand_national_universities
+		
+		#1939
+		ITA_empower_the_unions
+		ITA_naval_power_projection					#35
+		ITA_expand_naval_facilities					#35
+		ITA_steel_industry_in_terni
+		ITA_preserve_army_traditions
+		ITA_army_leaders
+		
+		#1940
+		ITA_common_ground 							#35
+		ITA_appease_the_military					#35
+		ITA_bring_back_exiled_intellectuals
+		ITA_social_stability						#35
+		ITA_production_lines
+		ITA_italia_libera							#35
+		ITA_european_democracies
+
+		#1941
+		ITA_fiocchi_munizioni 						#35
+		ITA_enlist_the_bashkimi_kombetar			#35
+		ITA_increase_artillery_production
+		ITA_industria_della_gomma_sintetica			#35
+		ITA_the_fight_overseas
+		ITA_ascari
+		ITA_irregulars
+		ITA_scientific_cooperation
+
+		#1942						
+		ITA_superesercito							#35
+		ITA_supermarina								#35
+		ITA_bersaglieri
+		ITA_incrociatori_leggeri					#35
+		ITA_midget_submarines						#35
+		ITA_moschettieri_del_duce					#35
+		ITA_divisioni_alpine						#35
+		ITA_air_innovations_bba						#35
+		ITA_citta_dell_aria
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_monarchia_d_italia = 0
+		ITA_the_popular_front = 0
+		ITA_new_colonial_policies = 0
+	}	
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_democratic_plan_allies = {
+	name = "Italian Socialism"
+	desc = "Italian anti-fascists will join forces to overthrow the fascist regime by force, forming a social-democratic government and seeking to form a Confederation with former colonies in Africa."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_ALLIES_PLAN
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = ITA_DEMOCRATIC_ALLIES_PLAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+
+	ai_national_focuses = {
+		#ASAP 
+		ITA_the_abyssinian_fiasco #skipped
+		ITA_struggle_in_ethiopia #skipped
+		ITA_solid_progress #skipped
+
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_unite_the_opposition					#35
+		ITA_organize_strikes_in_the_north			#35
+		ITA_servizio_informazione_militare 					
+		ITA_italian_highways_bba					#35
+		ITA_railway_innovations
+		ITA_army_primacy_bba						#35
+
+		#1937
+		ITA_defy_the_duce							#35
+		ITA_appeal_to_the_bourgeoisie				#35
+		ITA_seize_old_equipment						#35
+		ITA_the_italian_republic					#35
+		ITA_italian_socialism						#35 (as soon as possible)
+		ITA_aid_for_the_spanish_republic			#35 (as soon as possible)
+		ITA_the_republics_leadership				#35 (as soon as possible)
+		ITA_crush_the_mafia				
+		ITA_investments_in_edison		
+
+		#1938
+		ITA_the_ethiopian_question					#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_new_colonial_policies					#35
+		ITA_negotiations_with_albania				#35
+		ITA_bring_back_exiled_intellectuals
+		ITA_social_stability						#35
+		ITA_expand_national_universities
+		
+		#1939
+		ITA_empower_the_unions
+		ITA_naval_power_projection					#35
+		ITA_expand_naval_facilities					#35
+		ITA_power_plants_in_terni
+		ITA_reestablish_old_alliances				#35
+		ITA_preserve_army_traditions
+		ITA_army_leaders
+		
+		#1940
+		ITA_empower_the_carabinieri
+		ITA_production_lines
+		ITA_military_agreements		
+		ITA_fiocchi_munizioni 						#35		
+		ITA_enlist_the_bashkimi_kombetar			#35
+		ITA_increase_artillery_production
+		
+
+		#1941
+		ITA_industria_della_gomma_sintetica			#35
+		ITA_the_italian_confederation
+		ITA_the_fight_overseas
+		ITA_ascari
+		ITA_irregulars
+		ITA_scientific_cooperation
+
+		#1942						
+		ITA_superesercito							#35
+		ITA_supermarina								#35
+		ITA_bersaglieri
+		ITA_incrociatori_leggeri					#35
+		ITA_midget_submarines						#35
+		ITA_moschettieri_del_duce					#35
+		ITA_divisioni_alpine						#35
+		ITA_air_innovations_bba						#35
+		ITA_citta_dell_aria
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_monarchia_d_italia = 0
+		ITA_the_popular_front = 0
+		ITA_abolish_the_colonies = 0
+	}	
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_pope_plan = {
+	name = "Pope plan"
+	desc = "King Vittorio Emanuele will lead Italy towards an absolutist monarchy, trying to achieve Mare Nostrum and reforming the Roman Empire."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_POPE_ISO
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = POPE_ISO
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_power_to_the_king						#35
+		ITA_seek_papal_support 						#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_corpo_di_truppe_volontarie 				#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+
+		#1938	
+		ITA_prospect_for_oil						#35
+		ITA_agents_of_the_church	#35
+		ITA_strengthen_the_papacy	#35
+		ITA_steel_industry_in_terni
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_potential_allies_in_the_balkans			#35
+				
+		#1939
+		ITA_expand_national_universities
+		ITA_develop_libya							#35
+		ITA_develop_eritrea							#35
+		ITA_regional_development
+		ITA_industria_della_gomma_sintetica 		#35
+		ITA_air_innovations_bba						#35
+		ITA_preserve_army_traditions
+		
+		#1940
+		ITA_disband_the_blackshirts					#35
+		ITA_italian_tankettes						#35		
+		ITA_superesercito							#35
+		ITA_self_propelled_guns
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_increase_artillery_production
+			
+		#1941	
+		ITA_expand_naval_facilities					#35
+		ITA_citta_dell_aria
+		ITA_brescia_small_arms_industry				#35
+		ITA_milan_comms_industry					#35	
+		ITA_strengthen_northern_industry				
+		ITA_expand_the_royal_guard
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_end_fiat_ansaldo_duopoly				#35
+
+		#1942	
+		ITA_ferrea_mole_ferreo_cuore				#35					
+		ITA_setting_course							#35
+		ITA_the_papacy_reborn
+		ITA_deus_vult
+		ITA_catholic_action
+		ITA_il_vento_aureo	
+		ITA_redirect_alfa_romeo_production
+		ITA_keep_specialization						#35
+		
+		ITA_superaereo								#35
+		ITA_supermarina								#35
+
+		
+
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_towards_a_greater_italy = 0
+		ITA_mare_nostrum_bba = 0
+		ITA_a_time_for_war = 0
+		ITA_the_holy_lands = 0
+		ITA_iberian_protection = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+ITA_pope_rome_plan = {
+	name = "Pope plan"
+	desc = "King Vittorio Emanuele will lead Italy towards an absolutist monarchy, trying to achieve Mare Nostrum and reforming the Roman Empire."
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_country_flag = ITA_AI_RANDOM_POPE_ROME
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = POPE_ROME
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		ITA_ethiopian_war_logistics_bba 			#35
+		ITA_triumph_in_africa_bba 					#35	(as soon as possible)
+		ITA_italian_highways_bba					#35
+		ITA_undermine_the_duce						#35
+		ITA_servizio_informazione_militare 			
+		ITA_conspiracies_in_the_shadows				#35
+		ITA_convene_the_grand_council 				#35
+		ITA_depose_mussolini 						#35
+		ITA_monarchia_d_italia 						#35
+			
+		#1937
+		ITA_power_to_the_king						#35
+		ITA_seek_papal_support 						#35
+		ITA_the_new_emperor_of_ethiopia				#35
+		ITA_foreign_affairs 						#35
+		ITA_corpo_di_truppe_volontarie 				#35
+		ITA_ministry_of_italian_africa 				#35
+		ITA_army_primacy_bba						#35
+		ITA_fiocchi_munizioni 						#35
+		ITA_topple_amhara_rulers 					#35
+		ITA_naval_power_projection					#35
+
+		#1938	
+		ITA_prospect_for_oil						#35
+		ITA_agents_of_the_church	#35
+		ITA_strengthen_the_papacy	#35
+		ITA_steel_industry_in_terni
+		ITA_albanian_occupation						#35
+		ITA_railway_innovations
+		ITA_investments_in_edison
+		ITA_balkan_ambition			#35
+				
+		#1939
+		ITA_expand_national_universities
+		ITA_develop_libya							#35
+		ITA_develop_eritrea							#35
+		ITA_regional_development
+		ITA_industria_della_gomma_sintetica 		#35
+		ITA_air_innovations_bba						#35
+		ITA_preserve_army_traditions
+		
+		#1940
+		ITA_disband_the_blackshirts					#35
+		ITA_italian_tankettes						#35		
+		ITA_superesercito							#35
+		ITA_self_propelled_guns
+		ITA_army_leaders
+		ITA_bersaglieri
+		ITA_increase_artillery_production
+			
+		#1941	
+		ITA_expand_naval_facilities					#35
+		ITA_citta_dell_aria
+		ITA_brescia_small_arms_industry				#35
+		ITA_milan_comms_industry					#35	
+		ITA_strengthen_northern_industry				
+		ITA_expand_the_royal_guard
+		ITA_gloria_al_regno_d_italia				#35
+		ITA_end_fiat_ansaldo_duopoly				#35
+
+		#1942	
+		ITA_ferrea_mole_ferreo_cuore				#35	
+		ITA_the_papacy_reborn
+		ITA_deus_vult
+		ITA_the_holy_lands				
+		ITA_setting_course							#35
+		ITA_mare_nostrum_bba
+		ITA_iberian_protection
+		ITA_the_italian_legions
+		ITA_catholic_action
+		ITA_il_vento_aureo	
+		ITA_redirect_alfa_romeo_production
+		ITA_keep_specialization						#35
+		ITA_superaereo								#35
+		ITA_supermarina								#35
+		ITA_a_time_for_war
+		ITA_the_catholic_dominion
+		ITA_south_american_alliances
+		ITA_auxiliaries
+		ITA_new_roman_citizens
+		ITA_all_roads_lead_to_rome
+		ITA_modern_musculus
+		ITA_caligulas_pride
+		ITA_the_king_of_the_skies
+
+		
+
+	}	
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_culto_del_duce = 0
+		ITA_defy_the_duce = 0
+		ITA_italo_balbo_focus = 0
+		ITA_dino_grandi_focus = 0
+		ITA_guarantee_austrian_independence = 0
+		ITA_pact_of_steel = 0
+		ITA_italy_first = 0
+		ITA_revoke_the_acerbo_law = 0
+		ITA_towards_a_greater_italy = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+		ITA_pietro_d_acquarone = 100
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

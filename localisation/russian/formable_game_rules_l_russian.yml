@@ -1,0 +1,266 @@
+﻿l_russian:
+ RULE_GROUP_GAME_SETUP: "Вариант игры" #NT!
+ RULE_OPTION_FORMED: "Сформированный" #NT!
+ RULE_OPTION_FORMED_DESC: "Формируемая нация будет существовать в начале игры." #NT!
+ RULE_OPTION_NOT_FORMED: "Несформированный" #NT!
+ RULE_OPTION_NOT_FORMED_DESC: "Формируемая нация не будет существовать в начале игры." #NT!
+ RULE_OPTION_BARE_MINIMUM: "Сформировано - Минимум" #NT!
+ RULE_OPTION_BARE_MINIMUM_DESC: "Формируемая нация будет существовать лишь на минимальной территории." #NT!
+ RULE_OPTION_FORMED_MAX: "Сформировано - Максимум" #NT!
+ RULE_OPTION_FORMED_MAX_DESC: "Формируемая нация будет существовать с максимальной территорией." #NT!
+ RULE_OPTION_NOT_CHANGED: "Без изменений" #NT!
+ RULE_OPTION_NOT_CHANGED_DESC: "Эта нация останется неизменной" #NT!
+ RULE_OPTION_SPLIT: "Фрагментированный" #NT!
+ RULE_OPTION_FORMED_DEMOCRATIC: "Демократический" #NT!
+ RULE_OPTION_FORMED_NEUTRALITY: "неприсоединившиеся" #NT!
+ RULE_OPTION_FORMED_FASCISM: "Фашистский" #NT!
+ RULE_OPTION_FORMED_COMMUNISM: "коммунист" #NT!
+  # 
+ ROM_FRAGMENTATION_STATUS: "@ROM Румынская фрагментация" #NT!
+ RULE_OPTION_ROM_FRAGMENTED: "@ROM @MOL @TRA Румыния фрагментирована" #NT!
+ RULE_OPTION_ROM_FRAGMENTED_DESC: "@MOL Молдова и @TRA Translvania независимы в начале игры." #NT!
+ ANDALUSIA_FORMATION_STATUS: "@АДУ Аль-Андалус" #NT!
+ RULE_OPTION_ANDALUSIA_FORMED_DESC: "@ADU Al-Andalus сформирован из @MOR Марокко и @SPR Южной Иберии. §YЧтобы сыграть в @ADU Al-Andalus, выберите @OMA Oman на карте.§!" #NT!
+ RULE_OPTION_ANDALUSIA_FORMED_IBERIA: "@MOR @SPR @POR Марокко + Иберия" #NT!
+ RULE_OPTION_ANDALUSIA_FORMED_IBERIA_DESC: "@ADU Al-Andalus начинается с @MOR Morocco и @SPR @POR Iberia.\n§YЧтобы сыграть в @ADU Al-Andalus, выберите @OMA Oman на карте.§!" #NT!
+ RULE_OPTION_ANDALUSIA_FORMED_UMAYYAD: "@MOR @SPR @POR @LBA @СИР Омейядский халифат" #NT!
+ RULE_OPTION_ANDALUSIA_FORMED_UMAYYAD_DESC: "@ADU Аль-Андалус формируется с максимальной территорией. §YЧтобы сыграть в @ADU Омейядов, выберите @OMA Oman на карте.§!" #NT!
+ ARABIA_FORMATION_STATUS: "@IRQ @SAU Аравия" #NT!
+ RULE_OPTION_ARABIA_FORMED_IRQ: "@IRQ Ирак" #NT!
+ RULE_OPTION_ARABIA_FORMED_IRQ_DESC: "Аравия формируется @IRQ Ирак." #NT!
+ RULE_OPTION_ARABIA_FORMED_SAU: "@SAU Саудовская Аравия" #NT!
+ RULE_OPTION_ARABIA_FORMED_SAU_DESC: "Аравия образована @SAU Saudi Arabia." #NT!
+ AUS_HUN_FORMATION_STATUS: "@AUS @HUN Австро-Венгрия / Великая Венгрия" #NT!
+ RULE_OPTION_AUS_HUN_AUS: "@AUS Австрия" #NT!
+ RULE_OPTION_AUS_HUN_AUS_DESC: "@AUS @HUN Австро-Венгрия образована @AUS Austria." #NT!
+ RULE_OPTION_AUS_HUN_FASCIST: "@AUS @HUN Австро-Венгрия – минимум" #NT!
+ RULE_OPTION_AUS_HUN_FASCIST_DESC: "@AUS @HUN Австро-Венгрия начинается с Отто фон Габсбурга и только начальные @AUS австрийские и @HUN венгерские территории." #NT!
+ RULE_OPTION_AUS_HUN_OTTO: "@AUS @HUN @CZE Австро-Венгрия" #NT!
+ RULE_OPTION_AUS_HUN_OTTO_DESC: "@AUS @HUN Австро-Венгрия образована под руководством Отто фон Габсбурга в качестве короля." #NT!
+ RULE_OPTION_HUN_GREATER_FASCIST: "@HUN Великая Венгрия – минимум" #NT!
+ RULE_OPTION_HUN_GREATER_FASCIST_DESC: "@HUN Образована Великая Венгрия, за исключением Баната, Крисаны и Южной Трансильвании." #NT!
+ RULE_OPTION_HUN_GREATER_HORTHY: "@HUN @TRA @SLO Великая Венгрия" #NT!
+ RULE_OPTION_HUN_GREATER_HORTHY_DESC: "@HUN Образована Великая Венгрия." #NT!
+ BELARUS_FORMATION_STATUS: "@LIT @LAT @EST @BLR Балтийско-Белорусская ССР" #NT!
+ RULE_OPTION_BELARUS_FORMED_LIT: "@LIT @BLR Литовско-Белорусская ССР" #NT!
+ RULE_OPTION_BELARUS_FORMED_LIT_DESC: "@LIT @BLR Литовско-Белорусская Советская Социалистическая Республика образовалась в начале игры." #NT!
+ RULE_OPTION_BELARUS_FORMED_LAT: "@LAT @BLR Латвия-Белорусская ССР" #NT!
+ RULE_OPTION_BELARUS_FORMED_LAT_DESC: "@LAT @BLR Латвийско-Белорусская Советская Социалистическая Республика образовалась в начале игры." #NT!
+ RULE_OPTION_BELARUS_FORMED_EST: "@EST @BLR Эстония-Белорусская ССР" #NT!
+ RULE_OPTION_BELARUS_FORMED_EST_DESC: "@EST @BLR Эстоно-Белорусская Советская Социалистическая Республика образовалась в начале игры." #NT!
+ BUL_FORMATION_STATUS: "@BUL Болгария" #NT!
+ RULE_OPTION_BUL_FORMED_TBE_FASCISM: "@BUL Третья Болгарская Империя - Фашистская" #NT!
+ RULE_OPTION_BUL_FORMED_TBE_FASCISM_DESC: "@BUL Третья болгарская империя формируется в начале игры." #NT!
+ RULE_OPTION_BUL_FORMED_TBE_BORIS: "@BUL Третья Болгарская Империя - Монархистская" #NT!
+ RULE_OPTION_BUL_FORMED_TBE_BORIS_DESC: "@BUL Третья болгарская империя формируется в начале игры при Борисе III." #NT!
+ RULE_OPTION_BUL_FORMED_TBE_FERDINAND: "@BUL Третья Болгарская империя - Историческая" #NT!
+ RULE_OPTION_BUL_FORMED_TBE_FERDINAND_DESC: "@BUL Третья болгарская империя формируется в начале игры при Фердинанде I." #NT!
+ RULE_OPTION_BUL_FORMED_TBE_FERDINAND_MAX: "@BUL Третья Болгарская Империя - Максимум" #NT!
+ RULE_OPTION_BUL_FORMED_TBE_FERDINAND_MAX_DESC: "@BUL Создана Третья болгарская империя с максимальной территорией при Фердинанде I." #NT!
+ RULE_OPTION_BUL_FORMED_UBF_COMMUNISM: "@BUL @YUG @ROM @GRE @TUR @ALB Объединенная Балканская Федерация - Коммунизм" #NT!
+ RULE_OPTION_BUL_FORMED_UBF_COMMUNISM_DESC: "@BUL @YUG @ROM @GRE @TUR @ALB Создана Объединенная Балканская Федерация с коммунистическим правительством." #NT!
+ RULE_OPTION_BUL_FORMED_UBF_DEMOCRATIC: "@BUL @YUG @ROM @GRE @TUR @ALB Объединенная Балканская Федерация - Демократическая" #NT!
+ RULE_OPTION_BUL_FORMED_UBF_DEMOCRATIC_DESC: "@BUL @YUG @ROM @GRE @TUR @ALB Создана Объединенная Балканская Федерация с демократическим правительством." #NT!
+ CHINA_FORMATION_STATUS: "@CHI @КНР @MAN Китай" #NT!
+ RULE_OPTION_CHINA_FORMED_ROC: "@CHI Националистический Китай" #NT!
+ RULE_OPTION_CHINA_FORMED_ROC_DESC: "@CHI Китайская Республика формируется в начале игры под руководством Чан Кайши." #NT!
+ RULE_OPTION_CHINA_FORMED_PRC: "@КНР Коммунистический Китай" #NT!
+ RULE_OPTION_CHINA_FORMED_PRC_DESC: "@PRC Китайская Народная Республика формируется в начале игры под руководством Мао Цзэдуна." #NT!
+ RULE_OPTION_CHINA_FORMED_QING: "@MAN Qing China" #NT!
+ RULE_OPTION_CHINA_FORMED_QING_DESC: "@MAN Китайская империя формируется в начале игры под руководством Пуи." #NT!
+ RULE_OPTION_CHINA_FORMED_QING_MAX: "@MAN @TIB @MON @ВИН Цин - Максимум" #NT!
+ RULE_OPTION_CHINA_FORMED_QING_MAX_DESC: "@MAN Китайская империя формируется в начале игры с максимальной территорией." #NT!
+ CSA_FORMATION_STATUS: "@CSA Конфедеративные Штаты" #NT!
+ RULE_OPTION_CSA_FORMED_DESC: "@CSA Конфедеративные Штаты формируются в начале игры под руководством Уильяма Дадли Пелли.\n§YЧтобы играть в @CSA Confederates, выберите @CUB Куба на карте.§!" #NT!
+ RULE_OPTION_CSA_FORMED_MAX_DESC: "@CSA Конфедеративные Штаты формируются в начале игры под руководством Уильяма Дадли Пелли, включая всю территорию @USA Соединенных Штатов.\n§YЧтобы играть в @CSA Confederates, выберите @CUB Куба на карте.§!" #NT!
+ CZE_FORMATION_STATUS: "@CZE Чехословакия" #NT!
+ RULE_OPTION_CZE_FORMED_DESC: "Чехословакия разделена на @CZE Чехия и @SLO Словакия.\n§YЧтобы играть в @SLO Словакия, выберите на карте @SWI Швейцария." #NT!
+ DNA_FORMATION_STATUS: "@КАНА @США Северная Америка" #NT!
+ EGY_FORMATION_STATUS: "@EGY Египет" #NT!
+ RULE_OPTION_EGY_FORMED_DESC: "@EGY Egypt формируется в начале игры.\n§Y Чтобы играть в @EGY Egypt, выберите @YEM Yemen на карте.§!" #NT!
+ RULE_OPTION_EGY_FORMED_ALI_DESC: "@EGY Египет формируется в начале игры, включая территории @YEM @PAL @SUD, завоеванные Мухаммедом Али.\n§Y Чтобы играть в @EGY Египет, выберите @YEM Йемен на карте.§!" #NT!
+ EST_FORMATION_STATUS: "@EST Эстония" #NT!
+ RULE_OPTION_EST_FORMED_EST_FIN: "@EST @FIN Эстония-Финляндия" #NT!
+ RULE_OPTION_EST_FORMED_EST_FIN_DESC: "@EST @FIN Эстония-Финляндия формируется в начале игры." #NT!
+ RULE_OPTION_EST_FORMED_FINNO_UGRIA: "@EST @FIN @KAR Пан-Угрия" #NT!
+ RULE_OPTION_EST_FORMED_FINNO_UGRIA_DESC: "@EST @FIN @KAR Пан-Угрия формируется в начале игры." #NT!
+ RULE_OPTION_EST_FORMED_FINNO_UGRIA_MAX: "@EST @FIN @KAR @SMI @KOM Пан-Угрия - Максимум" #NT!
+ RULE_OPTION_EST_FORMED_FINNO_UGRIA_MAX_DESC: "@EST @FIN @KAR Пан-Угрия формируется в начале игры с максимальной территорией @SMI @KOM." #NT!
+ EU_FORMATION_STATUS: "@FRA @GER @ENG Европейский Союз" #NT!
+ RULE_OPTION_EU_FORMED_DESC: "Европейский Союз образован в низменностях @BEL и включает в себя только @FRA Франция, @GER, Германия и @ITA, Италия." #NT!
+ RULE_OPTION_EU_FORMED_MODERN: "@BEL @HOL @FRA @GER @ITA Современный ЕС" #NT!
+ RULE_OPTION_EU_FORMED_MODERN_DESC: "Образуется Европейский Союз с современной территорией ЕС." #NT!
+ RULE_OPTION_EU_FORMED_MODERN_II: "@BEL @HOL @FRA @GER @ITA Современный ЕС, 1936 г." #NT!
+ RULE_OPTION_EU_FORMED_MODERN_II_DESC: "Формируется Европейский Союз с современными странами ЕС, но с границами 1936 года." #NT!
+ RULE_OPTION_EU_FORMED_GER: "@GER @HOL @FRA @ITA @BEL Германия ЕС" #NT!
+ RULE_OPTION_EU_FORMED_GER_DESC: "Европейский Союз создается в @GER Германии.\n§RЕС будет фашистским.§!" #NT!
+ RULE_OPTION_EU_FORMED_MOSLEY: "@ENG @HOL @FRA @ITA @BEL @GER ЕС Мосли" #NT!
+ RULE_OPTION_EU_FORMED_MOSLEY_DESC: "Европейский Союз образован из @ENG UK.\n§YЭтот вариант может создать имперский союз, но это не рекомендуется.§!" #NT!
+ FRA_SPR_FORMATION_STATUS: "@FRA @SPR Франко-испанский союз" #NT!
+ RULE_OPTION_FRA_SPR_FORMED_FRA: "@FRA Франция" #NT!
+ RULE_OPTION_FRA_SPR_FORMED_FRA_DESC: "@FRA @SPR Франко-испанский союз создан @FRA France." #NT!
+ RULE_OPTION_FRA_SPR_FORMED_SPR: "@SPR Испания" #NT!
+ RULE_OPTION_FRA_SPR_FORMED_SPR_DESC: "@FRA @SPR Франко-испанский союз создан @SPR Испания.\n§RГражданская война в Испании все еще продолжается.§!" #NT!
+ GER_FORMATION_STATUS: "@GER Германия Формирование" #NT!
+ RULE_OPTION_GER_FORMED: "@GER Германская империя" #NT!
+ RULE_OPTION_GER_FORMED_DESC: "@GER Германская империя образована при Вильгельме II." #NT!
+ RULE_OPTION_GER_FORMED_COLONIAL: "@GER @PNG @TZN @NMB Германская империя – включая колонии" #NT!
+ RULE_OPTION_GER_FORMED_COLONIAL_DESC: "@GER Немецкая империя формируется из @PNG @TZN @NMB исторических колоний в начале игры." #NT!
+ RULE_OPTION_GGR_FORMED: "@GER @AUS @CZE Великий Германский Рейх" #NT!
+ RULE_OPTION_GGR_FORMED_DESC: "@GER Великий Германский Рейх формируется под руководством Гитлера." #NT!
+ RULE_OPTION_HRE_FORMED: "@GER @AUS @ITA Священная Римская империя – фашистская" #NT!
+ RULE_OPTION_HRE_FORMED_DESC: "@PRE HRE создана при Гитлере." #NT!
+ RULE_OPTION_HRE_FORMED_WILHELM: "@GER @AUS @ITA Священная Римская империя – монархия" #NT!
+ RULE_OPTION_HRE_FORMED_WILHELM_DESC: "@PRE HRE была создана при Вильгельме II." #NT!
+ RULE_OPTION_HRE_FORMED_VIC: "@GER @AUS @ITA Священная Римская империя – Виктория" #NT!
+ RULE_OPTION_HRE_FORMED_VIC_DESC: "@PRE HRE создана под руководством Виктории." #NT!
+ RULE_OPTION_GER_FORMED_SPLIT: "@PRE @BAY @MEK @SAX @SHL Германия – фрагментировано" #NT!
+ RULE_OPTION_GER_FORMED_SPLIT_DESC: "@GER Германия еще не сформирована и не станет единой.\n§Y Чтобы сыграть в @PRE Prussia, выберите @GER Germany на карте. Если вы выберете @AUS Австрия, будет выбрано случайное @BAY @MEK @SAX @SHL Немецкое королевство.§!" #NT!
+ RULE_OPTION_GER_FORMED_YALTA: "@WGR @DDR Германия – Восток против Запада" #NT!
+ RULE_OPTION_GER_FORMED_YALTA_DESC: "@GER Германия разделена на @WGR @DDR границ времен Холодной войны.\n§YЧтобы сыграть в @WGR Западная Германия, выберите @GER Германия на карте. Чтобы играть в @DDR East- Germany, выберите на карте @AUS Austria.§!" #NT!
+ RULE_OPTION_GER_FORMED_YALTA_II: "@PRE @BAY Германия – Север против Юга" #NT!
+ RULE_OPTION_GER_FORMED_YALTA_II_DESC: "@GER Германия начинается с монархизма на севере @PRE и фашизма на юге @BAY.\n§YЧтобы играть в @PRE Северная Германия, выберите @GER Германия, чтобы играть в @BAY Южная Германия, выберите @AUS Австрия.§!" #NT!
+ GRAN_FORMATION_STATUS: "@COL @VEN @ECU Гран-Колумбия" #NT!
+ RULE_OPTION_GRAN_FORMED_COL: "@COL Демократ" #NT!
+ RULE_OPTION_GRAN_FORMED_COL_DESC: "@COL @VEN @ECU Гран Колумбия образована @COL Colombia." #NT!
+ RULE_OPTION_GRAN_FORMED_VEN: "@ВЕН Фашист" #NT!
+ RULE_OPTION_GRAN_FORMED_VEN_DESC: "@COL @VEN @ECU Гран-Колумбия образована @VEN Венесуэла." #NT!
+ GRE_FORMATION_STATUS: "@GRE Греция" #NT!
+ RULE_OPTION_BYZ_BARE_MINIMUM: "@GRE @TUR Византия – Минимум" #NT!
+ RULE_OPTION_BYZ_BARE_MINIMUM_DESC: "@GRE Byzantium состоит только из @TUR Западной Анатолии и Константинополя." #NT!
+ RULE_OPTION_GRE_FORMED_BYZANTIUM: "@GRE @TUR Византия" #NT!
+ RULE_OPTION_GRE_FORMED_BYZANTIUM_DESC: "@GRE Byzantium создана при фашистском правительстве." #NT!
+ RULE_OPTION_BYZ_FORMED: "@GRE @TUR Византия - Монархист" #NT!
+ RULE_OPTION_BYZ_FORMED_DESC: "@GRE Byzantium сформирована при монархическом правительстве." #NT!
+ RULE_OPTION_GRE_FORMED_BYZANTIUM_MAX: "@GRE @TUR @YUG @SYR @TTS Византия - Максимум" #NT!
+ RULE_OPTION_GRE_FORMED_BYZANTIUM_MAX_DESC: "@GRE Byzantium формируется с крупнейшей территорией @TUR @YUG @SYR @TTS под фашистским правительством." #NT!
+ RULE_OPTION_BYZ_FORMED_MAX: "@GRE @TUR @YUG @SYR @TTS Византия - Максимум (Исторический)" #NT!
+ RULE_OPTION_BYZ_FORMED_MAX_DESC: "@GRE Византия образована историческими границами." #NT!
+ RULE_OPTION_GRE_FORMED_GREATER_COMMUNISM: "@GRE @TUR Великая Греция – коммунистическая" #NT!
+ RULE_OPTION_GRE_FORMED_GREATER_COMMUNISM_DESC: "@GRE Великая Греция образована под руководством коммунистов." #NT!
+ RULE_OPTION_GRE_FORMED_GREATER_FASCISM: "@GRE @TUR Великая Греция – Фашизм" #NT!
+ RULE_OPTION_GRE_FORMED_GREATER_FASCISM_DESC: "@GRE Великая Греция формируется под руководством фашистов." #NT!
+ RULE_OPTION_GRE_FORMED_GREATER_NEUTRALITY: "@GRE @TUR Великая Греция - Metaxist" #NT!
+ RULE_OPTION_GRE_FORMED_GREATER_NEUTRALITY_DESC: "@GRE Великая Греция формируется под руководством метаксистов." #NT!
+ RULE_OPTION_GRE_FORMED_MACEDONIA_FASCISM: "@MAC @GRE @TUR @PER @RAJ Македония - Фашист" #NT!
+ RULE_OPTION_GRE_FORMED_MACEDONIA_FASCISM_DESC: "@MAC @GRE Македония сформирована под руководством фашистов." #NT!
+ RULE_OPTION_GRE_FORMED_MACEDONIA_NEUTRALITY: "@MAC @GRE @TUR @PER @RAJ Македония - Монархист" #NT!
+ RULE_OPTION_GRE_FORMED_MACEDONIA_NEUTRALITY_DESC: "@MAC @GRE Македония сформирована под руководством монархистов." #NT!
+ MAJAPAHIT_FORMATION_STATUS: "@MAL @INS Федерация Маджпахита" #NT!
+ RULE_OPTION_MAJAPAHIT_FORMED_MAL: "@MAL Колонии Британского пролива" #NT!
+ RULE_OPTION_MAJAPAHIT_FORMED_MAL_DESC: "Majapahit создан @MAL Malaya." #NT!
+ RULE_OPTION_MAJAPAHIT_FORMED_INS: "@INS Голландская Ост-Индская компания" #NT!
+ RULE_OPTION_MAJAPAHIT_FORMED_INS_DESC: "Маджапахит образован @INS Голландской Ост-Индии." #NT!
+ IBERIA_FORMATION_STATUS: "@POR @SPR Иберия" #NT!
+ RULE_OPTION_IBERIA_FORMED_POR: "@POR Португалия" #NT!
+ RULE_OPTION_IBERIA_FORMED_POR_DESC: "Iberia основана @POR Portugal." #NT!
+ RULE_OPTION_IBERIA_FORMED_SPR: "@SPR Испания" #NT!
+ RULE_OPTION_IBERIA_FORMED_SPR_DESC: "Иберия образована @SPR Испания.\n§RГражданская война в Испании все еще продолжается.§!" #NT!
+ URAL_FORMATION_STATUS: "@МЭЛ @ТАТ @ЧУ @УДМ @БСК Идель Урал" #NT!
+ RULE_OPTION_URAL_FORMED_DESC: "«Идель Урал» сформирован @MEL Марий Эл.\n§YЧтобы сыграть в @MEL «Идель Урал», выберите на карте @MON Монголия.§!" #NT!
+ JAP_FORMATION_STATUS: "@JAP @VLA @CHI Великая Японская империя" #NT!
+ KALMAR_NORDIC_FORMATION_STATUS: "@SWE @NOR @DEN @FIN @EST Скандинавия / Совет Северных стран" #NT!
+ RULE_OPTION_KALMAR_FORMED: "@SWE @NOR @DEN Скандинавия" #NT!
+ RULE_OPTION_KALMAR_FORMED_DESC: "Образуется Скандинавия." #NT!
+ RULE_OPTION_NORDIC_FORMED: "@SWE @NOR @DEN @FIN Северный совет" #NT!
+ RULE_OPTION_NORDIC_FORMED_DESC: "Создан Северный совет." #NT!
+ RULE_OPTION_KALMAR_FORMED_EST: "@SWE @NOR @DEN @FIN @EST Эстония" #NT!
+ RULE_OPTION_KALMAR_FORMED_EST_DESC: "Скандинавия образована @EST Эстония." #NT!
+ KUR_FORMATION_STATUS: "@KUR Курдистан" #NT!
+ RULE_OPTION_KUR_FORMED_DESC: "@KUR Курдистан независим.\n§YЧтобы сыграть в @KUR Курдистан, выберите @AFG Афганистан на карте.§!" #NT!
+ LAT_FORMATION_STATUS: "@LAT Латвия" #NT!
+ RULE_OPTION_BALTIC_FORMED: "@LAT @LIT @EST Балтийская федерация" #NT!
+ RULE_OPTION_BALTIC_FORMED_DESC: "Образована Балтийская Федерация." #NT!
+ RULE_OPTION_LAT_FORMED_OST: "@LAT @BLR Остланд" #NT!
+ RULE_OPTION_LAT_FORMED_OST_DESC: "Образован @BLR Ostland." #NT!
+ LIT_FORMATION_STATUS: "@LIT Литва" #NT!
+ RULE_OPTION_LIT_FORMED_GREATER: "@LIT Большая Литва" #NT!
+ RULE_OPTION_LIT_FORMED_GREATER_DESC: "@LIT Образована Великая Литва." #NT!
+ RULE_OPTION_LIT_FORMED_GREATER_MAX: "@LIT @POL @SOV Большая Литва - Максимум" #NT!
+ RULE_OPTION_LIT_FORMED_GREATER_MAX_DESC: "@LIT Большая Литва формируется с помощью @POL @SOV Максимальная территория." #NT!
+ RULE_OPTION_LIT_FORMED_LIVONIA: "@LIT @LAT Ливония" #NT!
+ RULE_OPTION_LIT_FORMED_LIVONIA_DESC: "@LIT Ливония образована при Миндаугасе III." #NT!
+ RULE_OPTION_LIT_FORMED_POL: "@LIT @POL Речь Посполитая" #NT!
+ RULE_OPTION_LIT_FORMED_POL_DESC: "@LIT @POL Речь Посполитая образована под руководством Миндаугаса III." #NT!
+ RULE_OPTION_LIT_FORMED_POL_MAX: "@LIT @POL @BEL @UKR @SOV Речь Посполитая - Максимум" #NT!
+ RULE_OPTION_LIT_FORMED_POL_MAX_DESC: "@LIT @POL Речь Посполитая формируется с максимальной территорией" #NT!
+ MEXICO_FORMATION_STATUS: "@MEX @NIC @PAN @PRU @CHL Третья мексиканская империя" #NT!
+ MUTAPA_FORMATION_STATUS: "@SAF @MZB @ЗИМ Мутапа" #NT!
+ NORCAUC_FORMATION_STATUS: "@ABK @GEO @ARM @AZR Южный Кавказ" #NT!
+ RULE_OPTION_NORCAUC_FORMED_DESC: "@ARM Южный Кавказ формируется @ABK Abkhazia.\n§YЧтобы сыграть в @ABK Abkhazia, выберите @IRQ Ирак на карте.§!" #NT!
+ PERSIA_FORMATION_STATUS: "@PER @PAK @AFG Персидская империя" #NT!
+ BALTIC_POL_LIT_FORMATION_STATUS: "@POL Польша" #NT!
+ RULE_OPTION_POL_FORMED_BERMONDT: "@POL @LIT Королевство Бермондт" #NT!
+ RULE_OPTION_POL_FORMED_BERMONDT_DESC: "Королевство Бермондт основано Павлом Вермонтом Аваловым." #NT!
+ RULE_OPTION_POL_LIT_FORMED: "@POL @LIT Польша-Литва (исторический)" #NT!
+ RULE_OPTION_POL_LIT_FORMED_DESC: "@POL @LIT Образуется Польша-Литва." #NT!
+ RULE_OPTION_POL_LIT_FORMED_MAX: "@POL @LIT @BEL @UKR @SOV Польша-Литва - Максимум (исторический)" #NT!
+ RULE_OPTION_POL_LIT_FORMED_MAX_DESC: "@POL @LIT Польша-Литва начинается с максимальной территории." #NT!
+ RULE_OPTION_POL_FORMED_ROM: "@POL @ROM Польша-Румыния" #NT!
+ RULE_OPTION_POL_FORMED_ROM_DESC: "@POL @ROM Польша-Румыния образована при Михаиле I." #NT!
+ RULE_OPTION_POL_FORMED_EMPIRE: "@POL Польская империя (фашистская)" #NT!
+ RULE_OPTION_POL_FORMED_EMPIRE_DESC: "@POL Польская империя формируется под руководством Болеслава Пясецкого." #NT!
+ RULE_OPTION_POL_FORMED_SLAVIC: "@POL @CZE @SOV @ЮГ Славянская Империя" #NT!
+ RULE_OPTION_POL_FORMED_SLAVIC_DESC: "Славянская империя формируется под руководством «Анастасии Романовой»." #NT!
+ PORTO_BRAZIL_FORMATION_STATUS: "@BRA @POR Порту-Бразилия / @POR Португальская империя" #NT!
+ RULE_OPTION_PORTO_BRAZIL_FORMED_BRA: "@BRA Бразилия" #NT!
+ RULE_OPTION_PORTO_BRAZIL_FORMED_BRA_DESC: "@BRA @POR Порту-Бразилия образована @BRA Бразилия под руководством Педро III." #NT!
+ RULE_OPTION_PORTO_BRAZIL_FORMED_POR: "@POR Португалия" #NT!
+ RULE_OPTION_PORTO_BRAZIL_FORMED_POR_DESC: "@POR @BRA Порту-Бразилия образована @POR Португалия под руководством Дуарте I." #NT!
+ RULE_OPTION_PORTO_BRAZIL_FORMED_PORTUGAL: "@POR @ZIM @MAL @BRA Португальская империя" #NT!
+ RULE_OPTION_PORTO_BRAZIL_FORMED_PORTUGAL_DESC: "Образована Пятая Португальская империя @POR." #NT!
+ RATTANAKOSIN_FORMATION_STATUS: "@SIA Раттанакосин Королевство" #NT!
+ ROME_FORMATION_STATUS: "@ITA @GRE @FRA @SPR Римская империя" #NT!
+ RULE_OPTION_ROME_BARE_MINIMUM_DESC: "Образуется Римская империя @ITA, включающая только начальную итальянскую территорию @ITA." #NT!
+ RULE_OPTION_ROME_FORMED_DESC: "@ITA Римская империя будет сформирована @GRE @FRA @SPR в обычном порядке." #NT!
+ RULE_OPTION_BYZ_ROME_2: "@ITA @GRE Рим и Византия – Дивизия" #NT!
+ RULE_OPTION_BYZ_ROME_2_DESC: "@GRE Byzantium и @ITA Rome формируются вместе с @YUG Югославией и @LBA Ливия." #NT!
+ RULE_OPTION_BYZ_ROME_HRE: "@ITA @GRE @GER Троецарствие в Европе" #NT!
+ RULE_OPTION_BYZ_ROME_HRE_DESC: "Созданы @GRE Byzantium, @ITA Rome и @GER HRE." #NT!
+ RULE_OPTION_BYZ_ROME_HRE_3RD: "@ITA @GRE @GER @SOV Некомфортное сожительство" #NT!
+ RULE_OPTION_BYZ_ROME_HRE_3RD_DESC: "Образуются @GRE Byzantium, @ITA Rome, @GER Священная Римская империя и русский @SOV Третий Рим. Я уже потерял счет нашему Риму..." #NT!
+ SIBERIA_FORMATION_STATUS: "@TAN @ЯК Сибирь" #NT!
+ RULE_OPTION_SIBERIA_FORMED_DESC: "Сибирь образована @YAK Yakutia.\n§YВ Сибирь нет @TAN Танну-Тува.\nЧтобы играть в @YAK Сибирь, выберите @TAN Танну-Тува на карте§!" #NT!
+ SOV_FORMATION_STATUS: "@СОВ Советский Союз" #NT!
+ RULE_OPTION_SOV_FORMED_PANSLAVIC: "@SOV @POL @CZE @YUG Панславянская империя" #NT!
+ RULE_OPTION_SOV_FORMED_PANSLAVIC_DESC: "Панславянская империя @SOV формируется при Владимире III." #NT!
+ RULE_OPTION_SOV_FORMED_ROME: "@SOV Третий Рим" #NT!
+ RULE_OPTION_SOV_FORMED_ROME_DESC: "@SOV Третий Рим формируется под руководством архиепископа Мелетия." #NT!
+ SPR_FORMATION_STATUS: "@SPR Испанская империя" #NT!
+ RULE_OPTION_SPR_FORMED_1898: "1898 Империя" #NT!
+ RULE_OPTION_SPR_FORMED_1898_DESC: "Испанская империя @SPR образована с той же территорией и троном, что и в 1898 году.\n§RГражданская война в Испании все еще продолжается.§!" #NT!
+ RULE_OPTION_SPR_FORMED_1808: "1808 Империя" #NT!
+ RULE_OPTION_SPR_FORMED_1808_DESC: "Испанская империя @SPR образована с той же территорией и троном, что и в 1808 году.\n§RГражданская война в Испании все еще продолжается.§!" #NT!
+ RULE_OPTION_SPR_FORMED_1713: "1713 Империя (Максимум)" #NT!
+ RULE_OPTION_SPR_FORMED_1713_DESC: "Испанская империя @SPR образована с той же территорией и троном, что и в 1713 году.\n§RГражданская война в Испании все еще продолжается.§!" #NT!
+ TRANSCAUC_FORMATION_STATUS: "@ГЕО Закавказье" #NT!
+ RULE_OPTION_TRANSCAUC_FORMED_DESC: "Закавказье образовано @GEO Georgia.\n§YЧтобы сыграть в @GEO Transcaucasia, выберите @PER Иран на карте§!" #NT!
+ RULE_OPTION_TRANSCAUC_FORMED_MAX_DESC: "Закавказье образовано @GEO Georgia с максимальной территорией.\n§YЧтобы сыграть в @GEO Transcaucasia, выберите @PER Иран на карте§!" #NT!
+ RULE_OPTION_TRANSCAUC_FORMED_KHANATES: "@GEO @CRI @KAL Максимум + Ханства" #NT!
+ RULE_OPTION_TRANSCAUC_FORMED_KHANATES_DESC: "Закавказье образовано @GEO Грузия с максимальной территорией и Крымским ханством.\n§YЧтобы сыграть в @GEO Закавказье, выберите @PER Иран, а для игры @SOV Советы выберите @KAL Калмыкия или @CRI Крым." #NT!
+ TURKESTAN_FORMATION_STATUS: "@СИК @ТМС @КАЗ Туркестан" #NT!
+ TURKEY_FORMATION_STATUS: "@TUR Турция" #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN: "@TUR @GRE Османская империя" #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_DESC: "Образуется Османская империя @TUR." #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_II: "@TUR @GRE @SYR @PAL Османская империя (исторический)" #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_II_DESC: "@TUR Османская империя образована исторической территорией @GRE @SYR @PAL." #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_MAX: "@TUR @GRE @SYR @PAL @EGY @LBA @YUG @BUL Османская империя - максимум" #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_MAX_DESC: "@TUR Османская империя формируется с максимальной территорией @GRE @SYR @PAL @EGY @LBA @YUG @BUL." #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_MAX_II: "@TUR @GRE @SYR @PAL @EGY @LBA Османская империя – максимум (исторический)" #NT!
+ RULE_OPTION_TUR_FORMED_OTTOMAN_MAX_II_DESC: "@TUR Османская империя образована с максимальной территорией @GRE @SYR @PAL @EGY @LBA, которой она исторически обладала." #NT!
+ RULE_OPTION_TUR_FORMED_TURAN: "@TUR @SOV @КАЗ Туран" #NT!
+ RULE_OPTION_TUR_FORMED_TURAN_DESC: "Образован @TUR Turan." #NT!
+ RULE_OPTION_TUR_FORMED_TURAN_MAX: "@TUR @SOV @KAZ @FIN @SIK Turan - Максимум" #NT!
+ RULE_OPTION_TUR_FORMED_TURAN_MAX_DESC: "@TUR Turan формируется с максимальной территорией @SOV @KAZ @FIN @SIK." #NT!
+ UNITED_KINGDOM_FORMATION_STATUS: "@ENG Великобритания" #NT!
+ RULE_OPTION_FRA_ENG_FORMED: "@ENG @FRA Франко-Британский союз" #NT!
+ RULE_OPTION_FRA_ENG_FORMED_DESC: "@ENG Великобритания и @FRA Франция едины." #NT!
+ RULE_OPTION_IMP_FED_FORMED: "@ENG @CAN @AST @NZL @SAF @Императорская Федерация RAJ" #NT!
+ RULE_OPTION_IMP_FED_FORMED_DESC: "Образована Имперская Федерация @ENG." #NT!
+ RULE_OPTION_IMP_FED_FORMED_MAX: "@RUS @Имперская Федерация США - Максимум" #NT!
+ RULE_OPTION_IMP_FED_FORMED_MAX_DESC: "Образуется Императорская Федерация @ENG, включающая США." #NT!
+ UNITED_HOL_FORMATION_STATUS: "@HOL @BEL @LUX Великобритания Нидерланды" #NT!
+ CENTROAMERICA_FORMATION_STATUS: "@NIC @HON @ELS Центральная Америка" #NT!
+ RULE_OPTION_CENTROAMERICA_FORMED_HON_DESC: "@HON Центральная Америка объединена Гондурасом." #NT!
+ RULE_OPTION_CENTROAMERICA_FORMED_NIC_DESC: "@NIC Центральная Америка объединена Никарагуа." #NT!
+ RULE_OPTION_CENTROAMERICA_FORMED_ELS_DESC: "@ELS Центральную Америку объединяет Сальвадор." #NT!

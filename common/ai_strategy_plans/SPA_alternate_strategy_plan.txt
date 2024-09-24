@@ -1,0 +1,640 @@
+SPA_falange = {
+	name = "Spanish Falangist alternate plan"
+	desc = "Alternate behavior for Falangist Spain"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPA
+		}
+		has_completed_focus = SPA_the_phalanx_ascendant
+		OR = {
+			has_country_flag = SPA_AI_RANDOM_FALANGIST
+			has_game_rule = {
+				rule = SPA_ai_behavior 
+				option = FALANGIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPB
+			tag = SPC
+			tag = SPD
+			has_government = communism
+			has_completed_focus = SPA_unify_the_nationalist_front
+			is_subject = yes
+		}
+	}
+	ai_national_focuses = {
+		#July 36
+		SPA_the_phalanx_ascendant
+		SPA_secure_the_national_defense_council
+		SPA_bolster_offensive_infrastructure
+		#37
+		SPA_emergency_munitions_corporations
+		SPA_suspend_the_constitution
+		SPA_eliminate_the_carlists
+		SPA_the_corpo_truppe_volontarie
+		SPA_the_condor_legion
+		SPA_primo_de_rivera_prisoner_exchange
+		#38
+		SPA_establish_the_directory
+		SPA_the_fifth_column
+		SPA_a_one_party_state
+		SPA_expand_conscription
+		SPA_regional_agrarian_commissions
+		SPA_develop_all_talent
+		#39
+		SPA_equipment_shipments # skipped often
+		SPA_obtain_training_staff # skipped often
+		SPA_doctrinal_advancements # skipped often
+		SPA_absorb_carlist_remnants
+		SPA_the_national_syndicalist_state
+		SPA_safeguard_the_freedom_of_worship
+		SPA_syndicalize_production
+
+		#sometime late 1939 to mid 1940
+		SPA_strengthen_the_supreme_reality_of_spain
+
+		#1940	
+		SPA_national_recovery	
+		SPA_exemplify_the_art_and_science_of_warfare
+		SPA_the_will_to_empire
+		SPA_glory_and_wealth_on_the_sea_lanes
+		SPA_improve_domestic_naval_facilities
+		#1941
+		SPA_a_great_maritime_power
+		SPA_unite_iberia
+		SPA_embrace_the_spanish_destiny
+		SPA_autarky
+		SPA_spanish_austerity
+		#1942
+		SPA_reassert_american_dominance
+		SPA_expand_the_axis_gold_trade
+		SPA_improve_cross_country_railways
+		SPA_expand_the_war_industry
+		SPA_ensure_agricultural_self_sufficiency
+		#1943
+		SPA_the_national_and_popular_army_of_spain
+		SPA_mandatory_pre_military_training
+		SPA_all_shall_serve
+		SPA_reclaim_spanish_africa
+		SPA_commerce_protection
+		#1944
+		SPA_absorb_the_portuguese_empire
+		SPA_prepare_the_pyrenees_defenses
+		SPA_retake_the_americas
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPA_falange_axis = {
+	name = "Spanish Falangist alternate plan"
+	desc = "Alternate behavior for Falangist Spain"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPA
+		}
+		has_completed_focus = SPA_the_phalanx_ascendant
+		OR = {
+			has_country_flag = SPA_AI_RANDOM_FALANGIST_AXIS
+			has_game_rule = {
+				rule = SPA_ai_behavior 
+				option = FALANGIST_AXIS
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPB
+			tag = SPC
+			tag = SPD
+			has_government = communism
+			has_completed_focus = SPA_unify_the_nationalist_front
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#July 36
+		SPA_the_phalanx_ascendant
+		SPA_secure_the_national_defense_council
+		SPA_bolster_offensive_infrastructure
+		#37
+		SPA_emergency_munitions_corporations
+		SPA_suspend_the_constitution
+		SPA_eliminate_the_carlists
+		SPA_the_corpo_truppe_volontarie
+		SPA_the_condor_legion
+		SPA_primo_de_rivera_prisoner_exchange
+		#38
+		SPA_establish_the_directory
+		SPA_the_fifth_column
+		SPA_a_one_party_state
+		SPA_expand_conscription
+		SPA_regional_agrarian_commissions
+		SPA_develop_all_talent
+		#39
+		SPA_equipment_shipments # skipped often
+		SPA_obtain_training_staff # skipped often
+		SPA_doctrinal_advancements # skipped often
+		SPA_absorb_carlist_remnants
+		SPA_the_national_syndicalist_state
+		SPA_safeguard_the_freedom_of_worship
+		SPA_syndicalize_production
+
+		#sometime late 1939 to mid 1940
+		SPA_strengthen_the_supreme_reality_of_spain
+
+		#1940	
+		SPA_national_recovery	
+		SPA_the_will_to_empire
+		SPA_glory_and_wealth_on_the_sea_lanes
+		SPA_improve_domestic_naval_facilities
+		SPA_a_great_maritime_power
+		#1941
+		SPA_the_national_and_popular_army_of_spain
+		SPA_mandatory_pre_military_training
+		SPA_all_shall_serve
+		SPA_prepare_the_pyrenees_defenses
+		SPA_embrace_the_spanish_destiny
+		#1942
+		SPA_join_the_axis
+		SPA_fascist_economic_aid
+		SPA_facilitate_pyrenees_freight_transports
+		SPA_improve_cross_country_railways
+		SPA_support_the_war_industry
+		#1943
+		SPA_expand_the_war_industry
+		SPA_unite_iberia
+		SPA_the_duty_to_work
+		SPA_italian_shipbuilding_expertise
+		SPA_reclaim_spanish_africa #often skipped
+		#1944
+		SPA_claim_the_aragonese_possessions   #only available if not with italy		
+		SPA_reassert_american_dominance #often skipped
+		SPA_motorization
+		SPA_an_armored_corps
+		SPA_absorb_the_portuguese_empire
+		SPA_commerce_protection
+		SPA_equipment_modernization
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPA_franco_joins_axis = {
+	name = "Spanish franco-axis plan"
+	desc = "behavior for Nationalist Spain in axis"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPA
+		}
+		has_completed_focus = SPA_unify_the_nationalist_front
+		OR = {
+			has_country_flag = SPA_AI_RANDOM_NATIONALIST_AXIS
+			has_game_rule = {
+				rule = SPA_ai_behavior 
+				option = NATIONALIST_AXIS
+			}
+			AND = {
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = SPA_ai_behavior 
+							option = DEFAULT
+						}
+					}
+					has_country_flag = SPA_AI_RANDOM_NATIONALIST_HISTORICAL
+					has_game_rule = {
+						rule = SPA_ai_behavior 
+						option = NATIONALIST_HISTORICAL
+					}
+				}
+				OR = {
+					has_war_with = ENG
+					has_war_with = USA
+				}
+			}
+		}
+		
+	}
+	abort = {
+		OR = {
+			tag = SPB
+			tag = SPC
+			tag = SPD
+			has_government = communism
+			AND = {
+				has_country_flag = SPA_AI_RANDOM_NATIONALIST_AXIS
+				NOT = { GER = { has_government = fascism } }
+				NOT = { ITA = { has_government = fascism } }
+			}
+			has_completed_focus = SPA_the_phalanx_ascendant
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#July 36
+		SPA_unify_the_nationalist_front
+		SPA_foment_a_carlist_split
+		SPA_consolidate_the_north
+		#37
+		SPA_save_the_alcazar
+		SPA_martyrdom_for_primo_de_rivera
+		SPA_caudillo_of_spain
+		SPA_extol_the_martyrs_of_the_war
+		SPA_banish_the_party_leaders
+		SPA_safeguard_the_freedom_of_worship
+		#38
+		SPA_fuse_the_parties #sometimes civil war finishes early here
+		SPA_a_methodical_approach # sometimes skipped
+		SPA_portuguese_aid # sometimes skipped
+		SPA_tackle_the_vulnerable_fronts # sometimes skipped
+		SPA_expand_conscription
+		#39
+		SPA_integrate_the_requetes 
+		SPA_utilize_the_intellectuals 
+		SPA_the_corpo_truppe_volontarie # sometimes skipped
+		SPA_the_condor_legion #often skipped
+		SPA_equipment_shipments #often skipped
+		SPA_obtain_training_staff #often skipped
+		SPA_doctrinal_advancements #often skipped
+		#civil_war_likely_over_now
+		#usually 1939
+		SPA_national_recovery
+		SPA_adopt_the_26_points
+		SPA_prepare_the_pyrenees_defenses
+		#sometimes 1940s
+		SPA_direct_the_universities
+		SPA_dictator_for_life
+		#1940
+		SPA_stamp_out_the_maquis
+		SPA_la_division_azul
+		SPA_the_tangiers_enclave
+		SPA_the_national_and_popular_army_of_spain
+		SPA_the_army_of_africa_model
+		#1941
+		SPA_join_the_axis
+		SPA_fascist_economic_aid
+		SPA_demand_french_north_africa
+		SPA_facilitate_pyrenees_freight_transports
+		SPA_improve_cross_country_railways
+		#42
+		SPA_support_the_war_industry
+		SPA_expand_the_war_industry
+		SPA_the_duty_to_work
+		SPA_equipment_modernization
+		SPA_motorization
+		#43
+		SPA_invest_in_naval_infrastructure
+		SPA_expand_the_slipways
+		SPA_restart_small_scale_shipbuilding
+		SPA_the_plan_imperial
+		SPA_artillery_modernization
+		#44
+		SPA_defenses_against_strategic_bombing
+		SPA_defenses_against_invasion
+		SPA_retake_gibraltar
+		SPA_claim_west_africa
+	}
+
+	focus_factors = {
+		SPA_the_iberian_pact = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPA_franco_joins_allies = {
+	name = "Spanish franco-allies plan"
+	desc = "behavior for Nationalist Spain in allies"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPA
+		}
+		has_completed_focus = SPA_unify_the_nationalist_front
+		OR = {
+			has_country_flag = SPA_AI_RANDOM_NATIONALIST_ALLIES
+			has_game_rule = {
+				rule = SPA_ai_behavior 
+				option = NATIONALIST_ALLIES
+			}
+			AND = {
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = SPA_ai_behavior 
+							option = DEFAULT
+						}
+					}
+					has_country_flag = SPA_AI_RANDOM_NATIONALIST_HISTORICAL
+					has_game_rule = {
+						rule = SPA_ai_behavior 
+						option = NATIONALIST_HISTORICAL
+					}
+				}
+				OR = {
+					has_war_with = GER
+					has_war_with = ITA
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPB
+			tag = SPC
+			tag = SPD
+			has_government = communism
+			AND = {
+				has_country_flag = SPA_AI_RANDOM_NATIONALIST_ALLIES
+				NOT = { USA = { has_government = democratic } }
+				NOT = { ENG = { has_government = democratic } }
+			}
+			has_completed_focus = SPA_the_phalanx_ascendant
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#July 36
+		SPA_unify_the_nationalist_front
+		SPA_foment_a_carlist_split
+		SPA_consolidate_the_north
+		#37
+		SPA_save_the_alcazar
+		SPA_martyrdom_for_primo_de_rivera
+		SPA_caudillo_of_spain
+		SPA_extol_the_martyrs_of_the_war
+		SPA_banish_the_party_leaders
+		SPA_safeguard_the_freedom_of_worship
+		#38
+		SPA_fuse_the_parties #sometimes civil war finishes early here
+		SPA_a_methodical_approach # sometimes skipped
+		SPA_portuguese_aid # sometimes skipped
+		SPA_tackle_the_vulnerable_fronts # sometimes skipped
+		SPA_expand_conscription
+		#39
+		SPA_integrate_the_requetes 
+		SPA_utilize_the_intellectuals 
+		SPA_the_corpo_truppe_volontarie # sometimes skipped
+		SPA_the_condor_legion #often skipped
+		SPA_equipment_shipments #often skipped
+		SPA_obtain_training_staff #often skipped
+		SPA_doctrinal_advancements #often skipped
+		#civil_war_likely_over_now
+		#usually 1939
+		SPA_national_recovery
+		SPA_adopt_the_26_points
+		SPA_prepare_the_pyrenees_defenses
+		#sometimes 1940s
+		SPA_direct_the_universities
+		SPA_restore_the_monarchy
+		#1940
+		SPA_stamp_out_the_maquis
+		SPA_autarky
+		SPA_spanish_austerity
+		SPA_reduce_reliance_on_foreign_resources
+		SPA_improve_cross_country_railways
+		#1941
+		SPA_the_national_and_popular_army_of_spain
+		SPA_the_army_of_africa_model
+		SPA_motorization
+		SPA_defenses_against_strategic_bombing
+		SPA_defenses_against_invasion
+		#42
+		SPA_equipment_modernization
+		SPA_invest_in_naval_infrastructure
+		SPA_expand_the_slipways
+		SPA_the_plan_imperial
+		SPA_join_the_allies
+		#43
+		SPA_the_stabilization_plan
+		SPA_expand_spanish_bases
+		SPA_capitalist_economic_aid
+		SPA_improve_living_standards
+		SPA_domestic_industrial_developments
+		#44
+		SPA_the_spanish_miracle
+		SPA_the_tangiers_enclave
+		SPA_restart_small_scale_shipbuilding
+		SPA_artillery_modernization
+	}
+
+	focus_factors = {
+		SPA_the_iberian_pact = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPA_franco_latin_bloc = {
+	name = "Spanish franco-salazar plan"
+	desc = "behavior for Nationalist Spain join portugal"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		OR = {
+			tag = SPR
+			tag = SPA
+		}
+		has_completed_focus = SPA_unify_the_nationalist_front
+		OR = {
+			has_country_flag = SPA_AI_RANDOM_NATIONALIST_LATIN_BLOC
+			has_game_rule = {
+				rule = SPA_ai_behavior 
+				option = NATIONALIST_LATIN_BLOC
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPB
+			tag = SPC
+			tag = SPD
+			has_government = communism
+			AND = {
+				has_country_flag = SPA_AI_RANDOM_NATIONALIST_LATIN_BLOC
+				has_war_with = POR
+			}
+			has_completed_focus = SPA_the_phalanx_ascendant
+			is_subject = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#July 36
+		SPA_unify_the_nationalist_front
+		SPA_foment_a_carlist_split
+		SPA_consolidate_the_north
+		#37
+		SPA_save_the_alcazar
+		SPA_martyrdom_for_primo_de_rivera
+		SPA_caudillo_of_spain
+		SPA_extol_the_martyrs_of_the_war
+		SPA_banish_the_party_leaders
+		SPA_a_methodical_approach 
+		SPA_portuguese_aid 
+		#38
+		SPA_safeguard_the_freedom_of_worship
+		SPA_fuse_the_parties # sometimes skipped since sometimes carlists rise up
+		SPA_tackle_the_vulnerable_fronts 
+		SPA_expand_conscription
+		SPA_integrate_the_requetes
+		#39
+		SPA_utilize_the_intellectuals 
+		SPA_the_corpo_truppe_volontarie # sometimes skipped
+		SPA_the_condor_legion #often skipped
+		SPA_equipment_shipments #often skipped
+		SPA_obtain_training_staff #often skipped
+		SPA_doctrinal_advancements #often skipped
+		#civil_war_likely_over_now
+		#usually 1939
+		SPA_the_iberian_pact
+		SPA_national_recovery
+		SPA_adopt_the_26_points
+		#sometimes 1940s
+		SPA_the_latin_bloc
+		SPA_prepare_the_pyrenees_defenses
+		#1940
+		SPA_direct_the_universities
+		SPA_dictator_for_life
+		SPA_stamp_out_the_maquis
+		SPA_autarky
+		SPA_spanish_austerity
+		#1941
+		SPA_reduce_reliance_on_foreign_resources
+		SPA_improve_cross_country_railways
+		SPA_expand_the_axis_gold_trade
+		SPA_la_division_azul
+		SPA_the_national_and_popular_army_of_spain
+		#42
+		SPA_the_army_of_africa_model
+		SPA_motorization
+		SPA_defenses_against_strategic_bombing
+		SPA_defenses_against_invasion
+		SPA_equipment_modernization
+		#43
+		SPA_invest_in_naval_infrastructure
+		SPA_expand_the_slipways
+		SPA_the_plan_imperial
+		SPA_expand_the_war_industry
+		SPA_ensure_agricultural_self_sufficiency
+		#44
+		SPA_the_tangiers_enclave
+		SPA_restart_small_scale_shipbuilding
+		SPA_artillery_modernization
+	}
+
+	focus_factors = {
+		SPA_the_iberian_pact = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

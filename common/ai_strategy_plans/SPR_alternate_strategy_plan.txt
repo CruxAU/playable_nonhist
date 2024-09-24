@@ -1,0 +1,435 @@
+SPR_nationalists = {
+	name = "Spanish historical plan"
+	desc = "Historical behavior for Nationalist Spain"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SPR_ai_behavior 
+					option = DEFAULT
+				}
+			}
+			has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL #francoism
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = NATIONALIST_HISTORICAL #francoism
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPD
+			tag = SPC
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPA_a_great_spain
+		SPA_hand_over_the_ceda_campaign_chest	
+		SPA_negotiate_carlist_support
+		SPA_the_army_of_africa
+		SPA_secure_the_northern_garrisons
+		SPA_foment_a_carlist_split
+		SPA_con_paquito
+		SPA_unify_the_nationalist_front
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPR_falangists = {
+	name = "Spain go to the falange"
+	desc = "Spain go nationalist and boost falange"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			has_country_flag = SPR_AI_RANDOM_FALANGIST
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = FALANGIST 
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPD
+			tag = SPC
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPA_a_great_spain
+		SPA_hand_over_the_ceda_campaign_chest	
+		SPA_negotiate_carlist_support
+		SPA_the_army_of_africa
+		SPA_secure_the_northern_garrisons
+		SPA_foment_a_carlist_split
+		SPA_sin_paquito
+		SPA_the_phalanx_ascendant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPR_caaaarl_that_kills_people = {
+	name = "Spain go to the carlists"
+	desc = "Spain go nationalist and boost carlists"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			has_country_flag = SPR_AI_RANDOM_CARLIST
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = CARLIST 
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPD
+			tag = SPC
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPA_a_great_spain
+		SPA_hand_over_the_ceda_campaign_chest	
+		SPA_negotiate_carlist_support
+		SPA_the_army_of_africa
+		SPA_secure_the_northern_garrisons
+		SPA_foment_a_carlist_split
+		SPA_con_paquito
+		SPA_supremacy_of_the_communion
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPR_mother_anarchy = {
+	name = "Spain go to the anarchists"
+	desc = "Spain go republican and boost anarchists"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			has_country_flag = SPR_AI_RANDOM_ANARCHIST
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = ANARCHIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPD
+			tag = SPC
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPR_the_popular_front
+		SPR_secure_the_guardia_civil
+		SPR_train_the_union_youth
+		SPR_enlarge_the_weapon_caches
+		SPR_distribute_arms_to_the_people
+		SPR_disband_the_army
+		SPR_regional_defense_council_of_aragon
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPR_mother_POUM = {
+	name = "Spain go to the POUM"
+	desc = "Spain go republican and boost communists"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			has_country_flag = SPR_AI_RANDOM_INDEPENDENT_COMMUNIST
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = INDEPENDENT_COMMUNIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			has_completed_focus = SPR_hinder_nkvd_interference
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPR_the_popular_front
+		SPR_secure_the_guardia_civil
+		SPR_train_the_union_youth
+		SPR_enlarge_the_weapon_caches
+		SPR_distribute_arms_to_the_people
+		SPR_disband_the_army
+		SPR_the_anti_fascist_workers_revolution
+		SPR_arm_the_workers_militias
+		SPR_demand_ministerial_positions
+		SPR_hinder_nkvd_interference
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPR_papa_stalin = {
+	name = "Spain go to stalinz boyz"
+	desc = "Spain go republican and boost stalinists"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			has_country_flag = SPR_AI_RANDOM_STALINIST
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = STALINIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			has_completed_focus = SPR_the_stalinist_doctrine
+			tag = SPC
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPR_the_popular_front
+		SPR_secure_the_guardia_de_asalto
+		SPR_train_the_union_youth
+		SPR_enlarge_the_weapon_caches
+		SPR_distribute_arms_to_the_people
+		SPR_disband_the_army
+		SPR_the_anti_fascist_workers_revolution
+		SPR_arm_the_workers_militias
+		SPR_demand_ministerial_positions
+		SPR_the_stalinist_doctrine
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SPR_i_love_democracy = {
+	name = "Spain go to the republicans"
+	desc = "Spain go republican and boost republicans >B^)"
+
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		tag = SPR
+		OR = {
+			has_country_flag = SPR_AI_RANDOM_SECOND_REPUBLIC
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = SECOND_REPUBLIC
+			}
+		}
+	}
+	abort = {
+		OR = {
+			tag = SPA
+			tag = SPB
+			tag = SPD
+			tag = SPC
+			OR = {
+				has_war_with = ENG
+				has_war_with = GER
+			}
+		}
+		
+	}
+
+	ai_national_focuses = {
+		SPR_the_popular_front
+		SPR_secure_the_guardia_de_asalto
+		SPR_train_the_union_youth
+		SPR_enlarge_the_weapon_caches
+		SPR_distribute_arms_to_the_people
+		SPR_disband_the_army
+		SPR_maintain_the_second_republic
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

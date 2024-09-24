@@ -1,0 +1,1544 @@
+LIT_occupation = {
+	name = "Lithuanian plan to be occupied. yay!"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_OCCUPATION
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = OCCUPATION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet
+		LIT_rastikis_military_reforms
+		LIT_exile_voldemares
+		LIT_root_out_the_iron_wolf
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		LIT_lithuanian_preservationism
+		LIT_purge_popular_resistance
+		LIT_patriotic_education
+		LIT_a_martial_prime_minister
+		LIT_the_nationalist_council
+		LIT_the_nation_and_its_power
+		LIT_arrest_nazis_in_memel
+		LIT_anti_communist_militia
+		LIT_soviet_mutual_assistance
+		LIT_victory_in_trust
+		LIT_reminder_of_true_enemy
+		LIT_indivisible_power_of_the_state
+		LIT_appease_soviets
+		LIT_appease_nazis
+		LIT_offer_military_basing
+		LIT_occupation
+		LIT_state_media
+		LIT_presidential_reform
+		LIT_a_corporatist_economy
+		LIT_expand_military_budget
+		LIT_lithuanian_activist_front
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		LIT_reminder_of_true_enemy
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_formalize_baltic_entente = 0
+		LIT_beyond_the_baltic = 0.01
+		LIT_enforce_military_rule = 0
+	}
+
+}
+
+LIT_martial_rule = {
+	name = "Lithuanian plan for martial law"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_JUNTA_RULE
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = JUNTA_RULE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways #35
+
+		#37
+		BALTIC_axis_investments #70
+		LIT_lithuanian_preservationism #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_a_martial_prime_minister #35
+		LIT_the_nationalist_council #35
+
+		#38
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+		LIT_arrest_nazis_in_memel #70
+
+		#39
+		LIT_anti_communist_militia #35
+		LIT_soviet_mutual_assistance #70
+		LIT_victory_in_trust #35
+		LIT_reminder_of_true_enemy #70
+		LIT_a_corporatist_economy #70
+		LIT_expand_military_budget #70
+		LIT_merge_the_military_and_civilian_governments #70
+
+		#40
+		LIT_martial_law #70
+		LIT_lithuanian_activist_front #70
+		LIT_enforce_military_rule  #70
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		LIT_reminder_of_true_enemy
+		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
+		BALTIC_autobahn
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_formalize_baltic_entente = 0
+		LIT_beyond_the_baltic = 0.01
+	}
+
+}
+
+LIT_martial_rule_allies = {
+	name = "Lithuanian plan for martial law"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_JUNTA_ALLIES
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = JUNTA_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways #35
+
+		#37
+		BALTIC_renew_allied_trade #70
+		LIT_lithuanian_preservationism #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_a_martial_prime_minister #35
+		LIT_the_nationalist_council #35
+
+		#38
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+		LIT_integrate_the_opposition #70
+		LIT_patriotic_socialism #70
+
+		#39
+		LIT_peace_with_poland #35
+		LIT_strength_in_unity #35
+		LIT_a_corporatist_economy #70
+		LIT_expand_military_budget #70
+		LIT_merge_the_military_and_civilian_governments #70
+		LIT_beyond_the_baltic
+
+		#40
+		LIT_join_the_allies #70
+		LIT_martial_law #70
+		LIT_lithuanian_activist_front #70
+		LIT_enforce_military_rule  #70
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_formalize_baltic_entente = 0
+		LIT_enforce_military_rule = 0
+	}
+
+}
+
+LIT_martial_baltic_unify = {
+	name = "Lithuanian plan for martial law"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_LTS_BALTIC_UNION
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = LTS_BALTIC_UNION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways  #35
+
+		#37
+		BALTIC_axis_investments #70
+		LIT_lithuanian_preservationism #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_a_martial_prime_minister  #35
+		LIT_the_nationalist_council #35
+		
+
+		#38
+		LIT_arrest_nazis_in_memel #70
+		LIT_anti_communist_militia #35
+		LIT_soviet_mutual_assistance #35
+		LIT_victory_in_trust #35
+		LIT_reminder_of_true_enemy #70
+		
+		#39
+		LIT_indivisible_power_of_the_state #70
+		LIT_formalize_baltic_entente #70
+		LIT_baltic_economic_union #70
+		LIT_baltic_defence_army #70
+		LIT_pan_baltic_bank #70
+		LIT_propose_baltic_union #70
+
+		#40
+		LIT_baltic_unification #70
+		LIT_look_north #70
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+
+		#41
+		LIT_a_corporatist_economy #70
+		LIT_lithuanian_activist_front #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation
+
+		#once capped:
+		LIT_prepare_resistance
+		LIT_infiltrate_homeland
+		LIT_underground_production_centers
+
+		#42
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_merge_the_military_and_civilian_governments = 0
+		LIT_appease_nazis = 0
+		LIT_appease_soviets = 0
+	}
+
+}
+
+LIT_martial_baltic_unify = {
+	name = "Lithuanian plan for martial law"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_LTS_BALTIC_ENTENTE
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = LTS_BALTIC_ENTENTE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways  #35
+
+		#37
+		BALTIC_axis_investments #70
+		LIT_lithuanian_preservationism #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_a_martial_prime_minister  #35
+		LIT_the_nationalist_council #35
+		
+
+		#38
+		LIT_arrest_nazis_in_memel #70
+		LIT_anti_communist_militia #35
+		LIT_soviet_mutual_assistance #35
+		LIT_victory_in_trust #35
+		LIT_reminder_of_true_enemy #70
+		
+		#39
+		LIT_indivisible_power_of_the_state #70
+		LIT_formalize_baltic_entente #70
+		LIT_baltic_economic_union #70
+		LIT_baltic_defence_army #70
+		LIT_pan_baltic_bank #70
+		LIT_propose_baltic_union #70
+
+		#40
+		LIT_baltic_stronger_together #70
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+		LIT_a_corporatist_economy #70
+		#41
+		LIT_lithuanian_activist_front #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation
+
+		#once capped:
+		LIT_prepare_resistance
+		LIT_infiltrate_homeland
+		LIT_underground_production_centers
+
+		#42
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_merge_the_military_and_civilian_governments = 0
+		LIT_appease_nazis = 0
+		LIT_appease_soviets = 0
+		LIT_look_north = 0
+	}
+
+}
+
+
+
+
+LIT_democratic_neutral = {
+	name = "Lithuanian democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_integrate_the_opposition #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways  #35
+
+		#37
+		BALTIC_renew_allied_trade #70
+		LIT_lithuanian_preservationism #70
+		LIT_rastikis_military_reforms #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_socialism #70
+
+
+		#38
+		LIT_a_priestly_prime_minister  #35
+		LIT_the_nationalist_council #35
+		LIT_peasants_reform  #70
+		LIT_peace_with_poland #35
+		LIT_arrest_nazis_in_memel #70
+		LIT_anti_communist_militia #35
+		LIT_strength_in_unity #35
+		LIT_reminder_of_true_enemy #70
+		
+		
+
+		#39
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+		LIT_restore_public_elections #70
+		LIT_a_corporatist_economy #70
+	
+		
+		#40
+		LIT_lithuanian_activist_front #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+
+		#once capped:
+		LIT_prepare_resistance
+		LIT_infiltrate_homeland
+		LIT_underground_production_centers
+
+		#42
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_appease_soviets # if we are somehow still around.
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_formalize_baltic_entente = 0
+		LIT_beyond_the_baltic = 0
+		LIT_enforce_military_rule = 0
+		LIT_appease_nazis = 0
+	}
+
+}
+
+LIT_democratic_baltic_union = {
+	name = "Lithuanian democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_DEMOCRATIC_BALTIC_UNION
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = DEMOCRATIC_BALTIC_UNION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_integrate_the_opposition #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways  #35
+
+		#37
+		BALTIC_renew_allied_trade #70
+		LIT_lithuanian_preservationism #70
+		LIT_rastikis_military_reforms #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_socialism #70
+
+
+		#38
+		LIT_a_priestly_prime_minister  #35
+		LIT_the_nationalist_council #35
+		LIT_peasants_reform  #70
+		LIT_peace_with_poland #35
+		LIT_anti_communist_militia #35
+		LIT_strength_in_unity #35
+		LIT_reminder_of_true_enemy #70
+		LIT_restore_public_elections #70
+
+		#39
+		LIT_formalize_baltic_entente #70
+		LIT_baltic_economic_union #70
+		LIT_baltic_defence_army #70
+		LIT_pan_baltic_bank #70
+		LIT_propose_baltic_union #70
+
+		#40
+		LIT_baltic_unification #70
+		LIT_look_north #70
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+
+		#41
+		LIT_a_corporatist_economy #70
+		LIT_lithuanian_activist_front #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation
+
+		#once capped:
+		LIT_prepare_resistance
+		LIT_infiltrate_homeland
+		LIT_underground_production_centers
+
+		#42
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_appease_nazis = 0
+		LIT_appease_soviets = 0
+	}
+
+}
+
+LIT_democratic_baltic_entente = {
+	name = "Lithuanian democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_DEMOCRATIC_BALTIC_ENTENTE
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = DEMOCRATIC_BALTIC_ENTENTE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_integrate_the_opposition #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways  #35
+
+		#37
+		BALTIC_renew_allied_trade #70
+		LIT_lithuanian_preservationism #70
+		LIT_rastikis_military_reforms #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_socialism #70
+
+
+		#38
+		LIT_a_priestly_prime_minister  #35
+		LIT_the_nationalist_council #35
+		LIT_peasants_reform  #70
+		LIT_peace_with_poland #35
+		LIT_anti_communist_militia #35
+		LIT_strength_in_unity #35
+		LIT_reminder_of_true_enemy #70
+		LIT_restore_public_elections #70
+
+		#39
+		LIT_formalize_baltic_entente #70
+		LIT_baltic_economic_union #70
+		LIT_baltic_defence_army #70
+		LIT_pan_baltic_bank #70
+		LIT_propose_baltic_union #70
+
+		#40
+		LIT_baltic_stronger_together #70
+		LIT_the_nation_and_its_power #70
+		LIT_state_media #70
+		LIT_presidential_reform #70
+		LIT_a_corporatist_economy #70
+		#41
+
+		LIT_lithuanian_activist_front #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+
+		#once capped:
+		LIT_prepare_resistance
+		LIT_infiltrate_homeland
+		LIT_underground_production_centers
+
+		#42
+		
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_look_north = 0
+	}
+
+}
+
+LIT_democratic_allies = {
+	name = "Lithuanian democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = DEMOCRATIC_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_integrate_the_opposition #70
+		LIT_exile_voldemares #70
+		LIT_root_out_the_iron_wolf #70
+		BALTIC_rejoin_the_railways  #35
+
+		#37
+		BALTIC_renew_allied_trade #70
+		LIT_lithuanian_preservationism #70
+		LIT_rastikis_military_reforms #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_socialism #70
+		LIT_a_priestly_prime_minister  #35
+		LIT_the_nationalist_council #35
+
+		#38
+		LIT_peasants_reform  #70
+		LIT_peace_with_poland #35
+		LIT_arrest_nazis_in_memel #70
+		LIT_strength_in_unity #35
+		LIT_reminder_of_true_enemy #70
+		LIT_the_nation_and_its_power #70
+		
+
+		#39
+		LIT_state_media #70
+		LIT_presidential_reform #70
+		LIT_restore_public_elections #70
+		LIT_beyond_the_baltic #70
+		LIT_a_corporatist_economy #70
+		
+		#40
+		LIT_join_the_allies #70
+		LIT_lithuanian_activist_front #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+
+		#once capped:
+		LIT_prepare_resistance
+		LIT_infiltrate_homeland
+		LIT_underground_production_centers
+
+		#42
+		
+		BALTIC_natural_resources
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+
+LIT_fascist = {
+	name = "Lithuanian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_FASCIST
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = FASCIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_free_voldemares #70
+		LIT_organize_the_iron_wolf #70
+		LIT_lithuanian_activist_front #70
+
+		#37
+		BALTIC_rejoin_the_railways #35
+		BALTIC_axis_investments #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_new_kind_of_iron_wolf  #70
+
+		#38
+		LIT_unify_the_military #70
+		LIT_anti_communist_militia #35
+		LIT_lithuanian_youth #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation #70
+		#39
+		LIT_seek_ties_with_germany #70
+		LIT_demand_vilnius #70
+		BALTIC_original_designs #70
+		BALTIC_natural_resources #70
+		
+		LIT_reminder_of_true_enemy #70
+		LIT_request_polish_occupation #70
+		LIT_invade_poland
+		LIT_restore_order #70
+		BALTIC_german_war_economics #70
+		BALTIC_german_tank_licences #70
+		BALTIC_eastwall #70
+		
+		LIT_proclaim_greater_lithuania #70
+		LIT_restore_greater_lithuania #70
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+		fascist_demagogue = 800 #Really AI, just pick this freaking guy and be done with it
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_claim_lithuania_minor = 0
+		LIT_claim_livonia = 0
+	}
+
+}
+
+LIT_fascist_livonia = {
+	name = "Lithuanian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_FASCIST_ALTERNATE
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = FASCIST_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_free_voldemares #70
+		LIT_organize_the_iron_wolf #70
+		LIT_lithuanian_activist_front #70
+
+		#37
+		BALTIC_rejoin_the_railways #35
+		BALTIC_axis_investments #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_new_kind_of_iron_wolf  #70
+
+		#38
+		LIT_unify_the_military #70
+		LIT_anti_communist_militia #35
+		LIT_lithuanian_youth #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation #70
+		#39
+		LIT_seek_ties_with_germany #70
+		LIT_demand_vilnius #70
+		LIT_claim_livonia #70
+		BALTIC_original_designs #70
+		BALTIC_natural_resources #70
+		
+		LIT_reminder_of_true_enemy #70
+		BALTIC_german_war_economics #70
+		BALTIC_german_tank_licences #70
+		BALTIC_eastwall #70
+		
+		LIT_proclaim_greater_lithuania #70
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+		fascist_demagogue = 800 #Really AI, just pick this freaking guy and be done with it
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		LIT_claim_lithuania_minor = 0
+		LIT_request_polish_occupation = 0
+	}
+
+}
+
+LIT_fascist_independent = {
+	name = "Lithuanian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_FALANGIST
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = FALANGIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_free_voldemares #70
+		LIT_organize_the_iron_wolf #70
+		LIT_lithuanian_activist_front #70
+
+		#37
+		LIT_new_kind_of_iron_wolf  #70
+		LIT_unify_the_military #70
+		LIT_fortify_memel #70
+		LIT_demand_vilnius #70
+		LIT_support_polish_fascists #70
+
+		#38
+		BALTIC_rejoin_the_railways #35
+		BALTIC_axis_investments #70
+		LIT_purge_popular_resistance #70
+		LIT_patriotic_education #70
+		LIT_restore_order #70
+		LIT_anti_communist_militia #35
+		
+
+		#39
+		LIT_lithuanian_youth #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation #70
+		LIT_claim_lithuania_minor #70
+		BALTIC_original_designs #70
+		
+		
+		
+		BALTIC_natural_resources #70
+		
+		LIT_reminder_of_true_enemy #70
+		BALTIC_german_war_economics #70
+		BALTIC_german_tank_licences #70
+		BALTIC_eastwall #70
+	
+		LIT_proclaim_greater_lithuania #70
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+		fascist_demagogue = 800 #Really AI, just pick this freaking guy and be done with it
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+
+	}
+
+}
+
+LIT_fascist_independent = {
+	name = "Lithuanian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_FALANGIST_LIVONIA
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = FALANGIST_LIVONIA
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet #70
+		LIT_rastikis_military_reforms #70
+		LIT_free_voldemares #70
+		LIT_organize_the_iron_wolf #70
+		LIT_lithuanian_activist_front #70
+
+		#37
+		LIT_new_kind_of_iron_wolf  #70
+		LIT_unify_the_military #70
+		LIT_purge_popular_resistance #70
+		LIT_anti_communist_militia #35
+		LIT_fortify_memel #70
+		LIT_claim_livonia #70
+		
+		#38
+		BALTIC_rejoin_the_railways #35
+		BALTIC_axis_investments #70
+		LIT_patriotic_education #70
+		LIT_restore_order #70
+		LIT_demand_vilnius #70
+		#39
+		LIT_invade_poland #70
+		LIT_lithuanian_youth #70
+		BALTIC_attract_workers_to_capital #70
+		BALTIC_modernize_industry #70
+		BALTIC_school_of_aviation #70
+		#40
+		LIT_claim_lithuania_minor #70
+		BALTIC_original_designs #70
+		
+		
+		
+		BALTIC_natural_resources #70
+		
+		LIT_reminder_of_true_enemy #70
+		BALTIC_german_war_economics #70
+		BALTIC_german_tank_licences #70
+		BALTIC_eastwall #70
+	
+		LIT_proclaim_greater_lithuania #70
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+		fascist_demagogue = 800 #Really AI, just pick this freaking guy and be done with it
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+LIT_monarchist = {
+	name = "Lithuanian monarchist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_MONARCHY
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = MONARCHIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet
+		LIT_rastikis_military_reforms
+		LIT_exile_voldemares
+		LIT_root_out_the_iron_wolf
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+		LIT_lithuanian_preservationism
+		LIT_purge_popular_resistance
+		LIT_patriotic_education
+		LIT_a_king_for_our_people
+		LIT_institute_royal_guards
+		LIT_the_nation_and_its_power
+		LIT_a_new_noble_class
+		LIT_state_media
+		LIT_presidential_reform
+		LIT_abolish_the_presidency
+		LIT_support_monarchism_in_POL
+		LIT_claim_livonia_monarchy
+		LIT_anti_communist_militia
+		LIT_a_corporatist_economy
+		LIT_lithuanian_activist_front
+		LIT_king_of_poland
+		LIT_POL_union
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		BALTIC_school_of_aviation
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		LIT_reminder_of_true_enemy
+		LIT_indivisible_power_of_the_state
+		BALTIC_ford_motors
+		BALTIC_british_aircraft
+		BALTIC_allied_shipments
+		LIT_prepare_forest_brothers
+		BALTIC_rebuild_forts
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+LIT_monarchist_greater_commonwealth = {
+	name = "Lithuanian monarchist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = LIT
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = LIT_AI_RANDOM_MONARCHY_AGGRESSIVE
+			has_game_rule = {
+				rule = LIT_ai_behavior
+				option = MONARCHIST_AGGRESSIVE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		LIT_secure_a_loyal_cabinet
+		LIT_rastikis_military_reforms
+		LIT_exile_voldemares
+		LIT_root_out_the_iron_wolf
+		BALTIC_rejoin_the_railways
+
+		BALTIC_axis_investments
+		LIT_lithuanian_preservationism
+		LIT_a_king_for_our_people
+		LIT_purge_popular_resistance
+		LIT_patriotic_education
+		LIT_institute_royal_guards
+		LIT_a_new_noble_class
+		LIT_abolish_the_presidency
+		LIT_support_monarchism_in_POL
+		LIT_arm_monarchist_militants
+		LIT_the_nation_and_its_power
+		LIT_king_of_poland
+		LIT_state_media
+		LIT_presidential_reform
+		LIT_anti_communist_militia
+		LIT_a_corporatist_economy
+		LIT_lithuanian_activist_front
+		LIT_claim_livonia_monarchy
+		LIT_POL_union
+		BALTIC_attract_workers_to_capital
+		BALTIC_modernize_industry
+		LIT_lithuanian_rail
+		LIT_merge_the_arms_industries
+		BALTIC_natural_resources
+		LIT_claim_prussia
+		LIT_claim_greater_lithuania
+		LIT_push_for_ruthenia
+		LIT_warsaw_to_crimea_railway
+		LIT_greater_commonwealth
+		LIT_prepare_forest_brothers
+	
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

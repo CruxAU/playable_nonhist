@@ -1,0 +1,1283 @@
+EST_occupation = {
+	name = "Estonian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_OCCUPATION
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = OCCUPATION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_support_independent_militaries
+		EST_republican_defence_league
+		BALTIC_ford_motors
+
+		BALTIC_crossley_motors
+		EST_squash_the_opposition
+		EST_cave_to_enemy_pressure
+		EST_new_economic_policy
+		EST_corporate_chambers
+
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_formalize_baltic_entente = 0
+		EST_join_the_allies = 0
+		EST_prepare_for_the_inevitable = 0
+		EST_beyond_the_baltic = 0
+
+	}
+
+}
+
+EST_allies = {
+	name = "Estonian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_PL_ALLIES
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = PL_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_support_independent_militaries
+		EST_republican_defence_league
+		EST_squash_the_opposition
+		
+		BALTIC_ford_motors
+		BALTIC_crossley_motors
+		EST_new_economic_policy
+		EST_corporate_chambers
+		EST_beyond_the_baltic
+
+		EST_join_the_allies
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_formalize_baltic_entente = 0	
+		EST_cave_to_enemy_pressure = 0
+	}
+
+}
+
+EST_pl_union = {
+	name = "Estonian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_PL_BALTIC_UNION
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = PL_BALTIC_UNION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_support_independent_militaries
+		EST_republican_defence_league
+		EST_squash_the_opposition
+		
+		BALTIC_ford_motors
+		EST_formalize_baltic_entente
+		EST_baltic_economic_union
+		EST_baltic_defence_army
+		EST_pan_baltic_bank
+		EST_propose_baltic_union
+
+		EST_baltic_unification
+		EST_look_north
+		BALTIC_crossley_motors
+		EST_new_economic_policy
+		EST_corporate_chambers
+		
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_beyond_the_baltic = 0	
+		EST_cave_to_enemy_pressure = 0
+	}
+
+}
+
+EST_pl_entente = {
+	name = "Estonian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_PL_BALTIC_ENTENTE
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = PL_BALTIC_ENTENTE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_support_independent_militaries
+		EST_republican_defence_league
+		EST_squash_the_opposition
+		
+		BALTIC_ford_motors
+		EST_formalize_baltic_entente
+		EST_baltic_economic_union
+		EST_baltic_defence_army
+		EST_pan_baltic_bank
+		EST_propose_baltic_union
+
+		EST_baltic_stronger_together
+		BALTIC_crossley_motors
+		EST_new_economic_policy
+		EST_corporate_chambers
+		
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_beyond_the_baltic = 0	
+		EST_cave_to_enemy_pressure = 0
+		EST_look_north = 0
+	}
+
+}
+
+
+EST_baltic_union = {
+	name = "Estonian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = EST
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_DEMOCRATIC_BALTIC_UNION
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = DEMOCRATIC_BALTIC_UNION
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_break_the_silence
+		EST_support_independent_militaries
+		EST_republican_defence_league
+
+		BALTIC_ford_motors
+		EST_formalize_baltic_entente
+		EST_baltic_economic_union
+		EST_baltic_defence_army
+		EST_pan_baltic_bank
+		EST_propose_baltic_union
+
+		EST_baltic_unification
+		EST_look_north
+		BALTIC_crossley_motors		
+		EST_new_economic_policy
+		EST_corporate_chambers
+
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		EST_prepare_for_the_inevitable
+		BALTIC_rebuild_forts
+		EST_forest_brothers
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_cave_to_enemy_pressure = 0
+		EST_squash_the_opposition = 0
+	}
+
+}
+
+EST_baltic_entente = {
+	name = "Estonian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = EST
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_DEMOCRATIC_BALTIC_ENTENTE
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = DEMOCRATIC_BALTIC_ENTENTE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_break_the_silence
+		EST_support_independent_militaries
+		EST_republican_defence_league
+
+		BALTIC_ford_motors
+		EST_formalize_baltic_entente
+		EST_baltic_economic_union
+		EST_baltic_defence_army
+		EST_pan_baltic_bank
+		EST_propose_baltic_union
+
+		EST_baltic_stronger_together
+		
+		BALTIC_crossley_motors		
+		EST_new_economic_policy
+		EST_corporate_chambers
+
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		EST_prepare_for_the_inevitable
+		BALTIC_rebuild_forts
+		EST_forest_brothers
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_look_north = 0
+		EST_squash_the_opposition = 0
+		EST_cave_to_enemy_pressure = 0
+	}
+
+}
+
+EST_dem_allies = {
+	name = "Estonian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = EST
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = DEMOCRATIC_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_break_the_silence
+		EST_support_independent_militaries
+		EST_republican_defence_league
+
+		BALTIC_ford_motors
+		BALTIC_crossley_motors		
+		EST_new_economic_policy
+		EST_corporate_chambers
+		EST_beyond_the_baltic
+
+		EST_join_the_allies
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		EST_prepare_for_the_inevitable
+		BALTIC_rebuild_forts
+		EST_forest_brothers
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_formalize_baltic_entente = 0
+		EST_cave_to_enemy_pressure = 0
+		EST_squash_the_opposition = 0
+	}
+
+}
+
+EST_democratic = {
+	name = "Estonian democratic plan"
+	desc = ""
+
+	enable = {
+		original_tag = EST
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_era_of_silence
+		EST_fight_the_vaps
+		EST_ismaaliit
+		BALTIC_rejoin_the_railways
+		BALTIC_renew_allied_trade
+
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_chamber_of_deputies
+		EST_modernize_capital
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_modernize_industry
+		EST_exploit_the_banks
+		EST_break_the_silence
+		EST_support_independent_militaries
+		EST_republican_defence_league
+
+		BALTIC_ford_motors
+		BALTIC_crossley_motors		
+		EST_new_economic_policy
+		EST_corporate_chambers
+
+		EST_womens_defence_league
+		BALTIC_natural_resources
+		EST_prepare_for_the_inevitable
+		BALTIC_rebuild_forts
+		EST_forest_brothers
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_invest_in_baltic_trade
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_formalize_baltic_entente = 0
+		EST_cave_to_enemy_pressure = 0
+		EST_squash_the_opposition = 0
+		EST_beyond_the_baltic = 0
+	}
+
+}
+
+
+EST_fascist_axis = {
+	name = "Estonian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_FASCIST_AXIS
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = FASCIST_AXIS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_rally_the_nation
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_german_war_economics
+		EST_march_on_talinn
+		EST_glory_of_war
+		EST_mobilize_the_vets
+		EST_veterans_government
+		EST_threat_on_our_border
+
+		BALTIC_modernize_industry
+		EST_reach_out_to_germany
+		EST_baltic_shield
+		BALTIC_german_tank_licences
+		EST_the_brotherhood
+
+		BALTIC_autobahn
+		BALTIC_natural_resources
+		BALTIC_domestic_motors
+		BALTIC_rebuild_forts
+		EST_vapsid_youth
+
+		EST_fortify_the_border
+		EST_fight_against_communism
+		EST_join_the_axis
+		EST_long_push_east
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_empower_finnish_militants = 0
+		EST_national_pride_in_finland = 0
+		EST_finno_estonian_supremacy_league = 0
+		EST_unite_our_nations = 0
+		EST_anti_communist_militia = 0
+	}
+
+}
+
+EST_fascist_axis_finland = {
+	name = "Estonian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_FASCIST_AXIS_FINLAND
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = FASCIST_AXIS_FINLAND
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_rally_the_nation
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_german_war_economics
+		EST_march_on_talinn
+		EST_glory_of_war
+		EST_mobilize_the_vets
+		EST_empower_finnish_militants
+		EST_national_pride_in_finland
+
+		EST_veterans_government
+		EST_threat_on_our_border
+		BALTIC_modernize_industry
+		EST_reach_out_to_germany
+		EST_baltic_shield
+
+		BALTIC_german_tank_licences
+		EST_the_brotherhood
+		BALTIC_autobahn
+		BALTIC_natural_resources
+		BALTIC_domestic_motors
+
+		EST_join_the_axis
+		EST_finno_estonian_supremacy_league
+		BALTIC_rebuild_forts
+		EST_vapsid_youth
+		EST_fortify_the_border
+
+		EST_fight_against_communism
+		EST_long_push_east
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_anti_communist_militia = 0
+		EST_sieze_swedish_assets = 0
+		EST_unite_our_nations = 0
+	}
+
+}
+
+EST_fascist_axis_scandinavia = {
+	name = "Estonian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_FASCIST_AXIS_SCANDI
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = FASCIST_AXIS_SCANDI
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_rally_the_nation
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_german_war_economics
+		EST_march_on_talinn
+		EST_glory_of_war
+		EST_mobilize_the_vets
+		EST_empower_finnish_militants
+		EST_national_pride_in_finland
+
+		EST_veterans_government
+		EST_threat_on_our_border
+		BALTIC_modernize_industry
+		EST_reach_out_to_germany
+		EST_baltic_shield
+
+		BALTIC_german_tank_licences
+		EST_the_brotherhood
+		BALTIC_autobahn
+		BALTIC_natural_resources
+		BALTIC_domestic_motors
+
+		EST_join_the_axis
+		EST_finno_estonian_supremacy_league
+		EST_sieze_swedish_assets
+		EST_secure_the_straits
+		EST_occupy_norway
+		EST_vapsid_youth
+		EST_form_scandinavia
+		BALTIC_rebuild_forts
+		EST_fortify_the_border
+		EST_fight_against_communism
+		EST_long_push_east
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_anti_communist_militia = 0
+		EST_unite_our_nations = 0
+	}
+
+}
+
+EST_fascist_axis_finno_ugra = {
+	name = "Estonian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_FASCIST_AXIS_UGRA
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = FASCIST_AXIS_UGRA
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_rally_the_nation
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_german_war_economics
+		EST_march_on_talinn
+		EST_glory_of_war
+		EST_mobilize_the_vets
+		EST_empower_finnish_militants
+		EST_national_pride_in_finland
+
+		EST_veterans_government
+		EST_threat_on_our_border
+		BALTIC_modernize_industry
+		EST_reach_out_to_germany
+		EST_baltic_shield
+
+		BALTIC_german_tank_licences
+		EST_unite_our_nations
+		EST_proclaim_finno_ugra
+		EST_the_brotherhood
+		BALTIC_autobahn
+		
+		EST_join_the_axis
+		BALTIC_natural_resources
+		BALTIC_domestic_motors
+		EST_unite_the_sami
+		BALTIC_rebuild_forts
+
+		EST_fortify_the_border
+		EST_fight_against_communism
+		EST_long_push_east
+		EST_unite_karelia
+		EST_unite_the_finnic_identity
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_anti_communist_militia = 0
+		EST_finno_estonian_supremacy_league = 0
+	}
+
+}
+
+EST_fascist_finno_ugra = {
+	name = "Estonian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_FASCIST_UGRA
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = FASCIST_UGRA
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_rally_the_nation
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_german_war_economics
+		EST_march_on_talinn
+		EST_glory_of_war
+		EST_mobilize_the_vets
+		EST_empower_finnish_militants
+		EST_national_pride_in_finland
+
+		EST_veterans_government
+		EST_threat_on_our_border
+		BALTIC_modernize_industry
+		EST_anti_communist_militia
+		EST_baltic_shield
+
+		BALTIC_german_tank_licences
+		EST_unite_our_nations
+		EST_proclaim_finno_ugra
+		EST_the_brotherhood
+		BALTIC_autobahn
+		
+		BALTIC_natural_resources
+		BALTIC_domestic_motors
+		BALTIC_rebuild_forts
+		EST_fortify_the_border
+
+		EST_fight_against_communism
+		EST_long_push_east
+		EST_unite_karelia
+		EST_unite_the_finnic_identity
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_join_the_axis = 0
+		EST_finno_estonian_supremacy_league = 0
+	}
+
+}
+
+EST_fascist_scandinavia = {
+	name = "Estonian fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = EST
+	}
+
+	enable = {
+		has_dlc = "No Step Back"
+		OR = {
+			has_country_flag = EST_AI_RANDOM_FASCIST_SCANDI
+			has_game_rule = {
+				rule = EST_ai_behavior
+				option = FASCIST_SCANDI
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		EST_rally_the_nation
+		BALTIC_rejoin_the_railways
+		BALTIC_axis_investments
+		
+		BALTIC_attract_workers_to_capital
+
+		BALTIC_german_war_economics
+		EST_march_on_talinn
+		EST_glory_of_war
+		EST_mobilize_the_vets
+		EST_empower_finnish_militants
+		EST_national_pride_in_finland
+
+		EST_finno_estonian_supremacy_league
+		EST_veterans_government
+		EST_threat_on_our_border
+		BALTIC_modernize_industry
+		EST_anti_communist_militia
+
+		EST_baltic_shield
+		BALTIC_german_tank_licences
+		EST_the_brotherhood
+		BALTIC_autobahn
+		BALTIC_natural_resources
+		
+		BALTIC_domestic_motors
+		EST_vapsid_youth
+		BALTIC_rebuild_forts
+		EST_fortify_the_border
+		EST_fight_against_communism
+		EST_long_push_east
+
+		EST_sieze_swedish_assets
+		EST_secure_the_straits #only done by AI after sweden is dead
+		EST_occupy_norway #only done by AI after sweden is dead
+		EST_form_scandinavia 
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		EST_reach_out_to_germany = 0
+		EST_join_the_axis = 0
+		EST_unite_our_nations = 0
+	}
+
+}

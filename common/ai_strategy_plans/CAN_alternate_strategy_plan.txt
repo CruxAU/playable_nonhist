@@ -1,0 +1,774 @@
+CAN_democratic_alternate = {
+	name = "Canada goes at it alone"
+	desc = "They are very sorry about that"
+
+	allowed = {
+		original_tag = CAN
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = CAN_AI_RANDOM_DEMOCRATIC_ALTERNATE 
+			has_game_rule = {
+				rule = CAN_ai_behavior
+				option = DEMOCRATIC_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		OR = {
+			USA = { has_completed_focus = USA_america_first }
+			USA = { has_completed_focus = USA_suspend_the_presecution }
+		}
+		
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		CAN_permanent_joint_defense_board
+		CAN_defence_of_canada_regulations
+		CAN_war_bonds
+		CAN_department_of_munitions_and_supply
+		CAN_bits_and_pieces_program
+		CAN_john_inglis_and_company
+		CAN_national_resources_mobilization_act
+		CAN_wartime_prices_and_trade_board
+		CAN_canada_wheat_board
+		CAN_fund_the_national_research_council
+		CAN_mine_the_shield
+		CAN_alberta_coal_towns
+		CAN_national_steel_car
+		CAN_commit_to_the_war
+		CAN_send_in_the_zombies
+		CAN_north_american_alliance
+		#1936
+		CAN_crown_corporations
+		CAN_rowell_sirois_commission							
+		CAN_national_housing_act
+		CAN_patriation						
+		CAN_rcaf_station_borden									
+		#1937
+		CAN_halifax_shipyards							
+		CAN_canada_pacific_railway						
+		CAN_army_modernization							
+		CAN_cmp_truck									
+		CAN_canadian_infantry_corps
+		#1938						
+		CAN_the_walkie_talkie												
+		CAN_destroyer_effort							
+		CAN_we_have_the_hurricane
+		CAN_maritime_colonial_railway						
+		#1939
+		CAN_commonwealth_air_training_plan				
+		CAN_victory_aircraft_limited					
+		CAN_dollar_a_year_men							
+		CAN_light_cruiser_effort
+		CAN_heavy_cruiser_effort						
+		#1942-43
+		CAN_refuge_for_scientists
+		CAN_camp_x
+		CAN_royal_regiment_of_canadian_artillery					
+		CAN_red_deer_training_camp														
+		CAN_escort_fleet		
+		#1944
+		CAN_habakkuk_carrier							
+		CAN_retool_angus_shops							
+		CAN_commit_to_the_war							
+		CAN_imperial_oil											
+		CAN_if_day			
+		#1945				
+		CAN_defense_research_grants				
+		CAN_polymer_corporation							
+		CAN_war_fueled_economy							
+		CAN_uranium_mining								
+		CAN_the_valentine_tank							
+		CAN_a_motorized_army							
+		#1946
+		CAN_1st_canadian_parachute_battalion									
+		CAN_the_black_devils																				
+		CAN_the_pacific_coast_air_defence_radar_system	
+		CAN_trade_fleet									
+		CAN_degauss_ship_hulls
+		#onwards							
+		CAN_united_shipyards							
+		CAN_fund_fairchilds_development					
+		CAN_the_rocky_mountain_rangers																	
+		CAN_cookie_carriers								
+		CAN_the_sabre_project							
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+CAN_fascist = {
+	name = "Canada goes fascist"
+	desc = "They are very sorry about that"
+
+	allowed = {
+		original_tag = CAN
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = CAN_AI_RANDOM_FASCIST 
+			has_game_rule = {
+				rule = CAN_ai_behavior
+				option = FASCIST
+			}
+			AND = {
+				has_country_flag = CAN_AI_RANDOM_FASCIST_ALTERNATE 
+				GER = { has_completed_focus = GER_rhineland }
+				OR = {
+					MEX = { has_government = communism }
+					MEX = { has_government = democratic }
+					MEX = { is_in_faction_with = USA }
+					}
+			}
+		}
+	}
+	abort = {
+		has_country_flag = CAN_AI_RANDOM_FASCIST 
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		CAN_crown_corporations
+		CAN_rowell_sirois_commission							
+		CAN_patriation			
+		CAN_swastika_clubs
+		CAN_national_housing_act
+		#1937								
+		CAN_defence_of_canada_regulations
+		CAN_halifax_shipyards			
+		CAN_wartime_prices_and_trade_board
+		CAN_support_the_blue_shirts				
+		CAN_canada_wheat_board
+		#1938
+		CAN_national_resources_mobilization_act
+		CAN_join_germany
+		CAN_pinion_the_eagle
+		CAN_offer_concessions_for_labrador_and_newfoundland
+		CAN_mine_the_shield
+		#1939
+		CAN_alberta_coal_towns							
+		CAN_national_steel_car					
+		CAN_army_modernization
+		CAN_rcaf_station_borden
+		CAN_war_bonds
+		#1940
+		CAN_commit_to_the_war		
+		CAN_send_in_the_zombies
+		CAN_long_branch_arsenal
+		CAN_forced_quebec_conscription						
+		CAN_cmp_truck	
+		#1941								
+		CAN_canadian_infantry_corps					
+		CAN_the_walkie_talkie							
+		CAN_canada_pacific_railway
+		CAN_department_of_munitions_and_supply			
+		CAN_destroyer_effort
+		#1942
+		CAN_we_have_the_hurricane						
+		CAN_victory_aircraft_limited
+		CAN_dollar_a_year_men								
+		CAN_fund_the_national_research_council	
+		CAN_commonwealth_air_training_plan							
+		#1943	
+		CAN_light_cruiser_effort
+		CAN_royal_regiment_of_canadian_artillery							
+		CAN_bits_and_pieces_program						
+		CAN_john_inglis_and_company						
+		CAN_red_deer_training_camp														
+		#1944
+		CAN_defence_scheme_no_1
+		CAN_heavy_cruiser_effort
+		CAN_fleet_in_being									
+		CAN_retool_angus_shops									
+		CAN_imperial_oil											
+		#1945 onwards
+		CAN_if_day																				
+		CAN_defense_research_grants				
+		CAN_polymer_corporation							
+		CAN_war_fueled_economy							
+		CAN_uranium_mining								
+		CAN_the_valentine_tank							
+		CAN_a_motorized_army							
+		CAN_1st_canadian_parachute_battalion									
+		CAN_the_black_devils																				
+		CAN_the_pacific_coast_air_defence_radar_system	
+		CAN_trade_fleet									
+		CAN_degauss_ship_hulls							
+		CAN_united_shipyards							
+		CAN_fund_fairchilds_development					
+		CAN_the_rocky_mountain_rangers												
+		CAN_maritime_colonial_railway					
+		CAN_cookie_carriers								
+		CAN_the_sabre_project	
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+CAN_fascist_alternate = {
+	name = "Canada goes fascist - allies with mexico"
+	desc = "They are very sorry about that"
+
+	allowed = {
+		original_tag = CAN
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = CAN_AI_RANDOM_FASCIST_ALTERNATE 
+			has_game_rule = {
+				rule = CAN_ai_behavior
+				option = FASCIST_ALTERNATE
+			}
+			AND = {
+				has_country_flag = CAN_AI_RANDOM_FASCIST 
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
+	}
+	abort = {
+		has_country_flag = CAN_AI_RANDOM_FASCIST_ALTERNATE 
+		GER = { has_completed_focus = GER_rhineland }
+		OR = {
+			MEX = { has_government = communism }
+			MEX = { has_government = democratic }
+			MEX = { is_in_faction_with = USA }
+		}
+		
+
+	}
+
+	ai_national_focuses = {
+		CAN_crown_corporations
+		CAN_rowell_sirois_commission							
+		CAN_patriation			
+		CAN_swastika_clubs
+		CAN_national_housing_act
+		#1937								
+		CAN_defence_of_canada_regulations
+		CAN_halifax_shipyards			
+		CAN_wartime_prices_and_trade_board
+		CAN_support_the_blue_shirts
+		CAN_support_a_synarchist_baja				
+		#1938
+		CAN_canada_wheat_board
+		CAN_national_resources_mobilization_act
+		CAN_skewer_the_eagle
+		CAN_offer_concessions_for_labrador_and_newfoundland
+		CAN_defence_scheme_no_1
+		#1939
+		CAN_mine_the_shield
+		CAN_alberta_coal_towns							
+		CAN_national_steel_car					
+		CAN_army_modernization
+		CAN_rcaf_station_borden
+		#1940
+		CAN_war_bonds
+		CAN_commit_to_the_war		
+		CAN_send_in_the_zombies
+		CAN_long_branch_arsenal
+		CAN_forced_quebec_conscription						
+		CAN_cmp_truck	
+		#1941								
+		CAN_canadian_infantry_corps					
+		CAN_the_walkie_talkie							
+		CAN_canada_pacific_railway
+		CAN_department_of_munitions_and_supply			
+		CAN_destroyer_effort
+		#1942
+		CAN_we_have_the_hurricane						
+		CAN_victory_aircraft_limited
+		CAN_dollar_a_year_men								
+		CAN_fund_the_national_research_council	
+		CAN_commonwealth_air_training_plan							
+		#1943	
+		CAN_light_cruiser_effort
+		CAN_royal_regiment_of_canadian_artillery							
+		CAN_bits_and_pieces_program						
+		CAN_john_inglis_and_company						
+		CAN_red_deer_training_camp														
+		#1944
+		CAN_heavy_cruiser_effort
+		CAN_fleet_in_being									
+		CAN_retool_angus_shops									
+		CAN_imperial_oil											
+		#1945 onwards
+		CAN_if_day																				
+		CAN_defense_research_grants				
+		CAN_polymer_corporation							
+		CAN_war_fueled_economy							
+		CAN_uranium_mining								
+		CAN_the_valentine_tank							
+		CAN_a_motorized_army							
+		CAN_1st_canadian_parachute_battalion									
+		CAN_the_black_devils																				
+		CAN_the_pacific_coast_air_defence_radar_system	
+		CAN_trade_fleet									
+		CAN_degauss_ship_hulls							
+		CAN_united_shipyards							
+		CAN_fund_fairchilds_development					
+		CAN_the_rocky_mountain_rangers												
+		CAN_maritime_colonial_railway					
+		CAN_cookie_carriers								
+		CAN_the_sabre_project	
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+CAN_communist = {
+	name = "Canada goes communist"
+	desc = "They are very sorry about that"
+
+	allowed = {
+		original_tag = CAN
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = CAN_AI_RANDOM_COMMUNIST 
+			has_game_rule = {
+				rule = CAN_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+		has_country_flag = CAN_AI_RANDOM_COMMUNIST
+		SOV = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		CAN_crown_corporations
+		CAN_rowell_sirois_commission							
+		CAN_patriation			
+		CAN_burn_the_royal_portraits
+		CAN_national_housing_act
+		#1937								
+		CAN_defence_of_canada_regulations
+		CAN_halifax_shipyards			
+		CAN_wartime_prices_and_trade_board
+		CAN_communist_labor_total_war_committee			
+		CAN_canada_wheat_board
+		#1938
+		CAN_national_resources_mobilization_act
+		CAN_supply_the_red_army
+		CAN_mine_the_shield
+		CAN_alberta_coal_towns
+		CAN_national_steel_car
+		#1939					
+		CAN_army_modernization
+		CAN_rcaf_station_borden
+		CAN_cmp_truck
+		CAN_canadian_infantry_corps					
+		CAN_the_walkie_talkie		
+		#1940							
+		CAN_canada_pacific_railway
+		CAN_department_of_munitions_and_supply			
+		CAN_destroyer_effort						
+		CAN_we_have_the_hurricane						
+		CAN_victory_aircraft_limited
+		#1941
+		CAN_dollar_a_year_men
+		CAN_join_comintern
+		CAN_support_the_world_revolution
+		CAN_war_bonds
+		CAN_commit_to_the_war
+		#1942
+		CAN_send_in_the_zombies
+		CAN_long_branch_arsenal
+		CAN_forced_quebec_conscription
+		CAN_fund_the_national_research_council	
+		CAN_commonwealth_air_training_plan								
+		#1943	
+		CAN_light_cruiser_effort
+		CAN_royal_regiment_of_canadian_artillery							
+		CAN_bits_and_pieces_program						
+		CAN_john_inglis_and_company						
+		CAN_red_deer_training_camp														
+		#1944 onwards do any focus any order					
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+CAN_communist_isolationist = {
+	name = "Canada goes communist isolationist"
+	desc = "They are very sorry about that"
+
+	allowed = {
+		original_tag = CAN
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = CAN_AI_RANDOM_COMMUNIST_ALTERNATE 
+			has_game_rule = {
+				rule = CAN_ai_behavior
+				option = COMMUNIST_ALTERNATE
+			}
+			AND = {
+				has_country_flag = CAN_AI_RANDOM_COMMUNIST
+				SOV = {
+					NOT = {
+						has_government = communism
+					}
+				}
+				USA = {
+					communism > 0.15  
+				}
+			}
+			AND = {
+				has_country_flag = CAN_AI_RANDOM_COMMUNIST_TROTSKYITE
+				USA = {
+					communism > 0.15 
+				}
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		CAN_crown_corporations
+		CAN_rowell_sirois_commission							
+		CAN_patriation			
+		CAN_burn_the_royal_portraits
+		CAN_national_housing_act
+		#1937								
+		CAN_defence_of_canada_regulations
+		CAN_halifax_shipyards			
+		CAN_wartime_prices_and_trade_board
+		CAN_communist_labor_total_war_committee			
+		CAN_canada_wheat_board
+		#1938
+		CAN_national_resources_mobilization_act
+		CAN_defence_scheme_no_2
+		CAN_mine_the_shield
+		CAN_alberta_coal_towns
+		CAN_national_steel_car
+		#1939					
+		CAN_army_modernization
+		CAN_rcaf_station_borden
+		CAN_canada_united
+		CAN_support_the_world_revolution
+		CAN_cmp_truck		
+		#1940
+		CAN_canadian_infantry_corps			
+		CAN_the_walkie_talkie							
+		CAN_canada_pacific_railway
+		CAN_department_of_munitions_and_supply			
+		CAN_destroyer_effort						
+		#1941
+		CAN_we_have_the_hurricane						
+		CAN_victory_aircraft_limited
+		CAN_dollar_a_year_men
+		CAN_war_bonds
+		CAN_commit_to_the_war
+		#1942
+		CAN_send_in_the_zombies
+		CAN_long_branch_arsenal
+		CAN_compromise_with_quebec	
+		CAN_fund_the_national_research_council	
+		CAN_commonwealth_air_training_plan								
+		#1943	
+		CAN_light_cruiser_effort
+		CAN_royal_regiment_of_canadian_artillery							
+		CAN_bits_and_pieces_program						
+		CAN_john_inglis_and_company						
+		CAN_red_deer_training_camp														
+		#1944 onwards do any focus any order					
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+CAN_communist_trotskyite = {
+	name = "Canada goes communist trotskyite"
+	desc = "They are very sorry about that"
+
+	allowed = {
+		original_tag = CAN
+		has_dlc = "Together for Victory"
+	}
+	enable = {
+		OR = {
+			has_country_flag = CAN_AI_RANDOM_COMMUNIST_TROTSKYITE 
+			has_game_rule = {
+				rule = CAN_ai_behavior
+				option = COMMUNIST_TROTSKYITE
+			}
+			AND = {
+				has_country_flag = CAN_AI_RANDOM_COMMUNIST
+				SOV = {
+					NOT = {
+						has_government = communism
+					}
+				}
+				USA = {
+					communism < 0.15 
+				}
+			}
+		}
+	}
+	abort = {
+		has_country_flag = CAN_AI_RANDOM_COMMUNIST_TROTSKYITE
+		USA = { communism > 0.15  }
+	}
+
+	ai_national_focuses = {
+		CAN_crown_corporations
+		CAN_rowell_sirois_commission							
+		CAN_patriation			
+		CAN_burn_the_royal_portraits
+		CAN_national_housing_act
+		#1937								
+		CAN_defence_of_canada_regulations
+		CAN_halifax_shipyards			
+		CAN_wartime_prices_and_trade_board
+		CAN_communist_labor_total_war_committee
+		CAN_mend_relations_with_the_trotskyites				
+		#1938
+		CAN_canada_wheat_board
+		CAN_national_resources_mobilization_act
+		CAN_reject_authoritarianism
+		CAN_liberate_the_workers_of_the_world
+		CAN_mine_the_shield
+		#1939
+		CAN_alberta_coal_towns							
+		CAN_national_steel_car
+		CAN_cmp_truck					
+		CAN_army_modernization
+		CAN_rcaf_station_borden
+		#1940								
+		CAN_canadian_infantry_corps					
+		CAN_the_walkie_talkie							
+		CAN_canada_pacific_railway
+		CAN_offer_concessions_for_labrador_and_newfoundland		
+		#1941
+		CAN_destroyer_effort
+		CAN_we_have_the_hurricane						
+		CAN_dollar_a_year_men								
+		CAN_fund_the_national_research_council	
+		CAN_commonwealth_air_training_plan			
+		#1942	
+		CAN_light_cruiser_effort
+		CAN_royal_regiment_of_canadian_artillery							
+		CAN_red_deer_training_camp
+		CAN_heavy_cruiser_effort					
+		CAN_fleet_in_being																	
+		#1943
+		CAN_retool_angus_shops									
+		CAN_imperial_oil
+		CAN_polymer_corporation									
+		CAN_uranium_mining
+		CAN_the_valentine_tank											
+		#1944 
+		CAN_defence_scheme_no_1
+		CAN_war_bonds
+		CAN_department_of_munitions_and_supply
+		CAN_victory_aircraft_limited
+		CAN_bits_and_pieces_program
+		#1945
+		CAN_john_inglis_and_company
+		CAN_if_day
+		CAN_war_fueled_economy
+		CAN_reactivate_farmers_unity_league
+		CAN_commit_to_the_war
+		#1946		
+		CAN_send_in_the_zombies
+		CAN_long_branch_arsenal
+		CAN_compromise_with_quebec																
+		CAN_defense_research_grants				
+		#onwards do whatever, you are probably dead by now anyways	
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

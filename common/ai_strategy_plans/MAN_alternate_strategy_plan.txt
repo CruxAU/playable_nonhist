@@ -1,0 +1,405 @@
+MAN_Becomes_China = {
+	name = "Manchukuo Obedience Alternate plan"
+	desc = ""
+
+	allowed = {
+		original_tag = MAN
+	}
+	enable = {
+		OR = {
+			has_country_flag = MAN_AI_RANDOM_CHINESE_LEADERSHIP
+			has_game_rule = {
+				rule = MAN_ai_behavior
+				option = CHINESE_LEADERSHIP
+			}
+		}
+	}
+	abort = {
+		JAP = {
+			OR = {
+				has_completed_focus = JAP_strengthen_civilian_government
+				has_completed_focus = JAP_the_unthinkable_option
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		MAN_pacify_the_countryside
+		CHI_invite_foreign_investors
+		MAN_trade_delegation
+		MAN_army_modernization
+		MAN_mukden_military_academy
+		#1937
+		MAN_law_university
+		MAN_obedience
+		MAN_first_five_year_plan
+		MAN_expand_the_textile_industry
+		MAN_hoankyoku
+		#1938
+		MAN_invite_japanese_investors
+		MAN_alliance_with_the_kwantung_army
+		MAN_chinese_leadership
+		MAN_vassalize_mengukuo
+		MAN_national_cooperation_government
+		#1939
+		MAN_the_two_emperors
+		MAN_expand_the_railways
+		MAN_develop_aluminum_sources
+		MAN_expand_showa_steel_works
+		MAN_mukden_arsenal
+		#1940
+		MAN_social_research_unit
+		MAN_research_and_education_department
+		MAN_mamc
+		MAN_second_five_year_plan
+		MAN_national_defense_state
+	}
+
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+oh_MAN_japan_just_let_me_go = {
+	name = "Manchukuo independent plan if japan just lets us go..."
+	desc = "Behavior for Manchukuo independent"
+
+	allowed = {
+		original_tag = MAN
+	}
+	enable = {
+		OR = {
+			is_subject = no
+			has_country_flag = MAN_AI_RANDOM_CHINESE_LEADERSHIP
+			has_game_rule = {
+				rule = MAN_ai_behavior
+				option = CHINESE_LEADERSHIP
+			}
+			has_country_flag = MAN_AI_RANDOM_OBEDIENCE
+			has_game_rule = {
+				rule = MAN_ai_behavior
+				option = OBEDIENCE
+			}
+		}
+		JAP = {
+			OR = {
+				has_completed_focus = JAP_strengthen_civilian_government
+				has_completed_focus = JAP_the_unthinkable_option
+			}
+		}
+	}
+
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+		}
+
+	}
+
+	ai_national_focuses = {
+		MAN_pacify_the_countryside
+		CHI_invite_foreign_investors
+		MAN_trade_delegation
+		MAN_army_modernization
+		MAN_expand_the_textile_industry
+		MAN_law_university
+		MAN_assertiveness
+		MAN_request_control_of_the_railways
+		MAN_staff_the_court_with_manchus
+		MAN_expand_the_imperial_guards
+		MAN_bolster_nationalism
+		MAN_local_arms_procurement
+		MAN_purge_the_general_affairs_council
+		CHI_mission_to_germany
+		CHI_purchase_tanks
+		CHI_chinese_panzers
+		CHI_tank_plant
+	}
+
+	focus_factors = {
+		MAN_obedience = 0
+		MAN_assert_our_authority = 0
+		MAN_offer_vassalization = 0
+		CHI_overlordship_over_indochina = 0
+		CHI_one_china_policy = 0
+	}
+
+	research = {
+		infantry_weapons = 15.0
+		artillery = 15.0
+		armor = 0.0
+		air_equipment = 0.0
+	}
+
+	ideas = {
+
+	}
+	ai_strategy = {
+		type = antagonize
+		id = JAP
+		value = 200
+	}
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+MAN_alternate_plan_qing_1 = {
+	name = "Manchukuo plan for qing, aggressive"
+	desc = ""
+
+	allowed = {
+		original_tag = MAN
+	}
+	enable = {
+		OR = {
+			has_country_flag = MAN_AI_RANDOM_MANCHU_QING
+			has_game_rule = {
+				rule = MAN_ai_behavior
+				option = MANCHU_QING
+			}
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		MAN_pacify_the_countryside
+		CHI_invite_foreign_investors
+		MAN_trade_delegation
+		MAN_expand_the_textile_industry
+		MAN_law_university
+		#1937
+		MAN_assertiveness
+		MAN_army_modernization
+		MAN_staff_the_court_with_manchus
+		MAN_bolster_nationalism
+		MAN_expand_the_imperial_guards
+		#1938
+		MAN_local_arms_procurement
+		MAN_purge_the_general_affairs_council
+		CHI_mission_to_germany
+		MAN_invite_japanese_settlers
+		MAN_independence_war
+		#1939
+		MAN_reclaim_the_empire
+		CHI_closer_ties_with_germany
+		CHI_purchase_tanks
+		CHI_chinese_panzers
+		CHI_tank_plant
+		#1940
+		MAN_imperial_divinity
+		MAN_imperial_university
+		MAN_assert_our_authority
+		MAN_move_capitals
+		MAN_claim_the_mandate_of_heaven
+	}
+
+	focus_factors = {
+		CHI_anti_imperialism = 0
+		CHI_dominate_japan = 0
+		CHI_integrate_tibet = 0
+	}
+
+	research = {
+		infantry_weapons = 15.0
+		artillery = 15.0
+		armor = 1
+		support_tech = 3
+		air_equipment = 2
+	}
+
+	ideas = {
+
+	}
+	ai_strategy = {
+		type = antagonize 
+		id = "JAP"			
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize 
+		id = "JAP"			
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = JAP
+		value = 400
+	}
+	ai_strategy = {
+		type = conquer 
+		id = "CHI"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = CHI
+		value = -300
+	}
+	ai_strategy = {
+		type = alliance
+		id = PRC
+		value = -300
+	}
+	ai_strategy = {
+		type = conquer 
+		id = "PRC"			
+		value = 200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+MAN_alternate_plan_qing_2 = {
+	name = "Manchukuo plan for qing, five people"
+	desc = ""
+
+	allowed = {
+		original_tag = MAN
+	}
+	enable = {
+		OR = {
+			has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+			has_game_rule = {
+				rule = MAN_ai_behavior
+				option = FIVE_PEOPLES_QING
+			}
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		MAN_pacify_the_countryside
+		CHI_invite_foreign_investors
+		MAN_trade_delegation
+		MAN_expand_the_textile_industry
+		MAN_law_university
+		#1937
+		MAN_assertiveness
+		MAN_army_modernization
+		MAN_five_equal_peoples
+		MAN_bolster_nationalism
+		MAN_empower_the_legislative_council
+		#1938
+		MAN_white_russian_advisers
+		MAN_five_people_armies
+		MAN_local_arms_procurement
+		MAN_purge_the_general_affairs_council
+		CHI_mission_to_germany
+		#1939
+		CHI_closer_ties_with_germany
+		CHI_purchase_tanks
+		CHI_chinese_panzers
+		CHI_tank_plant
+		MAN_independence_war
+		#1940
+		MAN_reclaim_the_empire
+		MAN_imperial_divinity
+		MAN_imperial_university
+		MAN_offer_vassalization
+		MAN_move_capitals
+		#1941
+		MAN_claim_the_mandate_of_heaven
+		
+	}
+
+	focus_factors = {
+		CHI_anti_imperialism = 0
+		CHI_conquer_tibet = 0
+	}
+
+	research = {
+		infantry_weapons = 15.0
+		artillery = 15.0
+		armor = 1
+		support_tech = 3
+		air_equipment = 2
+	}
+
+	ideas = {
+
+	}
+	ai_strategy = {
+		type = antagonize 
+		id = "JAP"			
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize 
+		id = "JAP"			
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = JAP
+		value = 400
+	}
+	ai_strategy = {
+		type = conquer 
+		id = "CHI"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = CHI
+		value = -300
+	}
+	ai_strategy = {
+		type = alliance
+		id = PRC
+		value = -300
+	}
+	ai_strategy = {
+		type = conquer 
+		id = "PRC"			
+		value = 200
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+

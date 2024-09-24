@@ -1,0 +1,3555 @@
+POL_castle_allies_plan = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_CASTLE_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = CASTLE_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_complete_april_constitution #70
+		POL_polish_militarism #35
+		POL_consolidate_sanation_government #35
+		#1937
+		POL_agrarian_reform #70
+		POL_the_castle #35
+		POL_central_defence_of_poland #70
+		POL_the_sanation_left #35
+		POL_eliminate_socialist_parties #35
+		POL_develop_upper_silesia #35
+		POL_additional_research_slot1 #70
+		POL_dissolve_the_sejm #35
+		#1938
+		POL_the_left_chairman #70
+		POL_legion_of_merit #35
+		POL_draft_a_new_constitution #35
+		POL_camp_of_national_unity #35
+		POL_align_with_the_west #35
+		POL_lithuanian_ultimatum #35
+		#1939
+		POL_develop_polish_ship_building #70
+		POL_attract_poles_to_gdynia #70
+		POL_join_allies #70
+		POL_study_foreign_built_ships #70
+		POL_expand_gdynia_seaport #70
+		
+
+		#1940
+		
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	focus_factors = {
+		POL_lithuanian_alliance = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_castle_lithuanian_ally_plan = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_CASTLE_LIT_ALLY
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = CASTLE_LIT_ALLY
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		POL_fill_the_railways_gaps
+		POL_complete_april_constitution #70
+		POL_polish_militarism
+		POL_consolidate_sanation_government
+		#1937
+		POL_agrarian_reform
+		POL_the_castle
+		POL_central_defence_of_poland
+		POL_the_sanation_right
+		POL_eliminate_socialist_parties
+		#1938
+		POL_develop_upper_silesia  #35
+		POL_additional_research_slot1 #70
+		POL_dissolve_the_sejm #35
+		POL_second_man_of_the_state  #70
+		POL_support_right_paramilitaries #35
+		POL_codify_national_unity #35
+		POL_camp_of_national_unity #Sidenote: This one was missing #35
+		POL_align_with_the_west #35
+
+		#1939		
+		POL_lithuanian_ultimatum
+		POL_lithuanian_alliance
+		POL_develop_polish_ship_building
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		
+		#1940
+		POL_expand_gdynia_seaport
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	focus_factors = {
+		POL_join_allies = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_sanation_left_allies = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_LEFT_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = LEFT_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_complete_april_constitution #70
+		POL_polish_militarism #35
+		POL_consolidate_sanation_government #35
+		#1937
+		POL_agrarian_reform #70
+		POL_the_sanation_left #35
+		POL_central_defence_of_poland #70
+		POL_the_left_chairman #70
+		POL_legion_of_merit #35
+		POL_develop_upper_silesia #35
+	
+		#1938
+		POL_additional_research_slot1 #70
+		POL_draft_a_new_constitution #35
+		POL_modus_vivendi #35
+		POL_common_organization_of_society #35
+		POL_dissolve_the_bbwr #35
+		POL_align_with_the_west #35
+		POL_lithuanian_ultimatum #35
+		#1939
+		POL_join_allies #70
+		POL_romanian_bridgehead_strategy #70
+		POL_develop_polish_ship_building #70
+		POL_attract_poles_to_gdynia #70
+		POL_study_foreign_built_ships #70
+
+		
+
+		#1940
+		POL_expand_gdynia_seaport #70
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	focus_factors = {
+		POL_lithuanian_alliance = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_sanation_left_Baltic_alliance = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_LEFT_BALTIC
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = LEFT_BALTIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_complete_april_constitution #70
+		POL_polish_militarism #35
+		POL_consolidate_sanation_government #35
+		#1937
+		POL_agrarian_reform #70
+		POL_the_sanation_left #35
+		POL_central_defence_of_poland #70
+		POL_the_left_chairman #70
+		POL_legion_of_merit #35
+		POL_develop_upper_silesia #35
+	
+		#1938
+		POL_additional_research_slot1 #70
+		POL_draft_a_new_constitution #35
+		POL_modus_vivendi #35
+		POL_common_organization_of_society #35
+		POL_dissolve_the_bbwr #35
+		POL_baltic_security #70
+		POL_baltic_alliance_focus #70
+
+		#1939
+		
+		POL_protect_czechozlovakia #70
+		POL_romanian_alliance #70
+		POL_attract_poles_to_gdynia #70
+		POL_study_foreign_built_ships #70
+		POL_expand_gdynia_seaport #70
+
+		
+
+		#1940
+
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	focus_factors = {
+		POL_the_north_sea = 0
+		POL_the_baltic_alliance = 0
+		POL_the_mediterranean = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_sanation_left_intermarium_alliance = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_LEFT_INTERMARIUM
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = LEFT_INTERMARIUM
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_complete_april_constitution #70
+		POL_polish_militarism #35
+		POL_consolidate_sanation_government #35
+		#1937
+		POL_agrarian_reform #70
+		POL_the_sanation_left #35
+		POL_central_defence_of_poland #70
+		POL_the_left_chairman #70
+		POL_legion_of_merit #35
+		POL_develop_upper_silesia #35
+	
+		#1938
+		POL_additional_research_slot1 #70
+		POL_draft_a_new_constitution #35
+		POL_modus_vivendi #35
+		POL_common_organization_of_society #35
+		POL_dissolve_the_bbwr #35
+		POL_baltic_security #70
+
+		#1939
+		POL_baltic_alliance_focus #70
+		POL_protect_czechozlovakia #70
+		POL_romanian_alliance #70
+		POL_the_north_sea #35
+		POL_finno_polish_pact #35
+		POL_invite_sweden #35
+		POL_the_mediterranean #35
+
+		#1940
+		POL_coerce_czechoslovakia #skipped on historical #35
+		POL_protect_yugoslavia #35
+		POL_invite_denmark
+		POL_invite_norway
+		POL_austro_hungarian_alliance
+		POL_invite_greece
+
+		POL_attract_poles_to_gdynia #70
+		POL_study_foreign_built_ships #70
+
+		
+
+		
+		POL_expand_gdynia_seaport #70
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_sanation_right_allies = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_RIGHT_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = RIGHT_ALLIES
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_complete_april_constitution #70
+		POL_polish_militarism #35
+		POL_consolidate_sanation_government #35
+		#1937
+		POL_agrarian_reform #70
+		POL_the_sanation_right #35
+		POL_central_defence_of_poland #70
+		POL_second_man_of_the_state #70
+		POL_department_for_home_defence #35
+		POL_develop_upper_silesia #35
+	
+		#1938
+		POL_additional_research_slot1 #70
+		POL_codify_national_unity #35
+		POL_support_right_paramilitaries #35
+		POL_ozon #70
+		POL_align_with_the_west #35
+		POL_lithuanian_annexation #35
+		#1939
+		POL_join_allies #70
+		POL_develop_polish_ship_building #70
+		POL_attract_poles_to_gdynia #70
+		POL_study_foreign_built_ships #70
+
+		
+
+		#1940
+		POL_expand_gdynia_seaport #70
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	focus_factors = {
+		POL_lithuanian_alliance = 0
+		POL_romanian_bridgehead_strategy = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_sanation_right_revanchism = {
+	name = "POL historical plan but they join allies early"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_RIGHT_OZON
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = RIGHT_OZON
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+	
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_complete_april_constitution #70
+		POL_polish_militarism #35
+		POL_consolidate_sanation_government #35
+		#1937
+		POL_agrarian_reform #70
+		POL_the_sanation_right #35
+		POL_central_defence_of_poland #70
+		POL_second_man_of_the_state #70
+		POL_department_for_home_defence #35
+		POL_develop_upper_silesia #35
+	
+		#1938
+		POL_additional_research_slot1 #70
+		POL_codify_national_unity #35
+		POL_support_right_paramilitaries #35
+		POL_ozon #70
+		POL_polish_revanchism #70
+		POL_lithuanian_annexation #35
+		#1939
+		POL_pan_slavic_revanchism #70
+		POL_develop_polish_ship_building #70
+		POL_attract_poles_to_gdynia #70
+		POL_study_foreign_built_ships #70
+		POL_expand_gdynia_seaport #70
+		#1940
+		POL_baltic_ultimatums #70
+		POL_the_old_borders
+		POL_annex_czech
+		POL_sea_to_sea
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		
+		#1941
+
+		POL_plan_west
+		POL_the_prusya_line
+		POL_the_prusya_army
+		POL_hel_fortified_area
+		#1942
+		POL_expand_poznan_forts
+		POL_silesia_fortified_area
+		
+		
+		
+		#1943
+	}
+
+	focus_factors = {
+		POL_lithuanian_alliance = 0
+		POL_romanian_bridgehead_strategy = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_communist_plan = {
+	name = "POL communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMUNIST_SSR_LOYAL
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMUNIST_SSR_LOYAL
+			}
+		}
+		NOT = {
+			has_DLC = "No Step Back"
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_restore_the_sejm #70
+		POL_internationalism #70
+		#1937
+		POL_authoritarianism #70
+		POL_go_left #70
+		POL_agrarian_reform #70
+		POL_start_central_industrial_region #70
+		POL_expand_central_industrial_region #70
+		#1938
+		POL_national_defence_fund #70
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_additional_research_slot1 #70
+		POL_prepare_for_the_next_war #35
+		#1939
+		POL_seek_accommodation_with_USSR #70
+		POL_plan_west #70
+		POL_hel_fortified_area #70
+		POL_silesia_fortified_area #70
+		POL_new_military_academy #70
+		POL_standardisation_of_equipment #35
+		#1940
+		POL_army_modernisation #70
+		POL_modernising_the_cavalry #70
+		POL_study_foreign_tanks #70
+		POL_air_base_expansion #70
+		POL_fighter_modernisation #70
+		#1941
+		POL_political_commissars #70
+		POL_air_innovations #70
+		POL_heavy_fighter_concept #70
+		POL_naval_bomber_experiments #70
+		POL_medium_bomber_focus #70
+		#1942
+		POL_air_modernisations_programme #70	
+		POL_develop_polish_ship_building #70
+		POL_study_foreign_built_ships #70
+		POL_attract_poles_to_gdynia #70
+		POL_expand_gdynia_seaport #70
+		#1943
+		POL_the_twin_threats #70
+		POL_coastal_defense #70
+		POL_baltic_navy #70
+		POL_additional_research_slot2 #70
+		POL_abolish_segregated_seating	 #70
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_democratic_plan = {
+	name = "POL democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+		NOT = {
+			has_DLC = "No Step Back"
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_restore_the_sejm #70
+		POL_internationalism #70
+		#1937
+		POL_liberalism_focus #70
+		POL_intervention_focus #70
+		POL_agrarian_reform #70
+		POL_start_central_industrial_region #70
+		POL_expand_central_industrial_region #70
+		#1938
+		POL_national_defence_fund #70
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_additional_research_slot1 #70
+		POL_prepare_for_the_next_war #35
+		#1939
+		POL_draw_closer_to_britain #70
+		POL_align_with_the_west #35
+		POL_join_allies #70
+		POL_volunteer_corps #70
+		POL_new_military_academy #70
+		POL_standardisation_of_equipment #35
+		#1940
+		POL_army_modernisation #70
+		POL_attract_foreign_motors #70
+		POL_study_foreign_tanks #70
+		POL_air_base_expansion #70
+		POL_fighter_modernisation #70
+		#1941
+		POL_air_innovations #70
+		POL_heavy_fighter_concept #70
+		POL_naval_bomber_experiments #70
+		POL_light_bomber_focus #70
+		POL_air_modernisations_programme #70	
+		#1942
+		POL_clamp_down_on_danzig #35
+		POL_study_foreign_built_ships #70
+		POL_ban_the_nazi_party #35
+		POL_develop_gdansk_ship_building #70
+		POL_integrate_gdansk_industries #70
+		#1943
+		POL_the_twin_threats #70
+		POL_strike_force #70
+		POL_baltic_navy #70
+		POL_additional_research_slot2 #70
+		POL_abolish_segregated_seating #70	
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_fascist_plan = {
+	name = "POL fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_FASCIST
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = FASCIST
+			}
+		}
+		NOT = {
+			has_DLC = "No Step Back"
+		}
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		POL_restore_the_sejm #70
+		#1937
+		POL_internationalism #70
+		POL_authoritarianism #70
+		POL_go_right #70
+		POL_start_central_industrial_region #70
+		POL_expand_central_industrial_region #70
+		#1938
+		POL_national_defence_fund #70
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_additional_research_slot1 #70
+		POL_prepare_for_the_next_war #35
+		#1939
+		POL_seek_accommodation_with_germany #70
+		POL_plan_east #70
+		POL_fortification_of_belarus #70
+		POL_fortification_of_ukraine #70
+		POL_new_military_academy #70
+		POL_standardisation_of_equipment #35
+		#1940
+		POL_army_modernisation #70
+		POL_attract_foreign_motors #70
+		POL_study_foreign_tanks #70
+		POL_air_base_expansion #70
+		POL_fighter_modernisation #70
+		#1941
+		POL_military_youth #70
+		POL_air_innovations #70
+		POL_heavy_fighter_concept #70
+		POL_naval_bomber_experiments #70
+		POL_medium_bomber_focus #70
+		#1942
+		POL_air_modernisations_programme #70	
+		POL_develop_polish_ship_building #70
+		POL_study_foreign_built_ships #70
+		POL_attract_poles_to_gdynia #70
+		POL_expand_gdynia_seaport #70
+		#1943
+		POL_the_twin_threats #70
+		POL_coastal_defense #70
+		POL_baltic_navy #70
+		POL_additional_research_slot2 #70
+		POL_ideological_fanaticism #70
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+# No Step Back
+POL_NSB_communist_plan_allies = {
+	name = "POL communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMUNIST
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMUNIST
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_state_national_council #35
+		POL_fill_the_railways_gaps #70
+		
+
+		#1937
+		POL_arm_peasant_militia #35
+		POL_communal_governance #35
+		POL_a_leftist_sejm #35
+
+		#civil war will have started by now
+		POL_KPP_focus #70
+		POL_national_defence_fund #70
+
+		#ASAP once civil war is finished
+		POL_polish_path_to_socialism #70
+		POL_anti_imperialism #70
+
+		#while civilwar is running
+		POL_additional_research_slot1 #70
+		POL_agrarian_reform #bypass
+
+		#1938
+		POL_invest_in_eastern_poland #70
+
+		#only once civilwar over
+		POL_develop_polish_ship_building #70
+		POL_attract_poles_to_gdynia #70
+		POL_prepare_for_the_next_war #35
+		POL_new_military_academy #70
+
+		#1939
+
+		#available ONLY once WT is above 40 or at war with germany
+		POL_preserve_bougoise_democracy #70
+		POL_anti_fascist_military #70
+		POL_preserve_baltic_independence #70 #most games poland will be capitulated before this focus can be done
+		POL_social_commonwealth #70 
+
+		#will likely be done before the 4 focuses above ^
+		POL_leftist_economics #70
+
+		#1940
+		POL_committee_of_national_liberation #70
+		POL_non_discriminatory_recruitment #70
+		POL_armia_ludowa #70
+		
+		
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		#1941
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education
+		POL_dismantle_fascist_empires #70 #most games poland will be capitulated before this focus can be done
+
+	}
+
+	focus_factors = {
+		POL_anti_capitalist_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_communist_plan_antiimperialist = {
+	name = "POL communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMUNIST_REVOLUTIONARY
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMUNIST_REVOLUTIONARY
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_state_national_council #35
+		POL_fill_the_railways_gaps #70
+
+		#1937
+		POL_arm_peasant_militia #35
+		POL_communal_governance #35
+		POL_a_leftist_sejm #35
+		POL_clamp_down_on_danzig #35
+
+		#civil war will have started by now
+		POL_KPP_focus #70
+		POL_national_defence_fund #70
+
+		#ASAP once civil war is finished
+		POL_polish_path_to_socialism #70
+		POL_anti_imperialism #70
+		#1938
+		#while civilwar is running
+		POL_additional_research_slot1 #70
+		POL_agrarian_reform #bypass
+		POL_invest_in_eastern_poland #70
+
+		#only once civilwar over
+		POL_ban_the_nazi_party #35
+		POL_dabrowszczacy #35
+		POL_prepare_for_the_next_war #35
+		POL_integrate_gdansk_industries #70
+		POL_leftist_economics #70
+
+		#1939
+		POL_anti_capitalist_revolution #70
+		POL_baltic_socialism #70
+		POL_press_for_liberia #70 
+		POL_support_colonial_workers_strikes #70  #most games poland will be capitulated before this focus can be done
+		POL_committee_of_national_liberation #70
+		#1940
+		
+		POL_non_discriminatory_recruitment #70
+		POL_armia_ludowa #70
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		#1941
+		
+		POL_lower_class_education
+		POL_reopen_the_maritime_and_colonial_league #70 #most games poland will be capitulated before this focus can be done
+		POL_dismantle_capitalist_empires
+		POL_social_commonwealth
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_communist_SSR_loyal = {
+	name = "POL communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMUNIST_SSR_LOYAL
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMUNIST_SSR_LOYAL
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_state_national_council #35
+		POL_fill_the_railways_gaps #70
+
+		#1937
+		POL_arm_peasant_militia #35
+		POL_communal_governance #35
+		#civil war will have started by now
+		POL_a_leftist_sejm #35
+		POL_clamp_down_on_danzig #35
+
+		POL_KPP_focus #70
+		POL_national_defence_fund #70
+
+		#ASAP once civil war is finished
+		POL_surrender_the_east #70
+		POL_polish_peoples_republic #70
+		#1938
+		#while civilwar is running
+		POL_additional_research_slot1 #70
+		POL_agrarian_reform #bypass
+		POL_invest_in_eastern_poland #70
+
+		#only once civilwar over
+		POL_ban_the_nazi_party #35
+		POL_dabrowszczacy #35
+		POL_prepare_for_the_next_war #35
+		POL_integrate_gdansk_industries #70
+		POL_leftist_economics #70
+
+		#1939
+		POL_soviet_industry #70
+		POL_soviet_military_staff #70
+		POL_plan_west #70
+		POL_the_prusya_line #70  
+		POL_committee_of_national_liberation #70
+		#1940
+		POL_the_prusya_army #70
+		POL_pressure_for_the_west #70 
+		POL_greater_polish_SSR #70
+		POL_non_discriminatory_recruitment #70
+		POL_armia_ludowa #70
+		#1941
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_communist_SSR_independent = {
+	name = "POL communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMUNIST_SSR_INDEPENDENT
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMUNIST_SSR_INDEPENDENT
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_state_national_council #35
+		POL_fill_the_railways_gaps #70
+
+		#1937
+		POL_arm_peasant_militia #35
+		POL_communal_governance #35
+		#civil war will have started by now
+		POL_a_leftist_sejm #35
+		POL_clamp_down_on_danzig #35
+
+		POL_KPP_focus #70
+
+		#ASAP once civil war is finished
+		POL_surrender_the_east #70
+		POL_polish_peoples_republic #70
+		#1938
+		POL_soviet_industry #70
+		POL_soviet_military_staff #70
+		POL_national_defence_fund #70
+		POL_pressure_for_the_west #70 
+		#while civilwar is running
+		POL_additional_research_slot1 #70
+		#1939
+		POL_agrarian_reform #bypass
+		POL_invest_in_eastern_poland #70
+		
+		#only once civilwar over
+		POL_ban_the_nazi_party #35
+		POL_prepare_for_the_next_war #35
+		POL_integrate_gdansk_industries #70
+		POL_leftist_economics #70
+
+		POL_plan_east #70
+		POL_eastern_conscripts #70  
+		POL_committee_of_national_liberation #70
+		#1940
+		POL_belorussian_army #70
+		POL_com_independence #70
+		POL_anti_capitalist_revolution #70
+		POL_non_discriminatory_recruitment #70
+		POL_armia_ludowa #70
+		#1941
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_communist_SSR_independent_allies = {
+	name = "POL communist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMUNIST_SSR_INDEPENDENT_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMUNIST_SSR_INDEPENDENT_ALLIES
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_state_national_council #35
+		POL_fill_the_railways_gaps #70
+
+		#1937
+		POL_arm_peasant_militia #35
+		POL_communal_governance #35
+
+		#civil war will have started by now
+		POL_a_leftist_sejm #35
+		POL_KPP_focus #70
+		POL_clamp_down_on_danzig #35
+
+		#ASAP once civil war is finished
+		POL_surrender_the_east #70
+		POL_polish_peoples_republic #70
+
+		#1938
+		POL_soviet_industry #70
+		POL_soviet_military_staff #70
+		POL_national_defence_fund #70
+		POL_pressure_for_the_west #70 
+		#while civilwar is running
+		POL_additional_research_slot1 #70
+
+		#1939
+		POL_agrarian_reform #bypass
+		POL_invest_in_eastern_poland #70
+		
+		#only once civilwar over
+		POL_ban_the_nazi_party #35
+		POL_prepare_for_the_next_war #35
+		POL_integrate_gdansk_industries #70
+		POL_leftist_economics #70
+
+		POL_plan_east #70
+		POL_eastern_conscripts #70  
+		POL_committee_of_national_liberation #70
+		#1940
+		POL_belorussian_army #70
+		POL_com_independence #70
+		POL_preserve_bougoise_democracy #70 - join allies
+		POL_non_discriminatory_recruitment #70
+		POL_armia_ludowa #70
+		#1941
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_democratic_allies_plan = {
+	name = "POL democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_ease_sanationist_tensions #35
+
+		#1937
+		POL_raise_the_black_madonna #35
+		POL_reassemble_the_sejm #35
+		POL_empower_the_morges #35
+		POL_elect_a_PSL_leader #70
+		POL_invest_in_the_peasantry #70
+		POL_develop_polish_ship_building #70
+		
+		#1938
+		POL_attract_poles_to_gdynia #70
+		POL_study_foreign_built_ships #70
+		POL_national_defence_fund #70
+		POL_additional_research_slot1 #70
+		POL_leftist_economics #70
+		POL_invest_in_the_old_polish_region #35
+
+		#1939
+		POL_preserve_bougoise_democracy #70
+		POL_anti_fascist_military #70
+		POL_press_for_liberia #70
+		POL_preserve_baltic_independence #70
+		POL_reopen_the_maritime_and_colonial_league #70
+		#1940		
+		
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education #70
+		POL_committee_of_national_liberation #70
+		POL_non_discriminatory_recruitment #70
+
+		#1941
+		POL_armia_ludowa #70	
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_democratic_morges_plan = {
+	name = "POL democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_DEMOCRATIC_MORGES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = DEMOCRATIC_MORGES
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_ease_sanationist_tensions #35
+
+		#1937
+		POL_raise_the_black_madonna #35
+		POL_reassemble_the_sejm #35
+		POL_empower_the_morges #35
+		POL_elect_a_PSL_leader #70
+		POL_invest_in_the_peasantry #70
+		POL_develop_polish_ship_building #70
+		
+		#1938
+		POL_attract_poles_to_gdynia #70
+		POL_morges_pact #70
+		POL_dabrowszczacy #35
+		POL_study_foreign_built_ships #70
+		POL_national_defence_fund #70
+		POL_additional_research_slot1 #70
+
+		#1939
+		POL_anti_fascist_military #70
+		POL_morges_economic_union #70
+		POL_leftist_economics #70
+		POL_purchase_madagascar #70
+		POL_invite_romania_to_morges #70
+		
+		
+		#1940		
+		POL_press_for_liberia #70
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education #70
+		POL_committee_of_national_liberation #70
+		
+		#1941
+		POL_non_discriminatory_recruitment #70
+		POL_armia_ludowa #70
+		POL_reopen_the_maritime_and_colonial_league #70		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_democratic_morges_plan_2 = {
+	name = "POL democratic plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_DEMOCRATIC_MIEDZYMORZE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = DEMOCRATIC_MIEDZYMORZE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_organize_the_peasants_strike #70
+		POL_woo_morges_staff #70
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_ease_sanationist_tensions #35
+
+		#1937
+		POL_raise_the_black_madonna #35
+		POL_reassemble_the_sejm #35
+		POL_empower_the_morges #35
+		POL_elect_a_PSL_leader #70
+		POL_national_defence_fund #70
+		POL_invest_in_the_peasantry #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		
+		#1938
+		POL_morges_pact #70
+		POL_morges_economic_union #70
+		POL_invite_romania_to_morges #70
+		POL_additional_research_slot1 #70
+		POL_leftist_economics #70
+
+		#1939
+		POL_the_between_the_seas_concept #skipped
+		POL_the_baltic_alliance #35
+		POL_the_north_sea #35
+		POL_treaty_with_lithuania #35
+		POL_finno_polish_pact #35
+		POL_invite_denmark #35
+		POL_invite_norway #35
+		POL_the_mediterranean #35
+		POL_coerce_czechoslovakia #35
+		POL_austro_hungarian_alliance #35
+		POL_protect_yugoslavia #35
+
+		#most of the time some of these focuses are skipped or not available
+		
+		#1940		
+		POL_anti_fascist_military #70
+		POL_non_discriminatory_recruitment #70
+		POL_committee_of_national_liberation #70
+		POL_armia_ludowa #70
+		POL_invest_in_the_old_polish_region #35
+		POL_modernize_congressional_factories #70
+		
+		
+		#1941
+		POL_warsaw_main_railway_station #70
+		POL_lower_class_education #70	
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_commonwealth_plan = {
+	name = "POL commonwealth plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMONWEALTH
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMONWEALTH
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		
+		POL_assemble_the_regency_council #35
+		POL_fulfil_fifth_of_november #35
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		#1937
+		POL_claiming_lithuania #skipped
+		POL_restoration_of_the_royal_sejm #70
+		POL_support_monarchism_in_LIT #70
+		POL_institute_royal_guards #70
+		POL_arm_monarchist_militants #35
+		POL_king_of_lithuania #35
+		POL_LIT_union #70
+		#1938
+		POL_lithuanian_rail #70
+		POL_merge_the_arms_industries #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		POL_integrate_gdansk_industries #70
+		POL_claim_livonia #70
+		#1939
+		POL_additional_research_slot1 #70
+		POL_invest_in_the_old_polish_region #35 
+		POL_national_defence_fund #70
+		POL_modernize_congressional_factories #70
+		POL_claim_prussia #70
+		POL_claim_greater_lithuania #70
+		#1940
+		POL_greater_commonwealth #70
+		POL_warsaw_main_railway_station #70
+		
+	}
+
+	focus_factors = {
+		POL_pro_allied_government = 0
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_commonwealth_plan_alliance = {
+	name = "POL commonwealth plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMONWEALTH_ALLIANCE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMONWEALTH_ALLIANCE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		
+		POL_assemble_the_regency_council #35
+		POL_fulfil_fifth_of_november #35
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		#1937
+		POL_claiming_lithuania #skipped
+		POL_restoration_of_the_royal_sejm #70
+		POL_support_monarchism_in_LIT #70
+		POL_institute_royal_guards #70
+		POL_arm_monarchist_militants #35
+		POL_king_of_lithuania #35
+		POL_LIT_union #70
+		#1938
+		POL_lithuanian_rail #70
+		POL_merge_the_arms_industries #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		POL_integrate_gdansk_industries #70
+		#1939
+		POL_additional_research_slot1 #70
+		POL_invest_in_the_old_polish_region #35 
+		POL_national_defence_fund #70
+		
+	}
+
+	focus_factors = {
+		POL_pro_allied_government = 0
+		POL_seek_an_alliance_with_byzantine = 10
+		POL_seek_an_alliance_with_french_empire = 10
+		POL_seek_an_alliance_with_tsar = 10
+		POL_seek_an_alliance_with_kaiser = 10
+	}
+
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_commonwealth_plan_allies = {
+	name = "POL commonwealth plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_COMMONWEALTH_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = COMMONWEALTH_ALLIES
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		
+		POL_assemble_the_regency_council #35
+		POL_fulfil_fifth_of_november #35
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		#1937
+		POL_claiming_lithuania #skipped
+		POL_restoration_of_the_royal_sejm #70
+		POL_support_monarchism_in_LIT #70
+		POL_institute_royal_guards #70
+		POL_arm_monarchist_militants #35
+		POL_king_of_lithuania #35
+		POL_LIT_union #70
+		#1938
+		POL_lithuanian_rail #70
+		POL_merge_the_arms_industries #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		POL_integrate_gdansk_industries #70
+		#1939
+		POL_additional_research_slot1 #70
+		POL_invest_in_the_old_polish_region #35 
+		POL_pro_allied_government #70
+		POL_ROM_join_allies #70
+		POL_national_defence_fund #70
+		
+	}
+
+	focus_factors = {
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	}
+
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_romania_plan_allies = {
+	name = "POL romania plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_ROMANIA_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = ROMANIA_ALLIES
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_hohenzollern
+		POL_restoration_of_the_royal_sejm
+		POL_internal_romanian_support
+		POL_institute_royal_guards
+		#1938
+		POL_arm_monarchist_militants
+		POL_king_michaels_coup
+		POL_develop_polish_ship_building
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		#1939
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_merge_internal_governments
+		POL_pro_allied_government
+		POL_ROM_join_allies
+		#1940
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+	}
+
+	focus_factors = {
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	} 
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_romania_plan_alliance = {
+	name = "POL romania plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_ROMANIA_ALLIANCE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = ROMANIA_ALLIANCE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_hohenzollern
+		POL_restoration_of_the_royal_sejm
+		POL_internal_romanian_support
+		POL_institute_royal_guards
+		#1938
+		POL_arm_monarchist_militants
+		POL_king_michaels_coup
+		POL_develop_polish_ship_building
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		#1939
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_merge_internal_governments
+	}
+
+	focus_factors = {
+		POL_pro_allied_government = 0
+		POL_seek_an_alliance_with_byzantine = 10
+		POL_seek_an_alliance_with_french_empire = 10
+		POL_seek_an_alliance_with_tsar = 10
+		POL_seek_an_alliance_with_kaiser = 10
+	} 
+	
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_romania_plan = {
+	name = "POL romania plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_ROMANIA
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = ROMANIA
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_hohenzollern
+		POL_restoration_of_the_royal_sejm
+		POL_internal_romanian_support
+		POL_institute_royal_guards
+		#1938
+		POL_arm_monarchist_militants
+		POL_king_michaels_coup
+		POL_develop_polish_ship_building
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		#1939
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_merge_internal_governments
+		POL_royal_dictatorship
+		POL_demand_slovakia
+		#1940
+		POL_invest_in_the_old_polish_region
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		POL_restore_poland_hungary
+
+	}
+
+	focus_factors = {
+		POL_pro_allied_government = 0
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_bermondtian_plan_loyalist = {
+	name = "POL bermondtian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_BERMONDT_RK_LOYAL
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = BERMONDT_RK_LOYAL
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_cossack_king
+		POL_restore_bermontians
+		POL_develop_polish_ship_building
+		#1938
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_demand_LIT_pavel
+		#1939
+		POL_prepare_for_the_next_war
+		POL_demand_slovakia_pavel
+		POL_governorate_livonia
+		POL_seek_german_alignment
+		POL_invest_in_the_old_polish_region
+		#1940
+		
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		POL_assert_eastern_claims_pavel
+		POL_new_military_academy
+		POL_develop_gdansk_ship_building
+		#1941
+		
+		POL_expand_northern_rail
+		POL_LIT_union
+		POL_complete_the_bermontian_mission
+		POL_german_training
+		POL_german_staff
+		#1942
+		POL_request_autonomous_status
+		POL_assurance_of_loyalty
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+POL_monarchy_bermondtian_plan_rk_rebel = {
+	name = "POL bermondtian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_BERMONDT_RK_INDEPENDENT
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = BERMONDT_RK_INDEPENDENT
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_cossack_king
+		POL_restore_bermontians
+		POL_develop_polish_ship_building
+		#1938
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_demand_LIT_pavel
+		#1939
+		POL_prepare_for_the_next_war
+		POL_demand_slovakia_pavel
+		POL_governorate_livonia
+		POL_seek_german_alignment
+		POL_invest_in_the_old_polish_region
+		#1940
+		
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		POL_assert_eastern_claims_pavel
+		POL_new_military_academy
+		POL_develop_gdansk_ship_building
+		#1941
+		
+		POL_expand_northern_rail
+		POL_LIT_union
+		POL_complete_the_bermontian_mission
+		POL_konfederacja_narodu
+		POL_polish_shock_battallions
+		#1942
+		POL_plan_west
+		POL_sudeten_mountaineers
+		POL_the_prusya_army
+		POL_declare_independence
+		POL_radicalize_poles_in_germany
+		POL_anti_blitz_tactics
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_bermondtian_plan = {
+	name = "POL bermondtian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_BERMONDT
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = BERMONDT
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_cossack_king
+		POL_restore_bermontians
+		POL_develop_polish_ship_building
+		#1938
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_demand_LIT_pavel
+		#1939
+		POL_prepare_for_the_next_war
+		POL_demand_slovakia_pavel
+		POL_governorate_livonia
+		POL_assert_western_claims
+		POL_LIT_union
+		#1940
+		
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		POL_demand_pomerania
+		POL_new_military_academy
+		POL_develop_gdansk_ship_building
+		#1941
+		POL_expand_northern_rail
+		POL_national_defence_fund
+		POL_additional_research_slot2
+		POL_ideological_fanaticism
+		POL_invest_in_eastern_poland
+		#1942
+		POL_standardisation_of_equipment
+		POL_army_modernisation
+		POL_anti_tank_guns
+		POL_complete_the_bermontian_mission
+	}
+
+	focus_factors = {
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+		POL_seek_german_alignment = 0
+	} 
+
+
+	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_bermondtian_plan_alliance = {
+	name = "POL bermondtian plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_BERMONDT_ALLIANCE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = BERMONDT_ALLIANCE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_cossack_king
+		POL_restore_bermontians
+		POL_develop_polish_ship_building
+		#1938
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		POL_expand_gdynia_seaport
+		POL_additional_research_slot1
+		POL_demand_LIT_pavel
+		#1939
+		POL_prepare_for_the_next_war
+		POL_demand_slovakia_pavel
+	}
+
+	focus_factors = {
+		POL_seek_german_alignment = 0
+		POL_seek_an_alliance_with_byzantine = 10
+		POL_seek_an_alliance_with_french_empire = 10
+		POL_seek_an_alliance_with_tsar = 10
+		POL_seek_an_alliance_with_kaiser = 10
+	}
+	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_habsburg_plan = {
+	name = "POL habsburg plan"
+	desc = "Not joining factions, may create habsburg alliance with hun"
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_HABSBURG
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = HABSBURG
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council #35
+		POL_fulfil_fifth_of_november #35
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		
+		#1937
+		POL_habsburg #70
+		POL_restore_the_diet_of_galicia #70
+		POL_support_monarchy_in_CZE #70
+		POL_soldier_king #70
+		POL_royal_hussars #70
+
+		#1938
+		POL_habsburg_monarchist_militants #35
+		POL_king_of_bohemia #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		POL_integrate_gdansk_industries #70
+		POL_kings_guard #70
+		
+
+		#1939
+		POL_royal_officer_corps #70
+		POL_align_with_habsburgs #70
+		POL_unite_west_slavia  #70
+		POL_additional_research_slot1  #70
+		POL_prepare_for_the_next_war  #35
+		POL_invest_in_the_old_polish_region   #35
+
+		#1940
+		POL_national_defence_fund  #70
+		POL_press_the_habsburg_claim #70
+		POL_join_CZE_rails
+		POL_join_CZE_industry
+		POL_join_CZE_military
+
+		#1941
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		POL_new_military_academy		
+		POL_expand_northern_rail
+	}
+
+	focus_factors = {
+		POL_trust_in_the_west = 0
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_habsburg_plan_allies = {
+	name = "POL habsburg plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_HABSBURG_ALLIES
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = HABSBURG_ALLIES
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council #35
+		POL_fulfil_fifth_of_november #35
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		
+		#1937
+		POL_habsburg #70
+		POL_restore_the_diet_of_galicia #70
+		POL_support_monarchy_in_CZE #70
+		POL_soldier_king #70
+		POL_royal_hussars #70
+
+		#1938
+		POL_habsburg_monarchist_militants #35
+		POL_king_of_bohemia #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		POL_integrate_gdansk_industries #70
+		POL_kings_guard #70
+		
+
+		#1939
+		POL_royal_officer_corps #70
+		POL_trust_in_the_west #70
+		POL_unite_west_slavia  #70
+		POL_additional_research_slot1  #70
+		POL_prepare_for_the_next_war  #35
+		POL_invest_in_the_old_polish_region   #35
+
+		#1940
+		POL_national_defence_fund  #70
+		POL_reclaim_west_slavia
+		POL_join_CZE_rails
+		POL_join_CZE_industry
+		POL_join_CZE_military
+
+		#1941
+		POL_modernize_congressional_factories
+		POL_warsaw_main_railway_station
+		POL_new_military_academy		
+		POL_expand_northern_rail
+	}
+
+	focus_factors = {
+		POL_press_the_habsburg_claim = 0
+		POL_align_with_habsburgs = 0
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_habsburg_plan_alliance = {
+	name = "POL habsburg plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_HABSBURG_ALLIANCE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = HABSBURG_ALLIANCE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council #35
+		POL_fulfil_fifth_of_november #35
+		POL_the_four_year_plan #35
+		POL_central_region_strategy #35
+		POL_expansion_of_new_towns #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		
+		#1937
+		POL_habsburg #70
+		POL_restore_the_diet_of_galicia #70
+		POL_support_monarchy_in_CZE #70
+		POL_soldier_king #70
+		POL_royal_hussars #70
+
+		#1938
+		POL_habsburg_monarchist_militants #35
+		POL_king_of_bohemia #70
+		POL_clamp_down_on_danzig #35
+		POL_ban_the_nazi_party #35
+		POL_integrate_gdansk_industries #70
+		POL_kings_guard #70
+
+		#1939
+		POL_royal_officer_corps #70
+		POL_unite_west_slavia  #70
+	}
+
+	focus_factors = {
+		POL_press_the_habsburg_claim = 0
+		POL_trust_in_the_west = 0
+		POL_seek_an_alliance_with_byzantine = 10
+		POL_seek_an_alliance_with_french_empire = 10
+		POL_seek_an_alliance_with_tsar = 10
+		POL_seek_an_alliance_with_kaiser = 10
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_romanov_plan_alliance = { 
+	name = "POL romanov plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_ROMANOV_ALLIANCE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = ROMANOV_ALLIANCE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_romanov
+		POL_invite_exiled_nobility
+		POL_pan_slavism
+		#1938
+		POL_clamp_down_on_danzig
+		POL_ban_the_nazi_party
+		POL_integrate_gdansk_industries
+		POL_additional_research_slot1
+		POL_demand_LIT_pavel
+		#1939
+		POL_prepare_for_the_next_war
+		POL_demand_slovakia_pavel
+		POL_national_defence_fund
+		
+	}
+
+	focus_factors = {
+
+		POL_demand_yugoslav_subjugation = 0
+		POL_assert_western_claims = 0
+		POL_seek_an_alliance_with_byzantine = 10
+		POL_seek_an_alliance_with_french_empire = 10
+		POL_seek_an_alliance_with_tsar = 10
+		POL_seek_an_alliance_with_kaiser = 10
+	}
+	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_monarchy_romanov_plan = { 
+	name = "POL romanov plan - GO CRAZY EDITION!"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_ROMANOV
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = ROMANOV
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_assemble_the_regency_council
+		POL_fulfil_fifth_of_november
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_expansion_of_new_towns
+		#1937
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_romanov
+		POL_invite_exiled_nobility
+		POL_pan_slavism
+		#1938
+		POL_clamp_down_on_danzig
+		POL_ban_the_nazi_party
+		POL_integrate_gdansk_industries
+		POL_additional_research_slot1
+		POL_demand_LIT_pavel
+		#1939
+		POL_prepare_for_the_next_war
+		POL_demand_slovakia_pavel
+		POL_national_defence_fund
+		POL_additional_research_slot2
+		POL_the_carpathian_pathway
+		#1940
+		POL_invest_in_eastern_poland
+		POL_demand_yugoslav_subjugation
+		POL_ideological_fanaticism
+		POL_start_central_industrial_region
+		POL_expand_central_industrial_region
+		#1941
+		POL_plan_east
+		POL_eastern_conscripts
+		POL_claim_russia
+		POL_proclaim_slavic_unity
+	}
+
+	focus_factors = {
+		POL_seek_an_alliance_with_byzantine = 0
+		POL_seek_an_alliance_with_french_empire = 0
+		POL_seek_an_alliance_with_tsar = 0
+		POL_seek_an_alliance_with_kaiser = 0
+	}
+	
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_fascist_plan = {
+	name = "POL fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_FASCIST
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = FASCIST
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+		NOT = {
+			has_government = fascism
+		} #Should cancel if Poland ends up a puppet of someone and isn't fascist
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_nationalist_constitution
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		#1937
+		POL_integrate_the_endecja
+		POL_national_defence_fund
+		POL_warsaw_main_railway_station
+		POL_develop_polish_ship_building
+		POL_additional_research_slot1
+		#1938
+		POL_siodemki
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		POL_expand_gdynia_seaport
+		POL_sideline_the_sanacja
+		#1939
+		POL_reopen_national_elections
+		POL_prepare_for_the_next_war
+		POL_beck_ribbentrop
+		POL_assert_eastern_claims
+		POL_divide_lit
+		#1940
+		POL_german_training
+		POL_german_staff
+		POL_new_military_academy
+		POL_standardisation_of_equipment
+		POL_invest_in_the_old_polish_region
+		#1941
+		POL_request_autonomous_status
+		POL_develop_upper_silesia
+		POL_fighter_modernisation
+		POL_air_innovations
+		POL_heavy_fighter_concept
+		#1942
+		POL_assurance_of_loyalty
+		POL_light_bomber_focus
+		POL_air_modernisations_programme		
+		POL_develop_polish_ship_building
+		POL_study_foreign_built_ships
+		#1943
+		POL_import_submarine_technology
+		POL_medium_bomber_focus
+		POL_the_twin_threats
+		POL_coastal_defense
+		POL_strike_force
+		POL_baltic_navy
+		#1944	
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_independent_fascist_plan = {
+	name = "POL fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_FASCIST_INDEPENDENT
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = FASCIST_INDEPENDENT
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan
+		POL_central_region_strategy
+		POL_nationalist_constitution
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		#1937
+		POL_integrate_the_endecja
+		POL_national_defence_fund
+		POL_warsaw_main_railway_station
+		POL_develop_polish_ship_building
+		POL_additional_research_slot1
+		#1938
+		POL_siodemki
+		POL_attract_poles_to_gdynia
+		POL_study_foreign_built_ships
+		POL_expand_gdynia_seaport
+		POL_sideline_the_sanacja
+		#1939
+		POL_reopen_national_elections
+		POL_prepare_for_the_next_war
+		POL_beck_ribbentrop
+		POL_assert_eastern_claims
+		POL_divide_lit
+		#1940
+		POL_konfederacja_narodu
+		POL_polish_shock_battallions
+		POL_new_military_academy
+		POL_standardisation_of_equipment
+		POL_invest_in_the_old_polish_region
+		#1941
+		POL_reach_out_to_underground_state
+		POL_develop_upper_silesia
+		POL_fighter_modernisation
+		POL_air_innovations
+		POL_heavy_fighter_concept
+		#1942
+		POL_declare_independence
+		POL_radicalize_poles_in_germany
+		POL_anti_blitz_tactics
+		POL_light_bomber_focus
+		POL_air_modernisations_programme		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_falangist_plan = {
+	name = "POL fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_FALANGE
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = FALANGE
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_the_four_year_plan
+		POL_nationalist_constitution
+		POL_fill_the_railways_gaps
+		POL_agrarian_reform
+		POL_clamp_down_on_danzig
+		#1937
+		POL_integrate_the_falanga
+		POL_national_defence_fund
+		POL_warsaw_main_railway_station
+		POL_empower_falangist_militants
+		POL_ban_the_nazi_party
+		#1938
+		POL_integrate_gdansk_industries
+		POL_additional_research_slot1
+		POL_sideline_the_sanacja
+		POL_riot_of_37
+		POL_reassert_silesian_claims
+		#1939
+		POL_support_global_falangism
+		POL_prepare_for_the_next_war
+		POL_falangist_international
+		POL_state_catholicism
+		POL_demand_LIT
+		POL_the_national_commonwealth
+		#1940
+		POL_invite_the_lowlands
+		POL_support_falangists_in_the_americas
+		POL_prepare_german_line
+		POL_new_military_academy
+		POL_standardisation_of_equipment
+		POL_assert_eastern_claims
+		#1941
+		POL_force_polish_upper_class
+		POL_develop_upper_silesia
+		POL_fighter_modernisation
+		POL_air_innovations
+		POL_heavy_fighter_concept
+		POL_privatize_education	
+		
+	}
+
+	focus_factors = {
+		POL_the_north_sea = 0
+		POL_the_baltic_alliance = 0
+		POL_the_mediterranean = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+POL_NSB_falangist_plan = {
+	name = "POL fascist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			has_country_flag = POL_AI_RANDOM_FALANGE_INTERNATIONAL
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = FALANGE_INTERNATIONAL
+			}
+		}
+		has_DLC = "No Step Back"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_nationalist_constitution #70
+		POL_integrate_the_falanga #35
+		POL_the_four_year_plan #35
+		POL_fill_the_railways_gaps #70
+		POL_agrarian_reform #70
+		POL_clamp_down_on_danzig #35		
+		POL_empower_falangist_militants #35
+
+		#1937
+		POL_ban_the_nazi_party #35
+		POL_sideline_the_sanacja #70
+		POL_riot_of_37 #70
+		POL_integrate_gdansk_industries #70
+		POL_additional_research_slot1 #70
+
+		#1938
+		POL_reassert_silesian_claims #70
+		POL_support_global_falangism #70
+		POL_falangist_international #70
+		POL_anti_germans_abroad #35
+		POL_invite_the_baltics #70
+		POL_invite_the_lowlands #70
+
+		#1939
+		POL_the_baltic_alliance #35
+		POL_treaty_with_lithuania #35
+		POL_the_mediterranean #35
+		POL_coerce_czechoslovakia #35
+		POL_austro_hungarian_alliance #35
+		POL_the_north_sea #35
+		POL_protect_yugoslavia #35
+		POL_finno_polish_pact #35
+		POL_invite_sweden #35
+		POL_invite_greece #35
+
+		#1940
+		POL_control_the_bosporus #SKIPPED
+		POL_italian_alliance #35
+		POL_support_falangists_in_the_americas #70
+		POL_prepare_german_line
+		POL_new_military_academy
+		POL_standardisation_of_equipment
+		POL_assert_eastern_claims
+		#1941
+		POL_force_polish_upper_class
+		POL_develop_upper_silesia
+		POL_privatize_education	
+		
+		POL_state_catholicism
+		POL_national_defence_fund #70
+		POL_warsaw_main_railway_station #70
+		POL_integrate_greater_kashubia
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+

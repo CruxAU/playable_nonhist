@@ -1,0 +1,179 @@
+# By Blood Alone
+HOA_AFA_SUBMIT_PLAN = {
+	name = ":("
+	desc = ""
+
+	allowed = {
+		original_tag = AFA
+	}
+	enable = {
+		OR = {
+			has_country_flag = AFA_AI_RANDOM_SUBMIT
+			has_game_rule = {
+				rule = AFA_ai_behavior
+				option = SUBMIT
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		HOA_the_first_album
+		HOA_a_loyal_subject
+		HOA_develop_capitalstate
+		HOA_pave_the_roads
+		HOA_the_steam_locomotive
+		HOA_exploit_national_resources
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		HOA_strengthen_the_irregulars = 0
+		HOA_countryleader = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOA_AFA_anti_italian_plan = {
+	name = ":D"
+	desc = ""
+
+	allowed = {
+		original_tag = AFA
+	}
+	enable = {
+		OR = {
+			has_country_flag = AFA_AI_RANDOM_FIGHT_ITA
+			has_game_rule = {
+				rule = AFA_ai_behavior
+				option = FIGHT_ITA
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		HOA_the_adjective_armed_forces
+		HOA_warrior_tradition
+		HOA_strengthen_the_irregulars
+		HOA_utilize_our_strengths
+		HOA_names_finest
+		HOA_encourage_local_arms_production
+		HOA_eyes_on_the_imperialists
+		HOA_securing_the_adjective_future
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		HOA_countryleader = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOA_AFA_anti_ethiopian_plan = {
+	name = ":DD"
+	desc = ""
+
+	allowed = {
+		original_tag = AFA
+	}
+	enable = {
+		OR = {
+			has_country_flag = AFA_AI_RANDOM_FIGHT_ETH
+			has_game_rule = {
+				rule = AFA_ai_behavior
+				option = FIGHT_ETH
+			}
+		}
+		has_DLC = "By Blood Alone"
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		HOA_the_adjective_armed_forces
+		HOA_warrior_tradition
+		HOA_strengthen_the_irregulars
+		HOA_utilize_our_strengths
+		HOA_names_finest
+		HOA_encourage_local_arms_production
+		HOA_eyes_on_the_imperialists
+		HOA_countryleader
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	focus_factors = {
+		HOA_securing_the_adjective_future = 0
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
