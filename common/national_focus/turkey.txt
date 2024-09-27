@@ -6756,14 +6756,26 @@ focus_tree = {
 		available = {
 			is_subject = no
 			any_other_country = {
-				has_government = fascism
 				OR = {
-					original_tag = ITA
-					original_tag = GRE
-					original_tag = YUG
-					original_tag = FRA
-					original_tag = SPR
-					original_tag = POL
+					AND = {
+						has_government = fascism
+						OR = {
+							original_tag = ITA
+							original_tag = GRE
+							original_tag = YUG
+							original_tag = FRA
+							original_tag = POL
+						}
+					}
+					AND = {
+						has_global_flag = scw_over
+						is_subject = no
+						OR = {
+							original_tag = SPR
+							tag = SPA
+						}
+						has_government = fascism
+					}
 				}
 				NOT = { is_in_faction_with = ENG }
 				NOT = { is_in_faction_with = GER }
@@ -6932,6 +6944,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
+					has_global_flag = scw_over
 					SPR = {
 						has_government = fascism
 						NOT = { is_in_faction_with = ENG }
@@ -9030,7 +9043,6 @@ focus_tree = {
 			any_other_country = {
 				OR = {
 					AND = {
-						is_faction_leader = yes
 						has_government = communism
 						OR = {
 							original_tag = ITA

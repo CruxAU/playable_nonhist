@@ -66,6 +66,7 @@ TUR_ideology_ottoman_plan = {
 		TUR_mechanising_our_army = 0
 		TUR_the_path_of_the_wolf = 0
 		TUR_patrol_the_seas = 0
+		TUR_reconfigure_our_foreign_policy = 0
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -686,6 +687,10 @@ TUR_minors_plan = { #the actual focuses are in the national_focus tree
 
 	}
 
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
 	focus_factors = {
 		TUR_join_the_allies = 0
 		TUR_the_mediterranean_entente = 0
@@ -723,6 +728,10 @@ TUR_allies_plan = { #the actual focuses are in the national_focus tree
 	}
 	abort = {
 
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
 	}
 
 	focus_factors = {
@@ -764,6 +773,10 @@ TUR_italy_plan = { #the actual focuses are in the national_focus tree
 
 	}
 
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
 	focus_factors = {
 		TUR_join_the_minor_democracies = 0
 		TUR_join_the_allies = 0
@@ -801,6 +814,10 @@ TUR_axis_plan = { #the actual focuses are in the national_focus tree
 	}
 	abort = {
 
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
 	}
 
 	focus_factors = {
@@ -842,6 +859,10 @@ TUR_med_plan = { #the actual focuses are in the national_focus tree
 
 	}
 
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
 	focus_factors = {
 		TUR_join_the_minor_democracies = 0
 		TUR_join_the_allies = 0
@@ -881,6 +902,10 @@ TUR_comintern_plan = { #the actual focuses are in the national_focus tree
 
 	}
 
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
 	focus_factors = {
 		TUR_join_the_minor_democracies = 0
 		TUR_join_the_allies = 0
@@ -918,6 +943,10 @@ TUR_balkan_pact_plan = { #the actual focuses are in the national_focus tree
 	}
 	abort = {
 
+	}
+
+	ai_national_focuses = {
+		TUR_continue_to_prioritise_balkan_integrity
 	}
 
 	focus_factors = {

@@ -3288,37 +3288,37 @@ TUR_ai_behavior = {
 	option = {
 		name = ALLIES
 		text = "RULE_OPTION_JOIN_BRITAIN"
-		desc = "RULE_OPTION_TUR_DEMOCRATIC_KEMALIST_DESC"
+		desc = "RULE_OPTION_JOIN_BRITAIN_TUR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = AXIS
 		text = "RULE_OPTION_JOIN_GERMANY"
-		desc = "RULE_OPTION_TUR_DEMOCRATIC_ALTERNATE_DESC"
+		desc = "RULE_OPTION_JOIN_GERMANY_TUR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = COMINTERN
 		text = "RULE_OPTION_JOIN_SOVIET"
-		desc = "RULE_OPTION_FASCISM_TUR_AI_DESC"
+		desc = "RULE_OPTION_JOIN_SOVIET_TUR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = EURO
 		text = "RULE_OPTION_JOIN_EURO"
-		desc = "RULE_OPTION_TUR_FASCISM_ALTERNATE_DESC"
+		desc = "RULE_OPTION_JOIN_EURO_TUR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = MED_F
 		text = "RULE_OPTION_JOIN_MED_F"
-		desc = "RULE_OPTION_COMMUNIST_TUR_AI_DESC"
+		desc = "RULE_OPTION_JOIN_MED_F_TUR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = MED_C
 		text = "RULE_OPTION_JOIN_MED_C"
-		desc = "RULE_OPTION_ALTERNATE_COMMUNIST_TUR_AI_DESC"
+		desc = "RULE_OPTION_JOIN_MED_C_TUR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {

@@ -817,7 +817,7 @@ country_event = {
 	option = {
 		name = bftb_turkey.21.b #the Demokrat Parti!
 		trigger = {
-			democratic > 0.4
+			democratic > 0.3
 		}
 		ai_chance = {
 			factor = 15

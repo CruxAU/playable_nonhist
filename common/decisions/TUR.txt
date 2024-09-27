@@ -123,8 +123,12 @@ TUR_the_constitutional_arrows_category = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
+				has_stability < 0.25
+				factor = 2
+			}
+			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -173,13 +177,7 @@ TUR_the_constitutional_arrows_category = {
 						character = TUR_durrushehvar_i
 						ruling_only = yes
 					}
-					AND = { 
-						has_country_leader = {
-							character = TUR_fevzi_cakmak
-							ruling_only = yes
-						}
-						NOT = { has_completed_focus = TUR_loosen_the_laws_on_secularism } 
-					}
+					NOT = { has_completed_focus = TUR_loosen_the_laws_on_secularism } 
 				}
 			}
 		}
@@ -195,6 +193,22 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
+				factor = 0.5
+			}
+			modifier = {
+				OR = {
+					has_completed_focus = TUR_loosen_the_laws_on_secularism
+					has_country_flag = TUR_AI_RANDOM_IDEO_DEMOCRATIC_FUNDAMENTALIST
+					has_game_rule = {
+						rule = TUR_ideo_ai_behavior
+						option = DEMOCRATIC_FUNDAMENTALIST
+					}
+					has_country_flag = TUR_AI_RANDOM_IDEO_OTTOMAN
+					has_game_rule = {
+						rule = TUR_ideo_ai_behavior
+						option = OTTOMAN
+					}
+				}
 				factor = 0
 			}
 		}
@@ -276,7 +290,7 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -337,7 +351,11 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
+			}
+			modifier = {
+				factor = 2
+				has_war_support < 0.25
 			}
 		}
 
@@ -399,10 +417,10 @@ TUR_the_constitutional_arrows_category = {
 		cost = 75
 
 		ai_will_do = {
-			factor = 5
+			factor = 8
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -511,7 +529,7 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -554,6 +572,10 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
+				factor = 0.5
+			}
+			modifier = {
+				has_stability > 0.6
 				factor = 0
 			}
 		}
@@ -615,7 +637,7 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -660,13 +682,7 @@ TUR_the_constitutional_arrows_category = {
 					character = TUR_durrushehvar_i
 					ruling_only = yes
 				}
-				AND = { 
-					has_country_leader = {
-						character = TUR_fevzi_cakmak
-						ruling_only = yes
-					}
-					has_completed_focus = TUR_loosen_the_laws_on_secularism
-				}
+				has_completed_focus = TUR_loosen_the_laws_on_secularism
 			}
 		}
 		
@@ -680,7 +696,11 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
+			}
+			modifier = {
+				factor = 1.5
+				has_completed_focus = TUR_loosen_the_laws_on_secularism
 			}
 		}
 
@@ -748,7 +768,7 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -800,7 +820,7 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -852,10 +872,10 @@ TUR_the_constitutional_arrows_category = {
 		cost = 100
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 
@@ -915,7 +935,7 @@ TUR_the_constitutional_arrows_category = {
 			factor = 5
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 0.5
 			}
 		}
 

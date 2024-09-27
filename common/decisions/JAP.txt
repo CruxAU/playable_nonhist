@@ -2976,16 +2976,19 @@ JAP_expand_northern_bases = {
 						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
 						owner = ROOT
 						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
 					}
 					create_unit = {
 						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
 						owner = ROOT
 						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
 					}
 					create_unit = {
 						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
 						owner = ROOT
 						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 1823
 					}
 					add_building_construction = {
 						type = naval_base
@@ -3084,16 +3087,19 @@ JAP_expand_northern_bases = {
 						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
 						owner = ROOT
 						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
 					}
 					create_unit = {
 						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
 						owner = ROOT
 						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
 					}
 					create_unit = {
 						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
 						owner = ROOT
 						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 1823
 					}
 					add_building_construction = {
 						type = naval_base

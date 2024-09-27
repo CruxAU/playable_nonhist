@@ -15,7 +15,7 @@ SAF_historical = {
 					option = DEFAULT
 				}
 			}
-			has_country_flag = SAF_AI_RANDOM_DEMOCRATIC_HISTORICAL 
+			has_country_flag = SAF_AI_DEMOCRATIC_HISTORICAL 
 			has_game_rule = {
 				rule = SAF_ai_behavior
 				option = DEMOCRATIC_HISTORICAL
