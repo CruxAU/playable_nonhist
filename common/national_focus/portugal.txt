@@ -3055,8 +3055,9 @@ focus_tree = {
 					has_civil_war = no
 				}
 				set_temp_variable = { POR_communist_cw_opposition = party_popularity@democratic }
-				multiply_temp_variable = { POR_communist_cw_opposition = 0.8 }
-				add_to_temp_variable = { POR_communist_cw_opposition = party_popularity@neutrality }
+				multiply_temp_variable = { POR_communist_cw_opposition = 0.5 }
+				set_temp_variable = { POR_communist_cw_opposition = party_popularity@neutrality }
+				multiply_temp_variable = { POR_communist_cw_opposition = 0.9 }
 				add_to_temp_variable = { POR_communist_cw_opposition = party_popularity@fascism }
 				hidden_effect = {
 					start_civil_war = {	

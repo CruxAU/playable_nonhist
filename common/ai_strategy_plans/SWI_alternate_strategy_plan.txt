@@ -368,18 +368,19 @@ SWI_pro_axis_neutral_plan = {
 		SWI_armed_neutrality #5
 
 		#1937
+		SWI_frontier_defense_plan
+		SWI_fight_until_death
+		SWI_all_adults_training
+		SWI_veteran_sharpshooter_divisions
+		SWI_reduce_military_training_age #5
+		SWI_total_defense
+		
+		#1938
 		SWI_federal_police
 		SWI_purchase_german_planes
 		SWI_ban_the_communist_party
 		SWI_withdraw_from_the_league_of_nations #5
 		SWI_limited_censorship_of_the_press
-		SWI_frontier_defense_plan
-
-		#1938
-		SWI_fight_until_death
-		SWI_all_adults_training
-		SWI_veteran_sharpshooter_divisions
-		SWI_reduce_military_training_age #5
 		SWI_tighten_press_censorship
 		
 		#1939
@@ -408,6 +409,10 @@ SWI_pro_axis_neutral_plan = {
 		SWI_integrate_refugees_into_the_army = 0
 		SWI_ban_national_movement_for_switzerland = 0
 		SWI_adopt_romansh = 0
+		SWI_support_allied_espionage = 0
+		SWI_allied_gold = 0
+		SWI_closer_democratic_ties = 0
+		SWI_gotthard_union = 0
 	}
 
 	research = {

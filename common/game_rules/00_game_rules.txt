@@ -4040,6 +4040,30 @@ SWI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = NEUTRALITY_ALTERNATE
+		text = "RULE_OPTION_NEUTRALITY_ALTERNATE"
+		desc = "RULE_NEUTRALITY_ALTERNATE_SWI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEUTRALITY_MARTIAL_LAW
+		text = "RULE_OPTION_NEUTRALITY_MARTIAL_LAW"
+		desc = "RULE_NEUTRALITY_MARTIAL_LAW_SWI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEUTRALITY_PRO_ALLIES
+		text = "RULE_OPTION_NEUTRALITY_PRO_ALLIES"
+		desc = "RULE_NEUTRALITY_PRO_ALLIES_SWI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEUTRALITY_PRO_AXIS
+		text = "RULE_OPTION_NEUTRALITY_PRO_AXIS"
+		desc = "RULE_NEUTRALITY_PRO_AXIS_SWI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = SWI_ALLIED_DEMOCRATIC
 		text = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC"
 		desc = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC_AI_DESC"

@@ -86,6 +86,7 @@ country_event = {
 		    	factor = 0
 				NOT = {
 					SWI_is_historical_ai = yes
+					SWI_AI_is_partial_neutrality = yes
 				}
 		    }
 	    }
@@ -490,11 +491,7 @@ country_event = {  #For Germany: Do you want to Press the Swiss?
 			base = 10
 			modifier = {
 				factor = 0.1
-				OR = {
-					has_government = fascism
-					is_historical_focus_on = yes
-				}
-
+				has_government = fascism
 			}
 		}
 		trigger = {
@@ -1097,6 +1094,7 @@ country_event = { #Petition of the 200
 					OR = {
 						SWI_is_historical_ai = yes 
 						SWI_AI_is_dem_allied = yes 
+						SWI_AI_is_pro_allies = yes
 					}
 				}
 			}
@@ -1140,7 +1138,11 @@ country_event = { #Petition of the 200
 			base = 10
 			modifier = {
 				factor = 10 
-				SWI_AI_is_fascist = yes 
+				OR = {
+					SWI_AI_is_fascist = yes 
+					SWI_AI_is_pro_axis = yes
+				}
+				
 			}
 		}
 		trigger = {
@@ -1925,6 +1927,7 @@ country_event = { #Regular annual elections
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
+							SWI_AI_is_partial_neutrality = yes
 							SWI_is_historical_ai = yes 
 						}
 					}
@@ -1932,7 +1935,11 @@ country_event = { #Regular annual elections
 						var:SWI_councilor_1 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						SWI_AI_is_fascist = yes 
+						OR = {
+							SWI_AI_is_fascist = yes
+							SWI_AI_is_pro_axis = yes
+						}
+						 
 					}
 					AND = {
 						var:SWI_councilor_1 = {
@@ -1984,13 +1991,17 @@ country_event = { #Regular annual elections
 						OR = {
 							SWI_AI_is_dem_allied = yes 
 							SWI_is_historical_ai = yes 
+							SWI_AI_is_partial_neutrality = yes
 						}
 					}
 					AND = {
 						var:SWI_councilor_2 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						SWI_AI_is_fascist = yes 
+						OR = {
+							SWI_AI_is_fascist = yes
+							SWI_AI_is_pro_axis = yes
+						}
 					}
 					AND = {
 						var:SWI_councilor_2 = {
@@ -2042,13 +2053,17 @@ country_event = { #Regular annual elections
 						OR = {
 							SWI_AI_is_dem_allied = yes 
 							SWI_is_historical_ai = yes 
+							SWI_AI_is_partial_neutrality = yes
 						}
 					}
 					AND = {
 						var:SWI_councilor_3 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						SWI_AI_is_fascist = yes 
+						OR = {
+							SWI_AI_is_fascist = yes
+							SWI_AI_is_pro_axis = yes
+						}
 					}
 					AND = {
 						var:SWI_councilor_3 = {
@@ -2116,13 +2131,17 @@ country_event = { #Snap election when President is ousted
 						OR = {
 							SWI_AI_is_dem_allied = yes 
 							SWI_is_historical_ai = yes 
+							SWI_AI_is_partial_neutrality = yes
 						}
 					}
 					AND = {
 						var:SWI_councilor_1 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						SWI_AI_is_fascist = yes 
+						OR = {
+							SWI_AI_is_fascist = yes
+							SWI_AI_is_pro_axis = yes
+						}
 					}
 					AND = {
 						var:SWI_councilor_1 = {
@@ -2167,14 +2186,18 @@ country_event = { #Snap election when President is ousted
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
-							SWI_is_historical_ai = yes 
+							SWI_is_historical_ai = yes
+							SWI_AI_is_partial_neutrality = yes 
 						}
 					}
 					AND = {
 						var:SWI_councilor_2 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						SWI_AI_is_fascist = yes 
+						OR = {
+							SWI_AI_is_fascist = yes
+							SWI_AI_is_pro_axis = yes
+						} 
 					}
 					AND = {
 						var:SWI_councilor_2 = {
@@ -2219,13 +2242,17 @@ country_event = { #Snap election when President is ousted
 						OR = {
 							SWI_AI_is_dem_allied = yes 
 							SWI_is_historical_ai = yes 
+							SWI_AI_is_partial_neutrality = yes
 						}
 					}
 					AND = {
 						var:SWI_councilor_3 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						SWI_AI_is_fascist = yes 
+						OR = {
+							SWI_AI_is_fascist = yes
+							SWI_AI_is_pro_axis = yes
+						} 
 					}
 					AND = {
 						var:SWI_councilor_3 = {

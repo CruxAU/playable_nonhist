@@ -560,7 +560,7 @@ SWI_is_fasc_ger = {
 
 ###### AI Triggers ##### 
 
-SWI_is_historical_ai = { #full neutrality
+SWI_is_historical_ai = { #full neutrality, 100% cantons all the time
 	is_ai = yes 
 	OR = {
 		AND = {
@@ -582,7 +582,7 @@ SWI_AI_is_pro_allies = {
 	OR = {		
 		has_game_rule = {
 			rule = SWI_AI_BEHAVIOR
-			option = A
+			option = NEUTRALITY_PRO_ALLIES
 		}
 		has_country_flag = A
 	}
@@ -592,7 +592,7 @@ SWI_AI_is_pro_axis = {
 	OR = {		
 		has_game_rule = {
 			rule = SWI_AI_BEHAVIOR
-			option = A
+			option = NEUTRALITY_PRO_AXIS
 		}
 		has_country_flag = A
 	}
@@ -614,7 +614,11 @@ SWI_AI_is_partial_neutrality = { #ensures AI TRIES to stay in the strong cantons
 		SWI_AI_is_pro_axis = yes
 		has_game_rule = {
 			rule = SWI_AI_BEHAVIOR
-			option = A
+			option = NEUTRALITY_ALTERNATE
+		}
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = NEUTRALITY_MARTIAL_LAW
 		}
 		has_country_flag = A
 	}
@@ -683,13 +687,34 @@ SWI_character_matches_strategy = {
 		}
 		AND = {
 			SWI = { SWI_AI_is_imperial = yes }
-			SWI_is_council_guy = yes 
-			SWI_councilor_is_fascist = no 
+			OR = {
+				SWI_councilor_is_neutrality_despotism = yes
+				AND = {
+					SWI_is_council_guy = yes
+					SWI_councilor_is_democratic = yes
+				}
+			}		
 		}
 		AND = {
-			SWI = { SWI_AI_is_dem_allied = yes } 
-			SWI_councilor_is_fascist = no 
-			SWI_councilor_is_any_kind_of_communist = no
+			OR = {
+				SWI = { SWI_AI_is_dem_allied = yes } 
+				SWI = { SWI_AI_is_pro_allies = yes }
+			}
+			SWI_councilor_is_democratic = yes 
+		}
+		AND = {
+			SWI = { SWI_AI_is_pro_axis = yes }
+			OR = {
+				SWI_councilor_is_democratic = yes
+				SWI_councilor_is_fascist = yes 
+			}
+		}
+		AND = {
+			SWI = { SWI_AI_is_communist = yes }
+			OR = {
+				SWI_councilor_is_any_kind_of_communist = yes
+				SWI_councilor_is_democratic_socialism = yes
+			}
 		}
 	}
 }

@@ -40,7 +40,7 @@
 #		}
 #
 #		cancel_if_invalid = no
-#		continue_if_invalid = no
+#		continue_if_invalid = yes
 #		available_if_capitulated = no
 #
 #		complete_tooltip = {
@@ -604,7 +604,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -642,7 +642,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -686,7 +686,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -739,7 +739,7 @@
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1220,7 +1220,7 @@
 		}
 		search_filters = {FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1267,7 +1267,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1309,7 +1309,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1378,7 +1378,7 @@
 		}
 		search_filters = {FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1421,7 +1421,7 @@
 		}
 		search_filters = {FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1470,7 +1470,7 @@
 		search_filters = { FOCUS_FILTER_MANPOWER} 
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1510,7 +1510,7 @@
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SWI_MILITARY_READINESS} 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1574,7 +1574,7 @@
 
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER}
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1617,7 +1617,7 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		complete_tooltip = {
@@ -1686,7 +1686,7 @@
 		}
 		search_filters = {FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1753,7 +1753,7 @@
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1796,7 +1796,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1842,7 +1842,7 @@
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1962,7 +1962,7 @@
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2025,7 +2025,7 @@
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2116,7 +2116,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2463,7 +2463,7 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2705,7 +2705,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2774,7 +2774,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 		
@@ -2812,7 +2812,7 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2867,7 +2867,7 @@
 		}
 		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2935,7 +2935,7 @@
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -2978,7 +2978,7 @@
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3016,7 +3016,7 @@
 		}
 		search_filters = {FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3065,7 +3065,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3114,7 +3114,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3193,7 +3193,7 @@
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3229,7 +3229,7 @@
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3301,7 +3301,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3439,7 +3439,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3532,7 +3532,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3592,7 +3592,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3633,7 +3633,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3677,7 +3677,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3728,7 +3728,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3771,7 +3771,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3903,7 +3903,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -3960,7 +3960,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4011,7 +4011,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL}
 		
@@ -4047,7 +4047,7 @@
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4088,7 +4088,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4163,7 +4163,7 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4273,7 +4273,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4314,7 +4314,7 @@
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4367,7 +4367,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4418,7 +4418,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4482,7 +4482,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4530,7 +4530,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4566,7 +4566,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4606,7 +4606,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4673,7 +4673,7 @@
 		}
 		search_filters =  {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4758,7 +4758,7 @@
 		}
 		search_filters =  {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4799,7 +4799,7 @@
 		}
 		search_filters =  {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4853,7 +4853,7 @@
 		}
 		search_filters =  {FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4902,7 +4902,7 @@
 		}
 		search_filters =  {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -4950,7 +4950,7 @@
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5001,7 +5001,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5045,7 +5045,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5243,7 +5243,7 @@
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5310,7 +5310,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5363,7 +5363,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5460,7 +5460,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5533,7 +5533,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5595,7 +5595,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = yes 
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5651,7 +5651,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5695,7 +5695,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 
@@ -5740,7 +5740,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5795,7 +5795,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5832,7 +5832,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5868,7 +5868,7 @@
 		}
 		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5908,7 +5908,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -5957,7 +5957,7 @@
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6003,7 +6003,7 @@
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6075,7 +6075,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_SWI_MILITARY_READINESS FOCUS_FILTER_ARMY_XP}
 		
@@ -6122,7 +6122,7 @@
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6159,7 +6159,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6217,7 +6217,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6275,7 +6275,7 @@
 		}
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6332,7 +6332,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6373,7 +6373,7 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6416,7 +6416,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6452,7 +6452,7 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6494,7 +6494,7 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6537,7 +6537,7 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6579,7 +6579,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
@@ -6641,7 +6641,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6702,7 +6702,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6785,7 +6785,7 @@
 		}
 		search_filters = {  FOCUS_FILTER_RESEARCH} 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6831,7 +6831,7 @@
 		}
 		search_filters = {  FOCUS_FILTER_RESEARCH} 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -6884,7 +6884,7 @@
 		}
 		search_filters = {  FOCUS_FILTER_INDUSTRY} 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7026,7 +7026,7 @@
 		}
 		search_filters = {  FOCUS_FILTER_RESEARCH } 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7070,7 +7070,7 @@
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
 		
@@ -7145,7 +7145,7 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL} 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7284,7 +7284,7 @@ focus = {
 		}
 		search_filters = {  FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT } 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7323,6 +7323,7 @@ focus = {
 					SWI_AI_is_dem_allied = yes
 					SWI_AI_is_dem_exp = yes
 					SWI_AI_is_imperial = yes
+					SWI_AI_is_pro_allies = yes
 				}
 			}
 			modifier = {
@@ -7348,7 +7349,7 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7411,7 +7412,7 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7501,7 +7502,7 @@ focus = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7560,7 +7561,7 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7618,7 +7619,7 @@ focus = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		
@@ -7689,7 +7690,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7753,7 +7754,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7819,7 +7820,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7860,7 +7861,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7895,7 +7896,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7940,7 +7941,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -7993,7 +7994,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8028,7 +8029,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8073,7 +8074,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_SWI_MILITARY_READINESS}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8113,7 +8114,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8176,7 +8177,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8247,7 +8248,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8317,7 +8318,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8415,7 +8416,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8453,7 +8454,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8527,7 +8528,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8589,7 +8590,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8628,7 +8629,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8667,7 +8668,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8718,7 +8719,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8758,7 +8759,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8795,7 +8796,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8839,7 +8840,7 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8879,7 +8880,7 @@ focus = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -8915,7 +8916,7 @@ focus = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		

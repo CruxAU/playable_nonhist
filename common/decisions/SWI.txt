@@ -2087,6 +2087,11 @@ SWI_federal_council_decisions_category = {
 		}
 		ai_will_do = {
 			base = 0
+			modifier = {
+				add = 500
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+			}
 		}
 	}
 }
@@ -2129,13 +2134,21 @@ SWI_centralization_power_balance_decisions = {
 			base = 0
 			modifier = {
 				add = 150
-				SWI_is_historical_ai = yes 
-				NOT = {
-					is_power_balance_in_range  = {
-						id = SWI_centralization_bop
-						range = SWI_centralization_bop_fully_cantons
-					}
+				OR = {
+					SWI_is_historical_ai = yes 
+					SWI_AI_is_partial_neutrality = yes
 				}
+				SWI_AI_is_pro_axis = no
+				SWI_AI_is_pro_allies = no
+			}
+			modifier = {
+				add = 150
+				OR = {
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+				}
+				NOT = { has_completed_focus = SWI_the_national_front }
+				NOT = { has_completed_focus = SWI_secret_pact_with_the_allies }
 			}
 			modifier = {
 				factor = 5 
@@ -2186,22 +2199,16 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				add = 50
 				SWI_is_historical_ai = no 
+				SWI_AI_is_partial_neutrality = no
 			}
 			modifier = {
-				add = 50
+				factor = 2
 				NOT = {
 					is_power_balance_in_range  = {
 						id = SWI_centralization_bop
 						range = SWI_centralization_bop_fully_council
 					}
 				}
-			}
-			modifier = {
-				add = 100 
-				is_power_balance_in_range  = {
-					id = SWI_centralization_bop
-					range = SWI_centralization_bop_fully_cantons
-				}	
 			}
 			modifier = {
 				add = 200 
@@ -2241,7 +2248,7 @@ SWI_centralization_power_balance_decisions = {
 			base = 0
 			modifier = {
 				add = 50
-				SWI_is_historical_ai = no 
+				SWI_AI_is_imperial = yes #maybe even get rid of this modifier 
 			}
 		}		
 	}
@@ -2273,13 +2280,7 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				add = 200 
-				has_political_power > 400
-			}
-			modifier = {
-				add = 100
-				NOT = {
-					has_completed_focus = SWI_withdraw_from_the_league_of_nations
-				}
+				has_political_power > 800
 			}
 			modifier = {
 				factor = 0.1
@@ -2287,6 +2288,23 @@ SWI_centralization_power_balance_decisions = {
 					id = SWI_centralization_bop
 					range = SWI_centralization_bop_fully_council
 				}	
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range = SWI_centralization_bop_fully_cantons
+				}	
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
 			}
 		}
 	}
@@ -2335,10 +2353,22 @@ SWI_centralization_power_balance_decisions = {
 					range = SWI_centralization_bop_fully_cantons
 				}
 			}
-
 			modifier = {
-				add = 100
-				has_completed_focus = SWI_withdraw_from_the_league_of_nations
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}	
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				factor = 5
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 0
 			}
 		}
 	}
@@ -2381,7 +2411,7 @@ SWI_centralization_power_balance_decisions = {
 		ai_will_do = {
 			base = 50 
 			modifier = {
-				add = 100 
+				add = 50
 				SWI_is_historical_ai = no 
 			}
 			modifier = {
@@ -2389,19 +2419,41 @@ SWI_centralization_power_balance_decisions = {
 				SWI_someone_is_about_to_be_angry = yes 
 			}
 			modifier = {
-				factor = 0.1 
-				NOT = {
-					is_power_balance_in_range = {
-						id = SWI_centralization_bop
-						range = SWI_centralization_bop_fully_cantons
-					}
-				}
+				add = 200 
+				has_political_power > 800
 			}
 			modifier = {
-				add = 100
-				NOT = {
-					has_completed_focus = SWI_withdraw_from_the_league_of_nations
+				factor = 0.1
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range = SWI_centralization_bop_fully_council
+				}	
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
 				}
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range = SWI_centralization_bop_fully_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
 			}
 		}
 	}
@@ -2797,6 +2849,7 @@ SWI_absolute_neutrality_decisions_category = {
 					SWI_is_historical_ai = yes 
 					SWI_AI_is_dem_allied = yes 
 					SWI_AI_is_dem_exp = yes 
+					SWI_AI_is_pro_allies = yes
 				}
 			} 
 		}
