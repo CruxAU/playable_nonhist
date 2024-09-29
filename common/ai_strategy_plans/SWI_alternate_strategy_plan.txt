@@ -1,4 +1,4 @@
-SWI_historical_plan = {
+SWI_alt_neutral_plan = { #Switzerland will stay historical, but will also 'play both sides' by trading gold with allies AND axis
 	name = "Swiss Historical Plan"
 	desc = ""
 
@@ -7,20 +7,28 @@ SWI_historical_plan = {
 	}
 	enable = {
 		OR = {
-			has_country_flag = SWI_AI_RANDOM_NEUTRALITY_DEFENCE
+			has_country_flag = SWI_AI_RANDOM_NEUTRALITY_ALTERNATE
 			has_game_rule = {
 				rule = SWI_ai_behavior
-				option = NEUTRALITY_DEFENCE
+				option = NEUTRALITY_ALTERNATE
 			}
 		}	
 	}
 	abort = {
-		is_subject = yes 
-		has_war = yes 
+		OR = {
+			is_subject = yes 
+			has_war = yes 
+		}
 	}
 
 	ai_national_focuses = {
-		
+		#ASAP
+		SWI_promote_guisan #go down this tree when cantons power is full, ai should fall in and out of these through the game
+		SWI_national_redoubt
+		SWI_expedite_mobilization #5 
+		SWI_all_adults_training
+		SWI_veteran_sharpshooter_divisions
+		SWI_reduce_military_training_age #5
 		#1936
 		SWI_swiss_guiding_principles #5
 		SWI_increase_defense_budget
@@ -28,64 +36,40 @@ SWI_historical_plan = {
 		SWI_reaffirm_spiritual_defense #5
 		SWI_fortify_border_with_germany
 		SWI_armed_neutrality #5
-		
-		#1937
-		SWI_federal_police #not full cantons
 		SWI_ban_foreign_nazi_propaganda #5
-		SWI_purchase_german_planes #not full cantons 
+		#1937
 		SWI_fortify_border_with_italy
 		SWI_fortify_border_with_france
-
-		#1938
-		SWI_withdraw_from_the_league_of_nations #5
-		SWI_ban_national_movement_for_switzerland
 		SWI_buero_ha
 		SWI_pro_helvetia #5
+		SWI_ban_national_movement_for_switzerland
 		SWI_adopt_romansh #5
-		SWI_patriotic_shooting_clubs
+		#1938 - skip 39 due to asap focuses
+		SWI_federal_police #not full cantons
+		SWI_purchase_german_planes #not full cantons 
 		SWI_spab_counter_intelligence_agency
-
-		#1939
-		SWI_promote_guisan
-		SWI_national_redoubt
-		SWI_expedite_mobilization #5
-		SWI_veteran_sharpshooter_divisions
+		SWI_ban_the_communist_party #5
+		SWI_withdraw_from_the_league_of_nations #5
+		SWI_seek_allied_trade #5
+		SWI_seek_trade_agreement_with_germany
+		#1940
+		SWI_allied_gold #5
+		SWI_axis_gold #5
+		SWI_patriotic_shooting_clubs
 		SWI_aktion_nationaler_widerstand #5
 		SWI_heer_und_haus
-
-		#1940
-		SWI_ban_the_communist_party #5
-		SWI_seek_trade_agreement_with_germany
 		SWI_fortify_austrian_border
-		SWI_axis_gold #5
-		SWI_case_north
-		SWI_allied_gold #5
-
 		#1941
 		SWI_the_petition_of_the_200 #5
 		SWI_purchase_american_planes #5
-		SWI_reduce_military_training_age #5
-		SWI_seek_allied_trade #5
-		SWI_citizen_supply_mandate
-		SWI_all_adults_training
-		SWI_fortify_the_jura
-		
+		SWI_modernize_airforce
+		SWI_swiss_airplane_designs
+		SWI_airspace_surveillance
 		#1942
-		SWI_attack_from_the_mountains
-		SWI_defend_the_skies
-		SWI_anti_tank_divisions
-		SWI_prepare_infrastructure_and_industry
 		SWI_ortswehren
-		
-		#1943
 		SWI_luftschutz
 		SWI_spirit_of_resistance
 		SWI_train_swiss_women
-		SWI_fortify_ticino
-		
-		#1944
-		SWI_fortify_sargans_gotthard_and_st_maurice 
-		SWI_expand_special_forces #5
 		SWI_limited_censorship_of_the_press
 		SWI_spirit_of_saint_bernard
 		
@@ -98,8 +82,240 @@ SWI_historical_plan = {
 		SWI_secret_pact_with_the_allies = 0
 		SWI_gotthard_union = 0
 		SWI_the_national_front = 0
+		SWI_tighten_press_censorship = 0 #no need to go that far to appease germans
 		SWI_panoramaheim_branch = 0
 		SWI_case_west = 0
+		SWI_freeze_german_assets = 0 #if you do this you die bro
+		SWI_fortify_the_jura = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWI_police_state_plan = { #Switzerland will stay historical, but will also make a police state and declare martial law
+	name = "Swiss Historical Plan"
+	desc = ""
+
+	allowed = {
+		SWI_bba = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWI_AI_RANDOM_NEUTRALITY_MARTIAL_LAW
+			has_game_rule = {
+				rule = SWI_ai_behavior
+				option = NEUTRALITY_MARTIAL_LAW
+			}
+		}	
+	}
+	abort = {
+		OR = {
+			is_subject = yes 
+			has_war = yes 
+		}
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		SWI_frontier_defense_plan #go down this tree when cantons power is full, ai should fall in and out of these through the game
+		SWI_fight_until_death
+		SWI_total_defense #5 
+		SWI_all_adults_training
+		SWI_veteran_sharpshooter_divisions
+		SWI_reduce_military_training_age #5
+		#1936
+		SWI_swiss_guiding_principles #5
+		SWI_increase_defense_budget
+		SWI_national_defense_fund
+		SWI_reaffirm_spiritual_defense #5
+		SWI_fortify_border_with_france
+		SWI_armed_neutrality #5
+		SWI_ban_foreign_nazi_propaganda #5
+		#1937
+		SWI_fortify_border_with_italy
+		SWI_fortify_border_with_germany
+		SWI_buero_ha
+		SWI_pro_helvetia #5
+		SWI_ban_national_movement_for_switzerland
+		SWI_adopt_romansh #5
+		#1938 - skip 39 due to asap focuses
+		SWI_federal_police #not full cantons
+		SWI_purchase_german_planes #not full cantons 
+		SWI_spab_counter_intelligence_agency
+		SWI_ban_the_communist_party #5
+		SWI_crack_down_on_dissent
+		#1940
+		SWI_military_police #5
+		SWI_expand_federal_police_intelligence
+		SWI_martial_law
+		SWI_withdraw_from_the_league_of_nations
+		SWI_seek_trade_agreement_with_germany
+		SWI_patriotic_shooting_clubs
+		SWI_aktion_nationaler_widerstand #5
+		SWI_heer_und_haus
+		SWI_fortify_austrian_border
+		#1941
+		SWI_the_petition_of_the_200 #5
+		SWI_purchase_american_planes #5
+		SWI_modernize_airforce
+		SWI_swiss_airplane_designs
+		SWI_airspace_surveillance
+		#1942
+		SWI_ortswehren
+		SWI_luftschutz
+		SWI_spirit_of_resistance
+		SWI_train_swiss_women
+		SWI_limited_censorship_of_the_press
+		SWI_spirit_of_saint_bernard
+		SWI_expand_weapons_industry
+	}
+
+	focus_factors = {
+		SWI_seek_allied_trade = 0
+		SWI_allied_gold = 0
+		SWI_withdraw_from_the_league_of_nations = 0
+		SWI_closer_democratic_ties = 0
+		SWI_secret_pact_with_the_allies = 0
+		SWI_gotthard_union = 0
+		SWI_the_national_front = 0
+		SWI_panoramaheim_branch = 0
+		SWI_case_west = 0
+		SWI_axis_gold = 0
+		SWI_limited_censorship_of_the_press = 0
+		SWI_freeze_german_assets = 0 #if you do this you die bro
+		SWI_integrate_refugees_into_the_army = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWI_pro_allies_neutral_plan = {
+	name = "Alternate Democratic - Allied"
+	desc = ""
+
+	allowed = {
+		SWI_bba = yes
+	}
+	enable = {
+		OR = {		
+			has_game_rule = {
+				rule = SWI_AI_BEHAVIOR
+				option = NEUTRALITY_PRO_ALLIES
+			}
+			has_country_flag = SWI_AI_RANDOM_NEUTRALITY_PRO_ALLIES
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		SWI_swiss_guiding_principles #5
+		SWI_national_defense_fund
+		SWI_increase_defense_budget
+		SWI_reaffirm_spiritual_defense #5
+		SWI_fortify_border_with_italy
+		SWI_armed_neutrality #5
+		SWI_ban_foreign_nazi_propaganda #5
+		
+		#1937
+		SWI_fortify_border_with_germany 
+		SWI_buero_ha
+		SWI_pro_helvetia #5
+		SWI_purchase_american_planes #5
+		SWI_ban_national_movement_for_switzerland
+		SWI_seek_allied_trade #5
+		SWI_allied_gold #5
+
+		#1938
+		SWI_frontier_defense_plan
+		SWI_closer_democratic_ties #5
+		SWI_american_industrial_investments
+		SWI_support_allied_espionage #if lar
+		SWI_expand_spy_networks #if lar
+		SWI_share_spy_networks #if lar
+		SWI_lay_the_groundwork #5
+
+		#1939
+		SWI_arsenal_of_the_alps
+		SWI_oasis_of_democracy
+		SWI_volunteer_force
+		SWI_export_saboteurs
+		SWI_thunder_in_the_valleys #5
+		SWI_fly_over_the_mountains #5
+		SWI_fighting_for_the_hills #5
+		SWI_fortify_austrian_border
+		SWI_case_north
+		SWI_weapons_of_democracy
+
+		#1940
+		SWI_patriotic_shooting_clubs
+		SWI_all_adults_training
+		SWI_veteran_sharpshooter_divisions
+		SWI_reduce_military_training_age #5
+		SWI_prepare_infrastructure_and_industry
+		SWI_secret_pact_with_the_allies
+		SWI_fight_until_death
+		
+		#The Rest
+		SWI_aktion_nationaler_widerstand #5
+		SWI_heer_und_haus
+		SWI_train_swiss_women
+		SWI_citizen_supply_mandate
+		SWI_fortify_ticino
+		SWI_luftschutz
+		SWI_ortswehren
+		SWI_spirit_of_resistance
+		SWI_freeze_german_assets
+		SWI_fund_resistance_groups
+		SWI_fortify_sargans_gotthard_and_st_maurice 
+		SWI_expand_special_forces #5
+		SWI_limited_censorship_of_the_press
+		SWI_spirit_of_saint_bernard		
+	}
+
+	focus_factors = {
+		SWI_prolonged_service = 0
+		SWI_the_alpine_confederation = 0
+		SWI_gotthard_union = 0
+		SWI_the_national_front = 0
+		SWI_jump_into_action = 0
+		SWI_case_west = 0
+		SWI_withdraw_from_the_league_of_nations = 0
+		SWI_spab_counter_intelligence_agency = 0
+		SWI_adopt_romansh = 0
 	}
 
 	research = {
@@ -119,6 +335,97 @@ SWI_historical_plan = {
 		}
 	}
 
+}
+
+SWI_pro_axis_neutral_plan = {
+	name = "Swiss Fascist Plan"
+	desc = ""
+
+	allowed = {
+		SWI_bba = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = SWI_AI_BEHAVIOR
+				option = NEUTRALITY_PRO_AXIS
+			}	
+			has_country_flag = SWI_AI_RANDOM_NEUTRALITY_PRO_AXIS
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		SWI_swiss_guiding_principles #5
+		SWI_national_defense_fund
+		SWI_reaffirm_spiritual_defense #5
+		SWI_fortify_border_with_france 
+		SWI_fortify_border_with_italy
+		SWI_armed_neutrality #5
+
+		#1937
+		SWI_federal_police
+		SWI_purchase_german_planes
+		SWI_ban_the_communist_party
+		SWI_withdraw_from_the_league_of_nations #5
+		SWI_limited_censorship_of_the_press
+		SWI_frontier_defense_plan
+
+		#1938
+		SWI_fight_until_death
+		SWI_all_adults_training
+		SWI_veteran_sharpshooter_divisions
+		SWI_reduce_military_training_age #5
+		SWI_tighten_press_censorship
+		
+		#1939
+		SWI_seek_trade_agreement_with_germany
+		SWI_axis_gold #5	
+		SWI_the_national_front
+		SWI_panoramaheim_branch
+		SWI_infiltrate_federal_police
+		SWI_the_petition_of_the_200 #5
+		SWI_case_west
+		
+		#1940
+		SWI_military_exercises_with_germany #5
+		SWI_german_industrial_investments #5 
+		SWI_complete_siegfried_line
+		SWI_closer_ties_with_germany #5
+		SWI_abandon_neutrality
+		SWI_increase_defense_budget
+
+	}
+
+	focus_factors = {
+		SWI_gotthard_union = 0
+		SWI_promote_tobler = 0
+		SWI_promote_henne = 0
+		SWI_integrate_refugees_into_the_army = 0
+		SWI_ban_national_movement_for_switzerland = 0
+		SWI_adopt_romansh = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
 }
 
 SWI_alt_allied = {
@@ -199,15 +506,16 @@ SWI_alt_allied = {
 		SWI_fortify_sargans_gotthard_and_st_maurice 
 		SWI_expand_special_forces #5
 		SWI_limited_censorship_of_the_press
-		SWI_spirit_of_saint_bernard
-		SWI_the_alpine_confederation		
-		
+		SWI_spirit_of_saint_bernard		
 	}
 
 	focus_factors = {
+		SWI_the_alpine_confederation = 0
 		SWI_gotthard_union = 0
 		SWI_the_national_front = 0
 		SWI_case_west = 0
+		SWI_withdraw_from_the_league_of_nations = 0
+		SWI_spab_counter_intelligence_agency = 0
 	}
 
 	research = {
@@ -305,8 +613,7 @@ SWI_alt_expansionist = {
 		SWI_fortify_sargans_gotthard_and_st_maurice 
 		SWI_expand_special_forces #5
 		SWI_limited_censorship_of_the_press
-		SWI_spirit_of_saint_bernard
-		SWI_the_alpine_confederation	
+		SWI_spirit_of_saint_bernard	
 
 	}
 
@@ -440,7 +747,7 @@ SWI_imperial = {
 	}
 }
 
-SWI_fascist = {
+SWI_fascist_plan = {
 	name = "Swiss Fascist Plan"
 	desc = ""
 

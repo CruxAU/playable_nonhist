@@ -593,7 +593,7 @@
 		available = {
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
-				range < SWI_centralization_bop_very_cantons  
+				range < SWI_centralization_bop_fully_cantons  
 			}
 		}
 
@@ -633,7 +633,7 @@
 		available = {
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
-				range < SWI_centralization_bop_very_cantons  
+				range < SWI_centralization_bop_fully_cantons  
 			}
 		}
 		
@@ -677,7 +677,7 @@
 		available = {
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
-				range < SWI_centralization_bop_very_cantons  
+				range < SWI_centralization_bop_fully_cantons  
 			}
 		}
 		
@@ -729,7 +729,7 @@
 		available = {
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
-				range < SWI_centralization_bop_very_council  
+				range < SWI_centralization_bop_fully_cantons  
 			}
 		}
 		
@@ -7221,7 +7221,7 @@
 		}
 	
 		available = {
-			fascism > 0.4	
+			fascism > 0.3	
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
 				range < SWI_centralization_bop_balanced
@@ -7489,7 +7489,7 @@ focus = {
 		}
 
 		available = {
-			fascism > 0.3
+			fascism > 0.2
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
 				range < SWI_centralization_bop_balanced
@@ -7605,7 +7605,7 @@ focus = {
 		}
 
 		available = {
-			fascism > 0.5
+			fascism > 0.35
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
 				range < SWI_centralization_bop_very_council

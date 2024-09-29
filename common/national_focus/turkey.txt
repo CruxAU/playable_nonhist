@@ -6759,6 +6759,7 @@ focus_tree = {
 				OR = {
 					AND = {
 						has_government = fascism
+						exists = yes
 						OR = {
 							original_tag = ITA
 							original_tag = GRE
@@ -6766,9 +6767,13 @@ focus_tree = {
 							original_tag = FRA
 							original_tag = POL
 						}
+						NOT = {
+							has_focus_tree = vichy_french_focus
+						}
 					}
 					AND = {
 						has_global_flag = scw_over
+						exists = yes
 						is_subject = no
 						OR = {
 							original_tag = SPR
@@ -9041,9 +9046,11 @@ focus_tree = {
 		available = {
 			is_subject = no
 			any_other_country = {
+				is_subject = no
 				OR = {
 					AND = {
 						has_government = communism
+						exists = yes
 						OR = {
 							original_tag = ITA
 							original_tag = GRE
@@ -9054,7 +9061,6 @@ focus_tree = {
 					}
 					AND = {
 						has_global_flag = scw_over
-						is_subject = no
 						is_faction_leader = no
 						OR = {
 							original_tag = SPR

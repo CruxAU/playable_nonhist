@@ -7,6 +7,13 @@ SWI_historical_plan = {
 	}
 	enable = {
 		OR = {
+			AND = {
+				has_game_rule = {
+					rule = SWI_ai_behavior
+					option = DEFAULT
+				}
+				is_historical_focus_on = yes
+			}
 			has_country_flag = SWI_AI_RANDOM_HISTORICAL
 			has_game_rule = {
 				rule = SWI_ai_behavior
@@ -15,8 +22,10 @@ SWI_historical_plan = {
 		}	
 	}
 	abort = {
-		is_subject = yes 
-		has_war = yes 
+		OR = {
+			is_subject = yes 
+			has_war = yes 
+		}
 	}
 
 	ai_national_focuses = {

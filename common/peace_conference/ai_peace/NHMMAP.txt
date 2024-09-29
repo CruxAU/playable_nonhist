@@ -213,6 +213,13 @@ peace_ai_desires = {
             ROOT = { 
 				original_tag = SOV
 				has_government = communism
+				NOT = {
+					any_allied_country = {
+						FROM.FROM.FROM = {
+							is_core_of = PREV
+						}
+					}
+				}
 			}
         }
         ai_desire = 200

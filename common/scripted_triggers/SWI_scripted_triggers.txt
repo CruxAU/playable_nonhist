@@ -560,7 +560,7 @@ SWI_is_fasc_ger = {
 
 ###### AI Triggers ##### 
 
-SWI_is_historical_ai = { 
+SWI_is_historical_ai = { #full neutrality
 	is_ai = yes 
 	OR = {
 		AND = {
@@ -576,6 +576,48 @@ SWI_is_historical_ai = {
 			option = HISTORICAL
 		}
 	}	
+}
+
+SWI_AI_is_pro_allies = {
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = A
+		}
+		has_country_flag = A
+	}
+}
+
+SWI_AI_is_pro_axis = {
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = A
+		}
+		has_country_flag = A
+	}
+}
+
+SWI_AI_is_communist = {
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = A
+		}
+		has_country_flag = A
+	}
+}
+
+SWI_AI_is_partial_neutrality = { #ensures AI TRIES to stay in the strong cantons range (not full cantons)
+	OR = {
+		SWI_AI_is_pro_allies = yes
+		SWI_AI_is_pro_axis = yes
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = A
+		}
+		has_country_flag = A
+	}
 }
 
 SWI_AI_is_dem_allied = {
