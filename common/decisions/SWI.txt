@@ -871,7 +871,7 @@ SWI_federal_council_decisions_category = {
 					SWI_country_about_to_be_angry = yes 
 				}
 			}
-			modifier = { #If the AI is fascist or somehow puppeted by a fascis it should get rid of this ASAP 
+			modifier = { #If the AI is fascist or somehow puppeted by a fascist it should get rid of this ASAP 
 				add = 200 
 				OR = {
 					SWI_AI_is_fascist = yes 

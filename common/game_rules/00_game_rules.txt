@@ -4064,6 +4064,18 @@ SWI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = SWI_FRENCH_PUPPET
+		text = "RULE_OPTION_SWI_FRENCH_PUPPET"
+		desc = "RULE_SWI_FRENCH_PUPPET_SWI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_FRENCH_PUPPET_ALPINE
+		text = "RULE_OPTION_SWI_FRENCH_PUPPET_ALPINE"
+		desc = "RULE_SWI_FRENCH_PUPPET_ALPINE_SWI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = SWI_ALLIED_DEMOCRATIC
 		text = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC"
 		desc = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC_AI_DESC"

@@ -2716,7 +2716,35 @@ we_dont_care_about_indonesia = {
 	}
 }
 
+GER_volunteers_to_norway = {
+	allowed = {
+		original_tag = GER
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		has_government = fascism
+		has_completed_focus = GER_rhineland
+		country_exists = NOR
+		NOR = {
+			has_civil_war = yes
+			is_in_faction = no
+			has_government = fascism
+		}
+	}
+	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = support
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NOR
+		value = 100
+	}
+}
 
 #########################################################################################
 ######################### ITA ###########################################################

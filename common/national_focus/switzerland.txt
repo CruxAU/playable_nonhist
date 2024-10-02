@@ -4016,10 +4016,28 @@
 		search_filters = { FOCUS_FILTER_POLITICAL}
 		
 		completion_reward = {
+			hidden_effect = {
+				set_variable = { SWI_communist_support_before_puppet = party_popularity_100@communism }
+				set_variable = { SWI_democratic_support_before_puppet = party_popularity_100@democratic }
+				set_variable = { SWI_fascist_support_before_puppet = party_popularity_100@fascism }
+				set_variable = { SWI_neutrality_support_before_puppet = party_popularity_100@neutrality }
+			}
 			FRA = {
 				puppet = PREV	
 			}						
 			SWI_make_helvetia_aggressive = yes
+			hidden_effect = {
+				set_popularities = {
+					communism = SWI.SWI_communist_support_before_puppet
+					democratic = SWI.SWI_democratic_support_before_puppet
+					fascism = SWI.SWI_fascist_support_before_puppet
+					neutrality = SWI.SWI_neutrality_support_before_puppet
+				}
+				clear_variable = SWI.SWI_communist_support_before_puppet
+				clear_variable = SWI.SWI_democratic_support_before_puppet
+				clear_variable = SWI.SWI_fascist_support_before_puppet
+				clear_variable = SWI.SWI_neutrality_support_before_puppet
+			}
 		}
 	}
 

@@ -4523,46 +4523,53 @@ shared_focus = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					EST = { exists = no }
-					ROOT = { is_subject_of = SOV }
-				}
-				if = { limit = { 812 = { is_controlled_by = SOV } } ROOT = { transfer_state = 812 } }
-				if = { limit = { 13 = { is_controlled_by = SOV } } ROOT = { transfer_state = 13 } }
-				if = { limit = { 811 = { is_controlled_by = SOV } } ROOT = { transfer_state = 811 } }
-				if = { limit = { 191 = { is_controlled_by = SOV } } ROOT = { transfer_state = 191 } }
-				if = { limit = { 813 = { is_controlled_by = SOV } } ROOT = { transfer_state = 813 } }
-			}
-			if = {
-				limit = {
-					LAT = { exists = no }
-					ROOT = { is_subject_of = SOV }
-				}
-				if = { limit = { 12 = { is_controlled_by = SOV } } ROOT = { transfer_state = 12 } }
-				if = { limit = { 190 = { is_controlled_by = SOV } } ROOT = { transfer_state = 190 } }
-				if = { limit = { 808 = { is_controlled_by = SOV } } ROOT = { transfer_state = 808 } }
-				if = { limit = { 809 = { is_controlled_by = SOV } } ROOT = { transfer_state = 809 } }
-				if = { limit = { 810 = { is_controlled_by = SOV } } ROOT = { transfer_state = 810 } }
-			}
-			if = {
-				limit = {
-					LIT = { exists = no }
-					ROOT = { is_subject_of = SOV }
-				}
-				if = { limit = { 11 = { is_controlled_by = SOV } } ROOT = { transfer_state = 11 } }
-				if = { limit = { 189 = { is_controlled_by = SOV } } ROOT = { transfer_state = 189 } }
-				if = { limit = { 188 = { is_controlled_by = SOV } } ROOT = { transfer_state = 188 } }
-				if = { limit = { 814 = { is_controlled_by = SOV } } ROOT = { transfer_state = 814 } }
-				if = { limit = { 815 = { is_controlled_by = SOV } } ROOT = { transfer_state = 815 } }
-				if = { limit = { 784 = { is_controlled_by = SOV } } ROOT = { transfer_state = 784 } }
-			}
 			hidden_effect = {
 				country_event = {
 					id = BALTIC_events.6
 					hours = 3
 				}
 			}
+		}
+		if = {
+			limit = {
+				EST = { exists = no }
+				ROOT = { is_subject_of = SOV }
+			}
+			if = { limit = { 812 = { is_controlled_by = SOV } } ROOT = { transfer_state = 812 } }
+			if = { limit = { 13 = { is_controlled_by = SOV } } ROOT = { transfer_state = 13 } }
+			if = { limit = { 811 = { is_controlled_by = SOV } } ROOT = { transfer_state = 811 } }
+			if = { limit = { 191 = { is_controlled_by = SOV } } ROOT = { transfer_state = 191 } }
+			if = { limit = { 813 = { is_controlled_by = SOV } } ROOT = { transfer_state = 813 } }
+		}
+		if = {
+			limit = {
+				LAT = { exists = no }
+				ROOT = { is_subject_of = SOV }
+			}
+			if = { limit = { 12 = { is_controlled_by = SOV } } ROOT = { transfer_state = 12 } }
+			if = { limit = { 190 = { is_controlled_by = SOV } } ROOT = { transfer_state = 190 } }
+			if = { limit = { 808 = { is_controlled_by = SOV } } ROOT = { transfer_state = 808 } }
+			if = { limit = { 809 = { is_controlled_by = SOV } } ROOT = { transfer_state = 809 } }
+			if = { limit = { 810 = { is_controlled_by = SOV } } ROOT = { transfer_state = 810 } }
+		}
+		if = {
+			limit = {
+				LIT = { exists = no }
+				ROOT = { is_subject_of = SOV }
+			}
+			if = { limit = { 11 = { is_controlled_by = SOV } } ROOT = { transfer_state = 11 } }
+			if = { limit = { 189 = { is_controlled_by = SOV } } ROOT = { transfer_state = 189 } }
+			if = { limit = { 188 = { is_controlled_by = SOV } } ROOT = { transfer_state = 188 } }
+			if = { limit = { 814 = { is_controlled_by = SOV } } ROOT = { transfer_state = 814 } }
+			if = { limit = { 815 = { is_controlled_by = SOV } } ROOT = { transfer_state = 815 } }
+			if = { limit = { 784 = { is_controlled_by = SOV } } ROOT = { transfer_state = 784 } }
+		}
+		if = {
+			limit = { 
+				95 = { is_controlled_by = ROOT } 
+				784 = { is_controlled_by = SOV }
+			} 
+			ROOT = { transfer_state = 784 }
 		}
 		effect_tooltip = {
 			set_cosmetic_tag = BAL_UNIFIED_communism
