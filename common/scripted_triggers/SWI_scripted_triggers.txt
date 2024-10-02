@@ -631,6 +631,16 @@ SWI_AI_is_dem_allied = {
 			option = SWI_ALLIED_DEMOCRATIC
 		}
 		has_country_flag = SWI_AI_RANDOM_ALLIED_DEMOCRATIC
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_FRENCH_PUPPET
+		}
+		has_country_flag = SWI_AI_RANDOM_FRENCH_PUPPET
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_FRENCH_PUPPET_ALPINE
+		}
+		has_country_flag = SWI_AI_RANDOM_FRENCH_PUPPET_ALPINE
 	}
 }
 SWI_AI_is_dem_exp = {

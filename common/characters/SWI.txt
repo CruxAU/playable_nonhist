@@ -1577,6 +1577,7 @@ characters={
 					factor = 5
 					OR = {
 						SWI_AI_is_dem_allied = yes
+						SWI_AI_is_imperial = yes
 						SWI_AI_is_dem_exp = yes
 						SWI_AI_is_pro_allies = yes
 					}
@@ -1752,8 +1753,8 @@ characters={
 					OR = {
 						SWI_AI_is_fascist = yes
 						SWI_AI_is_pro_axis = yes
+						SWI_AI_is_imperial = yes
 					}
-					SWI_character_matches_strategy = yes 
 				}
 			}
 			
@@ -1794,7 +1795,13 @@ characters={
 				base = 2000
 				modifier = {
 					factor = 5 
-					SWI_is_historical_ai = yes 
+					OR = {
+						SWI_is_historical_ai = yes
+						AND = {
+							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_axis = no
+						}
+					}
 				}
 			}
 
@@ -1840,14 +1847,21 @@ characters={
 				base = 2000
 				modifier = {
 					factor = 5
-					SWI_is_historical_ai = yes 
+					OR = {
+						SWI_is_historical_ai = yes
+						AND = {
+							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_axis = no
+						}
+					}
 				}
 				modifier = {
 					factor = 7
 					OR = {
-						SWI_character_matches_strategy = yes 
-						SWI_character_matches_strategy = yes 
-						SWI_character_matches_strategy = yes 
+						SWI_AI_is_dem_allied = yes
+						SWI_AI_is_imperial = yes
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_pro_allies = yes 
 					}
 				}
 			}			
@@ -1888,11 +1902,18 @@ characters={
 				base = 2000
 				modifier = {
 					factor = 7
-					SWI_character_matches_strategy = yes 
+					OR = {
+						SWI_AI_is_communist = yes
+						SWI_AI_is_dem_allied = yes
+					}
 				}
 				modifier = {
 					factor = 0.1
-					SWI_character_matches_strategy = no
+					OR = {
+						SWI_AI_is_fascist = yes
+						SWI_AI_is_imperial = yes
+						SWI_AI_is_pro_axis = yes
+					}
 				}
 			}
 
@@ -1937,7 +1958,19 @@ characters={
 				base = 2000
 				modifier = {
 					factor = 5 
-					SWI_is_historical_ai = no 
+					OR = {
+						SWI_AI_is_communist = yes
+						SWI_AI_is_pro_allies = yes
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = {
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_pro_axis = yes
+						SWI_AI_is_fascist = yes
+						SWI_AI_is_imperial = yes
+					}
 				}
 			}
 			
@@ -1979,12 +2012,19 @@ characters={
 			ai_will_do = {
 				base = 2000
 				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+					factor = 2
+					SWI_AI_is_dem_allied = yes 
 				}
 				modifier = {
 					factor = 7
-					SWI_character_matches_strategy = yes 
+					SWI_AI_is_communist = yes
+				}
+				modifier = {
+					factor = 0.1
+					OR = {
+						SWI_AI_is_fascist = yes
+						SWI_AI_is_pro_axis = yes
+					}
 				}
 			}
 			
@@ -2027,12 +2067,16 @@ characters={
 			ai_will_do = {
 				base = 2000
 				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+					factor = 7
+					SWI_AI_is_communist = yes #dem_allied only gets one social democrat as to not have too much communism support
 				}
 				modifier = {
-					factor = 7
-					SWI_character_matches_strategy = yes 
+					factor = 0.1
+					OR = {
+						SWI_AI_is_fascist = yes
+						SWI_AI_is_imperial = yes
+						SWI_AI_is_pro_axis = yes
+					}
 				}
 			}
 		}
@@ -2074,8 +2118,15 @@ characters={
 			ai_will_do = {
 				base = 2000
 				modifier = {
-					factor = 5 
-					SWI_is_historical_ai = no 
+					factor = 0.1 
+					SWI_is_historical_ai = yes 
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						SWI_AI_is_imperial = yes
+						SWI_AI_is_dem_exp = yes
+					}
 				}
 			}
 		}
@@ -2116,12 +2167,16 @@ characters={
 			ai_will_do = {
 				base = 4000
 				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+					factor = 0.1
+					SWI_AI_is_fascist = no 
+					SWI_AI_is_pro_axis = no
 				}
 				modifier = {
-					factor = 0.1
-					SWI_character_matches_strategy = no
+					factor = 2 
+					OR = {
+						SWI_AI_is_fascist = yes 
+						SWI_AI_is_pro_axis = yes
+					}
 				}
 			}
 
@@ -2177,12 +2232,17 @@ characters={
 			ai_will_do = {
 				base = 4000
 				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+					factor = 0.1
+					SWI_AI_is_fascist = no 
+					SWI_AI_is_pro_axis = no
 				}
 				modifier = {
-					factor = 0.2
-					SWI_character_matches_strategy = no
+					factor = 1.5 
+					SWI_AI_is_pro_axis = yes
+				}
+				modifier = {
+					factor = 5
+					SWI_AI_is_fascist = yes 
 				}
 			}
 			
@@ -2226,13 +2286,14 @@ characters={
 
 			ai_will_do = {
 				base = 4000
-				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+				modifier = { 
+					factor = 0.1
+					SWI_AI_is_fascist = no 
+					SWI_AI_is_pro_axis = no
 				}
 				modifier = {
-					factor = 0.1
-					SWI_character_matches_strategy = no
+					factor = 5
+					SWI_AI_is_fascist = yes #dont boost pro axis neutrality's fascism too much
 				}
 			}
 			
@@ -2278,13 +2339,14 @@ characters={
 			
 			ai_will_do = {
 				base = 4000
-				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+				modifier = { 
+					factor = 0.1
+					SWI_AI_is_fascist = no 
+					SWI_AI_is_pro_axis = no
 				}
 				modifier = {
-					factor = 0.1
-					SWI_character_matches_strategy = no
+					factor = 5
+					SWI_AI_is_fascist = yes #dont boost pro axis neutrality's fascism too much
 				}
 			}			
 		}
@@ -2325,13 +2387,14 @@ characters={
 			
 			ai_will_do = {
 				base = 4000
-				modifier = {
-					factor = 5 
-					SWI_character_matches_strategy = yes 
+				modifier = { 
+					factor = 0.1
+					SWI_AI_is_fascist = no 
+					SWI_AI_is_pro_axis = no
 				}
 				modifier = {
-					factor = 0.1
-					SWI_character_matches_strategy = no
+					factor = 5
+					SWI_AI_is_fascist = yes #dont boost pro axis neutrality's fascism too much
 				}
 			}
 		}
@@ -2481,15 +2544,38 @@ characters={
 				base = 2000
 				modifier = {
 					factor = 2 
-					SWI_character_matches_strategy = yes 
+					OR = { #I cant believe the secret service actually might have wanted to hire this crazy woman...
+						has_game_rule = {
+							rule = SWI_ai_behavior
+							option = NEUTRALITY_MARTIAL_LAW
+						}
+						has_country_flag = SWI_AI_RANDOM_NEUTRALITY_MARTIAL_LAW
+					} 
 				}
 				modifier = {
 					factor = 7
-					SWI_character_matches_strategy = yes 
+					SWI_AI_is_communist = yes
 				}
 				modifier = {
 					factor = 0.1
-					SWI_character_matches_strategy = no
+					OR = {
+						SWI_AI_is_dem_allied = yes
+						SWI_AI_is_dem_exp = yes
+						AND = {
+							SWI_AI_is_partial_neutrality = yes
+							NOT = {
+								OR = {
+									has_game_rule = {
+										rule = SWI_ai_behavior
+										option = NEUTRALITY_MARTIAL_LAW
+									}
+									has_country_flag = SWI_AI_RANDOM_NEUTRALITY_MARTIAL_LAW
+								}
+							}
+						}
+						SWI_AI_is_imperial = yes
+						SWI_AI_is_fascist = yes
+					}
 				}
 			}
 			
@@ -2529,15 +2615,23 @@ characters={
 				base = 2000
 				modifier = {
 					factor = 2 
-					SWI_character_matches_strategy = yes 
+					OR = {
+						SWI_AI_is_dem_allied = yes
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_pro_allies = yes
+					}
 				}
 				modifier = {
 					factor = 7
-					SWI_character_matches_strategy = yes
+					SWI_AI_is_communist = yes
 				}
 				modifier = {
 					factor = 0.1 
-					SWI_character_matches_strategy = no
+					OR = {
+						SWI_AI_is_imperial = yes
+						SWI_AI_is_fascist = yes
+						SWI_AI_is_pro_axis = yes
+					}
 				}
 			}
 		}
@@ -2669,11 +2763,16 @@ characters={
 				base = 4000
 				modifier = {
 					factor = 5 
-					SWI_character_matches_strategy = yes 
+					SWI_AI_is_imperial = yes
+				}
+				modifier = {
+					factor = 1.5
+					SWI_AI_is_dem_exp = yes
 				}
 				modifier = {
 					factor = 0.1 
-					SWI_character_matches_strategy = no
+					SWI_AI_is_imperial = no
+					SWI_AI_is_dem_exp = no
 				}
 			}			
 		}
@@ -2778,11 +2877,11 @@ characters={
 				base = 4000
 				modifier = {
 					factor = 5 
-					SWI_character_matches_strategy = yes 
+					SWI_AI_is_imperial = yes
 				}
 				modifier = {
-					factor = 0.1
-					SWI_character_matches_strategy = no
+					factor = 0.1 
+					SWI_AI_is_imperial = no
 				}
 			}
 			
@@ -2901,10 +3000,17 @@ characters={
 					modifier = {
 						factor = 0.1
 						SWI_is_historical_ai = no 
+						SWI_AI_is_partial_neutrality = no
 					}
 					modifier = {
 						factor = 5
-						SWI_is_historical_ai = yes
+						OR = {
+							SWI_is_historical_ai = yes
+							AND = {
+								SWI_AI_is_partial_neutrality = yes
+								SWI_AI_is_pro_axis = no
+							}
+						}
 					}
 				}
 			}
@@ -2970,9 +3076,9 @@ characters={
 				
 				ai_will_do = {
 					base = 4000
-					modifier = {
-						factor = 5 
-						SWI_is_historical_ai = yes 
+					OR = {
+						SWI_is_historical_ai = yes
+						SWI_AI_is_partial_neutrality = yes
 					}
 				}
 				
@@ -3036,7 +3142,11 @@ characters={
 				SWI_nationalistic_industrialist
 			}
 			ai_will_do  = {
-				factor  = 0.000
+				factor = 0.000
+				modifier = {
+					add = 8000
+					SWI_AI_is_imperial = yes
+				}
 			}
 			on_add = {
 				SWI_on_add_councilors = yes
