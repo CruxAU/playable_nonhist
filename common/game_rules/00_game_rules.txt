@@ -4035,7 +4035,7 @@ SWI_ai_behavior = {
 	}
 	option = {
 		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
+		text = "RULE_OPTION_NEUTRALITY_HISTORICAL"
 		desc = "RULE_HISTORICAL_SWI_AI_DESC"
 		allow_achievements = yes
 	}
