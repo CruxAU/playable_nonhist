@@ -11995,7 +11995,6 @@ on_actions = {
 						}
 					}
 					set_country_flag = ETH_AI_RANDOM_HISTORICAL
-					set_country_flag = ETH_HOST_AI_RANDOM_DEFAULT
 				}
 				else_if = {
 					limit = {
@@ -12034,17 +12033,6 @@ on_actions = {
 						1 = { set_country_flag = ETH_AI_RANDOM_ANARCHIST_ALT }
 						1 = { set_country_flag = ETH_AI_RANDOM_COLLABORATIONIST }	
 						1 = { set_country_flag = ETH_AI_RANDOM_INDEPENDENT_FASCIST }	
-					}
-					random_list = {
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_DEFAULT }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_ENG_SOMALIA }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_ENG_PALESTINE }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_SWE_NEUTRAL }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_SWE_ALLIES }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_JAP_ARABIA }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_JAP_ISLAND }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_GER_MEDIATE }
-						1 = { set_country_flag = ETH_HOST_AI_RANDOM_GER_SABOTAGE }	
 					}
 				}
 				else_if = {
@@ -12151,6 +12139,82 @@ on_actions = {
 								}
 							}
 							set_country_flag = ETH_AI_RANDOM_INDEPENDENT_FASCIST 
+						}
+					}
+				}
+			}
+			ETH = {
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+						has_game_rule = {
+							rule = NONHIST_ai_behavior
+							option = HISTORICAL_PATHS
+						}
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ETH_ai_host_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ETH_ai_host_behavior
+								option = RANDOM
+							}
+						}
+					}
+					set_country_flag = ETH_HOST_AI_RANDOM_DEFAULT
+				}
+				else_if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+						has_game_rule = {
+							rule = NONHIST_ai_behavior
+							option = TRUE_RANDOM
+						}
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ETH_ai_host_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ETH_ai_host_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_DEFAULT }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_ENG_SOMALIA }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_ENG_PALESTINE }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_SWE_NEUTRAL }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_SWE_ALLIES }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_JAP_ARABIA }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_JAP_ISLAND }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_GER_MEDIATE }
+						1 = { set_country_flag = ETH_HOST_AI_RANDOM_GER_SABOTAGE }	
+					}
+				}
+				else_if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ETH_ai_host_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ETH_ai_host_behavior
+								option = RANDOM
+							}
 						}
 					}
 					random_list = {
