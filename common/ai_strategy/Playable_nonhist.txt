@@ -5604,3 +5604,74 @@ TUR_scw_volunteers_f = {
 		value = 100
 	}
 }
+
+
+#########################################################################################
+######################### SWI ###########################################################
+#########################################################################################
+
+
+SWI_preempt_anschluss_make_aus_like_me = {
+	allowed = {
+		original_tag = SWI
+	}
+	enable = {
+		focus_progress = {
+			focus = SWI_pre_empt_anschluss
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = SWI_pre_empt_anschluss
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = AUS
+		target = improve_relation
+		value = 500
+	}	
+}
+
+SWI_preempt_anschluss_make_fra_like_me = {
+	allowed = {
+		original_tag = SWI
+	}
+	enable = {
+		focus_progress = {
+			focus = SWI_demand_french_alps
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = SWI_demand_french_alps
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
+		target = improve_relation
+		value = 500
+	}	
+}
+SWI_preempt_anschluss_make_ita_like_me = {
+	allowed = {
+		original_tag = SWI
+	}
+	enable = {
+		focus_progress = {
+			focus = SWI_demand_italian_alps
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = SWI_demand_italian_alps
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ITA
+		target = improve_relation
+		value = 500
+	}	
+}

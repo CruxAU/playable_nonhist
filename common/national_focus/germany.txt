@@ -5208,10 +5208,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
 		}
 		
 		completion_reward = {

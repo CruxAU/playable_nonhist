@@ -158,11 +158,7 @@ SWI_federal_council_decisions_category = {
 		}
 
 		ai_will_do = { #shouldn't do it in historical
-			base = 1 
-			modifier  = {
-				factor = 0 
-				SWI_is_historical_ai = yes 
-			}
+			base = 0 
 		}
 	}
 
@@ -990,7 +986,7 @@ SWI_federal_council_decisions_category = {
 				AND = {
 					SWI_is_historical_ai = no
 					SWI_AI_is_fascist = no
-					communism > 0.5 
+					communism > 0.4 
 				}
 			}
 		}	
@@ -1170,6 +1166,92 @@ SWI_federal_council_decisions_category = {
 				add = 400 
 				has_political_power > 500
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -1238,6 +1320,92 @@ SWI_federal_council_decisions_category = {
 					SWI_AI_is_imperial = yes 
 				}
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -1299,13 +1467,99 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				add = 200 
 				OR = {
-					SWI_AI_is_dem_exp = yes 
+					SWI_AI_is_communist = yes 
 					SWI_AI_is_imperial = yes 
 				}
 			}
 			modifier = {
 				factor = 0.05 
 				SWI_AI_is_fascist = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
 			}
 		}
 	}
@@ -1370,13 +1624,99 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				add = 200 
 				OR = {
-					SWI_AI_is_dem_exp = yes 
+					SWI_AI_is_communist = yes 
 					SWI_AI_is_imperial = yes 
 				}
 			}
 			modifier = {
 				factor = 0 
 				SWI_AI_is_fascist = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
 			}
 		}
 	}
@@ -1441,12 +1781,98 @@ SWI_federal_council_decisions_category = {
 				add = 200 
 				OR = {
 					SWI_AI_is_dem_exp = yes 
-					SWI_AI_is_imperial = yes 
+					SWI_AI_is_communist = yes 
 				}
 			}
 			modifier = {
 				factor = 0.1 
 				SWI_AI_is_fascist = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
 			}
 		}
 	}
@@ -1514,6 +1940,92 @@ SWI_federal_council_decisions_category = {
 					SWI_AI_is_fascist = yes
 				}
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -1577,6 +2089,96 @@ SWI_federal_council_decisions_category = {
 				add = 200 
 				SWI_is_historical_ai = no 
 			}
+			modifier = {
+				factor = 0
+				date < 1937.1.1
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}	
 
@@ -1637,6 +2239,92 @@ SWI_federal_council_decisions_category = {
 				add = 50 
 				SWI_is_historical_ai = yes 
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -1692,6 +2380,92 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				add = 500 
 				has_political_power > 500
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
 			}
 		}
 	}
@@ -1794,6 +2568,92 @@ SWI_federal_council_decisions_category = {
 				} 
 				 
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -1860,6 +2720,92 @@ SWI_federal_council_decisions_category = {
 				factor = 3
  				SWI_someone_is_about_to_be_angry = yes 
 				 
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
 			}
 		}	
 	}
@@ -1934,6 +2880,92 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
  				SWI_AI_is_fascist = no 
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
 			}
 		}	
 	}
@@ -2035,6 +3067,92 @@ SWI_federal_council_decisions_category = {
 				factor = 2 
 				SWI_AI_is_fascist = yes 
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
 		}
 	}
 
@@ -2087,11 +3205,6 @@ SWI_federal_council_decisions_category = {
 		}
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 500
-				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
-			}
 		}
 	}
 }
@@ -2131,31 +3244,114 @@ SWI_centralization_power_balance_decisions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 200
 			modifier = {
-				add = 150
+				factor = 0
 				OR = {
-					SWI_is_historical_ai = yes 
-					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_imperial = yes
+					SWI_AI_is_fascist = yes
 				}
-				SWI_AI_is_pro_axis = no
-				SWI_AI_is_pro_allies = no
 			}
 			modifier = {
-				add = 150
+				factor = 2
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
 				OR = {
+					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
 					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
 				}
-				NOT = { has_completed_focus = SWI_the_national_front }
-				NOT = { has_completed_focus = SWI_secret_pact_with_the_allies }
 			}
 			modifier = {
-				factor = 5 
-				power_balance_value = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
-					value < 0
+					range < SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_fully_council
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 5
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}
+				factor = 5
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
 				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				has_completed_focus = SWI_seek_allied_trade
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_fully_council
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}
+				factor = 0
 			}
 		}
 	}
@@ -2197,9 +3393,16 @@ SWI_centralization_power_balance_decisions = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 50
-				SWI_is_historical_ai = no 
-				SWI_AI_is_partial_neutrality = no
+				add = 100
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_imperial = yes
+				}
+				OR = {
+					has_completed_focus = SWI_ban_national_movement_for_switzerland
+					fascism < 0.1
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2209,10 +3412,6 @@ SWI_centralization_power_balance_decisions = {
 						range = SWI_centralization_bop_fully_council
 					}
 				}
-			}
-			modifier = {
-				add = 200 
-				has_political_power > 700
 			}
 		}	
 	}
@@ -2246,10 +3445,6 @@ SWI_centralization_power_balance_decisions = {
 		}
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 50
-				SWI_AI_is_imperial = yes #maybe even get rid of this modifier 
-			}
 		}		
 	}
 
@@ -2290,12 +3485,92 @@ SWI_centralization_power_balance_decisions = {
 				}	
 			}
 			modifier = {
-				SWI_AI_is_partial_neutrality = yes
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_imperial = yes
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
-					range = SWI_centralization_bop_fully_cantons
-				}	
+					range > SWI_centralization_bop_fully_council
+				}
+				OR = {
+					fascism < 0.05
+					has_completed_focus = SWI_ban_national_movement_for_switzerland 
+				}
+				factor = 10
+			}
+			modifier = {
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_imperial = yes
+				}
+				NOT = { has_completed_focus = SWI_ban_national_movement_for_switzerland }
+				fascism > 0.1
+				 
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+					SWI_AI_is_fascist = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
 				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}	
 				factor = 2
 			}
 			modifier = {
@@ -2304,6 +3579,40 @@ SWI_centralization_power_balance_decisions = {
 					id = SWI_centralization_bop
 					range < SWI_centralization_bop_very_cantons
 				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_fascist = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_fascist = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_council
+				}
 				factor = 0
 			}
 		}
@@ -2316,12 +3625,7 @@ SWI_centralization_power_balance_decisions = {
 		priority = 95 
 
 		available = {
-			NOT = {
-				is_power_balance_in_range = {
-					id = SWI_centralization_bop
-					range = SWI_centralization_bop_fully_council
-				}
-			}
+			
 		} 
 		days_remove = 30
 
@@ -2337,7 +3641,7 @@ SWI_centralization_power_balance_decisions = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 125
 			modifier = {
 				add = 100
 				SWI_is_historical_ai = yes 
@@ -2354,20 +3658,114 @@ SWI_centralization_power_balance_decisions = {
 				}
 			}
 			modifier = {
-				SWI_AI_is_partial_neutrality = yes
+				OR = {
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_communist = yes
+					SWI_AI_is_imperial = yes
+				}
+				OR = {
+					has_completed_focus = SWI_ban_national_movement_for_switzerland
+					fascism < 0.1
+				}
+				factor = 0
+			}
+			modifier = {
+				factor = 2
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_fully_council
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 5
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}
+				factor = 5
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range < SWI_centralization_bop_fully_cantons
 				}	
-				NOT = { has_completed_focus = SWI_reduce_military_training_age }
-				factor = 5
+				factor = 2
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}	
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				has_completed_focus = SWI_seek_allied_trade
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_fully_council
+				}	
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				has_completed_focus = SWI_reduce_military_training_age
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
-				}	
+				}
 				factor = 0
 			}
 		}
@@ -2411,7 +3809,7 @@ SWI_centralization_power_balance_decisions = {
 		ai_will_do = {
 			base = 50 
 			modifier = {
-				add = 50
+				add = 75
 				SWI_is_historical_ai = no 
 			}
 			modifier = {
@@ -2423,14 +3821,101 @@ SWI_centralization_power_balance_decisions = {
 				has_political_power > 800
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0
+				SWI_someone_is_about_to_be_angry = no
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range = SWI_centralization_bop_fully_council
 				}	
 			}
 			modifier = {
+				factor = 0
+				date < 1936.8.20
+			}
+			modifier = {
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_imperial = yes
+				}
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_fully_council
+				}
+				OR = {
+					fascism < 0.05
+					has_completed_focus = SWI_ban_national_movement_for_switzerland 
+				}
+				date > 1936.8.20
+				factor = 5
+			}
+			modifier = {
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+					SWI_AI_is_imperial = yes
+				}
+				NOT = { has_completed_focus = SWI_ban_national_movement_for_switzerland }
+				fascism > 0.1
+				 
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				OR = {
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
+					SWI_AI_is_dem_allied = yes
+					SWI_AI_is_fascist = yes
+				}
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_council
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_pro_axis = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_balanced
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_reduce_military_training_age
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_very_cantons
+				}
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				has_completed_focus = SWI_seek_allied_trade
+				has_completed_focus = SWI_ortswehren
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_dem_allied = yes
+				NOT = { has_completed_focus = SWI_seek_allied_trade }
+				NOT = { has_completed_focus = SWI_ortswehren }
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
 				SWI_AI_is_pro_allies = yes
+				has_completed_focus = SWI_reduce_military_training_age
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2438,22 +3923,46 @@ SWI_centralization_power_balance_decisions = {
 				factor = 2
 			}
 			modifier = {
-				SWI_AI_is_partial_neutrality = yes
+				SWI_AI_is_pro_allies = yes
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
-					range > SWI_centralization_bop_balanced
-				}
-				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+					range < SWI_centralization_bop_very_cantons
+				}	
 				factor = 0
 			}
 			modifier = {
 				SWI_AI_is_partial_neutrality = yes
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
-					range = SWI_centralization_bop_fully_cantons
+					range > SWI_centralization_bop_very_cantons
 				}
 				has_completed_focus = SWI_reduce_military_training_age
 				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_partial_neutrality = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_fully_cantons
+				}
+				factor = 0
+			}
+			modifier = {
+				SWI_AI_is_fascist = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range > SWI_centralization_bop_balanced
+				}
+				has_completed_focus = SWI_reduce_military_training_age
+				factor = 2
+			}
+			modifier = {
+				SWI_AI_is_fascist = yes
+				is_power_balance_in_range  = {
+					id = SWI_centralization_bop
+					range < SWI_centralization_bop_very_council
+				}
+				factor = 0
 			}
 		}
 	}
@@ -2850,6 +4359,10 @@ SWI_absolute_neutrality_decisions_category = {
 					SWI_AI_is_dem_allied = yes 
 					SWI_AI_is_dem_exp = yes 
 					SWI_AI_is_pro_allies = yes
+					AND = {
+						SWI_AI_is_pro_axis = yes
+						fascism > 0.4
+					}
 				}
 			} 
 		}
@@ -2893,10 +4406,7 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 			modifier = {
 				add = 50 
-				OR = {
-					SWI_is_historical_ai = no 
-					SWI_AI_is_fascist = no 
-				}
+				SWI_AI_is_communist = yes
 			} 
 		}
 	}
@@ -4144,6 +5654,14 @@ SWI_military_readiness_decisions_category = {
 				factor = 0
 				SWI_MR_full = yes 
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_imperial = yes
+					SWI_AI_is_dem_exp = yes
+				}
+			}
 		}
 	}
 
@@ -4199,6 +5717,14 @@ SWI_military_readiness_decisions_category = {
 				factor = 0
 				SWI_MR_full = yes 
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_imperial = yes
+					SWI_AI_is_dem_exp = yes
+				}
+			}
 		}
 	}
 
@@ -4249,6 +5775,14 @@ SWI_military_readiness_decisions_category = {
 			modifier = {
 				factor = 0
 				SWI_MR_full = yes 
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					SWI_AI_is_communist = yes
+					SWI_AI_is_imperial = yes
+					SWI_AI_is_dem_exp = yes
+				}
 			}
 		}
 	}

@@ -81,13 +81,10 @@ country_event = {
     option = { #Remain Neutral 
 	    name = BBA_switzerland.1.a
 	    ai_chance = {
-		    base = 10
+		    base = 0
 		    modifier = {
-		    	factor = 0
-				NOT = {
-					SWI_is_historical_ai = yes
-					SWI_AI_is_partial_neutrality = yes
-				}
+		    	add = 10
+				SWI_is_historical_ai = yes
 		    }
 	    }
 	    trigger = {
@@ -101,14 +98,15 @@ country_event = {
     option = { #Active Neutrality
 	    name = BBA_switzerland.1.b
 	    ai_chance = {
-		    base = 10
+		    base = 0
 		    modifier = {
-		    	factor = 0
-				NOT = {
-					OR = {
-						SWI_AI_is_dem_exp = yes 
-						SWI_AI_is_dem_allied = yes
-					}
+		    	add = 10
+				OR = {
+					SWI_AI_is_dem_exp = yes 
+					SWI_AI_is_dem_allied = yes
+					SWI_AI_is_partial_neutrality = yes
+					SWI_AI_is_pro_allies = yes
+					SWI_AI_is_pro_axis = yes
 				}
 		    }
 	    }
@@ -122,15 +120,14 @@ country_event = {
 	option = { #Reject Neutrality, embrace aggression 
 	    name = BBA_switzerland.1.c
 	    ai_chance = {
-		    base = 10
+		    base = 0
 		    modifier = {
-		    	factor = 0
-				NOT = {
-					OR = {
-						SWI_AI_is_fascist = yes 
-						SWI_AI_is_imperial = yes
-					}
-				} 
+		    	add = 10
+				OR = {
+					SWI_AI_is_fascist = yes 
+					SWI_AI_is_imperial = yes
+					SWI_AI_is_communist = yes
+				}
 		    }
 	    }
 	    trigger = {
@@ -728,6 +725,7 @@ country_event = {  #Frankfurter Trial
 				OR = {
 					SWI_AI_is_dem_allied = yes 
 					SWI_AI_is_dem_exp = yes 
+					SWI_AI_is_communist = yes
 				} 
 			}
 		}
@@ -1093,8 +1091,9 @@ country_event = { #Petition of the 200
 				NOT = {
 					OR = {
 						SWI_is_historical_ai = yes 
-						SWI_AI_is_dem_allied = yes 
+						SWI_AI_is_partial_neutrality = yes
 						SWI_AI_is_pro_allies = yes
+						SWI_AI_is_pro_axis = yes 
 					}
 				}
 			}
@@ -1138,11 +1137,7 @@ country_event = { #Petition of the 200
 			base = 10
 			modifier = {
 				factor = 10 
-				OR = {
-					SWI_AI_is_fascist = yes 
-					SWI_AI_is_pro_axis = yes
-				}
-				
+				SWI_AI_is_fascist = yes 
 			}
 		}
 		trigger = {
@@ -1193,7 +1188,12 @@ country_event = { #Petition of the 200
 			base = 10
 			modifier = {
 				factor = 10
-				SWI_AI_is_imperial = yes
+				OR = {
+					SWI_AI_is_imperial = yes
+					SWI_AI_is_dem_allied = yes 
+					SWI_AI_is_communist = yes
+					SWI_AI_is_dem_exp = yes
+				}
 			}
 		}
 		trigger = {
@@ -1919,7 +1919,7 @@ country_event = { #Regular annual elections
 		ai_chance = {
 			base = 10
 			modifier = { #Increasing Weight by Ideology 
-				factor = 5 
+				factor = 2 
 				OR = { 
 					AND = {
 						var:SWI_councilor_1 = {
@@ -1928,6 +1928,7 @@ country_event = { #Regular annual elections
 						OR = {
 							SWI_AI_is_dem_allied = yes 
 							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_allies = yes
 							SWI_is_historical_ai = yes 
 						}
 					}
@@ -1935,20 +1936,57 @@ country_event = { #Regular annual elections
 						var:SWI_councilor_1 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						OR = {
-							SWI_AI_is_fascist = yes
-							SWI_AI_is_pro_axis = yes
-						}
+						SWI_AI_is_fascist = yes
 						 
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = SWI_gotthard_union
+				OR = {
+					AND = {
+						var:SWI_councilor_1 = {
+							 SWI_councilor_is_any_kind_of_communist = yes
+						}
+						SWI_AI_is_communist = yes
 					}
 					AND = {
 						var:SWI_councilor_1 = {
-							 SWI_councilor_is_fascist = no
+							 SWI_councilor_is_neutrality_despotism = yes
+						}
+						SWI_AI_is_imperial = yes
+					}
+					AND = {
+						var:SWI_councilor_1 = {
+							 SWI_councilor_is_democratic_conservatism = yes
+						}
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_protectorate = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						var:SWI_councilor_1 = {
+							SWI_councilor_is_fascist = yes 
 						}
 						OR = {
 							SWI_AI_is_imperial = yes 
 							SWI_AI_is_dem_exp = yes 
+							SWI_AI_is_communist = yes
 						}
+					}
+					AND = {
+						var:SWI_councilor_1 = {
+							OR = {
+								SWI_councilor_is_any_kind_of_communist = yes
+								SWI_councilor_is_neutrality_despotism = yes
+							}
+						}
+						SWI_AI_is_dem_exp = yes
 					}
 				}
 			} 
@@ -1982,7 +2020,7 @@ country_event = { #Regular annual elections
 		ai_chance = {
 			base = 10 
 			modifier = { #Increasing Weight by Ideology 
-				factor = 5 
+				factor = 2 
 				OR = { 
 					AND = {
 						var:SWI_councilor_2 = {
@@ -1990,30 +2028,69 @@ country_event = { #Regular annual elections
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
-							SWI_is_historical_ai = yes 
 							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_allies = yes
+							SWI_is_historical_ai = yes 
 						}
 					}
 					AND = {
 						var:SWI_councilor_2 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						OR = {
-							SWI_AI_is_fascist = yes
-							SWI_AI_is_pro_axis = yes
+						SWI_AI_is_fascist = yes
+						
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = SWI_gotthard_union
+				OR = {
+					AND = {
+						var:SWI_councilor_2 = {
+							SWI_councilor_is_any_kind_of_communist = yes
 						}
+						SWI_AI_is_communist = yes
 					}
 					AND = {
 						var:SWI_councilor_2 = {
-							 SWI_councilor_is_fascist = no
+							SWI_councilor_is_neutrality_despotism = yes
+						}
+						SWI_AI_is_imperial = yes
+					}
+					AND = {
+						var:SWI_councilor_2 = {
+							SWI_councilor_is_democratic_conservatism = yes
+						}
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_protectorate = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						var:SWI_councilor_2 = {
+							SWI_councilor_is_fascist = yes 
 						}
 						OR = {
 							SWI_AI_is_imperial = yes 
 							SWI_AI_is_dem_exp = yes 
+							SWI_AI_is_communist = yes
 						}
 					}
+					AND = {
+						var:SWI_councilor_2 = {
+							OR = {
+								SWI_councilor_is_any_kind_of_communist = yes
+								SWI_councilor_is_neutrality_despotism = yes
+							}
+						}
+						SWI_AI_is_dem_exp = yes
+					}
 				}
-			}
+			} 
 		}
 		trigger = {
 			ROOT = {
@@ -2044,7 +2121,7 @@ country_event = { #Regular annual elections
 		ai_chance = {
 			base = 10 
 			modifier = { #Increasing Weight by Ideology 
-				factor = 5 
+				factor = 2 
 				OR = { 
 					AND = {
 						var:SWI_councilor_3 = {
@@ -2052,30 +2129,69 @@ country_event = { #Regular annual elections
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
-							SWI_is_historical_ai = yes 
 							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_allies = yes
+							SWI_is_historical_ai = yes 
 						}
 					}
 					AND = {
 						var:SWI_councilor_3 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						OR = {
-							SWI_AI_is_fascist = yes
-							SWI_AI_is_pro_axis = yes
+						SWI_AI_is_fascist = yes
+						
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = SWI_gotthard_union
+				OR = {
+					AND = {
+						var:SWI_councilor_3 = {
+							SWI_councilor_is_any_kind_of_communist = yes
 						}
+						SWI_AI_is_communist = yes
 					}
 					AND = {
 						var:SWI_councilor_3 = {
-							 SWI_councilor_is_fascist = no
+							SWI_councilor_is_neutrality_despotism = yes
+						}
+						SWI_AI_is_imperial = yes
+					}
+					AND = {
+						var:SWI_councilor_3 = {
+							SWI_councilor_is_democratic_conservatism = yes
+						}
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_protectorate = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						var:SWI_councilor_3 = {
+							SWI_councilor_is_fascist = yes 
 						}
 						OR = {
 							SWI_AI_is_imperial = yes 
 							SWI_AI_is_dem_exp = yes 
+							SWI_AI_is_communist = yes
 						}
 					}
+					AND = {
+						var:SWI_councilor_3 = {
+							OR = {
+								SWI_councilor_is_any_kind_of_communist = yes
+								SWI_councilor_is_neutrality_despotism = yes
+							}
+						}
+						SWI_AI_is_dem_exp = yes
+					}
 				}
-			}
+			} 
 		}
 		trigger = {
 			ROOT = {
@@ -2122,7 +2238,7 @@ country_event = { #Snap election when President is ousted
 		ai_chance = {
 			base = 10 
 			modifier = { #Increasing Weight by Ideology 
-				factor = 5 
+				factor = 2 
 				OR = { 
 					AND = {
 						var:SWI_councilor_1 = {
@@ -2130,27 +2246,66 @@ country_event = { #Snap election when President is ousted
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
-							SWI_is_historical_ai = yes 
 							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_allies = yes
+							SWI_is_historical_ai = yes 
 						}
 					}
 					AND = {
 						var:SWI_councilor_1 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						OR = {
-							SWI_AI_is_fascist = yes
-							SWI_AI_is_pro_axis = yes
+						SWI_AI_is_fascist = yes
+						 
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = SWI_gotthard_union
+				OR = {
+					AND = {
+						var:SWI_councilor_1 = {
+							 SWI_councilor_is_any_kind_of_communist = yes
 						}
+						SWI_AI_is_communist = yes
 					}
 					AND = {
 						var:SWI_councilor_1 = {
-							 SWI_councilor_is_fascist = no
+							 SWI_councilor_is_neutrality_despotism = yes
+						}
+						SWI_AI_is_imperial = yes
+					}
+					AND = {
+						var:SWI_councilor_1 = {
+							 SWI_councilor_is_democratic_conservatism = yes
+						}
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_protectorate = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						var:SWI_councilor_1 = {
+							SWI_councilor_is_fascist = yes 
 						}
 						OR = {
 							SWI_AI_is_imperial = yes 
 							SWI_AI_is_dem_exp = yes 
+							SWI_AI_is_communist = yes
 						}
+					}
+					AND = {
+						var:SWI_councilor_1 = {
+							OR = {
+								SWI_councilor_is_any_kind_of_communist = yes
+								SWI_councilor_is_neutrality_despotism = yes
+							}
+						}
+						SWI_AI_is_dem_exp = yes
 					}
 				}
 			} 
@@ -2178,7 +2333,7 @@ country_event = { #Snap election when President is ousted
 		ai_chance = {
 			base = 10 
 			modifier = { #Increasing Weight by Ideology 
-				factor = 5 
+				factor = 2 
 				OR = { 
 					AND = {
 						var:SWI_councilor_2 = {
@@ -2186,30 +2341,69 @@ country_event = { #Snap election when President is ousted
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
-							SWI_is_historical_ai = yes
-							SWI_AI_is_partial_neutrality = yes 
+							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_allies = yes
+							SWI_is_historical_ai = yes 
 						}
 					}
 					AND = {
 						var:SWI_councilor_2 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						OR = {
-							SWI_AI_is_fascist = yes
-							SWI_AI_is_pro_axis = yes
-						} 
+						SWI_AI_is_fascist = yes
+						
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = SWI_gotthard_union
+				OR = {
+					AND = {
+						var:SWI_councilor_2 = {
+							SWI_councilor_is_any_kind_of_communist = yes
+						}
+						SWI_AI_is_communist = yes
 					}
 					AND = {
 						var:SWI_councilor_2 = {
-							 SWI_councilor_is_fascist = no
+							SWI_councilor_is_neutrality_despotism = yes
+						}
+						SWI_AI_is_imperial = yes
+					}
+					AND = {
+						var:SWI_councilor_2 = {
+							SWI_councilor_is_democratic_conservatism = yes
+						}
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_protectorate = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						var:SWI_councilor_2 = {
+							SWI_councilor_is_fascist = yes 
 						}
 						OR = {
 							SWI_AI_is_imperial = yes 
 							SWI_AI_is_dem_exp = yes 
+							SWI_AI_is_communist = yes
 						}
 					}
+					AND = {
+						var:SWI_councilor_2 = {
+							OR = {
+								SWI_councilor_is_any_kind_of_communist = yes
+								SWI_councilor_is_neutrality_despotism = yes
+							}
+						}
+						SWI_AI_is_dem_exp = yes
+					}
 				}
-			}
+			} 
 		}
 		trigger = {
 			ROOT = {
@@ -2233,7 +2427,7 @@ country_event = { #Snap election when President is ousted
 		ai_chance = {
 			base = 10
 			modifier = { #Increasing Weight by Ideology 
-				factor = 5 
+				factor = 2 
 				OR = { 
 					AND = {
 						var:SWI_councilor_3 = {
@@ -2241,27 +2435,66 @@ country_event = { #Snap election when President is ousted
 						}
 						OR = {
 							SWI_AI_is_dem_allied = yes 
-							SWI_is_historical_ai = yes 
 							SWI_AI_is_partial_neutrality = yes
+							SWI_AI_is_pro_allies = yes
+							SWI_is_historical_ai = yes 
 						}
 					}
 					AND = {
 						var:SWI_councilor_3 = {
 							SWI_councilor_is_fascist = yes 
 						}
-						OR = {
-							SWI_AI_is_fascist = yes
-							SWI_AI_is_pro_axis = yes
-						} 
+						SWI_AI_is_fascist = yes
+						
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = SWI_gotthard_union
+				OR = {
+					AND = {
+						var:SWI_councilor_3 = {
+							SWI_councilor_is_any_kind_of_communist = yes
+						}
+						SWI_AI_is_communist = yes
 					}
 					AND = {
 						var:SWI_councilor_3 = {
-							 SWI_councilor_is_fascist = no
+							SWI_councilor_is_neutrality_despotism = yes
+						}
+						SWI_AI_is_imperial = yes
+					}
+					AND = {
+						var:SWI_councilor_3 = {
+							SWI_councilor_is_democratic_conservatism = yes
+						}
+						SWI_AI_is_dem_exp = yes
+						SWI_AI_is_protectorate = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						var:SWI_councilor_3 = {
+							SWI_councilor_is_fascist = yes 
 						}
 						OR = {
 							SWI_AI_is_imperial = yes 
 							SWI_AI_is_dem_exp = yes 
+							SWI_AI_is_communist = yes
 						}
+					}
+					AND = {
+						var:SWI_councilor_3 = {
+							OR = {
+								SWI_councilor_is_any_kind_of_communist = yes
+								SWI_councilor_is_neutrality_despotism = yes
+							}
+						}
+						SWI_AI_is_dem_exp = yes
 					}
 				}
 			} 
@@ -3674,11 +3907,7 @@ country_event = { #Sending request for Vorarlberg
 	option = { #You can have it  
 		name = BBA_swiss_expansion.6.a
 		ai_chance = {
-			base = 5
-			modifier = {
-				factor = 2 
-				FROM = { is_ai = no }	
-			}
+			base = 10
 			modifier = {
 				factor = 3
 				strength_ratio = {

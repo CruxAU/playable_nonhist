@@ -4952,11 +4952,17 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 0
 			modifier = {
-				factor = 0
-				always = no
-				#TODO paris, rome, berlin & vienna is not controlled by secret ally or faction member of secret ally (capitals of neighbor countries)
+				add = 2
+				any_other_country = {
+					is_in_faction_with = var:SWI_secret_ally
+					OR = {
+						controls_state = 2 #rome
+						controls_state = 16 #paris
+						controls_state = 64 #berlin
+					}
+				}
 			}
 		}
 
@@ -5119,6 +5125,7 @@
 			modifier = {
 				factor = 10 
 				OR = {
+					SWI_AI_is_communist = yes
 					SWI_AI_is_dem_exp = yes 
 					SWI_AI_is_imperial = yes 
 				}
@@ -5126,7 +5133,6 @@
 		}
 
 		available = {
-			democratic < 0.90
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -5174,12 +5180,49 @@
 		}
 
 		available = {
-			democratic < 0.80
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.1
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.1
+				}
+				else = {
+					democratic > 0.6
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.1
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.1
+				}
+				else = {
+					democratic > 0.6
+				}
+			}
+			
 			fascism < 0.20
 			AUS = {	exists = yes }
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
-				range < SWI_centralization_bop_balanced
+				range < SWI_centralization_bop_very_cantons
 			}
 		}
 		
@@ -5193,6 +5236,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_despotic_tt
 			set_country_flag = SWI_requested_vorarlberg
 			add_state_claim = 848
 			848 = {
@@ -5252,7 +5296,43 @@
 		}
 
 		available = {
-			democratic < 0.75
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.2
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.2
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -5320,7 +5400,43 @@
 		}
 
 		available = {
-			democratic < 0.70
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.2
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.2
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
 			fascism < 0.15
 			AUS = {	exists = yes }
 			SWI_is_fully_centralized = yes 
@@ -5331,12 +5447,14 @@
 				exists = no 
 			}
 		}
-		search_filters = {FOCUS_FILTER_ANNEXATION}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
+
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_despotic_tt
 			every_state = {
 				limit = {
 					is_core_of = AUS 
@@ -5376,7 +5494,43 @@
 		}
 
 		available = {
-			democratic < 0.60
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.3
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.3
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
 			fascism < 0.15
 			SWI_is_fully_centralized = yes 
 		}
@@ -5388,8 +5542,8 @@
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_despotic_tt
 			hidden_effect = {
 				ITA = {  
 					SWI_demand_alps = yes
@@ -5473,7 +5627,43 @@
 		}
 
 		available = {
-			democratic < 0.60
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.3
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.3
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
 			fascism < 0.15
 			SWI_is_fully_centralized = yes 
 		}
@@ -5487,6 +5677,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_despotic_tt
 			FRA = {
 				hidden_effect = {
 					SWI_demand_alps = yes
@@ -5546,7 +5737,43 @@
 		}
 
 		available = {
-			democratic < 0.60
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.2
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.2
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
 			fascism < 0.15
 			SWI_is_fully_centralized = yes 
 		}
@@ -5558,8 +5785,8 @@
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_despotic_tt
 			every_owned_state = {
 				limit = {
 					is_alpine_state = yes 
@@ -5599,7 +5826,50 @@
 		}
 
 		available = {
-			democratic < 0.50
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.4
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }		
+					}
+					neutrality > 0.4
+				}
+				else = {
+					democratic > 0.95
+				}
+				var:SWI_confederation_president = {
+					OR = {
+						SWI_councilor_is_democratic = yes
+						SWI_councilor_is_neutrality_despotism = yes  
+						SWI_councilor_is_any_kind_of_communist = yes
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.4
+				}
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					neutrality > 0.4
+				}
+				else = {
+					democratic > 0.95
+				}
+			}
 			fascism < 0.10
 			any_controlled_state = {
 				is_alpine_state = yes 
@@ -5608,9 +5878,6 @@
 				SWI_is_fully_centralized = yes 			
 				NOT = { has_power_balance = { id = SWI_centralization_bop } }
 			}	
-			var:SWI_confederation_president = {
-				SWI_councilor_is_neutrality_despotism = yes  
-			}
 		}
 		
 		bypass = {
@@ -5622,26 +5889,52 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_despotic_tt
 			custom_effect_tooltip = SWI_neutrality_decisions_disabled_TT
-
 			if = {
 				limit = {
-					var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					is_ai = no
 				}
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = no  
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no  
+					}
+				}
+				else_if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no  
+					}
 				}
 			}
-			else_if = {
-				limit = {
-					var:SWI_confederation_president = { SWI_councilor_is_neutrality_despotism = yes }
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no  
+					}
 				}
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no  
+				else_if = {
+					limit = {
+						SWI_AI_is_imperial = yes
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no  
+					}
 				}
 			}
+			
 			var:SWI_confederation_president = {
 				SWI_make_centralized_president = yes 
 			}
@@ -5660,13 +5953,60 @@
 
 		cost = 10
 
-		ai_will_do = {
-			factor = 1
+		modifier = {
+			add = 1
+			has_government = communism
+			is_in_faction = no
+			GER = {
+				is_faction_leader = yes
+				NOT = {
+					has_government = communism
+				}
+				has_war = yes
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_war_with = GER
+				has_government = communism
+			}
+		}
+		modifier = {
+			add = 1
+			has_government = neutrality
+			is_in_faction = no
+			GER = {
+				is_faction_leader = yes
+				NOT = {
+					has_government = neutrality
+				}
+				has_war = yes
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_war_with = GER
+				has_government = neutrality
+			}
+		}
+		modifier = {
+			add = 1
+			has_government = democratic
+			is_in_faction = no
+			GER = {
+				is_faction_leader = yes
+				NOT = {
+					has_government = democratic
+				}
+				has_war = yes
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_war_with = GER
+				has_government = democratic
+			}
 		}
 
 		available = {
-			democratic < 0.40
-			fascism < 0.10
+			fascism < 0.05
 		}
 		
 		bypass = {
@@ -5705,12 +6045,62 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				add = 1
+				has_government = communism
+				is_in_faction = no
+				ITA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = communism
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = ITA
+					has_government = communism
+				}
+			}
+			modifier = {
+				add = 1
+				has_government = neutrality
+				is_in_faction = no
+				ITA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = neutrality
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = ITA
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				add = 1
+				has_government = democratic
+				is_in_faction = no
+				ITA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = democratic
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = ITA
+					has_government = democratic
+				}
+			}
 		}
 
 		available = {
-			democratic < 0.40
-			fascism < 0.10
+			fascism < 0.05
 		}
 		
 		bypass = {
@@ -5749,13 +6139,60 @@
 
 		cost = 10
 
-		ai_will_do = {
-			factor = 1
+		modifier = {
+			add = 1
+			has_government = communism
+			is_in_faction = no
+			FRA = {
+				is_faction_leader = yes
+				NOT = {
+					has_government = communism
+				}
+				has_war = yes
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_war_with = FRA
+				has_government = communism
+			}
+		}
+		modifier = {
+			add = 1
+			has_government = neutrality
+			is_in_faction = no
+			FRA = {
+				is_faction_leader = yes
+				NOT = {
+					has_government = neutrality
+				}
+				has_war = yes
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_war_with = FRA
+				has_government = neutrality
+			}
+		}
+		modifier = {
+			add = 1
+			has_government = democratic
+			is_in_faction = no
+			FRA = {
+				is_faction_leader = yes
+				NOT = {
+					has_government = democratic
+				}
+				has_war = yes
+			}
+			any_other_country = {
+				is_faction_leader = yes
+				has_war_with = FRA
+				has_government = democratic
+			}
 		}
 
 		available = {
-			democratic < 0.40
-			fascism < 0.10
+			fascism < 0.05
 		}
 		
 		bypass = {
@@ -5804,7 +6241,31 @@
 		}
 
 		available = {
-			democratic < 0.70
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.2
+				}
+				else = {
+					democratic > 0.75
+				}
+			}
 			fascism < 0.15		
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -5822,6 +6283,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_tt
 			add_political_power = 150 
 			add_manpower = 10000
 		}
@@ -5842,7 +6304,31 @@
 		}
 
 		available = {
-			democratic < 0.65
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
 			fascism < 0.10			
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -5853,12 +6339,14 @@
 		bypass = {
 
 		}
+
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_tt
 			unlock_decision_tooltip = {
 				decision = SWI_influence_future_cantons
 			}
@@ -5881,7 +6369,31 @@
 		}
 
 		available = {
-			democratic < 0.65
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.3
+				}
+				else = {
+					democratic > 0.85
+				}
+			}
 			fascism < 0.10	
 			SWI_is_fully_centralized = yes
 		}
@@ -5895,6 +6407,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = SWI_NHMMAP_warning_communist_tt
 			custom_effect_tooltip = SWI_neutrality_decisions_disabled_TT
 
 			swap_ideas = {
@@ -5922,7 +6435,31 @@
 		}
 
 		available = {
-			democratic < 0.60
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						var:SWI_confederation_president = { SWI_councilor_is_any_kind_of_communist = yes }		
+					}
+					communism > 0.4
+				}
+				else = {
+					democratic > 0.95
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						SWI_AI_is_communist = yes
+					}
+					communism > 0.4
+				}
+				else = {
+					democratic > 0.95
+				}
+			}
 			fascism < 0.05	
 		}
 		
@@ -5967,6 +6504,14 @@
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+				
+			}
 		}
 
 		available = {
@@ -6085,7 +6630,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -6132,7 +6676,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -6169,7 +6712,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -6227,7 +6769,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -6285,7 +6826,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -6342,7 +6882,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
@@ -6384,7 +6923,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6427,7 +6965,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6463,7 +7000,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6505,7 +7041,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6548,7 +7083,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6590,7 +7124,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6652,7 +7185,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes
@@ -6713,7 +7245,6 @@
 		}
 
 		available = {
-			democratic < 0.80
 			fascism < 0.20
 			any_owned_state = {
 				is_coastal = yes

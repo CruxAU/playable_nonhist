@@ -4064,6 +4064,20 @@ SWI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = SWI_ALLIED_DEMOCRATIC
+		text = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC"
+		desc = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_SECRET_ALLIES #needs lar
+		text = "RULE_OPTION_SWI_SECRET_ALLIES"
+		desc = "RULE_OPTION_SWI_SECRET_ALLIES_AI_DESC"
+		allow_achievements = yes
+		required_dlc = "La Resistance"
+		required_dlc = "By Blood Alone"
+	}
+	option = {
 		name = SWI_FRENCH_PUPPET
 		text = "RULE_OPTION_SWI_FRENCH_PUPPET"
 		desc = "RULE_SWI_FRENCH_PUPPET_SWI_AI_DESC"
@@ -4076,9 +4090,33 @@ SWI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = SWI_ALLIED_DEMOCRATIC
-		text = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC"
-		desc = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC_AI_DESC"
+		name = SWI_FASCIST
+		text = "RULE_OPTION_SWI_FASCIST"
+		desc = "RULE_OPTION_SWI_FASCIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_FASCIST_AXIS
+		text = "RULE_OPTION_FASCIST_AXIS"
+		desc = "RULE_OPTION_SWI_FASCIST_AXIS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_FASCIST_PUPPET
+		text = "RULE_OPTION_SWI_FASCIST_PUPPET"
+		desc = "RULE_OPTION_SWI_FASCIST_PUPPET_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_FASCIST_PUPPET_ALPINE
+		text = "RULE_OPTION_SWI_FASCIST_PUPPET_ALPINE"
+		desc = "RULE_OPTION_SWI_FASCIST_PUPPET_ALPINE_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_VORARLBERG
+		text = "RULE_OPTION_SWI_VORARLBERG"
+		desc = "RULE_OPTION_SWI_VORARLBERG_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -4088,15 +4126,45 @@ SWI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = SWI_EXPANSIONIST_COMMUNIST
+		text = "RULE_OPTION_SWI_EXPANSIONIST_COMMUNIST"
+		desc = "RULE_OPTION_SWI_EXPANSIONIST_COMMUNIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_AP_DEMOCRATIC
+		text = "RULE_OPTION_SWI_AP_DEMOCRATIC"
+		desc = "RULE_OPTION_SWI_AP_DEMOCRATIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_AP_COMMUNIST
+		text = "RULE_OPTION_SWI_AP_COMMUNIST"
+		desc = "RULE_OPTION_SWI_AP_COMMUNIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = SWI_IMPERIAL
 		text = "RULE_OPTION_SWI_IMPERIAL"
 		desc = "RULE_OPTION_SWI_IMPERIAL_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = SWI_FASCIST
-		text = "RULE_OPTION_SWI_FASCIST"
-		desc = "RULE_OPTION_SWI_FASCIST_AI_DESC"
+		name = SWI_VORARLBERG_NE
+		text = "RULE_OPTION_SWI_VORARLBERG_NE"
+		desc = "RULE_OPTION_SWI_VORARLBERG_NE_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_EXPANSIONIST_NE
+		text = "RULE_OPTION_SWI_EXPANSIONIST_NE"
+		desc = "RULE_OPTION_SWI_EXPANSIONIST_NE_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWI_AP_NE
+		text = "RULE_OPTION_SWI_AP_NE"
+		desc = "RULE_OPTION_SWI_AP_NE_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {

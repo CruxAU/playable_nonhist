@@ -538,3 +538,5 @@
  nonhist_TUR.2.t:0 "[FROM.GetNameDefCap] Pursues Alliance"
  nonhist_TUR.4.desc:0 "[FROM.GetNameDefCap] has suggested that though the course of action is regrettable, for national security regions [GRE.GetNameDef] must be destroyed. Our officials enthusiastically and whole-heartedly agreed with the opinions of our [FROM.GetAdjective] allies. Should [FROM.GetNameDefCap] occupy [GRE.GetNameDef], we will by hopefully get a piece of the pie."
  TUR_turkish_interventionism_NHMMAP:0 "Turkish Interventionism"
+ SWI_NHMMAP_warning_communist_despotic_tt:0 "§RWarning:§! If the §YCurrent President§! is §gNon-Aligned§! or §OCommunist§!, the requirements for this and future focuses §Ywill change!§!\n\n"
+ SWI_NHMMAP_warning_communist_tt:0 "§RWarning:§! If the §YCurrent President§! is §OCommunist§!, the requirements for this and future focuses §Ywill change!§!\n\n"
