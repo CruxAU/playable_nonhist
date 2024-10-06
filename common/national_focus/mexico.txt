@@ -137,17 +137,17 @@ focus_tree = {
 					planning_skill = 3
 					logistics_skill = 4
 				}
-				else = {
-					add_field_marshal_role = {
-						character = MEX_plutarco_calles
-						legacy_id = 711
-						traits = { harsh_leader } # Incited many rebellions with his heavy hand
-						skill = 4
-						attack_skill = 5
-						defense_skill = 3
-						planning_skill = 2
-						logistics_skill = 3
-					}
+			}
+			else = {
+				add_field_marshal_role = {
+					character = MEX_plutarco_calles
+					legacy_id = 711
+					traits = { harsh_leader } # Incited many rebellions with his heavy hand
+					skill = 4
+					attack_skill = 5
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
 				}
 			}
 			swap_ideas = {
