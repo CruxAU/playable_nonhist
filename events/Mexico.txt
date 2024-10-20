@@ -1105,6 +1105,31 @@ country_event = {
 						rule = MEX_ai_behavior
 						option = SECULAR_REPUBLIC
 					}
+					has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_REPUBLIC_LEFT
+					}
+					has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_REPUBLIC_RIGHT
+					}
+					has_country_flag = MEX_AI_SECULAR_MODERATES
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_MODERATES
+					}
+					has_country_flag = MEX_AI_LEFT_MODERATES
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = LEFT_MODERATES
+					}
+					has_country_flag = MEX_AI_RIGHT_MODERATES
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = RIGHT_MODERATES
+					}
 					has_country_flag = MEX_AI_SOCIAL_CATHOLICISM 
 					has_game_rule = {
 						rule = MEX_ai_behavior
@@ -1115,29 +1140,10 @@ country_event = {
 						rule = MEX_ai_behavior
 						option = FASCIST_DICTATORSHIP
 					}
-				}
-			}
-			
-			modifier = {
-				add = 100
-				is_historical_focus_on = yes
-				NOT = {
-					OR = {
-						has_country_flag = MEX_AI_THEOCRATIC_ORDER 
-						has_game_rule = {
-							rule = MEX_ai_behavior
-							option = THEOCRATIC_ORDER
-						}
-						has_country_flag = MEX_AI_SOVIET_REPUBLIC 
-						has_game_rule = {
-							rule = MEX_ai_behavior
-							option = SOVIET_REPUBLIC
-						}
-						has_country_flag = MEX_AI_CARDENISMO 
-						has_game_rule = {
-							rule = MEX_ai_behavior
-							option = CARDENISMO
-						}
+					has_country_flag = MEX_AI_FASCIST_JUNTA
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = FASCIST_JUNTA
 					}
 				}
 			}
@@ -1196,6 +1202,21 @@ country_event = {
 						rule = MEX_ai_behavior
 						option = THEOCRATIC_ORDER
 					}
+					has_country_flag = MEX_AI_FALANGIST
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = FALANGIST
+					}
+					has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = INSTITUTIONAL_COMMUNISM
+					}
+					has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = INSTITUTIONAL_COMMUNISM_LEFT
+					}
 					has_country_flag = MEX_AI_SOVIET_REPUBLIC 
 					has_game_rule = {
 						rule = MEX_ai_behavior
@@ -1249,12 +1270,22 @@ country_event = {
 			factor = 0
 			
 			modifier = {
-				add = 100
+				add = 200
 				OR = {
 					has_country_flag = MEX_AI_CARDENISMO 
 					has_game_rule = {
 						rule = MEX_ai_behavior
 						option = CARDENISMO
+					}
+					has_country_flag = MEX_AI_TROTSKY
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = TROTSKY
+					}
+					has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = INSTITUTIONAL_COMMUNISM_RIGHT
 					}
 				}
 			}
@@ -1277,7 +1308,11 @@ country_event = {
 
 	trigger = {
 		original_tag = MEX
-		date < 1942.1.1
+		date > 1940.6.1
+		date < 1941.1.20
+		NOT = {
+			has_completed_focus = MEX_focus_catholic_politics
+		}
 		has_dlc = "Man the Guns"
 	}
 	
@@ -1287,10 +1322,112 @@ country_event = {
 		country_event = {
 			id = mexico.19
 			days = 1
-		}
 		
+		}
 		ai_chance = {
-			factor = 75
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_MODERATES
+					}
+					has_country_flag = MEX_AI_SECULAR_MODERATES
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = INSTITUTIONAL_COMMUNISM
+					}
+					has_country_flag = MEX_AI_SOCIAL_CATHOLICISM
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SOCIAL_CATHOLICISM
+					}
+					has_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = FASCIST_DICTATORSHIP
+					}
+					has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = CEDILLO_REBELS
+					}
+					has_country_flag = MEX_AI_CEDILLO_REBELS
+					AND = {
+						OR = {
+							has_game_rule = {
+								rule = MEX_ai_behavior
+								option = CARDENISMO
+							}
+							has_country_flag = MEX_AI_CARDENISMO
+						}
+						has_country_leader = {
+							character = MEX_hernan_laborde
+						}
+					}
+					AND = {
+						OR = {
+							has_game_rule = {
+								rule = MEX_ai_behavior
+								option = TROTSKY
+							}
+							has_country_flag = MEX_AI_TROTSKY
+						}
+						has_country_leader = {
+							character = MEX_leon_trotsky
+						}
+					}
+					AND = {
+						OR = {
+							has_game_rule = {
+								rule = MEX_ai_behavior
+								option = FASCIST_JUNTA
+							}
+							has_country_flag = MEX_AI_FASCIST_JUNTA
+						}
+						has_country_leader = {
+							character = MEX_saturnino_cedillo
+						}
+					}
+					AND = {
+						OR = {
+							has_game_rule = {
+								rule = MEX_ai_behavior
+								option = FASCIST_JUNTA
+							}
+							has_country_flag = MEX_AI_FASCIST_JUNTA
+						}
+						has_country_leader = {
+							character = MEX_saturnino_cedillo
+						}
+					}
+					AND = {
+						OR = {
+							has_game_rule = {
+								rule = MEX_ai_behavior
+								option = FALANGIST
+							}
+							has_country_flag = MEX_AI_FALANGIST
+						}
+						has_country_leader = {
+							character = MEX_salvador_abascal
+						}
+					}
+					AND = {
+						OR = {
+							has_game_rule = {
+								rule = MEX_ai_behavior
+								option = THEOCRATIC_ORDER
+							}
+							has_country_flag = MEX_AI_THEOCRATIC_ORDER
+						}
+						has_country_leader = {
+							character = MEX_jesus_degollado_guizar
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -1301,6 +1438,10 @@ country_event = {
 			NOT = {
 				has_government = democratic
 			}
+		}
+
+		ai_chance = {
+			factor = 1
 		}
 		
 		add_stability = -0.03
@@ -1334,15 +1475,7 @@ country_event = {
 				elections_allowed = no
 			}
 		}
-		
-		ai_chance = {
-			factor = 25
-			
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
+	
 	}
 }
 
@@ -1370,6 +1503,20 @@ country_event = {
 				}
 			}
 			has_government = neutrality
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = LEFT_MODERATES
+					}
+					has_country_flag = MEX_AI_LEFT_MODERATES
+				}
+			}
 		}
 
 		add_country_leader_role = {
@@ -1413,6 +1560,25 @@ country_event = {
 				}
 			}
 			has_government = neutrality
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_MODERATES
+					}
+					has_country_flag = MEX_AI_SECULAR_MODERATES
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = LEFT_MODERATES
+					}
+					has_country_flag = MEX_AI_LEFT_MODERATES
+				}
+			}
 		}
 
 		add_country_leader_role = {
@@ -1460,6 +1626,20 @@ country_event = {
 				}
 			}
 			has_government = neutrality
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = RIGHT_MODERATES
+					}
+					has_country_flag = MEX_AI_RIGHT_MODERATES
+				}
+			}
 		}
 
 		add_country_leader_role = {
@@ -1515,6 +1695,20 @@ country_event = {
 			has_government = democratic
 		}
 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_REPUBLIC_LEFT
+					}
+					has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+				}
+			}
+		}
+
 		add_country_leader_role = {
 			character = MEX_vicente_lombardo
 			country_leader = {
@@ -1560,6 +1754,20 @@ country_event = {
 				}
 			}
 			has_government = democratic
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_REPUBLIC_RIGHT
+					}
+					has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+				}
+			}
 		}
 
 		add_country_leader_role = {
@@ -1608,6 +1816,27 @@ country_event = {
 			}
 			has_government = democratic
 		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_REPUBLIC
+					}
+					has_country_flag = MEX_AI_SECULAR_REPUBLIC
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = MEX_ai_behavior
+							option = DEFAULT
+						}
+					}
+				}
+			}
+		}
 
 		add_country_leader_role = {
 			character = MEX_manuel_avila_camacho
@@ -1636,14 +1865,6 @@ country_event = {
 					id = mexico.20
 					days = 1
 				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 10
-				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -1688,6 +1909,20 @@ country_event = {
 			has_government = communism
 		}
 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = INSTITUTIONAL_COMMUNISM_LEFT
+					}
+					has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+				}
+			}
+		}
+
 		add_country_leader_role = {
 			character = MEX_vicente_lombardo
 			country_leader = {
@@ -1711,6 +1946,20 @@ country_event = {
 				}
 			}
 			has_government = communism
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = INSTITUTIONAL_COMMUNISM_RIGHT
+					}
+					has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+				}
+			}
 		}
 
 		add_country_leader_role = {
@@ -1742,6 +1991,20 @@ country_event = {
 			}			
 			NOT = {
 				has_global_flag = flag_mexico_invited_trotsky_to_government
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SOVIET_REPUBLIC
+					}
+					has_country_flag = MEX_AI_SOVIET_REPUBLIC
+				}
 			}
 		}
 
@@ -1779,6 +2042,20 @@ country_event = {
 			}
 		}
 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = CARDENISMO
+					}
+					has_country_flag = MEX_AI_CARDENISMO
+				}
+			}
+		}
+
 		promote_character = MEX_hernan_laborde
 	}
 
@@ -1799,6 +2076,21 @@ country_event = {
 			has_global_flag = flag_mexico_invited_trotsky_to_government
 			NOT = { has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico }
 		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = TROTSKY
+					}
+					has_country_flag = MEX_AI_TROTSKY
+				}
+			}
+		}
+
 		MEX_leon_trotsky = {
 			add_country_leader_role = {
 				promote_leader = yes
@@ -1827,6 +2119,20 @@ country_event = {
 			}
 			has_completed_focus = MEX_focus_support_general_cedillo
 			has_government = fascism
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = FASCIST_JUNTA
+					}
+					has_country_flag = MEX_AI_FASCIST_JUNTA
+				}
+			}
 		}
 
 		add_country_leader_role = {
@@ -1879,6 +2185,20 @@ country_event = {
 			has_government = fascism
 		}
 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = THEOCRATIC_ORDER
+					}
+					has_country_flag = MEX_AI_THEOCRATIC_ORDER
+				}
+			}
+		}
+
 		add_country_leader_role = {
 			character = MEX_jesus_degollado_guizar
 			country_leader = {
@@ -1903,6 +2223,21 @@ country_event = {
 			}
 			has_government = fascism
 		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = FALANGIST
+					}
+					has_country_flag = MEX_AI_FALANGIST
+				}
+			}
+		}
+
 		if = {
 			limit = {
 				has_country_leader = { #If he is already country leader, fake tooltip

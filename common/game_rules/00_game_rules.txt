@@ -2697,40 +2697,206 @@ MEX_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = SECULAR_REPUBLIC
+		name = SECULAR_REPUBLIC #historical
 		text = "RULE_OPTION_SECULAR_REPUBLIC"
 		desc = "RULE_OPTION_SECULAR_REPUBLIC_DESC"
 		allow_achievements = yes
 	}
 	option = {
+		name = SECULAR_REPUBLIC_LEFT
+		text = "RULE_OPTION_SECULAR_REPUBLIC_LEFT"
+		desc = "RULE_OPTION_SECULAR_REPUBLIC_LEFT_DESC"
+		allow_achievements = yes
+	} 
+	option = {
+		name = SECULAR_REPUBLIC_RIGHT
+		text = "RULE_OPTION_SECULAR_REPUBLIC_RIGHT"
+		desc = "RULE_OPTION_SECULAR_REPUBLIC_RIGHT_DESC"
+		allow_achievements = yes
+	} 
+	option = {
 		name = SOCIAL_CATHOLICISM
 		text = "RULE_OPTION_SOCIAL_CATHOLICISM"
 		desc = "RULE_OPTION_SOCIAL_CATHOLICISM_DESC"
+		allow_achievements = yes
+	} 
+	option = {
+		name = SECULAR_MODERATES
+		text = "RULE_OPTION_SECULAR_MODERATES"
+		desc = "RULE_OPTION_SECULAR_MODERATES_DESC"
+		allow_achievements = yes
 	}
 	option = {
-		name = FASCIST_DICTATORSHIP
-		text = "RULE_OPTION_FASCIST_DICTATORSHIP"
-		desc = "RULE_OPTION_FASCIST_DICTATORSHIP_DESC"
+		name = LEFT_MODERATES
+		text = "RULE_OPTION_LEFT_MODERATES"
+		desc = "RULE_OPTION_LEFT_MODERATES_DESC"
+		allow_achievements = yes
+	}
+	option = { 
+		name = RIGHT_MODERATES
+		text = "RULE_OPTION_RIGHT_MODERATES"
+		desc = "RULE_OPTION_RIGHT_MODERATES_DESC" 
+		allow_achievements = yes
 	}
 	option = {
-		name = THEOCRATIC_ORDER
-		text = "RULE_OPTION_THEOCRATIC_ORDER"
-		desc = "RULE_OPTION_THEOCRATIC_ORDER_DESC"
+		name = INSTITUTIONAL_COMMUNISM
+		text = "RULE_OPTION_INSTITUTIONAL_COMMUNISM"
+		desc = "RULE_OPTION_INSTITUTIONAL_COMMUNISM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = INSTITUTIONAL_COMMUNISM_LEFT
+		text = "RULE_OPTION_INSTITUTIONAL_COMMUNISM_LEFT"
+		desc = "RULE_OPTION_INSTITUTIONAL_COMMUNISM_LEFT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = INSTITUTIONAL_COMMUNISM_RIGHT
+		text = "RULE_OPTION_INSTITUTIONAL_COMMUNISM_RIGHT"
+		desc = "RULE_OPTION_INSTITUTIONAL_COMMUNISM_RIGHT_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = SOVIET_REPUBLIC
 		text = "RULE_OPTION_SOVIET_REPUBLIC"
 		desc = "RULE_OPTION_SOVIET_REPUBLIC_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = CARDENISMO
 		text = "RULE_OPTION_CARDENISMO"
 		desc = "RULE_OPTION_CARDENISMO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TROTSKY
+		text = "RULE_OPTION_TROTSKY"
+		desc = "RULE_OPTION_TROTSKY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FASCIST_DICTATORSHIP
+		text = "RULE_OPTION_FASCIST_DICTATORSHIP"
+		desc = "RULE_OPTION_FASCIST_DICTATORSHIP_DESC"
+		allow_achievements = yes
+	} 
+	option = {
+		name = FASCIST_JUNTA
+		text = "RULE_OPTION_FASCIST_JUNTA"
+		desc = "RULE_OPTION_FASCIST_JUNTA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FALANGIST
+		text = "RULE_OPTION_MEX_FALANGIST"
+		desc = "RULE_OPTION_MEX_FALANGIST_DESC"
+		allow_achievements = yes
+	} 
+	option = { 
+		name = THEOCRATIC_ORDER
+		text = "RULE_OPTION_THEOCRATIC_ORDER"
+		desc = "RULE_OPTION_THEOCRATIC_ORDER_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CEDILLO_REBELS
+		text = "RULE_OPTION_CEDILLO_REBELS"
+		desc = "RULE_OPTION_CEDILLO_REBELS_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+MEX_fp_ai_behavior = {
+	name = "MEX_FP_AI_BEHAVIOR"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = FP_NEUTRAL
+		text = "RULE_OPTION_NEUTRALITY"
+		desc = "RULE_OPTION_FP_NEUTRAL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_USA #historical
+		text = "RULE_OPTION_FP_USA"
+		desc = "RULE_OPTION_FP_USA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_ENG
+		text = "RULE_OPTION_FP_ENG"
+		desc = "RULE_OPTION_FP_ENG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_GER
+		text = "RULE_OPTION_FP_GER"
+		desc = "RULE_OPTION_FP_GER_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_SOV
+		text = "RULE_OPTION_FP_SOV"
+		desc = "RULE_OPTION_FP_SOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_HISPANIC
+		text = "RULE_OPTION_FP_HISPANIC"
+		desc = "RULE_OPTION_FP_HISPANIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_BOLIVARIAN
+		text = "RULE_OPTION_FP_BOLIVARIAN"
+		desc = "RULE_OPTION_FP_BOLIVARIAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+MEX_exp_ai_behavior = {
+	name = "MEX_EXP_AI_BEHAVIOR"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = EXPANSION
+		text = "RULE_OPTION_EXPANSION"
+		desc = "RULE_OPTION_EXPANSION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NO_EXPANSION #historical
+		text = "RULE_OPTION_NO_EXPANSION"
+		desc = "RULE_OPTION_NO_EXPANSION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 

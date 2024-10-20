@@ -4572,7 +4572,6 @@ focus_tree = {
 				}
 			}
 		}
-		
 		available = {
 			is_subject = no 
 			any_other_country = {

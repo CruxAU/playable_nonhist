@@ -929,7 +929,7 @@ country_event = {
 				}
 			}
 		}	
-		set_global_flag = RAJ_seek_help_from_germany_promised
+		set_global_flag = RAJ_seek_help_from_japan_promised
 		if = {
 			limit = {
 				RAJ = { NOT = { has_war_together_with = ENG } }

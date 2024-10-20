@@ -2746,6 +2746,36 @@ GER_volunteers_to_norway = {
 	}
 }
 
+
+#########################################################################################
+######################### HOL ############################################################
+#########################################################################################
+
+HOL_wilhemina_make_monarchist_GER_like_me = {
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		focus_progress = {
+			focus = HOL_wilhelminism
+			progress > 0.01
+		}
+		GER = {
+			has_government = neutrality
+		}
+	}
+	abort = {
+		has_completed_focus = HOL_wilhelminism
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GER
+		target = improve_relation
+		value = 500
+	}	
+}
+
 #########################################################################################
 ######################### ITA ###########################################################
 #########################################################################################
@@ -5673,5 +5703,125 @@ SWI_preempt_anschluss_make_ita_like_me = {
 		id = ITA
 		target = improve_relation
 		value = 500
+	}	
+}
+
+
+
+#########################################################################################
+######################### MEX ###########################################################
+#########################################################################################
+
+MEX_scw_volunteers_c_1 = {
+	allowed = { original_tag = MEX }
+	enable = { 
+		has_completed_focus = MEX_focus_international_struggle
+		has_completed_focus = MEX_focus_the_red_shirts
+		has_completed_focus = MEX_focus_communist_revolution
+		NOT = { has_global_flag = scw_over }
+		SPC = {
+			exists = yes
+			has_government = communism
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPC
+		value = 200
+	}
+}
+
+MEX_scw_volunteers_c_2 = {
+	allowed = { original_tag = MEX }
+	enable = { 
+		has_completed_focus = MEX_focus_international_struggle
+		has_completed_focus = MEX_focus_the_red_shirts
+		NOT = { has_completed_focus = MEX_focus_communist_revolution }
+		NOT = { has_global_flag = scw_over }
+		SPC = {
+			OR = {
+				exists = no
+				NOT = { has_government = communism }
+			}
+			
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 200
+	}
+}
+
+MEX_scw_volunteers_f = {
+	allowed = { original_tag = MEX }
+	enable = { 
+		has_completed_focus = MEX_focus_international_struggle
+		has_completed_focus = MEX_focus_the_gold_shirts
+		OR = {
+			SPB = { exists = no }
+			NOT = {
+				has_completed_focus = MEX_focus_legion_of_christ
+			}
+		}
+		NOT = { has_global_flag = scw_over }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPA
+		value = 200
+	}
+}
+
+MEX_scw_volunteers_carlists = {
+	allowed = { original_tag = MEX }
+	enable = { 
+		has_completed_focus = MEX_focus_international_struggle
+		has_completed_focus = MEX_focus_the_gold_shirts
+		NOT = { has_global_flag = scw_over }
+		SPB = { exists = yes }
+		has_completed_focus = MEX_focus_legion_of_christ
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPB
+		value = 200
+	}
+}
+
+MEX_relations_with_potential_SA_allies = { 
+	allowed = { original_tag = MEX }
+	enable = {
+		MEX = {
+			OR = {
+				has_completed_focus = MEX_focus_hispanic_alliance
+				has_completed_focus = MEX_focus_bolivarian_alliance
+			}
+		}
+		NOT = {
+			original_tag = MEX
+		}
+		is_in_faction = no
+		has_war = no
+		capital_scope = {
+			is_on_continent = south_america
+		}
+		has_government = MEX
+	}
+	reversed = yes
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = diplo_action_desire
+		id = MEX
+		target = improve_relation
+		value = 100
 	}	
 }

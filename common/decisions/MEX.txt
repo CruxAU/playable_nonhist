@@ -134,7 +134,7 @@ MEX_category_military_issues = {
 		available = {
 			OR = {
 				NOT = { has_idea = MEX_church_power_1 }
-				has_stability > 0.6
+				has_stability > 0.5
 				has_government = democratic
 				has_global_flag = flag_second_mexican_civil_war
 				has_civil_war = yes
@@ -146,7 +146,7 @@ MEX_category_military_issues = {
 		activation = {
 			has_idea = MEX_church_power_1
 
-			has_stability < 0.6
+			has_stability < 0.5
 
 			NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
 
@@ -190,7 +190,7 @@ MEX_category_military_issues = {
 		available = {
 			has_idea = MEX_church_power_1
 
-			has_stability < 0.6
+			has_stability < 0.5
 
 			NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
 
@@ -225,7 +225,7 @@ MEX_category_military_issues = {
 						has_completed_focus = MEX_focus_bolivarian_alliance
 					}
 				}
-				has_stability > 0.6
+				has_stability > 0.5
 				has_idea = MEX_church_power_2
 				has_idea = MEX_church_power_3
 				has_idea = MEX_church_power_4
@@ -257,7 +257,7 @@ MEX_category_military_issues = {
 		available = {
 			OR = {
 				NOT = { has_idea = MEX_church_power_5 }
-				has_stability > 0.6
+				has_stability > 0.5
 				has_government = communism
 				has_global_flag = flag_second_mexican_civil_war
 				has_civil_war = yes
@@ -269,7 +269,7 @@ MEX_category_military_issues = {
 		activation = {
 			has_idea = MEX_church_power_5
 
-			has_stability < 0.6
+			has_stability < 0.5
 
 			NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
 
@@ -313,7 +313,7 @@ MEX_category_military_issues = {
 		available = {
 			has_idea = MEX_church_power_5
 
-			has_stability < 0.6
+			has_stability < 0.5
 
 			NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
 
@@ -348,7 +348,7 @@ MEX_category_military_issues = {
 						has_completed_focus = MEX_focus_reform_the_cristero_guard
 					}
 				}
-				has_stability > 0.6
+				has_stability > 0.5
 				has_idea = MEX_church_power_1
 				has_idea = MEX_church_power_2
 				has_idea = MEX_church_power_3
@@ -1594,6 +1594,28 @@ MEX_category_hispanic_solidarity = {
 				NOT = { is_in_faction_with = ROOT }
 				capital_scope = {
 					is_on_continent = south_america
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_completed_focus = MEX_focus_hispanic_alliance
+						}
+					}
+					OR = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_completed_focus = MEX_focus_bolivarian_alliance
+						}
+					}
+					OR = {
+						has_government = neutrality
+						has_government = communism
+					}
 				}
 			}
         }

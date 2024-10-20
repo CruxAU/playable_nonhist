@@ -2711,7 +2711,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 500
 		}
 
 		available = {
@@ -2755,7 +2755,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 500
 		}
 
 		available = {
@@ -3826,10 +3826,6 @@ focus_tree = {
 			NOT = { has_completed_focus = MEX_focus_catholic_politics }
 			NOT = { has_completed_focus = MEX_focus_crusade_against_atheism }
 			NOT = { has_completed_focus = MEX_focus_communist_revolution }
-			OR = {
-				has_idea = MEX_church_power_1
-				has_idea = MEX_church_power_2
-			}
 		}
 
 		bypass = {
@@ -5105,6 +5101,14 @@ focus_tree = {
 				limit = {
 					is_faction_leader = yes
 					has_government = communism
+					capital_scope = {
+						NOT = {
+							is_on_continent = asia
+						}
+						NOT = {
+							is_on_continent = africa
+						}
+					}
 					is_subject = no
 					NOT = {
 						has_war_with = MEX
@@ -5122,6 +5126,14 @@ focus_tree = {
 					limit = {
 						is_in_faction = no
 						has_government = communism
+						capital_scope = {
+							NOT = {
+								is_on_continent = asia
+							}
+							NOT = {
+								is_on_continent = africa
+							}
+						}
 						is_subject = no
 					}
 					country_event = {
@@ -5306,7 +5318,36 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
+			modifier = {
+				add = 200
+				AND = {
+					OR = {
+						controls_state = 313
+						313 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+					OR = {
+						controls_state = 312
+						312 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+					OR = {
+						controls_state = 314
+						314 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+				}
+			}
 		}
 
 		available = {
@@ -5411,7 +5452,28 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
+			modifier = {
+				add = 200
+				AND = {
+					OR = {
+						controls_state = 316
+						316 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+					OR = {
+						controls_state = 317
+						317 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+				}
+			}
 		}
 
 		available = {
@@ -5686,7 +5748,18 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
+			modifier = {
+				add = 200
+				OR = {
+					owns_state = 304
+					304 = {
+						CONTROLLER = {
+							is_puppet_of = ROOT
+						}
+					}
+				}
+			}
 		}
 
 		available = {
@@ -5790,7 +5863,36 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
+			modifier = {
+				add = 200
+				AND = {
+					OR = {
+						controls_state = 305
+						305 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+					OR = {
+						controls_state = 306
+						306 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+					OR = {
+						controls_state = 307
+						307 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+				}
+			}
 		}
 
 		available = {
@@ -5954,7 +6056,28 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
+			modifier = {
+				add = 200
+				AND = {
+					OR = {
+						controls_state = 316
+						316 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+					OR = {
+						controls_state = 317
+						317 = {
+							CONTROLLER = {
+								is_puppet_of = ROOT
+							}
+						}
+					}
+				}
+			}
 		}
 
 		available = {

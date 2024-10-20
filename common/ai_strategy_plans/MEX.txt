@@ -1,3 +1,234 @@
+fp_usa_mex = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = MEX_fp_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = MEX_AI_FP_USA
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_USA 
+			}
+		}
+	}
+	abort = {
+		has_war_with = USA
+	}
+	ai_national_focuses = {
+		MEX_focus_realpolitik
+		MEX_focus_nationalize_the_oil_fields
+		MEX_focus_compensation
+		MEX_focus_liberty_and_justice_for_all # Requests to join America's faction
+		MEX_focus_aztec_eagles
+		MEX_focus_international_peacekeepers # Democratic drift
+				
+		MEX_focus_northern_steel_plants
+		MEX_focus_engineering_school
+		MEX_focus_television_innovators # research slot
+		MEX_focus_xefo
+		MEX_focus_law_on_industrial_promotion
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
+
+fp_sov_mex = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FP_SOV
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_SOV 
+			}
+		}
+	}
+	abort = {
+		has_war_with = SOV
+	}
+	ai_national_focuses = {
+		MEX_focus_realpolitik
+		MEX_focus_nationalize_the_oil_fields
+		MEX_focus_oppose_yanqui_imperialism
+		MEX_focus_international_proletarianism # Requests to join soviet faction
+		MEX_focus_interior_defence_plan
+				
+		MEX_focus_northern_steel_plants
+		MEX_focus_engineering_school
+		MEX_focus_television_innovators # research slot
+		MEX_focus_xefo
+		MEX_focus_law_on_industrial_promotion
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
+fp_ger_mex = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FP_GER
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_GER
+			}
+		}
+	}
+	abort = {
+		has_war_with = GER
+	}
+	ai_national_focuses = {
+		MEX_focus_realpolitik
+		MEX_focus_nationalize_the_oil_fields
+		MEX_focus_german_resource_exchange
+		MEX_focus_new_world_order # Requests to join german faction
+		MEX_focus_interior_defence_plan
+				
+		MEX_focus_northern_steel_plants
+		MEX_focus_engineering_school
+		MEX_focus_television_innovators # research slot
+		MEX_focus_xefo
+		MEX_focus_law_on_industrial_promotion
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
+fp_uk_mex = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FP_ENG
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_ENG
+			}
+		}
+	}
+	abort = {
+		has_war_with = USA
+	}
+	ai_national_focuses = {
+		MEX_focus_realpolitik
+		MEX_focus_royal_dutch_shell
+		MEX_focus_community_of_nations # Join Britain's faction
+		MEX_focus_purchase_belize
+		MEX_focus_international_peacekeepers # Democratic drift
+
+		MEX_focus_northern_steel_plants
+		MEX_focus_engineering_school
+		MEX_focus_television_innovators # 5th research slot
+
+		MEX_focus_oil_revenue_reinvestment
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
+
+fp_hispanic_mexico = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FP_HISPANIC
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_HISPANIC
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+		}
+	}
+	ai_national_focuses = {
+		MEX_focus_hispanic_alliance
+		MEX_focus_nationalize_the_oil_fields
+		MEX_focus_german_resource_exchange
+		MEX_focus_new_world_order # should be skipped
+		MEX_focus_propaganda_pact
+				
+		MEX_focus_northern_steel_plants
+		MEX_focus_engineering_school
+		MEX_focus_television_innovators # research slot
+		MEX_focus_invite_brazil
+		MEX_focus_xefo
+		MEX_focus_law_on_industrial_promotion
+		MEX_focus_coastal_defence_plan
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
+
+fp_bolivarian_mexico = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FP_BOLIVARIAN
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_BOLIVARIAN
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = fascism
+		}
+	}
+	ai_national_focuses = {
+		MEX_focus_bolivarian_alliance
+		MEX_focus_nationalize_the_oil_fields
+		MEX_focus_oppose_yanqui_imperialism
+		MEX_focus_international_proletarianism # should be skipped
+				
+		MEX_focus_northern_steel_plants
+		MEX_focus_engineering_school
+		MEX_focus_television_innovators # research slot
+		MEX_focus_liberate_the_antilles
+		MEX_focus_xefo
+		MEX_focus_law_on_industrial_promotion
+		MEX_focus_coastal_defence_plan
+		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
+	}
+}
+
 mexico_historical = {
 	name = "Mexican Secular Republic"
 	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
@@ -15,7 +246,7 @@ mexico_historical = {
 					option = DEFAULT
 				}
 			}
-			has_country_flag = MEX_AI_SECULAR_REPUBLIC 
+			has_country_flag = MEX_AI_SECULAR_REPUBLIC
 			has_game_rule = {
 				rule = MEX_ai_behavior
 				option = SECULAR_REPUBLIC
@@ -24,7 +255,6 @@ mexico_historical = {
 	}
 	abort = {
 		OR = {
-			has_war_with = USA
 			has_government = fascism
 			has_government = communism
 		}
@@ -62,23 +292,135 @@ mexico_historical = {
 		MEX_focus_rural_schools # 4th research slot
 		
 		MEX_focus_oil_field_expansion
-		MEX_focus_nationalize_the_oil_fields
-		MEX_focus_compensation
-		MEX_focus_liberty_and_justice_for_all # Requests to join America's faction
-		MEX_focus_aztec_eagles
-		MEX_focus_international_peacekeepers # Democratic drift
-				
-		MEX_focus_northern_steel_plants
-		MEX_focus_engineering_school
-		MEX_focus_television_innovators # 5th research slot
-		MEX_focus_xefo
-		MEX_focus_law_on_industrial_promotion
-		MEX_focus_nafinsa
-		MEX_focus_oil_revenue_reinvestment
-		# Economic and political stuff is complete at this point, AI will pick military NFs from here on
 	}
 	ideas = {
 		MEX_bartolome_garcia_correa = 10
+	}
+}
+
+mexico_secular_republic_left = {
+	name = "Mexican Secular Republic Left"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = SECULAR_REPUBLIC_LEFT #democratic marxist secular republic
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = fascism
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_exile_calles
+		MEX_focus_control_the_army
+		MEX_focus_enforce_the_calles_law # Decrease Church Power
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+		MEX_focus_revolutionary_women
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+		MEX_focus_triumph_over_the_cristeros
+		MEX_focus_state_education # 3rd research slot
+		
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_institutional_revolution # Go Democratic
+		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_soldaderas # Lower Caudillo Tensions
+		MEX_focus_national_bank
+		MEX_focus_agricultural_credit_bank
+		MEX_focus_confederation_of_mexican_workers # Decrease Church Power 
+		MEX_focus_rent_freeze
+		MEX_focus_ejido_worker_militias # Communist drift
+		MEX_focus_womens_suffrage # Increase Church Power(3), Democratic drift
+				
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power (2)
+		MEX_focus_realpolitik
+		
+		MEX_focus_rural_infrastructure
+		MEX_focus_peripheral_infrastructure
+		MEX_focus_rural_schools # 4th research slot
+		
+		MEX_focus_oil_field_expansion
+	}
+	ideas = {
+		MEX_bartolome_garcia_correa = 10
+		MEX_vicente_lombardo = 5
+	}
+}
+
+mexico_secular_republic_pro_cedillo = {
+	name = "Mexican Secular Republic Left"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = SECULAR_REPUBLIC_RIGHT #democratic liberal secular republic
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = fascism
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_exile_calles
+		MEX_focus_control_the_army
+		MEX_focus_repeal_the_calles_law # Increase Church Power
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+		MEX_focus_revolutionary_women
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_state_education # 3rd research slot
+		MEX_focus_professional_army # Lower Caudillo Tensions
+
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_institutional_revolution # Go Democratic
+		
+		MEX_focus_national_bank
+		MEX_focus_liberalize_the_banking_sector
+		MEX_focus_end_land_reform
+		MEX_focus_privatization
+		MEX_focus_caudillo_private_armies
+		MEX_focus_support_general_cedillo # end Tensions
+		MEX_focus_womens_suffrage # Increase Church Power(3), Democratic drift
+				
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power (2)
+		MEX_focus_realpolitik
+		
+		MEX_focus_strike_breaking
+		MEX_focus_urban_development
+		MEX_focus_cientifico_camarilla # 4th research slot
+		
+		MEX_focus_oil_field_expansion
+	}
+	ideas = {
+		MEX_bartolome_garcia_correa = 10
+		MEX_luis_montes_de_oca = 5
 	}
 }
 
@@ -97,6 +439,13 @@ mexico_social_catholicism = {
 				rule = MEX_ai_behavior
 				option = SOCIAL_CATHOLICISM
 			}
+		}
+	}
+
+	abort = {
+		OR = {
+			has_government = fascism
+			has_government = communism
 		}
 	}
 
@@ -133,25 +482,17 @@ mexico_social_catholicism = {
 		MEX_focus_falangist_veterans # Increase Church Power
 		MEX_focus_realpolitik
 		
-		MEX_focus_oil_field_expansion
-		MEX_focus_royal_dutch_shell
-		MEX_focus_community_of_nations # Join Britain's faction
-		MEX_focus_purchase_belize
-		MEX_focus_international_peacekeepers # Democratic drift
-		
-		MEX_focus_northern_steel_plants
-		MEX_focus_engineering_school
-		MEX_focus_television_innovators # 5th research slot
-
-		MEX_focus_oil_revenue_reinvestment
-		
-		MEX_focus_social_catholicism
-		MEX_focus_synarchist_communes
-		MEX_focus_reform_the_cristero_guard
-		
 		MEX_focus_end_land_reform
 		MEX_focus_privatization
 		MEX_focus_caudillo_private_armies
+		MEX_focus_oil_field_expansion
+
+		#AI should do the focuses for fp
+
+
+		MEX_focus_social_catholicism
+		MEX_focus_synarchist_communes
+		MEX_focus_reform_the_cristero_guard
 		
 		MEX_focus_military_budget_review
 		MEX_focus_heroic_military_college
@@ -161,7 +502,208 @@ mexico_social_catholicism = {
 	}
 }
 
-mexico_fascist_axis = {
+mexico_remain_neutral = {
+	name = "Mexican Secular Moderatism"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_SECULAR_MODERATES
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = SECULAR_MODERATES
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = fascism
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_jefe_maximo
+		MEX_focus_control_the_army
+		MEX_focus_repeal_the_calles_law # Increase Church Power (3)
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+		MEX_focus_revolutionary_women
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_state_education # 3rd research slot
+		MEX_focus_professional_army # Lower Caudillo Tensions
+		
+		MEX_focus_national_bank
+		MEX_focus_liberalize_the_banking_sector
+		MEX_focus_end_land_reform
+		MEX_focus_privatization
+		MEX_focus_caudillo_private_armies
+		MEX_focus_support_general_cedillo
+				
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_falangist_veterans 
+		
+		MEX_focus_strike_breaking
+		MEX_focus_urban_development
+		MEX_focus_cientifico_camarilla # research slot
+		
+		MEX_focus_oil_field_expansion
+		  
+	}
+
+	focus_factors = {
+		MEX_focus_womens_suffrage = 0
+	}
+	ideas = {
+		MEX_aaron_saenz = 10
+		MEX_vicente_lombardo = 0
+		MEX_bartolome_garcia_correa = 0
+	}
+}
+
+mexico_remain_neutral_left = {
+	name = "Mexican Secular Moderatism"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_LEFT_MODERATES
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = LEFT_MODERATES
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = fascism
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_jefe_maximo
+		MEX_focus_control_the_army
+		MEX_focus_enforce_the_calles_law # Decrease Church Power
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+		MEX_focus_revolutionary_women
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+		
+		MEX_focus_national_bank
+		MEX_focus_liberalize_the_banking_sector
+		MEX_focus_end_land_reform
+		MEX_focus_privatization
+		MEX_focus_caudillo_private_armies
+		MEX_focus_support_general_cedillo
+
+		MEX_focus_soldaderas
+		MEX_focus_womens_suffrage
+		MEX_focus_triumph_over_the_cristeros
+		MEX_focus_state_education # 3rd research slot
+				
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists 
+		
+		MEX_focus_strike_breaking
+		MEX_focus_urban_development
+		MEX_focus_cientifico_camarilla # research slot
+		
+		MEX_focus_oil_field_expansion
+		  
+	}
+	ideas = {
+		MEX_aaron_saenz = 10
+		MEX_vicente_lombardo = 0
+		MEX_bartolome_garcia_correa = 0
+		MEX_jose_vasconcelos = 0
+	}
+}
+
+mexico_remain_neutral_right = {
+	name = "Mexican Secular Moderatism"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_RIGHT_MODERATES
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = RIGHT_MODERATES
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = fascism
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_jefe_maximo
+		MEX_focus_control_the_army
+		MEX_focus_repeal_the_calles_law # Increase Church Power (3)
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+		MEX_focus_revolutionary_women
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_professional_army # Lower Caudillo Tensions
+		
+		MEX_focus_national_bank
+		MEX_focus_liberalize_the_banking_sector
+		MEX_focus_end_land_reform
+		MEX_focus_privatization
+		MEX_focus_caudillo_private_armies
+		MEX_focus_support_general_cedillo
+				
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_falangist_veterans 
+
+		MEX_focus_antidisestablishmentarianism
+		MEX_focus_rewrite_the_constitution
+		
+		MEX_focus_strike_breaking
+		MEX_focus_urban_development
+		MEX_focus_legion_of_christ
+		MEX_focus_cientifico_camarilla # research slot
+		MEX_focus_church_schools # research slot
+		
+		MEX_focus_oil_field_expansion
+		  
+	}
+
+	focus_factors = {
+		MEX_focus_womens_suffrage = 0
+		MEX_focus_crusade_against_atheism = 0
+	}
+
+	ideas = {
+		MEX_aaron_saenz = 10
+		MEX_vicente_lombardo = 0
+		MEX_bartolome_garcia_correa = 0
+		MEX_jose_vasconcelos = 0
+	}
+}
+
+mexico_fascist = {
 	name = "Mexican Fascist Dictatorship"
 	desc = "Plutarco Calles, Saturnino Cedillo and the other military strongmen will abort Mexico's nascent attempts at democracy, aligning towards Germany."
 
@@ -178,6 +720,10 @@ mexico_fascist_axis = {
 			}
 			AND = {
 				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = MEX_ai_behavior
+					option = DEFAULT
+				}
 				has_government = fascism
 			}
 		}
@@ -187,10 +733,10 @@ mexico_fascist_axis = {
 		MEX_focus_plan_of_agua_prieta
 		MEX_focus_legacy_of_revolution
 		MEX_focus_the_gold_shirts # Fascist drift
-		MEX_focus_revanchist_revolution # Go Fascist as soon as possible. Calles or Cedillo will lead.
 		
 		MEX_focus_jefe_maximo # Calles potential country leader
-		
+		MEX_focus_revanchist_revolution
+
 		MEX_focus_national_bank
 		MEX_focus_liberalize_the_banking_sector
 		MEX_focus_end_land_reform
@@ -207,38 +753,153 @@ mexico_fascist_axis = {
 		MEX_focus_urban_development
 		MEX_focus_cientifico_camarilla # 4th research slot
 		
+		MEX_focus_international_struggle
 		MEX_focus_military_budget_review # American threats mean more emphasis on the army
 		MEX_focus_heroic_military_college
 		
+		MEX_focus_revolutionary_women
+		MEX_focus_soldaderas
+		MEX_focus_womens_suffrage
+		MEX_focus_hispanic_culture
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_falangist_veterans
+
 		MEX_focus_oil_field_expansion
-		MEX_focus_nationalize_the_oil_fields
-		MEX_focus_german_resource_exchange
-		MEX_focus_new_world_order # Join Germany's faction
+	}
+	
+	ideas = {
+		MEX_jose_vasconcelos = 10
+	}
+}
+
+mexico_fascist_junta = {
+	name = "Mexican Fascist Dictatorship"
+	desc = "Plutarco Calles, Saturnino Cedillo and the other military strongmen will abort Mexico's nascent attempts at democracy, aligning towards Germany."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FASCIST_JUNTA 
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = FASCIST_JUNTA 
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_legacy_of_revolution
+		MEX_focus_the_gold_shirts # Fascist drift
 		
-		MEX_focus_interior_defence_plan
-		MEX_focus_march_southwards # Begin attacking the South
+		MEX_focus_exile_calles
+		MEX_focus_revanchist_revolution
+
+		MEX_focus_national_bank
+		MEX_focus_liberalize_the_banking_sector
+		MEX_focus_end_land_reform
+		MEX_focus_privatization
+		MEX_focus_caudillo_private_armies
+		MEX_focus_support_general_cedillo # Cedillo potential country leader
 		
-		MEX_focus_northern_steel_plants
+		MEX_focus_control_the_army
+		MEX_focus_repeal_the_calles_law
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_state_education # 3rd research slot
+		
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_strike_breaking
+		MEX_focus_urban_development
+		MEX_focus_cientifico_camarilla # 4th research slot
+		
+		MEX_focus_international_struggle
+		MEX_focus_military_budget_review # American threats mean more emphasis on the army
+		MEX_focus_heroic_military_college
 		
 		MEX_focus_revolutionary_women
 		MEX_focus_soldaderas
-		
-		MEX_focus_engineering_school
-		MEX_focus_television_innovators # 5th research slot
-		
-		MEX_focus_international_struggle
 		MEX_focus_hispanic_culture
-		
 		MEX_focus_spanish_civil_war_refugees
 		MEX_focus_falangist_veterans
+
+		MEX_focus_oil_field_expansion
+	}
+
+	focus_factors = {
+		MEX_focus_womens_suffrage = 0
+		MEX_focus_institutional_revolution = 0
+	}
+	
+	ideas = {
+		MEX_jose_vasconcelos = 10
+	}
+}
+
+mexico_falangist = {
+	name = "Mexican Fascist Dictatorship"
+	desc = "Plutarco Calles, Saturnino Cedillo and the other military strongmen will abort Mexico's nascent attempts at democracy, aligning towards Germany."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FALANGIST
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = FALANGIST 
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_legacy_of_revolution
+		MEX_focus_the_gold_shirts # Fascist drift
 		
-		MEX_focus_hispanic_alliance # If they weren't accepted by Germany, they should create their own faction...
-		MEX_focus_coastal_defence_plan
-		MEX_focus_realpolitik # ...else they should get bonuses
+		MEX_focus_exile_calles
+		MEX_focus_revanchist_revolution
+		MEX_focus_international_struggle
+
+		MEX_focus_national_bank
+
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_arrest_general_cedillo
+
+		MEX_focus_liberalize_the_banking_sector
+
 		
-		MEX_focus_unify_centroamerica
-		MEX_focus_integrate_the_south
-		MEX_focus_push_past_the_darien_gap
+		MEX_focus_end_land_reform 
+		MEX_focus_privatization
+		MEX_focus_caudillo_private_armies
+		
+		MEX_focus_control_the_army
+		MEX_focus_repeal_the_calles_law
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_state_education # 3rd research slot
+		
+		
+		MEX_focus_strike_breaking
+		MEX_focus_urban_development
+		MEX_focus_cientifico_camarilla # 4th research slot
+		
+		MEX_focus_hispanic_culture
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_falangist_veterans
+
+		MEX_focus_antidisestablishmentarianism
+		MEX_focus_rewrite_the_constitution
+
+		MEX_focus_oil_field_expansion
+	}
+
+	focus_factors = {
+		MEX_focus_womens_suffrage = 0
+		MEX_focus_institutional_revolution = 0
 	}
 	
 	ideas = {
@@ -274,12 +935,14 @@ mexico_fascist_latin_american_order = {
 		MEX_focus_rewrite_the_constitution
 		MEX_focus_legion_of_christ # Fascist drift
 		MEX_focus_crusade_against_atheism # Go Fascist as soon as possible
-		MEX_focus_church_schools # 3rd research slot
 
 		MEX_focus_purge_the_bureaucracy
 		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_church_schools # 3rd research slot
 		
 		MEX_focus_triumph_of_synarchism
+		MEX_focus_synarchist_communes
 		MEX_focus_reform_the_cristero_guard
 				
 		MEX_focus_legacy_of_revolution
@@ -293,9 +956,7 @@ mexico_fascist_latin_american_order = {
 		MEX_focus_hispanic_culture
 		MEX_focus_spanish_civil_war_refugees
 		MEX_focus_falangist_veterans
-		MEX_focus_hispanic_alliance # Create faction
-		MEX_focus_invite_brazil
-		
+
 		MEX_focus_national_bank
 		MEX_focus_liberalize_the_banking_sector
 		MEX_focus_strike_breaking
@@ -303,31 +964,6 @@ mexico_fascist_latin_american_order = {
 		MEX_focus_cientifico_camarilla # 4th research slot
 		
 		MEX_focus_oil_field_expansion
-		MEX_focus_nationalize_the_oil_fields
-		MEX_focus_german_resource_exchange
-		MEX_focus_new_world_order # Should be bypassed but just in case
-		
-		MEX_focus_coastal_defence_plan
-		MEX_focus_march_southwards
-		
-		MEX_focus_military_budget_review # American threats mean more emphasis on the army
-		MEX_focus_heroic_military_college
-
-		MEX_focus_unify_centroamerica # Get access to Panama Canal
-		
-		MEX_focus_interior_defence_plan
-		
-		MEX_focus_seize_the_panama_canal # Attack America
-		MEX_focus_rescind_the_mexican_cession # Good luck with that
-		MEX_focus_redeem_aztlan
-		
-		MEX_focus_northern_steel_plants
-		MEX_focus_engineering_school
-		MEX_focus_television_innovators # 5th research slot
-		
-		MEX_focus_end_land_reform
-		MEX_focus_privatization
-		MEX_focus_caudillo_private_armies
 	}
 	
 	ideas = {
@@ -335,7 +971,8 @@ mexico_fascist_latin_american_order = {
 	}
 }
 
-mexico_communism_ussr = {
+
+mexico_institutional_communism = {
 	name = "Mexican Soviet Republic"
 	desc = "Mexico will align itself towards the Soviet Union, spreading the Revolution into Latin America at the tip of a bayonet."
 
@@ -345,74 +982,262 @@ mexico_communism_ussr = {
 	}
 	enable = {
 		OR = {
-			has_country_flag = MEX_AI_SOVIET_REPUBLIC 
+			has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
 			has_game_rule = {
 				rule = MEX_ai_behavior
-				option = SOVIET_REPUBLIC
+				option = INSTITUTIONAL_COMMUNISM
 			}
 			AND = {
 				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = MEX_ai_behavior
+					option = DEFAULT
+				}
 				has_government = communism
 			}
 		}
 	}
 	ai_national_focuses = {
-		MEX_focus_plan_of_agua_prieta
-		MEX_focus_legacy_of_revolution
-		MEX_focus_the_red_shirts # Communist drift
-		MEX_focus_communist_revolution # Go Communist as soon as possible
-		
-		MEX_focus_exile_calles
-		MEX_focus_purge_the_bureaucracy
-		MEX_focus_arrest_general_cedillo # Prevent rebellion
-		MEX_focus_control_the_army
-		
-		MEX_focus_enforce_the_calles_law # Decrease Church Power
-		MEX_focus_triumph_over_the_cristeros
-		MEX_focus_state_education # 3rd research slot
-		
 		MEX_focus_national_bank
 		MEX_focus_agricultural_credit_bank
-		MEX_focus_confederation_of_mexican_workers # Decrease Church Power
+		MEX_focus_confederation_of_mexican_workers # Decrease Church Power (2)
 		MEX_focus_rent_freeze
+
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+
 		MEX_focus_ejido_worker_militias # Communist drift
+		MEX_focus_party_of_the_revolution
+
+		MEX_focus_exile_calles
+		MEX_focus_control_the_army
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+
+		MEX_focus_enforce_the_calles_law 
+		MEX_focus_revolutionary_women
+		MEX_focus_professional_army # Lower Caudillo Tensions
+		
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_womens_suffrage # Increase Church Power(3), Democratic drift
+				
+		MEX_focus_triumph_over_the_cristeros
+		MEX_focus_state_education # 3rd research slot
+
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power (2)
 		
 		MEX_focus_rural_infrastructure
 		MEX_focus_peripheral_infrastructure
 		MEX_focus_rural_schools # 4th research slot
 		
 		MEX_focus_oil_field_expansion
-		MEX_focus_nationalize_the_oil_fields
-		MEX_focus_oppose_yanqui_imperialism
-		MEX_focus_international_proletarianism # Join USSR's faction
-		
-		MEX_focus_interior_defence_plan
-		MEX_focus_march_southwards # Attack south
-		
-		MEX_focus_northern_steel_plants
-		MEX_focus_engineering_school
-		MEX_focus_television_innovators # 5th research slot
-		
-		MEX_focus_unify_centroamerica
-		MEX_focus_integrate_the_south
-		
-		MEX_focus_revolutionary_women
-		MEX_focus_soldaderas
-		MEX_focus_xefo
-		MEX_focus_law_on_industrial_promotion
-		MEX_focus_nafinsa
-		
-		MEX_focus_spanish_civil_war_refugees
-		MEX_focus_support_spains_loyalists # Decrease Church Power
-		
-		MEX_focus_bolivarian_alliance # If they weren't accepted by Russia, they should create their own faction...
-		MEX_focus_coastal_defence_plan
-		MEX_focus_realpolitik # ...else they should get bonuses
-		
-		MEX_focus_push_past_the_darien_gap
 	}
+	
 	ideas = {
 		MEX_vicente_lombardo = 10
+		MEX_leon_trotsky = 0
+	}
+}
+
+mexico_institutional_communism_left = {
+	name = "Mexican Soviet Republic"
+	desc = "Mexico will align itself towards the Soviet Union, spreading the Revolution into Latin America at the tip of a bayonet."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = INSTITUTIONAL_COMMUNISM_LEFT
+			}
+		}
+	}
+	ai_national_focuses = {
+		MEX_focus_national_bank
+		MEX_focus_agricultural_credit_bank
+		MEX_focus_confederation_of_mexican_workers # Decrease Church Power (2)
+		MEX_focus_rent_freeze
+
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_exile_calles
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_ejido_worker_militias # Communist drift
+		MEX_focus_party_of_the_revolution
+
+		MEX_focus_legacy_of_revolution
+		
+		MEX_focus_control_the_army
+		MEX_focus_the_red_shirts 
+		MEX_focus_enforce_the_calles_law 
+		MEX_focus_revolutionary_women
+		MEX_focus_soldaderas 
+		MEX_focus_womens_suffrage # Increase Church Power(3), Democratic drift
+				
+		MEX_focus_international_struggle
+		MEX_focus_triumph_over_the_cristeros
+		MEX_focus_state_education # 3rd research slot
+
+		MEX_focus_revolutionary_class_war
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power (2)
+		
+		MEX_focus_rural_infrastructure
+		MEX_focus_peripheral_infrastructure
+		MEX_focus_rural_schools # 4th research slot
+		
+		MEX_focus_oil_field_expansion
+	}
+
+	focus_factors = {
+		MEX_focus_communist_revolution = 0
+	}
+	
+	ideas = {
+		MEX_vicente_lombardo = 10
+		MEX_leon_trotsky = 0
+	}
+}
+
+mexico_institutional_communism_right = {
+	name = "Mexican Soviet Republic"
+	desc = "Mexico will align itself towards the Soviet Union, spreading the Revolution into Latin America at the tip of a bayonet."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = INSTITUTIONAL_COMMUNISM_RIGHT
+			}
+		}
+	} 
+	ai_national_focuses = {
+		MEX_focus_national_bank
+		MEX_focus_agricultural_credit_bank
+		MEX_focus_confederation_of_mexican_workers # Decrease Church Power (2)
+		MEX_focus_rent_freeze
+
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
+
+		MEX_focus_ejido_worker_militias # Communist drift
+		MEX_focus_party_of_the_revolution
+
+		MEX_focus_exile_calles
+		MEX_focus_control_the_army
+		MEX_focus_depoliticised_army # Lower Caudillo Tensions
+
+		MEX_focus_repeal_the_calles_law
+		MEX_focus_revolutionary_women
+
+		MEX_focus_professional_army # Lower Caudillo Tensions
+		
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_womens_suffrage # Increase Church Power(3), Democratic drift
+				
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_state_education # 3rd research slot
+
+		MEX_focus_antidisestablishmentarianism
+		MEX_focus_rewrite_the_constitution
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power (2)
+		
+		MEX_focus_rural_infrastructure
+		MEX_focus_peripheral_infrastructure
+		MEX_focus_rural_schools # 4th research slot
+		
+		MEX_focus_oil_field_expansion
+		  
+	}
+	
+	focus_factors = {
+		MEX_focus_institutional_revolution = 0
+	}
+
+	ideas = {
+		MEX_vicente_lombardo = 10
+		MEX_leon_trotsky = 0
+	}
+}
+
+mexico_institutional_communism_stalinist = {
+	name = "Mexican Soviet Republic"
+	desc = "Mexico will align itself towards the Soviet Union, spreading the Revolution into Latin America at the tip of a bayonet."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_SOVIET_REPUBLIC
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = SOVIET_REPUBLIC
+			}
+		}
+	}
+	ai_national_focuses = {
+		MEX_focus_national_bank
+		MEX_focus_agricultural_credit_bank
+		MEX_focus_confederation_of_mexican_workers # Decrease Church Power (2)
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_exile_calles
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_rent_freeze
+		MEX_focus_ejido_worker_militias # Communist drift
+		MEX_focus_party_of_the_revolution 
+
+		MEX_focus_legacy_of_revolution
+		MEX_focus_the_red_shirts 
+		MEX_focus_international_struggle
+		MEX_focus_revolutionary_class_war
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power (2)
+		
+		MEX_focus_control_the_army
+		MEX_focus_enforce_the_calles_law 
+		MEX_focus_revolutionary_women
+		MEX_focus_soldaderas 
+				
+		MEX_focus_triumph_over_the_cristeros
+		MEX_focus_state_education # 3rd research slot
+		
+		MEX_focus_rural_infrastructure
+		MEX_focus_peripheral_infrastructure
+		MEX_focus_rural_schools # 4th research slot
+		
+		MEX_focus_oil_field_expansion
+		MEX_focus_military_budget_review
+		MEX_focus_heroic_military_college
+	}
+	
+	focus_factors = {
+		MEX_focus_womens_suffrage = 0
+		MEX_focus_communist_revolution = 0
+		MEX_focus_institutional_revolution = 0
+	}
+
+	ideas = {
+		MEX_vicente_lombardo = 10
+		MEX_leon_trotsky = 0
 	}
 }
 
@@ -447,7 +1272,7 @@ mexico_communism_bolivarian = {
 		MEX_focus_confederation_of_mexican_workers # Decrease Church Power
 		MEX_focus_rent_freeze
 		MEX_focus_ejido_worker_militias # Communist drift
-		MEX_focus_party_of_the_revolution # Go Communist as soon as possible
+		MEX_focus_communist_revolution #flip asap
 		
 		MEX_focus_repeal_the_calles_law # Increase Church Power
 		MEX_focus_abolish_capital_punishment
@@ -462,47 +1287,226 @@ mexico_communism_bolivarian = {
 		
 		MEX_focus_spanish_civil_war_refugees
 		MEX_focus_support_spains_loyalists # Decrease Church Power
-		
-		MEX_focus_bolivarian_alliance # Create own faction
-		MEX_focus_liberate_the_antilles
-		
-		MEX_focus_coastal_defence_plan
-		MEX_focus_march_southwards
+		MEX_focus_international_struggle
+		MEX_focus_revolutionary_class_war
 		
 		MEX_focus_oil_field_expansion
-		MEX_focus_nationalize_the_oil_fields
-		MEX_focus_oppose_yanqui_imperialism
-		MEX_focus_international_proletarianism # Should be bypassed but just in case
 		
-		MEX_focus_unify_centroamerica # Get access to Panama Canal
-		MEX_focus_integrate_the_south
 		
-		MEX_focus_military_budget_review
-		MEX_focus_heroic_military_college
-		
-		MEX_focus_interior_defence_plan
-		
-		MEX_focus_seize_the_panama_canal # Attack America
-		MEX_focus_rescind_the_mexican_cession # Good luck with that
-		MEX_focus_redeem_aztlan
-		
-		MEX_focus_weapons_modernisation
-		MEX_focus_aviation_workshops
-		MEX_focus_tank_workshops
-		MEX_focus_military_aviation_specialists
-		MEX_focus_army_expansion_programme
-		MEX_focus_heavy_artillery
-		
-		MEX_focus_smash_the_bureaucrats
-		
-		MEX_focus_gulf_coast_naval_yards
-		MEX_focus_pacific_coast_naval_yards
-		MEX_focus_brown_water_navy
-		MEX_focus_blue_water_navy
-		
-		MEX_focus_one_world_government
+	}
+
+	focus_factors = {
+		MEX_focus_party_of_the_revolution = 0
+		MEX_focus_smash_the_bureaucrats	= 0
+		MEX_focus_one_world_government = 0
 	}
 	ideas = {
 		MEX_vicente_lombardo = 10
+		MEX_leon_trotsky = 0
+	}
+}
+
+mexico_communism_trotsky = {
+	name = "Cárdenismo"
+	desc = "Lázaro Cárdenas and his left-wing successors will create a Bolivarian Alliance and strike at the Yanqui imperialists."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_TROTSKY
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = TROTSKY
+			}
+		}
+	}
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_legacy_of_revolution
+		MEX_focus_the_red_shirts # Communist drift
+
+		MEX_focus_exile_calles
+		MEX_focus_purge_the_bureaucracy
+		MEX_focus_arrest_general_cedillo # Prevent rebellion
+
+		MEX_focus_national_bank
+		MEX_focus_agricultural_credit_bank
+		MEX_focus_confederation_of_mexican_workers # Decrease Church Power
+		MEX_focus_rent_freeze
+		MEX_focus_ejido_worker_militias # Communist drift
+		MEX_focus_communist_revolution #flip asap
+		
+		MEX_focus_repeal_the_calles_law # Increase Church Power
+		MEX_focus_abolish_capital_punishment
+		MEX_focus_state_education # 3rd research slot
+		
+		MEX_focus_rural_infrastructure
+		MEX_focus_peripheral_infrastructure
+		MEX_focus_rural_schools # 4th research slot
+		
+		MEX_focus_revolutionary_women
+		MEX_focus_soldaderas
+		
+		MEX_focus_spanish_civil_war_refugees
+		MEX_focus_support_spains_loyalists # Decrease Church Power
+		MEX_focus_international_struggle
+		MEX_focus_revolutionary_class_war
+		
+		MEX_focus_oil_field_expansion
+		MEX_focus_smash_the_bureaucrats	
+		MEX_focus_one_world_government 
+		
+		
+	}
+
+	focus_factors = {
+		MEX_focus_party_of_the_revolution = 0
+	}
+
+	ideas = {
+		MEX_vicente_lombardo = 10
+		MEX_leon_trotsky = 20
+	}
+}
+
+
+mexico_cedillo_rebels = {
+	name = "Mexican Fascist Dictatorship"
+	desc = "Saturnino Cedillo will rebel and be strong too"
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_CEDILLO_REBELS
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = CEDILLO_REBELS 
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_legacy_of_revolution
+		MEX_focus_the_gold_shirts # Fascist drift
+		
+		MEX_focus_jefe_maximo
+
+		MEX_focus_national_bank
+		MEX_focus_agricultural_credit_bank
+		MEX_focus_purge_the_bureaucracy
+		
+		MEX_focus_control_the_army
+		MEX_focus_repeal_the_calles_law
+		MEX_focus_abolish_capital_punishment
+
+		MEX_focus_antidisestablishmentarianism
+		MEX_focus_rewrite_the_constitution
+
+		MEX_focus_oil_field_expansion
+	}
+
+	focus_factors = {
+		MEX_focus_womens_suffrage = 0
+		MEX_focus_revanchist_revolution = 0
+		MEX_focus_institutional_revolution = 0
+		MEX_focus_arrest_general_cedillo = 0 
+		MEX_focus_support_general_cedillo = 0
+		MEX_focus_international_struggle = 0
+		MEX_focus_ejido_worker_militias = 0
+		MEX_focus_hispanic_culture = 0
+		MEX_focus_crusade_against_atheism = 0
+		MEX_focus_knights_of_columbus = 0
+	}
+	
+	ideas = {
+		MEX_aaron_saenz = 0
+		MEX_lazaro_cardenas = 0
+		MEX_jose_vasconcelos = 10
+	}
+}
+
+fp_neutrality = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_FP_NEUTRAL
+			has_game_rule = {
+				rule = MEX_fp_ai_behavior
+				option = FP_NEUTRAL
+			}
+		}
+	}
+	focus_factors = {
+		MEX_focus_community_of_nations = 0
+		MEX_focus_liberty_and_justice_for_all = 0
+		MEX_focus_international_proletarianism = 0
+		MEX_focus_new_world_order = 0
+		MEX_focus_hispanic_alliance = 0
+		MEX_focus_bolivarian_alliance = 0
+	}
+}
+
+fp_exp_no = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = MEX_exp_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = MEX_AI_NO_EXPANSION
+			has_game_rule = {
+				rule = MEX_exp_ai_behavior
+				option = NO_EXPANSION
+			}
+		}
+	}
+	focus_factors = {
+		MEX_focus_march_southwards = 0
+		MEX_focus_unify_centroamerica = 0
+	}
+}
+
+fp_exp_yes = {
+	name = "Mexican Secular Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			has_country_flag = MEX_AI_EXPANSION
+			has_game_rule = {
+				rule = MEX_exp_ai_behavior
+				option = EXPANSION
+			}
+		}
+	}
+	focus_factors = {
+		MEX_focus_march_southwards = 10
 	}
 }

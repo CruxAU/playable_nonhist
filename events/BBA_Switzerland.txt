@@ -3313,7 +3313,17 @@ country_event = { #Event sent from Switzerland to Submit to Fascist Country
 	option = { #We don't need you. 
 		name = BBA_switzerland_fascist.1.b
 		ai_chance = {
-			base = 10
+			base = 1
+			modifier = {
+				NOT = {
+					any_controlled_state = {
+						any_neighbor_state = {
+							controller = { SWI }
+						}
+					}
+				}
+				factor = 10
+			}
 		}
 		trigger = {
 		}

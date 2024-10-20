@@ -5116,6 +5116,241 @@ country_event = {
 }
 
 
+country_event = { #triggered event for merging two same-ideology factions together when both factions are neighbors and both in a defensive war against the same power, and higher than 0% capitulation.
+	id = nonhist_generic.3
+	title = nonhist_generic.1.t
+	desc = { # FROM and ROOT are Democratic
+		text = nonhist_generic.3.d.a
+		trigger = {
+			AND = {
+				FROM = {
+					has_government = democratic
+				}
+				has_government = democratic
+			}
+		}
+	}
+	desc = { # FROM and ROOT are Fascist
+		text = nonhist_generic.3.d.b
+		trigger = {
+			AND = {
+				FROM = {
+					has_government = fascism
+				}
+				has_government = fascism
+			}
+		}
+	}
+	desc = { # FROM and ROOT are Communist
+		text = nonhist_generic.3.d.c
+		trigger = {
+			AND = {
+				FROM = {
+					has_government = communism
+				}
+				has_government = communism
+			}
+		}
+	}
+	picture = GFX_report_event_generic_read_write
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = { #Agree / Both Democratic
+		name = nonhist_generic.1.a
+		trigger = {
+			AND = {
+				FROM = {
+					has_government = democratic
+				}
+				has_government = democratic
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			leave_faction = yes
+			ROOT = {
+				add_to_faction = PREV
+			}
+			country_event = { id = nonhist_generic.2 hours = 6 }
+		}
+	
+	}
+	option = { #Agree / Both Fascist
+		name = nonhist_generic.1.b
+		trigger = {
+			AND = {
+				FROM = {
+					has_government = fascism
+				}
+				has_government = fascism
+			}
+		}
+		ai_chance = {
+			base = 100
+
+		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			leave_faction = yes
+			ROOT = {
+				add_to_faction = PREV
+			}
+			country_event = { id = nonhist_generic.2 hours = 6 }
+		}
+		
+	}
+	option = { #Agree / Both Communist
+		name = nonhist_generic.1.c
+		trigger = {
+			AND = {
+				FROM = {
+					has_government = communism
+				}
+				has_government = communism
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+		every_other_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			leave_faction = yes
+			ROOT = {
+				add_to_faction = PREV
+			}
+			country_event = { id = nonhist_generic.2 hours = 6 }
+		}
+	}
+	
+	option = { #Reject
+		name = nonhist_generic.1.f
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FROM
+					value > 65
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FROM
+					value > 35
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FROM
+					value > 5
+				}
+			}
+			
+			modifier = {
+				factor = 2.0
+				has_opinion = {
+					target = FROM
+					value < 35
+				}
+			}
+			
+			modifier = {
+				factor = 2.0
+				has_opinion = {
+					target = FROM
+					value < 65
+				}
+			}
+			
+			modifier = {
+				factor = 0.1
+				has_war = yes
+				FROM = {
+					has_war = no
+				}
+			}
+
+			modifier = {
+				factor = 10
+				FROM = {
+					is_subject = yes
+				}
+			}
+		}
+		FROM = { 
+			country_event = { id = generic.4 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = nonhist_generic.4
+	title = nonhist_generic.4.t
+	desc = nonhist_generic.4.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonhist_generic.4.a
+
+		var:global.major_alliance_merger = {
+			country_event = { id = nonhist_generic.3 days = 14 random_days = 6 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+
+	}
+	option = {
+		name = nonhist_generic.4.b
+		#no
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
 ######################################################
 #########################################################
 ####################### NEWS ###############################

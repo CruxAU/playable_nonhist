@@ -964,7 +964,6 @@ LAT_ostlands = {
 		LAT_the_old_ways
 		LAT_military_industrial_complex
 		LAT_alignment_with_germany
-		LAT_the_thunder_strikes_alone #if germany is not fascist
 
 		BALTIC_attract_workers_to_capital
 		BALTIC_modernize_industry
@@ -974,6 +973,7 @@ LAT_ostlands = {
 		
 		LAT_reorganize_forest_brothers
 		LAT_support_baltic_fascists
+		LAT_the_thunder_strikes_alone #if germany is not fascist
 		BALTIC_school_of_aviation
 		LAT_improve_military_life
 		BALTIC_german_war_economics
@@ -1057,7 +1057,6 @@ LAT_baltic_empire_axis = {
 		LAT_the_old_ways
 		LAT_military_industrial_complex
 		LAT_alignment_with_germany
-		LAT_the_thunder_strikes_alone #if germany is not fascist
 
 		BALTIC_attract_workers_to_capital
 		BALTIC_modernize_industry
@@ -1068,6 +1067,7 @@ LAT_baltic_empire_axis = {
 		LAT_reorganize_forest_brothers
 		LAT_lightning_strike
 		LAT_united_baltic_empire
+		LAT_the_thunder_strikes_alone #if germany is not fascist
 		BALTIC_school_of_aviation
 		LAT_improve_military_life
 		BALTIC_german_war_economics

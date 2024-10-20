@@ -8404,21 +8404,61 @@ on_actions = {
 							rule = NONHIST_ai_behavior
 							option = HISTORICAL_PATHS
 						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_ai_behavior
+										option = DEFAULT
+									}
+								}
 								has_game_rule = {
 									rule = MEX_ai_behavior
-									option = DEFAULT
+									option = RANDOM
 								}
 							}
-							has_game_rule = {
-								rule = MEX_ai_behavior
-								option = RANDOM
+						}
+						set_country_flag = MEX_AI_SECULAR_REPUBLIC
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_fp_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = MEX_fp_ai_behavior
+									option = RANDOM
+								}
 							}
 						}
+						set_country_flag = MEX_AI_FP_USA
 					}
-					set_country_flag = MEX_AI_SECULAR_REPUBLIC
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_exp_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = MEX_exp_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						set_country_flag = MEX_AI_NO_EXPANSION
+					}
 				}
 				else_if = {
 					limit = {
@@ -8427,165 +8467,928 @@ on_actions = {
 							rule = NONHIST_ai_behavior
 							option = TRUE_RANDOM
 						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_ai_behavior
+										option = DEFAULT
+									}
+								}
 								has_game_rule = {
 									rule = MEX_ai_behavior
-									option = DEFAULT
+									option = RANDOM
 								}
 							}
-							has_game_rule = {
-								rule = MEX_ai_behavior
-								option = RANDOM
-							}
+						}
+						random_list = {
+							1 = { set_country_flag = MEX_AI_SECULAR_REPUBLIC }
+							1 = { set_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT }
+							1 = { set_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT }
+							1 = { set_country_flag = MEX_AI_SOCIAL_CATHOLICISM }
+							1 = { set_country_flag = MEX_AI_CEDILLO_REBELS }
+							1 = { set_country_flag = MEX_AI_FALANGIST }
+							1 = { set_country_flag = MEX_AI_FASCIST_DICTATORSHIP }
+							1 = { set_country_flag = MEX_AI_FASCIST_JUNTA }
+							1 = { set_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM }
+							1 = { set_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT }
+							1 = { set_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT }
+							1 = { set_country_flag = MEX_AI_LEFT_MODERATES }
+							1 = { set_country_flag = MEX_AI_RIGHT_MODERATES }
+							1 = { set_country_flag = MEX_AI_SECULAR_MODERATES }
+							1 = { set_country_flag = MEX_AI_TROTSKY }
+							1 = { set_country_flag = MEX_AI_THEOCRATIC_ORDER }
+							1 = { set_country_flag = MEX_AI_CARDENISMO }	
+							1 = { set_country_flag = MEX_AI_SOVIET_REPUBLIC }				
 						}
 					}
-					random_list = {
-						1 = { set_country_flag = MEX_AI_SECULAR_REPUBLIC }
-						1 = { set_country_flag = MEX_AI_SOCIAL_CATHOLICISM }
-						1 = { set_country_flag = MEX_AI_FASCIST_DICTATORSHIP }
-						1 = { set_country_flag = MEX_AI_THEOCRATIC_ORDER }
-						1 = { set_country_flag = MEX_AI_CARDENISMO }	
-						1 = { set_country_flag = MEX_AI_SOVIET_REPUBLIC }				
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_fp_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = MEX_fp_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						random_list = {
+							1 = { set_country_flag = MEX_AI_FP_NEUTRAL }
+							1 = { set_country_flag = MEX_AI_FP_BOLIVARIAN }
+							1 = { set_country_flag = MEX_AI_FP_ENG }
+							1 = { set_country_flag = MEX_AI_FP_GER }
+							1 = { set_country_flag = MEX_AI_FP_HISPANIC }
+							1 = { set_country_flag = MEX_AI_FP_SOV }
+							1 = { set_country_flag = MEX_AI_FP_USA }			
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_exp_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = MEX_exp_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						random_list = {
+							1 = { set_country_flag = MEX_AI_EXPANSION }
+							1 = { set_country_flag = MEX_AI_NO_EXPANSION }		
+						}
 					}
 				}
 				else_if = {
 					limit = {
 						has_dlc = "Man the Guns"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_ai_behavior
+										option = DEFAULT
+									}
+								}
 								has_game_rule = {
 									rule = MEX_ai_behavior
-									option = DEFAULT
+									option = RANDOM
 								}
 							}
-							has_game_rule = {
-								rule = MEX_ai_behavior
-								option = RANDOM
+						}
+						random_list = {
+							15 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = ANTI_HISTORICAL
+									}
+								}
+								set_add_democratic_weight_small = yes
+								set_country_flag = MEX_AI_SECULAR_REPUBLIC
+							}
+							8 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_add_democratic_weight_small = yes
+								set_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+							}
+							6 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_add_democratic_weight_small = yes
+								set_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+							}
+							6 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_add_democratic_weight_small = yes
+								set_country_flag = MEX_AI_SOCIAL_CATHOLICISM
+							}
+							10 = {
+								set_country_flag = MEX_AI_SECULAR_MODERATES
+							}
+							8 = {
+								set_country_flag = MEX_AI_LEFT_MODERATES
+							}
+							7 = {
+								set_country_flag = MEX_AI_RIGHT_MODERATES
+							}
+							8 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.5
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_fascist_weight_small = yes
+								set_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+							}
+							3 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.1
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_fascist_weight_small = yes
+								set_country_flag = MEX_AI_FASCIST_JUNTA
+							}
+							3 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_fascist_weight_small = yes
+								set_country_flag = MEX_AI_FALANGIST
+							}
+							2 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_fascist_weight_small = yes
+								set_country_flag = MEX_AI_CEDILLO_REBELS
+							}
+							4 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_unaligned = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_unaligned_weight_small = yes
+								set_country_flag = MEX_AI_THEOCRATIC_ORDER
+							}
+							4 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.1
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_communist_weight_small = yes
+								set_country_flag = MEX_AI_SOVIET_REPUBLIC
+							}
+							4 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.5
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_communist_weight_small = yes
+								set_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+							}
+							4 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_communist_weight_small = yes
+								set_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+							}
+							2 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_communist_weight_small = yes
+								set_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+							}
+							5 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_communist_weight_small = yes
+								set_country_flag = MEX_AI_TROTSKY
+							}
+							1 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								set_add_communist_weight_small = yes
+								set_country_flag = MEX_AI_CARDENISMO
 							}
 						}
 					}
-					random_list = {
-						25 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
 									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
+										rule = MEX_fp_ai_behavior
+										option = DEFAULT
 									}
 								}
-							}
-							modifier = {
-								factor = 0
 								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = ANTI_HISTORICAL
+									rule = MEX_fp_ai_behavior
+									option = RANDOM
 								}
 							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = MEX_AI_SECULAR_REPUBLIC
 						}
-						15 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
+						random_list = { #this gets real messy bear with me
+							28 = { 
+								set_country_flag = MEX_AI_FP_NEUTRAL 
+							}
+							20 = { 
+								modifier = {
+									factor = 0
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = MEX_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = MEX_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = USA_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = USA_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = {
+										has_country_flag = MEX_AI_SOVIET_REPUBLIC
+										has_country_flag = MEX_AI_TROTSKY
+										AND = { #if USA is democratic
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+													has_country_flag = MEX_AI_LEFT_MODERATES
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+													has_country_flag = MEX_AI_SOCIAL_CATHOLICISM
+												}
+											}
+											NOT = {
+												USA = {
+													OR = {
+														has_country_flag = USA_AI_DEMOCRATIC_HISTORICAL
+														has_country_flag = USA_AI_RANDOM_DEMOCRATIC_INTERVENTION
+														has_country_flag = USA_AI_RANDOM_DEMOCRATIC_NEUTRALITY
+														has_country_flag = USA_AI_RANDOM_HEGEMONY
+													}
+												}
+											}
+										}
+										AND = { #if USA is communist
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_CARDENISMO
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+													#Not soviet republic, not trotsky
+													has_country_flag = MEX_AI_LEFT_MODERATES
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+												}
+											}
+											NOT = {
+												USA = {
+													OR = {
+														has_country_flag = USA_AI_RANDOM_COMMUNIST
+														has_country_flag = USA_AI_RANDOM_COMMUNIST_ALTERNATE
+													}
+												}
+											}
+										}
+										AND = { #if USA is fascist
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_CEDILLO_REBELS
+													has_country_flag = MEX_AI_FALANGIST
+													has_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+													has_country_flag = MEX_AI_FASCIST_JUNTA
+													has_country_flag = MEX_AI_THEOCRATIC_ORDER
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+												}
+											}
+											NOT = {
+												USA = {
+													OR = {
+														has_country_flag = USA_AI_RANDOM_FASCIST
+														has_country_flag = USA_AI_RANDOM_JUNTA
+													}
+												}
+											}
+										}
 									}
 								}
+								set_country_flag = MEX_AI_FP_USA 
 							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = MEX_AI_SOCIAL_CATHOLICISM
-						}
-						15 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
+							12 = { 
+								modifier = {
+									factor = 0
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = MEX_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = MEX_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = ENG_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = ENG_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = {
+										AND = { #if ENG is democratic
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+													has_country_flag = MEX_AI_LEFT_MODERATES
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+													has_country_flag = MEX_AI_SOCIAL_CATHOLICISM
+												}
+											}
+											NOT = {
+												ENG = {
+													OR = {
+														has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+														has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
+														has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_DECOLONIZE
+														has_country_flag = ENG_AI_RANDOM_NEUTRALITY
+													}
+												}
+											}
+										}
+										AND = { #if ENG is trotskyite
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_CARDENISMO
+													has_country_flag = MEX_AI_TROTSKY
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+													has_country_flag = MEX_AI_LEFT_MODERATES
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+												}
+											}
+											NOT = {
+												ENG = {
+													OR = {
+														has_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA
+														has_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA_2
+													}
+												}
+											}
+										}
+										AND = { #if ENG is stalinist
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_SOVIET_REPUBLIC
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+												}
+											}
+											NOT = {
+												ENG = {
+													OR = {
+														has_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN
+														has_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN_2
+													}
+												}
+											}
+										}
+										AND = { #if ENG is fascist
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_CEDILLO_REBELS
+													has_country_flag = MEX_AI_FALANGIST
+													has_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+													has_country_flag = MEX_AI_FASCIST_JUNTA
+													has_country_flag = MEX_AI_THEOCRATIC_ORDER
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+												}
+											}
+											NOT = {
+												ENG = {
+													OR = {
+														has_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS
+														has_country_flag = ENG_AI_RANDOM_FASCIST
+														has_country_flag = ENG_AI_RANDOM_FASCIST_ANTI_GERMAN
+													}
+												}
+											}
+										}
 									}
 								}
+								set_country_flag = MEX_AI_FP_ENG
 							}
-							modifier = {
-								factor = 0.1
+							12 = { 
+								modifier = {
+									factor = 0
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = MEX_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = MEX_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = GER_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = {
+										has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+										has_country_flag = MEX_AI_TROTSKY
+										has_country_flag = MEX_AI_CARDENISMO
+										AND = { #if GER is democratic
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+													has_country_flag = MEX_AI_LEFT_MODERATES
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+													has_country_flag = MEX_AI_SOCIAL_CATHOLICISM
+												}
+											}
+											NOT = {
+												GER = {
+													has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+												}
+											}
+										}
+										AND = { #if GER is berlin moscow pact
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+													has_country_flag = MEX_AI_SOVIET_REPUBLIC
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+												}
+											}
+											NOT = {
+												GER = {
+													has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+												}
+											}
+										}
+										AND = { #if GER is fascist
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_CEDILLO_REBELS
+													has_country_flag = MEX_AI_FALANGIST
+													has_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+													has_country_flag = MEX_AI_FASCIST_JUNTA
+													has_country_flag = MEX_AI_THEOCRATIC_ORDER
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_RIGHT_MODERATES
+												}
+											}
+											NOT = {
+												GER = {
+													OR = {
+														has_country_flag = GER_AI_RANDOM_FASCIST
+														has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
+														has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE_2
+													}
+												}
+											}
+										}
+									}
+								}
+								set_country_flag = MEX_AI_FP_GER 
+							}
+							12 = { 
+								modifier = {
+									factor = 0
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = MEX_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = MEX_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = SOV_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = SOV_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = {
+										SOV = { #if sov is exiles just forget it
+											OR = {
+												has_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS
+												has_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS_AMERICAS
+												has_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET
+												has_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET_REBEL
+												has_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_PROTECTOR
+												has_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_ROME
+												has_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_SLAVIC
+											}
+										}
+										has_country_flag = MEX_AI_CEDILLO_REBELS
+										has_country_flag = MEX_AI_FALANGIST
+										has_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+										has_country_flag = MEX_AI_FASCIST_JUNTA
+										has_country_flag = MEX_AI_THEOCRATIC_ORDER
+										has_country_flag = MEX_AI_RIGHT_MODERATES
+										has_country_flag = MEX_AI_SECULAR_REPUBLIC_RIGHT
+										AND = { #if SOV is stalin
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+													has_country_flag = MEX_AI_SOVIET_REPUBLIC
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+													has_country_flag = MEX_AI_SECULAR_MODERATES
+													has_country_flag = MEX_AI_LEFT_MODERATES
+												}
+											}
+											NOT = {
+												SOV = {
+													OR = {
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_AGGRESSIVE
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_ALTERNATE
+													}
+												}
+											}
+										}
+										AND = { #if SOV is opposition
+											NOT = {
+												OR = {
+													has_country_flag = MEX_AI_CARDENISMO
+													has_country_flag = MEX_AI_TROTSKY
+													has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+													has_country_flag = MEX_AI_SECULAR_REPUBLIC_LEFT
+													has_country_flag = MEX_AI_LEFT_MODERATES
+												}
+											}
+											NOT = {
+												SOV = {
+													OR = {
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_KAMENEV
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_MIL
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION_COOPERATIVE
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_SMIRNOV
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_TROTSKY
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_BUKHARIN
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_MIL
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_RYKOV
+														has_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_ZINOVYEV
+													}
+												}
+											}
+										}
+										
+									}
+								}
+								set_country_flag = MEX_AI_FP_SOV
+							}
+							8 = { 
+								modifier = {
+									factor = 0
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = MEX_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = MEX_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = {
+										has_country_flag = MEX_AI_CEDILLO_REBELS
+										has_country_flag = MEX_AI_FALANGIST
+										has_country_flag = MEX_AI_FASCIST_DICTATORSHIP
+										has_country_flag = MEX_AI_FASCIST_JUNTA
+										has_country_flag = MEX_AI_THEOCRATIC_ORDER
+										has_country_flag = MEX_AI_RIGHT_MODERATES
+										has_country_flag = MEX_AI_SECULAR_MODERATES
+									}
+								}
+								set_country_flag = MEX_AI_FP_HISPANIC
+							}
+							8 = { 
+								modifier = {
+									factor = 0
+									OR = { #ideology is not already chosen
+										AND = { 
+											is_historical_focus_on = no
+											has_game_rule = {
+												rule = MEX_ai_behavior
+												option = DEFAULT
+											}
+										}
+										has_game_rule = {
+											rule = MEX_ai_behavior
+											option = RANDOM
+										}
+									}
+									OR = {
+										has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM
+										has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_LEFT
+										has_country_flag = MEX_AI_INSTITUTIONAL_COMMUNISM_RIGHT
+										has_country_flag = MEX_AI_SOVIET_REPUBLIC
+										has_country_flag = MEX_AI_CARDENISMO
+										has_country_flag = MEX_AI_TROTSKY
+										has_country_flag = MEX_AI_LEFT_MODERATES
+										has_country_flag = MEX_AI_SECULAR_MODERATES
+									}
+								}
+								set_country_flag = MEX_AI_FP_BOLIVARIAN
+							}	
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = MEX_exp_ai_behavior
+										option = DEFAULT
+									}
+								}
 								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
+									rule = MEX_exp_ai_behavior
+									option = RANDOM
 								}
 							}
-							set_add_fascist_weight_small = yes
-							set_country_flag = MEX_AI_FASCIST_DICTATORSHIP
 						}
-						15 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_unaligned = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							set_add_unaligned_weight_small = yes
-							set_country_flag = MEX_AI_THEOCRATIC_ORDER
-						}
-						15 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = MEX_AI_SOVIET_REPUBLIC
-						}
-						15 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = MEX_AI_CARDENISMO
+						random_list = {
+							30 = { set_country_flag = MEX_AI_EXPANSION }
+							70 = { set_country_flag = MEX_AI_NO_EXPANSION }		
 						}
 					}
 				}
