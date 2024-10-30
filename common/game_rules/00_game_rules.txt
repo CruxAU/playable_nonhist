@@ -2249,37 +2249,44 @@ CZE_ai_behavior = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_OPTION_DEMOCRATIC_CZE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_ALTERNATE
 		text = "RULE_OPTION_DEMOCRATIC_ALTERNATE"
 		desc = "RULE_OPTION_DEMOCRATIC_ALTERNATE_CZE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_CZE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_PARTNER
 		text = "RULE_OPTION_FASCIST_PARTNER"
 		desc = "RULE_FASCIST_PARTNER_CZE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_ALLY
 		text = "RULE_OPTION_FASCIST_ALLY"
 		desc = "RULE_FASCIST_ALLY_CZE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_PUPPET
 		text = "RULE_OPTION_FASCIST_PUPPET"
 		desc = "RULE_FASCIST_PUPPET_CZE_AI_DESC"
+		allow_achievements = yes
 	}
 
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -2303,11 +2310,13 @@ CHI_ai_behavior = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_OPTION_DEMOCRATIC_CHI_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 CHI_ai_behavior_focus = {
@@ -2341,6 +2350,7 @@ CHI_ai_behavior_focus = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 PRC_ai_behavior = {
@@ -2362,11 +2372,13 @@ PRC_ai_behavior = {
 		name = MARXIST_ORTHODOXY
 		text = "RULE_OPTION_MARXIST_ORTHODOXY"
 		desc = "RULE_OPTION_MARXIST_ORTHODOXY_PRC_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = SOCIAL_DEMOCRACY
 		text = "RULE_OPTION_SOCIAL_DEMOCRACY"
 		desc = "RULE_OPTION_SOCIAL_DEMOCRACY_PRC_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
@@ -2393,21 +2405,338 @@ MAN_ai_behavior = {
 		name = CHINESE_LEADERSHIP
 		text = "RULE_OPTION_CHINESE_LEADERSHIP"
 		desc = "RULE_OPTION_CHINESE_LEADERSHIP_MAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = MANCHU_QING
 		text = "RULE_OPTION_MANCHU_QING"
 		desc = "RULE_OPTION_MANCHU_QING_MAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FIVE_PEOPLES_QING
 		text = "RULE_OPTION_FIVE_PEOPLES_QING"
 		desc = "RULE_OPTION_FIVE_PEOPLES_QING_MAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+WARLORDS_ai_behavior = {
+	name = "WARLORDS_AI_BEHAVIOR"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = RESPONSIBLE #only do borderwars when both sides are not at war non historical mode will always pick this option unless other options are chosen by a player
+		text = "RULE_OPTION_OPPOSITION_NAT"
+		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BORDERWARS #dont bother about the other sides, always do borderwars
+		text = "RULE_OPTION_COOPERATE_NAT"
+		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NO_BORDERWARS #never do borderwars
+		text = "RULE_OPTION_TAKEOVER_NAT"
+		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+}
+SHX_ai_behavior = {
+	name = "SHX_AI_BEHAVIOR"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = COOPERATE_NAT
+		text = "RULE_OPTION_COOPERATE_NAT"
+		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_NAT
+		text = "RULE_OPTION_TAKEOVER_NAT"
+		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_NAT
+		text = "RULE_OPTION_OPPOSITION_NAT"
+		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_COM
+		text = "RULE_OPTION_COOPERATE_COM"
+		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_COM
+		text = "RULE_OPTION_TAKEOVER_COM"
+		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_COM
+		text = "RULE_OPTION_OPPOSITION_COM"
+		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_JAP
+		text = "RULE_OPTION_COOPERATE_JAP"
+		desc = "RULE_OPTION_COOPERATE_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+XSM_ai_behavior = {
+	name = "XSM_AI_BEHAVIOR"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = COOPERATE_NAT
+		text = "RULE_OPTION_COOPERATE_NAT"
+		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_NAT
+		text = "RULE_OPTION_TAKEOVER_NAT"
+		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_NAT
+		text = "RULE_OPTION_OPPOSITION_NAT"
+		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_COM
+		text = "RULE_OPTION_COOPERATE_COM"
+		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_COM
+		text = "RULE_OPTION_TAKEOVER_COM"
+		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_COM
+		text = "RULE_OPTION_OPPOSITION_COM"
+		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_JAP
+		text = "RULE_OPTION_COOPERATE_JAP"
+		desc = "RULE_OPTION_COOPERATE_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+YUN_ai_behavior = {
+	name = "YUN_AI_BEHAVIOR"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = COOPERATE_NAT
+		text = "RULE_OPTION_COOPERATE_NAT"
+		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_NAT
+		text = "RULE_OPTION_TAKEOVER_NAT"
+		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_NAT
+		text = "RULE_OPTION_OPPOSITION_NAT"
+		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_COM
+		text = "RULE_OPTION_COOPERATE_COM"
+		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_COM
+		text = "RULE_OPTION_TAKEOVER_COM"
+		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_COM
+		text = "RULE_OPTION_OPPOSITION_COM"
+		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_JAP
+		text = "RULE_OPTION_COOPERATE_JAP"
+		desc = "RULE_OPTION_COOPERATE_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+GXC_ai_behavior = {
+	name = "GXC_AI_BEHAVIOR"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = COOPERATE_NAT
+		text = "RULE_OPTION_COOPERATE_NAT"
+		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_NAT
+		text = "RULE_OPTION_TAKEOVER_NAT"
+		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_NAT
+		text = "RULE_OPTION_OPPOSITION_NAT"
+		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_COM
+		text = "RULE_OPTION_COOPERATE_COM"
+		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_COM
+		text = "RULE_OPTION_TAKEOVER_COM"
+		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_COM
+		text = "RULE_OPTION_OPPOSITION_COM"
+		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_JAP
+		text = "RULE_OPTION_COOPERATE_JAP"
+		desc = "RULE_OPTION_COOPERATE_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+SIK_ai_behavior = {
+	name = "SIK_AI_BEHAVIOR"
+	required_dlc = "Waking the Tiger"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = COOPERATE_COM
+		text = "RULE_OPTION_COOPERATE_COM"
+		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_COM
+		text = "RULE_OPTION_TAKEOVER_COM"
+		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_COM
+		text = "RULE_OPTION_OPPOSITION_COM"
+		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_NAT
+		text = "RULE_OPTION_COOPERATE_NAT"
+		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_NAT
+		text = "RULE_OPTION_TAKEOVER_NAT"
+		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_NAT
+		text = "RULE_OPTION_OPPOSITION_NAT"
+		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_JAP
+		text = "RULE_OPTION_COOPERATE_JAP"
+		desc = "RULE_OPTION_COOPERATE_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 ENG_ai_behavior = {
