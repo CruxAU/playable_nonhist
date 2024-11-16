@@ -1,5 +1,10 @@
 on_actions = {
 	# ROOT is capitulated country, FROM is winner
+	on_startup = {
+		effect = {
+			set_global_flag = NHMMAP_is_enabled #this is so other modders can detect if this mod is enabled or not
+		}
+	}
 	on_capitulation = {
 		effect = {	
 			if = { # communist cze capitulating will peace out germany and soviets 

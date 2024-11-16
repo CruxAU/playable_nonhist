@@ -517,6 +517,7 @@ danzig_of_war_preparation = {
 			}
 
 			owns_state = 85
+			
 		}
 	}
 
