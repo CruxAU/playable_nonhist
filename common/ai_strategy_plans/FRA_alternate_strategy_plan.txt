@@ -16,8 +16,11 @@ FRA_alternate_plan_1 = {
 		OR = {
 			GER = { has_completed_focus = GER_rhineland }
 			GER = { has_completed_focus = GER_reestablish_free_elections }
+			GER = { has_completed_focus = GER_re_establish_free_elections_ww }
 			GER = { has_completed_focus = GER_expatriate_the_communists }
+			GER = { has_completed_focus = GER_expatriate_the_communists_ww }
 			GER = { has_completed_focus = GER_focus_on_the_true_enemy }
+			GER = { has_completed_focus = GER_the_second_naval_race }
 		}
 	}
 
@@ -97,7 +100,15 @@ FRA_alternate_plan_2 = {
 		original_tag = FRA
 	}
 	enable = {
-		GER = { has_completed_focus = GER_focus_on_the_true_enemy }
+		GER = { 
+			OR = {
+				has_completed_focus = GER_focus_on_the_true_enemy 
+				AND = {
+					has_completed_focus = GER_the_second_naval_race
+					has_completed_focus = GER_revive_the_kaiserreich_ww
+				}
+			}
+		}
 		ENG = {
 			NOT = { has_completed_focus = ENG_a_change_in_course }
 		}
@@ -180,9 +191,14 @@ FRA_alternate_plan_3_regular = {
 		NOT = { has_dlc = "La Resistance" }
 	}
 	enable = {
-		GER = { has_completed_focus = GER_oppose_hitler }
+		OR = {
+			GER = { has_completed_focus = GER_oppose_hitler }
+			GER = { has_completed_focus = GER_oppose_hitler_ww }
+		}
+	
 		OR = {
 			GER = { has_completed_focus = GER_expatriate_the_communists }
+			GER = { has_completed_focus = GER_expatriate_the_communists_ww  }
 			ENG = { has_completed_focus = ENG_a_change_in_course }
 		}
 		has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
@@ -254,9 +270,13 @@ FRA_alternate_plan_3_lar = {
 		has_dlc = "La Resistance"
 	}
 	enable = {
-		GER = { has_completed_focus = GER_oppose_hitler }
+		OR = {
+			GER = { has_completed_focus = GER_oppose_hitler }
+			GER = { has_completed_focus = GER_oppose_hitler_ww }
+		}
 		OR = {
 			GER = { has_completed_focus = GER_expatriate_the_communists }
+			GER = { has_completed_focus = GER_expatriate_the_communists_ww }
 			ENG = { has_completed_focus = ENG_a_change_in_course }
 		}
 		has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
@@ -336,7 +356,12 @@ FRA_alternate_plan_4_regular = {
 		NOT = { has_dlc = "La Resistance" }
 	}
 	enable = {
-		GER = { has_completed_focus = GER_reestablish_free_elections }
+		GER = { 
+			OR = {
+				has_completed_focus = GER_reestablish_free_elections
+				has_completed_focus = GER_re_establish_free_elections_ww 
+			}
+		}
 		ENG = { NOT = { has_completed_focus = ENG_a_change_in_course } }
 		has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
 	}
@@ -379,7 +404,12 @@ FRA_alternate_plan_4_lar = {
 		has_dlc = "La Resistance"
 	}
 	enable = {
-		GER = { has_completed_focus = GER_reestablish_free_elections }
+		GER = { 
+			OR = {
+				has_completed_focus = GER_reestablish_free_elections
+				has_completed_focus = GER_re_establish_free_elections_ww 
+			}
+		}
 		has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
 	}
 	abort = {
@@ -466,28 +496,15 @@ FRA_alternate_plan_little_entente = {
 		OR = {
 			AND = {
 				ENG = { has_completed_focus = ENG_a_change_in_course }
-				GER = {
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST
+				NOT = { 
+					GER = { 
+						OR = {
+							has_completed_focus = GER_oppose_hitler
+							has_completed_focus = GER_oppose_hitler_ww
 						}
-						AND = {
-							has_game_rule = {
-								rule = GER_ai_behavior
-								option = DEFAULT
-							}
-							is_historical_focus_on = yes
-						}
-					}
-
+					} 
 				}
-				has_game_rule = {
-					rule = FRA_ai_behavior
-					option = DEFAULT
-				}
-				is_historical_focus_on = yes
+				has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
 			}
 			has_country_flag = FRA_AI_DEMOCRATIC_ALTERNATE
 			has_game_rule = {
@@ -821,7 +838,12 @@ FRA_stresa_front = {
 			AND = {
 				has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
 				ENG = { has_completed_focus = ENG_a_change_in_course }
-				GER = { has_completed_focus = GER_rhineland }
+				NOT = { 
+					OR = {
+						GER = { has_completed_focus = GER_oppose_hitler }
+						GER = { has_completed_focus = GER_oppose_hitler_ww }
+					}
+				}
 			}
 		}
 	}
@@ -1074,6 +1096,7 @@ FRA_alternate_plan_fascist_latin_lar = {
 				has_country_flag = FRA_AI_FASCIST
 				OR = {
 					GER = { has_completed_focus = GER_oppose_hitler }
+					GER = { has_completed_focus = GER_oppose_hitler_ww }
 					GER = { has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW }
 					GER = { 
 						has_game_rule = {

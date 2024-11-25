@@ -2413,7 +2413,6 @@ focus_tree = {
 		}
 	}
 
-	
 	focus = {
 		id = SPA_embrace_pan_hispanism
 
@@ -2979,7 +2978,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = SPA_the_national_syndicalist_state
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -4402,7 +4401,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_fuse_the_parties
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -5054,14 +5053,17 @@ focus_tree = {
 
 	focus = {
 		id = SPA_dictator_for_life
+
 		available = {
 			has_country_leader = {
 				character = SPA_francisco_franco
 				ruling_only = yes
 			}
 		}
+
 		bypass = {
 		}
+
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		mutually_exclusive = { focus = SPA_restore_the_monarchy }
 		
@@ -5439,10 +5441,14 @@ focus_tree = {
 
 	focus = {
 		id = SPA_restore_the_monarchy
+
 		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
 		}
-		bypass = {
-		}
+
 		prerequisite = { focus = SPA_adopt_the_26_points focus = SPA_settle_the_succession_question }
 		mutually_exclusive = { focus = SPA_dictator_for_life }
 		
@@ -5453,6 +5459,13 @@ focus_tree = {
 		cost = 10
 
 		available_if_capitulated = yes
+
+		bypass = {
+			has_country_leader = {
+				character = SPA_karl_pius_von_habsburg
+				ruling_only = yes
+			}
+		}
 
 		completion_reward = {
 			if = {
@@ -5658,9 +5671,10 @@ focus_tree = {
 			add_state_claim = 660
 			add_state_claim = 539
 			add_state_claim = 772
-			if = {
+			IF = {
 				limit = {
-					FRA = {
+					any_country = {
+						original_tag = FRA
 						OR = {
 							owns_state = 557
 							owns_state = 272
@@ -5679,16 +5693,9 @@ focus_tree = {
 						}
 					}
 				}
-				create_wargoal = {
-					type = take_state_focus
-					target = FRA
-					generator = { 557 272 780 556 779 778 781 777 776 773 774 660 539 772 }
-					expire = 0
-				}
-			}
-			if = {
-				limit = {
-					VIC = {
+				every_country = {
+					limit = {
+						original_tag = FRA
 						OR = {
 							owns_state = 557
 							owns_state = 272
@@ -5706,13 +5713,16 @@ focus_tree = {
 							owns_state = 772
 						}
 					}
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { 557 272 780 556 779 778 781 777 776 773 774 660 539 772 }
+							expire = 0
+						}
+					}
 				}
-				create_wargoal = {
-					type = take_state_focus
-					target = VIC
-					generator = { 557 272 780 556 779 778 781 777 776 773 774 660 539 772 }
-					expire = 0
-				}
+				
 			}
 		}
 	}
@@ -12549,7 +12559,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_those_who_would_not_help_us
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -12693,7 +12703,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_enemies_of_our_enemy
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 

@@ -1223,8 +1223,10 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = ETH_available_as_air_chief_tt
+			#custom_effect_tooltip = ETH_available_as_air_chief_tt
+			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = ETH_carl_gustav_von_rosen
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ETH_bring_in_foreign_advisors_tt
 			add_to_variable = {	ETH_airforce_enemy_army_bonus_air_superiority_factor = -0.05 }
 			add_to_variable = {	ETH_airforce_air_doctrine_cost_factor = -0.05}
@@ -1650,6 +1652,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_expanding_the_railway_network
 		icon = GFX_focus_POL_warsaw_main_station
@@ -1701,10 +1704,12 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = ETH_cie
 		}
 	}
+
 	focus = {
 		id = ETH_taxing_the_nobility
 		icon = GFX_focus_mex_privatisation
@@ -2440,7 +2445,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_ideas = ETH_national_studs_idea
-			set_technology = { camelry = 1 }
+			set_technology = {
+				camelry = 1
+				popup = no
+			}	
 		}
 	}
 	focus = {
@@ -2466,6 +2474,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+
 	focus = {
 		id = ETH_invite_foreign_prospectors
 		icon = GFX_goal_generic_intelligence_exchange
@@ -2509,7 +2518,6 @@ focus_tree = {
 			custom_effect_tooltip = ETH_invite_foreign_prospectors_tt
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = ETH_tenneco
-			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = ETH_standard_oil_california
 		}
 	}
@@ -7204,11 +7212,19 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = SAU
-					expire = 0
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SAU
+				expire = 0
 			} 
+
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YEM
+				expire = 0
+			} 
+
 		}
 	}
 
@@ -7271,7 +7287,17 @@ focus_tree = {
 		
 		cost = 10
 		available = {
-			is_puppet = no 
+			is_subject = no 
+			IF = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				COG = {
+					NOT = {
+						has_completed_focus = COG_organization_of_african_unity
+					}
+				}
+			}
 		}
 		
 		search_filters = {}
@@ -7300,7 +7326,7 @@ focus_tree = {
 		relative_position_id = ETH_organization_of_african_unity
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		available = {}
 		search_filters = {}
 		completion_reward = {
@@ -7329,7 +7355,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		
-		cost = 10
+		cost = 5
 		available = {}
 		
 		search_filters = {}
@@ -7345,9 +7371,10 @@ focus_tree = {
 					hours = 1
 				}	
 			}
-			set_variable = { org_africa_central_bank_stability_factor = -0.05}
-			set_variable = { org_africa_central_bank_industrial_complex_factor = -0.1}
-			set_variable = { org_africa_central_bank_infrastructure_factor = -0.1}
+			#set_variable = { org_africa_central_bank_stability_factor = 0.05}
+			#set_variable = { org_africa_central_bank_industrial_complex_factor = 0.1}
+			#set_variable = { org_africa_central_bank_infrastructure_factor = 0.1}
+			set_african_central_bank_variables = yes
 			add_dynamic_modifier = {
 				modifier = african_union_central_bank_modifier
 			}
@@ -7370,6 +7397,8 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+
+			add_political_power = 100
 			custom_effect_tooltip = ETH_executive_council_tt
 			every_other_country = {
 				limit = {
@@ -7395,13 +7424,15 @@ focus_tree = {
 		y = 1
 		
 		cost = 10
-		available = {}
+		available = {
+			is_subject = no
+		}
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
 			set_cosmetic_tag = ETH_African_Union
-			add_political_power = 100
+			add_political_power = 150
 			hidden_effect = {
 				set_country_flag = org_leader_is_african_union
 			}

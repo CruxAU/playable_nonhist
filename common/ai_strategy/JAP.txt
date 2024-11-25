@@ -1,15 +1,3 @@
-# befriend
-# conquer
-# antagonize
-# build_ship
-# build_army
-# unit_ratio
-# build_building
-# research_tech
-# garrison
-# protect
-# influence
-
 JAP_stock_up_on_trains_before_china = {
 	allowed = {
 		original_tag = JAP
@@ -90,6 +78,7 @@ less_trucks_4_u_JAP = {
 		id = artillery
 		value = 20 #From 40 to 20
 	}
+
 		ai_strategy = {
 		type = equipment_production_min_factories
 		id = artillery
@@ -293,6 +282,7 @@ JAP_glorious_nippon_steel_has_triumphed = {
 		value = 5
 	}
 }
+
 southern_expansion = {
 	allowed = {
 		original_tag = JAP
@@ -589,7 +579,6 @@ germany_ally = {
 	}
 }
 
-
 JAP_template_design = {
 	allowed = {
 		original_tag = JAP
@@ -654,15 +643,12 @@ JAP_template_design = {
 	}
 }
 
-
-# hey dynamic targets would be swole as f*
+# hey dynamic targets would be swole as f* #TODO
 all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 	allowed = {
 		original_tag = JAP
 	}
 	enable = {
-		
-		
 		OR = {
 			NOT = { country_exists = event_target:WTT_current_china_leader }
 			CHI = {
@@ -1437,7 +1423,7 @@ JAP_naval_role_ratios_historical_late = {
 	}
 }
 
-jap_invasions_of_gxc_are_super_tough_and_waste_manpower = {
+jap_invasions_of_gxc_are_super_tough_and_waste_manpower_unless_its_hainan = {
 	allowed = {
 		original_tag = JAP
 	}
@@ -1457,6 +1443,12 @@ jap_invasions_of_gxc_are_super_tough_and_waste_manpower = {
 		id = "GXC"
 		value = -500
 	}
+	
+	ai_strategy = {
+	    type = invasion_unit_request
+	    state = 591
+	    value = 350
+	}
 }
 
 jap_early_invasions_are_risky_and_best_wait_for_later = {
@@ -1464,7 +1456,7 @@ jap_early_invasions_are_risky_and_best_wait_for_later = {
 		original_tag = JAP
 	}
 	enable = {
-		date < 1939.2.1
+		date < 1938.4.1
 		CHI = { is_ai = yes }
 	}
 
@@ -1641,7 +1633,6 @@ JAP_USA_we_love_islands = {
 		value = 140
 	}
 }
-
 
 JAP_unit_buffer_for_home_islands_invasion_force = {
 	allowed = {

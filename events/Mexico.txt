@@ -4078,7 +4078,9 @@ country_event = {
 					}
 				}
 			}
-			give_resource_rights = { receiver = GER state = 476 }
+			MEX = {
+				give_resource_rights = { receiver = GER state = 476 }
+			}
 		}
 	}
 }
@@ -4945,6 +4947,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 news_event = {
 	id = mexico.57
 	title = mexico.57.title

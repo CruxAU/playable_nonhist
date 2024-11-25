@@ -33,6 +33,7 @@ TUR_ideology_kemalist_plan = {
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
+		TUR_hava_okulu #35
 		TUR_ratify_the_six_arrows
 		TUR_peace_at_home #35
 		TUR_turkish_state_railways
@@ -40,7 +41,6 @@ TUR_ideology_kemalist_plan = {
 		#1937
 		TUR_cooperate_with_the_debt_council #35
 		TUR_utilize_foreign_capital
-		TUR_hava_okulu #35
 		TUR_the_second_five_year_plan
 		TUR_treaty_of_saadabad #35
 		TUR_learning_from_the_great_war #35

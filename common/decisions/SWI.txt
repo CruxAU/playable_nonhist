@@ -40,6 +40,7 @@ SWI_debug_decisions_category = {
 		}
 	}
 
+	#MM: Never used. Unlocalized
 	SWI_add_100MR = {
 		complete_effect = {
 			add_to_variable = {

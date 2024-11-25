@@ -8136,6 +8136,8 @@ BUL_negotiate_claims_in_the_balkans = {
 		}
 
 		cost = 25
+
+		fire_only_once = yes
 		
 		complete_effect = {
 			FROM = {

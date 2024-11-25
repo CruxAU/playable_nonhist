@@ -6117,7 +6117,7 @@ foreign_support = {
 		}
 		days_re_enable = 360
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 		cost = 25
 		days_remove = 60
@@ -6232,7 +6232,7 @@ foreign_support = {
 		}
 		days_re_enable = 360
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 		cost = 25
 		days_remove = 60
@@ -6312,7 +6312,7 @@ foreign_support = {
 		cost = 25
 		days_re_enable = 360
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 		days_remove = 60
 		modifier = {
@@ -6412,6 +6412,15 @@ political_actions = {
 	}
 
 	CHI_join_united_front = {
+
+		visible = {
+			is_literally_china = yes
+			CHI = {
+				is_in_faction_with = PRC
+			}
+			is_in_faction = no
+		}
+
 		available = {
 			is_literally_china = yes
 			CHI = {
@@ -6442,16 +6451,11 @@ political_actions = {
 				}
 			}
 		}
-		visible = {
-			is_literally_china = yes
-			CHI = {
-				is_in_faction_with = PRC
-			}
-			is_in_faction = no
-		}
+
 		cost = 25
+
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				JAP = {
 					OR = {
@@ -6465,7 +6469,15 @@ political_actions = {
 				has_war_with = JAP
 				factor = 500
 			}
+			# Sheng Shicai doesn't want to join until he has dealt with Tunganistan and the KMT general Ma Hushan
+			modifier = {
+				original_tag = SIK
+				is_subject = no
+				date < 1937.10.15
+				factor = 0
+			}
 		}
+
 		complete_effect = {
 			If = {
 				limit = {
@@ -6499,6 +6511,7 @@ political_actions = {
 			}
 		}
 	}
+
 	CHI_move_the_capital = {
 		allowed = {
 			is_literally_china = yes
@@ -6546,6 +6559,7 @@ political_actions = {
 }
 
 CHI_xian_incident = {
+
 	CHI_instigate_xian_incident = {
 		icon = generic_political_discourse
 		available = {			
@@ -6611,10 +6625,10 @@ CHI_xian_incident = {
 				threat > 0.1
 				factor = 2
 			}
-			modifier = { #If influenced by Soviets, Sinkiang has no interest in this.
+			modifier = { # If influenced by Soviets, Sinkiang has no interest in this.
 				factor = 0
 				original_tag = SIK
-				is_in_faction_with = SOV
+				has_government = communism
 			}
 			modifier = {
 				NOT = { 	

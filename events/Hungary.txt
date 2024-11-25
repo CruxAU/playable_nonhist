@@ -29,12 +29,26 @@ country_event = {
 	
 	option = {
 		name = hungary.2.a
+
 		HUN = { 
 			transfer_state = 76
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_align_hungary	
+			}	
+			add_timed_idea = {
+				idea = fascist_influence
+				days = 365
+			}	
 		}
+
 		hidden_effect = {
-			country_event = { days = 1 id = news.15 }
+			country_event = { 
+				days = 1 
+				id = news.15 
+			}
 		}
+
 	}
 }
 
@@ -49,15 +63,28 @@ country_event = {
 	
 	option = {
 		name = hungary.2.a
+
 		HUN = { 
 			transfer_state = 76
 			transfer_state = 83
 			transfer_state = 84
-			transfer_state = 82
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_align_hungary	
+			}	
+			add_timed_idea = {
+				idea = fascist_influence
+				days = 365
+			}
 		}
+
 		hidden_effect = {
-			country_event = { days = 1 id = news.16 }
+			country_event = { 
+				days = 1 
+				id = news.16 
+			}
 		}
+
 	}
 }
 
@@ -72,9 +99,14 @@ country_event = {
 	
 	option = {
 		name = hungary.4.a
+
 		add_state_claim = 76
+
 		hidden_effect = {
-			country_event = { days = 1 id = news.17 }
+			country_event = { 
+				days = 1 
+				id = news.17 
+			}
 		}
 	}
 }
@@ -90,13 +122,18 @@ country_event = {
 	
 	option = {
 		name = hungary.4.a
+
 		add_state_claim = 76
 		add_state_claim = 83
 		add_state_claim = 84
 		add_state_claim = 82
 		hidden_effect = {
-			country_event = { days = 1 id = news.18 }
+			country_event = { 
+				days = 1 
+				id = news.18 
+			}
 		}
+		
 	}
 }
 

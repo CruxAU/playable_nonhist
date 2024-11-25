@@ -2266,7 +2266,7 @@ SWE_military_matters = {
 				 	}
 				 	add_to_temp_variable = { PREV.supply_level = 8 }
 				}
-		 			 	log = "[?supply_level]"
+				
 				if = {
 					limit = {
 						naval_base > 0

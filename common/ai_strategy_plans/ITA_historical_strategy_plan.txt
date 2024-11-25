@@ -43,7 +43,10 @@ ITA_historical_plan = {
 			has_country_flag = ITA_AI_RANDOM_FASCIST_HISTORICAL
 		}
 		GER = {
-			has_completed_focus = GER_oppose_hitler
+			OR = {
+				has_completed_focus = GER_oppose_hitler_ww
+				has_completed_focus = GER_oppose_hitler
+			}
 		}
 	}
 
@@ -66,7 +69,7 @@ ITA_historical_plan = {
 		ITA_fiocchi_munizioni #35
 		ITA_naval_power_projection #35
 		ITA_air_innovations_bba #35
-		ITA_expand_rome_flying_school 
+		ITA_expand_rome_flying_school #35
 		ITA_oto_naval_guns #35
 		ITA_develop_libya #35
 

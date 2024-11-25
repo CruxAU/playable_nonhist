@@ -365,6 +365,8 @@ focus_tree = {
 			153 = { add_core_of = ROOT }
 			848 = { add_core_of = ROOT }
 			4 = { add_core_of = ROOT }
+			975 = { add_core_of = ROOT }
+			976 = { add_core_of = ROOT }
 			69 = { add_core_of = ROOT }
 			9 = { add_core_of = ROOT }
 			75 = { add_core_of = ROOT }
@@ -403,13 +405,15 @@ focus_tree = {
 		}
 
 		bypass = {
-			CZE = {
-				OR = {
-					exists = no
-					is_subject = yes
+			OR = {
+				CZE = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
 				}
+				has_global_flag = GER_reformed_austro_hungarian_empire
 			}
-			has_global_flag = GER_reformed_austro_hungarian_empire
 		}
 
 		cancel_if_invalid = yes
@@ -844,6 +848,7 @@ focus_tree = {
 
 		available = {
 			democratic > 0.4
+			is_subject = no
 		}
 
 		bypass = {
@@ -923,13 +928,13 @@ focus_tree = {
 						ROM = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 							}
 						}
 						FRA = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 								NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
 							}
 						}
@@ -943,13 +948,13 @@ focus_tree = {
 						ROM = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 							}
 						}
 						FRA = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 								NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
 							}
 						}
@@ -1018,7 +1023,7 @@ focus_tree = {
 				ENG = {
 					exists = yes
 					has_government = democratic
-					is_subject = no
+					is_puppet = no
 					NOT = {
 						has_war_with = HUN
 					}
@@ -1872,13 +1877,13 @@ focus_tree = {
 
 	focus = {
 		id = HUN_protect_austria
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_AUS_for_a_better_future
 		prerequisite = { focus = HUN_renew_the_rome_protocols }
 		x = 2
 		y = 2
 		relative_position_id = HUN_renounce_the_treaty_of_trianon
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -1901,6 +1906,12 @@ focus_tree = {
 			848 = {
 				NOT = { is_owned_by = AUS }
 			}
+			975 = {
+				NOT = { is_owned_by = AUS }
+			}
+			976 = {
+				NOT = { is_owned_by = AUS }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1909,6 +1920,7 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_political_power = 50
 			#This modifies the AI change in germany.4 Aschluss event
 			give_guarantee = AUS
 		}
@@ -1916,13 +1928,13 @@ focus_tree = {
 
 	focus = {
 		id = HUN_alliance_with_italy
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_befriend_italy
 		prerequisite = { focus = HUN_protect_austria }
 		x = 2
 		y = 3
 		relative_position_id = HUN_renounce_the_treaty_of_trianon
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -2002,7 +2014,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_trade_deal_with_germany
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_generic_german_trade
 		prerequisite = { focus = HUN_renounce_the_treaty_of_trianon }
 		mutually_exclusive = { focus = HUN_renew_the_rome_protocols }
 		x = 0
@@ -2081,13 +2093,13 @@ focus_tree = {
 
 	focus = {
 		id = HUN_join_axis
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = HUN_joint_aluminum_mining_company }
 		x = 0
 		y = 3
 		relative_position_id = HUN_renounce_the_treaty_of_trianon
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -2183,7 +2195,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			is_puppet = no
 		}
 
 		bypass = {
@@ -2228,7 +2240,7 @@ focus_tree = {
 				controls_state = 83
 				controls_state = 84
 			}
-			is_subject = no
+			is_puppet = no
 			NOT = {
 				is_in_faction_with = ROM
 			}
@@ -2487,10 +2499,10 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
+			OR = { #state 73 removed in NHMMAP
 				SLO = {
 					exists = yes
-					NOT = { is_subject_of = HUN }
+					NOT = { is_puppet_of = HUN }
 				}
 				any_other_country = {
 					owns_state = 70
@@ -2558,7 +2570,7 @@ focus_tree = {
 				limit = {
 					SLO = {
 						exists = yes
-						is_subject = no
+						is_puppet = no
 						NOT = {
 							has_war_with = ROOT
 						}
@@ -2570,7 +2582,7 @@ focus_tree = {
 				limit = {
 					SLO = {
 						exists = yes
-						is_subject = yes
+						is_puppet = yes
 						NOT = {
 							has_war_with = ROOT
 						}
@@ -2586,7 +2598,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_proclaim_greater_hungary
-		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		icon = GFX_focus_HUN_proclaim_greater_hungary
 		prerequisite = { focus = HUN_demand_the_vojvodina }
 		x = 0
 		y = 3
@@ -2622,7 +2634,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			custom_effect_tooltip = HUN_GREATER_tt
+			#custom_effect_tooltip = HUN_GREATER_tt
 			set_cosmetic_tag = HUN_GREATER
 			add_stability = 0.1
 			hidden_effect = {
@@ -4361,13 +4373,13 @@ focus_tree = {
 						ROM = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 							}
 						}
 						FRA = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 								NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
 							}
 						}
@@ -4385,13 +4397,13 @@ focus_tree = {
 						ROM = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 							}
 						}
 						FRA = {
 							OR = {
 								exists = no
-								is_subject = yes
+								is_puppet = yes
 								NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
 							}
 						}
@@ -4460,6 +4472,15 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = HUN_mw_aircraft_organization
+
 			}
 		}
 	}
@@ -5122,6 +5143,16 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = HUN_hti_turan_organization
+
+			}
 		}
 	}
 
@@ -5155,6 +5186,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = HUN_assault_gun_focus
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = HUN_mavag_assault_guns_organization
+
+			}
 		}
 	}
 
@@ -5565,23 +5605,20 @@ focus_tree = {
 			navy_experience = 15
 			add_ideas = HUN_naval_warfare
 
+
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				custom_effect_tooltip = invites_mio_tt
+				
+				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = HUN_ganz_danubius_organization
+
 				mio:HUN_ganz_danubius_organization = {
 					add_mio_funds = 2500
 				}
-#					unlock_mio_trait_tooltip  = {
-#						department = HUN_mio_department_design_ship_capital_screen_weapons
-#						trait = HUN_mio_trait_naval_warfare
-#					}
-				
 
 			}
-
 			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_ganz_danubius

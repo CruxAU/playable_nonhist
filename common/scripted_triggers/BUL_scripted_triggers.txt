@@ -40,7 +40,7 @@ BUL_state_is_in_the_black_sea = {
 			state = 797
 			state = 211
 			state = 77
-			state = 46
+			state = 971
 			state = 766
 			state = 192
 			state = 197
@@ -90,6 +90,7 @@ BUL_country_seeks_macedonian_stability = {
 		OR = {
 			controls_state = 803
 			controls_state = 106
+			controls_state = 970
 			controls_state = 731
 			controls_state = 184
 			AND = {
@@ -100,6 +101,7 @@ BUL_country_seeks_macedonian_stability = {
 					is_in_faction_with = YUG
 					803 = { controller = { is_in_faction_with = ENG } }
 					106 = { controller = { is_in_faction_with = ENG } }
+					970 = { controller = { is_in_faction_with = ENG } }
 					731 = { controller = { is_in_faction_with = ENG } }
 					184 = { controller = { is_in_faction_with = ENG } }
 				}
@@ -113,6 +115,7 @@ BUL_country_seeks_macedonian_stability = {
 					is_in_faction_with = YUG
 					803 = { controller = { is_in_faction_with = ENG } }
 					106 = { controller = { is_in_faction_with = ENG } }
+					970 = { controller = { is_in_faction_with = ENG } }
 					731 = { controller = { is_in_faction_with = ENG } }
 					184 = { controller = { is_in_faction_with = ENG } }
 				}
@@ -188,6 +191,7 @@ BUL_has_restored_greater_bulgaria = {
 	184 = { is_fully_controlled_by = ROOT } #Central Macedonia
 	731 = { is_fully_controlled_by = ROOT } #Thrace
 	77 = { is_fully_controlled_by = ROOT } #Dobrudja
+	971 = { is_fully_controlled_by = ROOT } #North Dobrudja
 }
 
 BUL_country_can_influence_bulgaria = {

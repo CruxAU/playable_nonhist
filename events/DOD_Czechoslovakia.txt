@@ -77,7 +77,7 @@ country_event = {
 	id = czech.3
 	title = czech.1.t
 	desc = czech.3.d
-	picture = GFX_report_event
+	picture = GFX_report_event_hitler_handshake
 	
 	is_triggered_only = yes
 	
@@ -641,6 +641,8 @@ country_event = {
 		GER = {
 			add_state_core = 69
 			transfer_state = 69
+			add_state_core = 972
+			transfer_state = 972
 			add_state_core = 74
 			transfer_state = 74
 		}
@@ -1483,7 +1485,9 @@ country_event = { #sov wants peace after we took cze
 		} 
 		name = czech.61.b 
 		add_war_support = -0.05
-		SOV = { add_war_support = 0.1 }
+		effect_tooltip = {
+			SOV = { add_war_support = 0.15 }
+		}
 		SOV = { country_event = czech.62 }
 	}
 }
@@ -1498,7 +1502,7 @@ country_event = { #germans said no peace...
 	
 	option = {
 		name = czech.62.a   #well ok...
-		add_war_support = 0.1
+		add_war_support = 0.15
 	}
 }
 

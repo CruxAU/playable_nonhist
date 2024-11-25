@@ -1336,19 +1336,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HOL_hih_siderius_organization
-				mio:HOL_hih_siderius_organization = {
-					add_mio_funds = 500
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = HOL_expand_the_artillerieinrichtingen_tt
-			}
 			
 			7 = {
 				if = {
@@ -1368,6 +1355,22 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = HOL_artillerie_inrichtingen_organization
+				mio:HOL_artillerie_inrichtingen_organization = {
+					add_mio_size = 2
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = HOL_expand_the_artillerieinrichtingen_tt
 			}
 		}
 	}
@@ -1631,15 +1634,22 @@ focus_tree = {
 		cost = 10
 
 		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = HOL_domestic_jet_engine_designs
-				bonus = 0.5
-				uses = 2
+				bonus = 0.75 # was 0.5
+				uses = 1 # was 2
 				category = jet_technology
 			}
 			HOL_domestic_jet_engine_designs_level_up = yes
+
 		}
 	}
 
@@ -1948,12 +1958,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = HOL_the_ultimate_deterrent
-				bonus = 1.0
+				bonus = 0.8 # was 1
 				uses = 1
 				category = nuclear
 			}
+
 		}
 	}
 
@@ -3514,8 +3531,11 @@ focus_tree = {
 					add_political_power = HOL.gateway_to_europe_influence_pp_total
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = free_trade
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = HOL_caved_to_the_germans days = 1095 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			GER = {
 				add_opinion_modifier = { target = HOL modifier = HOL_caved_to_the_germans_ger }
 				add_opinion_modifier = { target = HOL modifier = HOL_caved_to_the_germans_ger_trade }
@@ -3597,6 +3617,7 @@ focus_tree = {
 				custom_effect_tooltip = HOL_trade_influence_tt
 				add_political_power = gateway_to_europe_influence_pp_total
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_opinion_modifier = { target = GER modifier = HOL_essential_dutch_trade }
 			GER = {
 				add_opinion_modifier = { target = HOL modifier = HOL_maintained_trade_neutrality }
@@ -3729,8 +3750,11 @@ focus_tree = {
 					add_political_power = HOL.gateway_to_europe_influence_pp_total
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = limited_exports
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = HOL_caved_to_the_british days = 1095 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			GER = {
 				add_opinion_modifier = { target = HOL modifier = HOL_caved_to_the_british_ger }
 				add_opinion_modifier = { target = HOL modifier = HOL_caved_to_the_british_ger_trade }
@@ -3767,6 +3791,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_timed_idea = { idea = HOL_volk_en_vaderland days = 1095 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = HOL_meinout_rost_van_tonningen
 			if = {
@@ -3799,6 +3824,7 @@ focus_tree = {
 			    popularity = 0.05
 			}
 			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_de_jeugdstorm
 		}
 	}
@@ -3819,8 +3845,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			set_politics = { ruling_party = fascism elections_allowed = no }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = HOL_aloof_neutrality
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					has_idea = HOL_weak_government
@@ -3842,6 +3871,7 @@ focus_tree = {
 		available = {
 			GER = { has_government = fascism }
 			NOT = { has_war_with = GER }
+			is_in_faction = no
 		}
 		bypass = {
 			is_in_faction_with = GER
@@ -3858,7 +3888,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = HOL_strength_over_blood
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -4278,7 +4308,7 @@ focus_tree = {
 				}
 			}
 		}
-		bypass = {
+		bypass = { #im 99 percent sure state 309 should not be included here
 			OR = {
 				JAP = { NOT = { has_government = fascism } }
 				has_war_with = JAP
@@ -4335,6 +4365,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = HOL_assume_the_naval_burden
+			custom_effect_tooltip = generic_skip_one_line_tt
 			7 = {
 				if = {
 					limit = {
@@ -4403,22 +4434,28 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_netherlands_first
+
 		available = {
 			NOT = {
 				is_in_faction_with = GER
 			}
 		}
+
 		prerequisite = { focus = HOL_strength_over_blood }
 		prerequisite = { focus = HOL_de_jeugdstorm }
 		mutually_exclusive = { focus = HOL_join_germany focus = HOL_join_the_major_fascist_powers }
 		icon = GFX_goal_generic_demand_territory
+
 		x = 1
 		y = 1
 		relative_position_id = HOL_strength_over_blood
+
 		cost = 10
 
 		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			add_war_support = 0.1
@@ -4438,34 +4475,40 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = HOL_implement_the_program
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = 0.05
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.05
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					has_idea = extensive_conscription
 				}
 				add_ideas = service_by_requirement
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
 					has_idea = limited_conscription
 				}
 				add_ideas = extensive_conscription
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
 					has_idea = volunteer_only
 				}
 				add_ideas = limited_conscription
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
 					has_idea = disarmed_nation
 				}
 				add_ideas = volunteer_only
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = {
 				limit = {
@@ -4526,6 +4569,7 @@ focus_tree = {
 
 	focus = {
 		id = HOL_the_united_netherlands
+
 		available = {
 			NOT = { is_in_faction_with = BEL }
 			NOT = { is_in_faction_with = LUX }
@@ -4542,23 +4586,32 @@ focus_tree = {
 				}
 			}
 		}
+
 		bypass = {
 			has_full_control_of_state = 6
 			has_full_control_of_state = 34
+			has_full_control_of_state = 977
+			has_full_control_of_state = 980
 			has_full_control_of_state = 8
 		}
+
 		prerequisite = { focus = HOL_join_germany focus = HOL_the_netherlands_first focus = HOL_join_the_major_fascist_powers }
+
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = LUX
+
 		icon = GFX_focus_hol_united_netherlands
+
 		x = 1
 		y = 1
 		relative_position_id = HOL_join_the_major_fascist_powers
+
 		cost = 10
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+
 			create_wargoal = {
 			    type = annex_everything
 			    target = BEL
@@ -4569,6 +4622,15 @@ focus_tree = {
 			    target = LUX
 			    expire = 0
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			6 = { add_claim_by = ROOT }
+			34 = { add_claim_by = ROOT }
+			977 = { add_claim_by = ROOT }
+			980 = { add_claim_by = ROOT }
+			8 = { add_claim_by = ROOT }
+
 		}
 	}
 
@@ -4604,6 +4666,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
 			add_state_claim = 694
 			add_state_claim = 308
 			add_state_claim = 691
@@ -4614,24 +4677,30 @@ focus_tree = {
 			add_state_claim = 275
 			add_state_claim = 719
 			add_state_claim = 422
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			create_wargoal = {
 			    type = take_state_focus
 			    generator = { 694 310 }
 			    expire = 0
 			    target = FRA
 			}
+
 			create_wargoal = {
 			    type = take_state_focus
 			    generator = { 308 691 687 274 422 }
 			    expire = 0
 			    target = ENG
 			}
+
 			create_wargoal = {
 			    type = take_state_focus
 			    generator = { 681 275 719 }
 			    expire = 0
 			    target = SAF
 			}
+
 		}
 	}
 
@@ -4658,18 +4727,29 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+
 			add_ideas = HOL_imperial_ambitions
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_war_support = 0.1
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_state_claim = 357
 			add_state_claim = 358
 			add_state_claim = 359
 			add_state_claim = 361
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			create_wargoal = {
 			    type = take_state_focus
 			    generator = { 357 358 359 361 }
 			    target = USA
 			    expire = 0
 			}
+
 		}
 	}
 
@@ -4693,6 +4773,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_timed_idea = { idea = HOL_legacy_of_the_de_zeven_provincien_mutiny days = 1095 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = HOL_saul_de_groot
 			if = {
@@ -4831,6 +4912,7 @@ focus_tree = {
 					}
 				}
 			}
+			is_subject = no
 		}
 		bypass = {
 			NOT = {
@@ -4883,6 +4965,7 @@ focus_tree = {
 					}
 				}
 				release = INS
+				custom_effect_tooltip = generic_skip_one_line_tt
 				hidden_effect = {
 					INS = {
 						drop_cosmetic_tag = yes
@@ -4915,6 +4998,7 @@ focus_tree = {
 			}
 			set_province_name = { id = 7381 name = "Jakarta" }
 			set_province_name = { id = 4608 name = "Surabaya" }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					OR = {
@@ -4933,10 +5017,13 @@ focus_tree = {
 				}
 				release = SUR
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = -0.1
 			add_political_power = 150
 			add_manpower = 150000
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = HOL_redirected_investments days = 365 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = HOL_decolonization_tt
 			hidden_effect = {
 				division_template = {
@@ -5014,12 +5101,15 @@ focus_tree = {
 			    popularity = 0.05
 			}
 			remove_ideas = HOL_wilhelmina
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_red_is_the_new_orange
 			if = {
 				limit = {
 					has_idea = HOL_weak_government
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				remove_ideas = HOL_weak_government
 			}
 		}
@@ -5060,7 +5150,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = HOL_decolonization
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -5189,7 +5279,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HOL_decolonization
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -5208,6 +5298,7 @@ focus_tree = {
 					}
 				}
 				FRA = { country_event = { id = generic.2 hours = 6 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
@@ -5219,6 +5310,7 @@ focus_tree = {
 					}
 				}
 				ENG = { country_event = { id = generic.2 hours = 6 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
@@ -5230,6 +5322,7 @@ focus_tree = {
 					}
 				}
 				POR = { country_event = { id = generic.2 hours = 6 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
@@ -5241,6 +5334,7 @@ focus_tree = {
 					}
 				}
 				ITA = { country_event = { id = generic.2 hours = 6 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else_if = {
 				limit = {
@@ -5252,6 +5346,7 @@ focus_tree = {
 					}
 				}
 				NOR = { country_event = { id = generic.2 hours = 6 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			remove_ideas = HOL_aloof_neutrality
 			hidden_effect = {
@@ -5305,6 +5400,7 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_french_military_mission
 		}
 	}
@@ -5410,11 +5506,14 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			set_rule = { can_join_factions = no }
 			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_bastion_of_true_communism
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = HOL_aloof_neutrality
 			hidden_effect = {
 				SOV = {
@@ -5493,6 +5592,8 @@ focus_tree = {
 		bypass = {
 			has_full_control_of_state = 6
 			has_full_control_of_state = 34
+			has_full_control_of_state = 977
+			has_full_control_of_state = 980
 			has_full_control_of_state = 8
 		}
 		prerequisite = { focus = HOL_bastion_of_true_communism focus = HOL_join_the_western_alliance focus = HOL_affirm_loyalty_to_moscow }
@@ -5507,17 +5608,23 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+
 			add_war_support = 0.1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			create_wargoal = {
 			    type = puppet_wargoal_focus
 			    target = BEL
 			    expire = 0
 			}
+
 			create_wargoal = {
 			    type = puppet_wargoal_focus
 			    target = LUX
 			    expire = 0
 			}
+
 		}
 	}
 
@@ -5551,6 +5658,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_haven_of_tolerance
 		}
 	}
@@ -5835,6 +5943,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = ban_democratic_var
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ruler_traits = { remove = disdain_for_politicians_1 add = disdain_for_politicians_2 }
 		}
 	}
@@ -5852,6 +5961,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_depillarization
 		}
 	}
@@ -5947,6 +6057,8 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 6
 			has_full_control_of_state = 34
+			has_full_control_of_state = 977
+			has_full_control_of_state = 980
 			has_full_control_of_state = 8
 		}
 		cancel_if_invalid = yes
@@ -5960,10 +6072,10 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			6 = {
+			977 = {
 				if = {
 					limit = {
-						6 = {
+						977 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -6125,6 +6237,7 @@ focus_tree = {
 						}
 					}
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = HOL_wilhelminism_tt
 				hidden_effect = { add_ideas = HOL_german_defectors_1 }
 				division_template = {
@@ -6210,7 +6323,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = HOL_unity_through_democracy days = 1095 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = HOL_willem_schermerhorn
 			hidden_effect = {
@@ -6258,6 +6373,7 @@ focus_tree = {
 			}
 			ENG = { is_faction_leader = yes }
 			threat > 0.25
+			is_in_faction = no
 		}
 		bypass = {
 			is_in_faction_with = ENG
@@ -6274,12 +6390,13 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = HOL_oranje_boven
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			remove_ideas = HOL_aloof_neutrality
+			custom_effect_tooltip = generic_skip_one_line_tt
 			ENG = { country_event = { id = generic.2 hours = 6 } }
 		}
 	}
@@ -6604,6 +6721,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_the_fourth_ally
 		}
 	}
@@ -6659,6 +6777,7 @@ focus_tree = {
 		available = {
 			has_war = no
 			is_in_faction = no
+			is_subject = no
 		}
 		prerequisite = { focus = HOL_unity_through_democracy }
 		mutually_exclusive = { focus = HOL_go_with_britain }
@@ -6672,7 +6791,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 120
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = HOL_aloof_neutrality
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_other_country = {
 				limit = {
 					capital_scope = {
@@ -6711,6 +6832,7 @@ focus_tree = {
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = HOL_benelux
+			custom_effect_tooltip = generic_skip_one_line_tt
 			BEL = {
 				custom_effect_tooltip = HOL_form_the_benelux_bel_tt
 			}
@@ -6726,8 +6848,10 @@ focus_tree = {
 				limit = {
 					has_idea = HOL_weak_government
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				remove_ideas = HOL_weak_government
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			unlock_decision_tooltip = HOL_propose_benelux_unification
 		}
 	}
@@ -6745,6 +6869,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = HOL_responsibility_for_our_own_defense
 		}
 	}
@@ -6772,7 +6897,7 @@ focus_tree = {
 			is_faction_leader = yes
 		}
 		prerequisite = { focus = HOL_lessons_from_the_low_countries }
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_the_council_of_europe
 		x = 0
 		y = 1
 		relative_position_id = HOL_lessons_from_the_low_countries
@@ -6781,19 +6906,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			set_faction_name = european_union
-			every_other_country = {
+			IF = {
 				limit = {
-					capital_scope = {
-						is_on_continent = europe
-					}
-					is_subject = no
-					is_major = no
-					has_government = democratic
-					NOT = { is_in_faction_with = ROOT }
+					is_faction_leader = yes
 				}
-				country_event = { id = generic.5 hours = 6 }
+				set_faction_name = BEL_european_union
 			}
+
+			ELSE_IF = {
+				limit = {
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+
+				leave_faction = yes
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				create_faction = BEL_european_union
+			}
+
+			ELSE = {
+				create_faction = BEL_european_union
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_the_council_of_europe_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BEL_european_community_tt
+			
 			hidden_effect = { news_event = { id = mtg_news.54 days = 1 } }
 		}
 	}

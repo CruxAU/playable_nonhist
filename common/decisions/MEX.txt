@@ -618,7 +618,13 @@ MEX_category_military_issues = {
 			NOT = { has_completed_focus = MEX_focus_support_spains_loyalists }
 
 			FROM = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_country_leader = {
+						ruling_only = yes
+						character = SPA_francisco_franco
+					}
+				}
 				has_civil_war = yes
 				NOT = { has_war_with = ROOT }
 			}
@@ -638,7 +644,13 @@ MEX_category_military_issues = {
 		target_trigger = {
 			FROM = {
 				original_tag = SPR
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_country_leader = {
+						ruling_only = yes
+						character = SPA_francisco_franco
+					}
+				}
 				has_civil_war = yes
 			}
 		}

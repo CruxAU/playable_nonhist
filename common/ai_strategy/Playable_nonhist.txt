@@ -1294,7 +1294,7 @@ ENG_stop_invading_albania = { #addon to basegame behavior
 		NOT = {
 			SOV = {
 				has_war_with = GER
-				surrender_progress > 0.55
+				surrender_progress > 0.4
 			}
 		}
 
@@ -1303,10 +1303,7 @@ ENG_stop_invading_albania = { #addon to basegame behavior
 		}
 
 		ALB = {
-			OR = {
-				exists = no
-				is_in_faction_with = ITA
-			}
+			is_in_faction_with = ITA
 		}
 	}
 	
@@ -1314,12 +1311,7 @@ ENG_stop_invading_albania = { #addon to basegame behavior
 
 	ai_strategy = {
 		type = invade
-		id = "ITA"
-		value = -200
-	}
-	ai_strategy = {
-		type = invade
-		id = "ALB"
+		id = ALB
 		value = -500
 	}
 }
@@ -1481,16 +1473,6 @@ guarantee_benelux_if_germany_is_coming_HOL = { #as described
 		id = HOL
 		value = 1000
 	}
-	ai_strategy = {
-		type = protect
-		id = BEL
-		value = 1000
-	}
-	ai_strategy = {
-		type = protect
-		id = LUX
-		value = 1000
-	}
 
 	ai_strategy = {
 		type = diplo_action_desire
@@ -1498,22 +1480,10 @@ guarantee_benelux_if_germany_is_coming_HOL = { #as described
 		value = 200
 		target = OFFER_JOIN_FACTION
 	}
-	ai_strategy = {
-		type = diplo_action_desire
-		id = BEL
-		value = 200
-		target = OFFER_JOIN_FACTION
-	}
-	ai_strategy = {
-		type = diplo_action_desire
-		id = LUX
-		value = 200
-		target = OFFER_JOIN_FACTION
-	}
  
 }
 
-guarantee_benelux_if_germany_is_coming_HOL = {
+guarantee_benelux_if_germany_is_coming_BEL = {
 
 	allowed = {
 		OR = {
@@ -2559,7 +2529,11 @@ spain_scw_support_GER_resistance_monarchist = { #germany supports carlists if th
 	}
 	enable = {
 		has_government = neutrality
-		GER = { has_completed_focus = GER_revive_the_kaiserreich }
+		OR = {
+			GER = { has_completed_focus = GER_revive_the_kaiserreich }
+			GER = { has_completed_focus = GER_revive_the_kaiserreich_ww }
+		}
+		
 		country_exists = SPB
 	}
 	abort = {
@@ -2723,7 +2697,7 @@ GER_volunteers_to_norway = {
 	}
 	enable = {
 		has_government = fascism
-		has_completed_focus = GER_rhineland
+		has_completed_focus = GER_remilitarize_the_rhineland
 		country_exists = NOR
 		NOR = {
 			has_civil_war = yes
@@ -4426,33 +4400,33 @@ CHI_dont_declare_on_warlords_if_JAP_is_coming_for_you = {
 ######################### SOV ###########################################################
 #########################################################################################
 
-SOV_Scared_of_kaiser_antisoviet_pact = {
-	allowed = { original_tag = SOV }
-	enable = {
-		GER = {
-			has_completed_focus = GER_safeguard_the_baltic 
-			has_government = neutrality
-		}
-		date < 1942.4.4 
-	}
-	abort_when_not_enabled = yes
+# SOV_Scared_of_kaiser_antisoviet_pact = {
+# 	allowed = { original_tag = SOV }
+# 	enable = {
+# 		GER = {
+# 			has_completed_focus = GER_safeguard_the_baltic 
+# 			has_government = neutrality
+# 		}
+# 		date < 1942.4.4 
+# 	}
+# 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = declare_war
-		id = LIT
-		value = -500
-	}
-	ai_strategy = {
-		type = declare_war
-		id = LAT
-		value = -500
-	}
-	ai_strategy = {
-		type = declare_war
-		id = EST
-		value = -500
-	}
-}
+# 	ai_strategy = {
+# 		type = declare_war
+# 		id = LIT
+# 		value = -500
+# 	}
+# 	ai_strategy = {
+# 		type = declare_war
+# 		id = LAT
+# 		value = -500
+# 	}
+# 	ai_strategy = {
+# 		type = declare_war
+# 		id = EST
+# 		value = -500
+# 	}
+# }
 
 SOV_right_opposition_actually_can_win_civilwar = {
 	allowed = { tag = SOV }

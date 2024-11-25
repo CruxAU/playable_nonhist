@@ -2133,6 +2133,9 @@ country_event = {
 			233 = { add_core_of = KUB }
 			232 = { add_core_of = KUB }
 			137 = { add_core_of = KUB }
+			827 = { add_core_of = KUB }
+			828 = { add_core_of = KUB }
+			821 = { add_core_of = KUB }
 		}
 	}
 
@@ -2152,6 +2155,24 @@ country_event = {
 					PREV = { controls_state = 137 }
 				}
 				transfer_state = 137
+			}
+			if = {
+				limit = {
+					PREV = { controls_state = 827 }
+				}
+				transfer_state = 827
+			}
+			if = {
+				limit = {
+					PREV = { controls_state = 828 }
+				}
+				transfer_state = 828
+			}
+			if = {
+				limit = {
+					PREV = { controls_state = 821 }
+				}
+				transfer_state = 821
 			}
 			custom_effect_tooltip = spawn_cossacks_tt
 			hidden_effect = {
@@ -3169,8 +3190,8 @@ country_event = {
 	
 	option = {
 		name = NSB_poland_communist_events.6.a
-		ai_chance = {
-			base = 50
+		ai_chance = { 
+			base = 50 #They should usually be okay with this for the player
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -3260,6 +3281,10 @@ country_event = {
 					controls_state = 812
 				}
 				
+			}
+			modifier = {
+				factor = 0.5
+				POL = { is_ai = no }
 			}
 		}
 		hidden_effect = { POL = { country_event = NSB_poland_communist_events.602 } }

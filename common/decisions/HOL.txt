@@ -402,7 +402,7 @@ HOL_prepare_the_inundation_lines = {
 			modifier = {
 				add = 50
 				is_historical_focus_on = no
-				surrender_progress > 0.3
+				surrender_progress > 0.2
 			}
 		}
 
@@ -1112,7 +1112,7 @@ HOL_gateway_to_europe_eng_category = {
 		fire_only_once = no
 
 		ai_will_do = {
-			factor = 0.03
+			base = 0.03
 			modifier = {
 				factor = 0
 				AND = {
@@ -1199,6 +1199,25 @@ HOL_gateway_to_europe_eng_category = {
 		}
 
 		remove_effect = {
+			HOL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = increased_dutch_trade_opm
+				}	
+			}
+			IF = {
+				limit = {
+					INS = {
+						is_subject_of = HOL
+					}
+				}
+				INS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = increased_dutch_trade_opm
+					}	
+				}
+			}
 			add_to_variable = { var = eng_gateway_to_europe_influence value = 5 }
 			HOL = {
 				set_variable = { var = eng_temp_trade_influence value = ENG.eng_gateway_to_europe_influence }
@@ -1354,7 +1373,7 @@ HOL_gateway_to_europe_ger_category = {
 		fire_only_once = no
 
 		ai_will_do = {
-			factor = 0.01
+			base = 0.01
 			modifier = {
 				factor = 0
 				AND = {
@@ -1440,7 +1459,10 @@ HOL_gateway_to_europe_ger_category = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = GER_oppose_hitler
+				OR = {
+					has_completed_focus = GER_oppose_hitler
+					has_completed_focus = GER_oppose_hitler_ww
+				}
 			}
 		}
 
@@ -1448,6 +1470,25 @@ HOL_gateway_to_europe_ger_category = {
 		}
 
 		remove_effect = {
+			HOL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = increased_dutch_trade_opm
+				}	
+			}
+			IF = {
+				limit = {
+					INS = {
+						is_subject_of = HOL
+					}
+				}
+				INS = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = increased_dutch_trade_opm
+					}	
+				}
+			}
 			add_to_variable = { var = ger_gateway_to_europe_influence value = 5 }
 			HOL = {
 				set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
@@ -1695,7 +1736,12 @@ HOL_gateway_to_europe_hol_category = {
 			GER = {
 				exists = yes
 				has_government = fascism
-				NOT = { has_completed_focus = GER_oppose_hitler }
+				NOT = { 
+					OR = {
+						has_completed_focus = GER_oppose_hitler
+						has_completed_focus = GER_oppose_hitler_ww
+					}
+				}
 			}
 		}
 

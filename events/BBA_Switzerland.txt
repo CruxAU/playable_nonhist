@@ -488,7 +488,11 @@ country_event = {  #For Germany: Do you want to Press the Swiss?
 			base = 10
 			modifier = {
 				factor = 0.1
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					is_historical_focus_on = yes
+				}
+
 			}
 		}
 		trigger = {
@@ -1791,9 +1795,15 @@ country_event = { #Easter Egg, look away
 	fire_only_once = yes 
 
 	trigger = {
+		has_dlc = "By Blood Alone"
 		original_tag = SWI 
-		GER = { has_completed_focus = GER_anschluss }
-
+		GER = { 
+			has_completed_focus = GER_anschluss 
+			has_country_flag = AUS_annexed
+		}
+		AUS = {
+			exists = no
+		}
 	}
 	mean_time_to_happen = {
 		days = 300
@@ -1815,7 +1825,6 @@ country_event = { #Easter Egg, look away
 			}
 		}
 	}
-
 }
 
 country_event = {
@@ -1898,6 +1907,8 @@ country_event = {
 		country_event = { id = BBA_SWI_annual_election.00 months = 12 }
 	}
 }
+
+#NHMMAP makes all the council selections different!
 
 country_event = { #Regular annual elections 
 	id = BBA_SWI_annual_election.1 
@@ -3917,7 +3928,11 @@ country_event = { #Sending request for Vorarlberg
 	option = { #You can have it  
 		name = BBA_swiss_expansion.6.a
 		ai_chance = {
-			base = 10
+			base = 7
+			modifier = {
+				factor = 1.4
+				FROM = { is_ai = no }	
+			}
 			modifier = {
 				factor = 3
 				strength_ratio = {
@@ -4160,7 +4175,7 @@ country_event = { #Sending request for The Rest of Austria
 				factor = 3 
 				GER = {
 					has_army_manpower = { size > 399999 }
-					has_completed_focus = GER_rhineland
+					has_completed_focus = GER_remilitarize_the_rhineland
 				}
 			}
 			modifier = {

@@ -2838,6 +2838,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = MEX_escuela_de_ingeneria_electrica
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = electronics
 				bonus = 1.0
@@ -3826,6 +3827,7 @@ focus_tree = {
 			NOT = { has_completed_focus = MEX_focus_catholic_politics }
 			NOT = { has_completed_focus = MEX_focus_crusade_against_atheism }
 			NOT = { has_completed_focus = MEX_focus_communist_revolution }
+			#not church NHMMAP - not every fascist faction was catholic/pro church
 		}
 
 		bypass = {
@@ -4901,7 +4903,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 299999 }
+			has_army_manpower = { size > 299999 } #minimum fucking requirement to stop AI messing around 
 		}
 
 		bypass = {
@@ -6511,6 +6513,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -6589,6 +6592,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -6921,6 +6925,11 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -6982,6 +6991,11 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -7043,6 +7057,10 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
 			}
 		}
 	}

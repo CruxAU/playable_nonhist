@@ -310,7 +310,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 
@@ -326,7 +325,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 
@@ -1656,12 +1654,29 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = CAN_uranium_mining
-				bonus = 1.0
-				uses = 2
-				category = nuclear
-			}	
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = CAN_uranium_mining
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
 		}
 	}
 
@@ -2059,7 +2074,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = CAN_cmp_truck
 				ahead_reduction = 2
-				bonus = 3.0
+				bonus = 2.0
 				uses = 1
 				category = motorized_equipment
 			}
@@ -2140,6 +2155,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.15
+			}
 			add_tech_bonus = {
 				name = CAN_royal_regiment_of_canadian_artillery
 				bonus = 1.0
@@ -2266,9 +2285,17 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_1st_canadian_parachute_battalion
-				bonus = 3.0
+				bonus = 1.0
 				uses = 1
 				category = para_tech
+			}
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 2
+					category = special_forces_doctrine
+				}
 			}
 		}
 	}
@@ -2376,6 +2403,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_valentine_tank
 				bonus = 1.0
@@ -2389,6 +2422,7 @@ focus_tree = {
 				uses = 1
 				category = cat_light_armor
 			}
+
 		}
 	}
 
@@ -2931,7 +2965,6 @@ focus_tree = {
 			if = {
 				limit = {
 					is_subject_of = ENG
-					compare_autonomy_progress_ratio > 0.99
 				}
 				OVERLORD = {
 					set_autonomy = {
@@ -3001,7 +3034,6 @@ focus_tree = {
 					limit = {
 						is_faction_leader = yes
 						is_in_faction_with = USA
-						has_government = democratic
 					}
 					country_event = generic.2					
 				}
@@ -3037,11 +3069,51 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = CAN_habakkuk_carrier
-				bonus = 1.0
-				uses = 2
-				category = cv_tech
+
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					add_ideas = habakkuk_carriers_ns_mtg
+					custom_effect_tooltip = generic_skip_one_line_tt
+					
+					add_tech_bonus = {
+						name = CAN_habakkuk_carrier
+						bonus = 0.5
+						uses = 1 
+						category = pykrete_tech
+					}
+				}
+				else = {
+					add_ideas = habakkuk_carriers_ns
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
+
+				add_tech_bonus = {
+					name = CAN_habakkuk_carrier
+					bonus = 1.0
+					uses = 1
+					category = cv_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = CAN_habakkuk_carrier
+					bonus = 1.0
+					uses = 2
+					category = cv_tech
+				}
 			}
 		}
 	}
@@ -3079,6 +3151,8 @@ focus_tree = {
 			add_to_tech_sharing_group = us_research
 		}
 		add_to_tech_sharing_group = us_research
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_ideas = generic_secret_weapons_ns
 		}
 	}
 	
@@ -3174,49 +3248,28 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				any_country = {
+			331 = {
+				owner = {
+					has_opinion = { target = ROOT value > 50 }
 					OR = {
 						has_subject = ROOT
 						original_tag = ENG
-					}
-					has_opinion = {
-						target = ROOT
-						value > 50
-					}	
-					owns_state = 332
-					owns_state = 331
-				}
-				AND = {
-					any_country = {
-						OR = {
-							has_subject = ROOT
-							original_tag = ENG
-						}
-						has_opinion = {
-							target = ROOT
-							value > 50
-						}	
-						OR = {
-							owns_state = 332
-							owns_state = 331
-						}
-					}
-					any_country = {
-						NOT = {
-							original_tag = ENG
-						}
 						AND = {
-							is_in_faction_with = ROOT
 							original_tag = USA
+							is_in_faction_with = ROOT
 						}
-						has_opinion = {
-							target = ROOT
-							value > 50
-						}	
-						OR = {
-							owns_state = 332
-							owns_state = 331
+					}
+				}
+			}
+			332 = {
+				owner = {
+					has_opinion = { target = ROOT value > 50 }
+					OR = {
+						has_subject = ROOT
+						original_tag = ENG
+						AND = {
+							original_tag = USA
+							is_in_faction_with = ROOT
 						}
 					}
 				}
@@ -3370,7 +3423,6 @@ focus_tree = {
 			if = {
 				limit = {
 					is_subject_of = ENG
-					compare_autonomy_progress_ratio > 0.99
 				}
 				OVERLORD = {
 					set_autonomy = {
@@ -3409,24 +3461,37 @@ focus_tree = {
 				GER = { 
 					has_government = fascism 
 					is_subject = no
+					is_faction_leader = yes
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ENG = { 
 					has_government = fascism 
 					is_subject = no
+					is_faction_leader = yes
+					NOT = {
+						has_war_with = ROOT
+						is_justifying_wargoal_against = ROOT
+						has_wargoal_against = ROOT
+					}
 				}
-			}
-			
-
-			NOT = {
-				has_war_with = GER
-				is_justifying_wargoal_against = GER
-				has_wargoal_against = GER
+				USA = { 
+					has_government = fascism 
+					is_subject = no
+					is_faction_leader = yes
+					NOT = {
+						has_war_with = ROOT
+						is_justifying_wargoal_against = ROOT
+						has_wargoal_against = ROOT
+					}
+				}
 			}
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
 		bypass = {
-			is_in_faction_with = GER
+			is_in_faction = yes
 		}
 
 		cancel_if_invalid = yes
@@ -3440,18 +3505,49 @@ focus_tree = {
 						has_government = fascism 
 						is_subject = no
 						is_faction_leader = yes
+						NOT = {
+							has_war_with = ROOT
+							is_justifying_wargoal_against = ROOT
+							has_wargoal_against = ROOT
+						}
 					}
 				}
 				ENG = { 
 					country_event = { id = tfv_canada.20 }
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					USA = {
+						has_government = fascism 
+						is_subject = no
+						is_faction_leader = yes
+						NOT = {
+							has_war_with = ROOT
+							is_justifying_wargoal_against = ROOT
+							has_wargoal_against = ROOT
+						}
+					}
+				}
+				USA = { 
+					country_event = { id = tfv_canada.20 }
+				}
+			}
+			else_if = {
+				limit = {
+					GER = {
+						has_government = fascism 
+						is_subject = no
+						is_faction_leader = yes
+						NOT = { 
+							has_war_with = ROOT
+						}
+					}
+				}
 				GER = { 
 					country_event = { id = tfv_canada.20 }
 				}
 			}
-			
 		}
 	}
 
@@ -3895,7 +3991,6 @@ focus_tree = {
 			if = {
 				limit = {
 					is_subject_of = ENG
-					compare_autonomy_progress_ratio > 0.99
 				}
 				OVERLORD = {
 					set_autonomy = {
@@ -4571,6 +4666,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		complete_tooltip = {
+			
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_pacific_coast_air_defence_radar_system
 				bonus = 1.0
@@ -4610,6 +4711,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_pacific_coast_air_defence_radar_system
 				bonus = 1.0
@@ -4671,8 +4778,8 @@ focus_tree = {
 					set_state_flag = CAN_the_pacific_coast_air_defence_radar_system_radar3
 				}
 				else = {
-					set_technology = {
-						radio_detection = 1
+					complete_special_project = {
+						project = sp:sp_air_radar
 					}
 					effect_tooltip = {
 						random_owned_controlled_state = {
@@ -4850,6 +4957,8 @@ focus_tree = {
 				category = cas_bomber
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4907,6 +5016,8 @@ focus_tree = {
 				category = cat_strategic_bomber
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4960,13 +5071,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_sabre_project
 				ahead_reduction = 2
-				uses = 2
+				uses = 1 # was 2
 				category = rocketry
 				category = jet_technology
 			}
+
 		}
 	}
 
@@ -5066,6 +5184,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			
+			navy_experience = 25
+
 			add_tech_bonus = {
 				name = CAN_destroyer_effort
 				bonus = 1.0
@@ -5073,6 +5194,7 @@ focus_tree = {
 				uses = 1
 				category = dd_tech
 			}
+
 		}
 	}
 
@@ -5083,6 +5205,8 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = CAN_halifax_shipyards
+
+		mutually_exclusive = { focus = CAN_heavy_cruiser_effort }
 
 		cost = 10
 
@@ -5106,10 +5230,21 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_light_cruiser_effort
-				bonus = 1.0
+				bonus = 0.5
 				ahead_reduction = 2
 				uses = 1
 				category = cl_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = CAN_light_cruiser_effort
+					bonus = 0.5
+					uses = 1
+					category = cat_ship_light_battery
+				}
 			}
 		}
 	}
@@ -5121,6 +5256,8 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = CAN_halifax_shipyards
+
+		mutually_exclusive = { focus = CAN_light_cruiser_effort }
 
 		cost = 10
 
@@ -5145,9 +5282,20 @@ focus_tree = {
 			add_tech_bonus = {
 				name = CAN_heavy_cruiser_effort
 				bonus = 1.0
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1
 				category = ca_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = CAN_heavy_cruiser_effort
+					bonus = 0.5
+					uses = 1
+					category = cat_ship_medium_battery
+				}
 			}
 		}
 	}
@@ -5155,7 +5303,7 @@ focus_tree = {
 	focus = {	
 		id = CAN_escort_fleet
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = CAN_light_cruiser_effort }
+		prerequisite = { focus = CAN_light_cruiser_effort focus = CAN_heavy_cruiser_effort }
 		mutually_exclusive = { focus = CAN_fleet_in_being }
 		x = -1
 		y = 3
@@ -5185,7 +5333,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 25			
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.15
+			}
 			add_doctrine_cost_reduction = {
 				name = CAN_escort_fleet
 				cost_reduction = 0.25
@@ -5198,7 +5350,7 @@ focus_tree = {
 	focus = {
 		id = CAN_fleet_in_being
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = CAN_light_cruiser_effort }
+		prerequisite = { focus = CAN_light_cruiser_effort focus = CAN_heavy_cruiser_effort }
 		mutually_exclusive = { focus = CAN_escort_fleet }
 		x = 1
 		y = 3
@@ -5225,6 +5377,10 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.15
+			}
 			add_doctrine_cost_reduction = {
 				name = CAN_fleet_in_being
 				cost_reduction = 0.25
@@ -5262,7 +5418,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_ideas = CAN_degauss_ship_hulls
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
@@ -5283,6 +5438,15 @@ focus_tree = {
 						}
 					}
 				}
+			}
+			
+			if = {
+				limit = {
+						NOT = {
+							has_dlc = "Man the Guns"
+						}
+					}
+				add_ideas = CAN_degauss_ship_hulls
 			}
 		}
 	}

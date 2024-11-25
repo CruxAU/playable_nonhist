@@ -21,17 +21,15 @@ country_event = {
 				modifier = tizard_relations
 			}
 		}
-		add_tech_bonus = {
-			name = tizard_mission_focus
-			uses = 1
-			bonus = 1.0
-			category = light_fighter
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.75
 		}
 		add_tech_bonus = {
 			name = tizard_mission_focus
-			bonus = 1.0
-			uses = 2
-			category = radar_tech
+			uses = 1
+			bonus = 1
+			category = light_fighter
 		}
 	}
 	
@@ -71,15 +69,19 @@ country_event = {
 	
 	option = {
 		name = britain.2.a
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 0.75
+		}
 		add_tech_bonus = {
 			name = tizard_mission_focus
-			bonus = 1.0
+			bonus = 0.5 # was 1
 			category = light_fighter
 		}
 		add_tech_bonus = {
 			name = tizard_mission_focus
-			bonus = 1.0
-			uses = 2
+			bonus = 0.5 # was 1
+			uses = 1 # was 2
 			category = radar_tech
 		}
 		USA = {
@@ -268,7 +270,7 @@ country_event = {
 	
 	option = {
 		ai_chance = { 
-			factor = 5
+			factor = 4
 		}
 		name = britain.10.a
 		promote_character = ENG_winston_churchill
@@ -278,7 +280,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = { 
-			factor = 1
+			factor = 2
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0
@@ -331,7 +333,7 @@ country_event = {
 
 	option = {
 		ai_chance = { 
-			factor = 1 
+			factor = 4 
 		}
 		name = britain.10.a
 		kill_country_leader = yes
@@ -348,7 +350,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = { 
-			factor = 1 
+			factor = 2 
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0
@@ -378,6 +380,9 @@ country_event = {
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
+	trigger = {
+		is_faction_leader = yes
+	}
 	
 	option = {
 		name = britain.11.a
@@ -425,6 +430,7 @@ country_event = {
 								num_of_factories > 30
 							}
 						}
+						set_faction_name = FRA_anti_fascist_coalition
 						country_event = britain.12
 					}
 				}
@@ -712,7 +718,7 @@ country_event = {
 		YUG = {
 			add_ai_strategy = {
 				type = alliance
-				id = "ENG"
+				id = ENG
 				value = 200
 			}
 		}

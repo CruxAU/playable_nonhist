@@ -109,7 +109,8 @@ ideas = {
 			modifier = {
 				army_attack_factor = -0.3
 				army_defence_factor = -0.3
-				mobilization_speed = -0.3
+				mobilization_speed = -0.35
+				army_org_factor = -0.02
 			}
 
 		}
@@ -133,7 +134,7 @@ ideas = {
 			modifier = {
 				army_attack_factor = -0.2
 				army_defence_factor = -0.2
-				mobilization_speed = -0.2
+				mobilization_speed = -0.25
 			}
 
 		}
@@ -157,7 +158,7 @@ ideas = {
 			modifier = {
 				army_attack_factor = -0.1
 				army_defence_factor = -0.1
-				mobilization_speed = -0.1
+				mobilization_speed = -0.15
 			}
 
 		}
@@ -768,7 +769,7 @@ ideas = {
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
 						
 			ai_will_do = {
-				factor = 1
+				base = 1
 			}
 		}
 	}
@@ -788,14 +789,15 @@ ideas = {
 				original_tag = CHI
 			}
 
-			cost = 5 # ai doesnt like free ones. but lets fix this later
+			traits = { resource_development_company }
+
+			cost = 25
 			
 			ai_will_do = {
-				factor = 200
+				base = 200
 			}
 
 			modifier = {
-				local_resources_factor = 0.1
 			}
 		}
 	}

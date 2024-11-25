@@ -392,7 +392,7 @@ POR_arms_purchases = {
 		}
 		complete_effect = {
 			ENG = {
-				country_event = { id = lar_portugal_purchase_ships.1 }
+				country_event = { id = lar_portugal_purchase_ships.1 hours = 3 }
 			}
 			set_country_flag = POR_ships_purchase_in_progress_flag
 			set_country_flag = {
@@ -445,7 +445,7 @@ POR_arms_purchases = {
 		}
 		complete_effect = {
 			ITA = {
-				country_event = { id = lar_portugal_purchase_ships.1 }
+				country_event = { id = lar_portugal_purchase_ships.1 hours = 3}
 			}
 			set_country_flag = POR_ships_purchase_in_progress_flag
 			set_country_flag = {
@@ -2137,8 +2137,14 @@ POR_iberian_summit = {
 				}
 				SPA = { has_war = no }
 			}
-			else = {
+			else_if = {
+				limit = {
+					country_exists = SPD
+				}
 				SPD = { has_war = no }
+			}
+			else = {
+				SPR = { has_war = no }
 			}
 			NOT = { has_global_flag = POR_iberian_summit_in_progress_flag }
 		}
@@ -2528,9 +2534,6 @@ POR_monarchist_cause = {
 		}
 		days_remove = 180
 	}
-
-
-
 }
 
 POR_prospect_for_resources = {

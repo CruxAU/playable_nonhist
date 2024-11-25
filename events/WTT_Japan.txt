@@ -265,12 +265,17 @@ country_event = {
 			base = 10
 		}
 		FROM = {		
-			every_army_leader = {
+			every_character = {
 				limit = { has_trait = JAP_samurai_lineage }
 				set_nationality = ROOT
 			}
-		}		
-		FROM = { country_event = { id = wtt_japan.22 } }
+		}	
+		FROM = { 
+			country_event = { 
+				id = wtt_japan.22 
+				hours = 6
+			} 
+		}
 	}
 }
 
@@ -1516,8 +1521,11 @@ country_event = {
 						controls_state = 527
 					}
 				}
+				JAP = {
+					owns_state = 525
+					owns_state = 527
+				}
 			}
-			release = KOR
 			KOR = {
 				transfer_state = 525
 				transfer_state = 527

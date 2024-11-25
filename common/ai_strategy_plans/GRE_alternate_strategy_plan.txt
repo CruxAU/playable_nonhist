@@ -15,8 +15,9 @@ GRE_monarchist_plan = {
 			AND = {
 				has_country_flag = GRE_AI_RANDOM_MONARCHIST_ALTERNATE
 				OR = {
-					GER = { has_completed_focus = GER_rhineland }
+					GER = { has_completed_focus = GER_remilitarize_the_rhineland }
 					GER = { has_completed_focus = GER_reestablish_free_elections }
+					GER = { has_completed_focus = GER_re_establish_free_elections_ww }
 				}
 				OR = {
 					HUN = { has_completed_focus = HUN_elect_a_democratic_king }
@@ -142,7 +143,7 @@ GRE_alternate_monarchist_plan = {
 			AND = {
 				has_country_flag = GRE_AI_RANDOM_MONARCHIST_ALTERNATE
 				OR = {
-					GER = { has_completed_focus = GER_rhineland }
+					GER = { has_completed_focus = GER_remilitarize_the_rhineland }
 					GER = { has_completed_focus = GER_reestablish_free_elections }
 				}
 				OR = {

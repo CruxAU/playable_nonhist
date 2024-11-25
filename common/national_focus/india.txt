@@ -21,7 +21,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 700 y = 800 }
+	continuous_focus_position = { x = 700 y = 800 } #NHMMAP 
 
 #	focus = {
 #		id = RAJ_
@@ -273,23 +273,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RAJ_karam_singh_mann
 			show_ideas_tooltip = RAJ_subhas_chanda_bose
-			add_ai_strategy = {
-				type = befriend
-				id = GER
-				value = 100
-			}
-			add_ai_strategy = {
-				type = befriend
-				id = JAP
-				value = 100
-			}
-			add_ai_strategy = {
-				type = befriend
-				id = SOV
-				value = 100
-			}
 		}
-
 	}
 
 
@@ -1323,9 +1307,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {	
 			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = RAJ_japanese_army_air_force_academy
-				bonus = 3.0
+				bonus = 2 # was 3
 				uses = 1
 				category = light_fighter
 				category = cas_bomber
@@ -2497,6 +2485,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.0
@@ -2823,6 +2815,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 			add_doctrine_cost_reduction = {
 				name = RAJ_royal_indian_air_force
 				cost_reduction = 0.5
@@ -2868,12 +2864,31 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = RAJ_the_smiling_buddha
-				bonus = 3.0
-				uses = 1
-				category = nuclear
+			
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = RAJ_the_smiling_buddha
+					bonus = 3.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
 			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+			}
+
 		}
 	}
 
@@ -3133,14 +3148,35 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = RAJ_institute_of_fundamental_research
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = RAJ_homi_j_bhabha
-			add_tech_bonus = {
-				name = RAJ_institute_of_fundamental_research
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
 		}
 	}
 

@@ -73,6 +73,16 @@ country_event = {
 				}
 			}
 		}
+
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
+		}
 	}
 
 	fire_only_once = yes
@@ -280,6 +290,16 @@ country_event = {
 				}
 			}
 		}
+
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -377,6 +397,16 @@ country_event = {
 				OR = {
 					original_tag = BRA
 					original_tag = ARG
+				}
+			}
+		}
+
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
 				}
 			}
 		}
@@ -549,8 +579,20 @@ country_event = {
 			}
 		}
 		NOT = {
-			has_dlc = "Trial of Allegiance"
-			original_tag = ARG
+			AND = {
+				original_tag = ARG
+				has_dlc = "Trial of Allegiance"
+			}
+		}
+
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
 		}
 	}
 
@@ -846,6 +888,16 @@ country_event = {
 			has_dlc = "Trial of Allegiance"
 			original_tag = ARG
 		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -1003,6 +1055,16 @@ country_event = {
 			has_dlc = "Trial of Allegiance"
 			original_tag = ARG
 		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
+		}
 	}
 
 	fire_only_once = yes
@@ -1098,6 +1160,16 @@ country_event = {
 			has_dlc = "Trial of Allegiance"
 			original_tag = ARG
 		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1158,6 +1230,16 @@ country_event = {
 		NOT = {
 			has_dlc = "Trial of Allegiance"
 			original_tag = ARG
+		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
 		}
 	}
 	
@@ -1509,6 +1591,16 @@ country_event = {
 				}
 			}
 		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -1670,6 +1762,16 @@ country_event = {
 				OR = {
 					original_tag = BRA
 					original_tag = ARG
+				}
+			}
+		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
 				}
 			}
 		}
@@ -1838,6 +1940,16 @@ country_event = {
 				OR = {
 					original_tag = BRA
 					original_tag = ARG
+				}
+			}
+		}
+		
+		NOT = {
+			AND = {
+				has_dlc = "Gotterdammerung"
+				OR = {
+					original_tag = AUS
+					original_tag = BEL
 				}
 			}
 		}
@@ -2261,7 +2373,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = political.32.b
+		name = political.32.b #Only for AI. No need to localize
 		trigger = {
 			ROOT = { is_ai = yes }
 		}

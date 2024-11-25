@@ -1189,7 +1189,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1647,7 +1646,7 @@ focus_tree = {
 		
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1704,13 +1703,29 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_fighter_modernisation
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_fighter_modernisation
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+				}
 			}
-			#1x50% research bonus to fighter models
+			ELSE = {
+				add_tech_bonus = {
+					name = POL_fighter_modernisation
+					bonus = 1.0
+					uses = 1
+					category = light_air
+				}
+			}
+			
 		}
 	}
 
@@ -1739,7 +1754,6 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
-			#1x50% research bonus to Air Doctrine Research
 		}
 	}
 
@@ -1760,13 +1774,29 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_heavy_fighter_concept
-				bonus = 1.0
-				uses = 1				
-				category = cat_heavy_fighter
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_heavy_fighter_concept
+					bonus = 1.0
+					uses = 1				
+					category = cat_heavy_fighter
+				}
 			}
-			#1x 50% research bonus to Heavy Fighters
+			ELSE = {
+				add_tech_bonus = {
+					name = POL_heavy_fighter_concept
+					bonus = 1.0
+					uses = 1
+					category = medium_air
+				}
+			}
+
 		}
 	}
 
@@ -1787,13 +1817,35 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_naval_bomber_experiments
-				bonus = 1.0
-				uses = 1				
-				category = naval_bomber
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_naval_bomber_experiments
+					bonus = 1.0
+					uses = 1				
+					category = naval_bomber
+				}
 			}
-			#1x50% research bonus to NAV
+			ELSE = {
+				add_tech_bonus = {
+					name = POL_naval_bomber_experiments
+					bonus = 0.5
+					uses = 1				
+					category = light_air
+				}
+				add_tech_bonus = {
+					name = POL_naval_bomber_experiments
+					bonus = 0.75
+					uses = 1				
+					category = cat_air_bombs
+				}
+			}
+
 		}
 	}
 
@@ -1815,13 +1867,29 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_medium_bomber_focus
-				bonus = 1.0
-				uses = 1				
-				category = tactical_bomber
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_medium_bomber_focus
+					bonus = 1.0
+					uses = 1				
+					category = tactical_bomber
+				}
 			}
-			#1 x 50% research bonus to Tactical Bomber models
+			ELSE = {
+				add_tech_bonus = {
+					name = POL_medium_bomber_focus
+					bonus = 1.0
+					uses = 1
+					category = medium_air
+				}
+			}
+
 		}
 	}
 
@@ -1843,13 +1911,29 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_light_bomber_focus
-				bonus = 1.0
-				uses = 1				
-				category = cas_bomber
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_light_bomber_focus
+					bonus = 1.0
+					uses = 1				
+					category = cas_bomber
+				}
 			}
-			#1 x 50% research bonus to CAS
+			ELSE = {
+				add_tech_bonus = {
+					name = POL_light_bomber_focus
+					bonus = 1.0
+					uses = 1				
+					category = light_air
+				}
+			}
+
 		}
 	}
 
@@ -1897,6 +1981,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = POL_rocket_development
 				bonus = 0.75
@@ -1904,7 +1994,7 @@ focus_tree = {
 				category = jet_technology
 				category = rocketry
 			}
-			#2x50% research to Rockets and Jet Engine Research
+
 		}
 	}
 
@@ -3215,7 +3305,7 @@ focus_tree = {
 						has_guaranteed = LIT
 						LIT = {
 							is_in_faction = no
-							is_subject = no
+							is_puppet = no
 						}
 					}
 					LIT = {
@@ -3227,7 +3317,7 @@ focus_tree = {
 						has_guaranteed = LAT
 						LAT = {
 							is_in_faction = no
-							is_subject = no
+							is_puppet = no
 						}
 					}
 					LAT = {
@@ -3239,7 +3329,7 @@ focus_tree = {
 						has_guaranteed = EST
 						EST = {
 							is_in_faction = no
-							is_subject = no
+							is_puppet = no
 						}
 					}
 					EST = {
@@ -3260,7 +3350,7 @@ focus_tree = {
 				limit = {
 					LIT = {
 						is_in_faction = no
-						is_subject = no
+						is_puppet = no
 						NOT = { has_war_with = POL }
 					}
 				}
@@ -3272,7 +3362,7 @@ focus_tree = {
 				limit = {
 					LAT = {
 						is_in_faction = no
-						is_subject = no
+						is_puppet = no
 						NOT = { has_war_with = POL }
 					}
 				}
@@ -3284,7 +3374,7 @@ focus_tree = {
 				limit = {
 					EST = {
 						is_in_faction = no
-						is_subject = no
+						is_puppet = no
 						NOT = { has_war_with = POL }
 					}
 				}
@@ -4372,7 +4462,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -4389,7 +4478,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -4572,6 +4660,7 @@ focus_tree = {
 				}
 			}
 		}
+
 		available = {
 			is_subject = no 
 			any_other_country = {
@@ -6381,28 +6470,57 @@ focus_tree = {
 						is_faction_leader = yes
 					}
 				}
-				
-			}
-			if = {
-				limit = {
+				if = {
+					limit = {
+						ROM = {
+							is_in_faction = no
+							is_subject = no
+							exists = yes
+							NOT = { has_war_with = ROOT }
+						}
+					}
 					ROM = {
-						is_in_faction = no
-						is_subject = no
-						exists = yes
-						NOT = { has_war_with = ROOT }
+						country_event = generic.5
 					}
 				}
-				ROM = {
-					country_event = generic.5
+				else_if = {
+					limit = {
+						ROM = { exists = yes }
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = ROM
+					}
 				}
 			}
-			else_if = {
-				limit = {
-					ROM = { exists = yes }
+			else = {
+				if = {
+					limit = {
+						ROM = {
+							is_in_faction = no
+							is_subject = no
+							exists = yes
+							NOT = { has_war_with = ROOT }
+						}
+					}
+					random_other_country = {
+						limit = {
+							is_faction_leader = yes
+							is_in_faction_with = ROOT
+						}
+						ROM = {
+							country_event = generic.5
+						}
+					}
 				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ROM
+				else_if = {
+					limit = {
+						ROM = { exists = yes }
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = ROM
+					}
 				}
 			}
 			unlock_national_focus = POL_the_between_the_seas_concept
@@ -7861,6 +7979,7 @@ focus_tree = {
 						OR = {
 							state = 664
 							state = 69
+							state = 972
 							state = 70
 							state = 71
 							state = 72
@@ -7877,6 +7996,7 @@ focus_tree = {
 						OR = {
 							owns_state = 664
 							owns_state = 69
+							owns_state = 972
 							owns_state = 70
 							owns_state = 71
 							owns_state = 72
@@ -8515,7 +8635,7 @@ focus_tree = {
 				ruling_only = yes 
 				character = POL_karl_albrecht
 			}
-			HUN = {
+			any_other_country = {
 				exists = yes
 				OR = {
 					is_in_faction = no
@@ -8525,16 +8645,18 @@ focus_tree = {
 				has_country_leader = {
 					character = HUN_otto_von_habsburg
 					ruling_only = yes
+				}			
+				NOT = {
+					any_allied_country = { has_war_with = PREV }
 				}
 			}
-			NOT = {
-				any_allied_country = { has_war_with = HUN }
-			}
+			
 		}
 
 		bypass = {
 			OR = {
 				is_in_faction_with = HUN
+				is_in_faction_with = AUS
 				AND = {
 					is_in_faction = yes
 					any_other_country = {
@@ -8671,7 +8793,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 1
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -8688,7 +8809,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 1
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -10401,7 +10521,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 1
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -10417,7 +10536,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 1
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -10581,7 +10699,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -13870,7 +13987,6 @@ focus_tree = {
 			set_rule = { can_send_volunteers = yes }
 			add_political_power = 150
 			#As per generic
-			
 		}
 	}
 
@@ -15527,12 +15643,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
+
 			add_tech_bonus = {
 				name = POL_atomic_physics_institute
-				bonus = 1.0
+				bonus = 0.5 # was 1
 				uses = 1
 				category = nuclear
 			}
+
 		}
 	}
 

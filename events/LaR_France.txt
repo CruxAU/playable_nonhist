@@ -23,15 +23,19 @@ country_event = {
 		add_state_claim = 454
 		add_state_claim = 453
 		add_state_claim = 558
+		add_state_claim = 900
+		add_state_claim = 901
+		add_state_claim = 902
 		add_state_claim = 274
 		add_state_claim = 700
 		add_state_claim = 701
 		add_state_claim = 538
 		add_state_claim = 718
+		add_state_claim = 768
+		add_state_claim = 769
 		add_state_claim = 890
-		add_state_claim = 900
-		add_state_claim = 901
-		add_state_claim = 902
+		add_state_claim = 888
+		add_state_claim = 889
 		if = {
 			limit = { is_in_faction_with = ITA }
 			ITA = {
@@ -2239,6 +2243,8 @@ country_event = {
 				add_state_claim = 34
 				add_state_claim = 6
 				add_state_claim = 8
+				add_state_claim = 977
+				add_state_claim = 980
 			}
 		}
 	}
@@ -2277,6 +2283,8 @@ country_event = {
 			add_state_claim = 34
 			add_state_claim = 6
 			add_state_claim = 8
+			add_state_claim = 977
+			add_state_claim = 980
 		}
 		hidden_effect = {
 			news_event = { id = lar_news.7 days = 3 random_days = 7 }
@@ -2297,6 +2305,8 @@ country_event = {
 		}
 		add_state_claim = 34
 		add_state_claim = 6
+		add_state_claim = 977
+		add_state_claim = 980
 		add_state_claim = 8
 		add_state_claim = 7
 		add_state_claim = 35
@@ -2419,6 +2429,7 @@ country_event = {
 			FRA = {
 				puppet = PREV
 				transfer_state = 34
+				transfer_state = 980
 			}
 		}
 	}
@@ -2454,6 +2465,7 @@ country_event = {
 		}
 		puppet = FROM
 		transfer_state = 34
+		transfer_state = 980
 	}
 }
 #response event for France - Belgium refuses
@@ -2927,6 +2939,37 @@ country_event = {
 		set_global_flag = LaR_Britain_Stresa_Concessions
 		if = {
 			limit = {
+				FRA = { 
+					is_faction_leader = yes 
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				FRA = {
+					add_to_faction = PREV #merge british colonies into new faction
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					NOT = { is_subject_of = ROOT }
+				}
+				FRA = {
+					PREV = {
+						country_event = generic.5
+					}
+				}
+			}
+			FRA = { add_to_faction = ROOT }
+		}
+		if = {
+			limit = {
 				AND = {
 					ETH = {
 						exists = yes
@@ -2942,37 +2985,6 @@ country_event = {
 			ITA = {
 				annex_country = { target = ETH }
 			}
-		}
-		if = {
-			limit = {
-				FRA = { 
-					is_faction_leader = yes 
-					NOT = {
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-			#every_other_country = {
-			#	limit = {
-			#		is_in_faction_with = ROOT
-			#		is_subject_of = ROOT
-			#	}
-			#	FRA = {
-			#		add_to_faction = PREV #merge british colonies into new faction
-			#	}
-			#}
-			every_other_country = {
-				limit = {
-					is_in_faction_with = ROOT
-					NOT = { is_subject_of = ROOT }
-				}
-				FRA = {
-					PREV = {
-						country_event = generic.5
-					}
-				}
-			}
-			FRA = { add_to_faction = ROOT }
 		}
 		if = {
 			limit = {

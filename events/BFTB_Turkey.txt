@@ -3321,6 +3321,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 #Support the Golden Square - The Iraqi Government Wins the Civil War
 country_event = {
 	id = bftb_turkey.78
@@ -4250,6 +4251,7 @@ country_event = {
 	}
 }
 
+#MM: Never used
 #hidden dispatch event for Kurdish events
 country_event = {
 	id = bftb_turkey.105
@@ -4305,6 +4307,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 #Kurdistani Resistance - Kurds Object to Infrastructure Project
 country_event = {
 	id = bftb_turkey.106
@@ -4365,6 +4368,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 #Kurdistani Resistance - Kurds March for Freedom
 country_event = {
 	id = bftb_turkey.107
@@ -4401,6 +4405,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 #Kurdistani Resistance - Kurds Demand Exemption from Conscription
 country_event = {
 	id = bftb_turkey.108
@@ -4435,6 +4440,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 #Kurdistani Resistance - Radical Kurds Occupy Rural Population Centers in the East
 country_event = {
 	id = bftb_turkey.109
@@ -5206,26 +5212,29 @@ country_event = {
 		name = bftb_turkey.128.a #our warmest thanks for your generosity 
 		random_owned_state = {
 			random_list = {
-				40 = {
+				30 = {
 					add_building_construction = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
 					}
 				}
-				30 = {
+				20 = {
 					add_building_construction = {
 						type = air_base
 						level = 2
 						instant_build = yes
 					}
 				}
-				30 = {
+				20 = {
 					add_building_construction = {
 						type = anti_air_building
 						level = 1
 						instant_build = yes
 					}
+				}
+				30 = {
+					#NO EFFECT NHMMAP
 				}
 			}
 		}
@@ -5270,7 +5279,7 @@ country_event = {
 		name = bftb_turkey.129.a #a true friend of the Turkish people
 		random_owned_state = {
 			random_list = {
-				50 = {
+				45 = {
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -5278,7 +5287,7 @@ country_event = {
 					}
 					add_extra_state_shared_building_slots = 1
 				}
-				35 = {
+				30 = {
 					add_building_construction = {
 						type = industrial_complex
 						level = 2
@@ -5293,6 +5302,9 @@ country_event = {
 						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 3
+				}
+				10 = {
+					#NO EFFECT NHMMAP
 				}
 			}
 		}
