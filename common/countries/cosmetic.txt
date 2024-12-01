@@ -234,7 +234,7 @@ GER_german_kaiserreich = {
 }
 
 CHI_warlord_leader = {
-	color = hsv { 0.18 0.6 0.9 } #255 244 190
+	color = rgb { 240 160 80 } #230 199 92 is original china
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
 MAN_restored = {

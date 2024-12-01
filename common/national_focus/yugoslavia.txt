@@ -2268,8 +2268,12 @@ focus_tree = {
 		available = { #NHMMAP
 			any_other_country = {
 				OR = {
-					capital_scope = europe
-					capital_scope = north_america
+					capital_scope = {
+						is_on_continent = europe
+					}
+					capital_scope = {
+						is_on_continent = north_america
+					}
 				}
 				has_government = fascism
 				is_faction_leader = yes
@@ -2349,8 +2353,12 @@ focus_tree = {
 				limit = {
 					any_country = {
 						OR = {
-							capital_scope = europe
-							capital_scope = north_america
+							capital_scope = {
+								is_on_continent = europe
+							}
+							capital_scope = {
+								is_on_continent = north_america
+							}
 						}
 						has_government = fascism
 						is_faction_leader = yes
@@ -2360,8 +2368,12 @@ focus_tree = {
 				random_other_country = {
 					limit = {
 						OR = {
-							capital_scope = europe
-							capital_scope = north_america
+							capital_scope = {
+								is_on_continent = europe
+							}
+							capital_scope = {
+								is_on_continent = north_america
+							}
 						}
 						has_government = fascism
 						is_faction_leader = yes
@@ -2461,8 +2473,12 @@ focus_tree = {
 		available = { #NHMMAP
 			any_other_country = {
 				OR = {
-					capital_scope = europe
-					capital_scope = north_america
+					capital_scope = {
+						is_on_continent = europe
+					}
+					capital_scope = {
+						is_on_continent = north_america
+					}
 				}
 				has_government = fascism
 				is_faction_leader = yes
@@ -2514,8 +2530,12 @@ focus_tree = {
 				limit = {
 					any_country = {
 						OR = {
-							capital_scope = europe
-							capital_scope = north_america
+							capital_scope = {
+								is_on_continent = europe
+							}
+							capital_scope = {
+								is_on_continent = north_america
+							}
 						}
 						has_government = fascism
 						is_faction_leader = yes
@@ -2524,8 +2544,12 @@ focus_tree = {
 				random_other_country = {
 					limit = {
 						OR = {
-							capital_scope = europe
-							capital_scope = north_america
+							capital_scope = {
+								is_on_continent = europe
+							}
+							capital_scope = {
+								is_on_continent = north_america
+							}
 						}
 						has_government = fascism
 						is_faction_leader = yes
@@ -4090,7 +4114,18 @@ focus_tree = {
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = panslavic_workers_congress
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = panslavic_workers_congress
+			}
+			else_if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				set_faction_name = panslavic_workers_congress
+			}
 			unlock_decision_tooltip = YUG_instigate_in_bulgaria
 			unlock_decision_tooltip = YUG_instigate_in_albania
 			hidden_effect = { news_event = { id = news.330 } }

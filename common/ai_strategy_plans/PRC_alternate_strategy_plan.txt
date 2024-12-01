@@ -210,6 +210,7 @@ PRC_alternate_plan_2 = {
 		PRC_strengthen_the_left_wing_of_the_kmt = 4
 		PRC_remove_chiang_kai_shek = 4
 		PRC_socialist_market_economy = 1
+		PRC_focus_on_china = 2
 	}
 
 	research = {
@@ -289,6 +290,7 @@ PRC_alternate_plan_3 = {
 		PRC_permit_opium_trade = 4
 		PRC_exploit_the_weak_neighbours = 2
 		PRC_infiltration = 2
+		PRC_focus_on_china = 2
 	}
 
 	research = {

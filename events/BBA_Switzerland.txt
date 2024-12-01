@@ -3299,11 +3299,6 @@ country_event = { #Event sent from Switzerland to Submit to Fascist Country
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-		}
-	}
-
 	option = { #Welcome to team fash 
 		name = BBA_switzerland_fascist.1.a
 		ai_chance = {
@@ -3316,8 +3311,16 @@ country_event = { #Event sent from Switzerland to Submit to Fascist Country
 				factor = 2 
 				SWI_country_opinion_is_good = yes 
 			}
-		}
-		trigger = {
+			modifier = {
+				NOT = {
+					any_controlled_state = {
+						any_neighbor_state = {
+							is_controlled_by = SWI
+						}
+					}
+				}
+				factor = 0.5
+			}
 		}
 		FROM = { country_event = { id = BBA_switzerland_fascist.7 hours = 4 } }
 	}
@@ -3329,16 +3332,13 @@ country_event = { #Event sent from Switzerland to Submit to Fascist Country
 				NOT = {
 					any_controlled_state = {
 						any_neighbor_state = {
-							controller = { SWI }
+							is_controlled_by = SWI 
 						}
 					}
 				}
-				factor = 10
+				factor = 5
 			}
 		}
-		trigger = {
-		}
-
 		FROM = {
 			country_event = { id = BBA_switzerland_fascist.2 hours = 6  }
 		}

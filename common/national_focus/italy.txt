@@ -15598,6 +15598,11 @@ focus_tree = {
 		relative_position_id = ITA_negotiate_italian_claims
 		cost = 10
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_stresa_was_negotiated_tt_NHMMAP
+				has_country_flag = ITA_stresa_negotiations_win
+			}
+			
 			OR = {
 				AND = {
 					NOT = {

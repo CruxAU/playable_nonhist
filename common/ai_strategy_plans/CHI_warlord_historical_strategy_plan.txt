@@ -7,10 +7,76 @@ CHI_warlord_historical_plan_nationalist = {
 			original_tag = GXC
 			original_tag = YUN
 			original_tag = XSM
+			original_tag = SHX
+			original_tag = SIK
 		}
 	}
 	enable = {
-		is_historical_focus_on = yes
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_COOPERATE_NAT
+			AND = {
+				original_tag = GXC
+				OR = {
+					has_game_rule = {
+						rule = GXC_ai_behavior
+						option = COOPERATE_NAT
+					}
+					AND = {
+						has_game_rule = {
+							rule = GXC_ai_behavior
+							option = DEFAULT
+						}	
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			AND = {
+				original_tag = YUN
+				OR = {
+					has_game_rule = {
+						rule = YUN_ai_behavior
+						option = COOPERATE_NAT
+					}
+					AND = {
+						has_game_rule = {
+							rule = YUN_ai_behavior
+							option = DEFAULT
+						}	
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			AND = {
+				original_tag = XSM
+				OR = {
+					has_game_rule = {
+						rule = XSM_ai_behavior
+						option = COOPERATE_NAT
+					}
+					AND = {
+						has_game_rule = {
+							rule = XSM_ai_behavior
+							option = DEFAULT
+						}	
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			AND = {
+				original_tag = SHX
+				has_game_rule = {
+					rule = SHX_ai_behavior
+					option = COOPERATE_NAT
+				}
+			}
+			AND = {
+				original_tag = SIK
+				has_game_rule = {
+					rule = SIK_ai_behavior
+					option = COOPERATE_NAT
+				}
+			}
+		}
 	}
 	abort = {
 		NOT = {
@@ -24,13 +90,10 @@ CHI_warlord_historical_plan_nationalist = {
 		CHI_industrial_investment
 		CHI_public_education_reform
 		CHI_long_term_economic_planning
+		CHI_anti_opposition_campaigns
 		CHI_technological_cooperation
 		CHI_local_arms_production
 		CHI_new_model_province
-		CHI_root_out_corruption
-		CHI_land_reform
-		CHI_reform_the_administration
-		CHI_heavy_weapons_development
 	}
 
 	focus_factors = {
@@ -64,12 +127,70 @@ CHI_warlord_historical_plan_communist = {
 
 	allowed = {
 		OR = {
+			original_tag = GXC
+			original_tag = YUN
+			original_tag = XSM
 			original_tag = SHX
 			original_tag = SIK
 		}
 	}
 	enable = {
-		is_historical_focus_on = yes
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_COOPERATE_COM
+			AND = {
+				original_tag = GXC
+				has_game_rule = {
+					rule = GXC_ai_behavior
+					option = COOPERATE_COM
+				}
+			}
+			AND = {
+				original_tag = YUN
+				has_game_rule = {
+					rule = YUN_ai_behavior
+					option = COOPERATE_COM
+				}
+			}
+			AND = {
+				original_tag = XSM
+				has_game_rule = {
+					rule = XSM_ai_behavior
+					option = COOPERATE_COM
+				}
+			}
+			AND = {
+				original_tag = SHX
+				OR = {
+					has_game_rule = {
+						rule = SHX_ai_behavior
+						option = COOPERATE_COM
+					}
+					AND = {
+						has_game_rule = {
+							rule = SHX_ai_behavior
+							option = DEFAULT
+						}	
+						is_historical_focus_on = yes
+					}
+				}
+			}
+			AND = {
+				original_tag = SIK
+				OR = {
+					has_game_rule = {
+						rule = SIK_ai_behavior
+						option = COOPERATE_COM
+					}
+					AND = {
+						has_game_rule = {
+							rule = SIK_ai_behavior
+							option = DEFAULT
+						}	
+						is_historical_focus_on = yes
+					}
+				}
+			}
+		}
 	}
 	abort = {
 		NOT = {
@@ -84,6 +205,7 @@ CHI_warlord_historical_plan_communist = {
 		CHI_land_value_tax
 		CHI_judiciary_reforms
 		CHI_communist_administrators
+		CHI_anti_opposition_campaigns
 		CHI_industrial_investment
 		CHI_public_education_reform
 		CHI_local_arms_production
@@ -107,7 +229,7 @@ CHI_warlord_historical_plan_communist = {
 	}
 
 	ideas = {
-
+		
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -119,4 +241,126 @@ CHI_warlord_historical_plan_communist = {
 		}
 	}
 
+}
+
+
+CHI_warlord_dont_do_cavalry = {
+	name = "Chinese Warlords with these tags dont do cavalry"
+	desc = "Historical behavior for Chinese Warlord"
+
+	allowed = {
+		OR = {
+			original_tag = YUN
+			original_tag = SHX
+		}
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		NOT = {
+			has_focus_tree = china_warlord_focus
+		}
+	}
+
+	focus_factors = {
+		CHI_uplift_the_cavalry_regiments = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+CHI_warlord_dont_do_mountaineers = {
+	name = "Chinese Warlords with these tags dont do cavalry"
+	desc = "Historical behavior for Chinese Warlord"
+
+	allowed = {
+		OR = {
+			original_tag = XSM
+			original_tag = SIK
+		}
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		NOT = {
+			has_focus_tree = china_warlord_focus
+		}
+	}
+
+	focus_factors = {
+		CHI_uplift_the_mountain_brigades = 0
+		CHI_embrace_the_opium_trade = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+CHI_warlord_dont_root_out_opium = {
+	name = "Guanxi Clique doesn't ban opium trade"
+	desc = "Historical behavior for Chinese Warlord"
+
+	allowed = {
+		original_tag = GXC
+	}
+	enable = {
+		has_completed_focus = CHI_cooperation_with_the_nationalists
+	}
+	abort = {
+		NOT = {
+			has_focus_tree = china_warlord_focus
+		}
+	}
+
+	focus_factors = {
+		CHI_root_out_corruption = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
 }

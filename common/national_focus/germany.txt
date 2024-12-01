@@ -21557,6 +21557,19 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "La Resistance" 
+			has_dlc = "Gotterdammerung"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GER_monarchist_sentiment
+					has_completed_focus = GER_remilitarize_the_rhineland
+				}
+			}
 		}
 
 		search_filters = {}
@@ -35680,6 +35693,7 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
+			NOT = { has_dlc = "Gotterdammerung" }
 			if = {
 				limit = {
 					has_game_rule = {

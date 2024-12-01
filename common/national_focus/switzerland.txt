@@ -5959,56 +5959,58 @@
 		y = 1
 
 		cost = 10
-
-		modifier = {
-			add = 1
-			has_government = communism
-			is_in_faction = no
-			GER = {
-				is_faction_leader = yes
-				NOT = {
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_government = communism
+				is_in_faction = no
+				GER = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = communism
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = GER
 					has_government = communism
 				}
-				has_war = yes
 			}
-			any_other_country = {
-				is_faction_leader = yes
-				has_war_with = GER
-				has_government = communism
-			}
-		}
-		modifier = {
-			add = 1
-			has_government = neutrality
-			is_in_faction = no
-			GER = {
-				is_faction_leader = yes
-				NOT = {
+			modifier = {
+				add = 1
+				has_government = neutrality
+				is_in_faction = no
+				GER = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = neutrality
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = GER
 					has_government = neutrality
 				}
-				has_war = yes
 			}
-			any_other_country = {
-				is_faction_leader = yes
-				has_war_with = GER
-				has_government = neutrality
-			}
-		}
-		modifier = {
-			add = 1
-			has_government = democratic
-			is_in_faction = no
-			GER = {
-				is_faction_leader = yes
-				NOT = {
+			modifier = {
+				add = 1
+				has_government = democratic
+				is_in_faction = no
+				GER = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = democratic
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = GER
 					has_government = democratic
 				}
-				has_war = yes
-			}
-			any_other_country = {
-				is_faction_leader = yes
-				has_war_with = GER
-				has_government = democratic
 			}
 		}
 
@@ -6145,56 +6147,58 @@
 		y = 1
 
 		cost = 10
-
-		modifier = {
-			add = 1
-			has_government = communism
-			is_in_faction = no
-			FRA = {
-				is_faction_leader = yes
-				NOT = {
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_government = communism
+				is_in_faction = no
+				FRA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = communism
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = FRA
 					has_government = communism
 				}
-				has_war = yes
 			}
-			any_other_country = {
-				is_faction_leader = yes
-				has_war_with = FRA
-				has_government = communism
-			}
-		}
-		modifier = {
-			add = 1
-			has_government = neutrality
-			is_in_faction = no
-			FRA = {
-				is_faction_leader = yes
-				NOT = {
+			modifier = {
+				add = 1
+				has_government = neutrality
+				is_in_faction = no
+				FRA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = neutrality
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = FRA
 					has_government = neutrality
 				}
-				has_war = yes
 			}
-			any_other_country = {
-				is_faction_leader = yes
-				has_war_with = FRA
-				has_government = neutrality
-			}
-		}
-		modifier = {
-			add = 1
-			has_government = democratic
-			is_in_faction = no
-			FRA = {
-				is_faction_leader = yes
-				NOT = {
+			modifier = {
+				add = 1
+				has_government = democratic
+				is_in_faction = no
+				FRA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = democratic
+					}
+					has_war = yes
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_war_with = FRA
 					has_government = democratic
 				}
-				has_war = yes
-			}
-			any_other_country = {
-				is_faction_leader = yes
-				has_war_with = FRA
-				has_government = democratic
 			}
 		}
 

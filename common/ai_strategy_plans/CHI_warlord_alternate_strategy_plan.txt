@@ -3,10 +3,53 @@ CHI_warlord_alternate_plan_nationalist = {
 	desc = "Alternate behavior for Chinese Warlord - Nationalist"
 
 	allowed = {
-		is_chinese_warlord = yes
+		OR = {
+			original_tag = GXC
+			original_tag = YUN
+			original_tag = XSM
+			original_tag = SHX
+			original_tag = SIK
+		}
 	}
 	enable = {
-		has_completed_focus = CHI_cooperation_with_the_nationalists
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_TAKEOVER_NAT
+			AND = {
+				original_tag = GXC
+				has_game_rule = {
+					rule = GXC_ai_behavior
+					option = TAKEOVER_NAT
+				}
+			}
+			AND = {
+				original_tag = YUN
+				has_game_rule = {
+					rule = YUN_ai_behavior
+					option = TAKEOVER_NAT
+				}
+			}
+			AND = {
+				original_tag = XSM
+				has_game_rule = {
+					rule = XSM_ai_behavior
+					option = TAKEOVER_NAT
+				}
+			}
+			AND = {
+				original_tag = SHX
+				has_game_rule = {
+					rule = SHX_ai_behavior
+					option = TAKEOVER_NAT
+				}
+			}
+			AND = {
+				original_tag = SIK
+				has_game_rule = {
+					rule = SIK_ai_behavior
+					option = TAKEOVER_NAT
+				}
+			}
+		}
 	}
 	abort = {
 		not = {
@@ -14,13 +57,18 @@ CHI_warlord_alternate_plan_nationalist = {
 		}
 	}
 
-	focus_factors = {
-		CHI_technological_cooperation = 5
-		CHI_new_model_province = 5
-		CHI_industrial_investment = 10
-		CHI_local_arms_production = 10
-		CHI_anti_opposition_campaigns = 5
-		CHI_public_education_reform = 10
+	ai_national_focuses = {
+		CHI_secure_internal_politics
+		CHI_cooperation_with_the_nationalists
+		CHI_anti_opposition_campaigns
+		CHI_industrial_investment
+		CHI_public_education_reform
+		CHI_long_term_economic_planning
+		CHI_technological_cooperation
+		CHI_local_arms_production
+		CHI_new_model_province
+		CHI_strenghten_warlord_authority
+		CHI_root_out_corruption
 	}
 
 	research = {
@@ -50,35 +98,221 @@ CHI_warlord_alternate_plan_nationalist = {
 }
 
 CHI_warlord_alternate_plan_communist = {
-	name = "Chinese Warlord alternate plan when cooperating with communists"
-	desc = "Alternate behavior for Chinese Warlord - Communist"
+	name = "Chinese Warlord alternate plan supporting Communists"
+	desc = "alternate behavior for Chinese Warlord"
 
 	allowed = {
-		is_chinese_warlord = yes
+		OR = {
+			original_tag = GXC
+			original_tag = YUN
+			original_tag = XSM
+			original_tag = SHX
+			original_tag = SIK
+		}
 	}
 	enable = {
-		has_completed_focus = CHI_cooperation_with_the_communists
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_TAKEOVER_COM
+			AND = {
+				original_tag = GXC
+				has_game_rule = {
+					rule = GXC_ai_behavior
+					option = TAKEOVER_COM
+				}
+			}
+			AND = {
+				original_tag = YUN
+				has_game_rule = {
+					rule = YUN_ai_behavior
+					option = TAKEOVER_COM
+				}
+			}
+			AND = {
+				original_tag = XSM
+				has_game_rule = {
+					rule = XSM_ai_behavior
+					option = TAKEOVER_COM
+				}
+			}
+			AND = {
+				original_tag = SHX
+				has_game_rule = {
+					rule = SHX_ai_behavior
+					option = TAKEOVER_COM
+				}
+			}
+			AND = {
+				original_tag = SIK
+				has_game_rule = {
+					rule = SIK_ai_behavior
+					option = TAKEOVER_COM
+				}
+			}
+		}
 	}
 	abort = {
-		not = {
+		NOT = {
 			has_focus_tree = china_warlord_focus
 		}
 	}
 
+	ai_national_focuses = {
+		CHI_secure_internal_politics
+		CHI_cooperation_with_the_communists
+		CHI_anti_opposition_campaigns
+		CHI_land_redistribution
+		CHI_land_value_tax
+		CHI_judiciary_reforms
+		CHI_communist_administrators
+		CHI_industrial_investment
+		CHI_public_education_reform
+		CHI_local_arms_production
+		CHI_long_term_economic_planning
+		CHI_ideological_education
+		CHI_local_arms_development
+		CHI_heavy_weapons_development
+		CHI_public_works
+		CHI_labor_reform
+		CHI_rural_militias
+	}
+
 	focus_factors = {
-		CHI_land_redistribution = 5
-		CHI_land_value_tax = 10
-		CHI_industrial_investment = 10
-		CHI_public_education_reform = 10
-		CHI_public_works = 5
-		CHI_rural_militias = 5
+		CHI_strenghten_warlord_authority = 5
 	}
 
 	research = {
-		infantry_weapons = 15
-		air_equipment = 0
-		artillery = 10
-		armor = 0
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+CHI_warlord_opposition_paths = {
+	name = "Chinese Warlord historical plan supporting opposition - com or nat"
+	desc = "Historical behavior for Chinese Warlord"
+
+	allowed = {
+		OR = {
+			original_tag = GXC
+			original_tag = YUN
+			original_tag = XSM
+			original_tag = SHX
+			original_tag = SIK
+		}
+	}
+	enable = {
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_OPPOSITION_COM
+			has_country_flag = WARLORD_AI_RANDOM_OPPOSITION_NAT
+			AND = {
+				original_tag = GXC
+				OR = {
+					has_game_rule = {
+						rule = GXC_ai_behavior
+						option = OPPOSITION_COM
+					}
+					has_game_rule = {
+						rule = GXC_ai_behavior
+						option = OPPOSITION_NAT
+					}
+				}
+			}
+			AND = {
+				original_tag = YUN
+				OR = {
+					has_game_rule = {
+						rule = YUN_ai_behavior
+						option = OPPOSITION_COM
+					}
+					has_game_rule = {
+						rule = YUN_ai_behavior
+						option = OPPOSITION_NAT
+					}
+				}
+			}
+			AND = {
+				original_tag = XSM
+				OR = {
+					has_game_rule = {
+						rule = XSM_ai_behavior
+						option = OPPOSITION_COM
+					}
+					has_game_rule = {
+						rule = XSM_ai_behavior
+						option = OPPOSITION_NAT
+					}
+				}
+			}
+			AND = {
+				original_tag = SHX
+				OR = {
+					has_game_rule = {
+						rule = SHX_ai_behavior
+						option = OPPOSITION_COM
+					}
+					has_game_rule = {
+						rule = SHX_ai_behavior
+						option = OPPOSITION_NAT
+					}
+				}
+			}
+			AND = {
+				original_tag = SIK
+				OR = {
+					has_game_rule = {
+						rule = SIK_ai_behavior
+						option = OPPOSITION_COM
+					}
+					has_game_rule = {
+						rule = SIK_ai_behavior
+						option = OPPOSITION_NAT
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		NOT = {
+			has_focus_tree = china_warlord_focus
+		}
+	}
+
+	ai_national_focuses = {
+		CHI_secure_internal_politics
+		CHI_opposition
+		CHI_institute_cross_border_raids
+		CHI_war_taxes
+		CHI_personal_leadership
+		CHI_provoke_border_clashes
+		CHI_industrial_investment
+		CHI_public_education_reform
+		CHI_local_arms_production
+		CHI_public_works
+		CHI_labor_reform
+		CHI_long_term_economic_planning
+		CHI_cult_of_personality
+		CHI_local_arms_development
+		CHI_heavy_weapons_development
+		CHI_strenghten_warlord_authority
+	}
+
+	focus_factors = {
+		CHI_seek_japanese_support = 0
+	}
+
+	research = {
+
 	}
 
 	ideas = {
@@ -96,3 +330,181 @@ CHI_warlord_alternate_plan_communist = {
 
 }
 
+CHI_warlord_opposition_paths_com = {
+	name = "Chinese Warlord historical plan supporting opposition - com or nat"
+	desc = "Historical behavior for Chinese Warlord"
+
+	allowed = {
+		OR = {
+			original_tag = GXC
+			original_tag = YUN
+			original_tag = XSM
+			original_tag = SHX
+			original_tag = SIK
+		}
+	}
+	enable = {
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_OPPOSITION_COM
+			AND = {
+				original_tag = GXC
+				has_game_rule = {
+					rule = GXC_ai_behavior
+					option = OPPOSITION_COM
+				}
+			}
+			AND = {
+				original_tag = YUN
+				has_game_rule = {
+					rule = YUN_ai_behavior
+					option = OPPOSITION_COM
+				}
+			}
+			AND = {
+				original_tag = XSM
+				has_game_rule = {
+					rule = XSM_ai_behavior
+					option = OPPOSITION_COM
+				}
+			}
+			AND = {
+				original_tag = SHX
+				has_game_rule = {
+					rule = SHX_ai_behavior
+					option = OPPOSITION_COM
+				}
+			}
+			AND = {
+				original_tag = SIK
+				has_game_rule = {
+					rule = SIK_ai_behavior
+					option = OPPOSITION_COM
+				}
+			}
+		}
+	}
+	abort = {
+		NOT = {
+			has_focus_tree = china_warlord_focus
+		}
+	}
+
+	focus_factors = {
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+CHI_warlord_cooperate_with_japan = {
+	name = "Chinese Warlord historical plan supporting opposition - com or nat"
+	desc = "Historical behavior for Chinese Warlord"
+
+	allowed = {
+		OR = {
+			original_tag = GXC
+			original_tag = YUN
+			original_tag = XSM
+			original_tag = SHX
+			original_tag = SIK
+		}
+	}
+	enable = {
+		OR = {
+			has_country_flag = WARLORD_AI_RANDOM_COOPERATE_JAP
+			AND = {
+				original_tag = GXC
+				has_game_rule = {
+					rule = GXC_ai_behavior
+					option = COOPERATE_JAP
+				}
+			}
+			AND = {
+				original_tag = YUN
+				has_game_rule = {
+					rule = YUN_ai_behavior
+					option = COOPERATE_JAP
+				}
+			}
+			AND = {
+				original_tag = XSM
+				has_game_rule = {
+					rule = XSM_ai_behavior
+					option = COOPERATE_JAP
+				}
+			}
+			AND = {
+				original_tag = SHX
+				has_game_rule = {
+					rule = SHX_ai_behavior
+					option = COOPERATE_JAP
+				}
+			}
+			AND = {
+				original_tag = SIK
+				has_game_rule = {
+					rule = SIK_ai_behavior
+					option = COOPERATE_JAP
+				}
+			}
+		}
+	}
+	abort = {
+		NOT = {
+			has_focus_tree = china_warlord_focus
+		}
+	}
+
+	ai_national_focuses = {
+		CHI_secure_internal_politics
+		CHI_opposition
+		CHI_war_taxes
+		CHI_seek_japanese_support
+		CHI_personal_leadership
+		CHI_defensive_posture
+		CHI_industrial_investment
+		CHI_institute_cross_border_raids
+		CHI_public_education_reform
+		CHI_local_arms_production
+		CHI_public_works
+		CHI_labor_reform
+		CHI_long_term_economic_planning
+		CHI_cult_of_personality
+		CHI_local_arms_development
+		CHI_heavy_weapons_development
+		CHI_strenghten_warlord_authority
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

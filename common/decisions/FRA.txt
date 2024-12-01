@@ -1112,7 +1112,7 @@ FRA_spanish_intervention_category = {
 			modifier = {
 				AND = {
 					has_idea = FRA_political_violence
-					has_stability < 0.55
+					has_stability < 0.65
 				}
 				factor = 0
 			}

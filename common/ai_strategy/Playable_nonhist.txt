@@ -3957,6 +3957,11 @@ GRE_one_at_a_time = {
 		id = BUL
 		value = -100
 	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = -500
+	}
 }
 
 GRE_help_tito = {
@@ -3975,7 +3980,7 @@ GRE_help_tito = {
 
 	ai_strategy = {
 		type = force_defend_ally_borders
-		value = 100
+		value = 200
 		target = europe
 	}
 }

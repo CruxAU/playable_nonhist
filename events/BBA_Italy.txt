@@ -11470,6 +11470,11 @@ country_event = {
 					has_same_ideology = yes
 				}
 			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+				ITA = { has_government = fascism }
+			}
 		}
 
 		if = {
@@ -12422,6 +12427,7 @@ country_event = {
 			FRA = {
 				clr_country_flag = ITA_italy_has_started_negotiations_flag
 			}
+			ITA = { set_country_flag = ITA_stresa_negotiations_win }
 		}
 	}
 
@@ -12846,7 +12852,7 @@ country_event = {
 country_event = {
 	id = BBA_italy_interaction_events.40
 	title = BBA_italy_interaction_events.40.t 
-	desc = BBA_italy_interaction_events.40.desc
+	desc = BBA_italy_interaction_events_NHMMAP.40.desc
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
@@ -12900,10 +12906,19 @@ country_event = {
 				limit = {
 					ENG = {
 						is_faction_leader = yes
+						is_in_faction_with = FRA
 					}
 				}
 				ENG = { add_to_faction = FRA }
 				ENG = { add_to_faction = ITA }
+				set_faction_name = stresa_front_ita
+			}
+			else_if = {
+				limit = {
+					FRA = {
+						is_faction_leader = yes
+					}
+				}
 			}
 			else = {
 				ROOT = {
@@ -13331,6 +13346,11 @@ country_event = {
 					has_same_ideology = yes
 				}
 			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+				ITA = { has_government = fascism }
+			}
 		}
 
 		FROM = { 
@@ -13339,6 +13359,7 @@ country_event = {
 
 		hidden_effect = { #For scripted loc  purposes
 			set_country_flag = ITA_italy_suing_for_peace_flag
+			set_country_flag = ITA_stresa_negotiations_win
 		}		
 	}
 
@@ -13346,6 +13367,13 @@ country_event = {
 		name = BBA_italy_interaction_events.50.b 
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 30
+				OR = {
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					has_completed_focus = ENG_the_kings_party
+				}
+			}
 		}
 	}
 }

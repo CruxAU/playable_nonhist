@@ -547,3 +547,5 @@
  TUR_turkish_interventionism_NHMMAP:0 "Turkish Interventionism"
  SWI_NHMMAP_warning_communist_despotic_tt:0 "§RWarning:§! If the §YCurrent President§! is §gNon-Aligned§! or §OCommunist§!, the requirements for this and future focuses §Ywill change!§!\n\n"
  SWI_NHMMAP_warning_communist_tt:0 "§RWarning:§! If the §YCurrent President§! is §OCommunist§!, the requirements for this and future focuses §Ywill change!§!\n\n"
+ BBA_italy_interaction_events_NHMMAP.40:0 "Now that territorial concessions have been decided, [ITA.GetName] has initated a process that will bring Italy and [ROOT.GetNameDef] into a military alliance called the Stresa Front. Now is not the time to sit idly by, for [ROOT.GetNameDef] must act in her own best interest and join Italy against the German menace."
+ ITA_stresa_was_negotiated_tt_NHMMAP:0 "Has negotiated a deal with the Allies over Italian claims."

@@ -1952,6 +1952,12 @@ HUN_ai_behavior = {
 		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HUN_AI_DESC"
 	}
 	option = {
+		required_dlc = "Gotterdammerung"
+		name = HABSBURG_HUNGARY
+		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY"
+		desc = "RULE_HABSBURG_HUNGARY_HUN_AI_DESC"
+	}
+	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_HUN_DEMOCRATIC_KING"
 		desc = "RULE_OPTION_DEMOCRATIC_HUN_AI_DESC"
@@ -1971,12 +1977,6 @@ HUN_ai_behavior = {
 		name = FASCIST_KING
 		text = "RULE_OPTION_HUN_FASCIST_KING"
 		desc = "RULE_FASCIST_ALTERNATE_KING_HUN_AI_DESC"
-	}
-	option = {
-		required_dlc = "Gotterdammerung"
-		name = HABSBURG_HUNGARY
-		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY"
-		desc = "RULE_HABSBURG_HUNGARY_HUN_AI_DESC"
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
@@ -2433,29 +2433,6 @@ MAN_ai_behavior = {
 		allow_achievements = yes
 	}
 }
-WARLORDS_ai_behavior = {
-	name = "WARLORDS_AI_BEHAVIOR"
-	required_dlc = "Waking the Tiger"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = RESPONSIBLE #only do borderwars when both sides are not at war non historical mode will always pick this option unless other options are chosen by a player
-		text = "RULE_OPTION_OPPOSITION_NAT"
-		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = BORDERWARS #dont bother about the other sides, always do borderwars
-		text = "RULE_OPTION_COOPERATE_NAT"
-		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = NO_BORDERWARS #never do borderwars
-		text = "RULE_OPTION_TAKEOVER_NAT"
-		desc = "RULE_OPTION_TAKEOVER_NAT_AI_DESC"
-		allow_achievements = yes
-	}
-}
 SHX_ai_behavior = {
 	name = "SHX_AI_BEHAVIOR"
 	required_dlc = "Waking the Tiger"
@@ -2466,7 +2443,7 @@ SHX_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COOPERATE_NAT
+		name = COOPERATE_NAT 
 		text = "RULE_OPTION_COOPERATE_NAT"
 		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
 		allow_achievements = yes
@@ -2484,9 +2461,9 @@ SHX_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = COOPERATE_COM
+		name = COOPERATE_COM #historical
 		text = "RULE_OPTION_COOPERATE_COM"
-		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		desc = "RULE_OPTION_COOPERATE_COM_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2524,7 +2501,7 @@ XSM_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COOPERATE_NAT
+		name = COOPERATE_NAT #historical
 		text = "RULE_OPTION_COOPERATE_NAT"
 		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
 		allow_achievements = yes
@@ -2544,7 +2521,7 @@ XSM_ai_behavior = {
 	option = {
 		name = COOPERATE_COM
 		text = "RULE_OPTION_COOPERATE_COM"
-		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		desc = "RULE_OPTION_COOPERATE_COM_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2582,7 +2559,7 @@ YUN_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COOPERATE_NAT
+		name = COOPERATE_NAT #historical
 		text = "RULE_OPTION_COOPERATE_NAT"
 		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
 		allow_achievements = yes
@@ -2602,7 +2579,7 @@ YUN_ai_behavior = {
 	option = {
 		name = COOPERATE_COM
 		text = "RULE_OPTION_COOPERATE_COM"
-		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		desc = "RULE_OPTION_COOPERATE_COM_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2640,7 +2617,7 @@ GXC_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COOPERATE_NAT
+		name = COOPERATE_NAT #historical
 		text = "RULE_OPTION_COOPERATE_NAT"
 		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
 		allow_achievements = yes
@@ -2660,7 +2637,7 @@ GXC_ai_behavior = {
 	option = {
 		name = COOPERATE_COM
 		text = "RULE_OPTION_COOPERATE_COM"
-		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
+		desc = "RULE_OPTION_COOPERATE_COM_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2698,24 +2675,6 @@ SIK_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COOPERATE_COM
-		text = "RULE_OPTION_COOPERATE_COM"
-		desc = "RULE_OPTION_COOPERATE_COM_MAN_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = TAKEOVER_COM
-		text = "RULE_OPTION_TAKEOVER_COM"
-		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = OPPOSITION_COM
-		text = "RULE_OPTION_OPPOSITION_COM"
-		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
 		name = COOPERATE_NAT
 		text = "RULE_OPTION_COOPERATE_NAT"
 		desc = "RULE_OPTION_COOPERATE_NAT_AI_DESC"
@@ -2731,6 +2690,24 @@ SIK_ai_behavior = {
 		name = OPPOSITION_NAT
 		text = "RULE_OPTION_OPPOSITION_NAT"
 		desc = "RULE_OPTION_OPPOSITION_NAT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COOPERATE_COM #historical
+		text = "RULE_OPTION_COOPERATE_COM"
+		desc = "RULE_OPTION_COOPERATE_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TAKEOVER_COM
+		text = "RULE_OPTION_TAKEOVER_COM"
+		desc = "RULE_OPTION_TAKEOVER_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = OPPOSITION_COM
+		text = "RULE_OPTION_OPPOSITION_COM"
+		desc = "RULE_OPTION_OPPOSITION_COM_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
