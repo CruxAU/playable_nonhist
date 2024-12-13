@@ -1536,7 +1536,10 @@ ITA_AXIS_dont_join_against_eth = {
 		NOT = { original_tag = ITA }
 		ITA = {
 			all_enemy_country = {
-				is_government_in_exile = yes
+				OR = {
+					is_government_in_exile = yes
+					has_capitulated = yes
+				}
 			}
 		}
 	}
@@ -1567,7 +1570,10 @@ ITA_dont_call_allies = {
 		is_in_faction_with = ITA
 		ITA = {
 			all_enemy_country = {
-				is_government_in_exile = yes
+				OR = {
+					is_government_in_exile = yes
+					has_capitulated = yes
+				}
 			}
 		}
 	}

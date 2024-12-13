@@ -200,12 +200,14 @@ peace_ai_desires = {
 					original_tag = UKR
 					original_tag = BLR
 					original_tag = LIT
+					original_tag = ROM
 					original_tag = GER
 				}
             }
             FROM.FROM.FROM = {
 				OR = {
 					is_core_of = UKR
+					is_core_of = MOL
 					is_core_of = BLR
 					state = 784 #wilno
 				}
@@ -235,12 +237,14 @@ peace_ai_desires = {
 					original_tag = BLR
 					original_tag = LIT
 					original_tag = GER
+					original_tag = ROM
 				}
             }
             FROM.FROM.FROM = {
 				OR = {
 					is_core_of = UKR
 					is_core_of = BLR
+					is_core_of = MOL
 					state = 784 #wilno
 				}
             }
@@ -250,6 +254,27 @@ peace_ai_desires = {
 			}
         }
         ai_desire = -200
+    }
+
+	Soviets_still_puppet_rom = { #don't puppet this stuff holy shit
+        peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+				original_tag = ROM
+            }
+            FROM.FROM.FROM = {
+				is_core_of = ROM
+				NOT = {
+					is_core_of = UKR
+					is_core_of = MOL
+				}
+            }
+            ROOT = { 
+				original_tag = SOV
+				has_government = communism
+			}
+        }
+        ai_desire = 200
     }
 
 	Turkey_actually_uses_the_state_flags = { #the hoi4 devs made some state flags but never actually used them :(
@@ -323,6 +348,58 @@ peace_ai_desires = {
         }
         ai_desire = 300
 	}
+
+	Turkey_respects_balkan_pact = { #turkey puppets balkan countries on balkan pact paths
+        peace_action_type = puppet
+        enable = {
+            FROM.FROM = {
+				BUL_is_balkan_nation = yes
+            }
+            FROM.FROM.FROM = {
+				BUL_is_balkan_state = yes
+				NOT = {
+					ROOT = {
+						any_allied_country = {
+							FROM.FROM.FROM = {
+								is_core_of = PREV
+							}
+						}
+					}
+				}
+            }
+            ROOT = { 
+				original_tag = TUR
+				has_completed_focus = TUR_continue_to_prioritise_balkan_integrity
+			}
+        }
+        ai_desire = 200
+    }
+	
+	Turkey_respects_balkan_pact_reverse = { #don't annex this stuff
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				BUL_is_balkan_nation = yes
+            }
+            FROM.FROM.FROM = {
+				BUL_is_balkan_state = yes
+				NOT = {
+					ROOT = {
+						any_allied_country = {
+							FROM.FROM.FROM = {
+								is_core_of = PREV
+							}
+						}
+					}
+				}
+            }
+            ROOT = { 
+				original_tag = TUR
+				has_completed_focus = TUR_continue_to_prioritise_balkan_integrity
+			}
+        }
+        ai_desire = -200
+    }
 
 	Spain_wants_to_join_african_holdings = { #spain wants to eat morrocco in peace conference
 		peace_action_type = take_states

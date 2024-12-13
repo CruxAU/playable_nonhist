@@ -200,7 +200,7 @@ country_event = {
 	id = tfv_canada.21
 	title = tfv_canada.21.t	# 
 	desc = tfv_canada.21.d	#
-	picture = GFX_report_event_hitler_handshake
+	picture = [GetHitlerHandshakeEventPicture]
 	
 	is_triggered_only = yes
 	

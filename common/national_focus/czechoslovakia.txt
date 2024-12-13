@@ -2157,6 +2157,7 @@
 		}
 
 		available = {
+			controls_state = 70
 			GER = { exists = yes }
 			POL = {	exists = yes }
 			NOT = {
@@ -2527,6 +2528,7 @@
 		}
 
 		available = {
+			controls_state = 70
 			NOT = {
 				is_in_faction_with = HUN
 			}

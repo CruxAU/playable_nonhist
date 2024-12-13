@@ -2744,10 +2744,10 @@ focus_tree = {
 				custom_effect_tooltip = ger_sov_buddies_tooltip_2
 			}
 			custom_effect_tooltip = ger_sov_buddies_tooltip
-			add_ideas = soviet_german_friendship
+			add_ideas = soviet_german_friendship_NHMMAP
 			SOV = {
 				add_opinion_modifier = { target = GER modifier = ger_sov_alliance_focus }
-				add_ideas = soviet_german_friendship
+				add_ideas = soviet_german_friendship_NHMMAP
 				country_event = germany.89
 			}
 		}

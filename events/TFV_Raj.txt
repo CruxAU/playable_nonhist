@@ -557,7 +557,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				add = 30
+				factor = 2
 				ROOT_will_help_RAJ = yes
 			}			
 		}	
@@ -668,7 +668,7 @@ country_event = {
 	id = tfv_raj.43
 	title = tfv_raj.43.t
 	desc = tfv_raj.43.desc
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_soldiers_parade
 	
 	is_triggered_only = yes
 

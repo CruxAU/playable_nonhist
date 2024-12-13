@@ -2860,7 +2860,7 @@ POR_the_spanish_civil_war = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			has_stability > 0.2
+			has_stability > 0.15
 			country_exists = SPB
 			OR = {
 				AND = {
@@ -2882,7 +2882,7 @@ POR_the_spanish_civil_war = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 10
+			factor = 50
 			modifier = {
 				OR = {
 					has_stability < 0.1

@@ -1378,10 +1378,6 @@ on_actions = {
 				set_rule = { can_join_factions = yes }
 			}
 		}
-
-		effect = {
-			log = "PEACE - ROOT is [ROOT.GetName] and FROM is [FROM.GetName]"
-		}
 	}
 	
 	#ROOT - country that just went to peace

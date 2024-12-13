@@ -3872,6 +3872,7 @@ focus_tree = {
 			GER = { has_government = fascism }
 			NOT = { has_war_with = GER }
 			is_in_faction = no
+			is_subject = no
 		}
 		bypass = {
 			is_in_faction_with = GER
@@ -5156,6 +5157,7 @@ focus_tree = {
 
 		completion_reward = {
 			SOU = { country_event = { id = generic.2 hours = 6 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = HOL_aloof_neutrality
 		}
 	}
@@ -6930,6 +6932,7 @@ focus_tree = {
 				create_faction = BEL_european_union
 			}
 
+			set_cosmetic_tag = european_union_leader
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = BEL_the_council_of_europe_tt
 			custom_effect_tooltip = generic_skip_one_line_tt

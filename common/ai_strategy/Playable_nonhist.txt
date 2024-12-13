@@ -114,50 +114,53 @@ AST_send_boys_to_nzl = { #Makes AI send units to NZL if they have made a landing
 #=========================GENERIC, General AI==================================
 #==============================================================================
 
-# #Dont_join_against_capped_Ethiopians = { #base game includes this now, no longer needed, keeping here in case
+# Dont_join_against_capped_Ethiopians = { #NEW DLC/update has some code for this already, keeping this here just in case its ever needed
 
-# 	allowed = {
-# 		NOT = {
-# 			original_tag = ITA
+#  	allowed = {
+#  		NOT = {
+#  			original_tag = ITA
+#  		}
+#  	}
+#  	enable = {
+#  		is_in_faction_with = ITA
+#  		ITA = {
+#  			OR = {
+#  				all_enemy_country = {
+#  					OR = {
+#						is_government_in_exile = yes
+#						has_capitulated = yes
+#					}
+# 				}
+# 				has_civil_war = yes
+# 			}
 # 		}
 # 	}
-# 	enable = {
-# 		is_in_faction_with = ITA
-# 		ITA = {
-# 			OR = {
-# 				all_enemy_country = {
-# 					is_government_in_exile = yes
-# 				}
 # 	abort = {
 # 		ITA = {
-# 			any_enemy_country = {
-# 				is_government_in_exile = no
-# 				is_major = yes
-# 			}
-# 			has_civil_war = no
-# 		}
-# 	}
+#  			any_enemy_country = {
+#  				is_government_in_exile = no
+#  				is_major = yes
+#  			}
+#  			has_civil_war = no
+#  		}
+#  	}
 
 
+#  	ai_strategy = {
+#  		type = dont_join_wars_with
+#  		id = ITA
+#  		value = 2000
+#  		target_country = ETH
+#  	}
+	
 # 	ai_strategy = {
-# 		type = dont_join_wars_with
-# 		id = ITA
-# 		value = 2000
-# 		target_country = ETH
+# 		type = diplo_action_desire
+# 	    id = ITA
+# 	    value = -2000
+# 	    target = join_allies
 # 	}
-	#
-	#ai_strategy = {
-	#    type = diplo_action_desire
-#	    id = ITA
-#	    value = -2000
-#	    target = join_allies
-#	}
 
-#}			has_civil_war = yes
-#			}
-#			
-#		}
-#	}
+# }			
 	
 
 Dont_give_random_guarantees_or_alliances_to_Manchuria = { #when manchu breaks free from japan, stops fascist countries from really liking them for some reason
@@ -4798,12 +4801,19 @@ YUG_dont_join_axis_early = {
 	}
 	enable = {
 		YUG = {
-			has_completed_focus = YUG_join_axis
+			OR = {
+				has_government = fascism
+				has_completed_focus = YUG_join_axis
+			}
+			
 		}
 		any_country = {
 			has_government = fascism
 			is_major = yes
-			has_country_flag = YUG_tpt_pact_leader
+			OR = {
+				is_faction_leader = yes
+				has_country_flag = YUG_tpt_pact_leader
+			}
 		}
 	}	
 
@@ -4823,7 +4833,7 @@ YUG_dont_join_axis_early = {
 	ai_strategy = {
 		type = alliance
 		id = YUG
-		value = -100
+		value = -150
 	}
 }
 

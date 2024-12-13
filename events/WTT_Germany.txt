@@ -3292,13 +3292,32 @@ country_event = {
 		is_in_faction_with = AUS
 		AUS = {
 			is_major = no
-			is_subject = no
-		}
-		OR = {
-			AUS = { has_government = democratic }
-			AUS = { has_government = neutrality }
+			OR = {
+				is_subject = no
+				is_subject_of = GER
+			}
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
 		}
 		NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
+		if = { #The player has decided to ally Austria, not integrate them
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			OR = {
+				NOT = {
+					focus_progress = {
+						focus = GER_brothers_in_arms
+						progress > 0
+					}
+				}
+				NOT = {
+					has_completed_focus = GER_brothers_in_arms
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = { days = 60 }
@@ -3345,10 +3364,10 @@ country_event = {
 
 	# No we will remain independent
 	option = {
+		name = wtt_germany.54.b	
 		ai_chance = {
 			factor = 20
 		}
-		name = wtt_germany.54.b	
 	}
 }
 

@@ -895,7 +895,7 @@ country_event = {
 	id = DOD_romania.63
 	title = DOD_romania.63.t
 	desc = DOD_romania.63.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = [GetHitlerHandshakeEventPicture]
 	
 	is_triggered_only = yes
 	
@@ -1905,7 +1905,7 @@ country_event = {
 	id = DOD_romania.110
 	title = DOD_romania.110.t
 	desc = DOD_romania.110.desc 
-	picture = GFX_report_event_hitler_handshake
+	picture = [GetHitlerHandshakeEventPicture]
 	
 	is_triggered_only = yes
 
@@ -1989,6 +1989,13 @@ country_event = {
 				factor = 0
 			}
 			modifier = {
+				factor = 0.3
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ROOT
+				}
+			}
+			modifier = {
 				GER = {
 					is_in_faction_with = ROM
 					is_in_faction_with = HUN
@@ -1998,6 +2005,7 @@ country_event = {
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		GER = {
+			set_country_flag = GER_split_CZE_with_ROM_flag
 			transfer_state = 9
 			transfer_state = 69
 			transfer_state = 972

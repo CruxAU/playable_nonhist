@@ -711,7 +711,10 @@ GER_dont_join_gie_wars_early = {
 		is_in_faction_with = ITA
 		ITA = {
 			all_enemy_country = {
-				is_government_in_exile = yes
+				OR = {
+					is_government_in_exile = yes
+					has_capitulated = yes
+				}
 			}
 		}
 	}

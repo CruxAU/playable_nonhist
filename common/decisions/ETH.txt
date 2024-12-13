@@ -776,7 +776,11 @@ ETH_second_italo_ethiopian_war_category = {
 			base = 0
 			modifier = {
 				add = 100
-				has_country_flag = ETH_main_host_rejected_us
+				OR = {
+					has_country_flag = ETH_HOST_AI_RANDOM_ENG_PALESTINE
+					has_country_flag = ETH_HOST_AI_RANDOM_DEFAULT
+				}
+				
 			}
 			modifier = {
 				add = 200

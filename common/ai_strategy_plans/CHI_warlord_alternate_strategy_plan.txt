@@ -491,6 +491,10 @@ CHI_warlord_cooperate_with_japan = {
 		CHI_strenghten_warlord_authority
 	}
 
+	focus_factors = {
+		CHI_proclaim_rival_government = 0
+	}
+
 	research = {
 
 	}

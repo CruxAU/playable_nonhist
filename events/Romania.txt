@@ -171,17 +171,9 @@ country_event = {
 		name = romania.2.b
 		ai_chance = { 
 			factor = 50 
-			modifier = { #german Diplo path skillz
+			modifier = { #german Diplomatic skillz
 				factor = 0
-				GER = {
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE
-						}
-					}
-				}
+				is_subject_of = GER
 			}
 		}
 		HUN = {
@@ -225,7 +217,7 @@ country_event = {
 	id = romania.5
 	title = romania.5.t
 	desc = romania.5.d
-	picture = GFX_report_event_hitler_croatia_handshake
+	picture = [GetHitlerCroatianHandshakeEventPicture]
 	
 	is_triggered_only = yes
 	
@@ -259,7 +251,7 @@ country_event = {
 	id = romania.6
 	title = romania.6.t
 	desc = romania.6.d
-	picture = GFX_report_event_hitler_croatia_handshake
+	picture = GFX_report_event_generic_croatia_handshake
 	
 	trigger = {
 		has_country_flag = bessarabia_ceded

@@ -840,11 +840,16 @@ country_event = {
 			modifier = { # Eng or jap is changing ideology, done to avoid bullshittery with events in non historical
 				factor = 0
 				OR = {
+					focus_progress = {
+						focus = ENG_a_change_in_course
+						progress > 0.1
+					}
 					has_completed_focus = ENG_a_change_in_course
 					focus_progress = {
 						focus = JAP_the_unthinkable_option
 						progress > 0.1
 					}
+					has_completed_focus = JAP_the_unthinkable_option
 				}
 				
 			}

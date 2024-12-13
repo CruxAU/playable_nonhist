@@ -502,8 +502,8 @@ ideas = {
 				research_speed_factor = -0.05
 				training_time_factor = 0.1
 				communism_drift = -0.1
-				neutrality_drift = 0.02
-				fascism_drift = 0.01
+				neutrality_drift = 0.04
+				fascism_drift = 0.02
 			}
 		}
 		NHMMAP_treaty_of_harbin_2 = {
@@ -521,15 +521,16 @@ ideas = {
 			targeted_modifier = {
 				tag = JAP
 				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.05
 			}
 
 			modifier = {
-				war_support_factor = -0.05
+				war_support_factor = -0.1
 				research_speed_factor = -0.05
 				training_time_factor = 0.1
 				communism_drift = -0.1
-				neutrality_drift = 0.02
-				fascism_drift = 0.01
+				neutrality_drift = 0.08
+				fascism_drift = 0.04
 			}
 		}
 		NHMMAP_treaty_of_harbin_3 = {
@@ -547,15 +548,16 @@ ideas = {
 			targeted_modifier = {
 				tag = JAP
 				cic_to_target_factor = 0.2
+				mic_to_target_factor = 0.1
 			}
 
 			modifier = {
-				war_support_factor = -0.05
-				research_speed_factor = -0.05
+				war_support_factor = -0.1
+				research_speed_factor = -0.075
 				training_time_factor = 0.1
 				communism_drift = -0.1
-				neutrality_drift = 0.02
-				fascism_drift = 0.01
+				neutrality_drift = 0.12
+				fascism_drift = 0.06
 			}
 		}
 		NHMMAP_tired_in_the_east_SOV = {
@@ -701,6 +703,73 @@ ideas = {
 				send_volunteer_size = 1
 				justify_war_goal_time = -0.6
 				generate_wargoal_tension = -0.4
+			}
+		}
+		soviet_german_friendship_NHMMAP = {
+			allowed = {
+				always = no
+			}
+
+			picture = soviet_german_friendship
+
+			allowed_civil_war = {
+				OR = {
+					AND = {
+						tag = GER
+						has_government = fascism
+						SOV = {
+							has_government = communism
+						}
+					}
+					AND = {
+						tag = SOV
+						has_government = communism
+						GER = {
+							has_government = fascism
+						}
+					}
+				}
+			}
+
+			cancel = {
+				OR = {
+					AND = {
+						tag = GER
+						is_subject = yes
+						has_war_with = SOV
+						NOT = { is_in_faction_with = SOV }
+					}
+					AND = {
+						tag = SOV
+						is_subject = yes
+						has_war_with = GER
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						tag = GER
+						is_in_faction_with = SOV
+					}
+					GER = {
+						dismantle_faction = yes
+						create_faction = GER_axis_after_breakup
+					}
+					SOV = {
+						create_faction = SOV_comintern_after_breakup
+					}
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				custom_modifier_tooltip = GER_dimantle_faction_tt
+				communism_acceptance = 100
+				fascism_acceptance = 100
 			}
 		}
 	}

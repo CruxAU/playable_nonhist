@@ -1,0 +1,1804 @@
+# German monarchist plan (without Götterdämerrung)
+German_alternate_kaiser = {
+	name = "German Alternate plan to restore the Kaiser"
+	desc = "Wir wollen unsren Kaiser Wilhelm wiederhaben!"
+
+	allowed = {
+		original_tag = GER
+		NOT = {
+			has_dlc = "Gotterdammerung"
+		}
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_KAISER
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = KAISER
+			}
+			AND = {
+				has_game_rule = { 
+					rule = GER_ai_behavior
+					option = DEFAULT
+				}
+				has_completed_focus = GER_oppose_hitler #historical mode off, Germany picked oppose Hitler
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		GER_oppose_hitler
+		GER_secure_the_new_state
+		GER_revive_the_kaiserreich
+		GER_rebuild_the_nation
+		GER_fan_the_prussian_militarism
+		GER_return_of_the_kaiser
+		#GER_four_year_plan
+		#GER_army_innovation
+		#GER_grosraumwirtschaft
+		#GER_autarky
+		#GER_hermann_goring_werke
+		#GER_kdf_wagen
+		#GER_extra_tech_slot
+		#GER_autobahn
+		#GER_swedish_trade_agreement
+		#GER_a_new_and_better_germany
+		#GER_german_war_economy
+		#GER_bulwark_against_bolshevism
+		#GER_see_to_the_eastern_front
+		#GER_naval_rearmament
+		#GER_naval_effort
+		#GER_focus_on_the_true_enemy
+		#GER_safeguard_the_baltic
+		#GER_danzig_for_guarantees
+		#GER_rebuild_the_high_seas_fleet
+		#GER_support_the_finns
+		#GER_our_place_in_the_sun
+		#GER_the_central_powers
+		#GER_rekindle_imperial_sentiment
+		#GER_prepare_for_the_next_blockade
+		#GER_pride_of_the_modern_germany
+		#GER_break_the_anglo_french_colonial_hegemony
+		#GER_prepare_italian_coup
+		#GER_assassinate_mussolini
+		#GER_anti_comintern_pact_unaligned
+		#GER_anti_soviet_pact_unaligned
+		#GER_schlieffen_once_more
+		#GER_reinstate_imperial_possessions
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		hjalmar_schacht = 10
+		heinrich_himmler = 0
+		martin_bormann = 0
+		goering = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		GER_reich_marshal = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+# German democratic plan (without Götterdämerrung)
+German_alternate_democratic = {
+	name = "German Alternate plan to restore democracy"
+	desc = "UNITY! JUSTICE! FREEDOM!"
+
+	allowed = {
+		original_tag = GER
+		NOT = {
+			has_dlc = "Gotterdammerung"
+		}
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		GER_oppose_hitler
+		GER_secure_the_new_state
+		GER_reestablish_free_elections
+		GER_rebuild_the_nation
+		GER_fan_the_prussian_militarism
+#		GER_army_innovation
+#		GER_soviet_treaty
+#		GER_the_monarchy_compromise
+#		GER_four_year_plan
+#		GER_reverse_the_brain_drain
+#		GER_grosraumwirtschaft
+#		GER_autarky
+#		GER_hermann_goring_werke
+#		GER_kdf_wagen
+#		GER_extra_tech_slot
+#		GER_a_new_and_better_germany
+#		GER_autobahn
+#		GER_bulwark_against_bolshevism
+#		GER_the_great_red_menace
+#		GER_central_european_alliance
+#		GER_danubian_membership
+#		GER_scandinavian_membership
+#		GER_low_countries_membership
+#		GER_german_war_economy
+#		GER_swedish_trade_agreement
+#		GER_west_wall
+#		GER_no_reds_in_western_europe
+#		GER_polish_membership
+#		GER_baltic_membership
+#		GER_finnish_membership
+#		GER_danubian_expansion
+#		GER_no_balkan_communism
+#		GER_shared_rd_programs
+#		GER_pool_technical_know_how
+#		GER_air_innovation
+#		GER_ostwall
+#		GER_coal_liquidization
+#		GER_strike_at_the_source
+#		GER_tactical_air_effort
+#		GER_air_innovation_2
+#		GER_army_innovation_2
+#		GER_rocketry_focus
+#		GER_wunderwaffe
+#		GER_the_mannheim_project
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		hjalmar_schacht = 10
+		heinrich_himmler = 0
+		martin_bormann = 0
+		goering = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+		GER_reich_marshal = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+# German democratic plan (Playing with Götterdämerrung)
+German_alternate_democratic_ww = {
+	name = "German Alternate plan to restore democracy"
+	desc = "UNITY! JUSTICE! FREEDOM!"
+
+	allowed = {
+		original_tag = GER
+		has_dlc = "Gotterdammerung"
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_tend_to_the_future_of_germany # 35 AS SOON AS THE GCW IS OVER, THEN PUSH FOR CONSERVATIVE DEMOCRACY
+		GER_monarchist_sentiment # 14
+		GER_the_monarchy_compromise_ww # 35
+		GER_re_establish_free_elections_ww # 35
+
+		# 1936  
+		GER_oppose_hitler_ww # 70
+		GER_rally_the_nation # 35
+		GER_denazification_campaigns # 35
+		GER_develop_modern_maneuver_warfare # 35 Good to get durign the CW
+		GER_adopt_new_panzer_doctrine # 35 A modern Germany needs a modern doctrine
+		GER_instill_auftragstaktik # 35
+		
+		#1937
+		# It is in 1937 if the CW is over in orderly fashion, otherwise might be different, time to get the economy rolling again
+		GER_prioritize_economic_growth # 35
+		GER_strengthen_the_kriegsmarine # 35
+		GER_re_establish_the_seekriegsleitung # 35
+		GER_kdf_wagen_factories # 35
+		GER_currency_reforms # 35
+		GER_lower_taxes # 35
+		GER_housing_developments # 35
+		GER_abolish_price_controls # 35
+		
+		# 1938 
+		GER_industrial_expansion # 70
+		GER_construct_the_reichsautobahn # 35
+		GER_ban_political_uniforms # 35
+		GER_strive_for_conservative_values # 35
+		GER_strengthen_the_welfare_state # 35
+		GER_reverse_the_brain_drain_ww # 35
+		GER_realpolitik # 14
+		GER_see_to_the_eastern_front_ww # 35
+
+		# 1939
+		GER_re_ratify_the_locarno_treaty # 35
+		GER_franco_germanic_pact # 35
+		GER_mitteleuropa # 14
+		GER_danzig_for_guarantees_ww # 35
+		GER_safeguard_the_baltic_ww # 35
+		GER_offer_military_production_support # 35
+		GER_brothers_in_arms # 70
+		GER_align_czechoslovakia # 35
+
+		# 1940 
+		GER_establish_a_customs_union # 35
+		GER_sway_the_balkans # 35
+		GER_mitteleuropa_cooperation_sphere # 70
+		GER_trade_agreements # 70
+		GER_align_italy # 70
+		GER_extend_mitteleuropas_bounderies # 35
+
+		# 1941
+		GER_hold_joint_military_drills # 70
+		GER_weltpolitik # 14
+		GER_accept_british_naval_dominance_ww # 35
+		GER_democratic_shield # 70
+		GER_request_the_return_of_french_held_colonies # 70
+		GER_closer_sino_germanic_relations # 35
+		
+		# 1942
+		GER_send_military_aid # 35
+		GER_carve_up_congo # 70
+		GER_anglo_germanic_defense_pact # 70
+		GER_petition_for_the_return_of_old_colonies # 70
+		GER_extend_mitteleuropas_bounderies # 35
+
+		# 1943
+		GER_reach_out_to_scandinavia # 70
+		GER_liberate_oppressed_people # 35
+		GER_ally_white_russian_forces # 70
+		GER_build_the_eastern_bulwark # 35
+		GER_request_the_return_of_qingdao # 35
+		GER_integrated_economies # 35
+		GER_advanced_panzer_research # 70
+
+		## IT IS TIME
+		GER_strike_eastward # 70
+
+		## Now that the war has most guaranteed started they can do whatever basically
+
+		# 1944
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		goering = 0
+		GER_hans_luther = 10
+	}
+
+	traits = {
+		GER_reich_marshal = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		GER_revive_the_kaiserreich_ww = 0
+		GER_remilitarize_the_rhineland = 0
+	}
+
+}
+
+# German monarchist plan (with Götterdämerrung)
+German_alternate_kaiser = {
+	name = "German Alternate plan to restore the Kaiser"
+	desc = "Wir wollen unsren Kaiser Wilhelm wiederhaben!"
+
+	allowed = {
+		original_tag = GER
+		has_dlc = "Gotterdammerung"
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_KAISER
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = KAISER
+			}
+			AND = {
+				has_game_rule = { 
+					rule = GER_ai_behavior
+					option = DEFAULT
+				}
+				has_completed_focus = GER_oppose_hitler_ww #historical mode off, Germany picked oppose Hitler
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_tend_to_the_future_of_germany # 35 AS SOON AS THE GCW IS OVER, THEN PUSH FOR CONSERVATIVE DEMOCRACY
+		GER_monarchist_sentiment # 14
+		GER_revive_the_kaiserreich_ww # 35
+		GER_return_of_the_kaiser_ww # 14 
+		# TODO_JA and TODO_Danne: This one wants the Kaiser back, but there could be a more agressive military controlled ai strat plan as well? 
+
+		GER_develop_heraeus_facilities # 70 DO it as soon as possible plz
+
+		# 1936  
+		GER_oppose_hitler_ww # Let's get this party started!
+		GER_rally_the_nation # 35
+		GER_rebuild_the_nation_ww # 35
+		
+		#1937
+		# It is in 1937 if the CW is over in orderly fashion, otherwise might be different
+		GER_expatriate_the_communists_ww # 35 Get them out asap
+		GER_fan_prussian_militarism # 70 Get that army experience rolling
+		GER_the_four_year_plan # 35
+		GER_autarky_efforts # 35 The Kaiser loves autarky too
+		GER_institute_price_controls # 35
+		GER_establish_the_reichswerke # 35
+		GER_construct_the_reichsautobahn # 35
+		
+		# 1938 
+		GER_demand_the_return_of_southern_jutland # 70 Bully Denmark
+		GER_realpolitik # 14
+		GER_mitteleuropa # 14
+		GER_weltpolitik # 14
+		GER_the_second_naval_race # 70
+		GER_rebuild_the_high_seas_fleet_ww # 70
+		GER_kdf_wagen_factories # 35
+		GER_accelerate_the_rearmament_program # 35
+
+		# 1939
+		GER_concentrated_armament_program # 35
+		GER_establish_production_targets # 35
+		GER_develop_modern_maneuver_warfare # 35
+		GER_the_prussian_legacy # 35
+		GER_lessons_of_the_great_war # 35
+		GER_expanding_the_luftwaffe # 35
+		GER_aeronautical_research_institute # 35
+
+		# 1940 
+		GER_strengthen_the_kriegsmarine # 35
+		GER_re_establish_the_seekriegsleitung # 35
+		GER_closer_sino_germanic_relations # 35
+		GER_restore_the_brest_litovsk_borders # 35
+		GER_memel_ultimatum # 35
+		GER_restore_eastern_imperial_possessions # 70
+		GER_demand_lithuanian_integration # 70
+
+		# 1941
+		GER_demand_further_polish_concessions # 70
+		GER_support_the_finns_ww # 35
+		GER_puppet_finland # 70
+		GER_incorporate_the_polish_rump_state # 70
+		GER_the_austrian_question # 70
+		
+		# 1942
+		GER_carve_up_czechoslovakia # 70
+		GER_rekindle_imperial_sentiment_ww # 35
+		GER_the_first_berlin_award # 35
+		GER_the_second_berlin_award # 35
+		GER_re_establish_the_landwehr # 70
+		GER_glory_to_the_imperial_army # 70
+		GER_invite_scientists_back # 70
+
+		# 1943
+		GER_prussian_artillery # 70
+		GER_reject_the_locarno_treaty # 70
+		GER_break_anglo_french_colonial_hegemony_ww # 70
+		GER_expand_african_reach # 35
+		GER_schlieffen_once_more_ww # 35
+		GER_reinstate_imperial_possessions_ww # 35
+
+		## Then just whatever I suppose
+
+		# 1944
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		GER_andreas_hermes = 5
+		GER_adolf_friedrich_von_mecklenburg = 5
+		GER_walter_ulbricht = 0
+		goering = 0
+	}
+
+	traits = {
+		GER_reich_marshal = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		GER_the_monarchy_compromise_ww = 0
+		GER_remilitarize_the_rhineland = 0
+	}
+
+}
+
+
+# German stalinist plan
+German_alternate_stalinist = {
+	name = "German Alternate plan to establish a proletarian dictatorship"
+	desc = "I am the senate"
+
+	allowed = {
+		original_tag = GER
+		has_dlc = "Gotterdammerung"
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_COMMUNIST_STALINIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_the_peoples_victory # 35
+		GER_proletarian_dictatorship # 35
+		GER_develop_heraeus_facilities # 70
+		GER_zentrale_planung # 70
+
+		# 1936  
+		GER_oppose_hitler_ww # 70
+		GER_rally_the_nation # 35
+		GER_denazification_campaigns # 35
+		GER_the_four_year_plan # 35
+		GER_autarky_efforts # 35
+		GER_develop_modern_maneuver_warfare # 35
+		GER_adopt_new_panzer_doctrine # 35
+		GER_tend_to_the_future_of_germany # 14
+		GER_start_the_proletarian_revolution # 35
+		
+		#1937
+		GER_ressurect_the_red_front_fighters_league # 35
+		GER_formalize_the_intelligence_wing # 35
+		GER_political_commissars # 35
+		GER_reorganize_nationale_volksarmee # 35
+		GER_institute_price_controls # 35
+		GER_construct_the_reichsautobahn # 35
+		GER_kdf_wagen_factories # 35
+		GER_establish_the_reichswerke # 35
+		GER_accelerate_the_rearmament_program # 35
+		GER_establish_production_targets # 35
+		
+		# 1938 
+		GER_state_controlled_economy # 35
+		GER_central_planning # 35
+		GER_the_german_stakhanovite_movement # 35
+		GER_nationalize_industries # 70
+		GER_labor_rights_and_union_stuff # 35
+		GER_effectivize_the_volkswerke # 35
+
+		# 1939
+		GER_sign_the_second_treaty_of_berlin # 35
+		GER_defense_treaty_with_the_soviet # 35
+		GER_industrial_cooperation # 35
+		GER_tech_sharing # 35
+		GER_resource_trade # 35
+		GER_spheres_of_influence # 35
+		GER_womens_rights_and_equality # 35
+		GER_liberate_austria # 70
+
+		# 1940 
+		GER_spark_the_flame_of_revolution # 35
+		GER_support_the_proletarian_uprising # 35
+		GER_strengthen_the_proletarian_international # 35
+		GER_red_europe # 35
+		GER_panzer_troops_school # 35
+		GER_instill_auftragstaktik # 35
+		GER_expanding_the_luftwaffe # 35
+		GER_aeronautical_research_institute # 35
+		GER_dive_bombers # 35
+		GER_aerodynamic_research_institute # 35
+
+		# 1941
+		GER_form_the_stasi # 70
+		GER_rapid_army_expansion # 70
+		# Oh, it's warring time
+		GER_poland # 70
+		GER_czechoslovakia # 70
+		GER_hungary # 70
+		
+		# 1942
+		GER_liberate_italy # 70
+		GER_the_end_to_fascist_europe # 70
+		GER_root_out_imperialism # 70
+
+		## Then just whatever I suppose
+
+		# 1943
+
+		# 1944
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		ernst_thalmann = 8
+		GER_dietrich_bonhoeffer = 0
+		GER_hans_luther = 0.5
+		GER_adolf_friedrich_von_mecklenburg = 0
+		GER_walter_ulbricht = 10
+		hjalmar_schacht = 0
+		walther_funk = 0
+		GER_philipp_holzmann = 0
+		GER_deutsche_reichsbahn = 0
+		GER_rwe = 0
+		GER_vereinigte_stahlwerke = 0
+		ig_faben = 0
+		krupp = 0
+		siemens = 0
+	}
+
+	traits = {
+		GER_mefo_bills_architect = 0
+		construction_company = 0
+		mining_company = 0
+		conglomerate = 5
+		GER_reichswerke_conglomerate = 10
+		energy_supply_company = 0
+		GER_reich_minister_of_economy = 0
+		railway_company = 0
+		the_banker = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		base = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		GER_monarchist_sentiment = 0
+		GER_remilitarize_the_rhineland = 0
+		GER_legacy_of_the_spartacus_league = 0
+	}
+
+}
+
+# German spartacist plan
+German_alternate_spartacist = {
+	name = "German Alternate plan to establish a communist revolutionary state"
+	desc = "Javohl! Kommunismus!"
+
+	allowed = {
+		original_tag = GER
+		has_dlc = "Gotterdammerung"
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_COMMUNIST_SPARTACUS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_the_peoples_victory # 35
+		GER_legacy_of_the_spartacus_league # 35
+		GER_develop_heraeus_facilities # 70
+		GER_zentrale_planung # 70
+
+		# 1936  
+		GER_oppose_hitler_ww # 70
+		GER_rally_the_nation # 35
+		GER_denazification_campaigns # 35
+		GER_the_four_year_plan # 35
+		GER_autarky_efforts # 35
+		GER_develop_modern_maneuver_warfare # 35
+		GER_adopt_new_panzer_doctrine # 35
+		GER_tend_to_the_future_of_germany # 14
+		GER_start_the_proletarian_revolution # 35
+		
+		#1937
+		GER_ressurect_the_red_front_fighters_league # 35
+		GER_formalize_the_intelligence_wing # 35
+		GER_political_commissars # 35
+		GER_reorganize_nationale_volksarmee # 35
+		GER_institute_price_controls # 35
+		GER_construct_the_reichsautobahn # 35
+		GER_kdf_wagen_factories # 35
+		GER_establish_the_reichswerke # 35
+		GER_accelerate_the_rearmament_program # 35
+		GER_establish_production_targets # 35
+		
+		# 1938 
+		GER_social_ownership # 35
+		GER_civil_liberties # 35
+		GER_embrace_democratic_institutions # 35
+		GER_sign_the_second_treaty_of_berlin # 35
+		GER_nationalize_industries # 70
+		GER_labor_rights_and_union_stuff # 35
+		GER_expand_social_welfare # 35
+		GER_effectivize_the_volkswerke # 35
+		GER_womens_rights_and_equality # 35
+
+		# 1939
+		GER_liberate_austria # 70
+		GER_spark_the_flame_of_revolution # 35
+		GER_support_the_proletarian_uprising # 35
+		GER_protect_the_revolution # 70
+		GER_the_proletarian_legion # 35
+		GER_strengthen_the_proletarian_international # 35
+		GER_red_europe # 35
+		GER_establish_volkskommissariats # 35
+
+		# 1940 
+		GER_form_the_stasi # 70
+		GER_industrial_cooperation # 35
+		GER_effective_operations # 35
+		GER_assemble_red_orchestra # 35
+		GER_rapid_army_expansion # 70
+		GER_concentrated_armament_program # 35
+		GER_panzer_troops_school # 35
+		GER_instill_auftragstaktik # 35
+
+		# 1941
+		GER_expanding_the_luftwaffe # 35
+		GER_aeronautical_research_institute # 35
+		GER_dive_bombers # 35
+		GER_aerodynamic_research_institute # 35
+		GER_liberate_italy # 70
+		GER_root_out_imperialism # 70
+		GER_instigate_middle_eastern_revolutions # 35
+		GER_align_south_america # 35
+
+		## Then just whatever I suppose
+		
+		# 1942
+
+		# 1943
+
+		# 1944
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		ernst_thalmann = 10
+		GER_dietrich_bonhoeffer = 0
+		GER_adolf_friedrich_von_mecklenburg = 0
+		GER_walter_ulbricht = 0.5
+		GER_hans_luther = 0.5
+		GER_otto_ruhle = 10
+		hjalmar_schacht = 0
+		walther_funk = 0
+		GER_philipp_holzmann = 0
+		GER_deutsche_reichsbahn = 0
+		GER_rwe = 0
+		GER_vereinigte_stahlwerke = 0
+		ig_faben = 0
+		krupp = 0
+		siemens = 0
+	}
+
+	traits = {
+		GER_mefo_bills_architect = 0
+		construction_company = 0
+		mining_company = 0
+		conglomerate = 5
+		GER_reichswerke_conglomerate = 10
+		energy_supply_company = 0
+		GER_reich_minister_of_economy = 0
+		railway_company = 0
+		the_banker = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		base = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		GER_monarchist_sentiment = 0
+		GER_remilitarize_the_rhineland = 0
+		GER_proletarian_dictatorship = 0
+		GER_defense_treaty_with_the_soviet = 0
+	}
+
+}
+
+# German Alt-Fascist plan
+German_alternate_fascist = {
+	name = "German Alternate plan to replace the H-man with some other Nazi dude"
+	desc = "Javohl? Faschismus?"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_ALT_FASCIST
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_ALT_FASCIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_the_triumphant_will # 35
+		GER_develop_heraeus_facilities # 70
+		GER_anschluss # 70
+		GER_reintegrate_luxemburg_and_alsace_lorraine # 70
+
+		# 1936  
+		GER_expanding_the_luftwaffe # 35
+		GER_remilitarize_the_rhineland # 35
+		GER_fuhrerprinzip # 35
+		#INNER CIRCLE 1, GER_party_chancellor_bormann # 14
+		GER_the_four_year_plan # 35
+		GER_autarky_efforts # 35
+		GER_construct_the_reichsautobahn # 35
+		GER_kdf_wagen_factories # 35
+		GER_institute_price_controls # 35
+		
+		#1937
+		#INNER CIRCLE 2, GER_ascension_of_goring # 14
+		GER_heed_von_neuraths_concerns # 35
+		GER_bribe_senior_officers # 35
+		GER_autonomy_in_the_kriegsschulen # 35
+		GER_accelerate_the_rearmament_program # 35
+		GER_establish_production_targets # 35
+		#INNER CIRCLE 3, GER_ascension_of_himmler # 14
+		GER_develop_modern_maneuver_warfare # 35
+		GER_anti_comintern_pact # 35
+		GER_adopt_new_panzer_doctrine # 35
+		GER_strengthen_the_kriegsmarine # 35
+		
+		# 1938 
+		GER_advanced_panzer_research # 70
+		GER_war_preparations # 35
+		GER_reorganize_secret_services # 70
+		GER_prepare_for_the_next_blockade_ww # 70
+		GER_subversive_infiltrators # 35
+		GER_demand_sudetenland # 70
+
+		# 1939
+		GER_first_vienna_award # 35
+		GER_fate_of_czechoslovakia # 70
+		GER_reassert_eastern_claims # 35
+		GER_befriend_china # 35
+		GER_uplift_the_rosenberg_office # 35
+		GER_danzig_or_war # 70
+
+		# 1940 
+		GER_dive_bombers # 35
+		GER_combined_arms # 35 
+		GER_form_the_jagdwaffe # 35
+		GER_around_maginot # 28
+		GER_war_with_france # 70, usually bypassed
+		GER_zentrale_planung  #70
+		GER_operation_weserubung # 28
+		GER_operation_tannenbaum # 70
+
+		# 1941
+		GER_operation_sea_lion # 70
+		#GER_operation_felix # 70
+		#GER_operation_isabella # 70
+		GER_reclaim_former_african_colonies # 35
+		GER_re_establish_german_control_over_qingdao # 35
+		GER_claim_old_colonies_in_the_east # 35
+		GER_establish_the_reichswerke # 35
+		
+		# 1942
+		GER_coal_liquefaction # 35
+		GER_establish_buna_werke # 35
+		GER_war_with_the_ussr # 70
+		GER_plan_z # 70
+		GER_expand_kriegsmarinewerft #70
+		GER_high_seas_fleet # 70
+		
+
+		# 1943
+		GER_instill_auftragstaktik # 35
+		GER_panzergrenadier # 70
+		GER_panzer_troops_school # 35
+		GER_crossing_the_atlantic # 70
+		GER_challenge_the_monroe_doctrine # 35
+		GER_operation_green # 28
+
+
+		# 1944
+		GER_befriend_turkey # 35
+		GER_influence_the_middle_east # 35
+
+		### Now feel free to do whatever ###
+
+
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		hjalmar_schacht = 10
+		GER_reinhard_heydrich = 10
+	}
+
+	traits = {
+		captain_of_industry = 5
+		GER_reich_security_main_office_director_lar = 5
+		GER_reich_security_main_office_director_no_lar = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		base = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+
+	focus_factors = {
+		GER_remilitarize_the_rhineland = 1.0
+		GER_prioritize_economic_growth = 0
+		GER_the_prussian_legacy = 0
+		GER_reorganize_the_wehrmacht = 0
+		GER_oppose_hitler_ww = 0
+	}
+
+}
+
+German_alternate_fascist_ww = { #prio wonderweapons, building up slowly, late war
+	name = "German Alternate plan to replace the H-man with some other Nazi dude"
+	desc = "Javohl? Faschismus?"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_ALT_FASCIST_WW
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_ALT_FASCIST_WW
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_the_triumphant_will # 35
+		GER_anschluss # 70
+
+		# 1936  
+		GER_strengthen_the_kriegsmarine # 35
+		GER_remilitarize_the_rhineland # 35
+		GER_fuhrerprinzip # 35
+		#INNER CIRCLE 1,  # 14
+		GER_prioritize_economic_growth # 35
+		GER_currency_reforms # 35
+		GER_lower_taxes # 35
+		GER_abolish_price_controls #35
+		GER_construct_the_reichsautobahn # 35
+		GER_kdf_wagen_factories # 35
+		
+		#1937
+		GER_institute_price_controls # 35
+		GER_develop_heraeus_facilities # 70
+		#INNER CIRCLE 2, # 14
+		GER_reorganize_the_wehrmacht # 35
+		GER_anti_comintern_pact # 35
+		GER_bribe_senior_officers # 35
+		GER_army_indoctrination # 35
+		GER_industrial_expansion # 70
+		
+
+		# 1938 
+		GER_housing_developments # 35
+		GER_workers_rights # 35
+		GER_invest_in_vereinigte_stahlwerke # 70
+		GER_agricultural_reforms # 70
+		GER_wirtschaftswunder # 70
+		#INNER CIRCLE 3, GER_ascension_of_himmler # 14
+
+
+		# 1939
+		GER_develop_modern_maneuver_warfare # 35
+		GER_molotov_ribbentrop_pact # 35
+		GER_treaty_with_the_ussr # 35
+		GER_the_prussian_legacy # 35
+		GER_plan_z # 35
+		GER_improve_motorized_troops # 35
+		GER_demand_sudetenland #70
+
+		# 1940 
+		GER_install_auftragstaktik #35
+		GER_reassert_eastern_claims # 35
+		GER_befriend_japan # 35
+		GER_demand_slovenia #70
+		GER_first_ljubljana_award # 35
+		GER_first_vienna_award # 35
+		GER_fate_of_czechoslovakia # 70
+		
+		
+		# 1941
+		GER_fate_of_yugoslavia # 70
+		GER_danzig_or_war # 70
+		GER_expand_the_kriegsmarinewerft #70
+		GER_improve_the_logistics_system # 35
+		GER_panzergrenadier #70
+		GER_war_with_france # 70, usually bypassed
+		GER_around_maginot # 28
+		GER_zentrale_planung  #70
+		
+		# 1942
+		GER_influence_the_baltics #35
+		GER_uranverein # 35
+		GER_expanding_the_luftwaffe #35
+		GER_innovative_warfare #70
+		GER_lessons_of_the_great_war #35
+		GER_artillery_bombardment # 70
+		GER_form_rome_berlin_axis #35
+		
+		#1943
+		GER_alliance_with_spain #35
+		GER_japanese_naval_cooperation #70
+		GER_negotiate_old_colonies_in_the_east # 35
+		GER_grosskampfschiff_construction # 70
+		GER_form_the_jagdwaffe #35
+		GER_aeronautical_research_institute #35
+		GER_construct_aircraft_carriers #35
+		GER_high_seas_fleet # 70
+		
+
+		# 1944
+		GER_war_with_the_ussr # 70
+		GER_experimental_rotorcrafts # 35
+		GER_uplift_the_rosenberg_office # 35
+		GER_develop_the_knickebein # 35
+		GER_defense_of_the_reich # 70
+		GER_construct_the_kammhuber_line #35
+		GER_uralbomber_program # 35
+		
+		# 1945
+		GER_rocketry_innovations #35
+		GER_aerodynamic_research_institute #35
+		GER_amerikabomber #70 #sometimes unable to complete
+		GER_strafbataillon #35
+
+		### Now feel free to do whatever ###
+
+
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		base = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		GER_remilitarize_the_rhineland = 1.0
+		GER_oppose_hitler_ww = 0
+	}
+
+}
+
+German_alternate_fascist_friendly = { #prio wonderweapons, building up slowly, late war
+	name = "German Alternate plan to replace the H-man with some other Nazi dude"
+	desc = "Javohl? Faschismus?"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_ALT_FASCIST_FRIENDLY
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_ALT_FASCIST_FRIENDLY
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		GER_the_triumphant_will # 35
+		GER_develop_heraeus_facilities # 70
+		GER_anschluss # 70
+		GER_integrate_czechoslovakia # 70
+		GER_danzig_for_slovakia # 70
+		GER_influence_the_benelux #35
+		GER_befriend_poland #35
+
+		# 1936  
+		GER_expanding_the_luftwaffe # 35
+		GER_remilitarize_the_rhineland # 35
+		GER_fuhrerprinzip # 35
+		#INNER CIRCLE 1 # 14
+		GER_heed_von_neuraths_concerns # 35
+		GER_war_preparations # 35
+		GER_befriend_czechoslovakia # 70
+		GER_prioritize_economic_growth # 35
+		GER_currency_reforms # 35
+		GER_construct_the_reichsautobahn # 35
+
+		#1937
+		#INNER CIRCLE 2, # 14
+		#left empty for the asap focuses
+		
+		# 1938 
+		GER_kdf_wagen_factories # 35
+		GER_lower_taxes # 35
+		GER_trade_deal_with_sweden # 35
+		GER_abolish_price_controls # 35
+		GER_reassert_eastern_claims # 35
+		GER_influence_the_baltics # 35
+		GER_utilize_the_nordliche_gesellschaft # 35
+		#INNER CIRCLE 3, # 14
+		GER_develop_modern_maneuver_warfare # 35
+		GER_anti_comintern_pact # 35
+		GER_the_prussian_legacy # 35
+
+		# 1939
+		GER_housing_developments # 35
+		GER_industrial_expansion #70
+		GER_all_terrain_military_motorcycle # 35
+		GER_workers_rights #35
+		GER_subjugate_romanian_economy #35
+		GER_invest_in_vereinigte_stahlwerke  #70
+		GER_befriend_japan # 35
+		GER_uplift_the_rosenberg_office # 35
+
+		# 1940 
+		GER_agricultural_reforms # 70
+		GER_form_rome_berlin_axis # 35
+		GER_war_with_france # 70
+		GER_wirtschaftswunder # 70
+		GER_bribe_senior_officers # 35
+		GER_autonomy_in_the_kriegsschulen # 35
+		GER_aeronautical_research_institute #35
+		
+		# 1941
+		GER_tactical_bombers # 35 
+		GER_form_the_jagdwaffe # 35
+		GER_the_swiss_gold # 35
+		GER_alliance_with_spain # 35
+		GER_alliance_with_portugal # 35
+		GER_reclaim_former_african_colonies # 35
+		GER_negotiate_old_colonies_in_the_east # 35
+		
+		# 1942
+		GER_support_a_coup_in_liechtenstein #35
+		GER_war_with_the_ussr # 70
+		GER_befriend_turkey #35
+		GER_influence_the_middle_east #35
+		GER_improve_motorized_troops #35
+		GER_lessons_of_the_great_war #35
+		GER_artillery_bombardment # 70
+		GER_secure_finland  # 35
+		
+		# 1943
+		GER_japanese_naval_cooperation # 70
+		GER_sentinels_of_the_pacific # 35
+		GER_stormtroopers #35
+		GER_trade_interdiction #35
+		GER_instill_auftragstaktik # 35
+		GER_establish_the_skijager # 35
+		GER_panzergrenadier # 70
+		GER_improve_the_logistics_system # 35
+
+		### Now feel free to do whatever ###
+
+
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		base = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		GER_remilitarize_the_rhineland = 1.0
+		GER_oppose_hitler_ww = 0
+	}
+
+}
+
+
+German_blitz = { #prio fast wars blitzkrieg
+	name = "German alt plan"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_ALT_FASCIST_BLITZKRIEG
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_ALT_FASCIST_BLITZKRIEG
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+
+		#Focus 									#Days 	#Historical Day
+
+		GER_the_triumphant_will					#35		Do this if it's ever possible  ### ---->>>   TODO_DANE: This was 70   <<<---- ###
+		GER_anschluss							#70 	asap
+
+		#1936 									Days 	Historical Dates
+		GER_the_four_year_plan					#35 	AUG 36
+		GER_remilitarize_the_rhineland			#35 	MAR 36
+		GER_construct_the_reichsautobahn		#35
+		GER_autarky_efforts						#35
+		GER_institute_price_controls			#35
+		GER_fuhrerprinzip						#35
+		#INNER CIRCLE 1 #14
+		GER_accelerate_the_rearmament_program	#35		AUG 36
+		GER_kdf_wagen_factories					#35 	construction started in 38, but GER needs dem Civs
+
+		#1937
+		GER_develop_modern_maneuver_warfare		#35
+		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
+		GER_adopt_new_panzer_doctrine			#35 	panzerwaffe was formed in 36
+		GER_coal_liquefaction					#35
+		#INNER CIRCLE 2, GER_ascension_of_todt	#14		(whenever) 
+		GER_establish_buna_werke				#35 	(works in 36 or 37) #MOVE DOWN TO MID-LATE 38+
+		GER_concentrated_armament_program		#35
+		#INNER CIRCLE 3, GER_ascension_of_goebbels #14
+		GER_panzer_troops_school				#35 	OCT 37 (works whenever)
+		GER_molotov_ribbentrop_pact				#35 	AUG 39
+		GER_demand_sudetenland					#70 	SEP/OCT 38
+
+		#1938	
+		GER_first_vienna_award					#35 	NOV 38
+		#At some point this year Speer will replace Todt via Industrailist Intrigue Event
+		GER_develop_heraeus_facilities			#70		(whenever)
+		GER_fate_of_czechoslovakia				#70 	MAR 39
+		GER_reassert_eastern_claims				#35 	MAR 39
+		GER_danzig_or_war						#70 	MAR 39 - Germany invaded in SEP 39 (complete on AUG 31st)
+		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38
+		
+		#1939
+		GER_around_maginot #35 
+		GER_advanced_panzer_research			#70 	(needs to have  Panzer III and IV before Barbarossa)
+		GER_war_with_france #70 skipped
+		GER_establish_the_reichswerke #35 
+		GER_zentrale_planung #70 
+		GER_establish_production_targets #35 
+		GER_operation_weserubung #35 
+		GER_expand_kummersdorfs_capacity #35 
+		GER_expanding_the_luftwaffe #35 
+		
+		#1940
+		GER_aeronautical_research_institute		 #35 
+		GER_dive_bombers						#35 
+		GER_combined_arms						#35		(before Danzig or invasion of France)
+		GER_demands_to_sweden 					#35		
+		GER_form_rome_berlin_axis 	#35	
+		GER_war_with_the_ussr #70	
+		GER_form_the_jagdwaffe					#35 	(whenever)
+		GER_subsidize_hoesch_benzin				#35 	(whenever)
+		GER_demonstration_of_military_achievements #35
+
+		GER_an_invincible_army #35
+		GER_strengthen_the_kriegsmarine			#35 	(whenever)
+		GER_instill_auftragstaktik				#35 	(whenever)
+		GER_panzergrenadier						#70 	(after Danzig before Barbarossa)
+		GER_subjugate_romanian_economy			#35 	(whenever in 40)
+		GER_develop_the_knickebein				#35 	39-40
+		GER_befriend_japan						#35 	(alliance in SEP 40) #TODO_Danne is it possible to remove this?
+
+		#1941
+		GER_uplift_the_rosenberg_office			#35 	
+		GER_all_terrain_military_motorcycle		#35		JUL 40
+		GER_establish_the_skijager			#35 	MAR 41 - don't do this before Barbarossa because it will be skipped if no Axis nation fully controls a state in Africa or Asia
+		GER_trade_interdiction					#35		(whenever)
+		GER_wolfpack_tactics					#35 	JUL 40
+
+		#1942
+		GER_u_boat_efforts						#35 	in 42-43
+		GER_seize_foreign_industries			#35
+		GER_nationalize_ford_factories			#35
+		GER_rocketry_innovations				#70		in 44
+		GER_armament_rationalization			#70 	in 42
+		GER_re_establish_the_seekriegsleitung	#35		in 37
+		GER_atlantic_naval_bases				#35
+
+		#1943
+		GER_build_the_rur_dam					#70 	in 39 - can be skipped
+		GER_army_indoctrination					#35
+		GER_strafbataillon						#35
+		GER_create_rustungsstab					#70 	AUG 44
+		GER_totaler_krieg						#35		FEB 43 - but comes after Rüstingsstab in the focus tree
+		GER_aerodynamic_research_institute		#35
+
+		GER_autarky_achieved					#35		
+		
+		############## Now do whatever really ################
+
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+
+	focus_factors = {
+		GER_remilitarize_the_rhineland = 1.0
+
+		#Focuses never to take:
+		GER_oppose_hitler_ww = 0
+	}
+
+}
+
+German_expansionist = {
+	name = "German historical plan"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_ALT_FASCIST_EXP
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_ALT_FASCIST_EXP
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+
+		#Focus 									#Days 	#Historical Daye
+
+		GER_the_triumphant_will					#35		Do this if it's ever possible  ### ---->>>   TODO_DANE: This was 70   <<<---- ###
+
+		#1936 									Days 	Historical Dates
+		GER_the_four_year_plan					#35 	AUG 36
+		GER_remilitarize_the_rhineland			#35 	MAR 36
+		GER_construct_the_reichsautobahn		#35
+		GER_autarky_efforts						#35
+		GER_institute_price_controls			#35
+		GER_fuhrerprinzip						#35
+		#INNER CIRCLE 1,  #14
+		GER_accelerate_the_rearmament_program	#35		AUG 36
+		GER_kdf_wagen_factories					#35 	construction started in 38, but GER needs dem Civs
+		GER_develop_modern_maneuver_warfare		#35
+		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
+
+		#1937
+		GER_adopt_new_panzer_doctrine			#35 	panzerwaffe was formed in 36
+		GER_coal_liquefaction					#35
+		#INNER CIRCLE 2, #14		(whenever) 
+		GER_establish_buna_werke				#35 	(works in 36 or 37) #MOVE DOWN TO MID-LATE 38+
+		GER_fortify_the_vaterland				#35 	started in 36, works almost whenever
+		GER_expanding_the_luftwaffe				#35
+		GER_establish_the_reichswerke			#35 	JUL 37
+		GER_aeronautical_research_institute		#35		in 36
+		GER_concentrated_armament_program		#35
+		#INNER CIRCLE 3, GER_ascension_of_goebbels #14
+		GER_panzer_troops_school				#35 	OCT 37 (works whenever)
+
+		#1938
+		GER_heed_von_neuraths_concerns			#35 	JAN-FEB 38
+		GER_anschluss							#70 	MAR 38
+		GER_advanced_panzer_research			#70 	(needs to have  Panzer III and IV before Barbarossa)
+		GER_bribe_senior_officers				#35
+		GER_demand_slovenia						#70
+		GER_demand_sudetenland					#70 	SEP/OCT 38
+		GER_first_ljubljana_award
+		GER_first_vienna_award					#35 	NOV 38
+		#At some point this year Speer will replace Todt via Industrailist Intrigue Event
+
+		#1939
+		GER_fate_of_czechoslovakia
+		GER_fate_of_yugoslavia
+		GER_develop_heraeus_facilities			#70		(whenever)
+		GER_reassert_eastern_claims
+		GER_war_preparations
+		GER_prepare_for_the_next_blockade				#35 	AUG 39
+		GER_danzig_or_war						#70 	MAR 39 - Germany invaded in SEP 39 (complete on AUG 31st)
+		GER_dive_bombers						#35 
+		GER_combined_arms						#35		(before Danzig or invasion of France)
+		GER_form_the_jagdwaffe					#35 	(whenever)
+
+		#### TEST #TODO_TA Remove one set of these 3
+		GER_operation_weserubung 				#28 	APR 40 (mid APR)				# Remove these if uncommitting the "correct" placement
+		GER_around_maginot 						#28 	MAY 40 (mid MAY					# Remove these if uncommitting the "correct" placement	 
+		GER_war_with_france 					#70 	SEP 39 - is usually BYPASSED	# Remove these if uncommitting the "correct" placement
+
+		#1940
+		GER_operation_tannenbaum
+		GER_subsidize_hoesch_benzin				#35 	(whenever)
+		GER_defense_of_the_reich 				#70		39-45
+		GER_invade_italy
+		GER_strengthen_the_kriegsmarine			#35 	(whenever)
+		GER_instill_auftragstaktik				#35 	(whenever)
+		GER_demands_to_sweden
+		GER_panzergrenadier						#70 	(after Danzig before Barbarossa)
+		#GER_second_vienna_award				#35 	AUG/SEP 40
+		GER_subjugate_romanian_economy			#35 	(whenever in 40)
+		GER_develop_the_knickebein				#35 	39-40
+
+		#1941
+		GER_uplift_the_rosenberg_office			#35 	
+		GER_expand_kummersdorfs_capacity		#35 	
+		GER_operation_felix					#35		(whenever)
+		GER_construct_the_kammhuber_line		#35		JUL 40
+		
+		GER_operation_isabella
+		GER_influence_the_middle_east
+		GER_war_with_greece
+		GER_operation_sea_lion
+		GER_operation_green
+		GER_crossing_the_atlantic
+		GER_establish_the_afrikakorps			#35 	MAR 41 - don't do this before Barbarossa because it will be skipped if no Axis nation fully controls a state in Africa or Asia
+		GER_trade_interdiction					#35		(whenever)
+		GER_wolfpack_tactics					#35 	JUL 40
+
+		#1942
+		GER_u_boat_efforts						#35 	in 42-43
+		GER_establish_production_targets		#35
+		GER_seize_foreign_industries			#35
+		GER_nationalize_ford_factories			#35
+		GER_rocketry_innovations				#70		in 44
+		GER_zentrale_planung					#70 	in 42
+		GER_armament_rationalization			#70 	in 42
+		GER_re_establish_the_seekriegsleitung	#35		in 37
+		GER_atlantic_naval_bases				#35
+
+		#1943
+		GER_army_indoctrination					#35
+		GER_strafbataillon						#35
+		GER_create_rustungsstab					#70 	AUG 44
+		GER_totaler_krieg						#35		FEB 43 - but comes after Rüstingsstab in the focus tree
+		GER_challenge_the_monroe_doctrine
+		GER_shatter_usas_hegemony
+		GER_aerodynamic_research_institute		#35
+
+		GER_autarky_achieved					#35		
+		
+		############## Now do whatever really ################
+
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+
+	focus_factors = {
+		GER_remilitarize_the_rhineland = 1.0
+		GER_oppose_hitler_ww = 0
+	}
+
+}
+
+German_berlin_moscow = {
+	name = "German historical plan"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_ALT_FASCIST_BERLIN_MOSCOW
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = GER_ALT_FASCIST_BERLIN_MOSCOW
+			}
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			has_government = democratic
+			has_government = communism
+			OR = {
+				SOV = { exists = no }
+				SOV = { has_completed_focus = SOV_the_left_opposition }
+				SOV = {
+					AND = { 
+						is_in_faction = yes
+						is_faction_leader = no	
+						NOT = { has_government = communism } 
+					}
+				}
+			}
+			
+		}
+	}
+
+	ai_national_focuses = {
+
+		#Focus 									#Days 	#Historical Daye
+
+		GER_the_triumphant_will					#35		Do this if it's ever possible  ### ---->>>   TODO_DANE: This was 70   <<<---- ###
+
+		#1936 									Days 	Historical Dates
+		GER_the_four_year_plan					#35 	AUG 36
+		GER_remilitarize_the_rhineland			#35 	MAR 36
+		GER_construct_the_reichsautobahn		#35
+		GER_autarky_efforts						#35
+		GER_institute_price_controls			#35
+		GER_fuhrerprinzip						#35
+		#INNER CIRCLE 1, GER_party_chancellor_bormann #14
+		GER_accelerate_the_rearmament_program	#35		AUG 36
+		GER_kdf_wagen_factories					#35 	construction started in 38, but GER needs dem Civs
+		GER_develop_modern_maneuver_warfare		#35
+		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
+
+		#1937
+		GER_adopt_new_panzer_doctrine			#35 	panzerwaffe was formed in 36
+		GER_coal_liquefaction					#35
+		#INNER CIRCLE 2, GER_ascension_of_todt	#14		(whenever) 
+		GER_establish_buna_werke				#35 	(works in 36 or 37) #MOVE DOWN TO MID-LATE 38+
+		GER_fortify_the_vaterland				#35 	started in 36, works almost whenever
+		GER_expanding_the_luftwaffe				#35
+		GER_establish_the_reichswerke			#35 	JUL 37
+		GER_aeronautical_research_institute		#35		in 36
+		GER_concentrated_armament_program		#35
+		#INNER CIRCLE 3, GER_ascension_of_goebbels #14
+		GER_panzer_troops_school				#35 	OCT 37 (works whenever)
+
+		#1938
+		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38
+		GER_anschluss							#70 	MAR 38
+		GER_advanced_panzer_research			#70 	(needs to have  Panzer III and IV before Barbarossa)
+		GER_bribe_senior_officers				#35
+		GER_demand_slovenia						#70
+		GER_demand_sudetenland					#70 	SEP/OCT 38
+		GER_first_vienna_award					#35 	NOV 38
+		#At some point this year Speer will replace Todt via Industrailist Intrigue Event
+
+		#1939
+		GER_develop_heraeus_facilities			#70		(whenever)
+		
+		GER_molotov_ribbentrop_pact				#35 	AUG 39
+		GER_treaty_with_the_ussr
+		GER_fate_of_czechoslovakia				#70 	MAR 39
+		GER_alliance_with_the_ussr
+		GER_reassert_eastern_claims				#35 	MAR 39
+		GER_danzig_or_war						#70 	MAR 39 - Germany invaded in SEP 39 (complete on AUG 31st)
+		GER_dive_bombers						#35 
+		GER_combined_arms						#35		(before Danzig or invasion of France)
+		GER_form_the_jagdwaffe					#35 	(whenever)
+
+		#### TEST #TODO_TA Remove one set of these 3
+		GER_operation_weserubung 				#28 	APR 40 (mid APR)				# Remove these if uncommitting the "correct" placement
+		GER_around_maginot 						#28 	MAY 40 (mid MAY					# Remove these if uncommitting the "correct" placement	 
+		GER_war_with_france 					#70 	SEP 39 - is usually BYPASSED	# Remove these if uncommitting the "correct" placement
+
+		#1940
+		GER_subsidize_hoesch_benzin				#35 	(whenever)
+		GER_defense_of_the_reich 				#70		39-45
+		GER_strengthen_the_kriegsmarine			#35 	(whenever)
+		GER_instill_auftragstaktik				#35 	(whenever)
+		#GER_operation_weserubung				#28 	APR 40 (mid APR)
+		#GER_around_maginot						#28 	MAY 40 (mid MAY)
+		#GER_war_with_france					#70 	SEP 39 - is usually BYPASSED
+		GER_panzergrenadier						#70 	(after Danzig before Barbarossa)
+		#GER_second_vienna_award				#35 	AUG/SEP 40
+		GER_subjugate_romanian_economy			#35 	(whenever in 40)
+		GER_develop_the_knickebein				#35 	39-40
+		GER_invade_italy				
+		GER_befriend_china					#35 	(alliance in SEP 40) #TODO_Danne is it possible to remove this?
+
+		#1941
+		GER_uplift_the_rosenberg_office			#35 	
+		GER_expand_kummersdorfs_capacity		#35 	
+		GER_demands_to_sweden					#35		(whenever)
+		GER_construct_the_kammhuber_line		#35		JUL 40
+		GER_operation_tannenbaum
+		GER_puppet_turkey
+		GER_influence_the_middle_east
+		GER_war_with_greece
+		GER_operation_sea_lion
+		GER_operation_green
+		GER_crossing_the_atlantic
+		GER_establish_the_afrikakorps			#35 	MAR 41 - don't do this before Barbarossa because it will be skipped if no Axis nation fully controls a state in Africa or Asia
+		GER_trade_interdiction					#35		(whenever)
+		GER_wolfpack_tactics					#35 	JUL 40
+
+		#1942
+		GER_u_boat_efforts						#35 	in 42-43
+		GER_establish_production_targets		#35
+		GER_seize_foreign_industries			#35
+		GER_nationalize_ford_factories			#35
+		GER_rocketry_innovations				#70		in 44
+		GER_zentrale_planung					#70 	in 42
+		GER_armament_rationalization			#70 	in 42
+		GER_re_establish_the_seekriegsleitung	#35		in 37
+		GER_atlantic_naval_bases				#35
+
+		#1943
+		GER_army_indoctrination					#35
+		GER_strafbataillon						#35
+		GER_create_rustungsstab					#70 	AUG 44
+		GER_totaler_krieg						#35		FEB 43 - but comes after Rüstingsstab in the focus tree
+		GER_challenge_the_monroe_doctrine
+		GER_shatter_usas_hegemony
+		GER_aerodynamic_research_institute		#35
+		#INNER CIRCLE 4, GER_ascension_of_himmler #14 	(Replaces Bormann, historical only)
+
+		GER_autarky_achieved					#35		
+		
+		############## Now do whatever really ################
+
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		hjalmar_schacht = 10
+	}
+
+	traits = {
+		captain_of_industry = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+
+	focus_factors = {
+		GER_remilitarize_the_rhineland = 1.0
+		GER_oppose_hitler_ww = 0
+	}
+
+}

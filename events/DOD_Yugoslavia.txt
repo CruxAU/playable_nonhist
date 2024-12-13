@@ -39,7 +39,39 @@ country_event = {
 		ai_chance = {
 			factor = 70
 			modifier = {
-				has_war_with = ENG
+				OR = {
+					has_war_with = ENG
+					has_country_flag = YUG_AI_RANDOM_BIGGER_AXIS
+					has_country_flag = YUG_AI_RANDOM_BIGGER_AXIS_EXPANSION
+					has_country_flag = YUG_AI_RANDOM_SMALLER_AXIS
+					has_country_flag = YUG_AI_RANDOM_SPLIT_I_AXIS
+					has_country_flag = YUG_AI_RANDOM_SPLIT_U_AXIS
+					has_country_flag = YUG_AI_RANDOM_SPLIT_U_AXIS_EXPANSION
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = BIGGER_AXIS
+					}
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = BIGGER_AXIS_EXPANSION
+					}
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = SMALLER_AXIS
+					}
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = SPLIT_I_AXIS
+					}
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = SPLIT_U_AXIS
+					}
+					has_game_rule = {
+						rule = YUG_ai_behavior
+						option = SPLIT_U_AXIS_EXPANSION
+					}
+				}
 				factor = 0
 			}
 		}

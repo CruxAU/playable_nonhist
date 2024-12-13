@@ -4365,7 +4365,11 @@ country_event = {
 			limit = {
 				GER = { 
 					has_government = fascism
-					NOT = { is_in_faction_with = SOV }
+					OR = {
+						NOT = { is_in_faction_with = SOV }
+						SOV = { NOT = { has_government = communism} }
+					}
+					
 				}
 			}
 			GER = { country_event = { id = bftb_greece.68 days = 1 } }
@@ -4396,6 +4400,8 @@ country_event = {
 					}
 				}
 			}
+			add_political_power = -50
+			add_war_support = 0.05
 			random_other_country = {
 				limit = {
 					capital_scope = {
@@ -4407,7 +4413,7 @@ country_event = {
 						is_major = yes
 					}
 				}
-				country_event = { id = generic.2 }
+				country_event = { id = bftb_greece.68 days = 2 }
 			}
 			
 		}
@@ -5200,7 +5206,7 @@ country_event = {
 		create_country_leader = {
 			name = "Adolfos I"
 			desc = "POLITICS_ADOLFOS_I_DESC"
-			picture = GFX_portrait_Adolfos_I
+			picture = GFX_portrait_GRE_adolfos_i
 			expire = "1965.1.1"
 			ideology = gen_nazism
 			traits = {
@@ -7089,6 +7095,7 @@ country_event = {
 	
 	option = {
 		name = bftb_greece.217.a #Metaxasist monarchy
+		
 		ai_chance = { #dont choose if player chose NS rule
 			base = 1
 			modifier = {

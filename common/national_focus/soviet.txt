@@ -15575,6 +15575,19 @@ ai_will_do = {
 			JAP = { controls_state = 555 }
 			NOT = { has_war_with = JAP }
 			is_subject = no
+			NOT = {
+				has_idea = NHMMAP_treaty_of_harbin_1
+			}
+			hidden_trigger = {
+				NOT = {
+					has_idea = NHMMAP_treaty_of_harbin_2
+				}
+			}
+			hidden_trigger = {
+				NOT = {
+					has_idea = NHMMAP_treaty_of_harbin_3
+				}
+			}
 		}
 		
 		search_filters = {}

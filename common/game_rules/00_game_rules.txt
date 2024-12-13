@@ -654,6 +654,42 @@ GER_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = GER_ALT_FASCIST
+		text = "RULE_OPTION_GER_ALT_FASCIST"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GER_ALT_FASCIST_WW
+		text = "RULE_OPTION_GER_ALT_FASCIST_WW"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_WW_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GER_ALT_FASCIST_FRIENDLY
+		text = "RULE_OPTION_GER_ALT_FASCIST_FRIENDLY"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_FRIENDLY_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GER_ALT_FASCIST_BLITZKRIEG
+		text = "RULE_OPTION_GER_ALT_FASCIST_BLITZKRIEG"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_BLITZKRIEG_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GER_ALT_FASCIST_EXP
+		text = "RULE_OPTION_GER_ALT_FASCIST_EXP"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_EXP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GER_ALT_FASCIST_BERLIN_MOSCOW
+		text = "RULE_OPTION_GER_ALT_FASCIST_BERLIN_MOSCOW"
+		desc = "RULE_OPTION_GER_ALT_FASCIST_BERLIN_MOSCOW_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_DEMOCRATIC_GER_AI_DESC"
@@ -663,12 +699,6 @@ GER_ai_behavior = {
 		name = KAISER
 		text = "RULE_OPTION_KAISER"
 		desc = "RULE_KAISER_GER_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = GER_ALT_FASCIST
-		text = "RULE_OPTION_GER_ALT_FASCIST"
-		desc = "RULE_OPTION_GER_ALT_FASCIST_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -683,6 +713,69 @@ GER_ai_behavior = {
 		name = GER_COMMUNIST_SPARTACUS
 		text = "RULE_OPTION_GER_COMMUNIST_SPARTACUS"
 		desc = "RULE_OPTION_GER_COMMUNIST_SPARTACUS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+GER_ai_fuhrer = {
+	name = "GER_AI_FUHRER"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HITLER
+		text = "RULE_OPTION_FUHRER_HITLER"
+		desc = "RULE_OPTION_FUHRER_HITLER_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TODT
+		text = "RULE_OPTION_FUHRER_TODT"
+		desc = "RULE_OPTION_FUHRER_TODT_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPEER
+		text = "RULE_OPTION_FUHRER_SPEER"
+		desc = "RULE_OPTION_FUHRER_SPEER_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GORING
+		text = "RULE_OPTION_FUHRER_GORING"
+		desc = "RULE_OPTION_FUHRER_GORING_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HIMMLER
+		text = "RULE_OPTION_FUHRER_HIMMLER"
+		desc = "RULE_OPTION_FUHRER_HIMMLER_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GOEBBELS
+		text = "RULE_OPTION_FUHRER_GOEBBELS"
+		desc = "RULE_OPTION_FUHRER_GOEBBELS_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HESS
+		text = "RULE_OPTION_FUHRER_HESS"
+		desc = "RULE_OPTION_FUHRER_HESS_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BORMANN
+		text = "RULE_OPTION_FUHRER_BORMANN"
+		desc = "RULE_OPTION_FUHRER_BORMANN_GER_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
