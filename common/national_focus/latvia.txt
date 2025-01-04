@@ -2568,11 +2568,36 @@ focus_tree = {
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = form_country_estonia_required_states_tt
-					controls_state = 13
-					controls_state = 191
-					controls_state = 811
-					controls_state = 812
-					controls_state = 813
+					13 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = EST
+						}
+					}
+					191 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = EST
+						}
+					}
+					811 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = EST
+						}
+					}
+					812 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = EST
+						}
+					}
+					813 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = EST
+						}
+					}
 				}
 				EST = { has_government = fascism }
 				EST = { is_subject_of = ROOT }
@@ -2581,10 +2606,30 @@ focus_tree = {
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = form_country_lithuania_required_states_tt
-					controls_state = 11
-					controls_state = 189
-					controls_state = 814
-					controls_state = 815
+					11 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = LIT
+						}
+					}
+					189 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = LIT
+						}
+					}
+					814 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = LIT
+						}
+					}
+					815 = {
+						is_controlled_by_ROOT_or_ally = yes
+						NOT = {
+							is_controlled_by = LIT
+						}
+					}
 				}
 				LIT = { has_government = fascism }
 				LIT = { is_subject_of = ROOT }
@@ -2629,6 +2674,23 @@ focus_tree = {
 			94 = { add_core_of = ROOT }
 
 			set_cosmetic_tag = BAL_UNIFIED
+			every_state = {
+				limit = {
+					is_controlled_by_ROOT_or_ally = yes
+					OR = {
+						state = 13
+						state = 191
+						state = 811
+						state = 812
+						state = 813
+						state = 11
+						state = 189
+						state = 814
+						state = 815
+					}
+				}
+				set_state_controller_to = ROOT
+			}
 			if = { #Annexes any fascist Baltic states
 				limit = {
 					any_other_country = {

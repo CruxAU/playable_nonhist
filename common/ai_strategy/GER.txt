@@ -2200,16 +2200,17 @@ GER_spain_scw_support_la_resistance = {
 		OR = {
 			has_government = fascism
 			AND = {
-				has_government = neutrality
+				has_completed_focus = GER_revive_the_kaiserreich_ww
 				SPA = { has_completed_focus = SPA_unify_the_nationalist_front }
 			}
+			has_completed_focus = GER_military_dictatorship
 		}
 		country_exists = SPA
 	}
 	abort = {
 		OR = {
 			AND = {
-				has_government = neutrality
+				has_completed_focus = GER_return_of_the_kaiser
 				country_exists = SPB
 			}
 			NOT = { country_exists = SPA }

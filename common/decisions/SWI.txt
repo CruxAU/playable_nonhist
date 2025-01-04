@@ -935,6 +935,10 @@ SWI_federal_council_decisions_category = {
 					communism < 0.5
 				}
 			}
+			modifier = {
+				add = 500
+				SWI_AI_is_dem_exp = yes
+			}
 		}
 	}
 
@@ -990,6 +994,10 @@ SWI_federal_council_decisions_category = {
 					communism > 0.4 
 				}
 			}
+			modifier = {
+				add = 500
+				SWI_AI_is_communist = yes
+			}
 		}	
 	}
 
@@ -1028,6 +1036,10 @@ SWI_federal_council_decisions_category = {
 					communism < 0.5 
 				}
 			}
+			modifier = {
+				add = 500
+				SWI_AI_is_dem_exp = yes
+			}
 		}
 	}
 
@@ -1065,6 +1077,10 @@ SWI_federal_council_decisions_category = {
 					SWI_AI_is_fascist = no
 					communism > 0.5 
 				}
+			}
+			modifier = {
+				add = 500
+				SWI_AI_is_communist = yes
 			}
 		}
 	}
@@ -1170,6 +1186,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -1179,7 +1198,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -1196,7 +1220,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -1221,7 +1250,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -1242,7 +1276,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -1324,6 +1363,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -1333,7 +1375,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -1350,7 +1397,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -1375,7 +1427,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -1396,7 +1453,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -1479,6 +1541,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -1488,7 +1553,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -1505,7 +1575,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -1530,7 +1605,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -1551,7 +1631,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -1636,6 +1721,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -1645,7 +1733,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -1662,7 +1755,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -1687,7 +1785,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -1708,7 +1811,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -1792,6 +1900,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -1801,7 +1912,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -1818,7 +1934,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -1843,7 +1964,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -1864,7 +1990,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -1944,6 +2075,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -1953,7 +2087,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -1970,7 +2109,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -1995,7 +2139,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2016,7 +2165,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -2097,6 +2251,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -2106,7 +2263,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -2123,7 +2285,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -2148,7 +2315,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2169,7 +2341,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -2243,6 +2420,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -2252,7 +2432,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -2269,7 +2454,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -2294,7 +2484,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2315,7 +2510,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -2385,6 +2585,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -2394,7 +2597,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -2411,7 +2619,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -2436,7 +2649,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2457,7 +2675,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -2572,6 +2795,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -2581,7 +2807,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -2598,7 +2829,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -2623,7 +2859,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2644,7 +2885,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -2725,6 +2971,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -2734,7 +2983,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -2751,7 +3005,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -2776,7 +3035,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2797,7 +3061,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -2885,6 +3154,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -2894,7 +3166,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -2911,7 +3188,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -2936,7 +3218,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -2957,7 +3244,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -3071,6 +3363,9 @@ SWI_federal_council_decisions_category = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -3080,7 +3375,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -3097,7 +3397,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -3122,7 +3427,12 @@ SWI_federal_council_decisions_category = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -3143,7 +3453,12 @@ SWI_federal_council_decisions_category = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -3258,6 +3573,9 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				factor = 2
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -3275,7 +3593,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_fully_council
@@ -3285,6 +3608,9 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				SWI_AI_is_dem_allied = yes
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range < SWI_centralization_bop_fully_cantons
@@ -3293,7 +3619,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				NOT = { has_completed_focus = SWI_seek_allied_trade }
 				NOT = { has_completed_focus = SWI_ortswehren }
 				is_power_balance_in_range  = {
@@ -3306,12 +3637,20 @@ SWI_centralization_power_balance_decisions = {
 				SWI_AI_is_dem_allied = yes
 				has_completed_focus = SWI_seek_allied_trade
 				has_completed_focus = SWI_ortswehren
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 0
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range < SWI_centralization_bop_fully_cantons
@@ -3329,7 +3668,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				has_completed_focus = SWI_seek_allied_trade
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
@@ -3347,7 +3691,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_partial_neutrality = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -3515,6 +3864,9 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -3525,7 +3877,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -3542,7 +3899,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -3567,7 +3929,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -3588,7 +3955,12 @@ SWI_centralization_power_balance_decisions = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -3605,7 +3977,12 @@ SWI_centralization_power_balance_decisions = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -3673,6 +4050,9 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				factor = 2
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -3690,7 +4070,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_fully_council
@@ -3700,6 +4085,9 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				SWI_AI_is_dem_allied = yes
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range < SWI_centralization_bop_fully_cantons
@@ -3708,7 +4096,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				NOT = { has_completed_focus = SWI_seek_allied_trade }
 				NOT = { has_completed_focus = SWI_ortswehren }
 				is_power_balance_in_range  = {
@@ -3721,12 +4114,20 @@ SWI_centralization_power_balance_decisions = {
 				SWI_AI_is_dem_allied = yes
 				has_completed_focus = SWI_seek_allied_trade
 				has_completed_focus = SWI_ortswehren
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 0
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range < SWI_centralization_bop_fully_cantons
@@ -3744,7 +4145,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				has_completed_focus = SWI_seek_allied_trade
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
@@ -3762,7 +4168,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_partial_neutrality = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -3864,6 +4275,9 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = SWI_reduce_military_training_age }
+				NOT = { has_completed_focus = SWI_defend_the_skies }
+				NOT = { has_completed_focus = SWI_prolonged_service }
+				NOT = { has_completed_focus = SWI_integrate_refugees_into_the_army }
 				OR = {
 					SWI_AI_is_partial_neutrality = yes
 					SWI_AI_is_pro_allies = yes
@@ -3874,7 +4288,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_axis = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_council
@@ -3891,7 +4310,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_dem_allied = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
@@ -3916,7 +4340,12 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				SWI_AI_is_pro_allies = yes
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				is_power_balance_in_range  = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
@@ -3937,7 +4366,12 @@ SWI_centralization_power_balance_decisions = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_very_cantons
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {
@@ -3954,7 +4388,12 @@ SWI_centralization_power_balance_decisions = {
 					id = SWI_centralization_bop
 					range > SWI_centralization_bop_balanced
 				}
-				has_completed_focus = SWI_reduce_military_training_age
+				OR = {
+					has_completed_focus = SWI_reduce_military_training_age
+					has_completed_focus = SWI_defend_the_skies 
+				 	has_completed_focus = SWI_prolonged_service 
+					has_completed_focus = SWI_integrate_refugees_into_the_army
+				}
 				factor = 2
 			}
 			modifier = {

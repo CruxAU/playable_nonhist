@@ -1118,6 +1118,7 @@ FRA_spanish_intervention_category = {
 			}
 			modifier = {
 				NOT = { has_idea = FRA_political_violence }
+				has_stability > 0.5
 				factor = 25
 			}
 		}
@@ -1151,13 +1152,6 @@ FRA_spanish_intervention_category = {
 		cost = 0
 		ai_will_do = {
 			factor = 0
-			modifier = {
-				AND = {
-					has_stability < 0.55
-					has_idea = FRA_political_violence
-				}
-				add = 5
-			}
 		}
 	}
 
@@ -1166,12 +1160,13 @@ FRA_spanish_intervention_category = {
 
 		visible = { has_war = no }
 
-		targets = { SPD SPA SPB SPR }
+		targets = { SPD SPA SPB SPC SPR }
 
 		target_trigger = { 
 			FROM = {
 				original_tag = SPR
 				has_government = ROOT
+				NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
 			}
 		}
 
@@ -1223,6 +1218,22 @@ FRA_spanish_intervention_category = {
 				if = {
 					limit = { country_exists = SPA }
 					add_to_war = { targeted_alliance = SPB enemy = SPA hostility_reason = asked_to_join }
+				}
+			}
+			else_if = {
+				limit = { FROM = { tag = SPC } }
+				set_country_flag = supports_SPC_flag
+				if = {
+					limit = { country_exists = SPD }
+					add_to_war = { targeted_alliance = SPC enemy = SPD hostility_reason = asked_to_join }
+				}
+				if = {
+					limit = { country_exists = SPB }
+					add_to_war = { targeted_alliance = SPC enemy = SPB hostility_reason = asked_to_join }
+				}
+				if = {
+					limit = { country_exists = SPA }
+					add_to_war = { targeted_alliance = SPC enemy = SPA hostility_reason = asked_to_join }
 				}
 			}
 
@@ -1292,8 +1303,72 @@ FRA_spanish_intervention_category = {
 				factor = 0
 			}
 			modifier = {
-				has_stability < 0.55
+				has_stability < 0.35
 				factor = 0
+			}
+			modifier = {
+				has_completed_focus = FRA_form_the_popular_front
+				FROM = {
+					OR = {
+						tag = SPA
+						tag = SPB
+					}
+				}
+				factor = 0
+			}
+			modifier = {
+				has_stability > 0.35
+				has_completed_focus = FRA_form_the_popular_front
+				OR = {
+					NOT = {
+						has_completed_focus = FRA_invite_communist_ministers
+					}
+					AND = {
+						has_completed_focus = FRA_invite_communist_ministers
+						has_government = communism
+					}
+				}
+				FROM = {
+					OR = {
+						tag = SPD
+						tag = SPC
+					}
+				}
+				factor = 10
+			}
+			modifier = {
+				has_completed_focus = FRA_revive_the_national_bloc
+				FROM = {
+					OR = {
+						tag = SPD
+						tag = SPC
+					}
+				}
+				factor = 0
+			}
+			modifier = {
+				has_stability > 0.35
+				has_completed_focus = FRA_revive_the_national_bloc
+				OR = {
+					NOT = {
+						has_completed_focus = FRA_utilize_the_leagues
+					}
+					AND = {
+						has_completed_focus = FRA_utilize_the_leagues
+						has_government = fascism
+					}
+					AND = {
+						has_completed_focus = FRA_utilize_the_leagues
+						has_government = neutrality
+					}
+				}
+				FROM = {
+					OR = {
+						tag = SPA
+						tag = SPB
+					}
+				}
+				factor = 20
 			}
 		}
 		
@@ -1664,7 +1739,7 @@ political_actions = {
 		}
 		cost = 25
 		ai_will_do = {
-			factor = 5
+			base = 5
 			modifier = {
 				has_stability < 0.38
 				factor = 0

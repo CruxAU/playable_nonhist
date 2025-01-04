@@ -1900,8 +1900,6 @@
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
-		will_lead_to_war_with = JAP
-
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			hidden_effect = { set_variable = { MAN_independence_target = OVERLORD } } #We're using a variable here because the saved event target becomes invalidated deep in ScopedEventTarget

@@ -1234,6 +1234,12 @@ country_event = {
 		}
 
 		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_stability = 0.05
+			}
 			swap_ideas = {
 				remove_idea = GER_communist_refugees
 				add_idea = GER_communist_refugees_supressed
@@ -1270,10 +1276,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER_ALTERNATE_2
+					has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
 					has_game_rule = {
 						rule = GER_ai_behavior
-						option = KAISER_ALTERNATE_2
+						option = KAISER_BLITZKRIEG
 					}
 				}
 			}
@@ -1346,10 +1352,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER_ALTERNATE_2
+					has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
 					has_game_rule = {
 						rule = GER_ai_behavior
-						option = KAISER_ALTERNATE_2
+						option = KAISER_BLITZKRIEG
 					}
 				}
 			}
@@ -1398,10 +1404,10 @@ country_event = {
 			modifier = {
 				factor = 5
 				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER_ALTERNATE_2
+					has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
 					has_game_rule = {
 						rule = GER_ai_behavior
-						option = KAISER_ALTERNATE_2
+						option = KAISER_BLITZKRIEG
 					}
 				}
 			}

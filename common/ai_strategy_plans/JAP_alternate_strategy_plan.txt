@@ -300,50 +300,10 @@ JAP_alternate_plan_modern_shogunate = {
 				rule = JAP_ai_behavior
 				option = NEUTRALITY_SHOGUN
 			}
-			AND = {
-				has_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA
-				OR = { # soviets are looking like easy money, go faster!
-					GER = { has_country_flag = GER_AI_RANDOM_FASCIST }
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = FASCIST
-					} 
-					MAN = { has_completed_focus = MAN_obedience }
-				}
-				OR = {
-					GER = { has_country_flag = GER_AI_RANDOM_FASCIST }
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = FASCIST
-					} 
-					SOV = { has_completed_focus = SOV_the_left_opposition }
-					SOV = { has_completed_focus = SOV_the_right_opposition }
-					SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
-				}
-				OR = {
-					MAN = { has_completed_focus = MAN_obedience }
-					SOV = { has_completed_focus = SOV_the_left_opposition }
-					SOV = { has_completed_focus = SOV_the_right_opposition }
-					SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
-				}
-			}
 		}
 	}
 	abort = {
-		has_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN
-		OR = { # if two out of three are true, swap strategies to build up more! it might not be so easy to invade
-			GER = { has_completed_focus = GER_oppose_hitler }
-			MAN = { has_completed_focus = MAN_assertiveness }
-		}
-		OR = {
-			GER = { has_completed_focus = GER_oppose_hitler }
-			SOV = { has_completed_focus = SOV_the_centre }
-		}
-		OR = {
-			MAN = { has_completed_focus = MAN_assertiveness }
-			SOV = { has_completed_focus = SOV_the_centre }
-		}
-	
+
 	}
 
 	ai_national_focuses = {
@@ -437,49 +397,10 @@ JAP_alternate_plan_showa_restoration = {
 				rule = JAP_ai_behavior
 				option = NEUTRALITY_SHOWA
 			}
-			AND = {
-				has_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN
-				OR = { # if two out of three are true, swap strategies to build up more!
-					GER = { has_completed_focus = GER_oppose_hitler }
-					MAN = { has_completed_focus = MAN_assertiveness }
-				}
-				OR = {
-					GER = { has_completed_focus = GER_oppose_hitler }
-					SOV = { has_completed_focus = SOV_the_centre }
-				}
-				OR = {
-					MAN = { has_completed_focus = MAN_assertiveness }
-					SOV = { has_completed_focus = SOV_the_centre }
-				}
-			}
 		}
 	}
 	abort = {
-		has_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA
-		OR = { # soviets are looking like easy money, go faster!
-			GER = { has_country_flag = GER_AI_RANDOM_FASCIST }
-			has_game_rule = {
-				rule = GER_ai_behavior
-				option = FASCIST
-			} 
-			MAN = { has_completed_focus = MAN_obedience }
-		}
-		OR = {
-			GER = { has_country_flag = GER_AI_RANDOM_FASCIST }
-			has_game_rule = {
-				rule = GER_ai_behavior
-				option = FASCIST
-			} 
-			SOV = { has_completed_focus = SOV_the_left_opposition }
-			SOV = { has_completed_focus = SOV_the_right_opposition }
-			SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
-		}
-		OR = {
-			MAN = { has_completed_focus = MAN_obedience }
-			SOV = { has_completed_focus = SOV_the_left_opposition }
-			SOV = { has_completed_focus = SOV_the_right_opposition }
-			SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
-		}
+
 	}
 
 	ai_national_focuses = {

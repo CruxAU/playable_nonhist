@@ -885,6 +885,10 @@ MAN_war_preparations = {
 		cost = 25
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 5
+				has_war_with = JAP
+			}
 		}
 		complete_effect = {
 			division_template = {

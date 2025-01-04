@@ -24,10 +24,10 @@ German_historical = {
 			}
 			AND = {
 				OR = {
-					has_country_flag = GER_AI_RANDOM_ALT_FASCIST_BERLIN_MOSCOW
+					has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
 					has_game_rule = {
 						rule = GER_ai_behavior
-						option = GER_ALT_FASCIST_BERLIN_MOSCOW
+						option = FASCIST_BERLIN_MOSCOW
 					}
 				}
 				OR = {

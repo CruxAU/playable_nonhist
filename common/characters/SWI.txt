@@ -2054,12 +2054,11 @@ characters={
 			ai_will_do = {
 				base = 2000
 				modifier = {
-					factor = 7
-					SWI_AI_is_dem_allied = yes
-				}
-				modifier = {
 					factor = 3
-					SWI_AI_is_communist = yes
+					OR = {
+						SWI_AI_is_dem_allied = yes
+						SWI_AI_is_communist = yes
+					}
 				}
 				modifier = {
 					factor = 0.1
@@ -2162,10 +2161,6 @@ characters={
 
 			ai_will_do = {
 				base = 2000
-				modifier = {
-					factor = 1.5
-					SWI_AI_is_dem_allied = yes 
-				}
 				modifier = {
 					factor = 7
 					SWI_AI_is_communist = yes
@@ -2785,14 +2780,6 @@ characters={
 			
 			ai_will_do = {
 				base = 2000
-				modifier = {
-					factor = 2 
-					OR = {
-						SWI_AI_is_dem_allied = yes
-						SWI_AI_is_dem_exp = yes
-						SWI_AI_is_pro_allies = yes
-					}
-				}
 				modifier = {
 					factor = 7
 					SWI_AI_is_communist = yes

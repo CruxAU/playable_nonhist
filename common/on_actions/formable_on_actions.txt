@@ -2958,9 +2958,20 @@ on_actions = {
 						ideology = neutrality
 						popularity = 0.6
 					}
-					complete_national_focus = GER_secure_the_new_state
-					complete_national_focus = GER_revive_the_kaiserreich
-					complete_national_focus = GER_return_of_the_kaiser
+					if = {
+						limit = {
+							has_dlc = "Gotterdammerung"
+						}
+						complete_national_focus = GER_oppose_hitler_ww
+						complete_national_focus = GER_tend_to_the_future_of_germany
+						complete_national_focus = GER_monarchist_sentiment
+						complete_national_focus = GER_revive_the_kaiserreich_ww
+					}
+					else = {
+						complete_national_focus = GER_secure_the_new_state
+						complete_national_focus = GER_revive_the_kaiserreich
+						complete_national_focus = GER_return_of_the_kaiser
+					}
 					add_ideas = GER_hans_oster
 					set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 					dismantle_faction = yes
@@ -3040,9 +3051,20 @@ on_actions = {
 						ideology = neutrality
 						popularity = 0.6
 					}
-					complete_national_focus = GER_secure_the_new_state
-					complete_national_focus = GER_revive_the_kaiserreich
-					complete_national_focus = GER_return_of_the_kaiser
+					if = {
+						limit = {
+							has_dlc = "Gotterdammerung"
+						}
+						complete_national_focus = GER_oppose_hitler_ww
+						complete_national_focus = GER_tend_to_the_future_of_germany
+						complete_national_focus = GER_monarchist_sentiment
+						complete_national_focus = GER_revive_the_kaiserreich_ww
+					}
+					else = {
+						complete_national_focus = GER_secure_the_new_state
+						complete_national_focus = GER_revive_the_kaiserreich
+						complete_national_focus = GER_return_of_the_kaiser
+					}
 					add_ideas = GER_hans_oster
 					set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 					dismantle_faction = yes
@@ -3235,9 +3257,20 @@ on_actions = {
 						ideology = neutrality
 						popularity = 0.6
 					}
-					complete_national_focus = GER_secure_the_new_state
-					complete_national_focus = GER_revive_the_kaiserreich
-					complete_national_focus = GER_return_of_the_kaiser
+					if = {
+						limit = {
+							has_dlc = "Gotterdammerung"
+						}
+						complete_national_focus = GER_oppose_hitler_ww
+						complete_national_focus = GER_tend_to_the_future_of_germany
+						complete_national_focus = GER_monarchist_sentiment
+						complete_national_focus = GER_revive_the_kaiserreich_ww
+					}
+					else = {
+						complete_national_focus = GER_secure_the_new_state
+						complete_national_focus = GER_revive_the_kaiserreich
+						complete_national_focus = GER_return_of_the_kaiser
+					}
 					add_ideas = GER_hans_oster
 					set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 					set_cosmetic_tag = HRE_UNIFIED
@@ -3353,9 +3386,20 @@ on_actions = {
 						ideology = neutrality
 						popularity = 0.6
 					}
-					complete_national_focus = GER_secure_the_new_state
-					complete_national_focus = GER_revive_the_kaiserreich
-					complete_national_focus = GER_return_of_the_kaiser
+					if = {
+						limit = {
+							has_dlc = "Gotterdammerung"
+						}
+						complete_national_focus = GER_oppose_hitler_ww
+						complete_national_focus = GER_tend_to_the_future_of_germany
+						complete_national_focus = GER_monarchist_sentiment
+						complete_national_focus = GER_revive_the_kaiserreich_ww
+					}
+					else = {
+						complete_national_focus = GER_secure_the_new_state
+						complete_national_focus = GER_revive_the_kaiserreich
+						complete_national_focus = GER_return_of_the_kaiser
+					}
 					add_ideas = GER_hans_oster
 					set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 					set_cosmetic_tag = HRE_UNIFIED
@@ -3468,9 +3512,20 @@ on_actions = {
 							}
 						}
 						load_focus_tree = german_focus
-						complete_national_focus = GER_secure_the_new_state
-						complete_national_focus = GER_revive_the_kaiserreich
-						complete_national_focus = GER_return_of_the_kaiser
+						if = {
+							limit = {
+								has_dlc = "Gotterdammerung"
+							}
+							complete_national_focus = GER_oppose_hitler_ww
+							complete_national_focus = GER_tend_to_the_future_of_germany
+							complete_national_focus = GER_monarchist_sentiment
+							complete_national_focus = GER_revive_the_kaiserreich_ww
+						}
+						else = {
+							complete_national_focus = GER_secure_the_new_state
+							complete_national_focus = GER_revive_the_kaiserreich
+							complete_national_focus = GER_return_of_the_kaiser
+						}
 						set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 						drop_cosmetic_tag = yes
 					}
@@ -3713,9 +3768,20 @@ on_actions = {
 							}
 						}
 						load_focus_tree = german_focus
-						complete_national_focus = GER_secure_the_new_state
-						complete_national_focus = GER_revive_the_kaiserreich
-						complete_national_focus = GER_return_of_the_kaiser
+						if = {
+							limit = {
+								has_dlc = "Gotterdammerung"
+							}
+							complete_national_focus = GER_oppose_hitler_ww
+							complete_national_focus = GER_tend_to_the_future_of_germany
+							complete_national_focus = GER_monarchist_sentiment
+							complete_national_focus = GER_revive_the_kaiserreich_ww
+						}
+						else = {
+							complete_national_focus = GER_secure_the_new_state
+							complete_national_focus = GER_revive_the_kaiserreich
+							complete_national_focus = GER_return_of_the_kaiser
+						}
 						set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 						drop_cosmetic_tag = yes
 					}

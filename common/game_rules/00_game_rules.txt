@@ -637,6 +637,36 @@ NONHIST_ai_behavior = {
 		desc = "RULE_OPTION_NO_AI_STRATEGY_NONHIST_AI_DESC"
 		allow_achievements = yes
 	}
+	option = { #AI will only pick fascist paths if they exist (new world order)
+		name = FASCIST_ONLY  
+		text = "RULE_OPTION_FASCIST_ONLY"
+		desc = "RULE_OPTION_FASCIST_ONLY_NONHIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = { #AI will only pick communist paths if they exist (global revolution)
+		name = COMMUNIST_ONLY  
+		text = "RULE_OPTION_COMMUNIST_ONLY"
+		desc = "RULE_OPTION_COMMUNIST_ONLY_NONHIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = { #AI will only pick democratic paths if they exist (end of history)
+		name = DEMOCRATIC_ONLY  
+		text = "RULE_OPTION_DEMOCRATIC_ONLY"
+		desc = "RULE_OPTION_DEMOCRATIC_ONLY_NONHIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = { #AI will only pick monarchist paths if they exist (jus divinum regum)
+		name = MONARCHIST_ONLY  
+		text = "RULE_OPTION_MONARCHIST_ONLY"
+		desc = "RULE_OPTION_MONARCHIST_ONLY_NONHIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = { #AI will only pick oligarchic or authoritarian paths if they exist (The Century of the State)
+		name = AUTHORITARIAN_ONLY  
+		text = "RULE_OPTION_AUTHORITARIAN_ONLY"
+		desc = "RULE_OPTION_AUTHORITARIAN_ONLY_NONHIST_AI_DESC"
+		allow_achievements = yes
+	}
 }
 
 GER_ai_behavior = {
@@ -649,7 +679,7 @@ GER_ai_behavior = {
 	}
 	option = {
 		name = FASCIST
-		text = "RULE_OPTION_FASCIST"
+		text = "RULE_OPTION_FASCIST_HISTORICAL"
 		desc = "RULE_OPTION_FASCIST_GER_AI_DESC"
 		allow_achievements = yes
 	}
@@ -684,15 +714,35 @@ GER_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = GER_ALT_FASCIST_BERLIN_MOSCOW
-		text = "RULE_OPTION_GER_ALT_FASCIST_BERLIN_MOSCOW"
-		desc = "RULE_OPTION_GER_ALT_FASCIST_BERLIN_MOSCOW_AI_DESC"
+		name = FASCIST_BERLIN_MOSCOW
+		text = "RULE_OPTION_FASCIST_BERLIN_MOSCOW"
+		desc = "RULE_OPTION_FASCIST_BERLIN_MOSCOW_GER_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = DEMOCRATIC
-		text = "RULE_OPTION_DEMOCRATIC"
+		name = DEMOCRATIC #without Gotterdammerung this doesnt do all the allies, just necessary ones
+		text = "RULE_OPTION_DEMOCRATIC_C"
 		desc = "RULE_DEMOCRATIC_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = DEMOCRATIC_EXP
+		text = "RULE_OPTION_DEMOCRATIC_EXP"
+		desc = "RULE_DEMOCRATIC_EXP_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_DIPLO #without Gotterdammerung this rushes the allies
+		text = "RULE_OPTION_DEMOCRATIC_L"
+		desc = "RULE_DEMOCRATIC_DIPLO_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = DEMOCRATIC_COLONIAL
+		text = "RULE_OPTION_DEMOCRATIC_COLONIAL"
+		desc = "RULE_DEMOCRATIC_COLONIAL_GER_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -703,9 +753,69 @@ GER_ai_behavior = {
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
+		name = KAISER_ALT
+		text = "RULE_OPTION_KAISER_ALT"
+		desc = "RULE_KAISER_ALT_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = KAISER_DIPLO
+		text = "RULE_OPTION_KAISER_DIPLO"
+		desc = "RULE_KAISER_DIPLO_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KAISER_CHINA_ALLY
+		text = "RULE_OPTION_KAISER_CHINA_ALLY"
+		desc = "RULE_KAISER_CHINA_ALLY_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = KAISER_EXP
+		text = "RULE_OPTION_KAISER_EXP"
+		desc = "RULE_KAISER_EXP_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KAISER_BLITZKRIEG #without Gotterdammerung this option invites nazis back, but dont include that in the description
+		text = "RULE_OPTION_KAISER_BLITZKRIEG"
+		desc = "RULE_KAISER_BLITZKRIEG_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KAISER_ENG_ALLY
+		text = "RULE_OPTION_KAISER_ENG_ALLY"
+		desc = "RULE_KAISER_ENG_ALLY_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
 		name = GER_COMMUNIST_STALINIST
 		text = "RULE_OPTION_GER_COMMUNIST_STALINIST"
 		desc = "RULE_OPTION_GER_COMMUNIST_STALINIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = GER_COMMUNIST_STALINIST_SPHERES
+		text = "RULE_OPTION_GER_COMMUNIST_STALINIST_SPHERES"
+		desc = "RULE_OPTION_GER_COMMUNIST_STALINIST_SPHERES_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = GER_COMMUNIST_STALINIST_EXP
+		text = "RULE_OPTION_GER_COMMUNIST_STALINIST_EXP"
+		desc = "RULE_OPTION_GER_COMMUNIST_STALINIST_EXP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = GER_COMMUNIST_SPARTACUS_NEU
+		text = "RULE_OPTION_GER_COMMUNIST_SPARTACUS_NEU"
+		desc = "RULE_OPTION_GER_COMMUNIST_SPARTACUS_NEU_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2035,30 +2145,17 @@ HUN_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COMMUNIST
-		text = "RULE_OPTION_HUN_COMMUNIST_STALINISM"
-		desc = "RULE_OPTION_COMMUNIST_HUN_AI_DESC"
-	}
-	option = {
-		name = AUSTRIA_HUNGARY
-		text = "RULE_OPTION_AUSTRIA_HUNGARY"
-		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HUN_AI_DESC"
+		name = HORTHY_NEU #dont try to join axis or rome pact
+		text = "RULE_OPTION_HUN_HORTHY_NEU"
+		desc = "RULE_OPTION_HUN_HORTHY_NEU_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
-		name = HABSBURG_HUNGARY
-		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY"
-		desc = "RULE_HABSBURG_HUNGARY_HUN_AI_DESC"
-	}
-	option = {
-		name = DEMOCRATIC
-		text = "RULE_OPTION_HUN_DEMOCRATIC_KING"
-		desc = "RULE_OPTION_DEMOCRATIC_HUN_AI_DESC"
-	}
-	option = {
-		name = FASCIST_ALTERNATE
-		text = "RULE_OPTION_HUN_ROME_PROTOCOLS"
-		desc = "RULE_FASCIST_ALTERNATE_HUN_AI_DESC"
+		name = HORTHY_NEU_AGGR #dont try to join axis or rome pact
+		text = "RULE_OPTION_HUN_HORTHY_NEU_AGGR"
+		desc = "RULE_OPTION_HUN_HORTHY_NEU_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_HISTORICAL
@@ -2067,44 +2164,342 @@ HUN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = FASCIST_KING
+		required_dlc = "Gotterdammerung"
+		name = HORTHY_AXIS_ALT
+		text = "RULE_OPTION_HUN_HORTHY_AXIS_ALT"
+		desc = "RULE_OPTION_HUN_HORTHY_AXIS_ALT_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HORTHY_ROME
+		text = "RULE_OPTION_HUN_HORTHY_ROME"
+		desc = "RULE_OPTION_HUN_HORTHY_ROME_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHY_ROME_ALT
+		text = "RULE_OPTION_HUN_HORTHY_ROME_ALT"
+		desc = "RULE_OPTION_HUN_HORTHY_ROME_ALT_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_NEU
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_NEU"
+		desc = "RULE_ARROW_CROSS_MOVEMENT_NEU_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = { #EXP
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT #EXP
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT" #EXP
+		desc = "RULE_ARROW_CROSS_MOVEMENT_HUN_AI_DESC" #EXP
+		allow_achievements = yes #EXP
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_NEU_ANTI_COMMUNIST
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_NEU_ANTI_COMMUNIST"
+		desc = "RULE_ARROW_CROSS_MOVEMENT_NEU_ANTI_COMMUNIST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = { 
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_AXIS
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_AXIS" 
+		desc = "RULE_ARROW_CROSS_MOVEMENT_AXIS_HUN_AI_DESC" 
+		allow_achievements = yes 
+	}
+	option = { 
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_AXIS_EXP
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_AXIS_EXP" 
+		desc = "RULE_ARROW_CROSS_MOVEMENT_AXIS_EXP_HUN_AI_DESC" 
+		allow_achievements = yes 
+	}
+	option = { 
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_AXIS_ANTI_COMMUNIST
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_AXIS_ANTI_COMMUNIST" 
+		desc = "RULE_ARROW_CROSS_MOVEMENT_AXIS_ANTI_COMMUNIST_HUN_AI_DESC" 
+		allow_achievements = yes 
+	}
+	option = { 
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_ROME
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_ROME" 
+		desc = "RULE_ARROW_CROSS_MOVEMENT_ROME_HUN_AI_DESC" 
+		allow_achievements = yes 
+	}
+	option = { 
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_ROME_EXP
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_ROME_EXP" 
+		desc = "RULE_ARROW_CROSS_MOVEMENT_ROME_EXP_HUN_AI_DESC" 
+		allow_achievements = yes 
+	}
+	option = { 
+		required_dlc = "Gotterdammerung"
+		name = ARROW_CROSS_MOVEMENT_ROME_ANTI_COMMUNIST
+		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT_ROME_ANTI_COMMUNIST" 
+		desc = "RULE_ARROW_CROSS_MOVEMENT_ROME_ANTI_COMMUNIST_HUN_AI_DESC" 
+		allow_achievements = yes 
+	}
+	option = {
+		name = FASCIST_KING #NEUTRAL PEACEFUL
 		text = "RULE_OPTION_HUN_FASCIST_KING"
 		desc = "RULE_FASCIST_ALTERNATE_KING_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = FASCIST_KING_ALT #NEUTRAL AGGRO
+		text = "RULE_OPTION_HUN_FASCIST_KING_ALT"
+		desc = "RULE_FASCIST_ALTERNATE_KING_ALT_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FASCIST_KING_AXIS #AXIS PEACEFUL
+		text = "RULE_OPTION_HUN_FASCIST_KING_AXIS"
+		desc = "RULE_FASCIST_ALTERNATE_KING_AXIS_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = FASCIST_KING_AXIS_ALT #AXIS AGGRO
+		text = "RULE_OPTION_HUN_FASCIST_KING_AXIS_ALT"
+		desc = "RULE_FASCIST_ALTERNATE_KING_AXIS_ALT_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FASCIST_KING_ROME #ROME PEACEFUL
+		text = "RULE_OPTION_HUN_FASCIST_KING_ROME"
+		desc = "RULE_FASCIST_ALTERNATE_KING_ROME_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = FASCIST_KING_ROME_ALT #ROME AGGRO
+		text = "RULE_OPTION_HUN_FASCIST_KING_ROME_ALT"
+		desc = "RULE_FASCIST_ALTERNATE_KING_ROME_ALT_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
 		name = HORTHYIST_KING_HUNGARY
 		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY"
 		desc = "RULE_HORTHYIST_KING_HUNGARY_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY_FAST
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY_FAST"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_FAST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY_ANTI_COMMUNIST
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY_ANTI_COMMUNIST"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_ANTI_COMMUNIST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY_ALT
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY_ALT"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_ALT_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY_ALLIES
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY_ALLIES"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_ALLIES_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY_ALLIES_FAST
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY_ALLIES_FAST"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_ALLIES_FAST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HORTHYIST_KING_HUNGARY_ALLIES_ANTI_COMMUNISM
+		text = "RULE_OPTION_HUN_HORTHYIST_KING_HUNGARY_ALLIES_ANTI_COMMUNISM"
+		desc = "RULE_HORTHYIST_KING_HUNGARY_ALLIES_ANTI_COMMUNISM_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC
+		text = "RULE_OPTION_HUN_DEMOCRATIC_KING"
+		desc = "RULE_OPTION_DEMOCRATIC_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_ALLIES
+		text = "RULE_OPTION_HUN_DEMOCRATIC_KING_ALLIES"
+		desc = "RULE_OPTION_DEMOCRATIC_ALLIES_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_BALKAN
+		text = "RULE_OPTION_HUN_DEMOCRATIC_KING_BALKAN"
+		desc = "RULE_OPTION_DEMOCRATIC_BALKAN_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = AUSTRIA_HUNGARY #Central powers
+		text = "RULE_OPTION_AUSTRIA_HUNGARY"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_CP_AGGR
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_CP_AGGR"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_CP_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_ALLIES
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_ALLIES"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_ALLIES_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_ALLIES_AGGR
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_ALLIES_AGGR"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_ALLIES_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_HB
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_HB"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HB_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_HB_AGGR
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_HB_AGGR"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HB_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_NEU_AGGR
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_NEU_AGGR"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_NEU_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HABSBURG_HUNGARY
+		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY"
+		desc = "RULE_HABSBURG_HUNGARY_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HABSBURG_HUNGARY_FAST
+		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY_FAST"
+		desc = "RULE_HABSBURG_HUNGARY_FAST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HABSBURG_HUNGARY_ANTI_COMMUNIST
+		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY_ANTI_COMMUNIST"
+		desc = "RULE_HABSBURG_HUNGARY_ANTI_COMMUNIST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = HABSBURG_HUNGARY_ALT
+		text = "RULE_OPTION_HUN_HABSBURG_HUNGARY_ALT"
+		desc = "RULE_HABSBURG_HUNGARY_ALT_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = REPUBLICAN_DEMOCRACY_NEU
+		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY_NEU"
+		desc = "RULE_REPUBLICAN_DEMOCRACY_NEU_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
 		name = REPUBLICAN_DEMOCRACY
 		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY"
 		desc = "RULE_REPUBLICAN_DEMOCRACY_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = REPUBLICAN_DEMOCRACY_AGGR
+		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY_AGGR"
+		desc = "RULE_REPUBLICAN_DEMOCRACY_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
 		name = REPUBLICAN_DEMOCRACY_EXPANSIONIST
 		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY_EXPANSIONIST"
 		desc = "RULE_REPUBLICAN_DEMOCRACY_EXPANSIONIST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = REPUBLICAN_DEMOCRACY_EXPANSIONIST_FAST
+		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY_EXPANSIONIST_FAST"
+		desc = "RULE_REPUBLICAN_DEMOCRACY_EXPANSIONIST_FAST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Gotterdammerung"
+		name = REPUBLICAN_DEMOCRACY_EXPANSIONIST_AGGR
+		text = "RULE_OPTION_HUN_REPUBLICAN_DEMOCRACY_EXPANSIONIST_AGGR"
+		desc = "RULE_REPUBLICAN_DEMOCRACY_EXPANSIONIST_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST
+		text = "RULE_OPTION_HUN_COMMUNIST_STALINISM"
+		desc = "RULE_OPTION_COMMUNIST_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST_AGGR
+		text = "RULE_OPTION_HUN_COMMUNIST_STALINISM_AGGR"
+		desc = "RULE_OPTION_COMMUNIST_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RESTORE_THE_SOCIALIST_REPUBLIC_NEU
+		text = "RULE_OPTION_HUN_RESTORE_THE_SOCIALIST_REPUBLIC_NEU"
+		desc = "RULE_RESTORE_THE_SOCIALIST_REPUBLIC_NEU_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Gotterdammerung"
 		name = RESTORE_THE_SOCIALIST_REPUBLIC
 		text = "RULE_OPTION_HUN_RESTORE_THE_SOCIALIST_REPUBLIC"
 		desc = "RULE_RESTORE_THE_SOCIALIST_REPUBLIC_HUN_AI_DESC"
-	}
-	option = {
-		required_dlc = "Gotterdammerung"
-		name = ARROW_CROSS_MOVEMENT
-		text = "RULE_OPTION_HUN_ARROW_CROSS_MOVEMENT"
-		desc = "RULE_ARROW_CROSS_MOVEMENT_HUN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 

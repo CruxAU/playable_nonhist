@@ -1154,8 +1154,8 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = {
-				# localization_key = building_state_modifier|dam
-				# INDENT = "    "
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
 			}
 		}
 	}
@@ -8080,6 +8080,13 @@ focus_tree = {
 					}
 					mark_focus_tree_layout_dirty = yes
 				}
+				if = {
+					limit = {
+						is_historical_focus_on = no
+						is_ai = yes
+					}
+					add_to_variable = { GER_change_monthly_CG_price_controls = 0.005 } #NHMMAP
+				}
 			}
 
 		}
@@ -12510,7 +12517,14 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_war_with = ENG
+			OR = {
+				has_war_with = ENG
+				ENG = {
+					NOT = {
+						has_government = neutrality
+					}
+				}
+			}
 			has_army_manpower = { size > 999999 }
 			custom_trigger_tooltip = {
 			 	tooltip = GER_sea_lion_eq_trigger_tt
@@ -12531,6 +12545,17 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = ENG
+					}
+				}
+				declare_war_on = {
+					type = topple_government
+					target = ENG
+				}
+			}
 			add_timed_idea = {
 				idea = GER_operation_sea_lion_ns
 				days = 180
@@ -14341,6 +14366,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			has_army_manpower = { size > 1099999 }
 		}
 
 		cancel = {
@@ -17303,7 +17329,7 @@ focus_tree = {
 			OR = {
 				AND = {
 					NOT = { country_exists = JAP }
-					NOT = { JAP = { has_government = communsim } }
+					JAP = { NOT = { has_government = communsim } }
 				}
 				AND = {
 					NOT = { country_exists = MAN }
@@ -21345,6 +21371,14 @@ focus_tree = {
 					   value = 2000
 					}
 				}
+				clr_country_flag = GER_AI_FUHRER_RANDOM_HITLER
+				clr_country_flag = GER_AI_FUHRER_RANDOM_BORMANN
+				clr_country_flag = GER_AI_FUHRER_RANDOM_GOEBBELS 
+				clr_country_flag = GER_AI_FUHRER_RANDOM_GORING 
+				clr_country_flag = GER_AI_FUHRER_RANDOM_HESS 
+				clr_country_flag = GER_AI_FUHRER_RANDOM_HIMMLER 
+				clr_country_flag = GER_AI_FUHRER_RANDOM_SPEER
+				clr_country_flag = GER_AI_FUHRER_RANDOM_TODT
 			}
 
 			42 = { set_demilitarized_zone = no }
@@ -21378,6 +21412,13 @@ focus_tree = {
 						}
 					}
 					mark_focus_tree_layout_dirty = yes
+				}
+				if = {
+					limit = {
+						is_historical_focus_on = no
+						is_ai = yes
+					}
+					add_to_variable = { GER_change_monthly_CG_price_controls = 0.005 } #NHMMAP
 				}
 			}
 
@@ -23241,6 +23282,7 @@ focus_tree = {
 				else_if = {
 					limit = {
 						is_faction_leader = no
+						is_in_faction_with = ROOT
 					}
 					ROOT = { leave_faction = yes }
 				}
@@ -24938,10 +24980,6 @@ focus_tree = {
 					has_government = democratic
 					has_government = communism
 				}
-				has_volunteers_amount_from = {
-					tag = ROOT
-					count > 1
-				}
 			}	
 		}
 
@@ -25006,10 +25044,6 @@ focus_tree = {
 			PRC = { 
 				exists = yes
 				is_subject = no
-				has_volunteers_amount_from = {
-					tag = ROOT
-					count > 1
-				}
 			}
 		}
 
@@ -26328,11 +26362,16 @@ focus_tree = {
 					has_government = fascism
 				}
 			}
-			FRA = {
-				has_opinion = {
-					target = ROOT
-					value > 50
-				}	
+			if = {
+				limit = {
+					is_ai = no
+				}
+				FRA = {
+					has_opinion = {
+						target = ROOT
+						value > 50
+					}	
+				}
 			}
 			any_state = {
 				is_owned_and_controlled_by = FRA
@@ -27915,7 +27954,7 @@ focus_tree = {
 			}
 			OR = {
 				is_in_faction_with = AUS
-				is_in_faction_with = HUN
+				is_in_faction_with = HUN #NHMMAP TODO, check if HUN or AUS is potential ally, if they are in faction already or not.
 			}
 		}
 
@@ -32149,7 +32188,13 @@ focus_tree = {
 		relative_position_id = GER_accept_british_naval_dominance_ww
 		cost = 10
 		available = {
-			has_added_tension_amount > 4
+			if = {
+				limit = {
+					is_ai = no
+				}
+				has_added_tension_amount > 4
+			}
+			
 			has_added_tension_amount < 25
 			NOT = {
 				has_war_with = ENG
@@ -32439,11 +32484,16 @@ focus_tree = {
 					has_government = fascism
 				}
 			}
-			ENG = {
-				has_opinion = {
-					target = ROOT
-					value > 50
-				}	
+			if = {
+				limit = {
+					is_ai = no
+				}
+				ENG = {
+					has_opinion = {
+						target = ROOT
+						value > 50
+					}	
+				}
 			}
 			any_state = {
 				is_owned_and_controlled_by = ENG
@@ -33346,6 +33396,12 @@ focus_tree = {
 			is_subject = no
 			NOT = { is_in_faction_with = ENG }
 			NOT = { is_in_faction_with = FRA }
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				has_army_manpower = { size > 849999 }
+			}
 		}
 
 		will_lead_to_war_with = ENG

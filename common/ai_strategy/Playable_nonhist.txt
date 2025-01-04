@@ -1208,7 +1208,7 @@ POL_befriend_alliance_potentials_YUG = {
 #====================================ENG=======================================
 #==============================================================================
 
-careful_with_early_invasions_diploaxis_allies = { #adds to previous ai in the base game, but this time for alt behavior too
+careful_with_early_invasions_HOL = { #adds to previous ai in the base game, but this time for alt behavior too
 	enable = {
 		date < 1942.8.1
 		NOT = { original_tag = USA }
@@ -1216,15 +1216,8 @@ careful_with_early_invasions_diploaxis_allies = { #adds to previous ai in the ba
 			is_in_faction_with = ENG # anyone in allies
 			tag = FRA
 		}
-		GER = {
-			OR = {
-				has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-				has_game_rule = {
-					rule = GER_ai_behavior
-					option = FASCIST_ALTERNATE
-				}
-				has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE_2
-			}
+		HOL = {
+			is_in_faction_with = GER
 		}
 
 		NOT = {
@@ -1233,18 +1226,7 @@ careful_with_early_invasions_diploaxis_allies = { #adds to previous ai in the ba
 				surrender_progress > 0.4
 			}
 		}
-
-		OR = {
-			HOL = {
-				is_in_faction_with = GER
-			}
-			DEN = {
-				is_in_faction_with = GER
-			}
-			NOR = {
-				is_in_faction_with = GER
-			}
-		}
+		has_war_with = GER
 	}
 	abort = {
 		OR = {
@@ -1255,16 +1237,8 @@ careful_with_early_invasions_diploaxis_allies = { #adds to previous ai in the ba
 			date > 1942.8.1
 			ENG = { has_war_with = JAP }
 			NOT = {
-				OR = {
-					HOL = {
-						is_in_faction_with = GER
-					}
-					DEN = {
-						is_in_faction_with = GER
-					}
-					NOR = {
-						is_in_faction_with = GER
-					}
+				HOL = {
+					is_in_faction_with = GER
 				}
 			}
 		}
@@ -1275,14 +1249,176 @@ careful_with_early_invasions_diploaxis_allies = { #adds to previous ai in the ba
 		id = "HOL"
 		value = -500
 	}
+}
+
+careful_with_early_invasions_BEL = { #adds to previous ai in the base game, but this time for alt behavior too
+	enable = {
+		date < 1942.8.1
+		NOT = { original_tag = USA }
+		OR = {
+			is_in_faction_with = ENG # anyone in allies
+			tag = FRA
+		}
+		BEL = {
+			is_in_faction_with = GER
+		}
+
+		NOT = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+		}
+		has_war_with = GER
+	}
+	abort = {
+		OR = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+			date > 1942.8.1
+			ENG = { has_war_with = JAP }
+			NOT = {
+				BEL = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "BEL"
+		value = -500
+	}
+}
+
+careful_with_early_invasions_DEN = { #adds to previous ai in the base game, but this time for alt behavior too
+	enable = {
+		date < 1942.8.1
+		NOT = { original_tag = USA }
+		OR = {
+			is_in_faction_with = ENG # anyone in allies
+			tag = FRA
+		}
+		DEN = {
+			is_in_faction_with = GER
+		}
+
+		NOT = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+		}
+		has_war_with = GER
+	}
+	abort = {
+		OR = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+			date > 1942.8.1
+			ENG = { has_war_with = JAP }
+			NOT = {
+				DEN = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+	}
+
 	ai_strategy = {
 		type = invade
 		id = "DEN"
 		value = -500
 	}
+}
+
+careful_with_early_invasions_NOR = { #adds to previous ai in the base game, but this time for alt behavior too
+	enable = {
+		date < 1942.8.1
+		NOT = { original_tag = USA }
+		OR = {
+			is_in_faction_with = ENG # anyone in allies
+			tag = FRA
+		}
+		NOR = {
+			is_in_faction_with = GER
+		}
+
+		NOT = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+		}
+		has_war_with = GER
+	}
+	abort = {
+		OR = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+			date > 1942.8.1
+			ENG = { has_war_with = JAP }
+			NOT = {
+				NOR = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+	}
+
 	ai_strategy = {
 		type = invade
 		id = "NOR"
+		value = -500
+	}
+}
+
+careful_with_early_invasions_SWE = { #adds to previous ai in the base game, but this time for alt behavior too
+	enable = {
+		date < 1942.8.1
+		NOT = { original_tag = USA }
+		OR = {
+			is_in_faction_with = ENG # anyone in allies
+			tag = FRA
+		}
+		SWE = {
+			is_in_faction_with = GER
+		}
+
+		NOT = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+		}
+		has_war_with = GER
+	}
+	abort = {
+		OR = {
+			SOV = {
+				has_war_with = GER
+				surrender_progress > 0.4
+			}
+			date > 1942.8.1
+			ENG = { has_war_with = JAP }
+			NOT = {
+				SWE = {
+					is_in_faction_with = GER
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SWE"
 		value = -500
 	}
 }
@@ -2521,6 +2657,62 @@ FRA_GER_is_bigger_threat_protect_mainland = {
 
 }
 
+FRA_scw_volunteers_republicans = {
+	allowed = { original_tag = FRA }
+	enable = { 
+		has_completed_focus = FRA_form_the_popular_front
+		has_country_flag = FRA_covert_intervention_allowed
+		NOT = { has_global_flag = scw_over }
+		SPD = { exists = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 200
+	}
+}
+
+FRA_scw_volunteers_nationalists = {
+	allowed = { original_tag = FRA }
+	enable = { 
+		has_completed_focus = FRA_revive_the_national_bloc
+		has_country_flag = FRA_covert_intervention_allowed
+		NOT = { has_global_flag = scw_over }
+		SPA = { exists = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPA
+		value = 200
+	}
+}
+
+FRA_scw_volunteers_carlists = {
+	allowed = { original_tag = FRA }
+	enable = { 
+		has_completed_focus = FRA_the_council_of_rambouillet
+		has_country_flag = FRA_covert_intervention_allowed
+		NOT = { has_global_flag = scw_over }
+		SPB = { exists = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPB
+		value = 500
+	}
+	ai_strategy = {
+		type = support
+		id = SPB
+		value = 500
+	}
+}
+
 #########################################################################################
 ######################### GER ###########################################################
 #########################################################################################
@@ -2531,12 +2723,10 @@ spain_scw_support_GER_resistance_monarchist = { #germany supports carlists if th
 		has_dlc = "La Resistance"
 	}
 	enable = {
-		has_government = neutrality
 		OR = {
 			GER = { has_completed_focus = GER_revive_the_kaiserreich }
-			GER = { has_completed_focus = GER_revive_the_kaiserreich_ww }
+			GER = { has_completed_focus = GER_return_of_the_kaiser_ww }
 		}
-		
 		country_exists = SPB
 	}
 	abort = {
@@ -2668,17 +2858,19 @@ we_dont_care_about_indonesia = {
 	enable = {
 		GER = {
 			OR = {
-				has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-				has_game_rule = {
-					rule = GER_ai_behavior
-					option = FASCIST_ALTERNATE
-				}
+				is_in_faction_with = INS
+				is_in_faction_with = HOL
 			}
+			has_government = fascism
 		}
 	}
 
 	abort = {
-		HOL = { has_war_with = GER }
+		OR = {
+			HOL = { has_war_with = GER }
+			is_in_faction_with = JAP
+			has_completed_focus = GER_negotiate_old_colonies_in_the_east
+		}
 	}
 
 	ai_strategy = {
@@ -2723,6 +2915,200 @@ GER_volunteers_to_norway = {
 	}
 }
 
+GER_volunteers_to_communist_china = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_government = communism
+		has_completed_focus = GER_assist_our_eastern_comrades
+		country_exists = PRC
+		PRC = {
+			has_government = communism
+		}
+		has_idea = GER_fernostliche_legion_ns
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = PRC
+		value = 150
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PRC
+		value = 150
+	}
+}
+
+spain_scw_support_GER_resistance_communist = { #germany supports communists if they so themselves
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_completed_focus = GER_intervene_in_spain
+		OR = {
+			has_completed_focus = GER_proletarian_dictatorship
+			AND = {
+				has_completed_focus = GER_legacy_of_the_spartacus_league
+				OR = {
+					SPC = { exists = no }
+					SPC = { has_government = neutrality }
+				}
+			}
+		}
+		country_exists = SPD
+	}
+	abort = {
+		OR = {
+			has_global_flag = scw_over
+			NOT = { country_exists = SPD }
+		}
+	}
+
+	ai_strategy = {
+		type = support
+		id = SPD
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = SPA
+		value = -100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPA
+		value = -100
+	}
+}
+
+spain_scw_support_GER_resistance_communist_alt = { #germany supports communists if they so themselves
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_completed_focus = GER_intervene_in_spain
+		has_completed_focus = GER_legacy_of_the_spartacus_league
+		country_exists = SPC
+		SPC = { has_government = communism }
+	}
+	abort = {
+		OR = {
+			has_global_flag = scw_over
+			NOT = { country_exists = SPC }
+		}
+	}
+
+	ai_strategy = {
+		type = support
+		id = SPC
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPC
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = SPA
+		value = -100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPA
+		value = -100
+	}
+	ai_strategy = {
+		type = support
+		id = SPD
+		value = -100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = -100
+	}
+}
+
+GER_make_CHI_like_me = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		focus_progress = {
+			focus = GER_the_sino_germanic_pact
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = GER_the_sino_germanic_pact
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = CHI
+		target = improve_relation
+		value = 200
+	}	
+}
+
+GER_make_FRA_like_me = { 
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		focus_progress = {
+			focus = GER_request_the_return_of_french_held_colonies
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = GER_request_the_return_of_french_held_colonies
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
+		target = improve_relation
+		value = 200
+	}	
+}
+
+GER_make_ENG_like_me = { 
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		focus_progress = {
+			focus = GER_petition_for_the_return_of_old_colonies
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = GER_petition_for_the_return_of_old_colonies
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = improve_relation
+		value = 200
+	}	
+}
 
 #########################################################################################
 ######################### HOL ############################################################
@@ -2752,6 +3138,8 @@ HOL_wilhemina_make_monarchist_GER_like_me = {
 		value = 500
 	}	
 }
+
+
 
 #########################################################################################
 ######################### ITA ###########################################################
@@ -3078,9 +3466,6 @@ spain_scw_support_ITA_resistance_monarchist_before_carlists_rise = { #italy supp
 			ITA_is_christian_democracy_ai = yes
 		}
 		is_subject = no
-		SPA = {
-			exists = yes
-		}
 		
 	}
 	abort = {
@@ -3089,21 +3474,19 @@ spain_scw_support_ITA_resistance_monarchist_before_carlists_rise = { #italy supp
 			SPA = {
 				has_completed_focus = SPA_fuse_the_parties
 			}
-			SPA = { has_completed_focus = SPA_eliminate_the_carlists }
-			country_exists = SPB
 		}
 	}
 
 	ai_strategy = {
 		type = support
 		id = SPA
-		value = 100
+		value = -200
 	}
 
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SPA
-		value = 100
+		value = -200
 	}
 }
 
@@ -3140,17 +3523,6 @@ spain_scw_support_ITA_resistance_monarchist = { #italy supports carlists if they
 		type = send_volunteers_desire
 		id = SPB
 		value = 200
-	}
-	ai_strategy = {
-		type = support
-		id = SPA
-		value = -200
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = SPA
-		value = -200
 	}
 }
 
@@ -5814,3 +6186,386 @@ MEX_relations_with_potential_SA_allies = {
 		value = 100
 	}	
 }
+
+#########################################################################################
+######################### MAN ###########################################################
+#########################################################################################
+
+MAN_dont_join_JAP_against_CHI = { 
+	allowed = { original_tag = MAN }
+	enable = {
+		has_completed_focus = MAN_assertiveness
+		OR = {
+			has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+			has_game_rule = {
+				rule = MAN_ai_behavior
+				option = FIVE_PEOPLES_QING
+			}
+		}
+		is_subject = yes
+		is_in_faction_with = JAP
+		JAP = {
+			has_war_with = CHI
+			has_government = fascism
+		}
+	}
+	abort = {
+		OR = {
+			has_completed_focus = MAN_independence_war
+			has_war_with = CHI
+			AND = {
+				any_other_country= {
+					OR = {
+						original_tag = SHX
+						original_tag = GXC
+					}
+					is_in_faction_with = ROOT
+				}
+			}
+			CHI = {
+				NOT = {
+					any_controlled_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = JAP	
+		value = 1000
+	}	
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = JAP
+		value = -2000
+		target = join_allies
+	}
+
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = CHI
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = PRC
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = SHX
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = GXC
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = YUN
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = XSM
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = JAP
+		value = 1000
+		target_country = SIK
+	}
+}
+
+#########################################################################################
+######################### HUN ###########################################################
+#########################################################################################
+
+HUN_republic_expansionist_war_strat = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = CZE
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = AUS
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = ROM
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = YUG
+		value = -500
+	}
+}
+
+HUN_republic_expansionist_war_strat_CZE = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = yes
+			OR = {
+				has_guaranteed = CZE
+				is_in_faction_with = CZE
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = CZE
+		value = -100
+	}
+}
+
+HUN_republic_expansionist_war_strat_CZE_2 = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = no
+			OR = {
+				has_guaranteed = CZE
+				is_in_faction_with = CZE
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = { #lower priority
+		type = declare_war 
+		id = CZE
+		value = -10
+	}
+}
+
+HUN_republic_expansionist_war_strat_AUS = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = yes
+			OR = {
+				has_guaranteed = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = AUS
+		value = -100
+	}
+}
+
+HUN_republic_expansionist_war_strat_AUS_2 = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = no
+			OR = {
+				has_guaranteed = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = { #lower priority
+		type = declare_war 
+		id = AUS
+		value = -10
+	}
+}
+
+HUN_republic_expansionist_war_strat_ROM = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = yes
+			OR = {
+				has_guaranteed = ROM
+				is_in_faction_with = ROM
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = ROM
+		value = -100
+	}
+}
+
+HUN_republic_expansionist_war_strat_ROM_2 = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = no
+			OR = {
+				has_guaranteed = ROM
+				is_in_faction_with = ROM
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = { #lower priority
+		type = declare_war 
+		id = ROM
+		value = -10
+	}
+}
+
+HUN_republic_expansionist_war_strat_YUG = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = yes
+			OR = {
+				has_guaranteed = YUG
+				is_in_faction_with = YUG
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		id = YUG
+		value = -100
+	}
+}
+
+HUN_republic_expansionist_war_strat_YUG_2 = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		has_completed_focus = wuw_HUN_reclaim_the_pannonian_steppe
+		has_war = yes
+		any_country = {
+			is_major = no
+			OR = {
+				has_guaranteed = YUG
+				is_in_faction_with = YUG
+			}
+		}
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			NOT = { country_exists = HUN }
+			has_war = no
+		}
+	}
+	
+	ai_strategy = { #lower priority
+		type = declare_war 
+		id = YUG
+		value = -10
+	}
+}
+

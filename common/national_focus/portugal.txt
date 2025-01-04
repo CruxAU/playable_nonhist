@@ -4937,19 +4937,40 @@ focus_tree = {
 		available = {
 			is_in_faction = no
 			has_war = no
-			ENG = { 
-				exists = yes
-				NOT = {
-					has_war_with = ROOT 
-					any_other_country = {
-						is_in_faction_with = ENG
-						has_war_with = ROOT
-					}
+			OR = {
+				ENG = {
+					is_faction_leader = yes
+					NOT = { has_government = communism }
+					NOT = { has_war_with = ROOT }
 				}
-			}
-			any_country = {
-				is_major = yes
-				has_war_with = ENG
+				CAN = {
+					is_faction_leader = yes
+					NOT = { has_government = communism }
+					NOT = { has_war_with = ROOT }
+				}
+				AST = {
+					is_faction_leader = yes
+					NOT = { has_government = communism }
+					NOT = { has_war_with = ROOT }
+				}
+				SAF = {
+					is_faction_leader = yes
+					NOT = { has_government = communism }
+					NOT = { has_government = fascism }
+					NOT = { has_war_with = ROOT }
+				}
+				NZL = {
+					is_faction_leader = yes
+					NOT = { has_government = communism }
+					NOT = { has_government = fascism }
+					NOT = { has_war_with = ROOT }
+				}
+				USA = {
+					is_faction_leader = yes
+					NOT = { has_government = communism }
+					NOT = { has_government = fascism }
+					NOT = { has_war_with = ROOT }
+				}
 			}
 		}
 

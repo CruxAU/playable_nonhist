@@ -427,12 +427,7 @@ ROM_goga = {
 
 		ROM_trade_treaty_with_germany
 		ROM_appoint_german_friendly_government
-		ROM_cas
-		ROM_royal_guards_divisions
-		ROM_the_zb_53
 
-		ROM_vanatori_de_munte
-		ROM_hunedoara_steel_works
 		ROM_invite_german_advisors
 	}
 

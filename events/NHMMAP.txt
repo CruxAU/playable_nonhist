@@ -1145,6 +1145,164 @@ country_event = {
 	}
 }
 
+#event to sov from poland demanding peace 
+country_event = {
+	id = nonhist_POL.9
+	title = nonhist_POL.9.t
+	desc = nonhist_POL.9.desc
+	picture = GFX_report_event_german_polish_border
+	
+	trigger = {
+		POL = {
+			OR = {
+				has_completed_focus = POL_assert_eastern_claims
+				has_completed_focus = POL_assert_eastern_claims_pavel
+			}
+			controls_state = 202
+		}
+		original_tag = SOV
+		has_war_with = POL
+		owns_state = 202
+	}
+	
+	is_triggered_only = no
+
+	fire_only_once = yes
+
+	option = {# fine yes
+		name = nonhist_POL.9.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				strength_ratio = { 
+					tag = POL 
+					ratio < 2 
+				} 
+			#not twice as strong
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = POL ratio < 1 } #weaker than poland
+				factor = 3
+			}
+		}
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = POL
+						is_in_faction_with = POL
+					}
+				}
+				white_peace = ROOT
+			}
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = SOV
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}	
+				}
+				white_peace = POL
+			}
+		}
+		POL = {
+			country_event = { id = nonhist_POL.10 days = 5 }
+		}
+		
+	}
+
+	option = {# no way!
+		name = nonhist_POL.9.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				strength_ratio = { tag = POL ratio > 2 } #twice as strong
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = POL ratio > 4 } #four times as strong
+				factor = 3
+			}
+			modifier = {
+				strength_ratio = { tag = POL ratio < 1 } #weaker than poland
+				factor = 0.5
+			}
+		}
+		
+		POL = {
+			country_event = { id = nonhist_POL.11 days = 5 }
+			effect_tooltip = {
+				add_war_support = 0.1
+			}
+		}
+	}
+}
+
+#event to sov from poland demanding peace 
+country_event = {
+	id = nonhist_POL.10
+	title = nonhist_POL.2.t
+	desc = nonhist_POL.10.desc
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {# fine yes
+		name = excellent
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = POL
+					is_in_faction_with = POL
+				}
+			}
+			white_peace = ROOT
+		}
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = SOV
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}	
+			}
+			white_peace = POL
+		}
+		every_state = {
+			limit = {
+				is_core_of = SOV
+				OWNER = {
+					original_tag = SOV
+				}
+				is_claimed_by = POL
+			}
+			POL = {
+				transfer_state = PREV
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nonhist_POL.11
+	title = nonhist_POL.5.t
+	desc = nonhist_POL.11.desc
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {# nope
+		name = nonhist_POL.11.a
+		add_war_support = 0.1
+	}
+}
+
 
 #####################################################
 #CANADA

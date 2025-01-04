@@ -5594,6 +5594,15 @@ focus_tree = {
 				has_completed_focus = TUR_peace_in_the_world
 				factor = 0.5
 			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}
+				date < 1945.12.1 
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -5813,6 +5822,15 @@ focus_tree = {
 			modifier = {
 				has_completed_focus = TUR_peace_in_the_world
 				factor = 0.5
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}
+				date < 1944.11.1 
 			}
 		}
 
@@ -6881,6 +6899,15 @@ focus_tree = {
 				has_completed_focus = TUR_peace_in_the_world
 				factor = 0.5
 			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}
+				date < 1945.12.1 
+			}
 		}
 
 		bypass = {
@@ -7190,6 +7217,15 @@ focus_tree = {
 			modifier = {
 				has_completed_focus = TUR_peace_in_the_world
 				factor = 0.5
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}
+				date < 1945.6.1 
 			}
 		}
 
@@ -9191,6 +9227,15 @@ focus_tree = {
 				has_completed_focus = TUR_peace_in_the_world
 				factor = 0.5
 			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}
+				date < 1945.12.1 
+			}
 		}
 		bypass = {
 			is_in_faction = yes
@@ -9499,6 +9544,15 @@ focus_tree = {
 				divide_temp_variable = { tco = 2 }
 				add_to_temp_variable = { tco = 0.5 }
 				factor = tco
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = TUR_ai_behavior
+					option = DEFAULT
+				}
+				date < 1945.12.1 
 			}
 		}
 		available = {

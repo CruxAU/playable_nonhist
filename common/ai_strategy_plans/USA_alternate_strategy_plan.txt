@@ -383,6 +383,7 @@ USA_fascist = {
 				rule = USA_ai_behavior
 				option = FASCIST
 			}
+			tag = CSA
 		}
 	}
 	abort = {
@@ -490,7 +491,6 @@ USA_junta = {
 					option = JUNTA
 				}
 			}
-			tag = CSA
 		}
 	}
 	abort = {

@@ -419,6 +419,21 @@ HUN_is_on_historical_plan_trigger = {
 			rule = HUN_ai_behavior
 			option = FASCIST_HISTORICAL
 		}
+		has_country_flag = HUN_AI_RANDOM_HORTHY_AXIS_ALT
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = HORTHY_AXIS_ALT
+		}
+		has_country_flag = HUN_AI_RANDOM_HORTHY_ROME
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = HORTHY_ROME
+		}
+		has_country_flag = HUN_AI_RANDOM_HORTHY_ROME_ALT
+		has_game_rule = {
+			rule = HUN_ai_behavior
+			option = HORTHY_ROME_ALT
+		}
 	}
 }
 COG_is_on_historical_plan_trigger = {

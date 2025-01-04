@@ -812,11 +812,12 @@ POR_communist_independent_plan = {
 		POR_nationalize_industry
 		POR_industrial_modernization
 		POR_army_reorganization
-		POR_workers_of_iberia_unite
+		POR_unify_leftist_youth_wings
 		POR_colonial_assimilation_policy
 		#1938
 		POR_corpo_do_estado_maior
 		POR_ogme
+		POR_workers_of_iberia_unite
 		POR_metropolitan_army
 		POR_roads_bridges_and_dams
 		POR_a_new_industry	
@@ -827,7 +828,6 @@ POR_communist_independent_plan = {
 		POR_portuguese_artillery	
 		POR_military_research_facilities
 		#1940
-		POR_unify_leftist_youth_wings
 		POR_reorganization_of_the_communist_party
 		POR_latin_american_communism
 		POR_a_powerful_merchant_marine

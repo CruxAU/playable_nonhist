@@ -445,4 +445,17 @@ peace_ai_desires = {
         }
         ai_desire = 100
 	}
+
+	PRC_wants_to_eat_china = {
+		peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+				is_core_of = CHI
+            }
+            ROOT = { 
+				original_tag = PRC
+			}
+        }
+        ai_desire = 200
+	}
 }

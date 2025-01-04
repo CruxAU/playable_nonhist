@@ -314,6 +314,12 @@ country_event = {
 		name = lar_france_political_violence.1.a #ignore
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				FRA = {
+					has_completed_focus = FRA_revive_the_national_bloc
+				}
+			}
 		}
 		add_stability = -0.05
 		add_popularity = { ideology = communism popularity = 0.025 }

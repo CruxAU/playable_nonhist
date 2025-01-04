@@ -8510,6 +8510,10 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.1
+			}
 			var:SWI_biggest_fascist = {
 				add_opinion_modifier = {
 					target = ROOT 

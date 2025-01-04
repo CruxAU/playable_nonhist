@@ -5653,8 +5653,9 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_a_balkan_confederation focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_tripartite_pact }
 
 		bypass = {
-			any_country = {
+			any_other_country = {
 				has_government = democratic
+				is_faction_leader = yes
 				is_in_faction_with = ROOT
 			}
 		}
@@ -8847,7 +8848,11 @@ focus_tree = {
 			OR = {
 				is_subject = yes
 				AND = {
-					is_in_faction_with = GER
+					any_other_country = {
+						has_government = fascism
+						is_faction_leader = yes
+						is_in_faction_with = BUL
+					}
 					OR = {
 						has_government = fascism
 						has_government = neutrality

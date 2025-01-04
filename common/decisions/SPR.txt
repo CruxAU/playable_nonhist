@@ -15054,6 +15054,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				171 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15108,6 +15116,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				790 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15162,6 +15178,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				174 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15216,6 +15240,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				791 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15270,6 +15302,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				176 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15324,6 +15364,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				792 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15378,6 +15426,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				172 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15432,6 +15488,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				166 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15486,6 +15550,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				794 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15540,6 +15612,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				165 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15594,6 +15674,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				788 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15648,6 +15736,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				41 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15702,6 +15798,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				793 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15756,6 +15860,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				167 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15810,6 +15922,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				170 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15864,6 +15984,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				175 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15918,6 +16046,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				168 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -15972,6 +16108,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				169 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -16026,6 +16170,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				789 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -16081,6 +16233,14 @@ SPA_preparing_the_carlist_insurrection = {
 
 		ai_will_do = {
 			factor = 300
+			modifier = {
+				factor = 3
+				173 = {
+					any_neighbor_state = {
+						has_state_flag = SPA_carlist_cell_flag
+					}
+				}
+			}
 		}
 	}
 
@@ -16108,6 +16268,10 @@ SPR_foreign_arms_purchases = {
 
 		modifier = {
 			
+		}
+
+		ai_will_do = {
+			factor = 5
 		}
 
 		visible = {

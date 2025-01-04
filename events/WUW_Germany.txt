@@ -12972,6 +12972,36 @@ country_event = {
 						rule = GER_ai_behavior
 						option = KAISER
 					}
+					has_country_flag = GER_AI_RANDOM_KAISER_ALT
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_BLITZKRIEG
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_CHINA_ALLY
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_CHINA_ALLY
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_DIPLO
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_DIPLO
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_ENG_ALLY
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_ENG_ALLY
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_EXP
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_EXP
+					}
 				}
 			}
 		}
@@ -13002,10 +13032,25 @@ country_event = {
 						rule = GER_ai_behavior
 						option = GER_COMMUNIST_STALINIST
 					}
+					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST_EXP
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = GER_COMMUNIST_STALINIST_EXP
+					}
+					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST_SPHERES
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = GER_COMMUNIST_STALINIST_SPHERES
+					}
 					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
 					has_game_rule = {
 						rule = GER_ai_behavior
 						option = GER_COMMUNIST_SPARTACUS
+					}
+					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS_NEU
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = GER_COMMUNIST_SPARTACUS_NEU
 					}
 				}
 			}
@@ -13593,10 +13638,25 @@ country_event = {
 						rule = GER_ai_behavior
 						option = GER_COMMUNIST_STALINIST
 					}
+					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST_EXP
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = GER_COMMUNIST_STALINIST_EXP
+					}
+					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST_SPHERES
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = GER_COMMUNIST_STALINIST_SPHERES
+					}
 					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
 					has_game_rule = {
 						rule = GER_ai_behavior
 						option = GER_COMMUNIST_SPARTACUS
+					}
+					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS_NEU
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = GER_COMMUNIST_SPARTACUS_NEU
 					}
 				}
 			}

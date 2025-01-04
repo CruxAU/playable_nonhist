@@ -759,7 +759,7 @@ country_event = {
 	option = {
 		name = mtg_usa_civil_war_fascists.22.a #can't even deal with this right now
 		ai_chance = {
-			factor = 1
+			factor = 3
 		}
 		USA = {
 			give_guarantee = USB
@@ -771,7 +771,7 @@ country_event = {
 	option = {
 		name = mtg_usa_civil_war_fascists.22.b #traitors all
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 		add_stability = -0.1
 		add_war_support = -0.1

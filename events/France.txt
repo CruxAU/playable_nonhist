@@ -1753,23 +1753,6 @@ country_event = {
 				factor = 0
 				is_in_faction_with = GER
 			}
-			modifier = { #alt german diplo skillz pay ze billz
-				factor = 0
-				GER = {
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE
-						}
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE_2
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE_2
-						}
-					}
-				}
-			}
 		}
 		if = {
 			limit = {
@@ -1876,23 +1859,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_in_faction_with = GER
-			}
-			modifier = {
-				add = 10
-				GER = {
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE
-						}
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE_2
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE_2
-						}
-					}
-				}
 			}
 		}
 		if = {

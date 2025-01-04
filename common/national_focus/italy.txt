@@ -15832,10 +15832,14 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = GER }
-			custom_trigger_tooltip = {
-				tooltip = ITA_germ_italy_same_tt
-				GER = { has_government = ROOT }
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = ITA_germ_italy_same_tt
+					GER = { has_government = ROOT }
+				}
+				GER = { has_completed_focus = GER_align_italy }
 			}
+			
 			is_in_faction = no
 			GER = {
 				is_faction_leader = yes

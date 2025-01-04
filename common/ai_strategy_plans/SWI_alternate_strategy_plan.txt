@@ -975,7 +975,7 @@ SWI_alt_expansionist = {
 
 	focus_factors = {
 		SWI_guisans_coup = 2
-		SWI_the_new_eidgenossenschaft = 0
+		SWI_pre_empt_anschluss = 0
 		SWI_seek_trade_agreement_with_germany = 0
 		SWI_the_national_front = 0
 		SWI_crack_down_on_dissent = 0
@@ -1085,7 +1085,7 @@ SWI_alt_expansionist_neutral_entente = {
 
 	focus_factors = {
 		SWI_guisans_coup = 2
-		SWI_the_new_eidgenossenschaft = 0
+		SWI_pre_empt_anschluss = 0
 		SWI_seek_trade_agreement_with_germany = 0
 		SWI_the_national_front = 0
 		SWI_crack_down_on_dissent = 0

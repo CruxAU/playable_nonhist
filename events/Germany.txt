@@ -1589,7 +1589,7 @@ country_event = { #NHMMAP USED TO HAVE STUFF FROM
 	option = { # Give Hungary Northern Transylvania
 		name = germany.20.a
 		ai_chance = {
-			base = 80
+			base = 70
 		}
 		add_named_threat = { threat = 2 name = GER_second_vienna_award_HUN_north }
 		HUN = {
@@ -1615,23 +1615,11 @@ country_event = { #NHMMAP USED TO HAVE STUFF FROM
 		}
 		name = germany.20.b
 		ai_chance = {
-			base = 10
+			base = 20
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
 				
-			}
-			modifier = {
-				add = 100
-				GER = {
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE
-						}
-					}
-				}
 			}
 		}
 		add_named_threat = { threat = 3 name = GER_second_vienna_award_HUN_all }
@@ -1654,18 +1642,6 @@ country_event = { #NHMMAP USED TO HAVE STUFF FROM
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
-			}
-			modifier = {
-				add = 100
-				GER = {
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE_2
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE_2
-						}
-					}
-				}
 			}
 		}
 		ROM = {
@@ -7335,6 +7311,7 @@ country_event = {
 			type = take_state
 			generator = { 85 807 }
 			target = FROM
+			expire = 0
 		}
 		add_state_core = 85
 		add_state_core = 807

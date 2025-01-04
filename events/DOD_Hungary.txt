@@ -1624,7 +1624,7 @@ country_event = {
 			}
 			modifier = {
 				is_in_faction = yes
-				factor = 0 #we got friends
+				factor = 0.5 #we got friends
 			}
 		}
 		add_stability = -0.15
@@ -1651,7 +1651,7 @@ country_event = {
 			}
 			modifier = { 
 				is_in_faction = yes
-				factor = 2
+				factor = 1.5
 			}
 		}
 		add_ideas = ROM_war_preparation

@@ -418,6 +418,7 @@ FRA_alternate_plan_4_lar = {
 		FRA_revive_the_national_bloc
 		FRA_utilize_the_leagues
 		FRA_national_regeneration
+		FRA_intervention_in_spain
 		FRA_agricultural_protectionism
 		FRA_economic_devolution
 		FRA_diplomatic_freedom
@@ -544,13 +545,7 @@ FRA_alternate_plan_little_entente = {
 			AND = {
 				has_country_flag = FRA_AI_DEMOCRATIC_ALTERNATE
 				GER = {  
-					OR = {
-						has_country_flag = GER_AI_RANDOM_FASCIST_ALTERNATE
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = FASCIST_ALTERNATE
-						}
-					}
+					has_completed_focus = GER_befriend_czechoslovakia
 				}
 			}
 		}
@@ -1024,6 +1019,7 @@ FRA_alternate_plan_fascist_lar = {
 		FRA_algerie_france
 		FRA_industrial_expansion
 		FRA_national_regeneration
+		FRA_intervention_in_spain
 		#1938
 		FRA_political_unity
 		FRA_diplomatic_freedom
@@ -1125,6 +1121,7 @@ FRA_alternate_plan_fascist_latin_lar = {
 		FRA_devalue_the_franc
 		FRA_laissez_faire
 		FRA_national_regeneration
+		FRA_intervention_in_spain
 		#1937
 		FRA_political_unity
 		FRA_invest_in_the_metropole
@@ -1604,6 +1601,7 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_revive_the_national_bloc
 		FRA_utilize_the_leagues
 		FRA_the_council_of_rambouillet
+		FRA_intervention_in_spain
 		FRA_revise_the_constitution
 		FRA_devalue_the_franc
 		#1937
@@ -1694,6 +1692,7 @@ FRA_alternate_plan_monarchist_legitimate = {
 		FRA_revive_the_national_bloc
 		FRA_utilize_the_leagues
 		FRA_the_council_of_rambouillet
+		FRA_intervention_in_spain
 		FRA_revise_the_constitution
 		FRA_devalue_the_franc
 		#37
@@ -1784,6 +1783,7 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		FRA_revive_the_national_bloc
 		FRA_utilize_the_leagues
 		FRA_the_council_of_rambouillet
+		FRA_intervention_in_spain
 		FRA_revise_the_constitution
 		#1937
 		FRA_the_old_school
