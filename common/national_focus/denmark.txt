@@ -4390,6 +4390,15 @@ focus_tree = {
 
 			hidden_effect = {
 				set_country_flag = DEN_neutrality_flag
+				if = { #NHMMAP
+					limit = {
+						is_ai = yes
+						DEN_is_communist_ai = yes
+					}
+					add_ideas = DEN_aksel_larsen
+					add_political_power = -127
+					# because for some reason no matter what I do I cannot get denmark to hire this guy normally, literally spent hours on this.
+				}
 			}
 		}
 	}
@@ -6582,7 +6591,6 @@ focus_tree = {
 		available = { # TODO make this better
 			is_in_faction = no
 			is_subject = no
-			is_ai = no # Temp NHMMAP solution to stop the AI using this dumb focus and making a nonsense faction
 			has_army_manpower = { size > 49999 }
 			power_balance_value = {
 				id = DEN_balance_of_power
@@ -6789,7 +6797,10 @@ focus_tree = {
 	
 		available = {
 			OR = {
-				is_in_faction = yes
+				is_in_faction_with = ICE
+				is_in_faction_with = NOR
+				is_in_faction_with = SWE
+				is_in_faction_with = FIN
 			}
 			has_army_manpower = { size > 99999 }
 			power_balance_value = {

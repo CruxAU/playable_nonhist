@@ -1736,12 +1736,7 @@ HOL_gateway_to_europe_hol_category = {
 			GER = {
 				exists = yes
 				has_government = fascism
-				NOT = { 
-					OR = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
-					}
-				}
+				#removed by nhmmap
 			}
 		}
 

@@ -2349,7 +2349,10 @@ country_event = {
 			}
 			modifier = {
 				tag = GER
-				has_completed_focus = GER_oppose_hitler
+				OR = {
+					has_completed_focus = GER_oppose_hitler
+					has_completed_focus = GER_oppose_hitler_ww
+				}
 				HUN = { has_completed_focus = HUN_invite_the_habsburg_prince }
 				factor = 0
 			}
@@ -4292,17 +4295,19 @@ country_event = {
 			HUN = { transfer_state = 664 }
 		}
 		every_state = {
-				limit = {
-					is_owned_by = SLO
-				}
-				add_core_of = SLO
+			limit = {
+				is_owned_by = SLO
 			}
-		SLO = {
+			add_core_of = SLO
+		}
+		hidden_effect = {
+			SLO = {
 				load_oob = SLO_1939
 				add_manpower = 9876
 				add_state_core = 664
 				add_state_core = 73
 			}
+		}
 		puppet = SLO
 		if = {
 			limit = {

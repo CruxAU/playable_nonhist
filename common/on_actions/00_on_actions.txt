@@ -921,19 +921,29 @@ on_actions = {
 			}
 		}
 
-		#GERMANY - Set Flag in capitulated country for Seize Gold Reserves Decision purposes
+		#GERMANY - Set Flag in capitulated countries and add them to array for Seize Gold Reserves Decision purposes
 		effect = {
 			if = {
 				limit = {
-					FROM = { 
+					FROM = {
 						OR = {
 							original_tag = GER
-							is_subject_of = GER
+							is_ally_with = GER
+						}
+					}
+					ROOT = {
+						OR = {
+							capital_scope = { is_on_continent = europe }
+							original_tag = TUR
 						}
 					}
 				}
 				ROOT = {
 					set_country_flag = GER_has_capitulated_to_germany
+					add_to_array = { 
+						array = GER.GER_seize_gold_targets_array 
+						value = THIS
+					}
 				}
 			}
 		}
@@ -1951,6 +1961,7 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = AUTHORITARIAN_ONLY
 									}
+									NOT = { has_dlc = "Gotterdammerung" }
 								}
 							}
 							GER = {
@@ -2074,6 +2085,7 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = AUTHORITARIAN_ONLY
 									}
+									NOT = { has_dlc = "Gotterdammerung" }
 								}
 							}
 							GER = {
@@ -2156,6 +2168,7 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = MONARCHIST_ONLY
 									}
+									NOT = { has_dlc = "Gotterdammerung" }
 								}
 							}
 							GER = {
@@ -2238,6 +2251,7 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = AUTHORITARIAN_ONLY
 									}
+									NOT = { has_dlc = "Gotterdammerung" }
 								}
 							}
 							GER = {
@@ -2320,6 +2334,7 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = AUTHORITARIAN_ONLY
 									}
+									NOT = { has_dlc = "Gotterdammerung" }
 								}
 							}
 							GER = {
@@ -2341,6 +2356,7 @@ on_actions = {
 							modifier = {
 								factor = 0
 								OR = {
+									NOT = { has_dlc = "Gotterdammerung" }
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = REALISTIC
@@ -2382,6 +2398,7 @@ on_actions = {
 							modifier = {
 								factor = 0
 								OR = {
+									NOT = { has_dlc = "Gotterdammerung" }
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = REALISTIC
@@ -2423,6 +2440,7 @@ on_actions = {
 							modifier = {
 								factor = 0
 								OR = {
+									NOT = { has_dlc = "Gotterdammerung" }
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = REALISTIC
@@ -2464,6 +2482,7 @@ on_actions = {
 							modifier = {
 								factor = 0
 								OR = {
+									NOT = { has_dlc = "Gotterdammerung" }
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = REALISTIC
@@ -2505,6 +2524,7 @@ on_actions = {
 							modifier = {
 								factor = 0
 								OR = {
+									NOT = { has_dlc = "Gotterdammerung" }
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = REALISTIC
@@ -22567,7 +22587,7 @@ on_actions = {
 									}
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC
+										option = DEMOCRATIC_ONLY
 									}
 									has_game_rule = {
 										rule = NONHIST_ai_behavior

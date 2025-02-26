@@ -1466,9 +1466,20 @@ on_actions = {
 						focus = GER_remilitarize_the_rhineland
 						uncomplete_children = yes
 					}
-					uncomplete_national_focus = {
-						focus = GER_oppose_hitler
-						uncomplete_children = yes
+					if = {
+						limit = {
+							has_dlc = "Gotterdammerung"
+						}
+						uncomplete_national_focus = {
+							focus = GER_oppose_hitler_ww
+							uncomplete_children = yes
+						}
+					}
+					else = {
+						uncomplete_national_focus = {
+							focus = GER_oppose_hitler
+							uncomplete_children = yes
+						}
 					}
 				}
 			}

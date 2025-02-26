@@ -1,0 +1,1217 @@
+DEN_balance_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_BALANCE
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEMOCRATIC_BALANCE
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_industrial_investments				#70
+		DEN_public_works						#70
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_policy_of_disarmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_expand_ubadsvabnet					#35
+		DEN_no_market_regulations				#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_import_machinery_and_material		#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_modernize_agricultural_machinery	#70
+		DEN_modernize_industrial_machinery		#70
+		DEN_side_with_unions 					#35
+		DEN_agricultural_reinvestments			#70
+		DEN_increase_industrial_production		#70
+
+		#1940	
+		DEN_increase_produce_production			#70
+		DEN_foreign_designs						#70
+		DEN_increase_maritime_trade				#70
+		DEN_limited_social_mobilization						#70
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_start_the_rearmament = 0
+		DEN_five_year_plan = 0
+		DEN_full_employment = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+DEN_rearm_democratic_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NEUTRAL
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEMOCRATIC_REARM_NEUTRAL
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		DEN_fortify_our_borders			#35
+		DEN_build_a_modern_dannevirke			#70
+		DEN_fortify_the_islands					#70
+		DEN_refortify_tunestillingen			#70
+		DEN_secure_our_supply_lines				#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_start_the_rearmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_expand_ubadsvabnet					#35
+		DEN_no_market_regulations				#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_national_unity						#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_industrial_preparations				#35
+		DEN_military_preparations				#35
+		DEN_side_with_industry					#35
+		DEN_civilian_preparations				#35
+		DEN_full_social_mobilization			#70
+
+		#1940	
+		DEN_seek_protection						#35
+		DEN_foreign_designs						#70
+		DEN_sign_non_aggression_deal			#35
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_policy_of_disarmament = 0
+		DEN_strength_in_numbers = 0
+		DEN_territory_for_protection = 0.1
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+DEN_rearm_democratic_alliance_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEMOCRATIC_REARM_ENG
+			}
+			has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEMOCRATIC_REARM_EURO
+			}
+			has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEMOCRATIC_REARM_NORD
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders			#35
+		DEN_build_a_modern_dannevirke			#70
+		DEN_fortify_the_islands					#70
+		DEN_refortify_tunestillingen			#70
+		DEN_secure_our_supply_lines				#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_start_the_rearmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_expand_ubadsvabnet					#35
+		DEN_heavy_market_regulations			#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_national_unity						#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_industrial_preparations				#35
+		DEN_military_preparations				#35
+		DEN_side_with_industry					#35
+		DEN_civilian_preparations				#35
+		DEN_full_social_mobilization			#70
+
+		#1940	
+		DEN_strength_in_numbers
+		DEN_seek_protection						#35
+		DEN_foreign_designs						#70
+		DEN_sign_non_aggression_deal			#35
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+		DEN_territory_for_protection
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_policy_of_disarmament = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_communist_welfare_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_COMMUNIST_WELFARE
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = COMMUNIST_WELFARE
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		DEN_kanslergadeforliget			#35
+		DEN_industrial_investments				#70
+		DEN_public_works						#70
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_policy_of_disarmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_expand_ubadsvabnet					#35
+		DEN_heavy_market_regulations			#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_import_machinery_and_material		#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_modernize_agricultural_machinery	#70
+		DEN_modernize_industrial_machinery		#70
+		DEN_side_with_unions					#35
+		DEN_agricultural_reinvestments			#70
+		DEN_increase_industrial_production		#70
+
+		#1940	
+		DEN_increase_produce_production			#70
+		DEN_domestic_designs					#70
+		DEN_increase_maritime_trade				#70
+		DEN_five_year_plan						#70
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+		
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_start_the_rearmament = 0
+		DEN_limited_social_mobilization = 0
+		DEN_full_employment = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		DEN_aksel_larsen = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+DEN_communist_balance_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_COMMUNIST_BALANCE
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = COMMUNIST_BALANCE
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_industrial_investments				#70
+		DEN_public_works						#70
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_policy_of_disarmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_expand_ubadsvabnet					#35
+		DEN_heavy_market_regulations			#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_import_machinery_and_material		#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_modernize_agricultural_machinery	#70
+		DEN_modernize_industrial_machinery		#70
+		DEN_side_with_unions 					#35
+		DEN_agricultural_reinvestments			#70
+		DEN_increase_industrial_production		#70
+
+		#1940	
+		DEN_increase_produce_production			#70
+		DEN_domestic_designs					#70
+		DEN_increase_maritime_trade				#70
+		DEN_five_year_plan						#70
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_start_the_rearmament = 0
+		DEN_limited_social_mobilization = 0
+		DEN_full_employment = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		DEN_aksel_larsen = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+DEN_rearm_communist_alliance_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_SOV
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = COMMUNIST_REARM_SOV
+			}
+			has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = COMMUNIST_REARM_EURO
+			}
+			has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = COMMUNIST_REARM_NORD
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders			#35
+		DEN_build_a_modern_dannevirke			#70
+		DEN_fortify_the_islands					#70
+		DEN_refortify_tunestillingen			#70
+		DEN_secure_our_supply_lines				#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_start_the_rearmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_expand_ubadsvabnet					#35
+		DEN_heavy_market_regulations			#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_national_unity						#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_industrial_preparations				#35
+		DEN_military_preparations				#35
+		DEN_side_with_unions					#35
+		DEN_civilian_preparations				#35
+		DEN_five_year_plan						#70
+
+		#1940	
+		DEN_strength_in_numbers
+		DEN_seek_protection						#35
+		DEN_domestic_designs					#70
+		DEN_sign_non_aggression_deal			#35
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_policy_of_disarmament = 0
+		DEN_territory_for_protection = 0
+		DEN_limited_social_mobilization = 0
+		DEN_full_social_mobilization = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		DEN_aksel_larsen = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+DEN_farmers_welfare_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FP_WELFARE
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FP_WELFARE
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_industrial_investments				#70
+		DEN_public_works						#70
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_germany					#70
+		DEN_trade_with_britain					#70		
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_policy_of_disarmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_haeren_reorganization				#35
+		DEN_no_market_regulations				#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_import_machinery_and_material		#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_modernize_agricultural_machinery	#70
+		DEN_modernize_industrial_machinery		#70
+		DEN_side_with_industry					#35
+		DEN_agricultural_reinvestments			#70
+		DEN_increase_industrial_production		#70
+
+		#1940	
+		DEN_increase_produce_production			#70
+		DEN_hjemmevaernet						#35
+		DEN_increase_maritime_trade				#70
+		DEN_full_employment						#70
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+		
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_start_the_rearmament = 0
+		DEN_limited_social_mobilization = 0
+		DEN_full_employment = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+DEN_farmers_balance_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FP_BALANCE
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FP_BALANCE
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_industrial_investments				#70
+		DEN_public_works						#70
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_germany
+		DEN_trade_with_britain					#70	
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_policy_of_disarmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_haeren_reorganization				#35
+		DEN_limited_market_regulations			#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_import_machinery_and_material		#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_modernize_agricultural_machinery	#70
+		DEN_modernize_industrial_machinery		#70
+		DEN_side_with_industry					#35
+		DEN_agricultural_reinvestments			#70
+		DEN_increase_industrial_production		#70
+
+		#1940	
+		DEN_increase_produce_production			#70
+		DEN_hjemmevaernet						#70
+		DEN_increase_maritime_trade				#70
+		DEN_limited_social_mobilization						#70
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_start_the_rearmament = 0
+		DEN_full_employment = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+DEN_rearm_farmers_alliance_plan = {
+	name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FP_REARM_GER
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FP_REARM_GER
+			}
+			has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FP_REARM_EURO
+			}
+			has_country_flag = DEN_AI_RANDOM_FP_REARM_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FP_REARM_NORD
+			}
+		}	
+	}
+	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
+		is_subject = yes
+		NOT = { has_country_flag = DEN_is_protectorate_flag	}
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_build_a_modern_dannevirke			#70
+		DEN_fortify_the_islands					#70
+		DEN_refortify_tunestillingen			#70
+		DEN_secure_our_supply_lines				#70	
+		DEN_devalue_the_krone					#35	
+
+		#1937
+		DEN_trade_with_germany					#70
+		DEN_trade_with_britain					#70		
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_start_the_rearmament				#35
+		DEN_social_stability					#35
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_vaernepligten				#70
+		DEN_build_motorveje						#70
+		DEN_haeren_reorganization				#35
+		DEN_no_market_regulations				#70
+		DEN_welcome_foreign_scientists			#70
+
+		#1939
+		DEN_national_unity						#35
+		DEN_sikkerhedspolitiet					#70
+		DEN_industrial_preparations				#35
+		DEN_military_preparations				#35
+		DEN_side_with_industry					#35
+		DEN_civilian_preparations				#35
+		DEN_full_social_mobilization			#70
+
+		#1940	
+		DEN_strength_in_numbers
+		DEN_seek_protection						#35
+		DEN_hjemmevaernet						#70
+		DEN_sign_non_aggression_deal			#35
+		DEN_connect_the_islands					#70
+
+		#1941
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_expand_the_industries				#70
+		DEN_aalborg_portland_cement_plant		#70
+		DEN_reorient_production_lines			#70
+		DEN_strengthen_military_industries		#70
+
+		#1942
+		DEN_danske_stalvalsevaerket				#70
+	}
+
+	#Never takes these
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_policy_of_disarmament = 0
+		DEN_territory_for_protection = 0
+		DEN_limited_social_mobilization = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_rearmament_plan = {
+	name = "Danish Rearmament"
+	desc = "Denmark will try to seek alliances with stronger nations and try to withstand any invasion attempts."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_ALLIANCE_PLAN
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEN_REARMAMENT_PLAN
+			}
+		}
+	}
+
+	abort = { 
+		
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_kanslergadeforliget			#35
+		DEN_agricultural_subsidies				#70
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_britain					#70		
+		DEN_trade_with_germany					#70
+		DEN_industrial_investments				#70
+
+		#1937
+		DEN_public_works						#70
+		DEN_support_schleswigian_farmers		#70	
+		DEN_declare_neutrality					#35
+		DEN_political_unity						#35
+		DEN_start_the_rearmament				#35
+		DEN_national_unity						#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_seek_protection						#35
+
+		#1938
+		DEN_expand_vaernepligten				#70
+		DEN_strength_in_numbers					#35
+		DEN_military_cooperation_program		#70
+		DEN_joint_military_drills				#70
+		DEN_industrial_preparations				#70
+
+		#1939
+		DEN_military_preparations				#70
+		DEN_civilian_preparations				#70
+		DEN_full_social_mobilization			#70
+		DEN_social_stability					#35
+		DEN_build_motorveje						#70
+
+		#1940
+		DEN_no_market_regulations				#70
+		DEN_foreign_designs						#70
+		DEN_haeren_reorganization				#35
+		DEN_welcome_foreign_scientists			#70
+		DEN_expand_ubadsvabnet					#35
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_unify_the_right = 0
+		DEN_policy_of_disarmament = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_monarchist_plan_alliance = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = MONARCHIST_ALLIANCE_ENG
+			}
+			has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = MONARCHIST_ALLIANCE_ROYAL
+			}
+			has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = MONARCHIST_ALLIANCE_NORD
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_britain					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_germany					#70
+		DEN_public_works						#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_strengthen_the_officer_corp			#35
+	
+
+		#1938
+		DEN_overthrow_the_government			#70
+		DEN_king_assumes_power					#35
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+
+		#1939
+		DEN_align_industries #70
+		DEN_expand_kobenhavns_university #70
+		DEN_konge_og_faedreland #35
+		DEN_seek_protection #35
+		DEN_strength_in_numbers #35
+		DEN_economic_mobilization_strategy #70
+
+		#1940
+		DEN_the_royal_guard
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_march_on_the_capital = 0
+		DEN_scandinavian_security = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan = {
+	name = "Fascist Denmark"
+	desc = "The Fascist Party will try to seize power in Denmark and re-establish the North Sea Empire of old."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_PLAN
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEN_FASCIST_PLAN
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_britain					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_trade_with_germany					#70
+		DEN_fortify_the_islands					#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_declare_neutrality					#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_refortify_tunestillingen			#70
+		DEN_secure_our_supply_lines				#70
+
+		#1938
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary					#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital				#35
+
+		#1939
+
+		#1940
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -4413,7 +4413,7 @@ country_event = {
 						is_major = yes
 					}
 				}
-				country_event = { id = bftb_greece.68 days = 2 }
+				country_event = { id = bftb_greece.68 days = 1 }
 			}
 			
 		}
@@ -5177,13 +5177,19 @@ country_event = {
 	trigger = {
 		original_tag = GRE
 		GER = { 
-			AND = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "Gotterdammerung" }
+				}
 				has_completed_focus = GER_oppose_hitler
-				NOT = {  
-					has_country_leader = {
-						character = GER_adolf_hitler
-						ruling_only = yes
-					}
+			}
+			else = {
+				has_completed_focus = GER_oppose_hitler_ww
+			}
+			NOT = {  
+				has_country_leader = {
+					character = GER_adolf_hitler
+					ruling_only = yes
 				}
 			}
 		}

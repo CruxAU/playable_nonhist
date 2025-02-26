@@ -1,0 +1,409 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+# 
+
+DEN_aat = { # Trigger to check if playing as Denmark while having AAT
+	original_tag = DEN
+	has_dlc = "Arms Against Tyranny"
+}
+
+DEN_aat_is_subject = { # Trigger to check if playing as Denmark while having AAT and is a subject
+	original_tag = DEN
+	has_dlc = "Arms Against Tyranny"
+	is_subject = yes
+}
+
+DEN_historical_ai = {
+	OR = {
+		AND = {
+			is_historical_focus_on = yes
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEFAULT
+			}
+		}
+		has_country_flag = DEN_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = HISTORICAL
+		}
+	}
+}
+###########################################################################
+#these paths determine how the AI will manage balance of power in NHMMAP
+###########################################################################
+
+DEN_welfare_ai = { #NHMMAP
+	OR = {
+		AND = {
+			is_historical_focus_on = yes
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEFAULT
+			}
+		}
+		has_country_flag = DEN_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = HISTORICAL
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_WELFARE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_WELFARE
+		}
+	}
+}
+
+DEN_balancing_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_BALANCE
+		}
+	}
+}
+
+DEN_rearming_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_ALLIANCE_PLAN
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEN_rearmament_plan
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NEUTRAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_NEUTRAL
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_SOV
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_SOV
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_NORD
+		}
+	}
+}
+
+##########################################################################################
+#these paths determine how the AI will manage ideology and political parties in NHMMAP
+##########################################################################################
+
+DEN_is_social_democrat_ai = { #NHMMAP, poor socialist democrats are only shown in historical, so santa might not get much screen time otherwise
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = HISTORICAL
+		}
+	}
+}
+
+DEN_is_liberal_ai = { #NHMMAP, liberals get two paths, one balanced and one rearming
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NEUTRAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_NEUTRAL
+		}
+	}
+}
+
+
+DEN_is_conservative_ai = { #NHMMAP, conservatives always rearm
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_NORD
+		}
+	}
+}
+
+DEN_is_communist_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_WELFARE
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_SOV
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_SOV
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_NORD
+		}
+	}
+}
+
+DEN_is_farmers_ai = { #NHMMAP, fp = farmers party (Bondepartiet), they dont care about ideology of others as long as it isn't communism
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_FP_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_WELFARE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_NORD
+		}
+	}
+}
+
+DEN_is_royal_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_PLAN
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEN_monarchist_plan
+		}
+	}
+}
+
+DEN_is_fascist_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_FASCIST_PLAN
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEN_fascist_plan
+		}
+	}
+}
+
+DEN_designer_can_be_improved = { #Only meant to be used for tooltip purposes
+	custom_trigger_tooltip = {
+		tooltip = DEN_designer_can_be_improved_tt
+		hidden_trigger = {
+			always = yes	
+		}
+	}
+}
+
+DEN_improved_designer = { #Only meant to be used for tooltip purposes
+	custom_trigger_tooltip = {
+		tooltip = DEN_improved_designer_tt
+		hidden_trigger = {
+			always = yes	
+		}
+	}
+}
+
+DEN_potential_trading_partners = {
+	OR = {
+		original_tag = ENG
+		original_tag = GER
+	}
+	has_country_flag = DEN_danish_trading_partner_flag
+}
+
+DEN_has_haeren_dynamic_modifier = {
+	OR = {
+		has_dynamic_modifier = { modifier = DEN_haeren_dynamic_modifier }
+		has_dynamic_modifier = { modifier = DEN_haeren_dynamic_modifier_improved }
+		has_dynamic_modifier = { modifier = DEN_haeren_dynamic_modifier_max_improved }
+
+	}
+}
+
+DEN_has_sovaernet_dynamic_modifier = {
+	OR = {
+		has_dynamic_modifier = { modifier = DEN_sovaernet_dynamic_modifier }
+		has_dynamic_modifier = { modifier = DEN_sovaernet_dynamic_modifier_improved }
+		has_dynamic_modifier = { modifier = DEN_sovaernet_dynamic_modifier_max_improved }
+
+	}
+}
+
+DEN_has_flyvevabnet_dynamic_modifier = {
+	OR = {
+		has_dynamic_modifier = { modifier = DEN_flyvevabnet_dynamic_modifier }
+		has_dynamic_modifier = { modifier = DEN_flyvevabnet_dynamic_modifier_improved }
+		has_dynamic_modifier = { modifier = DEN_flyvevabnet_dynamic_modifier_max_improved }		
+	}
+}
+
+DEN_has_war_preparations_dynamic_modifier = {
+	has_dynamic_modifier = { modifier = DEN_war_preparations_dynamic_modifier }
+}
+
+DEN_has_political_edicts_dynamic_modifier = {
+	has_dynamic_modifier = { modifier = DEN_political_edicts_dynamic_modifier }
+}
+
+DEN_allied_weapons_seller_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = subsidy_allied_nation_tt
+		FROM = { is_in_faction_with = ROOT }
+	}
+}
+
+DEN_guarantor_seller_trigger = {
+	if = {
+		limit = {
+			NOT = {	has_country_flag = DEN_has_non_aggression_flag }
+		}
+		custom_trigger_tooltip = {
+			tooltip = subsidy_non_aggression_nation_tt
+			FROM = { 
+				has_variable = DEN_guaranteeing_nation
+			}
+		}
+	}
+	else = {
+		custom_trigger_tooltip = { 
+			tooltip = "[?DEN.DEN_guaranteeing_nation.GetNameDef]"
+		}
+		hidden_trigger = {
+			FROM = { 
+				has_country_flag = DEN_is_guaranteeing_denmark
+			}
+		}
+	}
+}
+
+DEN_rearmament_seller_trigger = {
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = DEN_strength_in_numbers
+			}
+			is_faction_leader = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = subsidy_faction_leader_tt
+			FROM = { 
+				any_allied_country = {
+					is_faction_leader = yes
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = DEN_seeks_alliance_flag
+		}
+		custom_trigger_tooltip = {
+			tooltip = "[?DEN.DEN_allied_nation.GetNameDef]"
+		}
+		FROM = { 
+			has_country_flag = DEN_allied_with_denmark
+		}
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = subsidy_allied_nation_tt
+			FROM = { is_in_faction_with = ROOT }
+		}
+	}
+}

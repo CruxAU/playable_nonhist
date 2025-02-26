@@ -5317,19 +5317,118 @@ DEN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = DEMOCRATIC_BALANCE
+		text = "RULE_OPTION_DEMOCRATIC_BALANCE"
+		desc = "RULE_DEMOCRATIC_BALANCE_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_REARM_NEUTRAL
+		text = "RULE_OPTION_DEMOCRATIC_REARM_NEUTRAL"
+		desc = "RULE_DEMOCRATIC_REARM_NEUTRAL_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_REARM_ENG
+		text = "RULE_OPTION_DEMOCRATIC_REARM_ENG"
+		desc = "RULE_DEMOCRATIC_REARM_ENG_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_REARM_EURO
+		text = "RULE_OPTION_DEMOCRATIC_REARM_EURO"
+		desc = "RULE_DEMOCRATIC_REARM_EURO_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC_REARM_NORD
+		text = "RULE_OPTION_DEMOCRATIC_REARM_NORD"
+		desc = "RULE_DEMOCRATIC_REARM_NORD_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST_WELFARE
+		text = "RULE_OPTION_COMMUNIST_WELFARE"
+		desc = "RULE_COMMUNIST_WELFARE_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST_BALANCE
+		text = "RULE_OPTION_COMMUNIST_BALANCE"
+		desc = "RULE_COMMUNIST_BALANCE_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST_REARM_SOV
+		text = "RULE_OPTION_COMMUNIST_REARM_SOV"
+		desc = "RULE_COMMUNIST_REARM_SOV_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST_REARM_EURO
+		text = "RULE_OPTION_COMMUNIST_REARM_EURO"
+		desc = "RULE_COMMUNIST_REARM_EURO_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COMMUNIST_REARM_NORD
+		text = "RULE_OPTION_COMMUNIST_REARM_NORD"
+		desc = "RULE_COMMUNIST_REARM_NORD_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_WELFARE
+		text = "RULE_OPTION_FP_WELFARE"
+		desc = "RULE_FP_WELFARE_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_BALANCE
+		text = "RULE_OPTION_FP_BALANCE"
+		desc = "RULE_FP_BALANCE_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_REARM_GER
+		text = "RULE_OPTION_FP_REARM_GER"
+		desc = "RULE_FP_REARM_GER_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_REARM_EURO
+		text = "RULE_OPTION_FP_REARM_EURO"
+		desc = "RULE_FP_REARM_EURO_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FP_REARM_NORD
+		text = "RULE_OPTION_FP_REARM_NORD"
+		desc = "RULE_FP_REARM_NORD_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = DEN_REARMAMENT_PLAN
 		text = "RULE_OPTION_DEN_REARMAMENT"
 		desc = "RULE_OPTION_DEN_REARMAMENT_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEN_MONARCHIST_PLAN
 		text = "RULE_OPTION_DEN_MONARCHIST"
 		desc = "RULE_OPTION_DEN_MONARCHIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_ALLIANCE
+		text = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE"
+		desc = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEN_FASCIST_PLAN
 		text = "RULE_OPTION_DEN_FASCIST"
 		desc = "RULE_OPTION_DEN_FASCIST_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
