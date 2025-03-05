@@ -811,7 +811,12 @@
 		available = {
 			communism > 0.4
 			if = {
-				limit = { NOT = { tag = SIK } }
+				limit = { 
+					NOT = { tag = SIK } 
+					event_target:WTT_communist_china = {
+						exists = yes
+					}
+				}
 				any_neighbor_country = {
 					tag = event_target:WTT_communist_china
 				}
@@ -879,10 +884,17 @@
 		}
 
 		available = {
-			has_opinion = {
-				target = SOU
-				value > 50
-			}
+			if = {
+				limit = {
+					event_target:WTT_communist_china = {
+						exists = yes
+					}
+				}
+				has_opinion = {
+					target = SOU
+					value > 50
+				}
+			}	
 			is_subject = no
 			NOT = { has_war_with = PRC }
 			NOT = { has_war_with = SOU }

@@ -268,6 +268,61 @@ DEN_is_royal_ai = { #NHMMAP
 			rule = DEN_ai_behavior
 			option = DEN_monarchist_plan
 		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_ALLIANCE_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_ALLIANCE_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_ALLIANCE_ROYAL
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_NEU
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_NEU
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_NEU_EXP
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_NEU_EXP
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_DIPLO_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_DIPLO_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_DIPLO_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_EXP_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_EXP_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_EXP_BALTIC
+		}
 	}
 }
 

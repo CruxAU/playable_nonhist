@@ -9299,7 +9299,7 @@ country_event = { #The Question of Neutrality
 	option = { #Join Germany
 		name = denmark_expansion_event.400.a
 		ai_chance = {
-			base = 5
+			base = 0
 		}
 		trigger= {
 			Not = { is_in_faction_with = GER }
@@ -9327,7 +9327,22 @@ country_event = { #The Question of Neutrality
 	option = { #Create Faction
 		name = denmark_expansion_event.400.b
 		ai_chance = {
-			base = 10
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_NEU
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_NEU
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_NEU_EXP
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_NEU_EXP
+					}
+				}
+			}
 		}
 
 		if = {
@@ -9796,16 +9811,27 @@ country_event = { #Denmark interferce in our politics; they try to change our id
 			}
 			modifier = {
 				factor = 2
-				has_opinion = {
-					target = FROM
-					value > 24
+				OR = {
+					FROM = {
+						is_ai = yes
+					}
+					has_opinion = {
+						target = FROM
+						value > 24
+					}
 				}
+				
 			}
 			modifier = {
 				factor = 2
-				has_opinion = {
-					target = FROM
-					value > 49
+				OR = {
+					FROM = {
+						is_ai = yes
+					}
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
 				}
 			}
 			modifier = {
@@ -9866,14 +9892,14 @@ country_event = { #Denmark interferce in our politics; they try to change our id
 		ai_chance = {
 			base = 0 #Otherwise we pay for nothing
 			modifier = {
-				add = 10
+				add = 5
 				strength_ratio = {
 				    tag = FROM
 				    ratio > 1
 				}
 			}
 			modifier = {
-				add = 10
+				add = 7
 				strength_ratio = {
 				    tag = FROM
 				    ratio > 1.25
@@ -9881,16 +9907,26 @@ country_event = { #Denmark interferce in our politics; they try to change our id
 			}
 			modifier = {
 				add = 10
-				has_opinion = {
-					target = FROM
-					value < 0
+				AND = {
+					FROM = {
+						is_ai = no
+					}
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
 				}
 			}
 			modifier = {
 				add = 10
-				has_opinion = {
-					target = FROM
-					value < -24
+				AND = {
+					FROM = {
+						is_ai = no
+					}
+					has_opinion = {
+						target = FROM
+						value < -24
+					}
 				}
 			}
 		}
@@ -10052,6 +10088,9 @@ country_event = { #Denmark offers subjugation
 		}
 
 		FROM = {
+			hidden_effect = {
+				set_country_flag = NHMMAP_DEN_rejected_puppet
+			}
 			country_event = { id =  denmark_expansion_event.802 days = 2 } 
 		}
 

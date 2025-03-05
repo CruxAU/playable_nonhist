@@ -6386,6 +6386,20 @@ DEN_danish_security_category = {
 				}
 			}
 			modifier = {
+				factor = 2
+				ROOT = {
+					OR = {
+						has_completed_focus = DEN_king_assumes_power
+						NOT = {
+							has_government = neutrality
+						}
+					}
+				}
+				FROM = {
+					has_government = ROOT
+				}
+			}
+			modifier = {
 				factor = 80
 				FROM = {
 					original_tag = ENG
@@ -6396,11 +6410,17 @@ DEN_danish_security_category = {
 						rule = DEN_ai_behavior
 						option = DEMOCRATIC_REARM_ENG
 					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ENG
+					}
 				}
 			}
 			modifier = {
 				factor = 2
 				FROM = {
+					has_government = ROOT
 					OR = {
 						original_tag = FRA
 						original_tag = GER
@@ -6412,6 +6432,11 @@ DEN_danish_security_category = {
 					has_game_rule = {
 						rule = DEN_ai_behavior
 						option = DEMOCRATIC_REARM_ENG
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ENG
 					}
 				}
 			}
@@ -6431,6 +6456,7 @@ DEN_danish_security_category = {
 			modifier = {
 				factor = 2
 				FROM = {
+					has_government = ROOT
 					OR = {
 						original_tag = FRA
 						original_tag = GER
@@ -6461,6 +6487,7 @@ DEN_danish_security_category = {
 			modifier = {
 				factor = 2
 				FROM = {
+					NOT = { has_government = communism }
 					OR = {
 						original_tag = FRA
 						original_tag = ENG
@@ -6500,6 +6527,11 @@ DEN_danish_security_category = {
 					has_game_rule = {
 						rule = DEN_ai_behavior
 						option = FP_REARM_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_NORD
 					}
 				}
 			}
@@ -6555,17 +6587,54 @@ DEN_danish_security_category = {
 				}
 			}
 			modifier = {
-				factor = 0
-				DEN_is_communist_ai = yes
-				NOT = {
-					has_government = communism
+				factor = 75
+				FROM = {
+					OR = {
+						has_completed_focus = ENG_the_kings_party
+						has_completed_focus = FRA_the_council_of_rambouillet
+						has_completed_focus = GER_monarchist_sentiment
+						has_completed_focus = GER_revive_the_kaiserreich
+						has_completed_focus = SOV_romanov_reconstruction
+						has_completed_focus = SWE_king_in_council
+						has_completed_focus = NOR_the_chamberlains_overture
+					}
+				}
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ROYAL
+					}
 				}
 			}
 			modifier = {
 				factor = 0
-				DEN_is_farmers_ai = yes
+				FROM = {
+					NOT = {
+						OR = {
+							has_completed_focus = ENG_the_kings_party
+							has_completed_focus = FRA_the_council_of_rambouillet
+							has_completed_focus = GER_monarchist_sentiment
+							has_completed_focus = GER_revive_the_kaiserreich
+							has_completed_focus = SOV_romanov_reconstruction
+							has_completed_focus = SWE_king_in_council
+							has_completed_focus = NOR_the_chamberlains_overture
+						}
+					}
+				}
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ROYAL
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				DEN_is_communist_ai = yes
 				NOT = {
-					has_government = neutrality
+					has_government = communism
 				}
 			}
 		}
@@ -7815,6 +7884,48 @@ DEN_danish_faction_category = {
 					ratio > 1
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_EXP_BALTIC
+					}
+				}
+				FROM = {
+					OR = {
+						original_tag = EST
+						original_tag = LIT
+						original_tag = LAT
+					}
+				}
+			}
 		}
 
 		targets = { SWE NOR FIN EST LAT LIT SMI POL HOL }
@@ -8037,6 +8148,21 @@ DEN_influence_countries_category = {
 				}
 			}
 			modifier = {
+				factor = 5
+				FROM = {
+					OR = {
+						original_tag = NOR
+						original_tag = SWE
+						is_neighbor_of = ROOT
+						ROOT = {
+							any_subject_country = {
+								is_neighbor_of = FROM
+							}
+						}
+					}
+				}
+			}
+			modifier = {
 				factor = 2
 				strength_ratio = {
 					tag = FROM 
@@ -8055,6 +8181,57 @@ DEN_influence_countries_category = {
 				strength_ratio = {
 					tag = FROM 
 					ratio > 1.5
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					OR = {
+						original_tag = LIT
+						original_tag = LAT
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_EXP_BALTIC
+					}
+				}
+				FROM = {
+					OR = {
+						original_tag = EST
+						original_tag = LIT
+						original_tag = LAT
+					}
 				}
 			}
 		}
@@ -8162,6 +8339,15 @@ DEN_offer_protection_category = {
 				}
 			}
 			modifier = {
+				factor = 3
+				FROM = {
+					has_opinion = {
+						target = ROOT
+						value > 70
+					}
+				}
+			}
+			modifier = {
 				factor = 2
 				strength_ratio = {
 					tag = FROM 
@@ -8180,6 +8366,48 @@ DEN_offer_protection_category = {
 				strength_ratio = {
 					tag = FROM 
 					ratio > 1.5
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_EXP_BALTIC
+					}
+				}
+				FROM = {
+					OR = {
+						original_tag = EST
+						original_tag = LIT
+						original_tag = LAT
+					}
 				}
 			}
 		}

@@ -6569,3 +6569,491 @@ HUN_republic_expansionist_war_strat_YUG_2 = {
 	}
 }
 
+#########################################################################################
+######################### DEN ###########################################################
+#########################################################################################
+
+DEN_invade_iceland_properly = { # Iceland will actually be invaded by denmark properly
+	allowed = { original_tag = DEN }
+
+	enable = {
+		AND = {
+			DEN = { has_war_with = ICE }
+			ICE = {
+				is_in_faction = no
+			}
+		}
+	}
+
+	abort = {
+		OR = {
+			NOT = { DEN = { has_war_with = ICE } }
+			ICE = {
+				is_in_faction = yes
+			}
+			has_war_with_major = yes
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = ICE
+		value = 200
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		strategic_region = 161
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ICE
+		area = europe
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = "MISSION_NAVAL_INVASION_SUPPORT"
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 45
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 44
+		value = -100
+	}
+}
+
+DEN_declare_wars_nor = {
+	allowed = { original_tag = DEN }
+
+	enable = {
+		DEN = {
+			has_completed_focus = DEN_reclaim_norway
+			has_wargoal_against = NOR
+			NOT = {
+				has_war_with = NOR
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = NOR
+		value = 200
+	}
+	ai_strategy = { 
+		type = declare_war 
+		id = NOR
+		value = 150
+	}
+}
+
+DEN_declare_wars_swe = {
+	allowed = { original_tag = DEN }
+
+	enable = {
+		DEN = {
+			has_completed_focus = DEN_secure_swedish_steel
+			has_wargoal_against = SWE
+			NOT = {
+				has_war_with = SWE
+			}
+			NOT = {
+				has_war_with = NOR
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = declare_war 
+		id = SWE
+		value = 100
+	}
+}
+
+DEN_invade_norway_properly = { # Norway will actually be invaded by denmark properly
+	allowed = { original_tag = DEN }
+
+	enable = {
+		AND = {
+			DEN = { has_war_with = NOR }
+			NOT = {
+				any_country = {
+					NOT = { original_tag = NOR }
+					has_war_with = DEN
+				}
+			}
+			NOR = {
+				is_in_faction = no
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = NOR
+		value = 200
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		strategic_region = 11
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = NOR
+		area = europe
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = "MISSION_NAVAL_INVASION_SUPPORT"
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 173
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 174
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 207
+		value = -100
+	}
+}
+
+DEN_make_potential_puppets_like_me_SWE = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		has_completed_focus = DEN_offer_protection
+		SWE = { 
+			has_government = DEN
+			has_opinion = {
+				target = DEN
+				value < 49
+			}
+			is_major = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}	
+		}
+		
+	}
+	abort = {
+		OR = {
+			is_puppet = yes
+			has_war_with = SWE
+			SWE = {
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = ROOT }
+					}	
+					is_major = yes
+					is_puppet = yes
+					has_country_flag = NHMMAP_DEN_rejected_puppet
+					NOT = {
+						has_government = DEN
+					}
+					has_opinion = {
+						target = DEN
+						value > 80
+					}
+					
+			
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SWE
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_puppets_like_me_NOR = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		has_completed_focus = DEN_offer_protection
+		NOR = { 
+			has_government = DEN
+			has_opinion = {
+				target = DEN
+				value < 49
+			}
+			is_major = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}	
+		}
+		
+	}
+	abort = {
+		OR = {
+			is_puppet = yes
+			has_war_with = NOR
+			NOR = {
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = ROOT }
+					}	
+					is_major = yes
+					is_puppet = yes
+					has_country_flag = NHMMAP_DEN_rejected_puppet
+					NOT = {
+						has_government = DEN
+					}
+					has_opinion = {
+						target = DEN
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = NOR
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_puppets_like_me_FIN = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		has_completed_focus = DEN_offer_protection
+		FIN = { 
+			has_government = DEN
+			has_opinion = {
+				target = DEN
+				value < 49
+			}
+			is_major = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}	
+		}
+		
+	}
+	abort = {
+		OR = {
+			is_puppet = yes
+			has_war_with = FIN
+			FIN = {
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = ROOT }
+					}	
+					is_major = yes
+					is_puppet = yes
+					has_country_flag = NHMMAP_DEN_rejected_puppet
+					NOT = {
+						has_government = DEN
+					}
+					has_opinion = {
+						target = DEN
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FIN
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_puppets_like_me_EST = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		has_completed_focus = DEN_offer_protection
+		EST = { 
+			has_government = DEN
+			has_opinion = {
+				target = DEN
+				value < 49
+			}
+			is_major = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}	
+		}
+		
+	}
+	abort = {
+		OR = {
+			AND = {
+				is_in_faction = yes
+				NOT = { is_in_faction_with = ROOT }
+			}	
+			is_major = yes
+			is_puppet = yes
+			has_war_with = EST
+			EST = {
+				OR = {
+					is_puppet = yes
+					has_country_flag = NHMMAP_DEN_rejected_puppet
+					NOT = {
+						has_government = DEN
+					}
+					has_opinion = {
+						target = DEN
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = EST
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_puppets_like_me_LAT = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		has_completed_focus = DEN_offer_protection
+		LAT = { 
+			has_government = DEN
+			has_opinion = {
+				target = DEN
+				value < 49
+			}
+			is_major = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}	
+		}
+		
+	}
+	abort = {
+		OR = {
+			is_puppet = yes
+			has_war_with = LAT
+			LAT = {
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = ROOT }
+					}	
+					is_major = yes
+					is_puppet = yes
+					has_country_flag = NHMMAP_DEN_rejected_puppet
+					NOT = {
+						has_government = DEN
+					}
+					has_opinion = {
+						target = DEN
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = LAT
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_puppets_like_me_LIT = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		has_completed_focus = DEN_offer_protection
+		LIT = { 
+			has_government = DEN
+			has_opinion = {
+				target = DEN
+				value < 49
+			}
+			is_major = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = ROOT
+			}	
+		}
+		
+	}
+	abort = {
+		OR = {
+			is_puppet = yes
+			has_war_with = LIT
+			LIT = {
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = ROOT }
+					}	
+					is_major = yes
+					is_puppet = yes
+					has_country_flag = NHMMAP_DEN_rejected_puppet
+					NOT = {
+						has_government = DEN
+					}
+					has_opinion = {
+						target = DEN
+						value > 80
+					}
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = LIT
+		target = improve_relation
+		value = 500
+	}	
+}

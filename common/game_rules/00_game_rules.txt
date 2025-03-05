@@ -5419,9 +5419,69 @@ DEN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = MONARCHIST_ALLIANCE
-		text = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE"
-		desc = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_AI_DESC"
+		name = MONARCHIST_ALLIANCE_ENG
+		text = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_ENG"
+		desc = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_ENG_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_ALLIANCE_NORD
+		text = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_NORD"
+		desc = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_NORD_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_ALLIANCE_ROYAL
+		text = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_ROYAL"
+		desc = "RULE_OPTION_DEN_MONARCHIST_ALLIANCE_ROYAL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_NEU
+		text = "RULE_OPTION_DEN_MONARCHIST_NEU"
+		desc = "RULE_OPTION_DEN_MONARCHIST_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_NEU_EXP
+		text = "RULE_OPTION_DEN_MONARCHIST_NEU_EXP"
+		desc = "RULE_OPTION_DEN_MONARCHIST_NEU_EXP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_DIPLO_NORD
+		text = "RULE_OPTION_DEN_MONARCHIST_DIPLO_NORD"
+		desc = "RULE_OPTION_DEN_MONARCHIST_DIPLO_NORD_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_DIPLO_GER
+		text = "RULE_OPTION_DEN_MONARCHIST_DIPLO_GER"
+		desc = "RULE_OPTION_DEN_MONARCHIST_DIPLO_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_DIPLO_BALTIC
+		text = "RULE_OPTION_DEN_MONARCHIST_DIPLO_BALTIC"
+		desc = "RULE_OPTION_DEN_MONARCHIST_DIPLO_BALTIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_EXP_NORD
+		text = "RULE_OPTION_DEN_MONARCHIST_EXP_NORD"
+		desc = "RULE_OPTION_DEN_MONARCHIST_EXP_NORD_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_EXP_GER
+		text = "RULE_OPTION_DEN_MONARCHIST_EXP_GER"
+		desc = "RULE_OPTION_DEN_MONARCHIST_EXP_GER_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_EXP_BALTIC
+		text = "RULE_OPTION_DEN_MONARCHIST_EXP_BALTIC"
+		desc = "RULE_OPTION_DEN_MONARCHIST_EXP_BALTIC_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {

@@ -11826,13 +11826,29 @@ country_event = {
 							has_war_with = SPB
 							has_war_with = SPC
 							has_war_with = SPD
+							is_in_faction_with = SPD
+							SPD = {
+								has_volunteers_amount_from = {
+									tag = FRA
+									count > 0
+								}
+							}
 						}
 					}
 				}
 				FRA = { puppet = SPD }
 			}
-			else = {
+			else_if = {
+				limit = {
+					SPD = {
+						has_volunteers_amount_from = {
+							tag = SOV
+							count > 0
+						}
+					}
+				}
 				SOV = { puppet = SPD }
+				
 			}
 			if = {
 				limit = {

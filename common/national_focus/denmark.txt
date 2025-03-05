@@ -6473,6 +6473,7 @@ focus_tree = {
 		}
 	
 		ai_will_do = {
+
 		}
 	
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
@@ -6599,6 +6600,7 @@ focus_tree = {
 		}
 	
 		ai_will_do = {
+
 		}
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6909,6 +6911,21 @@ focus_tree = {
 				mark_focus_tree_layout_dirty = yes
 			}
 
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				if = {
+					limit = {
+						DEN_is_royal_ai = yes
+					}
+				}
+				if = {
+					limit = {
+						DEN_is_fascist_ai = yes
+					}
+				}
+			}
 			unlock_decision_tooltip = DEN_bop_speak_out_in_favor_of_rearmament
 		}
 	}
@@ -7707,6 +7724,62 @@ focus_tree = {
 			}
 		}
 
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_BALTIC
+					}
+				}
+				SWE = {
+					OR = {
+						has_country_flag = NHMMAP_DEN_rejected_puppet
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+				}
+				NOR = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
@@ -7857,6 +7930,40 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+				}
+				NOR = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				SWE = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
 		completion_reward = {
 			if = {
 				limit = {
@@ -7943,6 +8050,60 @@ focus_tree = {
 						NOT = { is_subject_of = ROOT }
 						is_in_faction_with = ROOT
 					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_DIPLO_BALTIC
+					}
+				}
+				NOR = {
+					OR = {
+						has_country_flag = NHMMAP_DEN_rejected_puppet
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+				}
+				ROOT = {
+					has_war = no
 				}
 			}
 		}
@@ -8980,6 +9141,40 @@ focus_tree = {
 			is_subject = no
 		}
 
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+				}
+				NOR = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				SWE = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
@@ -9083,6 +9278,40 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_NORD
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_GER
+					}
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_EXP_BALTIC
+					}
+				}
+				NOR = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				SWE = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
