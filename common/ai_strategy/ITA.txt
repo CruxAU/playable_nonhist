@@ -1627,3 +1627,44 @@ ITA_dont_join_ww2_too_early = {
 		target = call_allies
 	}
 }
+
+ITA_gotta_have_enough_medium_tanks = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date > 1939.1.1
+		has_tech = basic_medium_tank_chassis
+		stockpile_ratio = {
+			archetype = medium_tank_chassis
+			ratio < 1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_tank_chassis
+		value = 2  # ITALY need medium tanks to crush the enemies!
+	}
+}
+
+ITA_gotta_have_enough_light_tanks = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date > 1938.1.1
+		stockpile_ratio = {
+			archetype = light_tank_chassis
+			ratio < 1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = light_tank_chassis
+		value = 1  # Italy need light tanks to crush the enemies!
+	}
+}

@@ -21,7 +21,7 @@ country_event = {
 
 		#BBA
 		# The king is an idea
-		if = { #TODO_Manu: Handle this via News Event?
+		if = { 
 			limit = {
 				has_idea = vittorio_emanuele
 			}

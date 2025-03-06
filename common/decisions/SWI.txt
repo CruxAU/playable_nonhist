@@ -4600,6 +4600,10 @@ SWI_absolute_neutrality_decisions_category = {
 		visible = {
 			has_country_flag = SWI_in_breach_of_neutrality
 		}
+
+		target_root_trigger = {
+			original_tag = SWI
+		}
 		
 		priority = 98 
 
@@ -4633,6 +4637,10 @@ SWI_absolute_neutrality_decisions_category = {
 		
 		available = { 
 			always = yes 
+		}
+
+		target_root_trigger = {
+			original_tag = SWI
 		}
  
 		days_remove = 15
@@ -4907,6 +4915,11 @@ SWI_absolute_neutrality_decisions_category = {
 			has_idea = SWI_active_trade_agreement
 			SWI_is_historical_ai = no 
 		}
+		
+		target_root_trigger = {
+			original_tag = SWI
+			has_idea = SWI_active_trade_agreement
+		}
 
 		target_trigger = {
 			FROM = {
@@ -5009,6 +5022,10 @@ SWI_absolute_neutrality_decisions_category = {
 		allowed = { original_tag = SWI }
 
 		visible = {
+			has_completed_focus = SWI_share_spy_networks
+		}
+
+		target_root_trigger = {
 			has_completed_focus = SWI_share_spy_networks
 		}
 
@@ -5154,6 +5171,10 @@ SWI_absolute_neutrality_decisions_category = {
 			has_completed_focus = SWI_support_allied_espionage
 		}
 
+		target_root_trigger = {
+			has_completed_focus = SWI_support_allied_espionage
+		}
+
 		available = {
 			has_intelligence_agency = yes
 		}
@@ -5285,6 +5306,11 @@ SWI_absolute_neutrality_decisions_category = {
 			has_completed_focus = SWI_axis_gold
 		}
 		
+		target_root_trigger = {
+			original_tag = SWI
+			has_completed_focus = SWI_axis_gold
+		}		
+
 		target_trigger = {
 			FROM = {
 				SWI_is_country_to_balance = yes
@@ -5332,7 +5358,9 @@ SWI_absolute_neutrality_decisions_category = {
 
 		allowed = { original_tag = SWI }
 
+		
 		visible = {
+			original_tag = SWI
 			has_completed_focus = SWI_allied_gold
 		}
 		
@@ -5422,6 +5450,11 @@ SWI_absolute_neutrality_decisions_category = {
 				has_completed_focus = SWI_oasis_of_democracy 
 			}
 		}
+
+		target_root_trigger = {
+			original_tag = SWI
+		}
+
 		target_trigger = {
 			FROM = {
 				SWI_is_country_to_balance = yes											
@@ -5805,6 +5838,10 @@ SWI_absolute_neutrality_decisions_category = {
 			has_completed_focus = SWI_fund_resistance_groups
 		}
 
+		target_root_trigger = {
+			has_completed_focus = SWI_fund_resistance_groups
+		}
+		
 		cost = 50 
 
 		target_trigger = {

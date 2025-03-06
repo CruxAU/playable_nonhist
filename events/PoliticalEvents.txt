@@ -83,6 +83,15 @@ country_event = {
 				}
 			}
 		}
+		NOT = {
+			AND = {
+				has_dlc = "Graveyard of Empires"
+				OR = {
+					original_tag = AFG
+					original_tag = PER
+				}
+			}
+		}
 	}
 
 	fire_only_once = yes
@@ -407,6 +416,15 @@ country_event = {
 				OR = {
 					original_tag = AUS
 					original_tag = BEL
+				}
+			}
+		}
+		NOT = {
+			AND = {
+				has_dlc = "Graveyard of Empires"
+				OR = {
+					original_tag = AFG
+					original_tag = PER
 				}
 			}
 		}
@@ -1950,6 +1968,16 @@ country_event = {
 				OR = {
 					original_tag = AUS
 					original_tag = BEL
+				}
+			}
+		}
+
+		NOT = {
+			AND = {
+				has_dlc = "Graveyard of Empires"
+				OR = {
+					original_tag = PER
+					original_tag = AFG
 				}
 			}
 		}

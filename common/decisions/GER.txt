@@ -21810,6 +21810,9 @@ GER_anti_colonialism_category = {
 			}
 			
 		}
+		
+		target_array = global.colonial_powers
+
 		target_root_trigger = { original_tag = GER } 
 		# on_map_mode = map_only
 		fire_only_once = yes  

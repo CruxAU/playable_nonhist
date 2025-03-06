@@ -1457,9 +1457,19 @@ COG_mittelafrikan_kingdom = {
 	color_ui = rgb { 51 51 51 }
 }
 
+EGY_brit_puppet = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
 reunified_germany = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 115 115 115 }
+}
+
+PAL_mandate = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
 }
 
 BEL_vnv_dominant =  {
@@ -1527,7 +1537,112 @@ BEL_flanders = {
 	color_ui = rgb { 179 143 0 }
 }
 
+BEL_european_union_leader = {
+	color = rgb { 0 51 153 }
+	color_ui = rgb { 0 51 153 }
+}
+
+JOR_emirate = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
+SYR_mandate = {
+	color = rgb { 57  113  228 }
+	color_ui = rgb { 57  113  228 }
+}
+
+LEB_mandate = {
+	color = rgb { 57  113  228 }
+	color_ui = rgb { 57  113  228 }
+}
+
+KUW_protectorate = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
+PSH = {
+	color = rgb { 31 138 31 }
+	color_ui = rgb { 31 138 31 }
+}
+
+PER_persian_empire = {
+	color = rgb { 0 165 114 }
+	color_ui = rgb { 0 165 114 }
+}
+
+PER_great_persian_empire = {
+	color = rgb { 0 165 114 }
+	color_ui = rgb { 0 165 114 }
+}
+
+PER_iranian_empire = {
+	color = rgb { 35 159 64 }
+	color_ui = rgb { 35 159 64 }
+}
+
+PER_great_iranian_empire = {
+	color = rgb { 35 159 64 }
+	color_ui = rgb { 35 159 64 }
+}
+
+PER_viceroyalty_of_iran = {
+	color = rgb { 139 0 0 }
+	color_ui = rgb { 139 0 0 }
+}
+
 european_union_leader = {
 	color = rgb { 0 51 153 }
 	color_ui = rgb { 0 51 153 }
+}
+RAJ_kalat = {
+	color = rgb { 0 171 0 }
+	color_ui = rgb { 0 171 0 }
+}
+
+RAJ_akhand_bharat_tag = {
+	color = rgb { 245 50 25 }
+	color_ui = rgb { 245 50 25 }
+}
+
+RAJ_eic_tag = {
+	color = rgb { 25 25 255 }
+	color_ui = rgb { 25 25 255  }	
+}
+
+RAJ_mughal_breakaway_state = {
+	color = rgb { 227 66 52 }
+	color_ui = rgb { 227 66 52 }
+}
+
+
+RAJ_mughal_empire = {
+	color = rgb { 48 96 48 }
+	color_ui = rgb { 48 96 48 }
+}
+
+RAJ_al_hind = {
+	color = rgb { 48 96 48 }
+	color_ui = rgb { 48 96 48 }
+}
+
+IRQ_kurdistan_tag = {
+	color = rgb { 230 184 0 }
+	color_ui = rgb { 153 122 0 }	
+}
+
+greater_kurdistan = {
+	color = rgb { 230 184 0 }
+	color_ui = rgb { 153 122 0 }	
+}
+
+RAJ_azad_hind = {
+	color = rgb { 250 65 86 }
+	color_ui = rgb { 250 65 86 }
+}
+
+BRM_british = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
 }

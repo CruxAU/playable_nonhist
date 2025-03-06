@@ -508,7 +508,7 @@ SWE_politics = {
 			original_tag = SWE 
 		}
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP generally the AI wont ever need to use this decision.
 			factor = 0
 		}
 		visible = {
@@ -600,6 +600,7 @@ SWE_politics = {
 					}
 				}
 			}
+			#removed by NHMMAP
 		}
 
 		remove_effect = {

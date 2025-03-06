@@ -1496,7 +1496,6 @@ unit_leader_event = {
 			set_variable = { ITA_missiolinis_required_civs = ROOT.num_of_civilian_factories }
 			add_to_variable = { ITA_missiolinis_required_civs = ITA_missiolinis_number_of_civs_goal }
 			add_to_variable = { ITA_missiolinis_required_civs = -1 } #So that the trigger in the mission works properly (can only use >, and not >=)
-			#TODO_Manu: Probably this will be a fixed amount of civs in the future. Then we'll have a generic randomly-triggered mission for building factories in general.
 		}
 	}
 
@@ -5626,7 +5625,7 @@ country_event = {
 
 
 # Event to complete first focus in RSI branch without the RDS getting the popup
-country_event = { #TODO_Manu: Check if this solves the shit
+country_event = {
 	id = BBA_italy_civil_war.0
 	hidden = yes
 

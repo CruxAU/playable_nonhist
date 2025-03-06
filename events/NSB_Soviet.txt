@@ -3127,9 +3127,16 @@ country_event = {
 						tag = FROM
 						ratio < 0.6
 					}
-					surrender_progress > 0.25
+					surrender_progress > 0.95
 				}
 			}
+		}
+
+		IF = {
+			limit = {
+				has_dlc = "Graveyard of Empires"
+			}
+			set_country_flag = PER_operation_countenance_flag
 		}
 
 		set_global_flag = SOV_soviet_invasion_of_iran_flag
@@ -3143,6 +3150,8 @@ country_event = {
 			transfer_state = 419 #Tibriz (AZB)
 			transfer_state = 420 #Gilan (AZB)
 			transfer_state = 416 #Khorasan
+			transfer_state = 1000 #East Azerbaijan
+			transfer_state = 1004 #North Khorasan
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
 				give_resource_rights = { receiver = SOV state = 412 }
@@ -3170,6 +3179,10 @@ country_event = {
 				is_in_faction_with = ENG
 			}
 			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
 				factor = 2
 				has_opinion = {
 					target = FROM
@@ -3190,7 +3203,7 @@ country_event = {
 						tag = FROM
 						ratio < 0.6
 					}
-					surrender_progress > 0.25
+					surrender_progress > 0.95
 				}
 			}
 		}
@@ -3211,6 +3224,8 @@ country_event = {
 				transfer_state = 419 #Tibriz (AZB)
 				transfer_state = 420 #Gilan (AZB)
 				transfer_state = 416 #Khorasan
+				transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
 			}
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
@@ -3226,6 +3241,8 @@ country_event = {
 			transfer_state = 419 #Tibriz (AZB)
 			transfer_state = 420 #Gilan (AZB)
 			transfer_state = 416 #Khorasan
+			transfer_state = 1000 #East Azerbaijan
+			transfer_state = 1004 #North Khorasan
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
 				give_resource_rights = { receiver = SOV state = 412 }
@@ -3252,6 +3269,10 @@ country_event = {
 			modifier = {
 				factor = 100
 				is_in_faction_with = FROM
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
 			}
 			modifier = {
 				factor = 2
@@ -3289,6 +3310,13 @@ country_event = {
 				}
 			}
 		}
+
+		IF = {
+			limit = {
+				has_dlc = "Graveyard of Empires"
+			}
+			set_country_flag = PER_operation_countenance_flag
+		}
 		
 		set_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
 
@@ -3302,6 +3330,8 @@ country_event = {
 				transfer_state = 419 #Tibriz (AZB)
 				transfer_state = 420 #Gilan (AZB)
 				transfer_state = 416 #Khorasan
+				transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
 			}
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
@@ -3353,6 +3383,8 @@ country_event = {
 			transfer_state = 419 #Tibriz (AZB)
 			transfer_state = 420 #Gilan (AZB)
 			transfer_state = 416 #Khorasan
+			transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
 				give_resource_rights = { receiver = SOV state = 412 }
@@ -3378,12 +3410,21 @@ country_event = {
 		activate_mission = SOV_preparations_for_operation_countenance
 		custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 
+		IF = {
+			limit = {
+				has_dlc = "Graveyard of Empires"
+			}
+			set_country_flag = PER_operation_countenance_flag
+		}
+
 		effect_tooltip = {
 			custom_effect_tooltip = SOV_operation_countenance_successful_tt
 			puppet = PER
 			transfer_state = 419 #Tibriz (AZB)
 			transfer_state = 420 #Gilan (AZB)
 			transfer_state = 416 #Khorasan
+			transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
 				give_resource_rights = { receiver = SOV state = 412 }
@@ -3405,6 +3446,8 @@ country_event = {
 		transfer_state = 419 #Tibriz (AZB)
 		transfer_state = 420 #Gilan (AZB)
 		transfer_state = 416 #Khorasan
+		transfer_state = 1000 #East Azerbaijan
+		transfer_state = 1004 #North Khorasan
 		PER = {
 			give_resource_rights = { receiver = SOV state = 411 }
 			give_resource_rights = { receiver = SOV state = 412 }
@@ -3428,6 +3471,8 @@ country_event = {
 		transfer_state = 419 #Tibriz (AZB)
 		transfer_state = 420 #Gilan (AZB)
 		transfer_state = 416 #Khorasan
+		transfer_state = 1000 #East Azerbaijan
+		transfer_state = 1004 #North Khorasan
 		PER = {
 			give_resource_rights = { receiver = SOV state = 411 }
 			give_resource_rights = { receiver = SOV state = 412 }
@@ -3672,6 +3717,12 @@ country_event = {
 					value > 75
 				}
 			}
+
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+
 			modifier = {
 				add = 0.5
 				OR = {
@@ -3751,7 +3802,7 @@ country_event = {
 		name = NSB_soviet_foreign_politics_events.210.c
 
 		ai_chance = {
-			base = 20
+			base = 100
 			modifier = {
 				factor = 2
 				is_historical_focus_on = yes

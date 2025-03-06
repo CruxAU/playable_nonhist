@@ -6634,24 +6634,62 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		available = { has_government = communism }
+		available = { 
+			is_subject = no
+			has_government = communism
+			OR = {
+				EST  = { exists = yes }
+				LAT  = { exists = yes } 
+				LIT  = { exists = yes }
+			}
+		}
+
+		bypass = {
+			EST = {
+				OR = {
+					is_ally_with = ROOT
+					exists = no
+				}
+			}
+			LAT = {
+				OR = {
+					is_ally_with = ROOT
+					exists = no
+				}
+			} 
+			LIT = {
+				OR = {
+					is_ally_with = ROOT
+					exists = no
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			if = {
 				limit = {
 					LIT = {
+						exists = yes
 						has_government = communism
 						is_in_faction = no
 					}
 				}
-				country_event = NSB_poland_communist_events.2
+				LIT = {
+					country_event = { id = NSB_poland_communist_events.2 hours = 12 }
+				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
 					puppet = LIT
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					LIT = {
+						exists = yes
+						NOT = { is_ally_with = ROOT }
+					}
+				}
 				create_wargoal = {
 					type = topple_government
 					target = LIT
@@ -6660,17 +6698,26 @@ focus_tree = {
 			if = {
 				limit = {
 					LAT = {
+						exists = yes
 						has_government = communism
 						is_in_faction = no
 					}
 				}
-				country_event = NSB_poland_communist_events.2
+				LAT = {
+					country_event = { id = NSB_poland_communist_events.2 hours = 12 }
+				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
 					puppet = LAT
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					LIT = {
+						exists = yes
+						NOT = { is_ally_with = ROOT }
+					}
+				}
 				create_wargoal = {
 					type = topple_government
 					target = LAT
@@ -6679,17 +6726,26 @@ focus_tree = {
 			if = {
 				limit = {
 					EST = {
+						exists = yes
 						has_government = communism
 						is_in_faction = no
 					}
 				}
-				country_event = NSB_poland_communist_events.2
+				EST = {
+					country_event = { id = NSB_poland_communist_events.2 hours = 12 }
+				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
 					puppet = EST
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					EST = {
+						exists = yes
+						NOT = { is_ally_with = ROOT }
+					}
+				}
 				create_wargoal = {
 					type = topple_government
 					target = EST
@@ -14498,6 +14554,7 @@ focus_tree = {
 				is_subject = no
 				is_in_faction = no
 				NOT = { has_war_with = ROOT }
+				exists = yes
 			}
 		}
 
@@ -14526,6 +14583,7 @@ focus_tree = {
 				is_subject = no
 				is_in_faction = no
 				NOT = { has_war_with = ROOT }
+				exists = yes
 			}
 		}
 
@@ -14554,6 +14612,7 @@ focus_tree = {
 				is_subject = no
 				is_in_faction = no
 				NOT = { has_war_with = ROOT }
+				exists = yes
 			}
 		}
 
@@ -14888,6 +14947,7 @@ focus_tree = {
 				is_subject = no
 				has_same_ideology = yes
 				NOT = { has_war_with = ROOT }
+				exists = yes
 			}
 		}
 

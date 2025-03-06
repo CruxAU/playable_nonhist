@@ -1700,7 +1700,7 @@ on_actions = {
 				}
 				country_event = { id = NSB_soviet_propaganda_capmaign_events.2 hours = 4 random_hours = 2 }
 			}
-			else_if = { #SOV is defender - SOV gets mild punishment // #TODO_Manu: This is not triggering when someone declares on SOV
+			else_if = { #SOV is defender - SOV gets mild punishment // #MM: This is not triggering when someone declares on SOV
 				limit = {
 					FROM = { original_tag = SOV }
 					SOV = {

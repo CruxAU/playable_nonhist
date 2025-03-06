@@ -292,12 +292,20 @@ southern_expansion = {
 		OR = {
 			country_exists = HOL
 			country_exists = ENG
+			country_exists = BRM
+			country_exists = RAJ
+			country_exists = MAL
+			country_exists = INS
 		}
 	}
 	abort = {
 		NOT = {
 			country_exists = HOL
 			country_exists = ENG
+			country_exists = BRM
+			country_exists = RAJ
+			country_exists = MAL
+			country_exists = INS 
 		}
 	}
 
@@ -311,16 +319,29 @@ southern_expansion = {
 		id = "ENG"
 		value = 100
 	}
+
 	ai_strategy = {
-		type = declare_war
+		type = antagonize
+		id = "BRM"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
 		id = "MAL"
-		value = 100
+		value = 200
 	}
 	ai_strategy = {
-		type = declare_war
-		id = "ENG"
+		type = antagonize
+		id = "INS"
 		value = 100
 	}
+
+
 }
 
 northern_expansion = {
@@ -338,12 +359,7 @@ northern_expansion = {
 	}
 
 	ai_strategy = {
-		type = ignore
-		id = "SOV"
-		value = 200
-	}
-	ai_strategy = {
-		type = declare_war
+		type = antagonize
 		id = "SOV"
 		value = 200
 	}
@@ -494,6 +510,7 @@ JAP_leave_raj_a_bit = {
 		is_historical_focus_on = yes
 		has_war_with = CHI
 		CHI = { has_capitulated = no }
+		NOT = { has_country_flag = agreed_to_help_bose }
 	}
 	abort_when_not_enabled = yes
 
@@ -1736,3 +1753,4 @@ JAP_hold_up_in_china = { #We got this far but there are bigger targets to worry 
 	}
 
 }
+

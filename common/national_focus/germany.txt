@@ -10741,7 +10741,7 @@ focus_tree = {
 	#	search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
 	#
 	#	completion_reward = {
-	#	custom_effect_tooltip = "TODO_Manu: Effects are underwhelming, need something new"
+	#	custom_effect_tooltip = "MM: Effects are underwhelming, need something new"
 	#		if = {
 	#			limit = {
 	#				HUN = {
@@ -11384,6 +11384,7 @@ focus_tree = {
 			}
 			NOT = { owns_state = 85 }
 			NOT = { has_war_with = POL }
+			#NHMMAP comment out POL = { owns_state = 72 }
 		}
 
 		bypass = {
@@ -12613,12 +12614,14 @@ focus_tree = {
 			OR = {
 				IRE = {
 					exists = yes
+					NOT = { has_war_with = ROOT }
 					NOT = { is_ally_with = ROOT }
 					NOT = { is_guaranteed_by = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }
 				}
 				NIR = {
 					exists = yes
+					NOT = { has_war_with = ROOT }
 					NOT = { is_ally_with = ROOT }
 					NOT = { is_guaranteed_by = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }
@@ -12640,6 +12643,7 @@ focus_tree = {
 				limit = {
 					IRE = {
 						exists = yes
+						NOT = { has_war_with = ROOT }
 						NOT = { is_ally_with = ROOT }
 						NOT = { is_guaranteed_by = ROOT }
 						NOT = { has_non_aggression_pact_with = ROOT }
@@ -12655,6 +12659,7 @@ focus_tree = {
 				limit = {
 					NIR = {
 						exists = yes
+						NOT = { has_war_with = ROOT }
 						NOT = { is_ally_with = ROOT }
 						NOT = { is_guaranteed_by = ROOT }
 						NOT = { has_non_aggression_pact_with = ROOT }
@@ -33284,6 +33289,7 @@ focus_tree = {
 		completion_reward = {
 			
 			add_named_threat = { threat = 3 name = GER_unify_west_africa }
+			
 			every_other_country = {
 				limit = {
 					NOT = {
@@ -39256,7 +39262,7 @@ focus_tree = {
 ######################################
 
 #	focus = {
-#		id = GER_RESET_INNER_CIRCLE #TODO_Manu: REMOVE WHEN APPROPRIATE!!
+#		id = GER_RESET_INNER_CIRCLE #MM: REMOVE WHEN APPROPRIATE!!
 #		x = -2
 #		y = 0
 #		relative_position_id = GER_fuhrerprinzip
@@ -39264,7 +39270,7 @@ focus_tree = {
 #		ai_will_do = {
 #			factor = 0
 #		}
-#		allow_branch = { #TODO_Manu: Enable later! (Adjust shared focuses if any)
+#		allow_branch = { #MM: Enable later! (Adjust shared focuses if any)
 #			if = {
 #				limit = {
 #					has_game_rule = {
