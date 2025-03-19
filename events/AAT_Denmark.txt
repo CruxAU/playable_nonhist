@@ -1291,7 +1291,17 @@ country_event = { #Someone attacked us :'(
 				factor = 5
 				FROM = { is_major = yes }
 			}
-			modifier = { #This should never happen
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_NO_SURRENDER
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_NO_SURRENDER
+					}
+				}
+			}
+			modifier = { #This should never happen (on Historical)
 				factor = 0.5
 				any_allied_country = {
 					is_major = yes
@@ -1376,7 +1386,14 @@ country_event = { #Someone attacked us :'(
 			clr_country_flag = DEN_neutrality_flag
 		}
 		hidden_effect = {
-			play_song = "danish_song_of_liberation"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "danish_song_of_liberation"
+			}
 		}
 	}
 }
@@ -1629,8 +1646,14 @@ country_event = { #Denmark becomes a puppet
 				}
 				white_peace = ROOT
 			}
-
-			play_song =  "rising_tension"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song =  "rising_tension"
+			}
 		}
 	}
 }
@@ -1758,7 +1781,14 @@ country_event = { #Denmark is refused to become a puppet
 			tooltip = resistance_damage_to_garrison_on_our_occupied_states_tt
 		}
 		hidden_effect = {
-			play_song = "danish_song_of_liberation"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "danish_song_of_liberation"
+			}
 		}
 	}
 }
@@ -1931,7 +1961,14 @@ country_event = { #Danish Liberation War
 		DEN_independence_war_effects = yes
 
 		hidden_effect = {
-			play_song = "danish_song_of_liberation"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "danish_song_of_liberation"
+			}
 		}
 
 	}
@@ -1942,6 +1979,11 @@ country_event = { #Danish Liberation War
 			modifier = { #Don't keep ideology if it was forced upon Denmark
 				factor = 0
 				has_country_leader_with_trait = DEN_plenipotentiary
+			}
+			modifier = { 
+				factor = 10
+				has_government = fascism
+				DEN_is_fascist_ai = yes
 			}
 			modifier = { 
 				factor = 10
@@ -1964,7 +2006,14 @@ country_event = { #Danish Liberation War
 		}
 
 		hidden_effect = {
-			play_song = "danish_song_of_liberation"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "danish_song_of_liberation"
+			}
 		}
 	}
 }
@@ -2081,7 +2130,14 @@ country_event = { #Denmark becomes independent peacefully
 		DEN_activate_bought_ships = yes #Denmark receives the Destroyers it bought
 
 		hidden_effect = {
-			play_song = "danish_song_of_liberation"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "danish_song_of_liberation"
+			}
 		}
 	}
 }
@@ -2399,6 +2455,15 @@ country_event = { #Denmark pledges allegiance
 					set_rule = { can_join_factions = yes }
 					set_rule = { can_decline_call_to_war = no }
 				}
+				if = {
+					limit = {
+						ROOT = {
+							owns_state = 99
+						}
+					}
+					DEN = { transfer_state = 99 }
+				}
+				
 			}
 		}
 
@@ -2468,6 +2533,35 @@ country_event = { #Overlord accepts allegiance
 				modifier = DEN_cooperative_subject
 				target = DEN
 			}
+		}
+		if = {
+			limit = {
+				OVERLORD = {
+					owns_state = 99
+				}
+			}
+			ROOT = { transfer_state = 99 }
+		}
+		if = {
+			limit = {
+				OVERLORD = {
+					owns_state = 912
+				}
+			}
+			ROOT = { transfer_state = 912 }
+		}
+		if = {
+			limit = {
+				OVERLORD = {
+					owns_state = 909
+				}
+				909 = {
+					NOT = {
+						is_core_of = OVERLORD
+					}
+				}
+			}
+			ROOT = { transfer_state = 909 }
 		}
 	}
 }
@@ -3846,6 +3940,21 @@ country_event = { #Denmark: Overlord demands another country leader
 					value > 49
 				} 
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+				}
+			}
 		}
 		DEN_bop_occupation_low_decrease_effect = yes
 
@@ -3863,6 +3972,21 @@ country_event = { #Denmark: Overlord demands another country leader
 					DEN_rearming_ai = yes
 					DEN_is_royal_ai = yes
 					DEN_is_fascist_ai = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_EXP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_EXP
+					}
 				}
 			}
 			modifier = {
@@ -3897,8 +4021,9 @@ country_event = { #Denmark: Choose new country leader
 			modifier = {
 				factor = 10
 				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
+					DEN_is_social_democrat_ai = yes
+					DEN_is_liberal_ai = yes
+					DEN_is_conservative_ai = yes
 				}
 			}
 			modifier = {
@@ -3914,7 +4039,10 @@ country_event = { #Denmark: Choose new country leader
 			base = 1
 			modifier = {
 				factor = 10
-				DEN_is_royal_ai = yes
+				OR = {
+					DEN_is_royal_ai = yes
+					DEN_is_farmers_ai = yes
+				}
 			}
 		}
 		trigger = {
@@ -3947,7 +4075,7 @@ country_event = { #Denmark: Choose new country leader
 			base = 1
 			modifier = {
 				factor = 10
-				communism > 0.35
+				DEN_is_communist_ai = yes
 			}
 		}
 		trigger= {
@@ -4024,6 +4152,13 @@ country_event = { #Denmark: Choose democratic country leader
 		name = denmark_overlord_events.12.a 
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					DEN_is_liberal_ai = yes
+					DEN_is_conservative_ai = yes
+				}
+			}
 		}
 		trigger = {
 			AND = {
@@ -4039,6 +4174,13 @@ country_event = { #Denmark: Choose democratic country leader
 		name = denmark_overlord_events.12.b
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					DEN_is_social_democrat_ai = yes
+					DEN_is_conservative_ai = yes
+				}
+			}
 		}
 		trigger= {
 			DEN_knud_kristensen = { is_country_leader = no }
@@ -4051,11 +4193,10 @@ country_event = { #Denmark: Choose democratic country leader
 		ai_chance = {
 			base = 1
 			modifier = {
-				factor = 10
+				factor = 0
 				OR = {
-					DEN_rearming_ai = yes
-					DEN_is_royal_ai  = yes
-					DEN_is_fascist_ai = yes
+					DEN_is_liberal_ai = yes
+					DEN_is_social_democrat_ai = yes
 				}
 			}
 		}
@@ -4083,6 +4224,16 @@ country_event = { #Denmark: Choose democratic country leader
 				OR = {
 					DEN_historical_ai = yes
 					DEN_rearming_ai = yes
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_EXP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_EXP
+					}
 				}
 			}
 		}
@@ -4358,6 +4509,16 @@ country_event = { #Denmark: Overlord installs new leader
 				factor = 2
 				DEN_historical_ai = yes
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+				}
+			}
 		}
 
 		DEN_install_a_plenipotentiary = yes
@@ -4386,7 +4547,22 @@ country_event = { #Denmark: Overlord installs new leader
 					DEN_rearming_ai = yes
 					DEN_is_royal_ai = yes				
 					DEN_is_fascist_ai = yes
-					has_government = communism
+					DEN_is_communist_ai = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_EXP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_EXP
+					}
 				}
 			}
 		}
@@ -4426,13 +4602,6 @@ country_event = { #Denmark: Overlord wants a new government
 				}				
 			}
 			modifier = {
-				factor = 5
-				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
-				}
-			}
-			modifier = {
 				factor = 2
 				has_opinion = {
 					target = FROM
@@ -4441,9 +4610,17 @@ country_event = { #Denmark: Overlord wants a new government
 			}
 			modifier = {
 				factor = 0
-				OR = {	
-					has_government = fascism
-					has_government = communism
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
 				}
 			}
 		}		
@@ -4464,7 +4641,7 @@ country_event = { #Denmark: Overlord wants a new government
 					}
 					AND = {
 						has_government = communism
-						communism > 0.5
+						DEN_is_communist_ai = yes
 					}
 				}
 			}
@@ -4474,6 +4651,21 @@ country_event = { #Denmark: Overlord wants a new government
 					target = FROM
 					value < 0
 				} 
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_EXP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_EXP
+					}
+				}
 			}
 		}		
 		add_war_support = 0.05
@@ -4499,8 +4691,9 @@ country_event = { #Denmark: Chooses new Government form
 			modifier = {
 				factor = 5
 				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
+					DEN_is_conservative_ai = yes
+					DEN_is_liberal_ai = yes
+					DEN_is_social_democrat_ai = yes
 				}
 			}
 			modifier = {
@@ -4527,7 +4720,11 @@ country_event = { #Denmark: Chooses new Government form
 			base = 1
 			modifier = {
 				factor = 10
-				DEN_is_royal_ai = yes
+				OR = {
+					DEN_is_farmers_ai = yes
+					DEN_is_royal_ai = yes
+				}
+				
 			}
 		}
 		trigger = {
@@ -4551,8 +4748,8 @@ country_event = { #Denmark: Chooses new Government form
 		ai_chance = {
 			base = 1
 			modifier = {
-				factor = 5
-				communism > 0.35
+				factor = 10
+				DEN_is_communist_ai = yes
 			}
 		}
 		trigger= {
@@ -4598,14 +4795,15 @@ country_event = { #Denmark: Choose democratic country leader
 		ai_chance = {
 			base = 1
 			modifier = {
-				factor = 10
-				DEN_historical_ai = yes
-				
+				factor = 0
+				OR = {
+					DEN_is_conservative_ai = yes
+					DEN_is_liberal_ai = yes
+				}
 			}
 			modifier = {
 				factor = 5
 				is_historical_focus_on = yes
-				
 			}
 		}
 		DEN_socialdemokratiet_takes_over = yes
@@ -4615,6 +4813,13 @@ country_event = { #Denmark: Choose democratic country leader
 		name = denmark_overlord_events.12.b #Intentional
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					DEN_is_conservative_ai = yes
+					DEN_is_social_democrat_ai = yes
+				}
+			}
 		}
 		DEN_venstre_takes_over = yes
 		OVERLORD = { country_event = { id = denmark_overlord_events.23 days = 1 } }
@@ -4624,8 +4829,11 @@ country_event = { #Denmark: Choose democratic country leader
 		ai_chance = {
 			base = 1
 			modifier = {
-				factor = 10
-				DEN_rearming_ai = yes
+				factor = 0
+				OR = {
+					DEN_is_social_democrat_ai = yes
+					DEN_is_liberal_ai = yes
+				}
 			}
 		}
 		DEN_konservative_takes_over = yes
@@ -4801,6 +5009,16 @@ country_event = { #Denmark: Overlord tries to install its own government form
 					value > 49
 				}
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -4890,7 +5108,22 @@ country_event = { #Denmark: Overlord tries to install its own government form
 					}
 					AND = {
 						has_government = communism
-						communism > 0.5
+						DEN_is_communist_ai = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_EXP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_EXP
 					}
 				}
 			}
@@ -4927,6 +5160,10 @@ country_event = { #Denmark: Overlord wants communism banned
 		name = denmark_overlord_events.26.a 
 		ai_chance = {
 			base = 10
+			modifier = {
+				factor = 0
+				DEN_is_communist_ai = yes
+			}
 		}
 		DEN_bop_occupation_low_decrease_effect = yes
 
@@ -5006,8 +5243,12 @@ country_event = { #Denmark: Overlord wants communism banned
 			base = 1
 			modifier = {
 				factor = 10
-				communism > 0.3
+				OR = {
+					DEN_is_communist_ai = yes
+					communism > 0.3
+				}
 			}
+			
 		}
 		DEN_bop_occupation_low_increase_effect = yes
 		DEN_modify_overlord_relations_big = yes
@@ -5054,6 +5295,10 @@ country_event = { #Denmark: Overlord wants fascism banned
 		name = denmark_overlord_events.29.a 
 		ai_chance = {
 			base = 10
+			modifier = {
+				factor = 0
+				DEN_is_fascist_ai = yes
+			}
 		}
 		DEN_bop_occupation_low_decrease_effect = yes
 
@@ -5199,13 +5444,6 @@ country_event = { #Denmark: Overlord wants weapons
 			}
 			modifier = {
 				factor = 5
-				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
-				}
-			}
-			modifier = {
-				factor = 5
 				is_historical_focus_on = yes
 			}
 		}	
@@ -5251,6 +5489,7 @@ country_event = { #Denmark: Overlord wants weapons
 						OR = {
 							has_government = communism
 							DEN_is_royal_ai = yes
+							DEN_is_communist_ai = yes
 						}
 					}
 				}
@@ -5396,13 +5635,6 @@ country_event = { #Denmark: Overlord wants troops
 					value > 49
 				}
 			}
-			modifier = {
-				factor = 5
-				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
-				}
-			}
 		}	
 		add_manpower = -2500
 		effect_tooltip = {
@@ -5443,6 +5675,7 @@ country_event = { #Denmark: Overlord wants troops
 						OR = {
 							has_government = communism
 							DEN_is_royal_ai = yes
+							DEN_is_communist_ai = yes
 						}
 					}
 				}
@@ -5585,13 +5818,30 @@ country_event = { #Denmark: Overlord wants to install a Plenipotentiary
 				factor = 2
 				is_historical_focus_on = yes
 			}
-			modifier = { 
-				factor = 2
-				DEN_historical_ai = yes
-			}
-			modifier = { 
-				factor = 1.5
-				DEN_rearming_ai = yes
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_SABOTAGE
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_SABOTAGE
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_INDP
+					}
+				}
 			}
 		}
 
@@ -5615,12 +5865,14 @@ country_event = { #Denmark: Overlord wants to install a Plenipotentiary
 		name = denmark_overlord_events.40.b	
 		ai_chance = {
 			base = 1
-			modifier = { 
-				factor = 5
+			modifier = {
+				factor = 0
 				OR = {
-					DEN_is_royal_ai = yes
-					DEN_is_fascist_ai = yes
-					has_government = communism
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
 				}
 			}
 		}
@@ -5743,6 +5995,21 @@ country_event = { #Denmark: overlord tries to install a loyal governor anyways!
 		name = denmark_overlord_events.43.a 	
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST
+					}
+				}
+			}
 		}
 		
 		DEN_install_a_plenipotentiary= yes
@@ -5796,6 +6063,26 @@ country_event = { #Denmark: Overlord tries to take Jutland
 				factor = 2
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_SABOTAGE
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_SABOTAGE
+					}
+				}
+			}
 		}
 
 		DEN_bop_occupation_high_decrease_effect = yes
@@ -5822,6 +6109,16 @@ country_event = { #Denmark: Overlord tries to take Jutland
 		name = denmark_overlord_events.43.b #intentional	
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY
+					}
+				}
+			}
 		}
 
 		DEN_bop_occupation_medium_increase_effect = yes
@@ -5887,12 +6184,22 @@ country_event = { #Overlord: Denmark refuses to part from Jutland
 	option = { #Take it anyway!
 		name = denmark_overlord_events.46.b 	
 		ai_chance = {
-			base = 5
+			base = 3
 			modifier = {
-				factor = 2
-				OR = {
-					has_government = fascism
-					has_government = communism
+				factor = 4
+				NOT = {
+					OR = {
+						any_neighbor_country = {
+							has_war_with = ROOT
+							has_capitulated = no
+						}
+						AND = {
+							has_war_with = NOR
+							NOR = {
+								has_capitulated = no
+							}
+						}
+					}
 				}
 			}
 		}
@@ -5942,6 +6249,26 @@ country_event = { #Denmark: Overlord tries to annex the rest of Denmark
 			modifier = {
 				factor = 2
 				DEN_historical_ai = yes
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST_INDP
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_RESIST
+					}
+					has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_SABOTAGE
+					has_game_rule = {
+						rule = DEN_ai_overlord_behavior
+						option = OVERLORD_COMPLY_SABOTAGE
+					}
+				}
 			}
 		}
 
@@ -7098,7 +7425,7 @@ country_event = { #Denmark wants to join/create alliance
 			}
 		}
 		ai_chance = {
-			base = 2
+			base = 5
 			modifier = {
 				factor = 2
 				has_country_flag = DEN_danish_trading_partner_flag
@@ -7212,7 +7539,7 @@ country_event = { #Denmark wants to join/create alliance
 			}
 		}
 		ai_chance = {
-			base = 2
+			base = 1
 			modifier = {
 				factor = 5
 				has_civil_war = yes

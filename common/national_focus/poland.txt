@@ -8748,11 +8748,12 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_country_leader = {
-						character = HUN_otto_von_habsburg
-						ruling_only = yes
+					AUS = {
+						has_country_leader = {
+							character = HUN_otto_von_habsburg
+							ruling_only = yes
+						}
 					}
-					
 				}
 				if = {
 					limit = {

@@ -5922,7 +5922,7 @@ TUR_does_not_like_factions = {
 	abort = {
 		TUR = {
 			OR = {
-				has_war = yes
+				has_war_with_major = yes
 				is_in_faction = yes
 			}
 		}
@@ -7053,6 +7053,172 @@ DEN_make_potential_puppets_like_me_LIT = {
 	ai_strategy = {
 		type = diplo_action_desire
 		id = LIT
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_allies_like_me_GER = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		focus_progress = {
+			focus = DEN_ask_for_support
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = DEN_ask_for_support
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GER
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_overlord_like_me_compliance_GER = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		is_subject = yes
+		has_completed_focus = DEN_align_with_overlord
+		is_subject_of = GER
+		GER = {
+			has_opinion	= {
+				target = ROOT
+				value < 20
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_completed_focus = DEN_sanction_sabotages
+			is_subject = no
+			GER = {
+				has_opinion	= {
+					target = ROOT
+					value > 70
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GER
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_overlord_like_me_compliance_SWE = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		is_subject = yes
+		has_completed_focus = DEN_align_with_overlord
+		is_subject_of = SWE
+		SWE = {
+			has_opinion	= {
+				target = ROOT
+				value < 20
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_completed_focus = DEN_sanction_sabotages
+			is_subject = no
+			SWE = {
+				has_opinion	= {
+					target = ROOT
+					value > 70
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SWE
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_overlord_like_me_compliance_ENG = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		is_subject = yes
+		has_completed_focus = DEN_align_with_overlord
+		is_subject_of = ENG
+		ENG = {
+			has_opinion	= {
+				target = ROOT
+				value < 20
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_completed_focus = DEN_sanction_sabotages
+			is_subject = no
+			ENG = {
+				has_opinion	= {
+					target = ROOT
+					value > 70
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_overlord_like_me_compliance_NOR = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		is_subject = yes
+		has_completed_focus = DEN_align_with_overlord
+		is_subject_of = NOR
+		NOR = {
+			has_opinion	= {
+				target = ROOT
+				value < 20
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_completed_focus = DEN_sanction_sabotages
+			is_subject = no
+			NOR = {
+				has_opinion	= {
+					target = ROOT
+					value > 70
+				}
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = NOR
 		target = improve_relation
 		value = 500
 	}	

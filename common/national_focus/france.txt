@@ -6593,99 +6593,120 @@
 				is_subject = no
 				is_subject_of = GER
 			}
-			295 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			538 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			718 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			769 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			768 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			890 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			888 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			889 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
+			295 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			538 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			718 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			769 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			768 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			890 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			888 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
+			889 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL AND = { tag = COG is_faction_leader = no num_of_civilian_factories < 20 } } } }
 		}
 		
 		bypass = {
-			BEL = { 
-				exists = no 
-			}
-			NOT = { 
-				295 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+			OR = {
+				COG = {
+					AND = {
+						is_subject = no
+						controls_state = 295
+						controls_state = 538
+						controls_state = 718
+						controls_state = 769
+						controls_state = 768
+						controls_state = 890
+						controls_state = 888
+						controls_state = 889
+						OR = {
+							is_faction_leader = yes
+							num_of_civilian_factories > 20
+						}
+					}
+				}
+				AND = {
+					BEL = { 
+						exists = no 
+					}
+					NOT = { 
+						295 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				538 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						538 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				718 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						718 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				769 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						769 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				768 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						768 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				890 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						890 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				888 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						888 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
-			}
-			NOT = { 
-				889 = { 
-					CONTROLLER = { 
-						OR = { 
-							tag = BEL 
-							is_subject_of = BEL 
+					}
+					NOT = { 
+						889 = { 
+							CONTROLLER = { 
+								OR = { 
+									tag = BEL 
+									is_subject_of = BEL 
+								} 
+							} 
 						} 
-					} 
-				} 
+					}
+				}
 			}
 		}
 

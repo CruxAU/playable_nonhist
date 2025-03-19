@@ -3184,10 +3184,23 @@ POL_NSB_fascist_plan = {
 		has_DLC = "No Step Back"
 	}
 	abort = {
-		is_subject = yes
-		NOT = {
-			has_government = fascism
-		} #Should cancel if Poland ends up a puppet of someone and isn't fascist
+		OR = {
+			AND = {
+				has_country_flag = POL_AI_RANDOM_FASCIST
+				GER = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+			AND = {
+				is_subject = yes
+				NOT = {
+					has_government = fascism
+				} #Should cancel if Poland ends up a puppet of someone and isn't fascist
+			}
+		}
+		
 	}
 
 	ai_national_focuses = {
@@ -3286,7 +3299,22 @@ POL_NSB_independent_fascist_plan = {
 		has_DLC = "No Step Back"
 	}
 	abort = {
-		
+		OR = {
+			AND = {
+				has_country_flag = POL_AI_RANDOM_FASCIST_INDEPENDENT
+				GER = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+			AND = {
+				is_subject = yes
+				NOT = {
+					has_government = fascism
+				} #Should cancel if Poland ends up a puppet of someone and isn't fascist
+			}
+		}
 	}
 
 	ai_national_focuses = {
@@ -3371,6 +3399,17 @@ POL_NSB_falangist_plan = {
 			has_game_rule = {
 				rule = POL_ai_behavior
 				option = FALANGE
+			}
+			AND = {
+				OR = {
+					has_country_flag = POL_AI_RANDOM_FASCIST_
+					has_country_flag = POL_AI_RANDOM_FASCIST_INDEPENDENT
+				}
+				GER = {
+					NOT = {
+						has_government = fascism
+					}
+				}
 			}
 		}
 		has_DLC = "No Step Back"

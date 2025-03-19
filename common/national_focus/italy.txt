@@ -15784,23 +15784,6 @@ focus_tree = {
 			is_in_faction_with = GER
 		}
 
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0
-				ITA_is_monarchist_ai = yes
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			modifier = {
-				factor = 0
-				ITA_is_christian_democracy_ai = yes
-				NOT = {
-					has_government = democratic
-				}
-			}
-		}
 
 		available = {
 			NOT = { has_war_with = GER }
@@ -18825,7 +18808,12 @@ focus_tree = {
 
 			#BELLA CIAO
 			hidden_effect = {
-				play_song = "bella_ciao"
+				if = {
+					limit = {
+						is_ai = no
+					}
+					play_song = "bella_ciao"
+				}
 			}
 
 			if = {

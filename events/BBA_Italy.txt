@@ -5721,7 +5721,14 @@ country_event = {
 
 		#BELLA CIAO
 		hidden_effect = {
-			play_song = "bella_ciao"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "bella_ciao"
+			}
 		}
 	}
 
@@ -5756,7 +5763,14 @@ country_event = {
 
 		#BELLA CIAO
 		hidden_effect = {
-			play_song = "bella_ciao"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "bella_ciao"
+			}
 		}
 	}
 
@@ -5791,7 +5805,14 @@ country_event = {
 
 		#BELLA CIAO
 		hidden_effect = {
-			play_song = "bella_ciao"
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				play_song = "bella_ciao"
+			}
 		}
 	}
 }

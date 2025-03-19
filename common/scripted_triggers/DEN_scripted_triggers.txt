@@ -93,11 +93,6 @@ DEN_balancing_ai = { #NHMMAP
 
 DEN_rearming_ai = { #NHMMAP
 	OR = {
-		has_country_flag = DEN_AI_RANDOM_ALLIANCE_PLAN
-		has_game_rule = {
-			rule = DEN_ai_behavior
-			option = DEN_rearmament_plan
-		}
 		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NEUTRAL
 		has_game_rule = {
 			rule = DEN_ai_behavior
@@ -263,11 +258,6 @@ DEN_is_farmers_ai = { #NHMMAP, fp = farmers party (Bondepartiet), they dont care
 
 DEN_is_royal_ai = { #NHMMAP
 	OR = {
-		has_country_flag = DEN_AI_RANDOM_MONARCHIST_PLAN
-		has_game_rule = {
-			rule = DEN_ai_behavior
-			option = DEN_monarchist_plan
-		}
 		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
 		has_game_rule = {
 			rule = DEN_ai_behavior
@@ -328,10 +318,85 @@ DEN_is_royal_ai = { #NHMMAP
 
 DEN_is_fascist_ai = { #NHMMAP
 	OR = {
-		has_country_flag = DEN_AI_RANDOM_FASCIST_PLAN
+		has_country_flag = DEN_AI_RANDOM_FASCIST_NEU
 		has_game_rule = {
 			rule = DEN_ai_behavior
-			option = DEN_fascist_plan
+			option = FASCIST_NEU
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_NEU_EXP
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_NEU_EXP
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_DIPLO_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_DIPLO_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_DIPLO_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_EXP_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_EXP_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_EXP_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_NEU
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU_EXP
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_NEU_EXP
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_DIPLO_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_DIPLO_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_DIPLO_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_EXP_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_EXP_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_EXP_BALTIC
 		}
 	}
 }

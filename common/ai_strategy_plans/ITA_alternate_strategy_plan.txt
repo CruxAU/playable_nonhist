@@ -7618,3 +7618,49 @@ ITA_pope_rome_plan = {
 		}
 	}
 }
+
+ITA_dont_do_pact_unless_correct_ideo = {
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			has_completed_focus = ITA_balkan_ambition
+			has_completed_focus = ITA_potential_allies_in_the_balkans
+		}
+		OR = {
+			ITA_is_monarchist_ai = yes
+			ITA_is_christian_democracy_ai = yes
+		}
+	}
+
+	abort = { 
+		OR = {
+			AND = {
+				ITA_is_monarchist_ai = yes
+				has_government = neutrality
+			}
+			AND = {
+				ITA_is_christian_democracy_ai = yes
+				has_government = democratic
+			}
+			date > 1939.7.7
+		}
+	}
+
+
+	#Focuses never to take
+	focus_factors = {
+		ITA_pact_of_steel = 0
+	}			
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 2.0
+		}
+	}
+}

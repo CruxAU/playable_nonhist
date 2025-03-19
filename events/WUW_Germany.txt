@@ -13182,6 +13182,31 @@ country_event = {
 		name = wuw_GER_civil_war.3.a
 		ai_chance = {
 			base = 60
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEMOCRATIC
+					}
+					has_country_flag = GER_AI_RANDOM_DEMOCRATIC_COLONIAL
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEMOCRATIC_COLONIAL
+					}
+					has_country_flag = GER_AI_RANDOM_DEMOCRATIC_DIPLO
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEMOCRATIC_DIPLO
+					}
+					has_country_flag = GER_AI_RANDOM_DEMOCRATIC_EXP
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEMOCRATIC_EXP
+					}
+				}
+			}
 		}
 		
 		add_popularity = {
@@ -13198,6 +13223,46 @@ country_event = {
 		name = wuw_GER_civil_war.3.b
 		ai_chance = {
 			base = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = GER_AI_RANDOM_KAISER
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_ALT
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_BLITZKRIEG
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_CHINA_ALLY
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_CHINA_ALLY
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_DIPLO
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_DIPLO
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_ENG_ALLY
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_ENG_ALLY
+					}
+					has_country_flag = GER_AI_RANDOM_KAISER_EXP
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER_EXP
+					}
+				}
+			}
 		}
 
 		add_popularity = {
@@ -13225,6 +13290,76 @@ country_event = {
 		name = wuw_GER_civil_war.4.a
 		ai_chance = {
 			base = 80
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						neutrality < 0.4
+						OR = {
+							has_country_flag = GER_AI_RANDOM_KAISER
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER
+							}
+							has_country_flag = GER_AI_RANDOM_KAISER_ALT
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER
+							}
+							has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_BLITZKRIEG
+							}
+							has_country_flag = GER_AI_RANDOM_KAISER_CHINA_ALLY
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_CHINA_ALLY
+							}
+							has_country_flag = GER_AI_RANDOM_KAISER_DIPLO
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_DIPLO
+							}
+							has_country_flag = GER_AI_RANDOM_KAISER_ENG_ALLY
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_ENG_ALLY
+							}
+							has_country_flag = GER_AI_RANDOM_KAISER_EXP
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_EXP
+							}
+						}
+					}
+					AND = {
+						democratic < 0.4
+						OR = {
+							has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = DEMOCRATIC
+							}
+							has_country_flag = GER_AI_RANDOM_DEMOCRATIC_COLONIAL
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = DEMOCRATIC_COLONIAL
+							}
+							has_country_flag = GER_AI_RANDOM_DEMOCRATIC_DIPLO
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = DEMOCRATIC_DIPLO
+							}
+							has_country_flag = GER_AI_RANDOM_DEMOCRATIC_EXP
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = DEMOCRATIC_EXP
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		IF = {

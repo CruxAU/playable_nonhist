@@ -8328,7 +8328,12 @@ focus_tree = {
 				add = stalin_father_of_nations
 			}
 			hidden_effect = {
-				play_song = "comintern_war_1"
+				if = {
+					limit = {
+						is_ai = no
+					}
+					play_song = "comintern_war_1"
+				}
 			}
 		}
 	}

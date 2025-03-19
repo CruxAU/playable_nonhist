@@ -11,6 +11,7 @@ add_namespace = nonhist_CHI
 add_namespace = nonhist_JAP
 add_namespace = nonhist_GER
 add_namespace = nonhist_TUR
+add_namespace = nonhist_NOR
 add_namespace = nonhist_generic
 add_namespace = nonhist_news
 
@@ -5090,6 +5091,84 @@ country_event = { #event for a communist mediterranean country saying turkey wan
 	}
 }
 
+################################################################################
+################################################################################
+################################# NORWAY ######################################
+################################################################################
+################################################################################
+
+country_event = { # Quisling's Historical Coup event 
+	id = nonhist_NOR.1
+	title = AAT_norway.13.t
+	desc = nonhist_NOR.1.desc	
+	picture = GFX_report_event_NOR_quisling_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Stay democratic
+		name = nonhist_NOR.1.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0 
+				OR = {
+					has_country_flag = NOR_AI_RANDOM_HISTORICAL_FASCIST_Q
+					has_game_rule = {
+						rule = NOR_AI_BEHAVIOR
+						option = HISTORICAL_FASCIST_Q
+					}
+					has_country_flag = NOR_AI_RANDOM_HISTORICAL_FASCIST_RK
+					has_game_rule = {
+						rule = NOR_AI_BEHAVIOR
+						option = HISTORICAL_FASCIST_RK
+					}
+				}
+			}
+		}
+		trigger = {
+		}
+		hidden_effect = {
+			set_country_flag = NOR_refused_to_switch_to_fasc_NHMMAP 
+		}
+		
+		custom_effect_tooltip = NOR_stay_democratic_NHMMAP_TT
+		
+	}
+	
+	option = { # Leave Quisling to take over
+		name = nonhist_NOR.1.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0 
+				OR = {
+					AND = {
+						is_historical_focus_on = yes 
+						has_game_rule = {
+							rule = NOR_AI_BEHAVIOR
+							option = DEFAULT
+						}
+					}
+					has_country_flag = NOR_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = NOR_AI_BEHAVIOR
+						option = HISTORICAL
+					}
+				}
+			}
+		}
+		trigger = {
+		}
+		hidden_effect = {
+			set_country_flag = NOR_switched_to_fasc_hist 
+		}
+		custom_effect_tooltip = NOR_switch_to_fascist_NHMMAP_TT # Warning about that Oslo City Shuffle
+		
+	}
+
+}
 
 
 ################################################################################

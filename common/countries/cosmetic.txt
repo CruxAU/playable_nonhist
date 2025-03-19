@@ -1557,6 +1557,16 @@ LEB_mandate = {
 	color_ui = rgb { 57  113  228 }
 }
 
+SYR_vichy = {
+	color = rgb { 80 168 181 }
+	color_ui = rgb {115 185 196 }
+}
+
+LEB_vichy = {
+	color = rgb { 80 168 181 }
+	color_ui = rgb {115 185 196 }
+}
+
 KUW_protectorate = {
 	color = rgb { 201 56 93 }
 	color_ui = rgb { 255 73 121 }

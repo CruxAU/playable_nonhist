@@ -436,4 +436,78 @@ on_actions = {
 		}
 	}
 
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = NOR_norwegian_fascist_cw_started }
+					ROOT = {
+						original_tag = GER 
+						has_government = fascism
+						is_faction_leader = yes 
+					}
+					FROM = {
+						original_tag = NOR
+						NOT = { has_government = fascism }
+						has_civil_war = no 
+						NOT = { has_country_flag = NOR_refused_to_switch_to_fasc_NHMMAP }
+					}
+				}
+				NOR = {
+					if = { # Norway has chosen Fascist branch
+						limit = {
+							has_completed_focus = NOR_lurk_in_the_shadows
+							NOT = { has_completed_focus = NOR_nasjonal_samling }
+	
+						}
+						####################
+						#IMPORTANT: THIS IS ALREADY IN 09_aat_on_actions.txt NOT NEEDED IN NHMMAP
+						####################
+						# country_event = {  
+						# 	id = AAT_norway.199
+						# 	hours = 1
+						# }
+					}
+						
+					###################
+					#But THIS part IS needed in NHMMAP:
+					###################
+	
+					else_if = {  # Democratic but Quisling is still around
+						limit = {
+							NOR = {	 
+								has_completed_focus = NOR_continue_nygaardsvold_government 
+								NOT = { has_completed_focus = NOR_arrest_quisling }
+								is_subject = no
+							}
+						}
+						if = {
+							limit = {
+								NOR = { NOT = { has_completed_focus = NOR_fascist_invasion_of_norway } }
+							}
+							complete_national_focus = NOR_fascist_invasion_of_norway
+						}
+						country_event = {
+							id = nonhist_NOR.1
+							hours = 1 
+						}
+					}
+					else_if = { # Democratic but Quisling is arrrested
+						limit = {
+							NOR = {
+								has_completed_focus = NOR_continue_nygaardsvold_government 
+								is_subject = no
+							}
+						}
+						if = {
+							limit = {
+								NOR = { NOT = { has_completed_focus = NOR_fascist_invasion_of_norway } }
+							}
+							complete_national_focus = NOR_fascist_invasion_of_norway
+						}
+					}
+				}
+			}
+		}
+	}
 }

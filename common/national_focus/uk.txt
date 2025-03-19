@@ -3472,7 +3472,18 @@ focus_tree = {
 		prerequisite = { focus = ENG_foundations_for_an_indian_state }
 		available = { 
 			is_subject = no
-			RAJ = { is_subject_of = ENG }
+			if = {
+				limit = {
+					has_dlc = "Graveyard of Empires"
+					has_event_target = UK_INDIA
+				}
+				event_target:UK_INDIA = {
+					is_subject_of = ROOT
+				}
+			}
+			else = {
+				RAJ = { is_subject_of = ENG }
+			}
 			hidden_trigger = {
 					if = {
 						limit = {

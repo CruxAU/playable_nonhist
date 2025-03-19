@@ -1,0 +1,2327 @@
+NOR_historical_plan_quisling = {
+	name = "Norwegian Historical Plan"
+	desc = ""
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_HISTORICAL_FASCIST_Q
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = HISTORICAL_FASCIST_Q
+			}
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_quislings_coup
+		NOR_quislings_regime
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_arrest_quisling = 0
+		NOR_reviving_the_norgesveldet = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 2.0
+		modifier = {
+			factor = 2.0
+		}
+	}
+}
+
+NOR_historical_plan_rk_norway = {
+	name = "Norwegian Historical Plan"
+	desc = ""
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_HISTORICAL_FASCIST_RK
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = HISTORICAL_FASCIST_RK
+			}
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_quislings_coup
+		NOR_get_rid_of_quisling
+	}
+
+	focus_factors = {
+		NOR_quislings_regime = 0
+		NOR_arrest_quisling = 0
+		NOR_bring_back_quisling = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 2.0
+		modifier = {
+			factor = 2.0
+		}
+	}
+}
+
+NOR_democratic_alternate = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALT
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = DEMOCRATIC_ALT
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		NOR_vote_of_no_confidence #5
+		NOR_liberal_conservative_alliance #10
+		NOR_consolidate_power #10
+		NOR_invite_foreign_investment #10
+		NOR_squash_dissent #5
+		NOR_sabotage_unions #10
+
+		#1937
+		NOR_invite_transnational_manufacturers #10
+		NOR_weathering_the_storm_to_come
+		NOR_restore_public_trust_in_the_storting #10
+		NOR_building_an_independent_norway #10
+		NOR_hurtigruten #10
+		NOR_norwegian_school_of_economics #10
+
+		#1938
+		NOR_contain_the_labor_movement #5
+		NOR_the_neutrality_guard #10
+		NOR_rearm_for_defense #10
+		NOR_patrol_our_coast #10
+		NOR_fortify_norway #5
+		NOR_coastal_defense #5
+
+		# As soon as war breaks out
+		NOR_the_kings_no
+		NOR_support_finland_in_winter_war #when available
+		NOR_replace_laake
+		NOR_prince_olavs_inspiration
+		NOR_establish_milorg
+		NOR_approach_the_coordinating_committee
+		NOR_approach_kretsen
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_empower_sivorg
+
+		#1939
+		NOR_start_rearmament #10
+		NOR_denounce_the_german_reich #5
+		NOR_rikstanken #5
+		NOR_kickstart_military_industry #10
+		NOR_norges_tekniske_hogskole #10
+		NOR_the_royal_norwegian_navy #10
+
+		# 1940
+		NOR_uproot_secret_army
+		NOR_prepare_for_war
+		NOR_reform_the_army
+		NOR_protect_finnmark_from_the_bolsheviks
+		
+		
+		
+	}
+
+	focus_factors = {
+		NOR_proactive_defense = 0
+		NOR_join_the_allies = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_democratic_alternate_allies = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = DEMOCRATIC_ALLIES
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		NOR_vote_of_no_confidence #5
+		NOR_liberal_conservative_alliance #10
+		NOR_consolidate_power #10
+		NOR_invite_foreign_investment #10
+		NOR_squash_dissent #5
+		NOR_sabotage_unions #10
+
+		#1937
+		NOR_invite_transnational_manufacturers #10
+		NOR_weathering_the_storm_to_come
+		NOR_restore_public_trust_in_the_storting #10
+		NOR_building_an_independent_norway #10
+		NOR_hurtigruten #10
+		NOR_norwegian_school_of_economics #10
+
+		#1938
+		NOR_contain_the_labor_movement #5
+		NOR_the_neutrality_guard #10
+		NOR_rearm_for_defense #10
+		NOR_patrol_our_coast #10
+		NOR_fortify_norway #5
+		NOR_coastal_defense #5
+
+		# As soon as war breaks out
+		NOR_the_kings_no
+		NOR_support_finland_in_winter_war #when available
+		NOR_replace_laake
+		NOR_prince_olavs_inspiration
+		NOR_establish_milorg
+		NOR_approach_the_coordinating_committee
+		NOR_approach_kretsen
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_empower_sivorg
+
+		#1939
+		NOR_start_rearmament #10
+		NOR_denounce_the_german_reich #5
+		NOR_join_the_allies
+		NOR_rikstanken #5
+		NOR_kickstart_military_industry #10
+		NOR_norges_tekniske_hogskole #10
+		NOR_the_royal_norwegian_navy #10
+
+		# 1940
+		NOR_uproot_secret_army
+		NOR_prepare_for_war
+		NOR_reform_the_army
+		NOR_protect_finnmark_from_the_bolsheviks
+		
+		
+		
+	}
+
+	focus_factors = {
+		NOR_secure_denmark = 0
+		NOR_secure_the_swedish_iron_ore = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_proactive_defense_chance = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = DEMOCRATIC_ALLIES
+			}
+		}
+		is_in_faction = no
+	}
+	abort = {
+
+	}
+	focus_factors = {
+		NOR_proactive_defense = 0
+	}
+
+}
+
+NOR_democratic_alternate_allies_expansion = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALLIES_EXP
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = DEMOCRATIC_ALLIES_EXP
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		NOR_vote_of_no_confidence #5
+		NOR_liberal_conservative_alliance #10
+		NOR_consolidate_power #10
+		NOR_invite_foreign_investment #10
+		NOR_squash_dissent #5
+		NOR_sabotage_unions #10
+
+		#1937
+		NOR_weathering_the_storm_to_come #5
+		NOR_restore_public_trust_in_the_storting #10
+		NOR_building_an_independent_norway #10
+		NOR_hurtigruten #10
+		NOR_norwegian_school_of_economics #10
+		NOR_contain_the_labor_movement #5
+
+		#1938
+		NOR_the_neutrality_guard #10
+		NOR_start_rearmament #10
+		NOR_denounce_the_german_reich #5
+		NOR_kickstart_military_industry #10
+		NOR_join_the_allies #5
+		NOR_prepare_for_war #10
+
+		#1939
+		NOR_proactive_defense #10
+		NOR_secure_denmark #10
+		NOR_rearm_for_defense #10
+		NOR_support_finland_in_winter_war #when available
+		NOR_secure_the_swedish_iron_ore #10
+		
+		# 1940
+		NOR_reform_the_army
+		NOR_uproot_secret_army #10
+		NOR_invite_transnational_manufacturers #10
+		NOR_patrol_our_coast #10
+		NOR_expand_Haeren #10
+
+		# if at war and if capitulated after this 
+		NOR_the_kings_no
+		NOR_prince_olavs_inspiration
+		NOR_establish_milorg
+		NOR_approach_the_coordinating_committee
+		NOR_approach_kretsen
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_empower_sivorg
+
+		#1941
+		NOR_fortify_norway #5
+		NOR_coastal_defense #5
+		NOR_norges_tekniske_hogskole #10
+		NOR_the_royal_norwegian_navy #10
+		NOR_replace_laake		
+	}
+
+	focus_factors = {
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_democratic_alternate_nordic = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_NORDIC
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = DEMOCRATIC_NORDIC
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		NOR_vote_of_no_confidence #5
+		NOR_liberal_conservative_alliance #10
+		NOR_consolidate_power #10
+		NOR_invite_foreign_investment #10
+		NOR_squash_dissent #5
+		NOR_sabotage_unions #10
+
+		#1937
+		NOR_invite_transnational_manufacturers #10
+		NOR_weathering_the_storm_to_come
+		NOR_restore_public_trust_in_the_storting #10
+		NOR_building_an_independent_norway #10
+		NOR_hurtigruten #10
+		NOR_norwegian_school_of_economics #10
+
+		#1938
+		NOR_contain_the_labor_movement #5
+		NOR_the_neutrality_guard #10
+		NOR_rearm_for_defense #10
+		NOR_patrol_our_coast #10
+		NOR_fortify_norway #5
+		NOR_coastal_defense #5
+
+		# As soon as war breaks out
+		NOR_the_kings_no
+		NOR_support_finland_in_winter_war #when available
+		NOR_replace_laake
+		NOR_prince_olavs_inspiration
+		NOR_establish_milorg
+		NOR_approach_the_coordinating_committee
+		NOR_approach_kretsen
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_empower_sivorg
+		NORDIC_form_joint_alliance
+
+		#1939
+		NOR_start_rearmament #10
+		NOR_denounce_the_german_reich #5
+		NOR_prepare_for_war
+		NOR_proactive_defense
+		NOR_rikstanken #5
+		NOR_kickstart_military_industry #10
+		NOR_norges_tekniske_hogskole #10
+		NOR_the_royal_norwegian_navy #10
+
+		# 1940
+		NOR_uproot_secret_army
+		
+		NOR_reform_the_army
+		NOR_protect_finnmark_from_the_bolsheviks
+	}
+
+	focus_factors = {
+		NOR_join_the_allies = 0
+		NOR_secure_denmark = 0
+		NOR_secure_the_swedish_iron_ore = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_democratic_alternate_nordic_expansion = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_NORDIC_EXP
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = DEMOCRATIC_NORDIC_EXP
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		NOR_vote_of_no_confidence #5
+		NOR_liberal_conservative_alliance #10
+		NOR_consolidate_power #10
+		NOR_invite_foreign_investment #10
+		NOR_squash_dissent #5
+		NOR_sabotage_unions #10
+
+		#1937
+		NOR_weathering_the_storm_to_come #5
+		NOR_restore_public_trust_in_the_storting #10
+		NOR_building_an_independent_norway #10
+		NOR_hurtigruten #10
+		NOR_norwegian_school_of_economics #10
+		NOR_contain_the_labor_movement #5
+
+		#1938
+		NOR_the_neutrality_guard #10
+		NOR_start_rearmament #10
+		NOR_denounce_the_german_reich #5
+		NOR_kickstart_military_industry #10
+		NOR_prepare_for_war #10
+
+		#1939
+		NOR_proactive_defense #10
+		NOR_secure_denmark #10
+		NOR_rearm_for_defense #10
+		NOR_support_finland_in_winter_war #when available
+		NOR_secure_the_swedish_iron_ore #10
+		
+		# 1940
+		NOR_reform_the_army
+		NOR_uproot_secret_army #10
+		NOR_invite_transnational_manufacturers #10
+		NOR_patrol_our_coast #10
+		NOR_expand_Haeren #10
+
+		# if at war and if capitulated after this 
+		NOR_the_kings_no
+		NOR_prince_olavs_inspiration
+		NOR_establish_milorg
+		NOR_approach_the_coordinating_committee
+		NOR_approach_kretsen
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_empower_sivorg
+		NORDIC_form_joint_alliance
+
+		#1941
+		NOR_fortify_norway #5
+		NOR_coastal_defense #5
+		NOR_norges_tekniske_hogskole #10
+		NOR_the_royal_norwegian_navy #10
+		NOR_replace_laake		
+	}
+
+	focus_factors = {
+		NOR_join_the_allies = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_the_stumbling_storting
+		NOR_lurk_in_the_shadows
+		NOR_approach_the_fatherland_league
+		NOR_cultivate_the_conservative_parties
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+		NOR_the_secret_army
+		NOR_quislings_coup
+		NOR_quislings_regime
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_rikstanken
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_crackdown_on_civilian_life
+		NOR_elevate_hirden
+		
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_reviving_the_norgesveldet = 0
+		NOR_join_the_axis = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_quisling_exp_russia = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_V_RU
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_V_RU
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#36
+		NOR_the_stumbling_storting #35
+		NOR_lurk_in_the_shadows #35
+		NOR_approach_the_fatherland_league #35
+		NOR_cultivate_the_conservative_parties #35
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support #35
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+
+		#37
+		NOR_the_secret_army
+		NOR_quislings_coup #7
+		NOR_quislings_regime #35
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+
+		#38
+		NOR_rikstanken #35
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_norwegian_school_of_economics
+		NOR_empower_large_industrial_groups
+		NOR_military_police #35
+
+		#39
+		NOR_extensive_recruitment
+		NOR_ulfhedhnar_wolf_coats
+		NOR_reviving_the_norgesveldet #35
+		NOR_claims_on_denmark
+		NOR_lynrytter
+		NOR_aluminum_production
+
+		#40
+		NOR_swedish_claims
+		NOR_the_weapons_of_conquest
+		NOR_crackdown_on_civilian_life
+		NOR_abandoning_nynorsk
+		NOR_elevate_hirden
+	
+		#41
+		NOR_norges_rikstanksfabrikk
+		NOR_the_royal_norwegian_navy
+		NOR_improve_production_lines
+		NOR_bjarmeland
+		NOR_revamp_hydroelectric_capacity
+		
+		
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_join_the_axis = 0
+		NOR_old_vinland = 0
+		NOR_claims_on_ireland = 0
+		NOR_claims_on_scotland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_quisling_exp_england = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_V_UK
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_V_UK
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#36
+		NOR_the_stumbling_storting #35
+		NOR_lurk_in_the_shadows #35
+		NOR_approach_the_fatherland_league #35
+		NOR_cultivate_the_conservative_parties #35
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support #35
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+
+		#37
+		NOR_the_secret_army
+		NOR_quislings_coup #7
+		NOR_quislings_regime #35
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+
+		#38
+		NOR_rikstanken #35
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_norwegian_school_of_economics
+		NOR_empower_large_industrial_groups
+		NOR_military_police #35
+
+		#39
+		NOR_extensive_recruitment
+		NOR_ulfhedhnar_wolf_coats
+		NOR_reviving_the_norgesveldet #35
+		NOR_claims_on_denmark
+		NOR_lynrytter
+		NOR_aluminum_production
+
+		#40
+		NOR_swedish_claims
+		NOR_the_weapons_of_conquest
+		NOR_crackdown_on_civilian_life
+		NOR_abandoning_nynorsk
+		NOR_elevate_hirden
+	
+		#41
+		NOR_claims_on_ireland
+		NOR_norges_rikstanksfabrikk
+		NOR_old_vinland
+		NOR_the_royal_norwegian_navy
+		NOR_improve_production_lines
+
+		#42
+		NOR_revamp_hydroelectric_capacity
+		NOR_claims_on_scotland
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_join_the_axis = 0
+		NOR_bjarmeland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_germanic = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_PAN_GERMANIC
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_PAN_GERMANIC
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_the_stumbling_storting
+		NOR_lurk_in_the_shadows
+		NOR_approach_the_fatherland_league
+		NOR_cultivate_the_conservative_parties
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+		NOR_the_secret_army
+		NOR_quislings_coup
+		NOR_quislings_regime
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_rikstanken
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_crackdown_on_civilian_life
+		NOR_elevate_hirden
+		NOR_abandoning_nynorsk
+		NOR_pan_germanic_cooperation
+		
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_reviving_the_norgesveldet = 0
+		NOR_join_the_axis = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_quisling_exp_russia_germanic = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_PAN_GERMANIC_V_RU
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_PAN_GERMANIC_V_RU
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#36
+		NOR_the_stumbling_storting #35
+		NOR_lurk_in_the_shadows #35
+		NOR_approach_the_fatherland_league #35
+		NOR_cultivate_the_conservative_parties #35
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support #35
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+
+		#37
+		NOR_the_secret_army
+		NOR_quislings_coup #7
+		NOR_quislings_regime #35
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+
+		#38
+		NOR_rikstanken #35
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_norwegian_school_of_economics
+		NOR_crackdown_on_civilian_life
+		NOR_military_police #35
+
+		#39
+		NOR_extensive_recruitment
+		NOR_ulfhedhnar_wolf_coats
+		NOR_reviving_the_norgesveldet #35
+		NOR_pan_germanic_cooperation
+		NOR_claims_on_denmark
+		NOR_lynrytter
+		
+
+		#40
+		NOR_aluminum_production
+		NOR_swedish_claims
+		NOR_the_weapons_of_conquest
+		NOR_empower_large_industrial_groups
+		NOR_abandoning_nynorsk
+		
+	
+		#41
+		NOR_elevate_hirden
+		NOR_norges_rikstanksfabrikk
+		NOR_the_royal_norwegian_navy
+		NOR_improve_production_lines
+		NOR_bjarmeland
+		
+		#42
+		NOR_revamp_hydroelectric_capacity
+		
+		
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_join_the_axis = 0
+		NOR_old_vinland = 0
+		NOR_claims_on_ireland = 0
+		NOR_claims_on_scotland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_quisling_exp_england_germanic = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_PAN_GERMANIC_V_UK
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_PAN_GERMANIC_V_UK
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#36
+		NOR_the_stumbling_storting #35
+		NOR_lurk_in_the_shadows #35
+		NOR_approach_the_fatherland_league #35
+		NOR_cultivate_the_conservative_parties #35
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support #35
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+
+		#37
+		NOR_the_secret_army
+		NOR_quislings_coup #7
+		NOR_quislings_regime #35
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+
+		#38
+		NOR_rikstanken #35
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_norwegian_school_of_economics
+		NOR_crackdown_on_civilian_life
+		NOR_military_police #35
+
+		#39
+		NOR_extensive_recruitment
+		NOR_ulfhedhnar_wolf_coats
+		NOR_reviving_the_norgesveldet #35
+		NOR_pan_germanic_cooperation
+		NOR_claims_on_denmark
+		NOR_lynrytter
+		
+
+		#40
+		NOR_aluminum_production
+		NOR_swedish_claims
+		NOR_the_weapons_of_conquest
+		NOR_empower_large_industrial_groups
+		NOR_abandoning_nynorsk
+		
+		#41
+		NOR_elevate_hirden
+		NOR_claims_on_ireland
+		NOR_norges_rikstanksfabrikk
+		NOR_old_vinland
+		NOR_the_royal_norwegian_navy
+		
+		#42
+		NOR_improve_production_lines
+		NOR_revamp_hydroelectric_capacity
+		NOR_claims_on_scotland
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_join_the_axis = 0
+		NOR_bjarmeland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_axis = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_AXIS
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_the_stumbling_storting
+		NOR_lurk_in_the_shadows
+		NOR_approach_the_fatherland_league
+		NOR_cultivate_the_conservative_parties
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+		NOR_the_secret_army
+		NOR_quislings_coup
+		NOR_quislings_regime
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_rikstanken
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_crackdown_on_civilian_life
+		NOR_elevate_hirden
+		NOR_join_the_axis
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_reviving_the_norgesveldet = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_axis_puppet = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_AXIS_PUPPET
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_PUPPET
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_the_stumbling_storting
+		NOR_lurk_in_the_shadows
+		NOR_approach_the_fatherland_league
+		NOR_cultivate_the_conservative_parties
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+		NOR_the_secret_army
+		NOR_quislings_coup
+		NOR_get_rid_of_quisling
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_rikstanken
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_crackdown_on_civilian_life
+		NOR_the_administrative_council
+		NOR_join_the_axis
+		NOR_fascist_military_collaboration
+		NOR_fascist_industrial_investments
+		NOR_frontkjempere
+		NOR_norwegian_reichsprotectorate
+		NOR_bring_back_quisling
+	}
+
+	focus_factors = {
+		NOR_quislings_regime = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_reviving_the_norgesveldet = 0
+		NOR_jonas_lie_coup = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_axis_rk = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_AXIS_RK
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_RK
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_the_stumbling_storting
+		NOR_lurk_in_the_shadows
+		NOR_approach_the_fatherland_league
+		NOR_cultivate_the_conservative_parties
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+		NOR_the_secret_army
+		NOR_quislings_coup
+		NOR_get_rid_of_quisling
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_rikstanken
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_crackdown_on_civilian_life
+		NOR_the_administrative_council
+		NOR_join_the_axis
+		NOR_fascist_military_collaboration
+		NOR_fascist_industrial_investments
+		NOR_frontkjempere
+		NOR_norwegian_reichsprotectorate
+		NOR_jonas_lie_coup
+		NOR_a_valuable_partner_to_germany
+		NOR_invite_german_engineers
+	}
+
+	focus_factors = {
+		NOR_quislings_regime = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_reviving_the_norgesveldet = 0
+		NOR_bring_back_quisling = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_axis_russia = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_AXIS_V_RU
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_V_RU
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#36
+		NOR_the_stumbling_storting #35
+		NOR_lurk_in_the_shadows #35
+		NOR_approach_the_fatherland_league #35
+		NOR_cultivate_the_conservative_parties #35
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support #35
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+
+		#37
+		NOR_the_secret_army
+		NOR_quislings_coup #7
+		NOR_quislings_regime #35
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+
+		#38
+		NOR_rikstanken #35
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_norwegian_school_of_economics
+		NOR_crackdown_on_civilian_life
+		NOR_military_police #35
+
+		#39
+		NOR_extensive_recruitment
+		NOR_ulfhedhnar_wolf_coats
+		NOR_reviving_the_norgesveldet #35
+		NOR_join_the_axis
+		NOR_claims_on_denmark
+		NOR_lynrytter
+		
+
+		#40
+		NOR_aluminum_production
+		NOR_swedish_claims
+		NOR_the_weapons_of_conquest
+		NOR_empower_large_industrial_groups
+		NOR_abandoning_nynorsk
+		
+	
+		#41
+		NOR_elevate_hirden
+		NOR_norges_rikstanksfabrikk
+		NOR_the_royal_norwegian_navy
+		NOR_improve_production_lines
+		NOR_bjarmeland
+		
+		#42
+		NOR_revamp_hydroelectric_capacity
+		
+		
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_old_vinland = 0
+		NOR_claims_on_ireland = 0
+		NOR_claims_on_scotland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_fascist_plan_axis_eng = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_FASCIST_AXIS_V_UK
+			}
+			has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_V_UK
+		}	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#36
+		NOR_the_stumbling_storting #35
+		NOR_lurk_in_the_shadows #35
+		NOR_approach_the_fatherland_league #35
+		NOR_cultivate_the_conservative_parties #35
+		NOR_get_industrialist_support
+		NOR_ask_for_foreign_support #35
+		NOR_nasjonal_samling
+		NOR_empower_hirden
+
+		#37
+		NOR_the_secret_army
+		NOR_quislings_coup #7
+		NOR_quislings_regime #35
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+
+		#38
+		NOR_rikstanken #35
+		NOR_improved_weapons
+		NOR_building_an_independent_norway
+		NOR_norwegian_school_of_economics
+		NOR_crackdown_on_civilian_life
+		NOR_military_police #35
+
+		#39
+		NOR_extensive_recruitment
+		NOR_ulfhedhnar_wolf_coats
+		NOR_reviving_the_norgesveldet #35
+		NOR_join_the_axis
+		NOR_claims_on_denmark
+		NOR_lynrytter
+		
+
+		#40
+		NOR_aluminum_production
+		NOR_swedish_claims
+		NOR_the_weapons_of_conquest
+		NOR_empower_large_industrial_groups
+		NOR_abandoning_nynorsk
+		
+		#41
+		NOR_elevate_hirden
+		NOR_claims_on_ireland
+		NOR_norges_rikstanksfabrikk
+		NOR_old_vinland
+		NOR_the_royal_norwegian_navy
+		
+		#42
+		NOR_improve_production_lines
+		NOR_revamp_hydroelectric_capacity
+		NOR_claims_on_scotland
+	}
+
+	focus_factors = {
+		NOR_get_rid_of_quisling = 0
+		NOR_pan_germanic_cooperation = 0
+		NOR_bjarmeland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_stalinist_plan = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_STALINIST
+			}
+			has_country_flag = NOR_AI_RANDOM_STALINIST
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement
+		NOR_compromise_with_the_nkp
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people
+		NOR_organize_partisan_militias
+		NOR_demand_nationalizations
+		NOR_workers_and_farmers_rise
+	}
+
+	focus_factors = {
+		NOR_join_the_comintern = 0
+		NOR_war_in_finland = 0
+		NOR_a_new_norway = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_stalinist_plan_exp = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_STALINIST_EXP
+			}
+			has_country_flag = NOR_AI_RANDOM_STALINIST_EXP
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_compromise_with_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_moscows_education_centers
+		NOR_revive_pomor_trade
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_invite_secret_army
+		NOR_soviet_industrial_cooperation
+
+		NOR_field_hospitals #35
+		NOR_war_in_finland
+		NOR_expanded_conscription_drive
+		NOR_send_the_king_back_to_denmark #35
+		NOR_nationalize_the_hydro_plants
+		NOR_worker_armies
+		NOR_expand_military_industry
+		NOR_a_new_norway
+	}
+
+	focus_factors = {
+		NOR_join_the_comintern = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_stalinist_plan_cmt = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_STALINIST_COMINTERN
+			}
+			has_country_flag = NOR_AI_RANDOM_STALINIST_COMINTERN
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_compromise_with_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_moscows_education_centers
+		NOR_revive_pomor_trade
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_invite_secret_army
+		NOR_soviet_industrial_cooperation
+
+		NOR_join_the_comintern
+		NOR_invite_soviet_designers
+	}
+
+	focus_factors = {
+		NOR_war_in_finland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_stalinist_plan_cmt_exp = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_STALINIST_COMINTERN_EXP
+			}
+			has_country_flag = NOR_AI_RANDOM_STALINIST_COMINTERN_EXP
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_compromise_with_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_moscows_education_centers
+		NOR_revive_pomor_trade
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_invite_secret_army
+		NOR_soviet_industrial_cooperation
+
+		NOR_join_the_comintern
+		NOR_invite_soviet_designers
+		NOR_field_hospitals #35
+		NOR_war_in_finland
+		NOR_expanded_conscription_drive
+		NOR_send_the_king_back_to_denmark #35
+		NOR_nationalize_the_hydro_plants
+		NOR_worker_armies
+		NOR_expand_military_industry
+		NOR_a_new_norway
+	}
+
+	focus_factors = {
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_trotskyist_plan = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_TROSTSKYIST
+			}
+			has_country_flag = NOR_AI_RANDOM_TROSTSKYIST
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement
+		NOR_prosecute_the_nkp
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people
+		NOR_organize_partisan_militias
+		NOR_demand_nationalizations
+		NOR_workers_and_farmers_rise
+	}
+
+	focus_factors = {
+		NOR_reawaken_the_permanent_revolution = 0
+		NOR_defend_finland = 0
+		NOR_secure_the_swedish_iron_ore = 0
+		NOR_secure_denmark = 0
+		NOR_a_new_norway = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_trotskyist_plan_internationale = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_TROSTSKYIST_INTERNATIONAL
+			}
+			has_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_prosecute_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_consolidate_power
+		NOR_squash_dissent
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_denounce_the_german_reich
+		NOR_prepare_for_war
+
+		NOR_reawaken_the_permanent_revolution
+		NOR_norwegian_engineering
+		NOR_proactive_defense
+		NOR_send_the_king_back_to_denmark #35
+		NOR_nationalize_the_hydro_plants
+		NOR_worker_armies
+		NOR_expand_military_industry
+		NOR_a_new_norway
+		NOR_defend_finland
+	}
+
+	focus_factors = {
+		NOR_crush_stalin = 0
+		NOR_secure_the_swedish_iron_ore = 0
+		NOR_secure_denmark = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_trotskyist_plan_internationale_expansion = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_TROSTSKYIST_INTERNATIONAL_NORD
+			}
+			has_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL_NORD
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_prosecute_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_consolidate_power
+		NOR_squash_dissent
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics	
+		NOR_reawaken_the_permanent_revolution
+		NOR_defend_finland
+		NOR_proactive_defense 
+		NOR_secure_denmark
+
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_denounce_the_german_reich
+		NOR_prepare_for_war
+		NOR_secure_the_swedish_iron_ore
+		
+		NOR_norwegian_engineering
+		NOR_send_the_king_back_to_denmark #35
+		NOR_nationalize_the_hydro_plants
+		NOR_worker_armies
+		NOR_expand_military_industry
+		NOR_a_new_norway
+	}
+
+	focus_factors = {
+		NOR_crush_hitler = 0
+		NOR_crush_stalin = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_trotskyist_plan_internationale_expansion_anti_stalin = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_TROSTSKYIST_INTERNATIONAL_SOV
+			}
+			has_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL_SOV
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_prosecute_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_consolidate_power
+		NOR_squash_dissent
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics	
+		NOR_reawaken_the_permanent_revolution
+		NOR_defend_finland
+		NOR_proactive_defense 
+		NOR_secure_denmark
+
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_denounce_the_german_reich
+		NOR_prepare_for_war
+		NOR_secure_the_swedish_iron_ore
+		
+		NOR_norwegian_engineering
+		NOR_send_the_king_back_to_denmark #35
+		NOR_nationalize_the_hydro_plants
+		NOR_worker_armies
+		NOR_expand_military_industry
+		NOR_a_new_norway
+
+		NOR_crush_stalin
+	}
+
+	focus_factors = {
+		NOR_crush_hitler = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_trotskyist_plan_internationale_expansion_anti_hitler = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_TROSTSKYIST_INTERNATIONAL_GER
+			}
+			has_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL_GER
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_a_resurgent_labor_movement #35
+		NOR_prosecute_the_nkp  #35
+		NOR_the_seeds_of_the_revolution
+		NOR_the_voice_of_the_people  #35 
+		NOR_organize_partisan_militias  #35
+		NOR_demand_nationalizations #35
+		NOR_workers_and_farmers_rise
+
+		NOR_consolidate_power
+		NOR_squash_dissent
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		NOR_kickstart_military_industry
+		NOR_building_an_independent_norway
+
+		NOR_norwegian_school_of_economics	
+		NOR_reawaken_the_permanent_revolution
+		NOR_defend_finland
+		NOR_proactive_defense 
+		NOR_secure_denmark
+
+		NOR_fund_local_construction
+		NOR_revamp_hydroelectric_capacity
+		NOR_denounce_the_german_reich
+		NOR_prepare_for_war
+		NOR_secure_the_swedish_iron_ore
+		
+		NOR_norwegian_engineering
+		NOR_send_the_king_back_to_denmark #35
+		NOR_nationalize_the_hydro_plants
+		NOR_worker_armies
+		NOR_expand_military_industry
+		NOR_a_new_norway
+
+		NOR_crush_hitler
+	}
+
+	focus_factors = {
+		NOR_crush_stalin = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_monarchist_plan = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		NOR_is_monarchist_ai = yes 	
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		NOR_the_stumbling_storting
+		NOR_the_chamberlains_overture
+		NOR_send_the_storting_home
+		NOR_assure_the_population
+		NOR_demand_king_haakons_rise_to_power
+		NOR_the_crowns_executive_powers
+		NOR_a_warden_king
+		NOR_the_kingdom_of_norway
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# NOR_democratic_to_civil_war_plan = {
+# 	name = "Norwegian Alternative Historical Plan"
+# 	desc = ""
+
+# 	allowed = {
+# 		NOR_AAT = yes
+# 	}
+# 	enable = {
+# 		OR = {
+# 			AND = {
+# 				is_historical_focus_on = yes 
+# 				has_game_rule = {
+# 					rule = NOR_AI_BEHAVIOR
+# 					option = DEFAULT
+# 				}
+# 			}
+# 			has_country_flag = NOR_AI_RANDOM_HISTORICAL
+# 			has_game_rule = {
+# 				rule = NOR_ai_behavior
+# 				option = HISTORICAL
+# 			}
+# 		}	
+# 	}
+# 	abort = {
+# 		is_subject = yes 
+# 	}
+
+# 	ai_national_focuses = {
+		
+# 		#1936
+# 		NOR_continue_nygaardsvold_government #5
+# 		NOR_broken_gun_policies #10
+# 		NOR_leaving_the_hard_thirties_behind #10
+# 		NOR_cut_military_budget #10
+# 		NOR_bail_out_towns #5
+# 		NOR_print_more_money #10
+
+# 		#1937
+# 		NOR_social_incrementalism #10
+# 		NOR_restart_public_investment #5
+# 		NOR_restore_public_trust_in_the_storting #10
+# 		NOR_building_an_independent_norway #10
+# 		NOR_hurtigruten #10
+# 		NOR_norwegian_school_of_economics #10
+
+# 		#1938
+# 		NOR_weathering_the_storm_to_come #5
+# 		NOR_the_neutrality_guard #10
+# 		NOR_rearm_for_defense #10
+# 		NOR_patrol_our_coast #10
+# 		NOR_fortify_norway #5
+# 		NOR_coastal_defense #5
+
+# 		# As soon as war breaks out
+# 		NOR_quislings_coup #1
+# 		NOR_get_rid_of_quisling #5
+# 		NOR_the_administrative_council #10
+# 		NOR_norwegian_reichsprotectorate #5
+# 		NOR_fascist_military_collaboration #5 
+# 		NOR_frontkjempere #10
+# 		NOR_fascist_industrial_investments #10
+
+# 		#1939
+# 		NOR_start_rearmament #10
+# 		NOR_drobak_coastal_fort #5
+# 		NOR_rikstanken #5
+# 		NOR_kickstart_military_industry #10
+# 		NOR_norges_tekniske_hogskole #10
+# 		NOR_the_royal_norwegian_navy #10
+
+		
+# 		#1940
+# 		# Probably Busy Doing the Fascist Stuff 
+
+# 		#1941
+# 		NOR_modernize_fortifications #10
+# 		NOR_expand_the_dockyards #10
+# 		NOR_expand_merchant_marine #10
+# 		NOR_haerens_flyvevaaben #10
+# 		NOR_foreign_plane_designs #10
+# 		NOR_invest_in_airfields #10
+
+
+# 		#1942
+# 		NOR_kystvakten #10
+# 		NOR_artillery_development #10
+# 		NOR_crackdown_on_civilian_life #10
+# 		NOR_bring_back_quisling #10 
+# 		NOR_empower_large_industrial_groups #10
+
+# 		#1943
+# 		NOR_revamp_hydroelectric_capacity #10 
+# 		NOR_anti_air_support #10
+# 		NOR_aluminum_production #10
+# 		NOR_complete_the_sourthern_railway_network #10
+# 		NOR_stavanger_airfield #10
+
+# 		#1944
+# 		NOR_buy_aa_from_sweden #10
+# 		NOR_mine_laying_effort #10
+# 		NOR_convoy_defense #10
+# 		NOR_expand_Haeren #10
+# 		NOR_improved_weapons #10
+# 	}
+
+# 	focus_factors = {
+		
+# 	}
+
+# 	research = {
+
+# 	}
+
+# 	ideas = {
+
+# 	}
+
+# 	# Keep small, as it is used as a factor for some things (such as research needs)
+# 	# Recommended around 1.0. Useful for relation between plans
+# 	weight = {
+# 		factor = 1.0
+# 		modifier = {
+# 			factor = 1.0
+# 		}
+# 	}
+
+# }

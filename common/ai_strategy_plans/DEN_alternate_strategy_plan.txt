@@ -952,93 +952,6 @@ DEN_rearm_farmers_alliance_plan = {
 	}
 }
 
-DEN_rearmament_plan = {
-	name = "Danish Rearmament"
-	desc = "Denmark will try to seek alliances with stronger nations and try to withstand any invasion attempts."
-
-	allowed = {
-		original_tag = DEN
-	}
-	enable = {
-		OR = {
-			has_country_flag = DEN_AI_RANDOM_ALLIANCE_PLAN
-			has_game_rule = {
-				rule = DEN_ai_behavior
-				option = DEN_REARMAMENT_PLAN
-			}
-		}
-	}
-
-	abort = { 
-		
-	}
-
-	ai_national_focuses = {
-		#1936
-		DEN_kanslergadeforliget			#35
-		DEN_agricultural_subsidies				#70
-		DEN_devalue_the_krone					#35	
-		DEN_trade_with_britain					#70		
-		DEN_trade_with_germany					#70
-		DEN_industrial_investments				#70
-
-		#1937
-		DEN_public_works						#70
-		DEN_support_schleswigian_farmers		#70	
-		DEN_declare_neutrality					#35
-		DEN_political_unity						#35
-		DEN_start_the_rearmament				#35
-		DEN_national_unity						#35
-		DEN_sign_forsvarsforliget				#35
-		DEN_seek_protection						#35
-
-		#1938
-		DEN_expand_vaernepligten				#70
-		DEN_strength_in_numbers					#35
-		DEN_military_cooperation_program		#70
-		DEN_joint_military_drills				#70
-		DEN_industrial_preparations				#70
-
-		#1939
-		DEN_military_preparations				#70
-		DEN_civilian_preparations				#70
-		DEN_full_social_mobilization			#70
-		DEN_social_stability					#35
-		DEN_build_motorveje						#70
-
-		#1940
-		DEN_no_market_regulations				#70
-		DEN_foreign_designs						#70
-		DEN_haeren_reorganization				#35
-		DEN_welcome_foreign_scientists			#70
-		DEN_expand_ubadsvabnet					#35
-
-	}
-
-	#Focuses never to take
-	focus_factors = {
-		DEN_unify_the_right = 0
-		DEN_policy_of_disarmament = 0
-	}			
-
-	research = {
-
-	}
-
-	ideas = {
-
-	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
 DEN_monarchist_plan_alliance = {
 	name = "Expansionist Monarchy"
 	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
@@ -1826,13 +1739,13 @@ DEN_monarchist_plan_conquest_ger = {
 	#Focuses never to take
 	focus_factors = {
 		DEN_political_unity = 0
-		DEN_avenging_1864 = 0
+		DEN_avenging_1864 = 5
 		DEN_trade_with_germany = 0
 		DEN_sway_the_nordics = 0
 		DEN_march_on_the_capital = 0
 		DEN_secure_swedish_steel = 5
 		DEN_finish_off_finland = 5
-		DEN_dominium_maris_baltici = 5
+		DEN_dominium_maris_baltici = 0
 	}			
 
 	research = {
@@ -1963,19 +1876,23 @@ DEN_monarchist_plan_conquest_baltic = {
 	}
 }
 
-DEN_fascist_plan = {
-	name = "Fascist Denmark"
-	desc = "The Fascist Party will try to seize power in Denmark and re-establish the North Sea Empire of old."
+DEN_fascist_plan_neutral = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
 
 	allowed = {
 		original_tag = DEN
 	}
 	enable = {
 		OR = {
-			has_country_flag = DEN_AI_RANDOM_FASCIST_PLAN
+			has_country_flag = DEN_AI_RANDOM_FASCIST_NEU
 			has_game_rule = {
 				rule = DEN_ai_behavior
-				option = DEN_FASCIST_PLAN
+				option = FASCIST_NEU
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU
+				GER = { NOT = { has_government = fascism } }
 			}
 		}
 	}
@@ -1985,41 +1902,61 @@ DEN_fascist_plan = {
 	}
 
 	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
 		#1936
-		DEN_fortify_our_borders					#35
+		DEN_kanslergadeforliget					#35
 		DEN_devalue_the_krone					#35	
-		DEN_trade_with_britain					#70		
-		DEN_build_a_modern_dannevirke			#70
-		DEN_trade_with_germany					#70
-		DEN_fortify_the_islands					#70		
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_public_works						#70		
 
 		#1937
 		DEN_connect_the_islands					#70
 		DEN_declare_neutrality					#35
-		DEN_sign_forsvarsforliget				#35
-		DEN_expand_vaernepligten				#35
-		DEN_refortify_tunestillingen			#70
-		DEN_secure_our_supply_lines				#70
-
-		#1938
-		DEN_stockpile_oil						#70
-		DEN_expand_institut_for_teoretisk_fysik	#70
 		DEN_unify_the_right						#35
 		DEN_conservatives_support				#35
-		DEN_encourage_paramilitary					#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_strengthen_the_officer_corp			#35
+	
+
+		#1938
 		DEN_overthrow_the_government			#70
 		DEN_march_on_the_capital				#35
+		DEN_seize_power 						#35
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
 
 		#1939
+		
+		DEN_expand_kobenhavns_university #70
+		DEN_rally_the_nation #70
+		DEN_institute_corporatism
+		DEN_reintegrate_iceland 
+		DEN_assault_troops
 
 		#1940
+		DEN_experimental_technology
+		DEN_develop_iceland
 
 	}
 
 	#Focuses never to take
 	focus_factors = {
 		DEN_political_unity = 0
+		DEN_denmark_first = 0
 		DEN_king_assumes_power = 0
+		DEN_sway_the_nordics = 0
+		DEN_reclaim_norway = 0
+		DEN_establish_the_danelaw = 0
+		DEN_dominium_maris_baltici = 0
+		DEN_ask_for_support = 0
 	}			
 
 	research = {
@@ -2029,6 +1966,1876 @@ DEN_fascist_plan = {
 	ideas = {
 
 	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_neu_expansionist = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_NEU_EXP
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_NEU_EXP
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU_EXP
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_public_works						#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_strengthen_the_officer_corp			#35
+	
+
+		#1938
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital				#35
+		DEN_seize_power #35
+		DEN_rally_the_nation #70
+		DEN_sway_the_nordics
+		DEN_offer_protection
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+		DEN_reintegrate_iceland 
+
+		#1940
+		DEN_develop_iceland
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_denmark_first = 0
+		DEN_reclaim_norway = 0
+		DEN_ask_for_support = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_sway_kalmar = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_DIPLO_NORD
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_NORD
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital				#35
+		DEN_seize_power #35
+		DEN_rally_the_nation
+		DEN_sway_the_nordics
+		DEN_offer_protection
+		DEN_public_works						#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+
+	
+
+		#1938
+
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_denmark_first
+		DEN_institute_corporatism #70
+		DEN_experimental_technology #70
+		DEN_assault_troops #35
+		DEN_reintegrate_iceland 
+
+		#1940
+		DEN_develop_iceland
+
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_ask_for_support = 0
+		DEN_reclaim_norway = 5
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_sway_danelaw = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_DIPLO_ENG
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_ENG
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+
+		#1937
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_seize_power 				#35
+		DEN_rally_the_nation #70
+		DEN_sway_the_nordics #35
+		DEN_offer_protection #35
+
+		#1938
+		DEN_denmark_first #70
+		DEN_fortify_the_islands					#70		
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization #35
+	
+		#1939
+		DEN_expand_institut_for_teoretisk_fysik				#70
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+
+		#1940
+		DEN_prioritize_navy #70
+		DEN_reintegrate_iceland #35
+		DEN_expand_ubadsvabnet #35
+		DEN_refit_civilian_ships #70
+		DEN_develop_iceland #35
+		DEN_finish_off_finland #70
+		DEN_pan_scandinavianism #35
+		
+		#1941
+		DEN_hjemmevaernet #35
+		DEN_expand_haerens_tekniske_korps #70
+		DEN_strengthen_military_industries #70
+		DEN_danske_stalvalsevaerket #70
+		DEN_appropriate_odense_staalskibsvaerft #35
+		DEN_restructuring_sovaernet  #70
+
+		#1942
+		DEN_north_sea_ambitions #70
+		DEN_naval_power_projection #70
+		DEN_domestic_designs #70
+		DEN_unify_flyvevabnet #35
+		DEN_flyveskolen #70
+		#DEN_reclaim_norway #70
+		
+		#1943
+		DEN_military_might #35
+		DEN_protect_the_faroe_islands
+		DEN_establish_the_danelaw
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_ask_for_support = 0
+		DEN_trade_with_britain = 0
+		DEN_king_assumes_power = 0
+		DEN_reclaim_norway = 5
+		DEN_dominium_maris_baltici = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_sway_baltic = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_DIPLO_BALTIC
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_trade_with_britain 					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		#1937
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_rally_the_nation 				#35
+		DEN_seize_power	#35
+		DEN_sway_the_nordics #35
+		#1938
+		DEN_offer_protection
+		DEN_fortify_the_islands					#70		
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization
+	
+		#1939
+		DEN_denmark_first #70
+		DEN_expand_institut_for_teoretisk_fysik				#70
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_assault_troops #70
+
+		#1940
+		DEN_experimental_technology #70
+		DEN_reintegrate_iceland 
+		DEN_the_royal_guard
+		DEN_develop_iceland
+		DEN_finish_off_finland
+		
+		
+		DEN_pan_scandinavianism
+		
+		DEN_hjemmevaernet
+		DEN_expand_haerens_tekniske_korps
+		DEN_dominium_maris_baltici
+		DEN_military_might
+		
+		
+		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_establish_the_danelaw = 0
+		DEN_king_assumes_power = 0
+		DEN_reclaim_norway = 5
+		DEN_ask_for_support = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_conquest_norway = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_EXP_NORD
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_NORD
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+
+		#1937
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_seize_power #35
+		
+		DEN_public_works						#70		
+
+		#1938
+
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+		DEN_stockpile_oil						#70
+		DEN_denmark_first
+
+		
+		
+
+		#1939
+		DEN_reclaim_norway
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism
+		DEN_reintegrate_iceland 
+		DEN_prioritize_army #70
+
+		#1940
+		DEN_total_war
+		DEN_develop_iceland
+		DEN_haeren_reorganization
+		DEN_hjemmevaernet
+		DEN_train_mountain_infantry
+
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_finish_off_finland = 0
+		DEN_establish_the_danelaw = 0
+		DEN_sway_the_nordics = 0
+		DEN_ask_for_support = 0
+		DEN_dominium_maris_baltici = 0
+
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_conquest_eng = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_EXP_ENG
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_ENG
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+
+		#1937
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_seize_power 				#35
+		DEN_rally_the_nation #70
+		DEN_denmark_first #70
+
+		#1938
+		DEN_fortify_the_islands					#70		
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization #35
+		DEN_expand_institut_for_teoretisk_fysik				#70
+	
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_reclaim_norway	#70
+		DEN_reorient_production_lines	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+
+		#1940
+		DEN_prioritize_navy #70
+		DEN_reintegrate_iceland #35
+		DEN_expand_ubadsvabnet #35
+		DEN_refit_civilian_ships #70
+		DEN_develop_iceland #35
+		DEN_finish_off_finland #70
+		DEN_pan_scandinavianism #35
+		
+		#1941
+		DEN_hjemmevaernet #35
+		DEN_expand_haerens_tekniske_korps #70
+		DEN_strengthen_military_industries #70
+		DEN_danske_stalvalsevaerket #70
+		DEN_appropriate_odense_staalskibsvaerft #35
+		DEN_restructuring_sovaernet  #70
+
+		#1942
+		DEN_north_sea_ambitions #70
+		DEN_naval_power_projection #70
+		DEN_domestic_designs #70
+		DEN_unify_flyvevabnet #35
+		DEN_flyveskolen #70
+		DEN_military_might #35
+		
+		#1943
+		DEN_protect_the_faroe_islands
+		DEN_establish_the_danelaw
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_trade_with_britain = 0
+		DEN_king_assumes_power = 0
+		DEN_sway_the_nordics = 0
+		DEN_ask_for_support = 0
+		DEN_dominium_maris_baltici = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_plan_conquest_baltic = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_EXP_BALTIC
+			}
+			AND = {
+				has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+				GER = { NOT = { has_government = fascism } }
+			}
+		}
+	}
+
+	abort = { 
+	
+	}
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_trade_with_britain
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_seize_power 				#35
+		DEN_fortify_the_islands					#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization
+	
+
+		#1938
+		DEN_denmark_first
+		DEN_expand_institut_for_teoretisk_fysik				#70
+	
+
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_rally_the_nation
+		DEN_reclaim_norway
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+		DEN_reintegrate_iceland 
+		
+
+		#1940
+		DEN_develop_iceland
+		
+		DEN_pan_scandinavianism
+		
+		DEN_hjemmevaernet
+		DEN_expand_haerens_tekniske_korps
+		
+
+		
+		
+		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_establish_the_danelaw = 0
+		DEN_sway_the_nordics = 0
+		DEN_ask_for_support = 0
+		DEN_king_assumes_power = 0
+		DEN_finish_off_finland = 5
+		DEN_dominium_maris_baltici = 5
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+
+DEN_fascist_axis_plan_neutral = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_NEU
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU
+		GER = { NOT = { has_government = fascism } }
+	}	
+
+	ai_national_focuses = {
+		#ASAP
+		NORDIC_form_joint_alliance
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_public_works						#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_strengthen_the_officer_corp			#35
+	
+
+		#1938
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital				#35
+		DEN_ask_for_support 						#35
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+
+		#1939
+		
+		DEN_expand_kobenhavns_university #70
+		DEN_rally_the_nation #70
+		DEN_institute_corporatism
+		DEN_reintegrate_iceland 
+		DEN_assault_troops
+
+		#1940
+		DEN_experimental_technology
+		DEN_develop_iceland
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_sway_the_nordics = 0
+		DEN_reclaim_norway = 0
+		DEN_establish_the_danelaw = 0
+		DEN_dominium_maris_baltici = 0
+		DEN_seize_power = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_neu_expansionist = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU_EXP
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_NEU_EXP
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU_EXP
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_public_works						#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_strengthen_the_officer_corp			#35
+	
+
+		#1938
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital				#35
+		DEN_ask_for_support #35
+		DEN_rally_the_nation #70
+		DEN_sway_the_nordics
+		DEN_offer_protection
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+		DEN_reintegrate_iceland 
+
+		#1940
+		DEN_develop_iceland
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_reclaim_norway = 0
+		DEN_seize_power = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_sway_kalmar = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_DIPLO_NORD
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_NORD
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital				#35
+		DEN_ask_for_support #35
+		DEN_rally_the_nation
+		DEN_sway_the_nordics
+		DEN_offer_protection
+		DEN_public_works						#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+
+	
+
+		#1938
+
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_dano_german_military_cooperation
+		DEN_institute_corporatism #70
+		DEN_experimental_technology #70
+		DEN_assault_troops #35
+		DEN_reintegrate_iceland 
+
+		#1940
+		DEN_develop_iceland
+
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_seize_power = 0
+		DEN_reclaim_norway = 5
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_sway_danelaw = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_DIPLO_ENG
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_ENG
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+
+		#1937
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_ask_for_support 				#35
+		DEN_rally_the_nation #70
+		DEN_sway_the_nordics #35
+		DEN_offer_protection #35
+
+		#1938
+		DEN_fortify_the_islands					#70		
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization #35
+	
+		#1939
+		DEN_expand_institut_for_teoretisk_fysik				#70
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+
+		#1940
+		DEN_prioritize_navy #70
+		DEN_reintegrate_iceland #35
+		DEN_expand_ubadsvabnet #35
+		DEN_refit_civilian_ships #70
+		DEN_develop_iceland #35
+		DEN_finish_off_finland #70
+		DEN_pan_scandinavianism #35
+		
+		#1941
+		DEN_hjemmevaernet #35
+		DEN_expand_haerens_tekniske_korps #70
+		DEN_strengthen_military_industries #70
+		DEN_danske_stalvalsevaerket #70
+		DEN_appropriate_odense_staalskibsvaerft #35
+		DEN_restructuring_sovaernet  #70
+
+		#1942
+		DEN_north_sea_ambitions #70
+		DEN_naval_power_projection #70
+		DEN_domestic_designs #70
+		DEN_unify_flyvevabnet #35
+		DEN_flyveskolen #70
+		#DEN_reclaim_norway #70
+		
+		#1943
+		DEN_military_might #35
+		DEN_protect_the_faroe_islands
+		DEN_establish_the_danelaw
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_seize_power = 0
+		DEN_trade_with_britain = 0
+		DEN_king_assumes_power = 0
+		DEN_reclaim_norway = 5
+		DEN_dominium_maris_baltici = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_sway_baltic = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_DIPLO_BALTIC
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_trade_with_britain 					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		#1937
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_rally_the_nation 				#35
+		DEN_ask_for_support	#35
+		DEN_sway_the_nordics #35
+		#1938
+		DEN_offer_protection
+		DEN_fortify_the_islands					#70		
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization
+	
+		#1939
+		DEN_dano_german_military_cooperation #70
+		DEN_expand_institut_for_teoretisk_fysik				#70
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_assault_troops #70
+
+		#1940
+		DEN_experimental_technology #70
+		DEN_reintegrate_iceland 
+		DEN_the_royal_guard
+		DEN_develop_iceland
+		DEN_finish_off_finland
+		
+		
+		DEN_pan_scandinavianism
+		
+		DEN_hjemmevaernet
+		DEN_expand_haerens_tekniske_korps
+		DEN_dominium_maris_baltici
+		DEN_military_might
+		
+		
+		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_establish_the_danelaw = 0
+		DEN_king_assumes_power = 0
+		DEN_reclaim_norway = 5
+		DEN_seize_power = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_conquest_norway = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_NORD
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_EXP_NORD
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_NORD
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_kanslergadeforliget					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_industrial_investments				#70
+		DEN_trade_with_britain					#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+
+		#1937
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_ask_for_support #35
+		
+		DEN_public_works						#70		
+
+		#1938
+
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_agricultural_subsidies				#70
+		DEN_support_schleswigian_farmers		#70
+		DEN_stockpile_oil						#70
+
+		
+		
+
+		#1939
+		DEN_reclaim_norway
+		DEN_dano_german_military_cooperation
+		DEN_expand_institut_for_teoretisk_fysik	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism
+		DEN_reintegrate_iceland 
+		DEN_prioritize_army #70
+
+		#1940
+		DEN_total_war
+		DEN_develop_iceland
+		DEN_haeren_reorganization
+		DEN_hjemmevaernet
+		DEN_train_mountain_infantry
+
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_king_assumes_power = 0
+		DEN_finish_off_finland = 0
+		DEN_establish_the_danelaw = 0
+		DEN_sway_the_nordics = 0
+		DEN_dominium_maris_baltici = 0
+		DEN_seize_power = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_conquest_eng = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_EXP_ENG
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_ENG
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+
+		#1937
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_ask_for_support 				#35
+		DEN_rally_the_nation #70
+
+		#1938
+		DEN_fortify_the_islands					#70		
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization #35
+		DEN_expand_institut_for_teoretisk_fysik				#70
+	
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_reclaim_norway	#70
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+
+		#1940
+		DEN_prioritize_navy #70
+		DEN_reintegrate_iceland #35
+		DEN_expand_ubadsvabnet #35
+		DEN_refit_civilian_ships #70
+		DEN_develop_iceland #35
+		DEN_finish_off_finland #70
+		DEN_pan_scandinavianism #35
+		
+		#1941
+		DEN_hjemmevaernet #35
+		DEN_expand_haerens_tekniske_korps #70
+		DEN_strengthen_military_industries #70
+		DEN_danske_stalvalsevaerket #70
+		DEN_appropriate_odense_staalskibsvaerft #35
+		DEN_restructuring_sovaernet  #70
+
+		#1942
+		DEN_north_sea_ambitions #70
+		DEN_naval_power_projection #70
+		DEN_domestic_designs #70
+		DEN_unify_flyvevabnet #35
+		DEN_flyveskolen #70
+		DEN_military_might #35
+		
+		#1943
+		DEN_protect_the_faroe_islands
+		DEN_establish_the_danelaw
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_trade_with_germany = 0
+		DEN_sway_the_nordics = 0
+		DEN_seize_power = 0
+		DEN_dominium_maris_baltici = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_fascist_AXIS_plan_conquest_baltic = {
+	name = "Expansionist Monarchy"
+	desc = "King Christian X will try to secure natural resources and strengthen Denmark's military capabilities by controlling the rest of the Nordics by any means necessary."
+
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = FASCIST_AXIS_EXP_BALTIC
+			}
+		}
+	}
+
+	abort = { 
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+		GER = { NOT = { has_government = fascism } }
+	}
+
+	ai_national_focuses = {
+		#1936
+		DEN_fortify_our_borders					#35
+		DEN_devalue_the_krone					#35	
+		DEN_trade_with_germany					#70		
+		DEN_build_a_modern_dannevirke			#70
+		DEN_trade_with_britain
+		DEN_declare_neutrality					#35
+		DEN_unify_the_right						#35
+		DEN_conservatives_support				#35
+		DEN_encourage_paramilitary				#35
+		DEN_conspire_with_the_officer_corps		#35
+		DEN_strengthen_the_officer_corp			#35
+		DEN_overthrow_the_government			#70
+		DEN_march_on_the_capital					#35
+		DEN_ask_for_support 				#35
+		DEN_fortify_the_islands					#70		
+
+		#1937
+		DEN_connect_the_islands					#70
+		DEN_sign_forsvarsforliget				#35
+		DEN_expand_vaernepligten				#35
+		DEN_haeren_reorganization
+	
+
+		#1938
+		DEN_dano_german_military_cooperation
+		DEN_expand_institut_for_teoretisk_fysik				#70
+	
+
+		#1939
+		DEN_stockpile_oil						#70
+		DEN_reorient_production_lines	#70
+		DEN_rally_the_nation
+		DEN_reclaim_norway
+		DEN_assault_troops #70
+		DEN_experimental_technology #70
+		DEN_institute_corporatism #35
+		DEN_reintegrate_iceland 
+		
+
+		#1940
+		DEN_develop_iceland
+		
+		DEN_pan_scandinavianism
+		
+		DEN_hjemmevaernet
+		DEN_expand_haerens_tekniske_korps
+		
+
+		
+		
+		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		DEN_political_unity = 0
+		DEN_establish_the_danelaw = 0
+		DEN_sway_the_nordics = 0
+		DEN_seize_power = 0
+		DEN_king_assumes_power = 0
+		DEN_finish_off_finland = 5
+		DEN_dominium_maris_baltici = 5
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_subject_resist_declare = { #seek independence, and prepare and execute independence declaration ASAP
+name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST_INDP
+			has_game_rule = {
+				rule = DEN_ai_overlord_behavior
+				option = OVERLORD_RESIST_INDP
+			}
+		}	
+	}
+	abort = { 
+
+	}
+
+	ai_national_focuses = {
+		DEN_collaboration_government			#35
+		DEN_seek_independence					#35
+		DEN_sanction_sabotages					#70
+		DEN_create_danforce						#35
+		DEN_align_with_foreign_powers			#35
+		DEN_intel_sharing						#70
+		DEN_form_the_danish_freedom_council		#35
+		DEN_arm_the_resistance
+		DEN_escalate_the_sabotages				#70
+		DEN_expand_the_resistance				#70
+		DEN_ask_for_weapons 					#70
+		DEN_strengthen_the_danish_brigades		#70
+		DEN_buy_allied_weapons
+		DEN_expand_the_brigades
+		DEN_support_battalions
+		DEN_declare_independence
+		DEN_secure_danish_freedom
+	}
+
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_subject_comply = { #comply with overlord, stay a puppet
+name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY
+			has_game_rule = {
+				rule = DEN_ai_overlord_behavior
+				option = OVERLORD_COMPLY
+			}
+		}	
+	}
+	abort = { 
+
+	}
+
+	ai_national_focuses = {
+		DEN_collaboration_government			#35
+		DEN_align_with_overlord					#35
+		DEN_seek_industrial_investments
+		DEN_seize_the_production
+		DEN_adjust_industrial_prioritize
+		DEN_pledge_allegiance
+		DEN_contribute_to_the_war
+	}
+
+	focus_factors = {
+		DEN_secure_the_norwegian_coast = 0
+		DEN_claim_sweden = 0
+		DEN_safeguard_the_eastern_front = 0
+		DEN_reclaim_atlantic_islands = 0
+		DEN_petition_for_independence = 0
+	}
+
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_subject_comply_expansionist = { #comply with overlord, stay a puppet, declare war on nordics.
+name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_EXP
+			has_game_rule = {
+				rule = DEN_ai_overlord_behavior
+				option = OVERLORD_COMPLY_EXP
+			}
+		}	
+	}
+	abort = { 
+
+	}
+
+	ai_national_focuses = {
+		DEN_collaboration_government			#35
+		DEN_align_with_overlord					#35
+		DEN_seek_industrial_investments
+		DEN_seize_the_production
+		DEN_adjust_industrial_prioritize
+		DEN_pledge_allegiance
+		DEN_contribute_to_the_war
+		DEN_acquire_military_equipment
+		#DEN_petition_for_independence will do at some point
+	}
+
+	focus_factors = {
+		DEN_secure_the_norwegian_coast = 2
+		DEN_claim_sweden = 2
+		DEN_safeguard_the_eastern_front = 2
+		DEN_reclaim_atlantic_islands = 2
+	}
+
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_subject_comply_but_dont_comply = { # "comply" with overlord, but arm the resistance and declare independence anyways
+name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_SABOTAGE
+			has_game_rule = {
+				rule = DEN_ai_overlord_behavior
+				option = OVERLORD_COMPLY_SABOTAGE
+			}
+		}	
+	}
+	abort = { 
+
+	}
+
+	ai_national_focuses = {
+		DEN_collaboration_government			#35
+		DEN_align_with_overlord					#35
+		DEN_seek_industrial_investments
+		DEN_seize_the_production
+		DEN_adjust_industrial_prioritize
+		DEN_sanction_sabotages
+		DEN_contribute_to_the_war
+		DEN_acquire_military_equipment
+		DEN_form_the_danish_freedom_council
+		DEN_arm_the_resistance
+		DEN_expand_the_resistance
+		DEN_escalate_the_sabotages
+		DEN_declare_independence
+		DEN_secure_danish_freedom
+	}
+
+	focus_factors = {
+		DEN_secure_the_norwegian_coast = 0
+		DEN_claim_sweden = 0
+		DEN_safeguard_the_eastern_front = 0
+		DEN_reclaim_atlantic_islands = 0
+	}
+
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+DEN_subject_comply_independence = { #comply with overlord, stay a puppet, cooperate, and then petition overlord for freedom
+name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_OVERLORD_COMPLY_INDP
+			has_game_rule = {
+				rule = DEN_ai_overlord_behavior
+				option = OVERLORD_COMPLY_INDP
+			}
+		}	
+	}
+	abort = { 
+
+	}
+
+	ai_national_focuses = {
+		DEN_collaboration_government			#35
+		DEN_align_with_overlord					#35
+		DEN_seek_industrial_investments
+		DEN_seize_the_production
+		DEN_adjust_industrial_prioritize
+		DEN_pledge_allegiance
+		DEN_contribute_to_the_war
+		DEN_acquire_military_equipment
+		DEN_seek_military_investments
+		DEN_increase_cooperation
+		DEN_petition_for_independence
+	}
+
+	focus_factors = {
+		DEN_claim_sweden = 0
+		DEN_safeguard_the_eastern_front = 0
+		DEN_reclaim_atlantic_islands = 0
+	}
+
+
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans

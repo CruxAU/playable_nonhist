@@ -3595,11 +3595,35 @@ country_event = {
 		}
 
 		set_politics = { ruling_party = FROM }
+		hidden_effect = {
+			every_subject_country = {
+				set_country_flag = NHMMAP_puppet_of_puppet_flag
+			}
+		}
+		
 		FROM = {
 			puppet = ROOT
 			add_to_faction = ROOT
 			hidden_effect = {
 				country_event = { id = NSB_soviet_foreign_politics_events.150 hours = 1 }
+			}
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					any_other_country = {
+						has_country_flag = NHMMAP_puppet_of_puppet_flag
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_country_flag = NHMMAP_puppet_of_puppet_flag
+					}
+					ROOT = {
+						puppet = PREV
+						add_to_faction = PREV
+					}
+				}
 			}
 		}
 	}

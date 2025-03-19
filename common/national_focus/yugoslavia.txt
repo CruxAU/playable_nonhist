@@ -2266,6 +2266,7 @@ focus_tree = {
 		}
 
 		available = { #NHMMAP
+			is_subject = no
 			any_other_country = {
 				OR = {
 					capital_scope = {
@@ -2419,6 +2420,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			ITA = {
 				NOT = { has_war_with = ROOT }
 				if = {
@@ -2471,6 +2473,7 @@ focus_tree = {
 		}
 
 		available = { #NHMMAP
+			is_subject = no
 			any_other_country = {
 				OR = {
 					capital_scope = {
@@ -2810,6 +2813,7 @@ focus_tree = {
 
 		available = {
 			date > 1938.09.06
+			is_subject = no
 		}
 
 		bypass = {
@@ -2997,6 +3001,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			hidden_trigger = {
 				OR = {
 					event_target:yugoslavia_wedding_partner = {
@@ -3294,6 +3299,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 		}
 
 		bypass = {
@@ -3440,6 +3446,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -3529,6 +3536,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 		}
 
 		bypass = {
@@ -3956,6 +3964,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			is_in_faction = no
 			any_country = {
 				has_government = communism
@@ -4035,6 +4044,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
+			is_subject = no
 		}
 
 		bypass = {

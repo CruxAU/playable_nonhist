@@ -3147,6 +3147,12 @@ option = { # Surrender the Sudetenland
 			is_faction_leader = no
 			is_in_faction = yes
 		}
+		modifier = {
+			factor = 5
+			ROOT = {
+				is_in_faction_with = GER
+			}
+		}
 		modifier = { # If they stand a chance they will fight
 			factor = 0
 			strength_ratio = {
@@ -3204,6 +3210,12 @@ option = { # Refuse anyway
 			factor = 2
 			is_in_faction = yes
 			num_faction_members > 2
+		}
+		modifier = {
+			factor = 0.1
+			ROOT = {
+				is_in_faction_with = GER
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -9706,6 +9718,12 @@ country_event = {
 				factor = 0.5
 				strength_ratio = { tag = FROM ratio < 0.1 }
 			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					is_in_faction_with = GER
+				}
+			}
 		}
 		
 		if = {
@@ -9796,6 +9814,12 @@ country_event = {
 				}
 			}
 			modifier = {
+				factor = 2
+				ROOT = {
+					is_in_faction_with = GER
+				}
+			}
+			modifier = {
 				factor = 0.8
 				is_in_faction = yes
 			}
@@ -9829,19 +9853,6 @@ country_event = {
 				any_other_country = {
 					is_major = yes
 					is_in_faction_with = CZE
-				}
-			}
-			modifier = {
-				factor = 0
-				CZE = {
-					OR = {
-						has_country_flag = CZE_AI_RANDOM_FASCIST_PARTNER
-						has_game_rule = {
-							rule = CZE_ai_behavior
-							option = FASCIST_PARTNER
-						}
-					}
-					is_in_faction_with = GER
 				}
 			}
 			modifier = {

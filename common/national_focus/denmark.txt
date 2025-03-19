@@ -8422,44 +8422,6 @@ focus_tree = {
 					ruling_party = fascism
 				}
 				
-				if = {
-					limit = {
-						fascism < 0.5
-					}
-					if = {
-						limit = {
-							neutrality > party_popularity@democratic
-							neutrality > party_popularity@communism
-						}
-						start_civil_war = {
-							ideology = neutrality #SPLITTING TAG
-							size = party_popularity@neutrality
-							keep_all_characters = yes
-						}
-					}
-					else_if = {
-						limit = {
-							democratic > party_popularity@neutrality
-							democratic > party_popularity@communism
-						}
-						start_civil_war = {
-							ideology = democratic #SPLITTING TAG
-							size = party_popularity@democratic
-							keep_all_characters = yes
-						}
-					}
-					else_if = {
-						limit = {
-							communism > party_popularity@neutrality
-							communism > party_popularity@democratic
-						}
-						start_civil_war = {
-							ideology = communism #SPLITTING TAG
-							size = party_popularity@communism
-							keep_all_characters = yes
-						}
-					}
-				}
 			}
 		}
 	}
@@ -9146,20 +9108,15 @@ focus_tree = {
 			modifier = {
 				add = 10
 				OR = {
-					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
-					has_game_rule = {
-						rule = DEN_ai_behavior
-						option = MONARCHIST_EXP_NORD
-					}
 					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
 					has_game_rule = {
 						rule = DEN_ai_behavior
 						option = MONARCHIST_EXP_GER
 					}
-					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+					has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
 					has_game_rule = {
 						rule = DEN_ai_behavior
-						option = MONARCHIST_EXP_BALTIC
+						option = FASCIST_EXP_BALTIC
 					}
 				}
 				NOR = {
@@ -9285,20 +9242,35 @@ focus_tree = {
 			modifier = {
 				add = 10
 				OR = {
-					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
 					has_game_rule = {
 						rule = DEN_ai_behavior
-						option = MONARCHIST_EXP_NORD
+						option = MONARCHIST_DIPLO_BALTIC
 					}
-					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+					has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
 					has_game_rule = {
 						rule = DEN_ai_behavior
-						option = MONARCHIST_EXP_GER
+						option = FASCIST_DIPLO_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_DIPLO_BALTIC
 					}
 					has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
 					has_game_rule = {
 						rule = DEN_ai_behavior
 						option = MONARCHIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_EXP_BALTIC
+					}
+					has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_AXIS_EXP_BALTIC
 					}
 				}
 				NOR = {
@@ -9369,6 +9341,30 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_ENG
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FASCIST_EXP_ENG
+					}
+				}
+				NOR = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				SWE = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }

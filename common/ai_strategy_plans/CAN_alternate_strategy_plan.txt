@@ -295,13 +295,7 @@ CAN_fascist_alternate = {
 	abort = {
 		has_country_flag = CAN_AI_RANDOM_FASCIST_ALTERNATE 
 		GER = { has_completed_focus = GER_rhineland }
-		OR = {
-			MEX = { has_government = communism }
-			MEX = { has_government = democratic }
-			MEX = { is_in_faction_with = USA }
-		}
-		
-
+		MEX = { is_in_faction_with = USA }
 	}
 
 	ai_national_focuses = {
@@ -429,12 +423,15 @@ CAN_communist = {
 		}
 	}
 	abort = {
-		has_country_flag = CAN_AI_RANDOM_COMMUNIST
-		SOV = {
-			NOT = {
-				has_government = communism
+		AND = {
+			has_country_flag = CAN_AI_RANDOM_COMMUNIST
+			SOV = {
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
+		
 	}
 
 	ai_national_focuses = {

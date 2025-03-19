@@ -2229,19 +2229,17 @@
 				}
 				remove_ideas = CZE_divided_nation
 				custom_effect_tooltip = generic_skip_one_line_tt
+				country_event = { days = 6 random_days = 5 id = czech.14 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
 			add_timed_idea = { 
 				idea = CZE_czech_fascism_idea 
 				days = 1095 
 			}
+		}			
+	}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			country_event = { days = 6 random_days = 5 id = czech.14 }
-			}			
-		}
-	
 	focus = {
 		id = CZE_national_fascism
 		icon = GFX_focus_ITA_generic_fascist_workers

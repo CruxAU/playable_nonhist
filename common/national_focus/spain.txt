@@ -10428,11 +10428,19 @@ focus_tree = {
 	focus = {
 		id = SPR_soviet_recovery_aid
 		available = {
+			OR = {
+				is_subject = no
+				is_subject_of = SOV
+			}
 			NOT = { has_war_with = SOV }
 			SOV = { has_government = communism }
 			has_global_flag = scw_over
 		}
 		bypass = {
+			is_subject = yes
+			NOT = {
+				is_subject_of = SOV
+			}
 		}
 		prerequisite = { focus = SPR_soviet_industrial_aid }
 		prerequisite = { focus = SPR_soviet_technological_advancements }
@@ -11245,7 +11253,6 @@ focus_tree = {
 	focus = {
 		id = SPR_appeal_for_increased_autonomy
 		available = {
-			is_in_faction_with = SOV
 			is_subject_of = SOV
 		}
 		bypass = {
@@ -12388,6 +12395,7 @@ focus_tree = {
 		id = SPR_subvert_soviet_control
 		available = {
 			has_global_flag = scw_over
+			is_subject_of = SOV
 		}
 		bypass = {
 		}

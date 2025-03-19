@@ -83,26 +83,14 @@ DEN_historical_plan = {
 		#1943
 
 
-		DEN_collaboration_government			#35
-		DEN_seek_independence					#35
-		DEN_sanction_sabotages					#70
-		DEN_create_danforce						#35
-		DEN_align_with_foreign_powers			#35
-		DEN_intel_sharing						#70
-		DEN_establish_danske_flotille			#35
-		DEN_buy_foreign_aircraft				#35
-		DEN_form_the_danish_freedom_council		#35
-		DEN_escalate_the_sabotages				#70
-		DEN_expand_the_resistance				#70
-		DEN_ask_for_weapons 					#70
-		DEN_strengthen_the_danish_brigades		#70
+
 	}
 
 	#Never takes these
 	focus_factors = {
 		DEN_unify_the_right = 0
 		DEN_start_the_rearmament = 0
-		DEN_develop_greenland = 0
+		DEN_develop_greenland = 0.01
 	}
 
 	research = {
@@ -122,4 +110,60 @@ DEN_historical_plan = {
 		}
 	}
 
+}
+
+DEN_subject_historical = { #seek independence, but dont declare independence right away.
+name = "Denmark's Historical Plan"
+	desc = "Historical behavior for Denmark"
+
+	allowed = {
+		tag = DEN
+		has_dlc = "Arms Against Tyranny"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = DEN_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = DEN_AI_RANDOM_OVERLORD_RESIST
+			has_game_rule = {
+				rule = DEN_ai_overlord_behavior
+				option = OVERLORD_RESIST
+			}
+		}	
+	}
+	abort = { 
+
+	}
+
+	ai_national_focuses = {
+		DEN_collaboration_government			#35
+		DEN_seek_independence					#35
+		DEN_sanction_sabotages					#70
+		DEN_create_danforce						#35
+		DEN_align_with_foreign_powers			#35
+		DEN_intel_sharing						#70
+		DEN_establish_danske_flotille			#35
+		DEN_buy_foreign_aircraft				#35
+		DEN_form_the_danish_freedom_council		#35
+		DEN_escalate_the_sabotages				#70
+		DEN_expand_the_resistance				#70
+		DEN_ask_for_weapons 					#70
+		DEN_strengthen_the_danish_brigades		#70
+	}
+
+
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
 }

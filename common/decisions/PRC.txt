@@ -91,65 +91,46 @@ PRC_infiltrate_nationalist_areas = {
 				}
 			}
 
-			#Block if we get fewer than 3 troops
-			modifier = {
-				factor = 0
-				NOT = {
-					count_triggers = {
-						amount = 3
-						283 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						597 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						598 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						607 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						608 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						614 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						615 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						621 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						746 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-						744 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
-					}
-				}
-			}
 
 			#The more troops, the bigger chance
 			modifier = {
-				add = 5
+				add = 3
 				283 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				597 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				598 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				607 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				608 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				614 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				615 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				621 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				744 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 			modifier = {
-				add = 5
+				add = 3
 				746 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
 			}
 
@@ -193,6 +174,26 @@ PRC_infiltrate_nationalist_areas = {
 			modifier = {
 				add = 1
 				746 = { PRC_infiltration_uprising_PREV_will_sabotage_state = yes }
+			}
+
+			#Block if we get fewer than 4 troops
+			modifier = {
+				factor = 0
+				NOT = {
+					count_triggers = {
+						amount = 4
+						283 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						597 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						598 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						607 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						608 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						614 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						615 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						621 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						746 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+						744 = { PRC_infiltration_uprising_PREV_will_spawn_troops_in_state = yes }
+					}
+				}
 			}
 		}
 
