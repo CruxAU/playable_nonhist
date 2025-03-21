@@ -6094,7 +6094,7 @@ ITA_king_italy_first_diplomatic_plan = {
 		ITA_setting_course #35
 		
 		#1943
-		ITA_mobilize_railway_guns
+		ITA_mobilize_the_railway_guns
 		ITA_railway_innovations
 		ITA_support_albanian_irredentism #35
 		ITA_expand_foggia_farm_fields

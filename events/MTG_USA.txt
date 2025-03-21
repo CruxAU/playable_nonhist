@@ -4598,11 +4598,11 @@ country_event = {
 			add_war_support = -0.05
 			add_stability = -0.1
 		}
-		if = {
-			limit = {
+		# if = { #NHMMAP
+		# 	limit = {
 
-			}
-		}
+		# 	}
+		# }
 		create_wargoal = {
 				target = JAP
 				type = topple_government

@@ -952,6 +952,7 @@ focus_tree = {
 		relative_position_id = NOR_workers_and_farmers_rise
 		cost = 10
 		available = {
+			has_civil_war = no
 			if = {
 				limit = {
 					is_historical_focus_on = yes 

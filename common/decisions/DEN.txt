@@ -7300,7 +7300,7 @@ DEN_demand_territory_category = {
 				country_event = {
 				    id = denmark_expansion_event.200
 				    days = 2
-				    random = 3
+				    random_days = 3
 				}
 				hidden_effect = {
 					set_country_flag = DEN_sent_icelandic_territory_demands
@@ -7389,7 +7389,7 @@ DEN_demand_territory_category = {
 				country_event = {
 				    id = denmark_expansion_event.200
 				    days = 2
-				    random = 3
+				    random_days = 3
 				}
 				hidden_effect = {
 					set_country_flag = DEN_sent_swedish_territory_demands
@@ -7478,7 +7478,7 @@ DEN_demand_territory_category = {
 				country_event = {
 				    id = denmark_expansion_event.200
 				    days = 2
-				    random = 3
+				    random_days = 3
 				}
 				hidden_effect = {
 					set_country_flag = DEN_sent_finnish_territory_demands
@@ -7567,7 +7567,7 @@ DEN_demand_territory_category = {
 				country_event = {
 				    id = denmark_expansion_event.200
 				    days = 2
-				    random = 3
+				    random_days = 3
 				}
 				hidden_effect = {
 					set_country_flag = DEN_sent_norwegian_territory_demands

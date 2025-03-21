@@ -6497,7 +6497,7 @@ SOV_diplomacy_middle_east_decision_category = {
 							is_controlled_by = ENG
 							ENG = {
 								any_allied_country = {
-									controls_state = PREV
+									controls_state = PREV.PREV #NHMMAP fix
 								}
 							}
 						}

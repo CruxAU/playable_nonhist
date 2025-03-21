@@ -1691,6 +1691,26 @@ ENG_mosley_attack_germany_no_matter_what = { #makes mosley not just sit on his g
 	}
 }
 
+ENG_scw_volunteers_carlists = {
+	allowed = { original_tag = ENG }
+	enable = { 
+		has_completed_focus = ENG_the_kings_party
+		NOT = { has_global_flag = scw_over }
+		SPB = { exists = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPB
+		value = 500
+	}
+	ai_strategy = {
+		type = support
+		id = SPB
+		value = 100
+	}
+}
 
 #########################################################################################
 ######################### FRA BEHAVIORS #################################################

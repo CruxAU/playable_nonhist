@@ -232,17 +232,19 @@ on_actions = {
 							original_tag = ETH
 							original_tag = AFA
 						}
-						has_war_with = ROOT
+						has_war_with = ITA
 						has_capitulated = no
 					}
 					every_controlled_state = {
 						limit = {
 							is_on_continent = africa 
-							is_owned_by = ROOT 
+							is_owned_by = ITA 
 						}
-						ROOT = { transfer_state = PREV.PREV }
+						PREV = { 
+							transfer_state = PREV 
+						}
 					}
-					white_peace = ROOT
+					white_peace = ITA
 				}
 				set_global_flag = ethiopia_recognized_flag
 				
@@ -507,6 +509,20 @@ on_actions = {
 						}
 					}
 				}
+			}
+		}
+	}
+	on_peaceconference_ended = { #if any country owns north libya, give them south libya for free (empty desert tile) this is done to prevent bordergore.
+		effect = {
+			if = {
+				limit = {
+					any_country = {
+						owns_state = 661
+						owns_state = 662
+						owns_state = 663
+					}
+				}
+				ROOT = { transfer_state = 273 }
 			}
 		}
 	}

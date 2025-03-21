@@ -70,7 +70,7 @@ ENG_narvik_crisis_cat = {
 				controller = {
 					if = {
 						limit = {
-							controller = { is_in_faction_with = ROOT } #needs to be here otherwise it throws errors
+							is_in_faction_with = ROOT #needs to be here otherwise it throws errors
 						}
 
 						declare_war_on = {
@@ -79,7 +79,7 @@ ENG_narvik_crisis_cat = {
 						}
 
 						if = {
-							limit = { controller = { NOT = { has_war_with = SWE }}}
+							limit = {  NOT = { has_war_with = SWE }}
 							ROOT = { set_variable = { ENG_narvik_controller = PREV } }
 						}
 					}

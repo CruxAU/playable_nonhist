@@ -5902,7 +5902,7 @@ focus_tree = {
 					ROOT = {		
 						random_core_state = {
 							limit = {  
-								is_fully_controlled_by = THIS
+								is_fully_controlled_by = PREV #NHMMAP FIX
 								free_building_slots = {
 									building = arms_factory
 									size > 0

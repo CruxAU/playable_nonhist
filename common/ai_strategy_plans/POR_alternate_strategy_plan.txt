@@ -874,7 +874,7 @@ POR_communist_independent_plan = {
 
 POR_honor_anglo_portuguese_plan = {
 	name = "Salazar will honour the alliance"
-	desc = "yep"
+	desc = "yep, they will do that..."
 
 	allowed = {
 		original_tag = POR

@@ -12939,6 +12939,8 @@ country_event = {
 						is_faction_leader = yes
 					}
 				}
+				FRA = { add_to_faction = ITA }
+				set_faction_name = stresa_front_ita
 			}
 			else = {
 				ROOT = {
@@ -13018,6 +13020,31 @@ country_event = { #Hidden event
 				}
 			}
 			
+		}
+		else_if = { #NHMMAP
+			limit = {
+				FRA = {
+					is_faction_leader = yes
+				}
+			}
+			FRA = { add_to_faction = ITA }
+			set_faction_name = stresa_front_ita
+			hidden_effect = {
+				ITA = {
+					add_ai_strategy = {
+						type = alliance
+						id = FRA
+						value = 100
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = alliance
+						id = ITA
+						value = 100
+					}
+				}
+			}
 		}
 		else = {
 			ROOT = {

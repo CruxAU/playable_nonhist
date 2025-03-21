@@ -4731,7 +4731,7 @@ country_event = {
 									}
 								}
 							}
-							THIS = { num_of_civilian_factories < 1 }
+							THIS = { industrial_complex < 1 } #NHMMAP fix - intentional
 						}
 					}
 				}

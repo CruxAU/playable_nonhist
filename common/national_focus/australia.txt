@@ -2855,8 +2855,9 @@
 					limit = {
 						controls_state = 285
 					}
+					custom_effect_tooltip = AST_rats_of_tobruk_effect_2
 				}
-				custom_effect_tooltip = AST_rats_of_tobruk_effect_2
+				
 			}
 		}
 	}

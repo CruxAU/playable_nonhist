@@ -20133,8 +20133,9 @@ focus_tree = {
 						limit = {
 							check_variable = { ITA_democratic_neighbors < 0.1 }
 						}
+						ROOT = { add_to_variable = { ITA_defense_against_capitalism = 0.02 } }
 					}
-					ROOT = { add_to_variable = { ITA_defense_against_capitalism = 0.02 } }
+					
 				}
 				add_war_support = ITA_democratic_neighbors
 			}

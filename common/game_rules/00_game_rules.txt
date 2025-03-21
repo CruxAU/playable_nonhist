@@ -5404,6 +5404,24 @@ NOR_ai_behavior = {
 		allow_achievements = yes		
 	} 
 	option = {
+		name = NOR_STALINIST_EXP
+		text = RULE_OPTION_NOR_STALINIST_EXP
+		desc = RULE_OPTION_NOR_STALINIST_EXP_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_STALINIST_COMINTERN
+		text = RULE_OPTION_NOR_STALINIST_COMINTERN
+		desc = RULE_OPTION_NOR_STALINIST_COMINTERN_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_STALINIST_COMINTERN_EXP
+		text = RULE_OPTION_NOR_STALINIST_COMINTERN_EXP
+		desc = RULE_OPTION_NOR_STALINIST_COMINTERN_EXP_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
 		name = NOR_TROSTSKYIST
 		text = RULE_OPTION_NOR_TROSTSKYIST
 		desc = RULE_OPTION_NOR_TROSTSKYIST_AI_DESC
@@ -5422,9 +5440,33 @@ NOR_ai_behavior = {
 		allow_achievements = yes		
 	} 
 	option = {
+		name = NOR_TROSTSKYIST_INTERNATIONAL_SOV
+		text = RULE_OPTION_NOR_TROSTSKYIST_INTERNATIONAL_SOV
+		desc = RULE_OPTION_NOR_TROSTSKYIST_INTERNATIONAL_SOV_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_TROSTSKYIST_INTERNATIONAL_GER
+		text = RULE_OPTION_NOR_TROSTSKYIST_INTERNATIONAL_GER
+		desc = RULE_OPTION_NOR_TROSTSKYIST_INTERNATIONAL_GER_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
 		name = NOR_MONARCHIST
 		text = RULE_OPTION_NOR_MONARCHIST
 		desc = RULE_OPTION_NOR_MONARCHIST_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_MONARCHIST_NORD
+		text = RULE_OPTION_NOR_MONARCHIST_NORD
+		desc = RULE_OPTION_NOR_MONARCHIST_NORD_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_MONARCHIST_SOV
+		text = RULE_OPTION_NOR_MONARCHIST_SOV
+		desc = RULE_OPTION_NOR_MONARCHIST_SOV_AI_DESC
 		allow_achievements = yes		
 	} 
 	option = {

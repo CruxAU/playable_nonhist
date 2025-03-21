@@ -6708,7 +6708,7 @@ country_event = { #Cancel Danish Produce Trade
 						has_country_flag = has_danish_produce_basic_flag
 					}
 				}
-				if = {
+				if = { #just a TT dont worry about useless if statement
 					limit = {
 						ROOT = { original_tag = DEN}
 					}

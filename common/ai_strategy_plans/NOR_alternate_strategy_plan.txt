@@ -2159,25 +2159,249 @@ NOR_monarchist_plan = {
 		NOR_AAT = yes
 	}
 	enable = {
-		NOR_is_monarchist_ai = yes 	
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_MONARCHIST
+			}
+			has_country_flag = NOR_AI_RANDOM_MONARCHIST
+		}
 	}
 	abort = {
 
 	}
 
 	ai_national_focuses = {
-		NOR_the_stumbling_storting
-		NOR_the_chamberlains_overture
-		NOR_send_the_storting_home
+
+		#1936
+		NOR_the_stumbling_storting #35
+		NOR_the_chamberlains_overture #35
+		NOR_send_the_storting_home #35
 		NOR_assure_the_population
-		NOR_demand_king_haakons_rise_to_power
-		NOR_the_crowns_executive_powers
-		NOR_a_warden_king
+		NOR_demand_king_haakons_rise_to_power #35
+		NOR_the_crowns_executive_powers #35
+		NOR_a_warden_king #35
 		NOR_the_kingdom_of_norway
+
+		#1937
+		NOR_building_an_independent_norway
+		NOR_the_royal_norwegian_navy
+		NOR_prince_olav_to_navy_staff
+		NOR_battleship_focus
+		NOR_norwegian_carriers
+		
+
+		#1938
+		NOR_expand_the_dockyards
+		NOR_promote_civilian_donations
+		NOR_research_funding
+		NOR_enhance_coastal_defense
+		NOR_rule_the_northern_sea
+
+		#1939
+		
+		NOR_ramp_up_naval_production
+		NOR_shield_of_the_north
+		NOR_our_royal_claims
+		NOR_iceland
+		NOR_expand_merchant_marine
+		NOR_start_rearmament
+		
+		#1940
+		NOR_expand_Haeren
+		NOR_norwegian_school_of_economics
+		NOR_claims_on_faroe_islands
+		NOR_kickstart_military_industry
+		NOR_empower_large_industrial_groups
+
+		#1941
+		NOR_eirik_raudes_land
+		
+		
 	}
 
 	focus_factors = {
+		NOR_claims_on_denmark = 0
+		NOR_swedish_claims = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_monarchist_plan_exp = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_MONARCHIST_NORD
+			}
+			has_country_flag = NOR_AI_RANDOM_MONARCHIST_NORD
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		NOR_the_stumbling_storting #35
+		NOR_the_chamberlains_overture #35
+		NOR_send_the_storting_home #35
+		NOR_assure_the_population
+		NOR_demand_king_haakons_rise_to_power #35
+		NOR_the_crowns_executive_powers #35
+		NOR_a_warden_king #35
+		NOR_the_kingdom_of_norway
+
+		#1937
+
+		NOR_building_an_independent_norway
+		NOR_the_royal_norwegian_navy
+		NOR_appoint_prince_olav_to_army_staff
+		NOR_start_rearmament
+		NOR_expand_Haeren
 		
+
+		#1938
+		NOR_improved_weapons
+		NOR_promote_civilian_donations
+		NOR_research_funding
+		NOR_power_to_the_royal_guard
+		NOR_encourage_recruitment
+
+		#1939
+		NOR_for_the_king_and_prince
+		NOR_shield_of_the_north
+		NOR_our_royal_claims
+		NOR_claims_on_denmark
+		NOR_rikstanken
+		
+		#1940
+		NOR_norwegian_school_of_economics
+		NOR_swedish_claims
+		NOR_kickstart_military_industry
+		NOR_empower_large_industrial_groups
+
+		#1941
+		NOR_iceland
+		NOR_eirik_raudes_land
+		NOR_claims_on_faroe_islands
+		
+		
+		
+	}
+
+	focus_factors = {
+		NOR_bjarmeland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+NOR_monarchist_plan_exp_alt = {
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = NOR_AI_BEHAVIOR
+				option = NOR_MONARCHIST_SOV
+			}
+			has_country_flag = NOR_AI_RANDOM_MONARCHIST_SOV
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+
+		#1936
+		NOR_the_stumbling_storting #35
+		NOR_the_chamberlains_overture #35
+		NOR_send_the_storting_home #35
+		NOR_assure_the_population
+		NOR_demand_king_haakons_rise_to_power #35
+		NOR_the_crowns_executive_powers #35
+		NOR_a_warden_king #35
+		NOR_the_kingdom_of_norway
+
+		#1937
+
+		NOR_building_an_independent_norway
+		NOR_the_royal_norwegian_navy
+		NOR_appoint_prince_olav_to_army_staff
+		NOR_start_rearmament
+		NOR_expand_Haeren
+		
+
+		#1938
+		NOR_improved_weapons
+		NOR_promote_civilian_donations
+		NOR_research_funding
+		NOR_power_to_the_royal_guard
+		NOR_encourage_recruitment
+
+		#1939
+		NOR_for_the_king_and_prince
+		NOR_shield_of_the_north
+		NOR_our_royal_claims
+		NOR_claims_on_denmark
+		NOR_rikstanken
+		
+		#1940
+		NOR_norwegian_school_of_economics
+		NOR_swedish_claims
+		NOR_kickstart_military_industry
+		NOR_empower_large_industrial_groups
+
+		#1941
+		NOR_bjarmeland
+		NOR_consolidate_kingdom
+		
+		
+		
+	}
+
+	focus_factors = {
+
 	}
 
 	research = {

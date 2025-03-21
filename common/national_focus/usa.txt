@@ -425,20 +425,21 @@ focus_tree = {
 							is_owned_by = PNG #already decolonized
 						}	
 					}
-				}
-			}
-			523 = {
-				OWNER = {
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = take_state
-							expire = 0
-							generator = { 523 }
+				} #NHMMAP
+				523 = {
+					OWNER = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = take_state
+								expire = 0
+								generator = { 523 }
+							}
 						}
 					}
 				}
 			}
+			
 		}
 	}
 	

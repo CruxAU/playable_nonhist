@@ -10010,7 +10010,7 @@ country_event = {
 				GER = {
 					create_wargoal = {
 						type = take_state_focus
-						target = PREV
+						target = FROM #NHMMAP
 						generator = CZE.sudetenland_states_for_wargoal
 					}
 				}
@@ -10274,7 +10274,7 @@ country_event = {
 
 
 	mean_time_to_happen = {
-		days = 10
+		days = 100
 	}
 
 	trigger = {

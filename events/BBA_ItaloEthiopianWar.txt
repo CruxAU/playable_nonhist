@@ -1941,26 +1941,27 @@ country_event = {
 				844 = { set_state_flag = ITA_forced_peace_states_flag }	
 				set_global_flag = end_of_second_italo_ethiopian_war_flag
 			}
-			if = {
+			if = { #NHMMAP fixed
 				limit = {#Checks if ENG is the host of exiled ETH or is allied to the host 
 					ITA_hosting_exiled_ethiopia = yes
-					if = {
-						limit = { 
-							ENG = {
-								has_country_flag = ITA_italy_asks_ethiopian_host_for_help
-							}
+				}
+				if = {
+					limit = { 
+						ENG = {
+							has_country_flag = ITA_italy_asks_ethiopian_host_for_help
 						}
 					}
+					ENG = { #If ENG is the host of the exiled ETH government or is allied to the host 		and have been asked by ITA to guarantee AUS, then do this
+						country_event = { id = BBA_italy_interaction_events.60 days = 1 }
+					}
 				}
-				ENG = { #If ENG is the host of the exiled ETH government or is allied to the host 		and have been asked by ITA to guarantee AUS, then do this
-					country_event = { id = BBA_italy_interaction_events.60 days = 1 }
+				else = {
+					ENG = { #If ENG is the host of the exiled ETH government or is allied to the host and 	ITA wants to negotiate land claims, then do this
+						country_event = { id = BBA_italy_interaction_events.31 days = 1 }
+					}
 				}
 			}
-			else = {
-				ENG = { #If ENG is the host of the exiled ETH government or is allied to the host and 	ITA wants to negotiate land claims, then do this
-					country_event = { id = BBA_italy_interaction_events.31 days = 1 }
-				}
-			}
+			
 		}
 		ITA_forced_italo_ethiopian_peace_deal = yes
 	}	

@@ -691,7 +691,6 @@ NOR_exile_decisions_category = { # Unique versions of normal in exile decisiosn 
 			factor = 0
 			modifier = {
 				add = 10
-				has_off
 				NOR_is_alt_democratic_ai = yes
 				NOR_has_75_convoys = yes 
 			}
@@ -3223,6 +3222,16 @@ NOR_monarchist_preparation_decisions_category = {
 			clr_country_flag = NOR_mon_stabilizing_effects
 			NOR_reduce_hard_thirties_ns = yes 
 		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.1
+				NOT = {
+					has_government = neutrality
+				}
+			}
+		}
 	}
 
 	NOR_make_assurances_to_the_people = {
@@ -3253,6 +3262,14 @@ NOR_monarchist_preparation_decisions_category = {
 		remove_effect =	{ 
 			clr_country_flag = NOR_mon_stabilizing_effects
 		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_stability > 0.7
+			}
+		}
 	}
 
 	NOR_promote_the_armed_defense_of_the_country = {
@@ -3282,6 +3299,13 @@ NOR_monarchist_preparation_decisions_category = {
 
 		remove_effect =	{ 
 			clr_country_flag = NOR_mon_stabilizing_effects
+		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_war_support > 0.55
+			}
 		}
 	}
 }
@@ -3319,6 +3343,22 @@ economy_decisions = {
 	  		}
 		}
 		days_remove = 14
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				NOR_has_4_convoys = yes
+			}
+			modifier = {
+				add = 20
+				NOR_has_50_convoys = yes
+			}
+			modifier = {
+				factor = 0.1
+				NOR_is_alt_democratic_ai = yes
+			}
+		}
 
 		complete_effect = {
 			add_equipment_to_stockpile = { 
@@ -3433,6 +3473,24 @@ economy_decisions = {
 	  			has_tech = early_destroyer
 	  		}
 		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				NOR_has_40_convoys = yes
+			}
+			modifier = {
+				add = 20
+				NOR_has_100_convoys = yes
+			}
+			modifier = {
+				factor = 0.1
+				NOR_is_alt_democratic_ai = yes
+			}
+		}
+
+
 		days_remove = 105 #Less than the single conversions to encourage players to use it, and not have to min/max
 
 		complete_effect = {

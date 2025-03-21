@@ -4631,7 +4631,9 @@ BUL_macedonian_revolutionary_organizations = {
 				}
 				add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
 				hidden_effect = {
-					controller = { country_event = bftb_bulgaria_imro.2 }
+					CONTROLLER = {
+						country_event = bftb_bulgaria_imro.2
+					}
 				}
 			}
 

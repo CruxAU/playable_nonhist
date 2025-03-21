@@ -3560,7 +3560,7 @@ on_actions = {
 						popularity = 0.7
 					}
 				}
-				random_other_country = {
+				random_country = {
 					limit = {
 						OR = {
 							tag = BAY
@@ -9672,7 +9672,7 @@ on_actions = {
 					set_cosmetic_tag = transcaucasia_unified
 					change_tag_from = PER
 				}
-				random_other_country = {
+				random_country = {
 					limit = {
 						OR = {
 							tag = KAL

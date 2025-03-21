@@ -7924,7 +7924,6 @@ focus = {
 						exists = yes 
 						has_government = democratic 
 					}
-
 				}
 			}
 			unlock_decision_tooltip = { decision = SWI_case_west_decision show_effect_tooltip = yes}
@@ -9056,11 +9055,11 @@ focus = {
 							include_locked = yes 
 						}
 					}
-				}
-				add_building_construction = {
-					type = arms_factory 
-					level = 3 
-					instant_build = yes 
+					add_building_construction = {
+						type = arms_factory 
+						level = 3 
+						instant_build = yes 
+					}
 				}
 			}
 			swap_ideas = {

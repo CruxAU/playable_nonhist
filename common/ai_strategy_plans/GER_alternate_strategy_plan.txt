@@ -3102,7 +3102,7 @@ German_alternate_fascist_ww = { #prio wonderweapons, building up slowly, late wa
 		# 1941
 		GER_fate_of_yugoslavia # 70
 		GER_danzig_or_war # 70
-		GER_expand_the_kriegsmarinewerft #70
+		GER_expand_kriegsmarinewerft #70
 		GER_improve_the_logistics_system # 35
 		GER_panzergrenadier #70
 		GER_war_with_france # 70, usually bypassed

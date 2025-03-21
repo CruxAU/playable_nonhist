@@ -8755,13 +8755,13 @@ focus_tree = {
 							size > 1
 							include_locked = yes
 						}
+					} #NHMMAP
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
 					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -8778,13 +8778,13 @@ focus_tree = {
 								size > 0
 								include_locked = yes
 							}
+						} #NHMMAP
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
 						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
 					}
 					add_building_construction = {
 						type = infrastructure
@@ -10238,13 +10238,13 @@ focus_tree = {
 							size > 0
 							include_locked = yes
 						}
+					} #NHMMAP
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
 					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
 				}
 			}
 			add_tech_bonus = {
@@ -10945,6 +10945,7 @@ focus_tree = {
 			add_state_core = 231
 			add_state_core = 420
 			add_state_core = 419
+			add_state_core = 1000 #East Azerbaijan
 			add_state_core = 417
 			add_state_claim = 413
 			add_state_claim = 232
@@ -11642,12 +11643,12 @@ focus_tree = {
 							building = air_base
 							size > 1
 						}
+					} #NHMMAP
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
 					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
 				}
 			}
 			344 = {
@@ -11658,12 +11659,13 @@ focus_tree = {
 							size > 1
 						}
 					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
+				
 			}
 			49 = {
 				if = {
@@ -11673,12 +11675,13 @@ focus_tree = {
 							size > 2
 						}
 					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
+				
 			}
 			unlock_decision_tooltip = TUR_teach_the_proper_use_of_modern_infrastructure
 			unlock_decision_tooltip = TUR_put_new_safety_regulations_regarding_the_operation_of_aircraft_into_effect
@@ -11766,13 +11769,14 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
+				
 			}
 			add_tech_bonus = {
 				name = TUR_the_kirikkale_tank

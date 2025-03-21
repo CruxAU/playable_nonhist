@@ -1903,8 +1903,9 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { has_country_flag = SWI_elected_centralized_president } }
+			country_event = { id = BBA_SWI_annual_election.00 months = 12 } #NHMMAP
 		}
-		country_event = { id = BBA_SWI_annual_election.00 months = 12 }
+		
 	}
 }
 

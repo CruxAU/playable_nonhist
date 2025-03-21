@@ -1661,7 +1661,7 @@ characters={
 				}
 			}			
 		}
-		name=SWI_rudolf_roessler
+		name = SWI_rudolf_roessler
 		portraits={
 			civilian={
 				small="GFX_portrait_SWI_rudolf_roessler_small"

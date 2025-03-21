@@ -1694,12 +1694,12 @@ NOR_set_quisling_3 = {
 			limit = {
 				has_trait = NOR_fascist_dilettante
 			}
-		}
 			remove_country_leader_trait = NOR_fascist_dilettante
 			add_country_leader_trait = NOR_fascist_landssviker 
 			set_portraits = {
-			army = { large ="GFX_portrait_NOR_vidkun_quisling_3"}
-			civilian = { large ="GFX_portrait_NOR_vidkun_quisling_3" }
+				army = { large ="GFX_portrait_NOR_vidkun_quisling_3"}
+				civilian = { large ="GFX_portrait_NOR_vidkun_quisling_3" }
+			}
 		}	
 	}
 }
