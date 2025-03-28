@@ -1121,9 +1121,10 @@ ETH_second_italo_ethiopian_war_category = {
 	# Same Mission for italy - but with correct colors and tooltips
 	ITA_time_based_war_escalation_mission = {  
 		name = ETH_time_based_war_escalation_mission
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { 	
 				original_tag = ITA
+				has_dlc = "By Blood Alone"
 		}    
 		available = { 
 			hidden_trigger ={ always = no }
@@ -1307,7 +1308,7 @@ ETH_second_italo_ethiopian_war_category = {
 	}
 	# Hold the capital "dummy" mission for Italy 
 	ETH_conquer_addis_ababa_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { tag = ITA }    
 		available = { 
 			271 = { is_controlled_by = ROOT }
@@ -1345,7 +1346,7 @@ ETH_second_italo_ethiopian_war_category = {
 
 	# Hold Hararghe mission for Ethiopia 
 	ETH_hold_harar_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { original_tag = ETH }    
 		available = { 
 			NOT = {
@@ -1373,7 +1374,7 @@ ETH_second_italo_ethiopian_war_category = {
 	}
 	# Hold Hararghe "dummy" mission for Italy 
 	ETH_conquer_harar_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { tag = ITA }    
 		available = { 
 			835 = { is_controlled_by = ROOT } 
@@ -1591,7 +1592,7 @@ ETH_italian_occupation_category = {
 	
 	# Warning mission for Ethiopia - should be replaced with targeted mission if generic
 	ETH_italian_control_mission = {
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { original_tag = ETH }    
 		available = { 
 			var:ITA.state_integrated = { NOT = { is_controlled_by = ITA }}
@@ -2095,7 +2096,7 @@ ETH_improve_country_category = {
 	# Missions for local development
 	# State grows
 	ETH_local_development_state_grows_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { 
 			original_tag = ETH 
 		}    
@@ -2123,7 +2124,7 @@ ETH_improve_country_category = {
 	}
 	# Local industry grows 
 	ETH_local_development_industry_grows_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { 
 			original_tag = ETH 
 		}    
@@ -2162,7 +2163,7 @@ ETH_improve_country_category = {
 	}  
 	# Local industry grows 
 	ETH_local_development_arms_industry_grows_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { 
 			original_tag = ETH 
 		}    
@@ -2200,7 +2201,7 @@ ETH_improve_country_category = {
 		}
 	}  
 	ETH_local_development_improved_production_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { 
 			original_tag = ETH 
 		}    
@@ -2599,7 +2600,7 @@ ETH_centralization_balance_of_power_category = {
 	}
 
 	ETH_bop_increase_mesafint_privileges = {
-		icon = GFX_decision_gre_investment_decisions  #TODO_TA set correct icon
+		icon = GFX_decision_gre_investment_decisions
 		allowed = { original_tag = ETH }
 		available = {
 			NOT = { has_country_flag = ETH_bop_privileges_changed }
@@ -2642,7 +2643,7 @@ ETH_centralization_balance_of_power_category = {
 		}
 	}
 	ETH_bop_increase_anarchist_influence = {
-		icon = GFX_decision_SOV_the_workers_dictatorship  #TODO_TA set correct icon
+		icon = GFX_decision_SOV_the_workers_dictatorship
 		allowed = { original_tag = ETH }
 		available = {
 			NOT = { has_country_flag = ETH_bop_anarchist_privileges_changed }
@@ -2682,7 +2683,7 @@ ETH_centralization_balance_of_power_category = {
 		}
 	}
 	ETH_bop_increase_communist_influence = {
-		icon = GFX_decision_SOV_secure_the_administration  #TODO_TA set correct icon
+		icon = GFX_decision_SOV_secure_the_administration  
 		allowed = { original_tag = ETH }
 		available = {
 			NOT = { has_country_flag = ETH_bop_anarchist_communist_changed }
@@ -2722,7 +2723,7 @@ ETH_centralization_balance_of_power_category = {
 		}
 	}
 	ETH_bop_increase_the_power_of_the_mekwanint = {
-		icon = GFX_decision_gre_investment_decisions  #TODO_TA set correct icon
+		icon = GFX_decision_gre_investment_decisions 
 		allowed = { original_tag = ETH }
 		available = {
 			NOT = { has_country_flag = ETH_bop_privileges_changed }
@@ -2768,7 +2769,7 @@ ETH_centralization_balance_of_power_category = {
 
 	# Retake lost country for Ethiopia
 	ETH_retake_territory_mission = {   
-		icon = GFX_decision_generic_operation # TODO_TA set correct icon   
+		icon = GFX_decision_generic_operation
 		allowed = { original_tag = ETH }    
 		available = { 
 			controls_more_than_half_ethiopian_owned_states = yes 

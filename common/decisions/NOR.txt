@@ -2597,6 +2597,14 @@ NOR_fascist_preparation_decisions_category = {
 			}
 
 			modifier = {
+				add = 20
+				OR = {
+					FROM = { state = 925 }
+					FROM = { state = 144 }
+				}
+			}
+
+			modifier = {
 				factor = 0
 				has_completed_focus = NOR_quislings_coup
 			}

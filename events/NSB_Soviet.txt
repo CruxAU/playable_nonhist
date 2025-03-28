@@ -8194,6 +8194,33 @@ country_event = {
 				clr_global_flag = NOR_trotsky_in_norway
 				NOR = { country_event = { id = mexico.22 hours = 1} }
 			}
+			if = {
+				limit = {
+					any_country = {
+						has_completed_focus = BALTIC_seek_support_of_soviets
+						has_government = communism
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_completed_focus = BALTIC_seek_support_of_soviets
+						has_government = communism
+					}
+					ROOT = { puppet = PREV }
+					random_other_country = {
+						limit = {
+							original_tag = PREV
+						}
+						PREV = {
+							declare_war_on = {
+								target = PREV
+								type = annex_everything
+							} 
+						}
+					}
+					
+				}				
+			}
 		}
 	}
 	option = {

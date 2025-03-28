@@ -516,13 +516,22 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					ROOT = {
+						any_owned_state = {
+							ITA_state_is_in_north_africa = yes
+						}
+					}
 					any_country = {
 						owns_state = 661
 						owns_state = 662
 						owns_state = 663
 					}
 				}
-				ROOT = { transfer_state = 273 }
+				662 = {
+					OWNER = {
+						transfer_state = 273
+					}
+				}
 			}
 		}
 	}

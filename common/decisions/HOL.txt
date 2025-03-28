@@ -2365,8 +2365,9 @@ political_actions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 30
+			base = 50
 			modifier = {
+				factor = 0
 				NOT = {
 					has_completed_focus = HOL_form_the_benelux
 				}
@@ -2389,6 +2390,32 @@ political_actions = {
 				LUX = {
 					every_unit_leader = {
 						set_nationality = ROOT
+					}
+				}
+				every_country = {
+					limit = {
+						is_subject_of = BEL
+					}
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_puppet
+							end_wars  = no
+							end_civil_wars = no
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						is_subject_of = LUX
+					}
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_puppet
+							end_wars  = no
+							end_civil_wars = no
+						}
 					}
 				}
 				annex_country = {

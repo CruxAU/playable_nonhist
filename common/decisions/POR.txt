@@ -2377,7 +2377,7 @@ POR_monarchist_cause = {
 		fire_only_once = no
 
 		ai_will_do = {
-			base = 1
+			base = 5
 		}
 		visible = {
 			has_completed_focus = POR_a_royal_wedding
@@ -2516,7 +2516,7 @@ POR_monarchist_cause = {
 		fire_only_once = no
 
 		ai_will_do = {
-			base = 0
+			base = 0 # This is self-saboutaging for the AI 
 		}
 		visible = {
 			has_completed_focus = POR_a_royal_wedding
@@ -2809,7 +2809,7 @@ POR_the_spanish_civil_war = {
 						option = FASCIST_SUPPORT_SPAIN
 					}
 				}
-				add = 10
+				add = 30
 			}
 		}
 

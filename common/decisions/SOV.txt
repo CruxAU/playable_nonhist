@@ -14981,7 +14981,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 150
+			base = 200
 
 		}
 	}
@@ -15054,7 +15054,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 250
+			base = 200
 		}
 	}
 
@@ -15127,7 +15127,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 110
+			base = 200
 		}
 	}
 
@@ -15200,7 +15200,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 130 #NHMMAP lowered because generally shit supply
+			base = 200 #temp - leveled out, was 130, others were same as basegame ___ #NHMMAP lowered because generally shit supply
 		}
 	}
 
@@ -15273,7 +15273,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 100
+			base = 200
 		}
 	}
 
@@ -15346,7 +15346,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 125
+			base = 200
 		}
 	}
 	# Irkutsk - fallback for RO / Exiles
@@ -15420,7 +15420,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_add_armed_forces_support_state = yes
 		}
 		ai_will_do = {
-			base = 125
+			base = 200
 		}
 	}
 
@@ -18064,6 +18064,7 @@ SOV_panslavic_nationalism = {
 			has_full_control_of_state = 784
 			has_full_control_of_state = 93
 			has_full_control_of_state = 87
+			has_full_control_of_state = 807
 		}
 
 		visible = {
@@ -18095,6 +18096,7 @@ SOV_panslavic_nationalism = {
 			add_state_core = 784
 			add_state_core = 93
 			add_state_core = 87
+			add_state_core = 807
 			set_country_flag = SOV_integrated_poland_flag
 		}
 

@@ -1936,11 +1936,13 @@ AST_ai_behavior = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_AST_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_ALTERNATE
 		text = "RULE_OPTION_COMMUNIST_ALTERNATE"
 		desc = "RULE_COMMUNIST_ALTERNATE_AST_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_HISTORICAL
@@ -1952,21 +1954,25 @@ AST_ai_behavior = {
 		name = DEMOCRATIC_ALTERNATE
 		text = "RULE_OPTION_DEMOCRATIC_ALTERNATE"
 		desc = "RULE_DEMOCRATIC_ALTERNATE_AST_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_AST_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_ALTERNATE
 		text = "RULE_OPTION_FASCIST_ALTERNATE"
 		desc = "RULE_FASCIST_ALTERNATE_AST_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -1983,16 +1989,19 @@ CAN_ai_behavior = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_CAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_ALTERNATE
 		text = "RULE_OPTION_COMMUNIST_ALTERNATE"
 		desc = "RULE_OPTION_COMMUNIST_ALTERNATE_CAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_TROTSKYITE
 		text = "RULE_OPTION_COMMUNIST_TROTSKYITE"
 		desc = "RULE_OPTION_COMMUNIST_TROTSKYITE_CAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_HISTORICAL
@@ -2004,21 +2013,25 @@ CAN_ai_behavior = {
 		name = DEMOCRATIC_ALTERNATE
 		text = "RULE_OPTION_DEMOCRATIC_ALTERNATE"
 		desc = "RULE_DEMOCRATIC_ALTERNATE_CAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_CAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_ALTERNATE
 		text = "RULE_OPTION_FASCIST_ALTERNATE"
 		desc = "RULE_FASCIST_ALTERNATE_CAN_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -2035,11 +2048,13 @@ SAF_ai_behavior = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_SAF_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_ALTERNATE
 		text = "RULE_OPTION_COMMUNIST_ALTERNATE"
 		desc = "RULE_OPTION_COMMUNIST_ALTERNATE_SAF_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_HISTORICAL
@@ -2051,21 +2066,25 @@ SAF_ai_behavior = {
 		name = DEMOCRATIC_ALTERNATE
 		text = "RULE_OPTION_DEMOCRATIC_ALTERNATE"
 		desc = "RULE_DEMOCRATIC_ALTERNATE_SAF_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_SAF_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_ALTERNATE
 		text = "RULE_OPTION_FASCIST_ALTERNATE"
 		desc = "RULE_FASCIST_ALTERNATE_SAF_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 NZL_ai_behavior = {
@@ -2081,6 +2100,7 @@ NZL_ai_behavior = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_NZL_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_HISTORICAL
@@ -2092,16 +2112,19 @@ NZL_ai_behavior = {
 		name = DEMOCRATIC_ALTERNATE
 		text = "RULE_OPTION_DEMOCRATIC_ALTERNATE"
 		desc = "RULE_DEMOCRATIC_ALTERNATE_NZL_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_NZL_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 RAJ_ai_behavior = {
@@ -2114,6 +2137,7 @@ RAJ_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	
+	#GOE ONLY
 	option = {
 		name = GOE_HISTORICAL
 		text = "RULE_OPTION_GOE_HISTORICAL"
@@ -2127,6 +2151,7 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_GOE_INDIA_UNITED"
 		desc = "RULE_OPTION_GOE_INDIA_UNITED_RAJ_AI_DESC"
 		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
 	}
 
 	option = {
@@ -2134,6 +2159,7 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_GOE_INDIA_FASCISM_BOSE"
 		desc = "RULE_OPTION_GOE_INDIA_FASCISM_BOSE_RAJ_AI_DESC"
 		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
 	}
 
 	option = {
@@ -2141,6 +2167,7 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_GOE_INDIA_FASCISM_HINDUTVA"
 		desc = "RULE_OPTION_GOE_INDIA_FASCISM_HINDUTVA_RAJ_AI_DESC"
 		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
 	}
 
 	option = {
@@ -2148,6 +2175,7 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_GOE_INDIA_EAST_INDIA_COMPANY"
 		desc = "RULE_OPTION_GOE_INDIA_EAST_INDIA_COMPANY_RAJ_AI_DESC"
 		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
 	}
 
 	option = {
@@ -2155,6 +2183,7 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_GOE_INDIA_MUGHAL"
 		desc = "RULE_OPTION_GOE_INDIA_MUGHAL_RAJ_AI_DESC"
 		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
 	}
 
 	option = {
@@ -2162,35 +2191,47 @@ RAJ_ai_behavior = {
 		text = "RULE_OPTION_GOE_INDIA_COMMUNISM"
 		desc = "RULE_OPTION_GOE_INDIA_COMMUNISM_RAJ_AI_DESC"
 		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
 	}
 
+	#END GOE
+
+	#TFV ONLY
 	option = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_RAJ_AI_DESC"
+		allow_achievements = yes
+		exclude_dlc = "Graveyard of Empires"
 	}
 	option = {
 		name = DEMOCRATIC_HISTORICAL
 		text = "RULE_OPTION_HISTORICAL"
 		desc = "RULE_OPTION_DEMOCRATIC_HISTORICAL_RAJ_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "Graveyard of Empires"
 	}
 	option = {
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_RAJ_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "Graveyard of Empires"
 	}
 	option = {
 		name = "FASCIST_ALTERNATE"
 		text = "RULE_OPTION_FASCIST_ALTERNATE"
 		desc = "RULE_FASCIST_ALTERNATE_RAJ_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "Graveyard of Empires"
 	}
+	
+	#END TFV
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -2587,26 +2628,31 @@ ROM_ai_behavior = {
 		name = BALKAN_DOMINANCE
 		text = "RULE_OPTION_BALKAN_DOMINANCE"
 		desc = "RULE_OPTION_BALKAN_DOMINANCE_ROM_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_OPTION_DEMOCRATIC_ROM_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = SANITAIRE
 		text = "RULE_OPTION_SANITAIRE"
 		desc = "RULE_OPTION_SANITAIRE_ROM_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_COMMUNIST_ROM_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 ROM_ai_loyalty = {
@@ -2622,6 +2668,7 @@ ROM_ai_loyalty = {
 		name = LOYAL
 		text = "RULE_OPTION_LOYAL"
 		desc = "RULE_OPTION_LOYAL_ROM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 YUG_ai_behavior = {
@@ -3779,36 +3826,43 @@ SPR_ai_behavior = { # guarantees the basic setup
 		name = FALANGIST
 		text = "RULE_OPTION_FALANGIST"
 		desc = "RULE_OPTION_FALANGIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = CARLIST
 		text = "RULE_OPTION_CARLIST"
 		desc = "RULE_OPTION_CARLIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = SECOND_REPUBLIC
 		text = "RULE_OPTION_SECOND_REPUBLIC"
 		desc = "RULE_OPTION_SECOND_REPUBLIC_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = STALINIST
 		text = "RULE_OPTION_STALINIST"
 		desc = "RULE_OPTION_STALINIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = INDEPENDENT_COMMUNIST
 		text = "RULE_OPTION_INDEPENDENT_COMMUNIST"
 		desc = "RULE_OPTION_INDEPENDENT_COMMUNIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = ANARCHIST
 		text = "RULE_OPTION_ANARCHIST"
 		desc = "RULE_OPTION_ANARCHIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -3861,6 +3915,7 @@ SPA_ai_behavior = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -3877,16 +3932,19 @@ SPB_ai_behavior = {
 		name = CARLIST
 		text = "RULE_OPTION_SPB_CARLIST"
 		desc = "RULE_OPTION_SPB_CARLIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = CARLIST_AGGRESSIVE
 		text = "RULE_OPTION_SPB_CARLIST_AGGRESSIVE"
 		desc = "RULE_OPTION_SPB_CARLIST_AGGRESSIVE_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -3903,26 +3961,31 @@ SPC_ai_behavior = {
 		name = ANARCHIST
 		text = "RULE_OPTION_SPC_ANARCHIST"
 		desc = "RULE_OPTION_SPC_ANARCHIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = ANARCHIST_GLOBAL
 		text = "RULE_OPTION_SPC_ANARCHIST_GLOBAL"
 		desc = "RULE_OPTION_SPC_ANARCHIST_GLOBAL_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = INDEPENDENT_COMMUNIST
 		text = "RULE_OPTION_SPC_INDEPENDENT_COMMUNIST"
 		desc = "RULE_OPTION_SPC_INDEPENDENT_COMMUNIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = INDEPENDENT_COMMUNIST_AGGRESSIVE
 		text = "RULE_OPTION_SPC_INDEPENDENT_COMMUNIST_AGGRESSIVE"
 		desc = "RULE_OPTION_SPC_INDEPENDENT_COMMUNIST_AGGRESSIVE_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -3939,31 +4002,37 @@ SPD_ai_behavior = {
 		name = SECOND_REPUBLIC_ALLIES
 		text = "RULE_OPTION_SPD_SECOND_REPUBLIC_ALLIES"
 		desc = "RULE_OPTION_SPD_SECOND_REPUBLIC_ALLIES_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = SECOND_REPUBLIC_AXIS
 		text = "RULE_OPTION_SPD_SECOND_REPUBLIC_AXIS"
 		desc = "RULE_OPTION_SPD_SECOND_REPUBLIC_AXIS_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = SECOND_REPUBLIC_LOYALIST
 		text = "RULE_OPTION_SPD_SECOND_REPUBLIC_LOYALIST"
 		desc = "RULE_OPTION_SPD_SECOND_REPUBLIC_LOYALIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = STALINIST
 		text = "RULE_OPTION_SPD_STALINIST"
 		desc = "RULE_OPTION_SPD_STALINIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = STALINIST_FREE
 		text = "RULE_OPTION_SPD_STALINIST_FREE"
 		desc = "RULE_OPTION_SPD_STALINIST_FREE_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -3986,56 +4055,67 @@ POR_ai_behavior = {
 		name = ANGLO_PORTUGESE
 		text = "RULE_OPTION_ANGLO_PORTUGESE"
 		desc = "RULE_OPTION_ANGLO_PORTUGESE_POR_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST_AXIS"
 		desc = "RULE_OPTION_FASCIST_POR_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_FIFTH_EMPIRE
 		text = "RULE_OPTION_FASCIST_FIFTH_EMPIRE"
 		desc = "RULE_OPTION_FASCIST_FIFTH_EMPIRE_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCIST_SUPPORT_SPAIN
 		text = "RULE_OPTION_FASCIST_SUPPORT_SPAIN"
 		desc = "RULE_OPTION_FASCIST_SUPPORT_SPAIN_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = NEUTRALITY_MONARCHIST
 		text = "RULE_OPTION_NEUTRALITY_MONARCHIST"
 		desc = "RULE_OPTION_NEUTRALITY_MONARCHIST_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = NEUTRALITY_MONARCHIST_SUPPORT_SPAIN
 		text = "RULE_OPTION_NEUTRALITY_MONARCHIST_SUPPORT_SPAIN"
 		desc = "RULE_OPTION_NEUTRALITY_MONARCHIST_SUPPORT_SPAIN_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_OPTION_DEMOCRATIC_POR_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_IBERIAN_SUMMIT
 		text = "RULE_OPTION_DEMOCRATIC_IBERIAN_SUMMIT"
 		desc = "RULE_OPTION_DEMOCRATIC_IBERIAN_SUMMIT_POR_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_COMINTERN
 		text = "RULE_OPTION_COMMUNIST_COMINTERN"
 		desc = "RULE_OPTION_COMMUNIST_COMINTERN_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_INDEPENDENT
 		text = "RULE_OPTION_COMMUNIST_INDEPENDENT"
 		desc = "RULE_OPTION_COMMUNIST_INDEPENDENT_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -4058,51 +4138,61 @@ GRE_ai_behavior = {
 		name = MONARCHIST
 		text = "RULE_OPTION_MONARCHIST_GRE_AI"
 		desc = "RULE_OPTION_MONARCHIST_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = MONARCHIST_ALTERNATE
 		text = "RULE_OPTION_MONARCHIST_GRE_ALTERNATE_AI"
 		desc = "RULE_OPTION_MONARCHIST_ALTERNATE_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST
 		text = "RULE_OPTION_STALINIST_GRE_AI"
 		desc = "RULE_OPTION_STALINIST_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = COMMUNIST_ALTERNATE
 		text = "RULE_OPTION_COMMUNIST_GRE_AI"
 		desc = "RULE_OPTION_ALTERNATE_COMMUNIST_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_OPTION_DEMOCRATIC_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_MEGALI
 		text = "RULE_OPTION_DEMOCRATIC_GRE_AI"
 		desc = "RULE_OPTION_VENEZELIST_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCISM
 		text = "RULE_OPTION_FASCISM_METAXIST"
 		desc = "RULE_OPTION_FASCISM_METAXIST_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCISM_HELLENOTURKISM
 		text = "RULE_OPTION_FASCISM_HELLENOTURKISM"
 		desc = "RULE_OPTION_FASCISM_HELLENOTURKISM_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = FASCISM_ALTERNATE
 		text = "RULE_OPTION_FASCIST_ALTERNATE_GRE_AI"
 		desc = "RULE_OPTION_FASCISM_ALTERNATE_GRE_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
@@ -5492,6 +5582,24 @@ FIN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = HISTORICAL_ALTERNATE
+		text = "RULE_OPTION_HISTORICAL_ALTERNATE"
+		desc = "RULE_HISTORICAL_ALTERNATE_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HISTORICAL_BALTIC
+		text = "RULE_OPTION_HISTORICAL_BALTIC"
+		desc = "RULE_HISTORICAL_BALTIC_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HISTORICAL_EXP
+		text = "RULE_OPTION_HISTORICAL_EXP"
+		desc = "RULE_HISTORICAL_EXP_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		required_dlc = "Arms Against Tyranny"
 		name = FIN_FASCIST_PLAN
 		text = "RULE_OPTION_FIN_FASCIST_PLAN"
@@ -5507,9 +5615,156 @@ FIN_ai_behavior = {
 	}
 	option = {
 		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_COMINTERN
+		text = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_COMINTERN_KARELIA
+		text = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_KARELIA_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_KARELIA_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_COMINTERN_BALTIC
+		text = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_BALTIC_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_BALTIC_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_COMINTERN_RED_FINLAND
+		text = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_RED_FINLAND_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_COMINTERN_RED_FINLAND_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_PRO_SOV_NORDIC
+		text = "RULE_OPTION_FIN_COMMUNIST_PRO_SOV_NORDIC_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_PRO_SOV_NORDIC_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+		text = "RULE_OPTION_FIN_COMMUNIST_PRO_SOV_NORDIC_BALTIC_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_PRO_SOV_NORDIC_BALTIC_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_PRO_SOV_NORDIC_SAMPI
+		text = "RULE_OPTION_FIN_COMMUNIST_PRO_SOV_NORDIC_SAMPI_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_PRO_SOV_NORDIC_SAMPI_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_ANTISOV
+		text = "RULE_OPTION_FIN_COMMUNIST_ANTISOV_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_ANTISOV_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_ANTISOV_NORDIC
+		text = "RULE_OPTION_FIN_COMMUNIST_ANTISOV_NORDIC_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_ANTISOV_NORDIC_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_ANTISOV_NORDIC_BALTIC
+		text = "RULE_OPTION_FIN_COMMUNIST_ANTISOV_NORDIC_BALTIC_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_ANTISOV_NORDIC_BALTIC_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_COMMUNIST_FINNO_RUSSIAN
+		text = "RULE_OPTION_FIN_COMMUNIST_FINNO_RUSSIAN_PLAN"
+		desc = "RULE_OPTION_FIN_COMMUNIST_FINNO_RUSSIAN_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
 		name = FIN_DEMOCRATIC_PLAN
 		text = "RULE_OPTION_FIN_DEMOCRATIC_PLAN"
 		desc = "RULE_OPTION_FIN_DEMOCRATIC_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_ALLIES
+		text = "RULE_OPTION_FIN_DEMOCRATIC_ALLIES"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_ALLIES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_ALLIES_SAMPI
+		text = "RULE_OPTION_FIN_DEMOCRATIC_ALLIES_SAMPI"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_ALLIES_SAMPI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_ALLIES_FEDERATION
+		text = "RULE_OPTION_FIN_DEMOCRATIC_ALLIES_FEDERATION"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_ALLIES_FEDERATION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_ANTISOV_NORDIC
+		text = "RULE_OPTION_FIN_DEMOCRATIC_ANTISOV_NORDIC"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_ANTISOV_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+		text = "RULE_OPTION_FIN_DEMOCRATIC_ANTISOV_NORDIC_BALTIC"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_ANTISOV_NORDIC_BALTIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_FINNO_RUSSIAN
+		text = "RULE_OPTION_FIN_DEMOCRATIC_FINNO_RUSSIAN"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_FINNO_RUSSIAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_PRO_SOV
+		text = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_PRO_SOV_NORDIC
+		text = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_NORDIC"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC
+		text = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_DEMOCRATIC_PRO_SOV_NORDIC_SAMPI
+		text = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_NORDIC_SAMPI"
+		desc = "RULE_OPTION_FIN_DEMOCRATIC_PRO_SOV_NORDIC_SAMPI_DESC"
 		allow_achievements = yes
 	}
 	option = {

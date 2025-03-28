@@ -7243,3 +7243,227 @@ DEN_make_overlord_like_me_compliance_NOR = {
 		value = 500
 	}	
 }
+
+#########################################################################################
+######################### FIN ###########################################################
+#########################################################################################
+
+FIN_approach_soviets_relations = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		focus_progress = {
+			focus = FIN_approach_the_soviets
+			progress > 0.01
+		}
+	}
+	abort = {
+		OR = {
+			SOV = {
+				OR = {
+					NOT = { has_government = communism }
+					has_war_with = FIN
+				}
+			}
+			has_completed_focus = FIN_approach_the_soviets
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = improve_relation
+		value = 500
+	}	
+}
+
+FIN_finno_soviet_pact_relations = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		focus_progress = {
+			focus = FIN_finno_soviet_pact
+			progress > 0.01
+		}
+	}
+	abort = {
+		OR = {
+			SOV = {
+				OR = {
+					NOT = { has_government = communism }
+					has_war_with = FIN
+				}
+			}
+			has_completed_focus = FIN_finno_soviet_pact
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = improve_relation
+		value = 500
+	}	
+}
+
+FIN_finno_soviet_alliance_relations = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		focus_progress = {
+			focus = FIN_join_the_comintern
+			progress > 0.01
+		}
+	}
+	abort = {
+		OR = {
+			SOV = {
+				OR = {
+					is_faction_leader = no
+					NOT = { has_government = communism }
+					has_war_with = FIN
+				}
+			}
+			has_completed_focus = FIN_join_the_comintern
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = improve_relation
+		value = 500
+	}	
+}
+
+FIN_finno_soviet_karelia_relations = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		focus_progress = {
+			focus = FIN_integrate_kola_and_karelia
+			progress > 0.01
+		}
+		is_in_faction_with = SOV
+	}
+	abort = {
+		OR = {
+			SOV = {
+				OR = {
+					is_faction_leader = no
+					NOT = { has_government = communism }
+					has_war_with = FIN
+				}
+			}
+			has_completed_focus = FIN_integrate_kola_and_karelia
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = improve_relation
+		value = 500
+	}	
+}
+
+FIN_finno_nordic_sampi_relations = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		focus_progress = {
+			focus = FIN_preserve_sapmi
+			progress > 0.01
+		}
+	}
+	abort = {
+		has_completed_focus = FIN_preserve_sapmi
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = NOR
+		target = improve_relation
+		value = 500
+	}	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SWE
+		target = improve_relation
+		value = 500
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = improve_relation
+		value = 500
+	}
+}
+
+FIN_finno_estonian_relations = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_HISTORICAL_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = HISTORICAL_BALTIC
+			}
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_COMINTERN_BALTIC
+			}
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+			}
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_ANTISOV_NORDIC_BALTIC
+			}
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+			}
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC
+			}
+		}
+		OR = {
+			focus_progress = {
+				focus = FIN_viron_kansa
+				progress > 0.01
+			}
+			focus_progress = {
+				focus = FIN_finno_estonian_union
+				progress > 0.01
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_completed_focus = FIN_viron_kansa
+			has_completed_focus = FIN_finno_estonian_union
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = EST
+		target = improve_relation
+		value = 500
+	}	
+}

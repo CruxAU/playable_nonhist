@@ -7297,7 +7297,7 @@ ITA_democratic_plan_allies = {
 
 		#1941
 		ITA_industria_della_gomma_sintetica			#35
-		ITA_the_italian_confederation
+		
 		ITA_the_fight_overseas
 		ITA_ascari
 		ITA_irregulars
@@ -7313,6 +7313,7 @@ ITA_democratic_plan_allies = {
 		ITA_divisioni_alpine						#35
 		ITA_air_innovations_bba						#35
 		ITA_citta_dell_aria
+		ITA_the_italian_confederation
 	}	
 
 	#Focuses never to take

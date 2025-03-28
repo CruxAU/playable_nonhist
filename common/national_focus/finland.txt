@@ -21,13 +21,13 @@ focus_tree = {
 
 	country = {
 		factor = 0
-		
+
 		modifier = {
 			add = 10
 			tag = FIN
 		}
 	}
-	
+
 	default = no
 
 	initial_show_position = {
@@ -41,13 +41,13 @@ focus_tree = {
 
 
 
- ######   #######   ######  ####    ###    ##       ####  ######  ######## 
-##    ## ##     ## ##    ##  ##    ## ##   ##        ##  ##    ##    ##    
-##       ##     ## ##        ##   ##   ##  ##        ##  ##          ##    
- ######  ##     ## ##        ##  ##     ## ##        ##   ######     ##    
-      ## ##     ## ##        ##  ######### ##        ##        ##    ##    
-##    ## ##     ## ##    ##  ##  ##     ## ##        ##  ##    ##    ##    
- ######   #######   ######  #### ##     ## ######## ####  ######     ##    
+ ######   #######   ######  ####    ###    ##       ####  ######  ########
+##    ## ##     ## ##    ##  ##    ## ##   ##        ##  ##    ##    ##
+##       ##     ## ##        ##   ##   ##  ##        ##  ##          ##
+ ######  ##     ## ##        ##  ##     ## ##        ##   ######     ##
+      ## ##     ## ##        ##  ######### ##        ##        ##    ##
+##    ## ##     ## ##    ##  ##  ##     ## ##        ##  ##    ##    ##
+ ######   #######   ######  #### ##     ## ######## ####  ######     ##
 
 
 
@@ -99,7 +99,7 @@ focus_tree = {
 
 			custom_effect_tooltip = remove_political_advisor
 			show_ideas_tooltip = FIN_antti_hackzell
-			
+
 			FIN_bop_medium_decrease_effect = yes
 
 			hidden_effect = {
@@ -149,11 +149,11 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = FIN_otto_wille_kuusinen
 			show_ideas_tooltip = FIN_aarne_saarinen
-			
+
 			FIN_bop_low_decrease_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_second_finnish_civil_war
 		icon = GFX_focus_FIN_the_second_finnish_civil_war
@@ -356,7 +356,7 @@ focus_tree = {
 				#keep_unit_leaders_trigger = { <triggers> } # Optional. Trigger for unit leaders to remain with the original country
 				#keep_political_leader = no # optional, default is no; If yes, the party leader of the revolting ideology will not join the revolter as its leader.
 				#keep_political_party_members = no # Optional, default is no; If yes, it will keep the non main leaders of the party leaders in original country
-				
+
 				# List of effects that will run on revolt country
 				hidden_effect = {
 					if = {
@@ -427,11 +427,11 @@ focus_tree = {
 								industrial_complex > 0
 							}
 							damage_building = {
-								type = industrial_complex 
+								type = industrial_complex
 								damage = 2
 							}
 							damage_building = {
-								type = infrastructure 
+								type = infrastructure
 								damage = 1
 							}
 						}
@@ -449,7 +449,7 @@ focus_tree = {
 								arms_factory > 0
 							}
 							damage_building = {
-								type = arms_factory 
+								type = arms_factory
 								damage = 2
 							}
 						}
@@ -458,7 +458,7 @@ focus_tree = {
 								dockyard > 0
 							}
 							damage_building = {
-								type = dockyard 
+								type = dockyard
 								damage = 2
 							}
 						}
@@ -498,7 +498,7 @@ focus_tree = {
 							#log = "deleting units in [THIS.GetName]"
 							PREV = {
 								delete_unit = {
-									division_template = "Jalkaväkidivisioona" # optional - can be filtered a specific template 
+									division_template = "Jalkaväkidivisioona" # optional - can be filtered a specific template
 									state = PREV # optional - can be filtered by a given state
 									disband = no # optional - default is no. if set to yes the game will refund equipment/manpower
 								}
@@ -521,14 +521,14 @@ focus_tree = {
 
 				#log = "Inside I am [THIS.GetName] My capital is [capital_scope.GetName]"
 				division_template = { #Mustapaidat
-					name = "Mustapaidat" 
+					name = "Mustapaidat"
 					division_names_group = FIN_MIL_01
 					#template_counter = 68
 					is_locked = yes
 					force_allow_recruiting = yes
 					division_cap = 12
 
-					regiments = { 
+					regiments = {
 						militia = { x = 0 y = 0 }
 						militia = { x = 0 y = 1 }
 						militia = { x = 1 y = 0 }
@@ -536,7 +536,7 @@ focus_tree = {
 						militia = { x = 2 y = 0 }
 						militia = { x = 2 y = 1 }
 					}
-					support = { 
+					support = {
 						engineer = { x = 0 y = 0 }
 					}
 				}
@@ -632,7 +632,7 @@ focus_tree = {
 			custom_effect_tooltip = FIN_red_guard_divisions_tt
 
 			division_template = { #Red Guard
-				name = "Punakaarti" 
+				name = "Punakaarti"
 				division_names_group = FIN_MIL_02
 				#template_counter = 14
 				override_model = FIN_militia_alt_0_entity
@@ -640,7 +640,7 @@ focus_tree = {
 				force_allow_recruiting = yes
 				division_cap = 12
 
-				regiments = { 
+				regiments = {
 					militia = { x = 0 y = 0 }
 					militia = { x = 0 y = 1 }
 					militia = { x = 1 y = 0 }
@@ -648,7 +648,7 @@ focus_tree = {
 					militia = { x = 2 y = 0 }
 					militia = { x = 2 y = 1 }
 				}
-				support = { 
+				support = {
 					engineer = { x = 0 y = 0 }
 				}
 			}
@@ -721,7 +721,7 @@ focus_tree = {
 			if = { #Construction Workers - NS
 				limit = {
 					ROOT = { has_country_flag = FIN_cw_construction_workers_flag }
-				}				
+				}
 				hidden_effect = {
 					if = {
 						limit = {
@@ -756,7 +756,7 @@ focus_tree = {
 			if = { #Trade Unions - NS
 				limit = {
 					ROOT = { has_country_flag = FIN_cw_trade_unions_flag }
-				}			
+				}
 				hidden_effect = {
 					if = {
 						limit = {
@@ -843,7 +843,7 @@ focus_tree = {
 			show_unit_leaders_tooltip = FIN_akseli_anttila
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = FIN_akseli_anttila
-			
+
 			hidden_effect = { #Hidden due to silly BoP tooltips, can't be bothered
 				FIN_initiate_balance_of_power_effect = yes
 			}
@@ -870,18 +870,18 @@ focus_tree = {
 					}
 					# AI more friendly
 					add_ai_strategy = {
-						type = befriend 
+						type = befriend
 						id = SOV
 						value = 40
 					}
 					SOV = {
 						add_ai_strategy = {
-							type = befriend 
+							type = befriend
 							id = ROOT
 							value = 40
 						}
 						add_ai_strategy = {
-							type = send_volunteers_desire 
+							type = send_volunteers_desire
 							id = ROOT
 							value = 200
 						}
@@ -890,12 +890,12 @@ focus_tree = {
 					#AI less hostile
 					SOV = {
 						add_ai_strategy = {
-							type = antagonize 
+							type = antagonize
 							id = ROOT
 							value = -100
 						}
 						add_ai_strategy = {
-							type = conquer 
+							type = conquer
 							id = ROOT
 							value = -100
 						}
@@ -904,7 +904,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_peoples_democratic_league
 		icon = GFX_focus_FIN_the_peoples_democratic_league
@@ -939,7 +939,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_cooperate_with_social_democrats
 		icon = GFX_focus_generic_soviet_politics
@@ -971,7 +971,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_workers_state
 		icon = GFX_focus_YUG_pan_slavic_congress
@@ -995,7 +995,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_red_watch
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
@@ -1035,7 +1035,7 @@ focus_tree = {
 			unlock_decision_tooltip = FIN_appoint_yrjo_leino_as_president
 		}
 	}
-	
+
 	focus = {
 		id = FIN_approach_the_soviets
 		icon = GFX_focus_FIN_approach_the_soviets
@@ -1087,18 +1087,18 @@ focus_tree = {
 				hidden_effect = {
 					# AI more friendly
 					add_ai_strategy = {
-						type = befriend 
+						type = befriend
 						id = SOV
 						value = 40
 					}
 					SOV = {
 						add_ai_strategy = {
-							type = befriend 
+							type = befriend
 							id = ROOT
 							value = 40
 						}
 						add_ai_strategy = {
-							type = send_volunteers_desire 
+							type = send_volunteers_desire
 							id = ROOT
 							value = 200
 						}
@@ -1107,12 +1107,12 @@ focus_tree = {
 					#AI less hostile
 					SOV = {
 						add_ai_strategy = {
-							type = antagonize 
+							type = antagonize
 							id = ROOT
 							value = -100
 						}
 						add_ai_strategy = {
-							type = conquer 
+							type = conquer
 							id = ROOT
 							value = -100
 						}
@@ -1144,7 +1144,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_toivo_antikainen
 		}
 	}
-	
+
 	focus = {
 		id = FIN_antagonize_the_soviets
 		icon = GFX_focus_FIN_antagonize_the_soviets
@@ -1170,7 +1170,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = FIN_arvo_tuominen
-			
+
 			custom_effect_tooltip = FIN_antagonize_the_soviets_event_tt
 			if = {
 				limit = {
@@ -1206,18 +1206,18 @@ focus_tree = {
 			hidden_effect = {
 				# AI less friendly
 				add_ai_strategy = {
-					type = befriend 
+					type = befriend
 					id = SOV
 					value = -20
 				}
 				SOV = {
 					add_ai_strategy = {
-						type = befriend 
+						type = befriend
 						id = ROOT
 						value = -20
 					}
 					add_ai_strategy = {
-						type = send_volunteers_desire 
+						type = send_volunteers_desire
 						id = ROOT
 						value = -200
 					}
@@ -1226,12 +1226,12 @@ focus_tree = {
 				#AI less hostile
 				SOV = {
 					add_ai_strategy = {
-						type = antagonize 
+						type = antagonize
 						id = ROOT
 						value = 30
 					}
 					add_ai_strategy = {
-						type = conquer 
+						type = conquer
 						id = ROOT
 						value = 30
 					}
@@ -1239,7 +1239,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finno_soviet_pact
 		icon = GFX_focus_chi_mission_to_the_soviet_union
@@ -1281,7 +1281,7 @@ focus_tree = {
 			event_option_tooltip = AAT_finland_diplomacy.21.a
 		}
 	}
-	
+
 	focus = {
 		id = FIN_subsidized_national_industrialization
 		icon = GFX_goal_generic_soviet_construction
@@ -1344,7 +1344,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_learned_societies
 		icon = GFX_focus_research
@@ -1365,7 +1365,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_federation_of_trade_unions
 		icon = GFX_focus_FIN_finnish_federation_of_trade_unions
@@ -1390,7 +1390,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_defensive_preparations
 		icon = GFX_focus_generic_fortify_finland
@@ -1630,7 +1630,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_trade_agreements
 		icon = GFX_goal_generic_intelligence_exchange
@@ -1654,7 +1654,7 @@ focus_tree = {
 				add_equipment_subsidy = {
 					cic = 1000
 					equipment_type = small_plane_airframe
-					seller_tags = { ENG } 
+					seller_tags = { ENG }
 				}
 			}
 			if = {
@@ -1665,7 +1665,7 @@ focus_tree = {
 				add_equipment_subsidy = {
 					cic = 1000
 					equipment_type = light_tank_chassis
-					seller_tags = { FRA } 
+					seller_tags = { FRA }
 				}
 			}
 			if = {
@@ -1676,7 +1676,7 @@ focus_tree = {
 				add_equipment_subsidy = {
 					cic = 1000
 					equipment_type = artillery_equipment
-					seller_tags = { SWE } 
+					seller_tags = { SWE }
 				}
 			}
 
@@ -1685,7 +1685,7 @@ focus_tree = {
 					has_dlc = "La Resistance"
 				}
 				add_ideas = FIN_infiltrated_assets
-				
+
 				FIN_create_operative_hella_wuolijok = yes
 			}
 			else = {
@@ -1693,7 +1693,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finno_estonian_union
 		icon = GFX_focus_FIN_viron_kansa
@@ -1716,7 +1716,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		bypass = {
 			EST = {
 				OR = {
@@ -1797,11 +1797,11 @@ focus_tree = {
 			show_ideas_tooltip = FIN_miina_sillanpaa
 
 			show_unit_leaders_tooltip = FIN_aarne_sihvo
-			
+
 			FIN_bop_low_decrease_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_pragmatic_socialism
 		icon = GFX_focus_FIN_pragmatic_socialism
@@ -1811,7 +1811,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = FIN_antagonize_the_soviets
 		cost = 5
-		
+
 		bypass = {
 			has_government = democratic
 		}
@@ -1931,7 +1931,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_sosialistinen_eduskuntaryhma
 		icon = GFX_focus_prc_agrarian_socialism
@@ -1961,7 +1961,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_social_democratic_womens_union
 		icon = GFX_focus_FIN_social_democratic_womens_association
@@ -1992,7 +1992,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_mineral_wealth
 		icon = GFX_focus_generic_mining_industry
@@ -2099,7 +2099,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_funds_from_kalevala_koru_oy
 		icon = GFX_focus_FIN_funds_from_kalevala_koru_oy
@@ -2124,7 +2124,7 @@ focus_tree = {
 
 		}
 	}
-	
+
 	focus = {
 		id = FIN_join_the_comintern
 		icon = GFX_goal_support_communism
@@ -2211,15 +2211,15 @@ focus_tree = {
 		ai_will_do = {
 			base = 40 #High base AI weight so if the Comintern or Allies faction focuses are unavailable, AI prioritizes this one
 		}
-		
+
 		cost = 10
 
 		bypass = {
 			OR = {
 				is_faction_leader = yes
 				any_allied_country = {
-					is_faction_leader = yes 
-					NORDIC_is_nordic = yes 
+					is_faction_leader = yes
+					NORDIC_is_nordic = yes
 				}
 			}
 		}
@@ -2404,7 +2404,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_approach_major_democracies
 		icon = GFX_goal_support_democracy
@@ -2438,7 +2438,7 @@ focus_tree = {
 							NOT = { has_war_with = ROOT }
 						}
 					}
-					USA = { 
+					USA = {
 						is_faction_leader = yes
 						has_government = democratic
 						NOT = { has_war_with = ROOT }
@@ -2449,7 +2449,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		bypass = {
 			OR = {
 				is_in_faction_with = ENG
@@ -2480,9 +2480,20 @@ focus_tree = {
 						NOT = { has_war_with = ROOT }
 					}
 				}
-				USA = { 
+				USA = {
 					is_faction_leader = yes
 					has_government = democratic
+					NOT = { has_war_with = ROOT }
+					all_allied_country = {
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				any_country = {
+					is_faction_leader = yes
+					has_government = democratic
+					capital_scope = {
+						is_on_continent = europe
+					}
 					NOT = { has_war_with = ROOT }
 					all_allied_country = {
 						NOT = { has_war_with = ROOT }
@@ -2500,7 +2511,7 @@ focus_tree = {
 						is_faction_leader = yes
 						has_government = democratic
 						NOT = { has_war_with = ROOT }
-						NOT = { 
+						NOT = {
 							any_allied_country = {
 								has_war_with = ROOT
 							}
@@ -2535,7 +2546,7 @@ focus_tree = {
 						is_faction_leader = yes
 						has_government = democratic
 						NOT = { has_war_with = ROOT }
-						NOT = { 
+						NOT = {
 							any_allied_country = {
 								has_war_with = ROOT
 							}
@@ -2564,8 +2575,52 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					USA = {
+						is_faction_leader = yes
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+						all_allied_country = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
 				USA = {
+					add_ai_strategy = {
+						type = befriend
+						id = ROOT
+						value = 100
+					}
+					ROOT = {
+						add_ai_strategy = {
+							type = befriend
+							id = PREV
+							value = 100
+						}
+					}
+					country_event = { id = generic.2 hours = 4 random_hours = 4 }
+					if = {
+						limit = {
+							has_war = yes
+						}
+						ROOT = { add_war_support = 0.1 }
+					}
+				}
+			}
+			else = {
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_government = democratic
+						capital_scope = {
+							is_on_continent = europe
+						}
+						NOT = { has_war_with = ROOT }
+						all_allied_country = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = ROOT
@@ -2589,7 +2644,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_autonomy
 		icon = GFX_focus_generic_develop_finland_silhouette
@@ -2642,7 +2697,7 @@ focus_tree = {
 			FIN_bop_medium_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_integrate_kola_and_karelia
 		icon = GFX_focus_FIN_integrate_kola_and_karelia
@@ -2675,7 +2730,7 @@ focus_tree = {
 						add_to_array = { ROOT.target_countries = THIS }
 					}
 				}
-				
+
 				#ONEGA
 				215 = {
 					controller = {
@@ -2701,7 +2756,7 @@ focus_tree = {
 				}
 
 				for_each_scope_loop = {
-					array = ROOT.target_countries			
+					array = ROOT.target_countries
 					country_event = { id = AAT_finland_diplomacy.11 hours =  1 }
 					#log = "Sent event to [THIS.GetName]"
 				}
@@ -2751,7 +2806,7 @@ focus_tree = {
 				idea = FIN_british_threat
 				days = 730
 			}
-			
+
 			if = {
 				limit = {
 					has_non_aggression_pact_with = ENG
@@ -2844,7 +2899,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -2900,7 +2955,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 				if = { #Someone else controls core states - Demand Estonian states.
 					limit = {
 						EST = {
@@ -2973,7 +3028,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -3030,7 +3085,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 				if = { #Someone else controls core states - Demand Estonian states.
 					limit = {
 						LAT = {
@@ -3103,7 +3158,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -3160,7 +3215,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 				if = { #Someone else controls core states - Demand Estonian states.
 					limit = {
 						LIT = {
@@ -3189,11 +3244,11 @@ focus_tree = {
 						}
 					}
 				}
-				
+
 
 				#### SEND EVENT TO COUTNRIES OCCUPYING / PUPPETING BALTICS ###
 				for_each_scope_loop = {
-					array = ROOT.countries_with_baltic_territory_array			
+					array = ROOT.countries_with_baltic_territory_array
 					country_event = { id = AAT_finland_diplomacy.17 hours = 1 }
 					#log = "Sent event to [THIS.GetName]"
 				}
@@ -3213,7 +3268,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_red_finland
 		icon = GFX_focus_FIN_red_finland
@@ -3336,7 +3391,7 @@ focus_tree = {
 					}
 					add_resistance_target = {
 						amount = -15
-						occupier = ROOT 
+						occupier = ROOT
 						tooltip = FIN_red_finland_resistance_target_tt
 					}
 				}
@@ -3497,7 +3552,7 @@ focus_tree = {
 			FIN_bop_medium_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_influence_in_the_baltic
 		icon = GFX_focus_FIN_finnish_influence_in_the_baltic
@@ -3786,8 +3841,8 @@ focus_tree = {
 			}
 		}
 	}
-	
-	
+
+
 	focus = {
 		id = FIN_preserve_sapmi
 		icon = GFX_focus_SWE_Sami_reconcilliation
@@ -3851,7 +3906,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_confederated_finno_russian_republics
 		icon = GFX_focus_FIN_confederated_finno_russian_republics
@@ -3903,7 +3958,7 @@ focus_tree = {
 			FIN_bop_high_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_secure_the_baltic_sea
 		icon = GFX_goal_generic_navy_cruiser
@@ -3994,7 +4049,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_german_threat
 		icon = GFX_focus_attack_germany
@@ -4035,7 +4090,7 @@ focus_tree = {
 				idea = FIN_german_threat
 				days = 730
 			}
-			
+
 			if = {
 				limit = {
 					has_non_aggression_pact_with = GER
@@ -4064,7 +4119,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_socialist_welfare
 		icon = GFX_focus_FIN_socialist_welfare
@@ -4138,7 +4193,7 @@ focus_tree = {
 						}
 					}
 				}
-				
+
 				custom_effect_tooltip = FIN_socialist_welfare_if_leino_tt
 				FIN_yrjo_leino = {
 					swap_country_leader_traits = {
@@ -4188,7 +4243,7 @@ focus_tree = {
 			FIN_bop_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_aid_for_entrepreneurs
 		icon = GFX_goal_generic_construct_civ_factory
@@ -4237,7 +4292,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_soviet_threat
 		icon = GFX_focus_attack_soviet
@@ -4277,7 +4332,7 @@ focus_tree = {
 				idea = FIN_soviet_threat
 				days = 730
 			}
-			
+
 			if = {
 				limit = {
 					has_non_aggression_pact_with = SOV
@@ -4306,7 +4361,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_proclaim_greater_finland
 		icon = GFX_focus_FIN_a_cry_for_help_2
@@ -4453,7 +4508,7 @@ focus_tree = {
 			FIN_bop_medium_increase_effect = yes
 		}
 	}
-		
+
 	focus = {
 		id = FIN_control_the_flux_of_iron_ore
 		icon = GFX_focus_generic_invade_sweden
@@ -4488,7 +4543,7 @@ focus_tree = {
 						add_to_array = { ROOT.target_countries = THIS }
 					}
 				}
-				
+
 				#VÄSTERBOTTEN
 				918 = {
 					controller = {
@@ -4538,7 +4593,7 @@ focus_tree = {
 				}
 
 				for_each_scope_loop = {
-					array = ROOT.target_countries			
+					array = ROOT.target_countries
 					country_event = { id = AAT_finland_diplomacy.08 hours =  1 }
 					#log = "Sent event to [THIS.GetName]"
 				}
@@ -4550,13 +4605,13 @@ focus_tree = {
 
 
 
-##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##       
-##     ##  ##  ##    ##    ##    ##     ## ##     ##  ##  ##    ##   ## ##   ##       
-##     ##  ##  ##          ##    ##     ## ##     ##  ##  ##        ##   ##  ##       
-#########  ##   ######     ##    ##     ## ########   ##  ##       ##     ## ##       
-##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##       
-##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##       
-##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ######## 
+##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##
+##     ##  ##  ##    ##    ##    ##     ## ##     ##  ##  ##    ##   ## ##   ##
+##     ##  ##  ##          ##    ##     ## ##     ##  ##  ##        ##   ##  ##
+#########  ##   ######     ##    ##     ## ########   ##  ##       ##     ## ##
+##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##
+##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##
+##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ########
 
 
 
@@ -4599,7 +4654,7 @@ focus_tree = {
 		}
 
 		mutually_exclusive = { focus = FIN_right_wing_policies focus = FIN_suomalainen_sosialismi }
-		
+
 		cost = 5
 
 		available = {
@@ -4730,7 +4785,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_political_unity
 		icon = GFX_focus_generic_self_management
@@ -4820,7 +4875,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_ernst_von_born
 		}
 	}
-	
+
 	focus = {
 		id = FIN_collaboration_with_the_left
 		icon = GFX_goal_generic_national_unity
@@ -4850,7 +4905,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_miina_sillanpaa
 		}
 	}
-	
+
 	focus = {
 		id = FIN_railways_and_infrastructure
 		icon = GFX_focus_generic_railroad
@@ -4955,7 +5010,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_repurpose_small_industries
 		icon = GFX_goal_generic_construct_civ_factory
@@ -4992,7 +5047,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_expand_state_military_factories
 		icon = GFX_goal_generic_construct_mil_factory
@@ -5065,7 +5120,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_a_new_course_for_kokoomus
 		icon = GFX_focus_FIN_a_new_course_for_kokoomus
@@ -5188,7 +5243,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_strengthen_military_administration
 		icon = GFX_focus_FIN_strengthen_military_administration
@@ -5272,7 +5327,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_reach_out_to_scandinavia
 		icon = GFX_focus_generic_nordic_territory
@@ -5312,13 +5367,13 @@ focus_tree = {
 						NOT = { has_war_with = ROOT }
 					}
 					add_ai_strategy = {
-						type = befriend 
+						type = befriend
 						id = ROOT
 						value = 25
 					}
 					ROOT = {
 						add_ai_strategy = {
-							type = befriend 
+							type = befriend
 							id = PREV
 							value = 25
 						}
@@ -5327,7 +5382,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_moderate_politics
 		icon = GFX_goal_generic_neutrality_focus
@@ -5348,7 +5403,7 @@ focus_tree = {
 			FIN_bop_very_low_increase_effect = yes
 		}
 	}
-	
+
 	focus = {
 		id = FIN_join_the_allies
 		icon = GFX_focus_chi_british_cooperation
@@ -5391,7 +5446,7 @@ focus_tree = {
 						NOT = { has_war_with = ROOT }
 					}
 				}
-				USA = { 
+				USA = {
 					is_faction_leader = yes
 					has_government = democratic
 					NOT = { has_war_with = ROOT }
@@ -5411,7 +5466,7 @@ focus_tree = {
 						is_faction_leader = yes
 						has_government = democratic
 						NOT = { has_war_with = ROOT }
-						NOT = { 
+						NOT = {
 							any_allied_country = {
 								has_war_with = ROOT
 							}
@@ -5446,7 +5501,7 @@ focus_tree = {
 						is_faction_leader = yes
 						has_government = democratic
 						NOT = { has_war_with = ROOT }
-						NOT = { 
+						NOT = {
 							any_allied_country = {
 								has_war_with = ROOT
 							}
@@ -5500,7 +5555,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_northern_defense_front
 		icon = GFX_focus_FIN_northern_defense_front
@@ -5515,12 +5570,12 @@ focus_tree = {
 			threat > 0.5
 			has_war = no
 			has_government = neutrality
-			is_in_faction = no 
+			is_in_faction = no
 		}
 		bypass = {
-			is_faction_leader = yes 
+			is_faction_leader = yes
 			any_allied_country = {
-				NORDIC_is_nordic = yes 
+				NORDIC_is_nordic = yes
 			}
 		}
 
@@ -5529,7 +5584,7 @@ focus_tree = {
 		completion_reward = {
 			create_faction = FIN_northern_defense_front_faction
 			IF = {
-				limit = { has_dlc = "Arms Against Tyranny" } 
+				limit = { has_dlc = "Arms Against Tyranny" }
 				complete_national_focus = NORDIC_form_joint_alliance
 			}
 			custom_effect_tooltip = FIN_northern_defense_front_countries_tt
@@ -5565,27 +5620,27 @@ focus_tree = {
 							is_subject = no
 						}
 						# AI more friendly - fixed by NHMMAP
-						add_ai_strategy = { 
-							type = befriend 
+						add_ai_strategy = {
+							type = befriend
 							id = ROOT
 							value = 40
 						}
 						ROOT = {
-							add_ai_strategy = { 
-								type = befriend 
+							add_ai_strategy = {
+								type = befriend
 								id = PREV
 								value = 40
 							}
 						}
 						country_event = { id = generic.5 hours = 2 }
 					}
-					
+
 				}
 				custom_effect_tooltip = FIN_northern_defense_front_faction_tt
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_lone_wolf
 		icon = GFX_focus_FIN_the_lone_wolf
@@ -5614,7 +5669,7 @@ focus_tree = {
 			add_ideas = FIN_the_lone_wolf
 		}
 	}
-	
+
 	focus = {
 		id = FIN_military_aid
 		icon = GFX_focus_generic_combined_arms
@@ -5664,37 +5719,37 @@ focus_tree = {
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = small_plane_airframe
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = medium_plane_airframe
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = light_tank_chassis
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = medium_tank_chassis
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = artillery_equipment
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = anti_air_equipment
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 								add_equipment_subsidy = {
 									cic = FIN_basic_subsidies_value
 									equipment_type = anti_tank_equipment
-									seller_tags = { PREV } 
+									seller_tags = { PREV }
 								}
 							}
 						}
@@ -5725,14 +5780,14 @@ focus_tree = {
 								limit = {
 									has_dlc = "No Step Back"
 								}
-								add_equipment_to_stockpile = { 
+								add_equipment_to_stockpile = {
 									type = light_tank_chassis_1
 									amount = 50
 									producer = PREV
 								}
 							}
 							else = {
-								add_equipment_to_stockpile = { 
+								add_equipment_to_stockpile = {
 									type = light_tank_equipment_1
 									amount = 50
 									producer = PREV
@@ -5742,40 +5797,40 @@ focus_tree = {
 								limit = {
 									has_dlc = "By Blood Alone"
 								}
-								add_equipment_to_stockpile = { 
+								add_equipment_to_stockpile = {
 									type = small_plane_airframe_1
 									amount = 50
 									producer = PREV
 								}
 							}
 							else = {
-								add_equipment_to_stockpile = { 
+								add_equipment_to_stockpile = {
 									type = fighter_equipment_1
 									amount = 50
 									producer = PREV
 								}
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = convoy_1
 								amount = 50
 								producer = PREV
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = artillery_equipment_1
 								amount = 50
 								producer = PREV
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = anti_air_equipment_1
 								amount = 25
 								producer = PREV
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = infantry_equipment_1
 								amount = 3000
 								producer = PREV
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = support_equipment_1
 								amount = 300
 								producer = PREV
@@ -5790,14 +5845,14 @@ focus_tree = {
 							limit = {
 								has_dlc = "No Step Back"
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = light_tank_chassis_1
 								amount = 25
 								producer = SWE
 							}
 						}
 						else = {
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = light_tank_equipment_1
 								amount = 25
 								producer = SWE
@@ -5807,40 +5862,40 @@ focus_tree = {
 							limit = {
 								has_dlc = "By Blood Alone"
 							}
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = small_plane_airframe_0
 								amount = 25
 								producer = PREV
 							}
 						}
 						else = {
-							add_equipment_to_stockpile = { 
+							add_equipment_to_stockpile = {
 								type = fighter_equipment_0
 								amount = 25
 								producer = PREV
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = convoy_1
 							amount = 25
 							producer = PREV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = artillery_equipment_1
 							amount = 25
 							producer = PREV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = anti_air_equipment_1
 							amount = 25
 							producer = PREV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = infantry_equipment_1
 							amount = 1500
 							producer = PREV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = support_equipment_1
 							amount = 150
 							producer = PREV
@@ -5850,7 +5905,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_mineral_wealth_development
 		icon = GFX_goal_generic_construction2
@@ -6004,7 +6059,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_industrialize_the_region
 		icon = GFX_goal_generic_construct_civilian
@@ -6076,7 +6131,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_increase_military_investment
 		icon = GFX_focus_generic_reorient_production
@@ -6153,7 +6208,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_cooperation_with_germany
 		icon = GFX_focus_chi_mission_to_germany
@@ -6163,7 +6218,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_the_lone_wolf
 		cost = 5
-		
+
 		bypass = {
 			OR = {
 				is_in_faction_with = GER
@@ -6191,7 +6246,7 @@ focus_tree = {
 			NOT = { has_country_flag = FIN_winter_war_ongoing_flag }
 			GER = {
 				NOT = { has_war_with = ROOT }
-				NOT = { 
+				NOT = {
 					any_allied_country = {
 						has_war_with = ROOT
 					}
@@ -6204,7 +6259,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_dlc = "Arms Against Tyranny"	
+					has_dlc = "Arms Against Tyranny"
 				}
 				custom_effect_tooltip = FIN_cooperation_with_germany_subsidies_tt
 
@@ -6212,37 +6267,37 @@ focus_tree = {
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = small_plane_airframe
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = medium_plane_airframe
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = light_tank_chassis
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = medium_tank_chassis
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = artillery_equipment
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = anti_air_equipment
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 					add_equipment_subsidy = {
 						cic = FIN_basic_subsidies_value
 						equipment_type = anti_tank_equipment
-						seller_tags = { GER } 
+						seller_tags = { GER }
 					}
 				}
 			}
@@ -6259,14 +6314,14 @@ focus_tree = {
 					limit = {
 						has_dlc = "No Step Back"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						amount = 50
 						producer = GER
 					}
 				}
 				else = {
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_equipment_1
 						amount = 50
 						producer = GER
@@ -6276,40 +6331,40 @@ focus_tree = {
 					limit = {
 						has_dlc = "By Blood Alone"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = small_plane_airframe_1
 						amount = 50
 						producer = GER
 					}
 				}
 				else = {
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = fighter_equipment_1
 						amount = 50
 						producer = GER
 					}
 				}
-				add_equipment_to_stockpile = { 
+				add_equipment_to_stockpile = {
 					type = convoy_1
 					amount = 50
 					producer = GER
 				}
-				add_equipment_to_stockpile = { 
+				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 50
 					producer = GER
 				}
-				add_equipment_to_stockpile = { 
+				add_equipment_to_stockpile = {
 					type = anti_air_equipment_1
 					amount = 25
 					producer = GER
 				}
-				add_equipment_to_stockpile = { 
+				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 3000
 					producer = GER
 				}
-				add_equipment_to_stockpile = { 
+				add_equipment_to_stockpile = {
 					type = support_equipment_1
 					amount = 300
 					producer = GER
@@ -6318,7 +6373,7 @@ focus_tree = {
 			custom_effect_tooltip = FIN_pact_for_continuation_war_fin_focus_tt
 		}
 	}
-	
+
 	focus = {
 		id = FIN_wartsila_engine_production
 		icon = GFX_focus_FIN_wartsila_engine_production
@@ -6374,7 +6429,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_german_military_advisors
 		icon = GFX_focus_generic_military_mission
@@ -6406,7 +6461,7 @@ focus_tree = {
 			show_ideas_tooltip = GER_nikolaus_von_falkenhorst
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_march_of_conquest
 		icon = GFX_focus_generic_attack_finland
@@ -6435,7 +6490,7 @@ focus_tree = {
 				FIN_finnish_army_conscription_factor = 0.1
 				tooltip = conscription_factor_tt
 			}
-			
+
 			add_timed_idea = {
 				idea = FIN_finnish_march_of_conquest
 				days = 730
@@ -6444,7 +6499,7 @@ focus_tree = {
 			custom_effect_tooltip = FIN_heimosodat_dec_tt
 		}
 	}
-	
+
 	focus = {
 		id = FIN_joint_scientific_program
 		icon = GFX_focus_research
@@ -6497,7 +6552,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_modernize_the_industry
 		icon = GFX_focus_generic_modernize_industry
@@ -6577,7 +6632,7 @@ focus_tree = {
 
 		}
 	}
-	
+
 	focus = {
 		id = FIN_modernize_the_army
 		icon = GFX_goal_generic_axis_build_infantry
@@ -6623,7 +6678,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_weapon_caches
 		icon = GFX_focus_FIN_weapon_caches
@@ -6657,7 +6712,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = FIN_national_defense_category
 		}
 	}
-	
+
 	focus = {
 		id = FIN_national_unity
 		icon = GFX_focus_EST_national_pride_in_finland
@@ -6680,7 +6735,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_vilho_annala
 		}
 	}
-	
+
 	focus = {
 		id = FIN_viron_kansa
 		icon = GFX_focus_FIN_viron_kansa
@@ -6739,7 +6794,7 @@ focus_tree = {
 			event_option_tooltip = AAT_finland_diplomacy.04.b
 		}
 	}
-	
+
 	focus = {
 		id = FIN_ambitions_in_the_south
 		icon = GFX_focus_SOV_baltic_security
@@ -6821,7 +6876,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_arm_the_lotta_svard
 		icon = GFX_focus_SWE_lottakoren
@@ -6950,7 +7005,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_militarized_society
 		icon = GFX_focus_generic_limited_social_mobilization
@@ -6983,7 +7038,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_a_cry_for_help
 		icon = GFX_focus_FIN_a_cry_for_help
@@ -7044,7 +7099,7 @@ focus_tree = {
 			}
 		}
 	}
-		
+
 	focus = {
 		id = FIN_greater_finland
 		icon = GFX_focus_FIN_greater_finland
@@ -7107,13 +7162,13 @@ focus_tree = {
 
 
 
-########    ###     ######   ######  ####  ######  ######## 
-##         ## ##   ##    ## ##    ##  ##  ##    ##    ##    
-##        ##   ##  ##       ##        ##  ##          ##    
-######   ##     ##  ######  ##        ##   ######     ##    
-##       #########       ## ##        ##        ##    ##    
-##       ##     ## ##    ## ##    ##  ##  ##    ##    ##    
-##       ##     ##  ######   ######  ####  ######     ##    
+########    ###     ######   ######  ####  ######  ########
+##         ## ##   ##    ## ##    ##  ##  ##    ##    ##
+##        ##   ##  ##       ##        ##  ##          ##
+######   ##     ##  ######  ##        ##   ######     ##
+##       #########       ## ##        ##        ##    ##
+##       ##     ## ##    ## ##    ##  ##  ##    ##    ##
+##       ##     ##  ######   ######  ####  ######     ##
 
 
 
@@ -7121,7 +7176,7 @@ focus_tree = {
 	focus = {
 		id = FIN_right_wing_policies
 		icon = GFX_focus_FIN_right_wing_policies
-		
+
 		allow_branch = {
 			has_dlc = "Arms Against Tyranny"
 			if = {
@@ -7151,15 +7206,15 @@ focus_tree = {
 				has_completed_focus = FIN_right_wing_policies
 			}
 		}
-		
+
 		mutually_exclusive = { focus = FIN_finnish_neutrality focus = FIN_suomalainen_sosialismi }
-		
+
 		cost = 5
 
 		available = {
 			is_subject = no
 		}
-		
+
 		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
@@ -7280,7 +7335,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_discredit_the_democratic_system
 		icon = GFX_focus_usa_voter_registration_act
@@ -7306,7 +7361,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_prepare_a_military_coup
 		icon = GFX_goal_generic_more_territorial_claims
@@ -7333,7 +7388,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = FIN_coup_preparations
 		}
 	}
-	
+
 	focus = {
 		id = FIN_a_fascist_regime
 		icon = GFX_focus_generic_strike_at_democracy1
@@ -7455,7 +7510,7 @@ focus_tree = {
 					#keep_unit_leaders_trigger = { always = yes } # Optional. Trigger for unit leaders to remain with the original country
 					#keep_political_leader = no # optional, default is no; If yes, the party leader of the revolting ideology will not join the revolter as its leader.
 					#keep_political_party_members = no # Optional, default is no; If yes, it will keep the non main leaders of the party leaders in original country
-					
+
 					ROOT = {
 						every_character = {
 							limit = {
@@ -7559,7 +7614,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_seek_german_protection
 		icon = GFX_focus_chi_mission_to_germany
@@ -7594,14 +7649,14 @@ focus_tree = {
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
 				give_military_access = GER
-				diplomatic_relation = { 
+				diplomatic_relation = {
 					country = GER
-					relation = docking_rights 
+					relation = docking_rights
 					active = yes
 				}
-				diplomatic_relation = { 
+				diplomatic_relation = {
 					country = GER
-					relation = non_aggression_pact 
+					relation = non_aggression_pact
 					active = yes
 				}
 				GER = {
@@ -7615,7 +7670,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_join_axis
 		icon = GFX_goal_support_fascism
@@ -7691,7 +7746,7 @@ focus_tree = {
 						is_faction_leader = yes
 						has_government = fascism
 						NOT = { has_war_with = ROOT }
-						NOT = { 
+						NOT = {
 							any_allied_country = {
 								has_war_with = ROOT
 							}
@@ -7726,7 +7781,7 @@ focus_tree = {
 						is_faction_leader = yes
 						has_government = fascism
 						NOT = { has_war_with = ROOT }
-						NOT = { 
+						NOT = {
 							any_allied_country = {
 								has_war_with = ROOT
 							}
@@ -7807,7 +7862,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_military_research
 		icon = GFX_focus_chi_army_reform
@@ -7856,7 +7911,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_bring_foreign_armor_experts
 		icon = GFX_goal_generic_army_tanks
@@ -7923,7 +7978,7 @@ focus_tree = {
 						model = "GER_light_armor_0_entity"
 					}
 
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "Panzer I Ausf. A"
 						amount = 100
@@ -7955,7 +8010,7 @@ focus_tree = {
 						icon = "GFX_ITA_basic_light_tank_medium"
 						model = "ITA_light_armor_entity"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "L3/35"
 						amount = 50
@@ -7987,7 +8042,7 @@ focus_tree = {
 						icon = "GFX_JAP_improved_light_tank_medium"
 						model = "JAP_light_armor_entity"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "Type 95 Ha-Go"
 						amount = 50
@@ -8019,7 +8074,7 @@ focus_tree = {
 						icon = "GFX_FRA_basic_light_tank_medium"
 						model = "FRA_light_armor_0_entity"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "H-35"
 						amount = 50
@@ -8051,7 +8106,7 @@ focus_tree = {
 						icon = "GFX_ENG_basic_light_tank_medium"
 						model = "commonwealth_gfx_light_armor_entity"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "H-35"
 						amount = 50
@@ -8085,7 +8140,7 @@ focus_tree = {
 						icon = "GFX_USA_basic_light_tank_medium"
 						model = "USA_light_armor_0_entity"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "M2A2"
 						amount = 50
@@ -8117,7 +8172,7 @@ focus_tree = {
 						icon = "GFX_SOV_improved_light_tank_medium" #More similar to BT-7 than to T-26
 						model = "SOV_light_armor_entity" #More similar to BT-7 than to T-26
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "BT-5"
 						amount = 50
@@ -8150,7 +8205,7 @@ focus_tree = {
 						icon = "GFX_SWE_basic_light_tank_alt_medium"
 						model = "SWE_light_armor_0_entity"
 					}
-					add_equipment_to_stockpile = { 
+					add_equipment_to_stockpile = {
 						type = light_tank_chassis_1
 						variant_name = "Stridsvagn m/31"
 						amount = 50
@@ -8221,14 +8276,14 @@ focus_tree = {
 				}
 				hidden_effect = {
 					# AI more friendly
-					add_ai_strategy = { 
-						type = befriend 
+					add_ai_strategy = {
+						type = befriend
 						id = ROOT
 						value = 40
 					}
 					ROOT = {
-						add_ai_strategy = { 
-							type = befriend 
+						add_ai_strategy = {
+							type = befriend
 							id = PREV
 							value = 40
 						}
@@ -8294,7 +8349,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_legion_of_honor
 		icon = GFX_focus_generic_fascist_troops
@@ -8632,7 +8687,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -8741,7 +8796,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -8850,7 +8905,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -8906,7 +8961,7 @@ focus_tree = {
 						}
 					}
 				}
-				
+
 				if = { #Someone else controls Icelandic states - Demand Icelandic states.
 					limit = {
 						ICE = {
@@ -8986,7 +9041,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -9042,7 +9097,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 				if = { #Someone else controls Swedish states - Demand Swedish states.
 					limit = {
 						SWE = {
@@ -9126,7 +9181,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -9183,7 +9238,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 				if = { #Someone else controls Norwegian states - Demand Norwegian states.
 					limit = {
 						NOR = {
@@ -9266,7 +9321,7 @@ focus_tree = {
 										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
 									}
 									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
+										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord
 										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
 									}
 								}
@@ -9323,7 +9378,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 				if = { #Someone else controls Danish states - Demand Danish states.
 					limit = {
 						DEN = {
@@ -9355,7 +9410,7 @@ focus_tree = {
 
 				#### SEND EVENT TO COUTNRIES OCCUPYING / PUPPETING BALTICS ###
 				for_each_scope_loop = {
-					array = ROOT.countries_with_nordic_territory_array			
+					array = ROOT.countries_with_nordic_territory_array
 					country_event = { id = AAT_finland_diplomacy.17 hours = 1 }
 					#log = "Sent event to [THIS.GetName]"
 				}
@@ -9377,7 +9432,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_patriotic_peoples_movement
 		icon = GFX_focus_FIN_patriotic_peoples_movement
@@ -9404,7 +9459,7 @@ focus_tree = {
 			show_unit_leaders_tooltip = FIN_kurt_martti_wallenius
 		}
 	}
-	
+
 	focus = {
 		id = FIN_mustapaidat
 		icon = GFX_focus_FIN_mustapaidat
@@ -9421,14 +9476,14 @@ focus_tree = {
 
 		completion_reward = {
 			division_template = { #Mustapaidat
-				name = "Mustapaidat" 
+				name = "Mustapaidat"
 				division_names_group = FIN_MIL_01
 				#template_counter = 68
 				is_locked = yes
 				force_allow_recruiting = yes
 				division_cap = 12
 
-				regiments = { 
+				regiments = {
 					militia = { x = 0 y = 0 }
 					militia = { x = 0 y = 1 }
 					militia = { x = 1 y = 0 }
@@ -9436,7 +9491,7 @@ focus_tree = {
 					militia = { x = 2 y = 0 }
 					militia = { x = 2 y = 1 }
 				}
-				support = { 
+				support = {
 					engineer = { x = 0 y = 0 }
 				}
 			}
@@ -9455,7 +9510,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_sotilaalliset_kappalaiset
 		icon = GFX_focus_FIN_chaplains
@@ -9482,7 +9537,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_reino_ala_kulju
 		}
 	}
-	
+
 	focus = {
 		id = FIN_national_fanatism
 		icon = GFX_focus_FIN_national_fanatism
@@ -9646,7 +9701,7 @@ focus_tree = {
 					}
 				}
 			}
-			
+
 			#MIKKELI
 			if = {
 				limit = {
@@ -9690,7 +9745,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_maan_turva
 		icon = GFX_focus_generic_secret_service_agency
@@ -9726,7 +9781,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_vilho_helanen
 		}
 	}
-	
+
 	focus = {
 		id = FIN_military_promotions
 		icon = GFX_focus_generic_military_mission
@@ -9772,7 +9827,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_indoctrinate_the_workers
 		icon = GFX_focus_generic_full_employment
@@ -9819,7 +9874,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_intellectual_elite
 		icon = GFX_focus_research
@@ -9855,13 +9910,13 @@ focus_tree = {
 
 
 
-#### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
- ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
- ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
- ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##          ########  ########  ##     ## ## ## ## ##       ######### 
- ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ## 
- ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-#### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+#### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ##
+ ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ##
+ ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ##
+ ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##          ########  ########  ##     ## ## ## ## ##       #########
+ ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ##
+ ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ##
+#### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ##
 
 
 	focus = {
@@ -9962,7 +10017,7 @@ focus_tree = {
 					path = { 11105 9129 11172 3025 3137 9167 }
 				}
 			}
-			
+
 			#KYME
 			if = {
 				limit = {
@@ -10016,7 +10071,7 @@ focus_tree = {
 					}
 				}
 			}
-			
+
 			#MIKKELI
 			if = {
 				limit = {
@@ -10112,7 +10167,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_bank_of_aland
 		icon = GFX_focus_usa_reestablish_the_gold_standard
@@ -10122,7 +10177,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_industrial_development
 		cost = 10
-		
+
 		bypass = {
 			has_civil_war = no
 			NOT = {
@@ -10149,7 +10204,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_suomen_akatemia
 		icon = GFX_focus_research
@@ -10175,7 +10230,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_janiskoski_power_plant
 		icon = GFX_focus_generic_energy
@@ -10214,7 +10269,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_found_pohjolan_voima
 		icon = GFX_focus_generic_land_reclamation
@@ -10255,7 +10310,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_expand_imatra_hydropower_plant
 		icon = GFX_goal_generic_construction
@@ -10286,7 +10341,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_makola_mine
 		icon = GFX_focus_generic_mining_industry
@@ -10344,7 +10399,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_power_from_the_dams
 		icon = GFX_focus_generic_hydroelectric_energy
@@ -10425,7 +10480,7 @@ focus_tree = {
 
 		}
 	}
-	
+
 	focus = {
 		id = FIN_tire_factory_at_nokia
 		icon = GFX_focus_generic_improve_roads
@@ -10448,7 +10503,7 @@ focus_tree = {
 				uses = 2
 				category = synth_resources
 			}
-			
+
 			if = {
 				limit = {
 					has_tech = synth_oil_experiments
@@ -10688,7 +10743,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_elijarvi_mine
 		icon = GFX_goal_generic_construction2
@@ -10724,7 +10779,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_tornio_steel_factory
 		icon = GFX_focus_generic_steel
@@ -10764,7 +10819,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_outokumpu_for_defence_industry
 		icon = GFX_goal_generic_construct_mil_factory
@@ -10910,7 +10965,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_national_firepower
 		icon = GFX_goal_generic_army_artillery2
@@ -10993,13 +11048,13 @@ focus_tree = {
 
 
 
-##     ## #### ##       #### ########    ###    ########  ##    ##    ########  ########     ###    ##    ##  ######  ##     ## 
-###   ###  ##  ##        ##     ##      ## ##   ##     ##  ##  ##     ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
-#### ####  ##  ##        ##     ##     ##   ##  ##     ##   ####      ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
-## ### ##  ##  ##        ##     ##    ##     ## ########     ##       ########  ########  ##     ## ## ## ## ##       ######### 
-##     ##  ##  ##        ##     ##    ######### ##   ##      ##       ##     ## ##   ##   ######### ##  #### ##       ##     ## 
-##     ##  ##  ##        ##     ##    ##     ## ##    ##     ##       ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-##     ## #### ######## ####    ##    ##     ## ##     ##    ##       ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+##     ## #### ##       #### ########    ###    ########  ##    ##    ########  ########     ###    ##    ##  ######  ##     ##
+###   ###  ##  ##        ##     ##      ## ##   ##     ##  ##  ##     ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ##
+#### ####  ##  ##        ##     ##     ##   ##  ##     ##   ####      ##     ## ##     ##  ##   ##  ####  ## ##       ##     ##
+## ### ##  ##  ##        ##     ##    ##     ## ########     ##       ########  ########  ##     ## ## ## ## ##       #########
+##     ##  ##  ##        ##     ##    ######### ##   ##      ##       ##     ## ##   ##   ######### ##  #### ##       ##     ##
+##     ##  ##  ##        ##     ##    ##     ## ##    ##     ##       ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ##
+##     ## #### ######## ####    ##    ##     ## ##     ##    ##       ########  ##     ## ##     ## ##    ##  ######  ##     ##
 
 
 
@@ -11048,7 +11103,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_suomen_maavoimat
 		icon = GFX_focus_FIN_suomen_maavoimat
@@ -11172,7 +11227,7 @@ focus_tree = {
 				if = {
 					limit = {
 						anti_air_building < 5
-					
+
 					}
 					add_building_construction = {
 						type = anti_air_building
@@ -11187,7 +11242,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_extra_refresher_exercises
 		icon = GFX_focus_generic_little_entente
@@ -11215,7 +11270,7 @@ focus_tree = {
 			add_to_variable = { FIN_finnish_army_conscription_factor = 0.1 tooltip = conscription_factor_tt }
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_cold_front
 		icon = GFX_focus_SOV_the_road_of_life
@@ -11239,7 +11294,7 @@ focus_tree = {
 			army_experience = 15
 		}
 	}
-	
+
 	focus = {
 		id = FIN_jaeger_movement
 		icon = GFX_focus_FIN_jaeger_movement
@@ -11273,7 +11328,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_johan_arajuuri
 		}
 	}
-	
+
 	focus = {
 		id = FIN_salvaged_and_retooled
 		icon = GFX_focus_FIN_salvaged_and_retooled
@@ -11397,7 +11452,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_winter_warfare
 		icon = GFX_focus_generic_winter_warfare
@@ -11430,7 +11485,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_motti_tactics
 		icon = GFX_focus_FIN_motti_tactics
@@ -11459,7 +11514,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = FIN_motti_tactics_category
 		}
 	}
-	
+
 	focus = {
 		id = FIN_foreign_armor
 		icon = GFX_focus_FIN_foreign_anti_air
@@ -11531,7 +11586,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = light_tank_chassis
-							seller_tags = { GER } 
+							seller_tags = { GER }
 						}
 					}
 					if = {
@@ -11543,7 +11598,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = light_tank_chassis
-							seller_tags = { ITA } 
+							seller_tags = { ITA }
 						}
 					}
 					if = {
@@ -11555,7 +11610,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = light_tank_chassis
-							seller_tags = { ENG } 
+							seller_tags = { ENG }
 						}
 					}
 					if = {
@@ -11567,7 +11622,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = light_tank_chassis
-							seller_tags = { FRA } 
+							seller_tags = { FRA }
 						}
 					}
 					if = {
@@ -11579,7 +11634,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = light_tank_chassis
-							seller_tags = { SOV } 
+							seller_tags = { SOV }
 						}
 					}
 					if = {
@@ -11591,7 +11646,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = light_tank_chassis
-							seller_tags = { SWE } 
+							seller_tags = { SWE }
 						}
 					}
 				}
@@ -11606,12 +11661,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_1
 							amount = 50
 							producer = GER
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = heavy_tank_chassis_1
 							amount = 15
 							producer = GER
@@ -11623,7 +11678,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_1
 							amount = 35
 							producer = ITA
@@ -11635,12 +11690,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_0
 							amount = 50
 							producer = ENG
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_1
 							amount = 25
 							producer = ENG
@@ -11671,7 +11726,7 @@ focus_tree = {
 								model = "commonwealth_gfx_light_armor_entity"
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_0
 							variant_name = "Vickers 6 ton A"
 							amount = 26
@@ -11684,12 +11739,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_0
 							amount = 25
 							producer = FRA
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = medium_tank_chassis_0
 							amount = 15
 							producer = FRA
@@ -11701,19 +11756,19 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_1
 							variant_name = "T-26TU mod. 1933"
 							amount = 50
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_1
 							variant_name = "BT-5"
 							amount = 25
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = medium_tank_chassis_0
 							amount = 15
 							producer = SOV
@@ -11726,12 +11781,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_0
 							amount = 35
 							producer = SWE
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_chassis_1
 							amount = 15
 							producer = SWE
@@ -11755,7 +11810,7 @@ focus_tree = {
 							model = "FIN_light_sp_anti_air_brigade_entity"
 							icon = "GFX_SWE_basic_light_spaa_medium"
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_aa_chassis_2
 							variant_name = "Landsverk L-62"
 							amount = 15
@@ -11770,12 +11825,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_equipment_1
 							amount = 50
 							producer = GER
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = heavy_tank_equipment_1
 							amount = 15
 							producer = GER
@@ -11787,7 +11842,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_equipment_1
 							amount = 35
 							producer = ITA
@@ -11799,12 +11854,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = gw_tank_equipment
 							amount = 50
 							producer = ENG
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_equipment_1
 							amount = 25
 							producer = ENG
@@ -11816,12 +11871,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = gw_tank_equipment
 							amount = 25
 							producer = FRA
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_equipment_1
 							amount = 15
 							producer = FRA
@@ -11833,12 +11888,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = gw_tank_equipment
 							amount = 50
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_equipment_1
 							amount = 25
 							producer = SOV
@@ -11851,12 +11906,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = gw_tank_equipment
 							amount = 35
 							producer = SWE
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = light_tank_equipment_1
 							amount = 15
 							producer = SWE
@@ -11866,7 +11921,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_utilize_the_sami
 		icon = GFX_focus_FIN_utilize_the_sami
@@ -11919,7 +11974,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_finnish_radio_intelligence
 		icon = GFX_focus_generic_cryptologic_bomb
@@ -11945,7 +12000,7 @@ focus_tree = {
 			show_ideas_tooltip = FIN_reino_hallamaa
 		}
 	}
-	
+
 	focus = {
 		id = FIN_sissi
 		icon = GFX_focus_FIN_the_cold_front
@@ -11969,12 +12024,12 @@ focus_tree = {
 			add_to_variable = { FIN_finnish_army_initiative_factor = 0.02 tooltip = initiative_factor_tt }
 			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.1 tooltip = recon_factor_while_entrenched_tt }
 			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_attack_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_attack_factor_tt }
-			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_defence_factor_tt }		
+			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_defence_factor_tt }
 
 			show_unit_leaders_tooltip = FIN_erkki_raappana
 		}
 	}
-	
+
 	focus = {
 		id = FIN_national_armor_focus
 		icon = GFX_focus_generic_tank_production
@@ -12066,7 +12121,7 @@ focus_tree = {
 						}
 						design_team = mio:FIN_valtion_panssaritehdas_organization
 					}
-					
+
 					create_equipment_variant = { #Made-up
 						name = "Sonni"
 						type = medium_tank_chassis_2
@@ -12110,7 +12165,7 @@ focus_tree = {
 							tank_nsb_armor_upgrade = 8
 						}
 					}
-					
+
 					create_equipment_variant = { #Made-up
 						name = "Sonni"
 						type = medium_tank_chassis_2
@@ -12222,7 +12277,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_underground_resistance_cells
 		icon = GFX_goal_generic_major_war
@@ -12250,7 +12305,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_mannerheim_line
 		icon = GFX_goal_fortify_the_westwall
@@ -12322,7 +12377,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_defense_in_depth
 		icon = GFX_goal_generic_defence
@@ -12407,7 +12462,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_helsinki_air_defense
 		icon = GFX_focus_generic_air_defense
@@ -12451,7 +12506,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_suomen_ilmavoimat
 		icon = GFX_focus_FIN_suomen_ilmavoimat
@@ -12499,7 +12554,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			
+
 			effect_tooltip = {
 				add_ideas = FIN_finnish_airforce_fake
 			}
@@ -12508,7 +12563,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_expand_air_bases
 		icon = GFX_focus_generic_air_bases
@@ -12702,7 +12757,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { GER } 
+							seller_tags = { GER }
 						}
 					}
 					if = {
@@ -12714,7 +12769,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { ITA } 
+							seller_tags = { ITA }
 						}
 					}
 					if = {
@@ -12726,7 +12781,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { ENG } 
+							seller_tags = { ENG }
 						}
 					}
 					if = {
@@ -12738,7 +12793,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { FRA } 
+							seller_tags = { FRA }
 						}
 					}
 					if = {
@@ -12750,7 +12805,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { USA } 
+							seller_tags = { USA }
 						}
 					}
 					if = {
@@ -12762,7 +12817,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { SOV } 
+							seller_tags = { SOV }
 						}
 					}
 					if = {
@@ -12774,7 +12829,7 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { SWE } 
+							seller_tags = { SWE }
 						}
 					}
 					if = {
@@ -12786,11 +12841,11 @@ focus_tree = {
 						add_equipment_subsidy = {
 							cic = FIN_basic_subsidies_value
 							equipment_type = small_plane_airframe
-							seller_tags = { HOL } 
+							seller_tags = { HOL }
 						}
 					}
 				}
-			
+
 				if = {
 					limit = {
 						has_dlc = "By Blood Alone"
@@ -12801,17 +12856,17 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_airframe_1
 							amount = 50
 							producer = GER
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_1
 							amount = 35
 							producer = GER
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_naval_bomber_airframe_1
 							amount = 35
 							producer = GER
@@ -12823,7 +12878,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = medium_plane_airframe_1
 							amount = 25
 							producer = ITA
@@ -12835,12 +12890,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_airframe_0
 							amount = 50
 							producer = ENG
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = medium_plane_airframe_1
 							amount = 25
 							producer = ENG
@@ -12852,7 +12907,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_naval_bomber_airframe_0
 							amount = 35
 							producer = FRA
@@ -12864,7 +12919,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_airframe_1
 							amount = 25
 							producer = USA
@@ -12876,17 +12931,17 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_airframe_0
 							amount = 50
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = medium_plane_airframe_1
 							amount = 35
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = large_plane_airframe_0
 							amount = 25
 							producer = SOV
@@ -12898,7 +12953,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = medium_plane_airframe_0
 							amount = 25
 							producer = HOL
@@ -12911,7 +12966,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = small_plane_airframe_0
 							amount = 35
 							producer = SWE
@@ -12925,17 +12980,17 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = fighter_equipment_1
 							amount = 50
 							producer = GER
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = CAS_equipment_1
 							amount = 35
 							producer = GER
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = nav_bomber_equipment_1
 							amount = 35
 							producer = GER
@@ -12947,7 +13002,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = nav_bomber_equipment_1
 							amount = 25
 							producer = ITA
@@ -12959,12 +13014,12 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = fighter_equipment_0
 							amount = 50
 							producer = ENG
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = CAS_equipment_1
 							amount = 25
 							producer = ENG
@@ -12976,7 +13031,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = nav_bomber_equipment_1
 							amount = 35
 							producer = FRA
@@ -12988,7 +13043,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = fighter_equipment_0
 							amount = 25
 							producer = USA
@@ -13000,17 +13055,17 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = fighter_equipment_0
 							amount = 50
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = tac_bomber_equipment_0
 							amount = 35
 							producer = SOV
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = strat_bomber_equipment_1
 							amount = 25
 							producer = SOV
@@ -13022,7 +13077,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = tac_bomber_equipment_0
 							amount = 25
 							producer = HOL
@@ -13035,7 +13090,7 @@ focus_tree = {
 								FIN_can_purchase_equipment_from_country = yes
 							}
 						}
-						add_equipment_to_stockpile = { 
+						add_equipment_to_stockpile = {
 							type = fighter_equipment_0
 							amount = 35
 							producer = SWE
@@ -13045,7 +13100,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_pilot_training
 		icon = GFX_focus_SOV_flying_clubs
@@ -13156,7 +13211,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_naval_airforce
 		icon = GFX_goal_generic_air_naval_bomber
@@ -13210,7 +13265,7 @@ focus_tree = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						create_equipment_variant = {
-							name = "VL Kotka" 
+							name = "VL Kotka"
 							type = small_plane_naval_bomber_airframe_1
 							modules = {
 								fixed_main_weapon_slot = torpedo_mounting
@@ -13223,7 +13278,7 @@ focus_tree = {
 					}
 					else = {
 						create_equipment_variant = {
-							name = "VL Kotka" 
+							name = "VL Kotka"
 							type = small_plane_naval_bomber_airframe_1
 							modules = {
 								fixed_main_weapon_slot = torpedo_mounting
@@ -13240,7 +13295,7 @@ focus_tree = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						create_equipment_variant = {
-							name = "VL Kotka" 
+							name = "VL Kotka"
 							type = small_plane_naval_bomber_airframe_0
 							allow_without_tech = yes #Tooltip purposes (focus requires tech anyways)
 							modules = {
@@ -13254,7 +13309,7 @@ focus_tree = {
 					}
 					else = {
 						create_equipment_variant = {
-							name = "VL Kotka" 
+							name = "VL Kotka"
 							type = small_plane_naval_bomber_airframe_0
 							allow_without_tech = yes #Tooltip purposes (focus requires tech anyways)
 							modules = {
@@ -13269,7 +13324,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_national_aircraft_production
 		icon = GFX_focus_generic_aircraft_production
@@ -13343,7 +13398,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_support_for_ground_forces
 		icon = GFX_focus_generic_cas_aircraft
@@ -13489,7 +13544,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_dominate_the_skies
 		icon = GFX_goal_generic_air_fighter
@@ -13655,7 +13710,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_expand_production_lines
 		icon = GFX_focus_generic_industry_3
@@ -13751,7 +13806,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_modernize_production_lines
 		icon = GFX_goal_generic_air_production
@@ -13830,7 +13885,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_suomen_merivoimat
 		icon = GFX_focus_FIN_suomen_merivoimat
@@ -13887,7 +13942,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_the_merchant_fleet
 		icon = GFX_focus_generic_merchant_fleet
@@ -13911,14 +13966,14 @@ focus_tree = {
 				add_ideas = FIN_hidden_convoy_production_ns
 			}
 
-			add_equipment_to_stockpile = { 
+			add_equipment_to_stockpile = {
 				type = convoy
-				amount = 50 
+				amount = 50
 				producer = ROOT
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_conversion_of_civilian_vessels
 		icon = GFX_focus_generic_refit_civilian_ships
@@ -13992,7 +14047,7 @@ focus_tree = {
 			}
 
 			unlock_decision_category_tooltip = generic_refit_civilian_ships_category
-			set_country_flag = refit_convoy_ships_flag #Necessary flag for unlocking Refit Civilian Ships decs 
+			set_country_flag = refit_convoy_ships_flag #Necessary flag for unlocking Refit Civilian Ships decs
 			#The variants created here replace the variants that can be created via decisions
 			set_country_flag = refit_to_destroyer_flag
 			set_country_flag = refit_to_cruiser_flag
@@ -14003,7 +14058,7 @@ focus_tree = {
 				}
 				# DESTROYER
 				create_equipment_variant = { #Made-up
-					name = "Refitted Destroyer Class" 		
+					name = "Refitted Destroyer Class"
 					type = ship_hull_light_1
 					name_group = "FIN_DD_HISTORICAL" #Note: Doesn't matter if ROOT is not DEN, the effect will grab the appropriate country-specific name list anyways
 					parent_version = 0
@@ -14036,7 +14091,7 @@ focus_tree = {
 
 				# Light Cruiser
 				create_equipment_variant = { #Made-up
-					name = "Refitted Cruiser Class"				
+					name = "Refitted Cruiser Class"
 					type = ship_hull_cruiser_1
 					name_group = FIN_CL_HISTORICAL
 					parent_version = 0
@@ -14071,7 +14126,7 @@ focus_tree = {
 			}
 			#NO MTG
 			else = {
-				# DESTROYER	
+				# DESTROYER
 				create_equipment_variant = { #Made-up
 					name = "Refitted Destroyer Class"
 					type = destroyer_1
@@ -14083,7 +14138,7 @@ focus_tree = {
 					}
 					obsolete = yes
 					design_team = mio:FIN_crichton_vulcan_organization
-				}	
+				}
 				#Line Production
 				add_equipment_production = {
 					equipment = {
@@ -14178,7 +14233,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_coastal_defense
 		icon = GFX_focus_FIN_coastal_defense
@@ -14252,7 +14307,7 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
-			
+
 			show_unit_leaders_tooltip = FIN_svante_sundman
 
 			if = {
@@ -14328,7 +14383,7 @@ focus_tree = {
 					category = cat_marines_doctrine
 				}
 			}
-			
+
 			add_tech_bonus = {
 				name = FIN_marine_jaeger_divisions
 				bonus = 1.0
@@ -14373,7 +14428,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_rapid_raiders
 		icon = GFX_focus_generic_destroyer
@@ -14666,7 +14721,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_deep_sea_raiders
 		icon = GFX_goal_generic_navy_submarine
@@ -14731,7 +14786,7 @@ focus_tree = {
 					add_mio_size = 1
 				}
 			}
-			
+
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
@@ -14819,7 +14874,7 @@ focus_tree = {
 							}
 						}
 					}
-					
+
 					#Line Production
 					if = {
 						limit = {
@@ -14976,7 +15031,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_sea_mines_strategy
 		icon = GFX_focus_generic_mine_warfare
@@ -15048,7 +15103,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_strengthen_the_naval_bases
 		icon = GFX_focus_generic_coastal_fort
@@ -15129,7 +15184,7 @@ focus_tree = {
 					}
 				}
 			}
-				
+
 			if = {
 				limit = {
 					has_full_control_of_state = 149
@@ -15150,7 +15205,7 @@ focus_tree = {
 					}
 				}
 			}
-				
+
 			if = {
 				limit = {
 					has_full_control_of_state = 929
@@ -15173,7 +15228,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = FIN_acquire_andros_dockyards
 		icon = GFX_focus_FIN_acquire_andros_dockyards
@@ -15422,7 +15477,7 @@ focus_tree = {
 			every_character = {
 				limit = {
 					is_navy_leader = yes
-					
+
 				}
 				random_select_amount = 2
 				add_skill_level = 1

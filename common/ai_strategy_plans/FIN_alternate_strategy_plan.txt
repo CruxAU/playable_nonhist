@@ -1,3 +1,381 @@
+FIN_historical_alt_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_HISTORICAL_ALTERNATE
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = HISTORICAL_ALTERNATE
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_finnish_neutrality
+		FIN_enhance_southern_infrastructure
+		FIN_industrial_development
+		FIN_tire_factory_at_nokia #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_reach_out_to_scandinavia #35
+		FIN_janiskoski_power_plant #35
+		FIN_moderate_politics #35
+		FIN_the_lone_wolf #35
+		FIN_cooperation_with_germany #35
+		FIN_bank_of_aland
+		FIN_suomen_akatemia
+		FIN_mannerheim_line
+		
+		#1938
+		FIN_national_unity
+		FIN_expand_imatra_hydropower_plant #35
+		FIN_makola_mine #35
+		FIN_expand_mining_prospection #35
+		FIN_vaisala_radiosonde_tests #35
+		FIN_outokumpu_for_defence_industry
+		FIN_industrial_upgrade_in_harjavalta #35
+
+		#1939 (Nov -> Winter War)
+		FIN_political_unity
+		FIN_railways_and_infrastructure
+		FIN_repurpose_small_industries
+		FIN_extra_refresher_exercises # (ASAP - gated behind WT)
+		FIN_weapon_caches #35 (ASAP - gated behind WT)
+		FIN_the_cold_front #35
+		
+
+		#1940
+		FIN_arm_the_lotta_svard
+		FIN_a_cry_for_help #35 (ASAP - gated behind Winter War)
+		FIN_salvaged_and_retooled
+		FIN_defense_in_depth
+		FIN_jaeger_movement
+		FIN_motti_tactics #35
+		
+		#1941 (Jun -> Continuation War)
+		FIN_winter_warfare #35
+		FIN_oy_alkoholiliike #35
+		FIN_finnish_radio_intelligence #35
+		FIN_union_of_finnish_brothers_in_arms
+		FIN_viron_kansa
+		FIN_militarized_society
+		FIN_parmis_devils #35
+		
+		#1942
+		FIN_underground_resistance_cells #35
+		FIN_national_armor_focus
+		FIN_joint_scientific_program
+		FIN_modernize_the_industry
+		FIN_wartsila_engine_production
+		FIN_innovative_designs
+
+		#1943
+		FIN_helsinki_air_defense #35
+		FIN_expand_state_military_factories
+		FIN_a_new_course_for_kokoomus
+		FIN_german_military_advisors #35
+		FIN_long_range_patrols #35
+		FIN_utilize_the_sami #35
+		FIN_elijarvi_mine #35
+
+		#onwards, year doesnt matter too much
+		FIN_collaboration_with_the_left
+		FIN_the_finnish_swedish_peoples_party
+		FIN_found_pohjolan_voima
+		FIN_power_from_the_dams
+		FIN_suomen_ilmavoimat
+		FIN_contract_with_yhteissisu # (1943 historically)
+		FIN_suomen_merivoimat
+		FIN_expand_air_bases
+
+		FIN_align_the_agrarian_league
+		#1944 (Sep -> Lapland War)
+		FIN_pilot_training #35
+		FIN_expand_air_force_academy
+		
+
+		#1945
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_suomalainen_sosialismi = 0
+		FIN_right_wing_policies = 0
+		FIN_join_the_allies = 0
+		FIN_northern_defense_front = 0
+		FIN_ambitions_in_the_south = 0
+		FIN_the_finnish_throne = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+FIN_historical_baltic_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_HISTORICAL_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = HISTORICAL_BALTIC
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_finnish_neutrality
+		FIN_enhance_southern_infrastructure
+		FIN_industrial_development
+		FIN_vaisala_radiosonde_tests #35 (1936 historically)
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_reach_out_to_scandinavia #35
+		FIN_moderate_politics #35
+		FIN_mannerheim_line
+		FIN_national_unity
+		FIN_outokumpu_for_defence_industry
+		FIN_industrial_upgrade_in_harjavalta #35
+		FIN_janiskoski_power_plant #35 (1938 historically)
+
+		#1938
+		FIN_political_unity
+		FIN_viron_kansa
+		FIN_ambitions_in_the_south
+		FIN_railways_and_infrastructure
+		FIN_repurpose_small_industries
+		FIN_extra_refresher_exercises # (ASAP - gated behind WT)
+		FIN_weapon_caches #35 (ASAP - gated behind WT)
+		FIN_the_cold_front #35
+		
+		#1939 (Nov -> Winter War)
+		FIN_a_cry_for_help #35 (ASAP - gated behind Winter War)
+		FIN_defense_in_depth
+		FIN_jaeger_movement
+		FIN_salvaged_and_retooled
+		FIN_motti_tactics #35
+		FIN_winter_warfare #35
+		FIN_oy_alkoholiliike #35
+
+		#1940
+		FIN_underground_resistance_cells #35
+		FIN_foreign_armor #35
+		FIN_union_of_finnish_brothers_in_arms
+		FIN_arm_the_lotta_svard
+		FIN_helsinki_air_defense #35
+		FIN_finnish_radio_intelligence #35
+		FIN_national_armor_focus
+		FIN_bank_of_aland
+
+		#1941 (Jun -> Continuation War)
+		FIN_suomen_akatemia
+		FIN_expand_imatra_hydropower_plant #35
+		FIN_the_lone_wolf #35
+		FIN_cooperation_with_germany #35
+		FIN_expand_state_military_factories
+		FIN_strengthen_military_administration
+		FIN_german_military_advisors #35
+		FIN_joint_scientific_program
+		FIN_long_range_patrols #35
+		FIN_utilize_the_sami #35
+
+		#1942
+		
+		FIN_integrate_oy_tikkakoski
+		FIN_wartsila_engine_production # (1942 historically)
+		FIN_suomen_ilmavoimat
+		FIN_found_pohjolan_voima # (1943 historically)
+			
+		#1943
+		FIN_tire_factory_at_nokia # (1943 historically)
+		FIN_contract_with_yhteissisu # (1943 historically)
+		FIN_suomen_merivoimat
+		FIN_coastal_defense
+		FIN_expand_air_bases
+
+		#1944 (Sep -> Lapland War)
+		FIN_pilot_training #35
+		FIN_expand_air_force_academy
+		FIN_modernize_the_army
+
+		#1945
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_suomalainen_sosialismi = 0
+		FIN_right_wing_policies = 0
+		FIN_join_the_allies = 0
+		FIN_northern_defense_front = 0
+		FIN_the_finnish_throne = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+FIN_historical_exp_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_HISTORICAL_EXP
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = HISTORICAL_EXP
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		FIN_greater_finland #ASAP
+		#1936
+		FIN_finnish_neutrality
+		FIN_enhance_southern_infrastructure
+		FIN_industrial_development
+		FIN_janiskoski_power_plant #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_reach_out_to_scandinavia #35
+		FIN_bank_of_aland
+		FIN_moderate_politics #35
+		FIN_political_unity
+		FIN_expand_imatra_hydropower_plant #35
+		FIN_suomen_ilmavoimat
+		FIN_suomen_akatemia
+		
+		#1938
+		FIN_the_lone_wolf #35
+		FIN_extra_refresher_exercises
+		FIN_cooperation_with_germany #35
+		FIN_outokumpu_for_defence_industry
+		FIN_german_military_advisors #35
+		FIN_wartsila_engine_production
+
+		#1939 (Nov -> Winter War)
+		FIN_finnish_march_of_conquest
+		FIN_mannerheim_line
+		FIN_salvaged_and_retooled
+		FIN_weapon_caches #35
+		FIN_makola_mine #35
+		FIN_national_unity
+
+		#1940
+		FIN_railways_and_infrastructure
+		FIN_repurpose_small_industries
+		FIN_expand_state_military_factories
+		FIN_dreams_of_expansionism
+		FIN_expand_mining_prospection #35
+		FIN_vaisala_radiosonde_tests #35
+
+		#1941 (Jun -> Continuation War)
+		FIN_industrial_upgrade_in_harjavalta #35
+		FIN_the_cold_front #35
+		FIN_arm_the_lotta_svard
+		FIN_a_cry_for_help #35
+		FIN_defense_in_depth
+		FIN_jaeger_movement
+		FIN_motti_tactics #35
+		
+		#1942
+		FIN_union_of_finnish_brothers_in_arms
+		FIN_militarized_society
+		FIN_winter_warfare #35
+		FIN_oy_alkoholiliike #35
+		FIN_finnish_radio_intelligence #35
+		FIN_parmis_devils #35
+		
+		#1943
+		FIN_underground_resistance_cells #35
+		FIN_joint_scientific_program
+
+		FIN_utilize_the_sami
+		FIN_long_range_patrols
+		FIN_finnish_radio_intelligence
+		FIN_sissi
+
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_suomalainen_sosialismi = 0
+		FIN_right_wing_policies = 0
+		FIN_join_the_allies = 0
+		FIN_northern_defense_front = 0
+		FIN_ambitions_in_the_south = 0
+		FIN_viron_kansa = 0
+		FIN_a_new_course_for_kokoomus = 0
+		FIN_strengthen_military_administration = 0
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
 FIN_fascist_plan = {
 
 	allowed = {
@@ -88,7 +466,7 @@ FIN_fascist_plan = {
 	}
 }
 
-FIN_communist_plan = {
+FIN_communist_plan_sec = {
 
 	allowed = {
 		original_tag = FIN
@@ -130,7 +508,6 @@ FIN_communist_plan = {
 		FIN_subsidized_national_industrialization
 		FIN_the_workers_state
 		FIN_the_red_watch
-		FIN_join_the_comintern #35 #If not available the AI will end up taking United Under the North Star instead
 			
 		#1939
 
@@ -146,8 +523,1007 @@ FIN_communist_plan = {
 	focus_factors = {
 		FIN_finnish_neutrality = 0
 		FIN_right_wing_policies = 0
-		#FIN_antagonize_the_soviets = 0 #Pick Approach the Soviets, but don't add a 0 weight to Antagonize in case Soviets say no to Finland.
-		FIN_join_the_comintern = 10 #Pick Join the Comintern over United Under the North Star
+		FIN_social_democracy = 0
+		FIN_finno_estonian_union = 0
+		FIN_united_under_the_north_star = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_join_the_comintern = 0 
+		FIN_integrate_kola_and_karelia = 0
+		FIN_finnish_influence_in_the_baltic = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_comintern_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_COMINTERN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_join_the_comintern #35
+			
+		#1939
+
+
+		#1940
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_finno_estonian_union = 0
+		FIN_united_under_the_north_star = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_integrate_kola_and_karelia = 0
+		FIN_finnish_influence_in_the_baltic = 0
+		FIN_finnish_autonomy = 0
+		FIN_british_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_comintern_Karelia_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN_KARELIA
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_COMINTERN_KARELIA
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_join_the_comintern #35
+		FIN_bank_of_aland
+		#1939
+		FIN_suomen_ilmavoimat #35
+		FIN_expand_imatra_hydropower_plant #35
+		FIN_found_pohjolan_voima
+		FIN_tire_factory_at_nokia
+		FIN_integrate_kola_and_karelia
+
+		#1940
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_finno_estonian_union = 0
+		FIN_united_under_the_north_star = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_finnish_influence_in_the_baltic = 0
+		FIN_keepers_of_the_baltic_countries = 0
+		FIN_british_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_comintern_karelia_and_BALTIC_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_COMINTERN_BALTIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_join_the_comintern #35
+		FIN_finnish_influence_in_the_baltic
+
+		#1939
+		FIN_finno_estonian_union
+		FIN_bank_of_aland
+		FIN_suomen_ilmavoimat #35
+		FIN_expand_imatra_hydropower_plant #35
+		FIN_found_pohjolan_voima
+
+		#1940
+		FIN_tire_factory_at_nokia
+		FIN_integrate_kola_and_karelia
+		FIN_keepers_of_the_baltic_countries
+		FIN_finnish_autonomy
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_united_under_the_north_star = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_british_threat = 0
+		FIN_german_threat = 0
+		FIN_red_finland = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_comintern_karelia_and_BALTIC_and_red_finland_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN_RED_FINLAND
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_COMINTERN_RED_FINLAND
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_join_the_comintern #35
+		FIN_finnish_influence_in_the_baltic
+
+		#1939
+		FIN_finno_estonian_union
+		FIN_bank_of_aland
+		FIN_suomen_ilmavoimat #35
+		FIN_expand_imatra_hydropower_plant #35
+		FIN_found_pohjolan_voima
+
+		#1940
+		FIN_tire_factory_at_nokia
+		FIN_integrate_kola_and_karelia
+		FIN_keepers_of_the_baltic_countries
+		FIN_finnish_autonomy
+		FIN_oy_alkoholiliike #35
+		FIN_industrial_upgrade_in_harjavalta #35
+
+		#1941
+		FIN_expand_mining_prospection
+		FIN_extra_refresher_exercises
+		FIN_jaeger_movement
+		FIN_the_cold_front
+		FIN_red_finland
+		
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_united_under_the_north_star = 0
+		FIN_antagonize_the_soviets = 0 
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_pro_soviet_nordic_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_PRO_SOV_NORDIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_finno_estonian_union
+		
+		#1939
+		FIN_united_under_the_north_star
+
+		#1940
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_join_the_comintern = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_finnish_influence_in_the_baltic = 0
+		FIN_confederated_finno_russian_republics = 0
+		FIN_german_threat = 0
+		FIN_soviet_threat = 0
+		FIN_preserve_sapmi = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_pro_soviet_nordic_baltic_influence_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_finno_estonian_union
+		
+		#1939
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+
+		#1940
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_join_the_comintern = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_confederated_finno_russian_republics = 0
+		FIN_german_threat = 0
+		FIN_soviet_threat = 0
+		FIN_preserve_sapmi = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_pro_soviet_nordic_baltic_and_sampi_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC_SAMPI
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_PRO_SOV_NORDIC_SAMPI
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_approach_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_finno_soviet_pact
+
+		#1938
+		FIN_cooperate_with_social_democrats #35
+		FIN_subsidized_national_industrialization
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_finno_estonian_union
+		
+		#1939
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+		FIN_preserve_sapmi
+		FIN_bank_of_aland
+		FIN_suomen_ilmavoimat #35
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1940
+		FIN_found_pohjolan_voima
+		FIN_tire_factory_at_nokia
+		FIN_oy_alkoholiliike #35
+		FIN_industrial_upgrade_in_harjavalta #35
+		FIN_expand_mining_prospection
+		FIN_jaeger_movement
+
+		#1941
+		FIN_the_cold_front
+		FIN_german_threat
+		
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_join_the_comintern = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_confederated_finno_russian_republics = 0
+		FIN_soviet_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_anti_soviet_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_ANTISOV
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_antagonize_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_federation_of_trade_unions
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_defensive_preparations
+
+		#1938
+		FIN_the_peoples_democratic_league #35
+		FIN_trade_agreements
+		FIN_the_workers_state
+		FIN_the_red_watch
+			
+		#1939
+
+
+		#1940
+
+		
+		# COMMUNIST AI PUSHED TOWARDS focus Join Comintern if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_finno_estonian_union = 0
+		FIN_united_under_the_north_star = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_anti_soviet_nordics_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV_NORDIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_ANTISOV_NORDIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_antagonize_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_federation_of_trade_unions
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_defensive_preparations
+
+		#1938
+		FIN_the_peoples_democratic_league #35
+		FIN_trade_agreements
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_finno_estonian_union
+		
+		#1939
+		FIN_united_under_the_north_star
+
+		#1940
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+		FIN_finnish_influence_in_the_baltic = 0
+		FIN_german_threat = 0
+		FIN_soviet_threat = 0
+		FIN_confederated_finno_russian_republics = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_anti_soviet_nordics_baltics_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_ANTISOV_NORDIC_BALTIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_antagonize_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_federation_of_trade_unions
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_defensive_preparations
+
+		#1938
+		FIN_the_peoples_democratic_league #35
+		FIN_trade_agreements
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_finno_estonian_union
+		
+		#1939
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+
+		#1940
+
+	
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+		FIN_preserve_sapmi = 0
+		FIN_german_threat = 0
+		FIN_soviet_threat = 0
+		FIN_confederated_finno_russian_republics = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_communist_anti_soviet_nordics_baltics_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_COMMUNIST_FINNO_RUSSIAN
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_COMMUNIST_FINNO_RUSSIAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_towards_a_red_government #35
+		FIN_industrial_development
+		FIN_antagonize_the_soviets #35
+		FIN_increase_military_budget #35
+		FIN_suomen_maavoimat
+
+		#1937
+		FIN_finnish_federation_of_trade_unions
+		FIN_finnish_learned_societies
+		FIN_extra_refresher_exercises
+		FIN_janiskoski_power_plant #35
+		FIN_outokumpu_for_defence_industry
+		FIN_the_second_finnish_civil_war #35
+		FIN_defensive_preparations
+
+		#1938
+		FIN_the_peoples_democratic_league #35
+		FIN_trade_agreements
+		FIN_the_workers_state
+		FIN_the_red_watch
+		FIN_finno_estonian_union
+		
+		#1939
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+		FIN_confederated_finno_russian_republics
+		FIN_preserve_sapmi
+		FIN_aid_for_entrepreneurs
+		
+
+		#1940
+		FIN_suomen_akatemia
+		FIN_tire_factory_at_nokia
+		FIN_industrial_upgrade_in_harjavalta
+		FIN_expand_imatra_hydropower_plant
+		FIN_salvaged_and_retooled
+		
+		#1941
+		FIN_jaeger_movement
+		FIN_the_cold_front #35
+		FIN_winter_warfare #35
+		FIN_oy_alkoholiliike #35
+		FIN_motti_tactics #35
+		FIN_soviet_threat
+		FIN_utilize_the_sami #35
+		FIN_long_range_patrols #35
+
+		#1942
+		FIN_sissi
+		FIN_mannerheim_line
+		FIN_defense_in_depth
+		FIN_expand_mining_prospection #35
+		FIN_elijarvi_mine #35
+		FIN_tornio_steel_factory
+
+		#1943
+		FIN_suomen_ilmavoimat
+		FIN_pilot_training
+		FIN_socialist_welfare
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_social_democracy = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+		FIN_german_threat = 0
 	}		
 
 	research = {
@@ -234,8 +1610,998 @@ FIN_democratic_plan = {
 	focus_factors = {
 		FIN_finnish_neutrality = 0
 		FIN_right_wing_policies = 0
-		FIN_approach_the_soviets = 0 #Pick Antagonize the Soviets
-		FIN_approach_major_democracies = 10 #Pick Approach Major Democracies over United Under the North Star
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0 
+		FIN_united_under_the_north_star = 0
+		FIN_finno_estonian_union = 0
+		FIN_control_the_flux_of_iron_ore = 0
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_allies_plan = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_ALLIES
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_antagonize_the_soviets #35
+		FIN_finnish_learned_societies
+		FIN_defensive_preparations
+		FIN_approach_major_democracies
+		FIN_trade_agreements
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_united_under_the_north_star = 0
+		FIN_finno_estonian_union = 0
+		FIN_control_the_flux_of_iron_ore = 0
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_allies_sampi_plan = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ALLIES_SAMPI
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_ALLIES_SAMPI
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_antagonize_the_soviets #35
+		FIN_finnish_learned_societies
+		FIN_defensive_preparations
+		FIN_approach_major_democracies
+		FIN_trade_agreements
+		FIN_control_the_flux_of_iron_ore
+		FIN_motti_tactics #35
+		
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_aid_for_entrepreneurs
+		FIN_proclaim_greater_finland
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_united_under_the_north_star = 0
+		FIN_finno_estonian_union = 0
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+
+FIN_democratic_allies_sampi_great_federation_plan = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ALLIES_FEDERATION
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_ALLIES_FEDERATION
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_antagonize_the_soviets #35
+		FIN_finnish_learned_societies
+		FIN_finno_estonian_union
+		FIN_defensive_preparations
+		FIN_approach_major_democracies
+		FIN_trade_agreements
+		FIN_control_the_flux_of_iron_ore
+		FIN_motti_tactics #35
+		
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_aid_for_entrepreneurs
+		FIN_utilize_the_sami
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+		FIN_soviet_threat
+		FIN_proclaim_greater_finland
+
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_united_under_the_north_star = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_nordic_plan = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ANTISOV_NORDIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_ANTISOV_NORDIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_antagonize_the_soviets #35
+		FIN_finno_estonian_union
+		FIN_united_under_the_north_star
+		FIN_defensive_preparations
+		FIN_finnish_learned_societies
+		FIN_trade_agreements
+		
+		#1940
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+		FIN_confederated_finno_russian_republics = 0
+		FIN_preserve_sapmi = 0
+		FIN_finnish_influence_in_the_baltic = 0
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_nordic_baltic_plan = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_antagonize_the_soviets #35
+		FIN_finno_estonian_union
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+		FIN_defensive_preparations
+		FIN_finnish_learned_societies
+		FIN_trade_agreements
+		
+		#1940
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+		FIN_confederated_finno_russian_republics = 0
+		FIN_preserve_sapmi = 0
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_nordic_baltic_finno_russian_plan = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_FINNO_RUSSIAN
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_FINNO_RUSSIAN
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_antagonize_the_soviets #35
+		FIN_finno_estonian_union
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+		FIN_confederated_finno_russian_republics
+		FIN_defensive_preparations
+		
+		#1940
+		FIN_finnish_learned_societies
+		FIN_trade_agreements
+		FIN_motti_tactics #35
+		FIN_salvaged_and_retooled
+		FIN_preserve_sapmi
+		
+		#1941
+		FIN_finnish_federation_of_trade_unions
+		FIN_mineral_wealth
+		FIN_funds_from_kalevala_koru_oy
+		FIN_aid_for_entrepreneurs
+		FIN_soviet_threat
+
+		#1942 and onwards
+		FIN_tire_factory_at_nokia
+		FIN_industrial_upgrade_in_harjavalta
+		FIN_oy_alkoholiliike
+		FIN_utilize_the_sami
+		FIN_expand_mining_prospection
+		FIN_long_range_patrols
+		FIN_finnish_radio_intelligence
+		FIN_sissi
+		FIN_bank_of_aland
+		FIN_suomen_akatemia
+		FIN_socialist_welfare
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_approach_the_soviets = 0 
+		FIN_approach_major_democracies = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_pro_soviet = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_PRO_SOV
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+				
+		#1939
+		FIN_approach_the_soviets #35
+		FIN_finno_soviet_pact
+		FIN_subsidized_national_industrialization
+		FIN_finnish_learned_societies
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+		
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_approach_major_democracies = 0 
+		FIN_united_under_the_north_star = 0
+		FIN_finno_estonian_union = 0
+		FIN_control_the_flux_of_iron_ore = 0
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_pro_soviet_nordic_union = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_PRO_SOV_NORDIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_approach_the_soviets #35
+		FIN_finno_soviet_pact
+		FIN_subsidized_national_industrialization
+		
+				
+		#1939
+		FIN_finno_estonian_union
+		FIN_united_under_the_north_star
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+		FIN_finnish_learned_societies
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+		
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_approach_major_democracies = 0 
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+		FIN_finnish_influence_in_the_baltic = 0
+		FIN_confederated_finno_russian_republics = 0
+		FIN_preserve_sapmi = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_pro_soviet_nordic_union = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_approach_the_soviets #35
+		FIN_finno_soviet_pact
+		FIN_subsidized_national_industrialization
+		
+				
+		#1939
+		FIN_finno_estonian_union
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+		FIN_finnish_learned_societies
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+		
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_approach_major_democracies = 0 
+		FIN_soviet_threat = 0
+		FIN_german_threat = 0
+		FIN_confederated_finno_russian_republics = 0
+		FIN_preserve_sapmi = 0
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FIN_democratic_pro_soviet_nordic_union_sampi = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		OR = {
+			has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC_SAMPI
+			has_game_rule = {
+				rule = FIN_ai_behavior
+				option = FIN_DEMOCRATIC_PRO_SOV_NORDIC_SAMPI
+			}
+		}
+	}
+
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		#1936
+		FIN_suomalainen_sosialismi #35
+		FIN_enhance_southern_infrastructure
+		FIN_social_democracy #35
+		FIN_industrial_development
+		FIN_align_the_agrarian_league #35
+		FIN_increase_military_budget #35
+		FIN_janiskoski_power_plant #35
+		FIN_pragmatic_socialism #35
+
+		#1937
+		FIN_social_democratic_womens_union
+		FIN_sosialistinen_eduskuntaryhma #35
+		FIN_suomen_maavoimat
+		FIN_extra_refresher_exercises
+		FIN_mannerheim_line
+		FIN_expand_imatra_hydropower_plant #35
+
+		#1938
+		FIN_outokumpu_for_defence_industry
+		FIN_the_cold_front #35
+		FIN_jaeger_movement
+		FIN_approach_the_soviets #35
+		FIN_finno_soviet_pact
+		FIN_subsidized_national_industrialization
+				
+		#1939
+		FIN_finno_estonian_union
+		FIN_united_under_the_north_star
+		FIN_finnish_influence_in_the_baltic
+		FIN_defense_in_depth
+		FIN_suomen_ilmavoimat
+		FIN_winter_warfare #35
+		FIN_finnish_learned_societies
+		FIN_preserve_sapmi
+		FIN_motti_tactics #35
+		FIN_finnish_federation_of_trade_unions
+
+		#1940
+		FIN_salvaged_and_retooled
+		FIN_mineral_wealth
+		FIN_utilize_the_sami
+		FIN_oy_alkoholiliike
+		FIN_german_threat
+		
+
+		# DEMOCRATIC AI PUSHED TOWARDS focus Approach Major Democracies if conditionas are appropriate (in the FT weights), otherwise it will go for United Under the North Star
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		FIN_finnish_neutrality = 0
+		FIN_right_wing_policies = 0
+		FIN_towards_a_red_government = 0
+		FIN_antagonize_the_soviets = 0 
+		FIN_approach_major_democracies = 0 
+		FIN_soviet_threat = 0
+		FIN_confederated_finno_russian_republics = 0
 	}		
 
 	research = {

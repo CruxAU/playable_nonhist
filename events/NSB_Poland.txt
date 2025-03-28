@@ -1310,7 +1310,7 @@ country_event = {
 
 		set_party_name = { 
 			ideology = neutrality 
-			long_name = POL_hohenzollern_sigmaringen_long
+			long_name = POL_hohenzollern_sigmaringen
 			name = POL_hohenzollern_sigmaringen
 		}
 		hidden_effect = {
@@ -2566,7 +2566,7 @@ country_event = {
 	desc = NSB_poland_communist_events.2.desc
 	picture = GFX_report_event_lithuanian_ultimatum
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #Yes, become puppet
@@ -2650,7 +2650,7 @@ country_event = {
 	desc = NSB_poland_communist_events.201.desc
 	picture = GFX_report_event_generic_peaceful_annexation
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #Yes, become puppet
@@ -2666,14 +2666,14 @@ country_event = {
 	desc = NSB_poland_communist_events.202.desc
 	picture = GFX_report_event_polish_tanks_01
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #Gain wargoal
 		name = NSB_poland_communist_events.202.a
 		create_wargoal = {
 			type = puppet_wargoal_focus
-			target = ROOT
+			target = FROM
 		}
 	}
 }
@@ -2685,7 +2685,7 @@ country_event = {
 	desc = NSB_poland_communist_events.3.desc
 	picture = GFX_report_event_generic_peaceful_annexation
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #Yes, become annexed
@@ -2774,7 +2774,7 @@ country_event = {
 	desc = NSB_poland_communist_events.301.desc
 	picture = GFX_report_event_poland_rejects
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #Yes, become annexed
@@ -2793,7 +2793,7 @@ country_event = {
 	desc = NSB_poland_communist_events.302.desc
 	picture = GFX_report_event_generic_peaceful_annexation
 
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #Yes, become annexed
@@ -3415,7 +3415,7 @@ country_event = {
 	option = {
 		name = NSB_poland_democratic_events.1.a
 		ai_chance = {
-			base = 15
+			base = 20
 		}
 		if = {
 			limit = {
@@ -3429,7 +3429,7 @@ country_event = {
 	option = {
 		name = NSB_poland_democratic_events.1.b
 		ai_chance = {
-			base = 35
+			base = 30
 		}
 		promote_character = POL_stanislaw_mikolajczyk
 	}

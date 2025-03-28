@@ -868,7 +868,7 @@ German_alternate_democratic_diplomatic = {
 	}
 
 	focus_factors = {
-		GER_the_monarchy_compromise_ww = 0
+		GER_revive_the_kaiserreich_ww = 0
 		GER_conquer_italy = 0
 		GER_democratic_shield = 0
 		GER_request_the_return_of_qingdao = 0
@@ -1036,7 +1036,7 @@ German_alternate_kaiser_ww = {
 
 	ai_national_focuses = {
 		#Things to do ASAP
-		GER_tend_to_the_future_of_germany # 35 AS SOON AS THE GCW IS OVER, THEN PUSH FOR CONSERVATIVE DEMOCRACY
+		GER_tend_to_the_future_of_germany # 35 AS SOON AS THE GCW IS OVER, THEN PUSH FOR MONARCHISM
 		GER_monarchist_sentiment # 14
 		GER_revive_the_kaiserreich_ww # 35
 		GER_return_of_the_kaiser_ww # 14 
@@ -1055,10 +1055,9 @@ German_alternate_kaiser_ww = {
 		GER_fan_prussian_militarism # 70 Get that army experience rolling
 		GER_the_four_year_plan # 35
 		GER_autarky_efforts # 35 The Kaiser loves autarky too
-		GER_institute_price_controls # 35
 		GER_establish_the_reichswerke # 35
 		GER_construct_the_reichsautobahn # 35
-		
+		GER_institute_price_controls # 35
 		# 1938 
 		GER_demand_the_return_of_southern_jutland # 70 Bully Denmark
 		GER_realpolitik # 14
@@ -1213,9 +1212,9 @@ German_alternate_kaiser_alt = {
 		GER_fan_prussian_militarism # 70 Get that army experience rolling
 		GER_the_four_year_plan # 35
 		GER_autarky_efforts # 35 The Kaiser loves autarky too
-		GER_institute_price_controls # 35
 		GER_establish_the_reichswerke # 35
 		GER_construct_the_reichsautobahn # 35
+		GER_institute_price_controls # 35
 		
 		# 1938 
 		GER_demand_the_return_of_southern_jutland # 70 Bully Denmark
@@ -1678,9 +1677,9 @@ German_alternate_kaiser_blitz = {
 		GER_fan_prussian_militarism # 70 Get that army experience rolling
 		GER_the_four_year_plan # 35
 		GER_autarky_efforts # 35 The Kaiser loves autarky too
-		GER_institute_price_controls # 35
 		GER_accelerate_the_rearmament_program # 35
 		GER_construct_the_reichsautobahn # 35
+		GER_institute_price_controls # 35
 		GER_demand_the_return_of_southern_jutland # 70 Bully Denmark
 		GER_realpolitik # 14
 		GER_mitteleuropa # 14
@@ -1810,9 +1809,9 @@ German_alternate_kaiser_china = { #fleet focus and ally china, asia, and africa
 		GER_fan_prussian_militarism # 70 Get that army experience rolling
 		GER_the_four_year_plan # 35
 		GER_autarky_efforts # 35 The Kaiser loves autarky too
-		GER_institute_price_controls # 35
 		GER_accelerate_the_rearmament_program # 35
 		GER_construct_the_reichsautobahn # 35
+		GER_institute_price_controls # 35
 		GER_demand_the_return_of_southern_jutland # 70 Bully Denmark
 		GER_realpolitik # 14
 		GER_mitteleuropa # 14
@@ -1952,9 +1951,10 @@ German_alternate_kaiser_britain = { #ally england
 		GER_prioritize_economic_growth # 35
 		GER_currency_reforms # 35 The Kaiser loves autarky too
 		GER_lower_taxes # 35
-		GER_abolish_price_controls # 35
+		
 		GER_construct_the_reichsautobahn # 35
 		GER_demand_the_return_of_southern_jutland # 70 Bully Denmark
+		GER_abolish_price_controls # 35
 		GER_realpolitik # 14
 		GER_mitteleuropa # 14
 		GER_weltpolitik # 14
@@ -3716,7 +3716,6 @@ German_berlin_moscow = {
 		GER_accelerate_the_rearmament_program	#35		AUG 36
 		GER_kdf_wagen_factories					#35 	construction started in 38, but GER needs dem Civs
 		GER_develop_modern_maneuver_warfare		#35
-		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
 
 		#1937
 		GER_adopt_new_panzer_doctrine			#35 	panzerwaffe was formed in 36

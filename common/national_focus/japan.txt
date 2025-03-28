@@ -183,15 +183,15 @@
 					id = wtt_japan.21
 					hours = 6
 				}
-				custom_effect_tooltip = JAP_if_man_accepts
-				effect_tooltip = {
-					every_character = {
-						limit = {
-							OWNER = { tag = ROOT }
-							has_trait = JAP_samurai_lineage
-						}
-						set_nationality = PREV
+			}
+			custom_effect_tooltip = JAP_if_man_accepts
+			effect_tooltip = {
+				every_army_leader = {
+					limit = {
+						OWNER = { tag = JAP }
+						has_trait = JAP_samurai_lineage
 					}
+					set_nationality = MAN
 				}
 			}
 		}
@@ -754,6 +754,11 @@
 				JAP = {
 					add_ai_strategy = {
 						type = support
+						id = PREV
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_volunteers_desire
 						id = PREV
 						value = 100
 					}

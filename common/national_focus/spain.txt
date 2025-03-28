@@ -7934,6 +7934,16 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					has_character = SPR_mate_zalka
+				}
+				custom_effect_tooltip = SPR_international_brigades_tt
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+					NOT = {
+						has_character = SPR_mate_zalka
+					}
 				}
 				create_field_marshal = {
 					name = "Máté Zalka"

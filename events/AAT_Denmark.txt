@@ -10886,7 +10886,7 @@ country_event = { #The Danish King seeks refuge
 		
 	}
 	option = { #Send him away
-		name = denmark_events.100.b
+		name = denmark_events.100.b #NHMMAP
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -10918,7 +10918,7 @@ country_event = { #The Danish King seeks refuge
 						}
 					}
 				}
-				SWE = { country_event = { id =  denmark_events.100 days = 5 }}
+				SWE = { country_event = { id =  denmark_events.100 days = 5 }} #NHMMAP
 			}
 			else_if = {
 				limit = {

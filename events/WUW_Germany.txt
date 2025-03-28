@@ -49,6 +49,11 @@ country_event = { #MEFO Bills have been cancelled
 
 	is_triggered_only = yes
 
+	trigger = {
+		#Nuh-uh, only trigger this event if you still have the MEFO Bills to avoid exploits where you can have BOTH Economy of Conquest AND Recovering Economy. The game isn't smart enough to handle the genius that is our player base
+		has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+	}
+	
 	option = { #Continue to rearm - get Economy of Conquest
 		name = germany_mefo_bills.1.a
 		ai_chance = {
@@ -22755,6 +22760,7 @@ country_event = {
 
 		ai_chance = {
 			base = 1
+			#REMOVED by NHMMAP
 		}
 
 		trigger = {
@@ -24058,7 +24064,7 @@ country_event = {
 				}
 				activate_shine_on_focus = GER_strengthen_the_waffen_ss
 				set_country_flag = { flag = GER_strengthen_the_waffen_ss_in_progress_flag days = @inner_circle_time_tier_2_flag value = 1 }
-				country_event = { id = GER_inner_circle_himmler.02 days = @inner_circle_time_tier_3 }
+				country_event = { id = GER_inner_circle_himmler.02 days = @inner_circle_time_tier_2 }
 			}
 			else_if = {
 				limit = {
@@ -24066,7 +24072,7 @@ country_event = {
 				}
 				activate_shine_on_focus = GER_hegemony_of_the_ss
 				set_country_flag = { flag = GER_hegemony_of_the_ss_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
-				country_event = { id = GER_inner_circle_himmler.02 days = @inner_circle_time_tier_2 }
+				country_event = { id = GER_inner_circle_himmler.02 days = @inner_circle_time_tier_3 }
 			}
 		}
 		else_if = {

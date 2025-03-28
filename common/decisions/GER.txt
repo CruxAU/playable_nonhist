@@ -1449,7 +1449,7 @@ GER_price_controls_cat = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 7
+				add = 30
 				OR = {
 					AND = { #if germany is fascist, and hungary is a potential ally
 						has_completed_focus = GER_remilitarize_the_rhineland
@@ -1524,10 +1524,6 @@ GER_price_controls_cat = {
 			modifier = {
 				factor = 0
 				check_variable = { GER_industrial_consumer_goods_factor < 0.1 }
-			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes 
 			}
 		}
 

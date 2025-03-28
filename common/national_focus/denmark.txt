@@ -5620,6 +5620,9 @@ focus_tree = {
 			if = {
 				limit = {
 					check_variable = { ROOT.party_popularity@ruling_party < 0.76 }
+					NOT = {
+						has_government = communism
+					}
 				}
 				add_popularity = {
 				    ideology = ROOT
@@ -5627,10 +5630,24 @@ focus_tree = {
 				}
 			}
 
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
+			IF = {
+				limit = {
+					NOT = {
+						has_government = communism
+					}
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
 			}
+			ELSE = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+			}
+
 
 			if = {
 				limit = {
@@ -8408,6 +8425,7 @@ focus_tree = {
 					ruling_party = fascism
 				}
 				
+				#REMOVED CIVIL WAR NHMMAP
 			}
 		}
 	}

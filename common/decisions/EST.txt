@@ -776,7 +776,31 @@ EST_convert_FIN_cat = {
 			}
 		}
 		ai_will_do = {
-			base = 100
+			base = 0
+			modifier = {
+				add = 100
+				FIN = {
+					OR = {
+						count_triggers = {
+							amount = 6
+							926 = { has_state_flag = vaps_loyal_state }
+							927 = { has_state_flag = vaps_loyal_state }
+							930 = { has_state_flag = vaps_loyal_state }
+							928 = { has_state_flag = vaps_loyal_state }
+							146 = { has_state_flag = vaps_loyal_state }
+							150 = { has_state_flag = vaps_loyal_state }
+							149 = { has_state_flag = vaps_loyal_state }
+							929 = { has_state_flag = vaps_loyal_state }
+							147 = { has_state_flag = vaps_loyal_state }
+							148 = { has_state_flag = vaps_loyal_state }
+							722 = { has_state_flag = vaps_loyal_state }
+							111 = { has_state_flag = vaps_loyal_state }
+						}
+						fascism > 0.7
+					}
+					
+				}
+			}
 		}
 	}
 }

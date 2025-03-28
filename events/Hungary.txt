@@ -43,6 +43,12 @@ country_event = {
 		}
 
 		hidden_effect = {
+			ROM = {
+				set_country_flag = second_vienna_accepted_north #for event bulgaria.4
+			}
+		}
+
+		hidden_effect = {
 			country_event = { 
 				days = 1 
 				id = news.15 
@@ -78,6 +84,13 @@ country_event = {
 			}
 		}
 
+		hidden_effect = {
+			ROM = {
+				set_country_flag = second_vienna_accepted_all #for event bulgaria.4
+			}
+		}
+
+		
 		hidden_effect = {
 			country_event = { 
 				days = 1 
