@@ -166,13 +166,6 @@ HUN_ww_historical_rome = {
 
 	enable = {
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = HUN_ai_behavior
-					option = DEFAULT
-				}
-			}
 			has_country_flag = HUN_AI_RANDOM_HORTHY_ROME
 			has_game_rule = {
 				rule = HUN_ai_behavior
@@ -486,13 +479,6 @@ HUN_ww_historical_neu = {
 
 	enable = {
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = HUN_ai_behavior
-					option = DEFAULT
-				}
-			}
 			has_country_flag = HUN_AI_RANDOM_HORTHY_NEU
 			has_game_rule = {
 				rule = HUN_ai_behavior

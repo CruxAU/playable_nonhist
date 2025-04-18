@@ -325,6 +325,9 @@ SWE_politics = {
 				has_war_with = SOV
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 
 		complete_effect = {
 			declare_war_on = {
@@ -399,7 +402,7 @@ SWE_politics = {
 		}
 	
 		ai_will_do = {
-
+			base = 0.5
 		}
 	
 	}
@@ -588,10 +591,65 @@ SWE_politics = {
 						rule = SWE_ai_behavior
 						option = SWE_FASCIST_INDEPENDENT
 					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_NEU_ASSERTIVE
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_NEU_ASSERTIVE
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_NEU_EXP
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_NEU_EXP
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_NEU_ANTI_SOV
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_NEU_ANTI_SOV
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_ALLIES
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES_ASSERTIVE
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_ALLIES_ASSERTIVE
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES_EXP
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_ALLIES_EXP
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES_ANTI_SOV
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_ALLIES_ANTI_SOV
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_FIN
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_FIN
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_FIN_ASSERTIVE
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_FIN_ASSERTIVE
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_FIN_ANTI_SOV
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_FIN_ANTI_SOV
+					}
 					has_country_flag = SWE_AI_RANDOM_FASCIST_PUPPET
 					has_game_rule = {
 						rule = SWE_ai_behavior
 						option = SWE_FASCIST_PUPPET
+					}
+					has_country_flag = SWE_AI_RANDOM_FASCIST_PUPPET_NORDLAND
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_FASCIST_PUPPET_NORDLAND
 					}
 					has_country_flag = SWE_AI_RANDOM_PUPPET_BACKSTABBER
 					has_game_rule = {
@@ -691,10 +749,70 @@ SWE_politics = {
 			base = 0
 			modifier = {
 				OR = {
-					has_country_flag = SWE_AI_RANDOM_COMMUNISM
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG
 					has_game_rule = {
 						rule = SWE_ai_behavior
-						option = SWE_COMMUNISM
+						option = SWE_COMMUNIST_FLYG
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_AXIS
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_FLYG_AXIS
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_AXIS_AGGR
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_FLYG_AXIS_AGGR
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_NORDIC
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_FLYG_NORDIC
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_NORDIC_AGGR
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_FLYG_NORDIC_AGGR
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_KILBOM
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM_ALLIES
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_KILBOM_ALLIES
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM_ALLIES_AGGR
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_KILBOM_ALLIES_AGGR
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_LINDEROT
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_COMINTERN
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_LINDEROT_COMINTERN
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_COMINTERN_AGGR
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_LINDEROT_COMINTERN_AGGR
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_NORDIC
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_LINDEROT_NORDIC
+					}
+					has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_NORDIC_AGGR
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_COMMUNIST_LINDEROT_NORDIC_AGGR
 					}
 				}
 				
@@ -731,6 +849,56 @@ SWE_politics = {
 					has_game_rule = {
 						rule = SWE_ai_behavior
 						option = SWE_UNALIGNED
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_NEU_ASSERTIVE
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_NEU_ASSERTIVE
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_NEU_EXP
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_NEU_EXP
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_NEU_ANTI_SOV
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_NEU_ANTI_SOV
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_ALLIES
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES_ASSERTIVE
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_ALLIES_ASSERTIVE
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES_EXP
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_ALLIES_EXP
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES_ANTI_SOV
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_ALLIES_ANTI_SOV
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_FIN
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_FIN
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_FIN_ASSERTIVE
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_FIN_ASSERTIVE
+					}
+					has_country_flag = SWE_AI_RANDOM_MONARCHIST_FIN_ANTI_SOV
+					has_game_rule = {
+						rule = SWE_ai_behavior
+						option = SWE_MONARCHIST_FIN_ANTI_SOV
 					}
 				}
 				
@@ -2805,6 +2973,22 @@ SWE_appeal_for_support_cat = {
 				has_country_flag = SWE_appeal_for_support_in_progress
 			}
 		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_completed_focus = SWE_undermine_the_fascists
+				date > 1939.1.1
+				neutrality < 0.65
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = SWE_revoke_anti_militia_laws
+				date > 1938.1.1
+				fascism < 0.5
+			}
+		}
 		cost = 0
 		icon = GFX_decision_POL_looming_peasants_strike
 	
@@ -3057,6 +3241,10 @@ SWE_appeal_for_support_cat = {
 		
 		visible = {
 			has_active_mission = SWE_implement_rural_reforms_countdown
+		}
+
+		ai_will_do = {
+			base = 150
 		}
 
 		complete_effect = {

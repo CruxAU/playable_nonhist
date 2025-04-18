@@ -1817,7 +1817,7 @@ focus_tree = {
 		}
 
 		available = {
-			democratic > 0.6
+			democratic > 0.5
 			is_subject = no
 		}
 
@@ -3289,7 +3289,11 @@ focus_tree = {
 			has_government = communism
 			is_subject = no
 			all_core_state = {
-				is_controlled_by = ROOT
+				OR = {
+					state = 145 #aland is not needed NHMMAP
+					is_controlled_by = ROOT
+				}
+				
 			}
 			controls_state = 213 #MURMANSK
 			controls_state = 215 #ONEGA
@@ -4903,6 +4907,40 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = FIN_vaino_tanner
 			show_ideas_tooltip = FIN_miina_sillanpaa
+			if = {
+		    	limit = {
+		    		is_ai = yes
+					OR = {
+						has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES
+						has_game_rule = {
+							rule = FIN_ai_behavior
+							option = KOKOOMUS_ALLIES
+						}
+						has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_BALTIC
+						has_game_rule = {
+							rule = FIN_ai_behavior
+							option = KOKOOMUS_ALLIES_BALTIC
+						}
+						has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_EXP
+						has_game_rule = {
+							rule = FIN_ai_behavior
+							option = KOKOOMUS_ALLIES_EXP
+						}
+						has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES
+						has_game_rule = {
+							rule = FIN_ai_behavior
+							option = MONARCHIST_ALLIES
+						}
+						has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES_EXP
+						has_game_rule = {
+							rule = FIN_ai_behavior
+							option = MONARCHIST_ALLIES_EXP
+						}
+					}
+		    	}
+		    	add_ideas = FIN_miina_sillanpaa
+				add_political_power = -52
+		    }
 		}
 	}
 
@@ -5058,7 +5096,16 @@ focus_tree = {
 		relative_position_id = FIN_repurpose_small_industries
 		cost = 10
 		available = {
-			has_tech = construction4
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				has_tech = construction2
+			}
+			else = {
+				has_tech = construction3
+			}
+			
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
@@ -5454,12 +5501,30 @@ focus_tree = {
 						NOT = { has_war_with = ROOT }
 					}
 				}
+				any_country = {
+					is_faction_leader = yes
+					has_government = democratic
+					capital_scope = {
+						is_on_continent = europe
+					}
+					NOT = { has_war_with = ROOT }
+					all_allied_country = {
+						NOT = { has_war_with = ROOT }
+					}
+				}
 			}
 		}
 
 		search_filters = {}
 
 		completion_reward = {
+			if = {
+		    	limit = {
+		    		is_ai = yes
+					FIN_is_monarchist_ai = yes
+		    	}
+		    	remove_ideas = FIN_miina_sillanpaa
+		    }
 			if = {
 				limit = {
 					ENG = {
@@ -5530,8 +5595,54 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					USA = {
+						is_faction_leader = yes
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+						NOT = {
+							any_allied_country = {
+								has_war_with = ROOT
+							}
+						}
+					}
+				}
 				USA = {
+					add_ai_strategy = {
+						type = befriend
+						id = ROOT
+						value = 100
+					}
+					ROOT = {
+						add_ai_strategy = {
+							type = befriend
+							id = PREV
+							value = 100
+						}
+					}
+					country_event = { id = generic.2 hours = 4 random_hours = 4 }
+					if = {
+						limit = {
+							has_war = yes
+						}
+						ROOT = { add_war_support = 0.1 }
+					}
+				}
+			}
+			else = {
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_government = democratic
+						capital_scope = {
+							is_on_continent = europe
+						}
+						NOT = { has_war_with = ROOT }
+						all_allied_country = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = ROOT
@@ -5590,6 +5701,7 @@ focus_tree = {
 			custom_effect_tooltip = FIN_northern_defense_front_countries_tt
 			every_other_country = {
 				limit = {
+					is_in_faction = no
 					OR = {
 						NORDIC_is_nordic = yes
 						is_baltic_country = yes
@@ -6476,7 +6588,10 @@ focus_tree = {
 			is_subject = no
 			has_dynamic_modifier = { modifier = FIN_finnish_army }
 			all_core_state = {
-				is_controlled_by = ROOT
+				OR = {
+					state = 145 #aland is not needed NHMMAP
+					is_controlled_by = ROOT
+				}
 			}
 		}
 
@@ -7112,7 +7227,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			all_core_state = {
-				is_controlled_by = ROOT
+				OR = {
+					state = 145 #aland is not needed NHMMAP
+					is_controlled_by = ROOT
+				}
 			}
 			controls_state = 213 #MURMANSK
 			controls_state = 215 #ONEGA
@@ -7402,6 +7520,8 @@ focus_tree = {
 		bypass = {
 			has_government = fascism
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 
 		available = {
 			is_subject = no
@@ -7409,11 +7529,13 @@ focus_tree = {
 				has_completed_focus = FIN_prepare_a_military_coup
 				AND = {
 					has_completed_focus = FIN_discredit_the_democratic_system
-					fascism > 0.6
-					has_stability > 0.6
+					fascism > 0.5
+					has_stability > 0.4
 				}
 			}
 		}
+
+		
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 
@@ -7591,7 +7713,7 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
+			else = { #for tooltip purposes
 				custom_effect_tooltip = FIN_a_fascist_regime_no_focus_discredit_tt
 				effect_tooltip = {
 					set_politics = {
@@ -7717,6 +7839,7 @@ focus_tree = {
 			is_subject = no
 			has_war = no
 			has_government = fascism
+			is_in_faction = no
 			OR = {
 				GER = {
 					is_faction_leader = yes
@@ -7732,6 +7855,19 @@ focus_tree = {
 					NOT = { has_war_with = ROOT }
 					all_allied_country = {
 						NOT = { has_war_with = ROOT }
+					}
+				}
+				any_other_country = {
+					is_faction_leader = yes
+					has_government = fascism
+					NOT = { has_war_with = ROOT }
+					NOT = {
+						any_allied_country = {
+							has_war_with = ROOT
+						}
+					}
+					capital_scope = {
+						is_on_continent = europe
 					}
 				}
 			}
@@ -7789,6 +7925,57 @@ focus_tree = {
 					}
 				}
 				ITA = {
+					add_ai_strategy = {
+						type = befriend
+						id = ROOT
+						value = 100
+					}
+					ROOT = {
+						add_ai_strategy = {
+							type = befriend
+							id = PREV
+							value = 100
+						}
+					}
+					country_event = { id = generic.2 hours = 4 random_hours = 4 }
+					if = {
+						limit = {
+							has_war = yes
+						}
+						ROOT = { add_war_support = 0.1 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_other_country = {
+						is_faction_leader = yes
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+						NOT = {
+							any_allied_country = {
+								has_war_with = ROOT
+							}
+						}
+						capital_scope = {
+							is_on_continent = europe
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_faction_leader = yes
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+						NOT = {
+							any_allied_country = {
+								has_war_with = ROOT
+							}
+						}
+						capital_scope = {
+							is_on_continent = europe
+						}
+					}
 					add_ai_strategy = {
 						type = befriend
 						id = ROOT
@@ -8233,6 +8420,7 @@ focus_tree = {
 		available = {
 			has_civil_war = no
 			is_subject = no
+			is_in_faction = no
 		}
 
 		bypass = {
@@ -8254,7 +8442,13 @@ focus_tree = {
 							NORDIC_is_nordic = yes
 							tag = SMI
 						}
-						has_government = fascism
+						OR = {
+							has_government = fascism
+							AND = {
+								has_government = neutrality
+								fascism > 0.25
+							}
+						}
 						NOT = { has_war_with = ROOT }
 						is_in_faction = no
 						is_subject = no
@@ -8269,7 +8463,13 @@ focus_tree = {
 						NORDIC_is_nordic = yes
 						tag = SMI
 					}
-					has_government = fascism
+					OR = {
+						has_government = fascism
+						AND = {
+							has_government = neutrality
+							fascism > 0.25
+						}
+					}
 					NOT = { has_war_with = ROOT }
 					is_in_faction = no
 					is_subject = no

@@ -351,6 +351,7 @@ NOR_democratic_alternate_allies_expansion = {
 		NOR_secure_the_swedish_iron_ore #10
 		
 		# 1940
+		NOR_replace_laake
 		NOR_reform_the_army
 		NOR_uproot_secret_army #10
 		NOR_invite_transnational_manufacturers #10
@@ -372,7 +373,7 @@ NOR_democratic_alternate_allies_expansion = {
 		NOR_coastal_defense #5
 		NOR_norges_tekniske_hogskole #10
 		NOR_the_royal_norwegian_navy #10
-		NOR_replace_laake		
+				
 	}
 
 	focus_factors = {
@@ -546,6 +547,7 @@ NOR_democratic_alternate_nordic_expansion = {
 		NOR_secure_the_swedish_iron_ore #10
 		
 		# 1940
+		NOR_replace_laake
 		NOR_reform_the_army
 		NOR_uproot_secret_army #10
 		NOR_invite_transnational_manufacturers #10
@@ -568,7 +570,7 @@ NOR_democratic_alternate_nordic_expansion = {
 		NOR_coastal_defense #5
 		NOR_norges_tekniske_hogskole #10
 		NOR_the_royal_norwegian_navy #10
-		NOR_replace_laake		
+				
 	}
 
 	focus_factors = {

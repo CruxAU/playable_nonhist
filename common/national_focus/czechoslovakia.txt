@@ -1768,6 +1768,7 @@
 		}
 
 		available = {
+			has_government = communism
 			is_in_faction_with = SOU
 		}
 

@@ -75,16 +75,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = SWE_AI_RANDOM_COMMUNISM
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_COMMUNISM
-					}
-				}
-			}
 		}
 
 		available = {
@@ -98,7 +88,7 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {  FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP }
@@ -541,16 +531,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
-				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
-				has_war_support < 0.1
-				has_stability > 0.7
-				factor = 50
-			}
 		}
 
 		available = {
@@ -590,16 +570,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
-				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
-				has_war_support < 0.1
-				has_stability > 0.7
-				factor = 50
-			}
+			
 		}
 
 
@@ -1802,16 +1773,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
-				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
-				has_war_support < 0.1
-				has_stability > 0.7
-				factor = 50
-			}
+			
 		}
 
 		available = {
@@ -2926,16 +2888,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
-				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
-				has_war_support < 0.1
-				has_stability > 0.7
-				factor = 50
-			}
+			
 		}
 
 
@@ -2991,16 +2944,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
-				}
-				NOT = { has_completed_focus = SWE_the_nordic_defense_council }
-				has_war_support < 0.1
-				has_stability > 0.7
-				factor = 50
-			}
+			
 		}
 
 
@@ -3528,11 +3472,11 @@ focus_tree = {
 						}
 					}
 				}
-				add_ideas = SWE_volunteers_upgraded
+				add_ideas = SWE_volunteers_upgraded_NHMMAP
 
 			}
 			else = {
-				add_ideas = SWE_volunteers
+				add_ideas = SWE_volunteers_NHMMAP
 				custom_effect_tooltip = SWE_swedes_not_sweden_to_finlands_aid_tt
 				show_ideas_tooltip = SWE_volunteers_upgraded
 				custom_effect_tooltip = SWE_swedes_not_sweden_to_finlands_aid_tt_2
@@ -4004,8 +3948,8 @@ focus_tree = {
 					SPR = {
 						has_country_flag = scw_over
 						OR = { #Nat Spain WON
-							tag = SPA 
-							tag = SPB 
+							country_exists = SPA
+							country_exists = SPB
 						}
 					}
 				}
@@ -4973,11 +4917,7 @@ focus_tree = {
 		
 
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}		
+			factor = 10	
 		}
 
 		available = {	
@@ -5064,7 +5004,7 @@ focus_tree = {
 			#		limit = {
 			#			NOR = { is_ai = no }
 			#		}
-			#		NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } 
+			#		NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } }
 			#	}
 			#	else = {
 			#		NOR = { OVERLORD = { country_event = { id = AAT_Sweden.13 hours = 2 }  } }
@@ -5479,7 +5419,9 @@ focus_tree = {
 			if = {
 				limit = {
 					NOR = {
+						is_in_faction = no
 						is_subject = no
+						has_government = democratic
 					}
 				}
 				NOR = { country_event = { id = AAT_Sweden_nordic_defense_council.1 hours = 3 } }
@@ -5490,6 +5432,11 @@ focus_tree = {
 				limit = {
 					FIN = {
 						is_subject = no
+						is_in_faction = no
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
 					}
 				}
 				if = {
@@ -5508,6 +5455,8 @@ focus_tree = {
 				limit = {
 					DEN = {
 						is_subject = no
+						is_in_faction = no
+						has_completed_focus = DEN_political_unity
 					}
 				}
 				DEN = { country_event = { id = AAT_Sweden_nordic_defense_council.1 hours = 3 } }
@@ -5517,6 +5466,8 @@ focus_tree = {
 				limit = {
 					ICE = {
 						is_subject = no
+						is_in_faction = no
+						has_government = democratic
 					}
 				}
 				ICE = { country_event = { id = AAT_Sweden_nordic_defense_council.1 hours = 3 } }
@@ -7355,10 +7306,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}	
+			
 		}
 
 		available = {
@@ -7374,13 +7322,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				hidden_trigger = {
-					is_ai = yes
-					is_historical_focus_on = yes
-				}
-				is_subject = yes
-			}
+			is_subject = yes
 		}
 
 		cancel_if_invalid = yes
@@ -7493,10 +7435,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}	
 		}
 
 		available = {
@@ -7513,13 +7451,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				hidden_trigger = {
-					is_ai = yes
-					is_historical_focus_on = yes
-				}
-				is_subject = yes
-			}
+			is_subject = yes
 		}
 
 		cancel_if_invalid = yes
@@ -7724,13 +7656,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
-				}
-				factor = 0
-			}
 		}
 
 		available = {
@@ -7782,26 +7707,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = SWE_AI_RANDOM_FASCIST_INDEPENDENT
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_FASCIST_INDEPENDENT
-					}
-					has_country_flag = SWE_AI_RANDOM_FASCIST_PUPPET
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_FASCIST_PUPPET
-					}
-					has_country_flag = SWE_AI_RANDOM_PUPPET_BACKSTABBER
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_FASCIST_PUPPET_BACKSTABBER
-					}
-				}
-			}		
+			
 		}
 
 		available = {
@@ -8688,6 +8594,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = SWE_promote_nordic_identity
 		cost = 10
+
+		ai_will_do = {
+			factor = 10		
+			modifier = {
+				factor = 0
+				date < 1941.6.1
+			}
+		}
+
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8933,6 +8848,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = SWE_finland_claims
 		cost = 10
+
+		ai_will_do = {
+			factor = 10		
+			modifier = {
+				factor = 0
+				date < 1942.2.1
+			}
+		}
+
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -9183,6 +9107,10 @@ focus_tree = {
 					is_faction_leader = yes
 					NOT = { has_war_with = ROOT }
 				}
+				FRA = {
+					is_faction_leader = yes
+					NOT = { has_war_with = ROOT }
+				}
 				USA = {  
 					is_faction_leader = yes
 					NOT = { has_war_with = ROOT }
@@ -9194,6 +9122,7 @@ focus_tree = {
 			OR = {
 				is_in_faction_with = ENG
 				is_in_faction_with = USA
+				is_in_faction_with = FRA
 				is_subject = yes
 			}
 		}
@@ -9219,10 +9148,38 @@ focus_tree = {
 				add_to_tech_sharing_group = SWE_allies_tech_sharing_group
 			}
 			else_if = {
-				limit = { 
-					USA = { is_faction_leader = yes } 
-				 }	
-				 USA = { country_event = { id = generic.2 hours = 6 } }
+				limit = {
+					FRA = { is_faction_leader = yes }
+				}
+
+				FRA = { country_event = { id = generic.2 hours = 6 } }
+				FRA = {
+					add_to_tech_sharing_group = SWE_allies_tech_sharing_group
+				}
+
+				every_country = {
+					limit = { is_in_faction_with = FRA }
+					add_to_tech_sharing_group = SWE_allies_tech_sharing_group
+				}
+
+				add_to_tech_sharing_group = SWE_allies_tech_sharing_group
+			}
+			else_if = {
+				limit = {
+					USA = { is_faction_leader = yes }
+				}
+
+				USA = { country_event = { id = generic.2 hours = 6 } }
+				USA = {
+					add_to_tech_sharing_group = SWE_allies_tech_sharing_group
+				}
+
+				every_country = {
+					limit = { is_in_faction_with = USA }
+					add_to_tech_sharing_group = SWE_allies_tech_sharing_group
+				}
+
+				add_to_tech_sharing_group = SWE_allies_tech_sharing_group
 			}
 
 		}
@@ -9806,6 +9763,10 @@ focus_tree = {
 		relative_position_id = SWE_the_aland_issue
 		cost = 10
 		available = {
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
 			FIN = {
 				is_in_faction = no
 				is_subject = no
@@ -9817,7 +9778,18 @@ focus_tree = {
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = "Swedish-Finnish Defense Agreement"
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				set_faction_name = "Swedish-Finnish Defense Agreement"
+			}
+			else_if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = "Swedish-Finnish Defense Agreement"
+			}
 			FIN = {
 				country_event = { id = generic.5 hours = 4 }
 			}
@@ -10058,31 +10030,50 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}	
 		}
 	                
 		search_filters = {}
 		bypass = {
-			hidden_trigger = {
-				OR = {
-					is_subject = yes
-                    AND = {
-                        is_ai = yes
-                        is_historical_focus_on = yes
-                    }
-                    is_in_faction = yes
-                }
+			OR = {
+				is_subject = yes
+				is_in_faction = yes
 			}
 		}
 		completion_reward = {
 			create_faction = scandinavian_defense_union
-			NOR = {	SWE_scandinavian_defense_union_invite = yes	}
-			DEN = {	SWE_scandinavian_defense_union_invite = yes	}
-			FIN = {	SWE_scandinavian_defense_union_invite = yes	}
-			ICE = {	SWE_scandinavian_defense_union_invite = yes	}
+			if = {
+				limit = {
+					NOR = {
+						is_in_faction = no
+					}
+				}
+				NOR = {	SWE_scandinavian_defense_union_invite = yes	}
+			}
+			if = {
+				limit = {
+					DEN = {
+						is_in_faction = no
+					}
+				}
+				DEN = {	SWE_scandinavian_defense_union_invite = yes	}
+			}
+			if = {
+				limit = {
+					FIN = {
+						is_in_faction = no
+					}
+				}
+				FIN = {	SWE_scandinavian_defense_union_invite = yes	}
+			}
+			if = {
+				limit = {
+					ICE = {
+						is_in_faction = no
+					}
+				}
+				ICE = {	SWE_scandinavian_defense_union_invite = yes	}
+			}
+			
 		}
 	}
 	focus = {
@@ -10096,47 +10087,301 @@ focus_tree = {
 		cost = 10
 		bypass = {
 			OR = {
-				ROOT = {
-					is_in_faction = yes
-				}
-				hidden_trigger = {
-					is_ai = yes
-					is_historical_focus_on = yes
-				}
+				is_in_faction = yes
 				is_subject = yes
 			}
 		}
 		available = {
-			any_other_country = {
-				is_major = yes
-				is_faction_leader = yes
-				has_government = ROOT
-				NOT = { is_in_faction_with = ROOT }
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = SWE_nils_flyg
+					}
+				}
+				OR = {
+					GER = {
+						is_major = yes
+						is_faction_leader = yes
+					}
+					any_other_country = {
+						is_major = yes
+						is_faction_leader = yes
+						has_government = ROOT
+						NOT = {
+							original_tag = SOV
+						}
+						capital_scope = {
+							OR = {
+								is_on_continent = europe
+								is_on_continent = north_america
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = SWE_karl_kilbom
+					}
+				}
+				OR = {
+					ENG = {
+						is_major = yes
+						is_faction_leader = yes
+					}
+					FRA = {
+						is_major = yes
+						is_faction_leader = yes
+					}
+					USA = {
+						is_major = yes
+						is_faction_leader = yes
+					}
+					any_other_country = {
+						is_major = yes
+						is_faction_leader = yes
+						has_government = ROOT
+						NOT = {
+							original_tag = SOV
+						}
+						capital_scope = {
+							OR = {
+								is_on_continent = europe
+								is_on_continent = north_america
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = SWE_sven_linderot
+					}
+				}
+				OR = {
+					SOV = {
+						has_government = ROOT
+						is_major = yes
+						is_faction_leader = yes
+					}
+					any_other_country = {
+						is_major = yes
+						is_faction_leader = yes
+						has_government = ROOT
+						capital_scope = {
+							OR = {
+								is_on_continent = europe
+								is_on_continent = north_america
+							}
+						}
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+			}
+			else = {
+				any_other_country = {
+					is_major = yes
+					is_faction_leader = yes
+					has_government = ROOT
+					capital_scope = {
+						OR = {
+							is_on_continent = europe
+							is_on_continent = north_america
+						}
+					}
+					NOT = { is_in_faction_with = ROOT }
+				}
 			}
 		}
 
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}	
+			factor = 10	
 		}
 	                
 		search_filters = {}
 
 		completion_reward = {
-			every_other_country = {
+			if = {
 				limit = {
-					is_major = yes
-					is_faction_leader = yes
-					has_government = ROOT
+					has_government = democratic
 				}
-				country_event = {
-					id =  AAT_Sweden.23
-					hours = 1
+				every_other_country = {
+					limit = {
+						is_major = yes
+						is_faction_leader = yes
+						has_government = ROOT
+					}
+					country_event = {
+						id =  AAT_Sweden.23
+						hours = 1
+					}
 				}
 			}
+			else = {
+				if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes 
+							character = SWE_nils_flyg
+						}
+					}
+					if = {
+						limit = {
+							GER = {
+								is_major = yes
+								is_faction_leader = yes
+							}
+						}
+						GER = {
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+					else = {
+						every_other_country = {
+							limit = {
+								is_major = yes
+								is_faction_leader = yes
+								has_government = ROOT
+								NOT = {
+									original_tag = SOV
+								}
+							}
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes 
+							character = SWE_karl_kilbom
+						}
+					}
+					if = {
+						limit = {
+							ENG = {
+								is_major = yes
+								is_faction_leader = yes
+							}
+						}
+						ENG = {
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+					else_if = { 
+						limit = {
+							FRA = {
+								is_major = yes
+								is_faction_leader = yes
+							}
+						}
+						FRA = {
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+					else_if = { 
+						limit = {
+							USA = {
+								is_major = yes
+								is_faction_leader = yes
+							}
+						}
+						USA = {
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+					else = {
+						every_other_country = {
+							limit = {
+								is_major = yes
+								is_faction_leader = yes
+								has_government = ROOT
+								NOT = {
+									original_tag = SOV
+								}
+							}
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes 
+							character = SWE_sven_linderot
+						}
+					}
+					if = {
+						limit = {
+							SOV = {
+								is_major = yes
+								is_faction_leader = yes
+							}
+						}
+						SOV = {
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+					else = {
+						every_other_country = {
+							limit = {
+								is_major = yes
+								is_faction_leader = yes
+								has_government = ROOT
+							}
+							country_event = {
+								id =  AAT_Sweden.23
+								hours = 1
+							}
+						}
+					}
+				}
+				else = { #should never happen but just in case
+					every_other_country = {
+						limit = {
+							is_major = yes
+							is_faction_leader = yes
+							has_government = ROOT
+							NOT = {
+								original_tag = SOV
+							}
+						}
+						country_event = {
+							id =  AAT_Sweden.23
+							hours = 1
+						}
+					}
+				}
+			}
+			
 		}
 	}
 	focus = {
@@ -10658,33 +10903,104 @@ focus_tree = {
 			is_subject = no
 		}
   		bypass = {
-			hidden_trigger = {
-				is_ai = yes
-				is_historical_focus_on = yes
-			}
+			
 		}          
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}	
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
-
-		completion_reward = {
+ 
+		completion_reward = { #changed focus to only target the three majors ENG GER and SOV, too messy otherwise
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				every_other_country = {
+					limit = {
+						is_major = yes
+						is_faction_leader = yes
+						NOT = { has_government = SWE }
+						NOT = { is_in_faction_with = SWE }
+						OR = {
+							original_tag = SOV
+							original_tag = GER
+							original_tag = ENG
+						}
+					}
+					SWE = {
+						create_wargoal = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_country_leader = { #sven targets non-stalinists and non-communists
+							ruling_only = yes 
+							character = SWE_sven_linderot
+						}
+					}
+					every_other_country = {
+						limit = {
+							is_major = yes
+							is_faction_leader = yes
+							OR = {
+								NOT = { has_government = SWE }
+								NOT = { has_country_leader_ideology = stalinism }
+							}
+							NOT = { is_in_faction_with = SWE }
+							OR = {
+								original_tag = SOV
+								original_tag = GER
+								original_tag = ENG
+							}
+						}
+						SWE = {
+							create_wargoal = {
+								target = PREV
+								type = puppet_wargoal_focus
+							}
+						}
+					}
+				}
+				else = {
+					every_other_country = { #all other leaders target stalinists and non-communists
+						limit = {
+							is_major = yes
+							is_faction_leader = yes
+							OR = {
+								NOT = { has_government = SWE }
+								has_country_leader_ideology = stalinism
+								original_tag = SOV
+							}
+							NOT = { is_in_faction_with = SWE }
+							OR = {
+								original_tag = SOV
+								original_tag = GER
+								original_tag = ENG
+							}
+						}
+						SWE = {
+							create_wargoal = {
+								target = PREV
+								type = puppet_wargoal_focus
+							}
+						}
+					}
+				}
+			}
 			every_other_country = {
 				limit = {
 					is_major = yes
 					is_faction_leader = yes
 					NOT = { has_government = SWE }
 					NOT = { is_in_faction_with = SWE }
-				}
-				SWE = {
-					create_wargoal = {
-						target = PREV
-						type = puppet_wargoal_focus
+					capital_scope = {
+						is_on_continent = europe
 					}
 				}
 			}

@@ -10219,7 +10219,7 @@ country_event = { #Denmark interferce in our politics; they try to change our id
 		ai_chance = {
 			base = 0 #Otherwise we pay for nothing
 			modifier = {
-				add = 5
+				add = 3
 				strength_ratio = {
 				    tag = FROM
 				    ratio > 1
@@ -10233,7 +10233,7 @@ country_event = { #Denmark interferce in our politics; they try to change our id
 				}
 			}
 			modifier = {
-				add = 10
+				add = 1
 				AND = {
 					FROM = {
 						is_ai = no

@@ -4966,7 +4966,7 @@
 			democratic > 0.70
 			is_power_balance_in_range = {
 				id = SWI_centralization_bop
-				range < SWI_centralization_bop_balanced
+				range < SWI_centralization_bop_very_cantons
 			}
 		}
 		

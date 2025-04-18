@@ -164,7 +164,15 @@ SWE_avoid_axis_or_comintern = {
 	}
 	
 	enable = {
-		SWE_is_historical_ai = yes
+		OR = {
+			SWE_is_historical_ai = yes
+			has_country_flag = SWE_AI_RANDOM_SDP_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SDP_ASSERTIVE
+			}
+		}
+		
 	}
 	
 	abort = {
@@ -198,8 +206,11 @@ SWE_avoid_allies = {
 	}
 	
 	enable = {
-		SWE_is_historical_ai = yes
+		has_government = democratic
 		has_war = no
+		NOT = {
+			has_completed_focus = SWE_the_threat_of_the_iron_curtain
+		}
 	}
 	
 	abort_when_not_enabled = yes
@@ -301,7 +312,14 @@ make_SWE_unpopular = {
 	}
 	
 	enable = {
-		SWE_is_historical_ai = yes
+		OR = {
+			SWE_is_historical_ai = yes
+			has_country_flag = SWE_AI_RANDOM_SDP_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SDP_ASSERTIVE
+			}
+		}
 		SWE = {
 			NOT = { has_government = fascism }
 			NOT = { has_government = neutrality }
@@ -516,7 +534,16 @@ SWE_dont_guarantee_people_if_historical = {
 	enable = {
 		OR = {
 			SWE_is_historical_ai = yes
+			has_country_flag = SWE_AI_RANDOM_SDP_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SDP_ASSERTIVE
+			}
 			has_idea = neutrality_idea
+			AND = {
+				is_faction_leader = no
+				is_major = yes
+			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -649,6 +676,7 @@ SWE_nils_flyg_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin
 	}
 	enable = {
 		country_exists = SWE
+		has_government = fascism
 		SWE = {
 			has_country_leader = {
 				ruling_only = yes 
@@ -671,20 +699,20 @@ SWE_nils_flyg_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin
 
 	ai_strategy = {
 		type = avoid_starting_wars
-		id = "SWE"
+		id = SWE
 		value = 200
 	}
 
 	ai_strategy = {
 		type = befriend
-		id = "SWE"
-		value = 200
+		id = SWE
+		value = 10
 	}
 
-	ai_strategy = {
+	ai_strategy = { #NHMMAP was 1000, but the swedish focus event now does this, not here.
 		type = alliance
 		id = "SWE"
-		value = 1000
+		value = 10
 	}
 }
 
@@ -697,6 +725,7 @@ SWE_kilbom_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin_or
 		}
 	}
 	enable = {
+		has_government = democratic
 		country_exists = SWE
 		SWE = {
 			has_country_leader = {
@@ -726,14 +755,14 @@ SWE_kilbom_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin_or
 
 	ai_strategy = {
 		type = befriend
-		id = "SWE"
-		value = 200
+		id = SWE
+		value = 10
 	}
 
-	ai_strategy = {
+	ai_strategy = { #NHMMAP was 1000, but the swedish focus event now does this, not here.
 		type = alliance
 		id = "SWE"
-		value = 1000
+		value = 10
 	}
 }
 

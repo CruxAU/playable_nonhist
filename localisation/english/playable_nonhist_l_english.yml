@@ -573,3 +573,5 @@
  decision_cost_fasc_deploy_ie_cp_NHMMAP:0 "£infantry_equipment_text_icon  §Y250§! £command_power  §Y10§!"
  decision_cost_fasc_deploy_ie_cp_NHMMAP_blocked:0 "£infantry_equipment_text_icon  §R250§! £command_power  §R10§!"
  NOR_join_the_axis:0 "Join the Axis Powers"
+ SWE_volunteers_NHMMAP: "Svenska frivilligkåren"
+ SWE_volunteers_upgraded_NHMMAP: "$SWE_volunteers$"

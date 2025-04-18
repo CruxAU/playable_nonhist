@@ -2595,7 +2595,10 @@ NOR_fascist_preparation_decisions_category = {
 				factor = 0.5
 				has_completed_focus = NOR_nasjonal_samling
 			}
-
+			modifier = { #opposition capital
+				factor = 0.5
+				FROM = { state = 142 }
+			}
 			modifier = {
 				add = 20
 				OR = {
@@ -2661,6 +2664,14 @@ NOR_fascist_preparation_decisions_category = {
 			modifier = {
 				add = 2
 				NOR_is_axis_ai = yes
+			}
+			modifier = {
+				add = 100
+				NOR_is_axis_ai = yes
+				GER = {
+					has_government = fascism
+					has_completed_focus = GER_prioritize_economic_growth
+				}
 			}
 		}
 

@@ -2559,7 +2559,7 @@ GER_spain_scw_support_la_resistance = {
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SPA
-		value = 100
+		value = 200
 	}
 }
 
@@ -4232,50 +4232,51 @@ GER_TEMP_avoid_sweden = {
 	}
 }
 
-GER_SWE_nils_flyg_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin_so_we_like_him = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		country_exists = SWE
-		SWE = {
-			has_country_leader = {
-				ruling_only = yes 
-				character = SWE_nils_flyg 
-			}
-			has_government = communism
-		}
-	}
-	abort = {
-		SWE = {
-			NOT = {
-				has_government = communism
-				has_country_leader = {
-					ruling_only = yes 
-					character = SWE_nils_flyg 
-				}
-			}
-		}
-	}	
+# GER_SWE_nils_flyg_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin_so_we_like_him = {
+# 	allowed = {
+# 		original_tag = GER
+# 	}
+# 	enable = {
+# 		country_exists = SWE
+# 		SWE = {
+# 			has_country_leader = {
+# 				ruling_only = yes 
+# 				character = SWE_nils_flyg 
+# 			}
+# 			has_government = communism
+# 		}
+# 	}
+# 	abort = {
+# 		SWE = {
+# 			NOT = {
+# 				has_government = communism
+# 				has_country_leader = {
+# 					ruling_only = yes 
+# 					character = SWE_nils_flyg 
+# 				}
+# 			}
+# 		}
+# 	}	
 
-	ai_strategy = {
-		type = avoid_starting_wars
-		id = SWE
-		value = 200
-	}
+# 	ai_strategy = {
+# 		type = avoid_starting_wars
+# 		id = SWE
+# 		value = 200
+# 	}
 
-	ai_strategy = {
-		type = befriend
-		id = SWE
-		value = 200
-	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = SWE
+# 		value = 200
+# 	}
 
-	ai_strategy = {
-		type = alliance
-		id = SWE
-		value = 1000
-	}
-}
+# 	ai_strategy = { #NHMMAP was 1000, but the swedish focus now does this, not here.
+# 		type = alliance
+# 		id = SWE
+# 		value = 100
+# 	}
+# }
+#there are two copies of this, not needed
 
 GER_sweden_was_a_puppet_and_broke_free_so_now_we_are_angry = {
 	allowed = {

@@ -1309,6 +1309,24 @@ country_event = {
 		name = poland.17.a
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					is_historical_focus_on = yes
+					has_country_flag = POL_AI_RANDOM_LEFT_ALLIES
+					has_game_rule = {
+						rule = POL_ai_behavior
+						option = LEFT_ALLIES
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = NONHIST_ai_behavior
+					option = DEMOCRATIC_ONLY
+				}
+			}
 		}
 		set_cosmetic_tag = POL_SANATION
 		set_politics = {
@@ -1330,10 +1348,17 @@ country_event = {
 	option = {
 		name = poland.17.b
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = NONHIST_ai_behavior
+					option = AUTHORITARIAN_ONLY
+				}
 			}
 		}
 		effect_tooltip = {
@@ -1402,6 +1427,13 @@ country_event = {
 		name = poland.18.a
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = NONHIST_ai_behavior
+					option = FASCIST_ONLY
+				}
+			}
 		}
 		set_cosmetic_tag = POL_SANATION
 		set_politics = {
@@ -1426,7 +1458,21 @@ country_event = {
 			factor = 100
 			modifier = {
 				factor = 0
-				is_historical_focus_on = yes
+				OR = {
+					is_historical_focus_on = yes
+					has_country_flag = POL_AI_RANDOM_RIGHT_ALLIES
+					has_game_rule = {
+						rule = POL_ai_behavior
+						option = RIGHT_ALLIES
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = NONHIST_ai_behavior
+					option = AUTHORITARIAN_ONLY
+				}
 			}
 		}
 		effect_tooltip = {

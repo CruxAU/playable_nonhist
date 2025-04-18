@@ -6171,7 +6171,11 @@ focus_tree = {
 						}
 					}
 					GER = {
-						has_completed_focus = GER_revive_the_kaiserreich 
+						OR = {
+							has_completed_focus = GER_revive_the_kaiserreich 
+							has_completed_focus = GER_revive_the_kaiserreich_ww
+						}
+						
 						is_faction_leader = yes
 					}
 				}

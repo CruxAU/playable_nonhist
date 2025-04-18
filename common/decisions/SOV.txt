@@ -14980,9 +14980,13 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_opposition_support_low_increase_effect = yes
 			SOV_add_armed_forces_support_state = yes
 		}
+		fixed_random_seed = no
 		ai_will_do = {
 			base = 200
-
+			modifier = {
+				factor = 0.7
+				SOV_is_left_opposition = yes
+			}
 		}
 	}
 	# Odessa - only  available for LO
@@ -15053,6 +15057,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_opposition_support_medium_increase_effect = yes
 			SOV_add_armed_forces_support_state = yes
 		}
+		fixed_random_seed = no
 		ai_will_do = {
 			base = 200
 		}
@@ -15126,6 +15131,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_opposition_support_low_increase_effect = yes
 			SOV_add_armed_forces_support_state = yes
 		}
+		fixed_random_seed = no
 		ai_will_do = {
 			base = 200
 		}
@@ -15199,8 +15205,9 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_opposition_support_low_increase_effect = yes
 			SOV_add_armed_forces_support_state = yes
 		}
+		fixed_random_seed = no
 		ai_will_do = {
-			base = 200 #temp - leveled out, was 130, others were same as basegame ___ #NHMMAP lowered because generally shit supply
+			base = 150 #temp - leveled out, was 130, others were same as basegame ___ #NHMMAP lowered because generally shit supply
 		}
 	}
 
@@ -15213,7 +15220,7 @@ SOV_soviet_civil_war_dec_cat = {
 				SOV_is_right_opposition = yes
 			}
 		}
-
+		
 		targets = {
 			state = 651  # Ufa
 		}
@@ -15272,6 +15279,7 @@ SOV_soviet_civil_war_dec_cat = {
 			SOV_opposition_support_low_increase_effect = yes
 			SOV_add_armed_forces_support_state = yes
 		}
+		fixed_random_seed = no
 		ai_will_do = {
 			base = 200
 		}

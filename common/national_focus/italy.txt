@@ -15831,6 +15831,7 @@ focus_tree = {
 					GER = { has_government = ROOT }
 				}
 				GER = { has_completed_focus = GER_align_italy }
+				GER = { has_completed_focus = GER_form_rome_berlin_axis }
 			}
 			
 			is_in_faction = no
@@ -15858,6 +15859,47 @@ focus_tree = {
 
 			custom_effect_tooltip = remove_political_advisor
 			show_ideas_tooltip = ITA_guido_jung
+			if = {
+				limit = {
+					ITA = {
+						NOT = {
+							has_government = GER
+						}
+					}
+				}
+				if = {
+					limit = { GER = { has_government = fascism } }
+					add_timed_idea = { idea = fascist_influence days = 365 }
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.2
+					}
+				}
+				if = {
+					limit = { GER = { has_government = democratic } }
+					add_timed_idea = { idea = democratic_influence days = 365 }
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.2
+					}
+				}
+				if = {
+					limit = { GER = { has_government = communism } }
+					add_timed_idea = { idea = communist_influence days = 365 }
+					add_popularity = {
+						ideology = communism
+						popularity = 0.2
+					}
+				}
+				if = {
+					limit = { GER = { has_government = neutrality } }
+					add_timed_idea = { idea = neutrality_influence days = 365 }
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.2
+					}
+				}
+			}
 		}
 	}
 

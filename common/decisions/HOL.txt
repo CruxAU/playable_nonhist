@@ -1113,28 +1113,7 @@ HOL_gateway_to_europe_eng_category = {
 
 		ai_will_do = {
 			base = 0.03
-			modifier = {
-				factor = 0
-				AND = {
-					date > 1938.08.01
-					date < 1939.03.01
-					is_historical_focus_on = yes
-					has_game_rule = {
-						rule = HOL_ai_behavior 
-						option = DEFAULT
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = DEFAULT
-					}
-					has_game_rule = {
-						rule = GER_ai_behavior 
-						option = DEFAULT
-					}
-					GER = { is_ai = yes }
-					HOL = { is_ai = yes }
-				}
-			}
+			
 			modifier = {
 				factor = 10
 				date > 1939.08.01
@@ -1378,7 +1357,7 @@ HOL_gateway_to_europe_ger_category = {
 				factor = 0
 				AND = {
 					date > 1938.08.01
-					date < 1939.08.01
+					date < 1939.04.01
 					is_historical_focus_on = yes
 					has_game_rule = {
 						rule = HOL_ai_behavior 

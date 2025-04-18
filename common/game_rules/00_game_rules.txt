@@ -2458,6 +2458,13 @@ HUN_ai_behavior = {
 		desc = "RULE_OPTION_AUSTRIA_HUNGARY_HUN_AI_DESC"
 		allow_achievements = yes
 	}
+	option = { #DO NOT SHOW THIS OPTION FOR WUW DLC
+		exclude_dlc = "Gotterdammerung"
+		name = AUSTRIA_HUNGARY_AGGRESSIVE
+		text = "RULE_OPTION_AUSTRIA_HUNGARY_CP_AGGR"
+		desc = "RULE_OPTION_AUSTRIA_HUNGARY_CP_AGGR_HUN_AI_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		required_dlc = "Gotterdammerung"
 		name = AUSTRIA_HUNGARY_CP_AGGR
@@ -5063,7 +5070,7 @@ ETH_ai_host_behavior = {
 	}
 	option = {
 		name = SWE_ALLIES
-		text = "RULE_OPTION_SWE_ALLIES"
+		text = "RULE_OPTION_SWE_ALLIES_ETH"
 		desc = "RULE_SWE_ALLIES_ETH_AI_DESC"
 		allow_achievements = yes
 	}
@@ -5302,60 +5309,286 @@ SWE_ai_behavior = {
 	}
 	option = {
 		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
+		text = "RULE_OPTION_HISTORICAL_SDP"
 		desc = "RULE_HISTORICAL_SWE_AI_DESC"
 		allow_achievements = yes
 	}
-
+	option = {
+		name = SDP_ASSERTIVE
+		text = "RULE_OPTION_SDP_ASSERTIVE"
+		desc = "RULE_SDP_ASSERTIVE_SWE_AI_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		name = SWE_DEMOCRATIC_DEM_ALT
 		text = "RULE_OPTION_SWE_DEM_ALT"
 		desc = "RULE_OPTION_SWE_DEM_ALT_DESC"
 		allow_achievements = yes
 	}
-
+	option = {
+		name = SWE_DEMOCRATIC_ALLIES
+		text = "RULE_OPTION_SWE_ALLIES"
+		desc = "RULE_OPTION_SWE_ALLIES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_DEMOCRATIC_ALLIES_EXP
+		text = "RULE_OPTION_SWE_ALLIES_EXP"
+		desc = "RULE_OPTION_SWE_ALLIES_EXP_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		name = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 		text = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL"
 		desc = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_DESC"
 		allow_achievements = yes
 	}
-
 	option = {
-		name = SWE_COMMUNISM
-		text = "RULE_OPTION_SWE_COMMUNISM"
-		desc = "RULE_OPTION_SWE_COMMUNISM_DESC"
+		name = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_EXP
+		text = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_EXP"
+		desc = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_EXP_DESC"
 		allow_achievements = yes
 	}
-
+	option = {
+		name = SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION
+		text = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION"
+		desc = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION_EXP
+		text = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION_EXP"
+		desc = "RULE_OPTION_SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_FLYG
+		text = "RULE_OPTION_SWE_COMMUNIST_FLYG"
+		desc = "RULE_OPTION_SWE_COMMUNIST_FLYG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_FLYG_AXIS
+		text = "RULE_OPTION_SWE_COMMUNIST_FLYG_AXIS"
+		desc = "RULE_OPTION_SWE_COMMUNIST_FLYG_AXIS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_FLYG_AXIS_AGGR
+		text = "RULE_OPTION_SWE_COMMUNIST_FLYG_AXIS_AGGR"
+		desc = "RULE_OPTION_SWE_COMMUNIST_FLYG_AXIS_AGGR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_FLYG_NORDIC
+		text = "RULE_OPTION_SWE_COMMUNIST_FLYG_NORDIC"
+		desc = "RULE_OPTION_SWE_COMMUNIST_FLYG_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_FLYG_NORDIC_AGGR
+		text = "RULE_OPTION_SWE_COMMUNIST_FLYG_NORDIC_AGGR"
+		desc = "RULE_OPTION_SWE_COMMUNIST_FLYG_NORDIC_AGGR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_KILBOM
+		text = "RULE_OPTION_SWE_COMMUNIST_KILBOM"
+		desc = "RULE_OPTION_SWE_COMMUNIST_KILBOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_KILBOM_ALLIES
+		text = "RULE_OPTION_SWE_COMMUNIST_KILBOM_ALLIES"
+		desc = "RULE_OPTION_SWE_COMMUNIST_KILBOM_ALLIES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_KILBOM_ALLIES_AGGR
+		text = "RULE_OPTION_SWE_COMMUNIST_KILBOM_ALLIES_AGGR"
+		desc = "RULE_OPTION_SWE_COMMUNIST_KILBOM_ALLIES_AGGR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_LINDEROT
+		text = "RULE_OPTION_SWE_COMMUNIST_LINDEROT"
+		desc = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_LINDEROT_COMINTERN
+		text = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_COMINTERN"
+		desc = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_COMINTERN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_LINDEROT_COMINTERN_AGGR
+		text = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_COMINTERN_AGGR"
+		desc = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_COMINTERN_AGGR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_LINDEROT_NORDIC
+		text = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_NORDIC"
+		desc = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_COMMUNIST_LINDEROT_NORDIC_AGGR
+		text = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_NORDIC_AGGR"
+		desc = "RULE_OPTION_SWE_COMMUNIST_LINDEROT_NORDIC_AGGR_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		name = SWE_FASCIST_INDEPENDENT
 		text = "RULE_OPTION_SWE_FASCIST_INDEPENDENT"
 		desc = "RULE_OPTION_SWE_FASCIST_INDEPENDENT_DESC"
 		allow_achievements = yes
 	}
-
+	option = {
+		name = SWE_FASCIST_NEU_ASSERTIVE
+		text = "RULE_OPTION_SWE_FASCIST_NEU_ASSERTIVE"
+		desc = "RULE_OPTION_SWE_FASCIST_NEU_ASSERTIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_NEU_EXP
+		text = "RULE_OPTION_SWE_FASCIST_NEU_EXP"
+		desc = "RULE_OPTION_SWE_FASCIST_NEU_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_NEU_ANTI_SOV
+		text = "RULE_OPTION_SWE_FASCIST_NEU_ANTI_SOV"
+		desc = "RULE_OPTION_SWE_FASCIST_NEU_ANTI_SOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_ALLIES
+		text = "RULE_OPTION_SWE_FASCIST_ALLIES"
+		desc = "RULE_OPTION_SWE_FASCIST_ALLIES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_ALLIES_ASSERTIVE
+		text = "RULE_OPTION_SWE_FASCIST_ALLIES_ASSERTIVE"
+		desc = "RULE_OPTION_SWE_FASCIST_ALLIES_ASSERTIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_ALLIES_EXP
+		text = "RULE_OPTION_SWE_FASCIST_ALLIES_EXP"
+		desc = "RULE_OPTION_SWE_FASCIST_ALLIES_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_ALLIES_ANTI_SOV
+		text = "RULE_OPTION_SWE_FASCIST_ALLIES_ANTI_SOV"
+		desc = "RULE_OPTION_SWE_FASCIST_ALLIES_ANTI_SOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_FIN
+		text = "RULE_OPTION_SWE_FASCIST_FIN"
+		desc = "RULE_OPTION_SWE_FASCIST_FIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_FIN_ASSERTIVE
+		text = "RULE_OPTION_SWE_FASCIST_FIN_ASSERTIVE"
+		desc = "RULE_OPTION_SWE_FASCIST_FIN_ASSERTIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_FASCIST_FIN_ANTI_SOV
+		text = "RULE_OPTION_SWE_FASCIST_FIN_ANTI_SOV"
+		desc = "RULE_OPTION_SWE_FASCIST_FIN_ANTI_SOV_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		name = SWE_FASCIST_PUPPET
 		text = "RULE_OPTION_SWE_FASCIST_PUPPET"
 		desc = "RULE_OPTION_SWE_FASCIST_PUPPET_DESC"
 		allow_achievements = yes
 	}
-
+	option = {
+		name = SWE_FASCIST_PUPPET_NORDLAND
+		text = "RULE_OPTION_SWE_FASCIST_PUPPET_NORDLAND"
+		desc = "RULE_OPTION_SWE_FASCIST_PUPPET_NORDLAND_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		name = SWE_FASCIST_PUPPET_BACKSTABBER
 		text = "RULE_OPTION_SWE_FASCIST_PUPPET_BACKSTABBER"
 		desc = "RULE_OPTION_SWE_FASCIST_PUPPET_BACKSTABBER_DESC"
 		allow_achievements = yes
 	}
-
 	option = {
 		name = SWE_UNALIGNED
 		text = "RULE_OPTION_SWE_UNALIGNED"
 		desc = "RULE_OPTION_SWE_UNALIGNED_DESC"
 		allow_achievements = yes
 	}
-
+	option = {
+		name = SWE_MONARCHIST_NEU_ASSERTIVE
+		text = "RULE_OPTION_SWE_MONARCHIST_NEU_ASSERTIVE"
+		desc = "RULE_OPTION_SWE_MONARCHIST_NEU_ASSERTIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_NEU_EXP
+		text = "RULE_OPTION_SWE_MONARCHIST_NEU_EXP"
+		desc = "RULE_OPTION_SWE_MONARCHIST_NEU_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_NEU_ANTI_SOV
+		text = "RULE_OPTION_SWE_MONARCHIST_NEU_ANTI_SOV"
+		desc = "RULE_OPTION_SWE_MONARCHIST_NEU_ANTI_SOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_ALLIES
+		text = "RULE_OPTION_SWE_MONARCHIST_ALLIES"
+		desc = "RULE_OPTION_SWE_MONARCHIST_ALLIES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_ALLIES_ASSERTIVE
+		text = "RULE_OPTION_SWE_MONARCHIST_ALLIES_ASSERTIVE"
+		desc = "RULE_OPTION_SWE_MONARCHIST_ALLIES_ASSERTIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_ALLIES_EXP
+		text = "RULE_OPTION_SWE_MONARCHIST_ALLIES_EXP"
+		desc = "RULE_OPTION_SWE_MONARCHIST_ALLIES_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_ALLIES_ANTI_SOV
+		text = "RULE_OPTION_SWE_MONARCHIST_ALLIES_ANTI_SOV"
+		desc = "RULE_OPTION_SWE_MONARCHIST_ALLIES_ANTI_SOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_FIN
+		text = "RULE_OPTION_SWE_MONARCHIST_FIN"
+		desc = "RULE_OPTION_SWE_MONARCHIST_FIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_FIN_ASSERTIVE
+		text = "RULE_OPTION_SWE_MONARCHIST_FIN_ASSERTIVE"
+		desc = "RULE_OPTION_SWE_MONARCHIST_FIN_ASSERTIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SWE_MONARCHIST_FIN_ANTI_SOV
+		text = "RULE_OPTION_SWE_MONARCHIST_FIN_ANTI_SOV"
+		desc = "RULE_OPTION_SWE_MONARCHIST_FIN_ANTI_SOV_DESC"
+		allow_achievements = yes
+	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
@@ -5375,7 +5608,7 @@ NOR_ai_behavior = {
 	}
 	option = {
 		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
+		text = "RULE_OPTION_HISTORICAL_NORWAY"
 		desc = "RULE_HISTORICAL_NOR_AI_DESC"
 		allow_achievements = yes
 	}
@@ -5391,6 +5624,24 @@ NOR_ai_behavior = {
 		desc = "RULE_HISTORICAL_FASCIST_RK_NOR_AI_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = NOR_FASCIST
+		text = RULE_OPTION_NOR_FASCIST
+		desc = RULE_OPTION_NOR_FASCIST_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_FASCIST_V_RU
+		text = RULE_OPTION_NOR_FASCIST_V_RU
+		desc = RULE_OPTION_NOR_FASCIST_V_RU_AI_DESC
+		allow_achievements = yes		
+	} 
+	option = {
+		name = NOR_FASCIST_V_UK
+		text = RULE_OPTION_NOR_FASCIST_V_UK
+		desc = RULE_OPTION_NOR_FASCIST_V_UK_AI_DESC
+		allow_achievements = yes		
+	} 
 	option = {
 		name = NOR_FASCIST_AXIS
 		text = RULE_OPTION_NOR_FASCIST_AXIS
@@ -5422,24 +5673,6 @@ NOR_ai_behavior = {
 		allow_achievements = yes		
 	} 
 	option = {
-		name = NOR_FASCIST
-		text = RULE_OPTION_NOR_FASCIST
-		desc = RULE_OPTION_NOR_FASCIST_AI_DESC
-		allow_achievements = yes		
-	} 
-	option = {
-		name = NOR_FASCIST_V_RU
-		text = RULE_OPTION_NOR_FASCIST_V_RU
-		desc = RULE_OPTION_NOR_FASCIST_V_RU_AI_DESC
-		allow_achievements = yes		
-	} 
-	option = {
-		name = NOR_FASCIST_V_UK
-		text = RULE_OPTION_NOR_FASCIST_V_UK
-		desc = RULE_OPTION_NOR_FASCIST_V_UK_AI_DESC
-		allow_achievements = yes		
-	} 
-	option = {
 		name = NOR_FASCIST_PAN_GERMANIC
 		text = RULE_OPTION_NOR_FASCIST_PAN_GERMANIC
 		desc = RULE_OPTION_NOR_FASCIST_PAN_GERMANIC_AI_DESC
@@ -5459,7 +5692,7 @@ NOR_ai_behavior = {
 	}
 	option = {
 		name = DEMOCRATIC_ALT
-		text = "RULE_OPTION_DEMOCRATIC_ALT"
+		text = "RULE_OPTION_DEMOCRATIC_ALT_NOR"
 		desc = "RULE_DEMOCRATIC_ALT_NOR_AI_DESC"
 		allow_achievements = yes
 	}
@@ -5582,28 +5815,163 @@ FIN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = HISTORICAL_ALTERNATE
-		text = "RULE_OPTION_HISTORICAL_ALTERNATE"
-		desc = "RULE_HISTORICAL_ALTERNATE_FIN_AI_DESC"
+		name = KOKOOMUS_ALTERNATE
+		text = "RULE_OPTION_KOKOOMUS_ALTERNATE"
+		desc = "RULE_KOKOOMUS_ALTERNATE_FIN_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = HISTORICAL_BALTIC
-		text = "RULE_OPTION_HISTORICAL_BALTIC"
-		desc = "RULE_HISTORICAL_BALTIC_FIN_AI_DESC"
+		name = KOKOOMUS_BALTIC
+		text = "RULE_OPTION_KOKOOMUS_BALTIC"
+		desc = "RULE_KOKOOMUS_BALTIC_FIN_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = HISTORICAL_EXP
-		text = "RULE_OPTION_HISTORICAL_EXP"
-		desc = "RULE_HISTORICAL_EXP_FIN_AI_DESC"
+		name = KOKOOMUS_EXP
+		text = "RULE_OPTION_KOKOOMUS_EXP"
+		desc = "RULE_KOKOOMUS_EXP_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KOKOOMUS_ALLIES
+		text = "RULE_OPTION_KOKOOMUS_ALLIES"
+		desc = "RULE_KOKOOMUS_ALLIES_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KOKOOMUS_ALLIES_BALTIC
+		text = "RULE_OPTION_KOKOOMUS_ALLIES_BALTIC"
+		desc = "RULE_KOKOOMUS_ALLIES_BALTIC_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KOKOOMUS_ALLIES_EXP
+		text = "RULE_OPTION_KOKOOMUS_ALLIES_EXP"
+		desc = "RULE_KOKOOMUS_ALLIES_EXP_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KOKOOMUS_NORDIC
+		text = "RULE_OPTION_KOKOOMUS_NORDIC"
+		desc = "RULE_KOKOOMUS_NORDIC_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KOKOOMUS_NORDIC_BALTIC
+		text = "RULE_OPTION_KOKOOMUS_NORDIC_BALTIC"
+		desc = "RULE_KOKOOMUS_NORDIC_BALTIC_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KOKOOMUS_NORDIC_EXP
+		text = "RULE_OPTION_KOKOOMUS_NORDIC_EXP"
+		desc = "RULE_KOKOOMUS_NORDIC_EXP_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST
+		text = "RULE_OPTION_MONARCHIST"
+		desc = "RULE_MONARCHIST_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_EXP
+		text = "RULE_OPTION_MONARCHIST_EXP"
+		desc = "RULE_MONARCHIST_EXP_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_ALLIES
+		text = "RULE_OPTION_MONARCHIST_ALLIES"
+		desc = "RULE_MONARCHIST_ALLIES_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_ALLIES_EXP
+		text = "RULE_OPTION_MONARCHIST_ALLIES_EXP"
+		desc = "RULE_MONARCHIST_ALLIES_EXP_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_NORDIC
+		text = "RULE_OPTION_MONARCHIST_NORDIC"
+		desc = "RULE_MONARCHIST_NORDIC_FIN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHIST_NORDIC_EXP
+		text = "RULE_OPTION_MONARCHIST_NORDIC_EXP"
+		desc = "RULE_MONARCHIST_NORDIC_EXP_FIN_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Arms Against Tyranny"
-		name = FIN_FASCIST_PLAN
-		text = "RULE_OPTION_FIN_FASCIST_PLAN"
-		desc = "RULE_OPTION_FIN_FASCIST_PLAN_DESC"
+		name = FIN_FASCIST_AXIS
+		text = "RULE_OPTION_FIN_FASCIST_AXIS"
+		desc = "RULE_OPTION_FIN_FASCIST_AXIS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_AXIS_BALTIC
+		text = "RULE_OPTION_FIN_FASCIST_AXIS_BALTIC"
+		desc = "RULE_OPTION_FIN_FASCIST_AXIS_BALTIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_AXIS_EXP
+		text = "RULE_OPTION_FIN_FASCIST_AXIS_EXP"
+		desc = "RULE_OPTION_FIN_FASCIST_AXIS_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_NORDIC
+		text = "RULE_OPTION_FIN_FASCIST_NORDIC"
+		desc = "RULE_OPTION_FIN_FASCIST_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_NORDIC_EXP
+		text = "RULE_OPTION_FIN_FASCIST_NORDIC_EXP"
+		desc = "RULE_OPTION_FIN_FASCIST_NORDIC_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_COUP_AXIS
+		text = "RULE_OPTION_FIN_FASCIST_COUP_AXIS"
+		desc = "RULE_OPTION_FIN_FASCIST_COUP_AXIS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_COUP_AXIS_BALTIC
+		text = "RULE_OPTION_FIN_FASCIST_COUP_AXIS_BALTIC"
+		desc = "RULE_OPTION_FIN_FASCIST_COUP_AXIS_BALTIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_COUP_AXIS_EXP
+		text = "RULE_OPTION_FIN_FASCIST_COUP_AXIS_EXP"
+		desc = "RULE_OPTION_FIN_FASCIST_COUP_AXIS_EXP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_COUP_NORDIC
+		text = "RULE_OPTION_FIN_FASCIST_COUP_NORDIC"
+		desc = "RULE_OPTION_FIN_FASCIST_COUP_NORDIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Arms Against Tyranny"
+		name = FIN_FASCIST_COUP_NORDIC_EXP
+		text = "RULE_OPTION_FIN_FASCIST_COUP_NORDIC_EXP"
+		desc = "RULE_OPTION_FIN_FASCIST_COUP_NORDIC_EXP_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -6099,6 +6467,12 @@ DEN_ai_overlord_behavior = {
 		name = OVERLORD_COMPLY_SABOTAGE
 		text = "RULE_OPTION_OVERLORD_COMPLY_SABOTAGE"
 		desc = "RULE_OVERLORD_COMPLY_SABOTAGE_DEN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
 		allow_achievements = yes
 	}
 }

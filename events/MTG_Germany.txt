@@ -16,7 +16,9 @@ country_event = {
 			factor = 100
 			modifier = {
 				factor = 0
-				fascism < 0.2
+				NOT = {
+					has_completed_focus = HOL_cave_to_the_germans
+				}
 			}
 		}
 		hidden_effect = { set_country_flag = { flag = HOL_joined_germany_flag value = 1 days = 730 } }

@@ -10793,8 +10793,16 @@ focus_tree = {
 			is_subject = no
 			NOT = { has_war_with = ITA }
 			ITA = {
-				has_government = fascism
 				is_subject = no
+				is_in_faction = no
+				if = {
+					limit = {
+						AUS = {
+							exists = yes
+						}
+					}
+					NOT = { has_guaranteed = AUS }
+				}
 			}
 			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
 		}
@@ -10802,7 +10810,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 			modifier = {
-				factor = 0
+				factor = 0.1
 				OR = {
 					has_government = democratic
 					has_government = communism
@@ -11855,9 +11863,21 @@ focus_tree = {
 					NOT = { has_war_with = HOL }
 					HOL = { has_completed_focus = HOL_cave_to_the_germans } 
 					NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+					NOT = { HOL = { has_completed_focus = HOL_join_the_major_fascist_powers } }
 				}
 				HOL = {
 					country_event = { id = mtg_germany.1 hours = 6 }
+				}
+				if = {
+					limit = {
+						JAP = {
+							has_government = fascism
+						}
+						HOL = {
+							is_ai = yes
+						}
+					}
+					HOL = { country_event = { id = mtg_netherlands.11 days = 400 } }
 				}
 			}
 			if = {
@@ -25519,8 +25539,12 @@ focus_tree = {
 		available = {
 			OR = {
 				has_government = democratic
-				democratic > 0.4
+				democratic > 0.35
 			}
+		}
+
+		ai_will_do = {
+			base = 5
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -26475,7 +26499,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_government = neutrality
-			neutrality > 0.4
+			neutrality > 0.35
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }

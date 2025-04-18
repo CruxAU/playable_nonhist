@@ -772,5 +772,40 @@ ideas = {
 				fascism_acceptance = 100
 			}
 		}
+		SWE_volunteers_NHMMAP = { #for the puproses of getting SWE_volunteers_upgraded
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				FIN = {
+					any_enemy_country = {
+						is_major = yes
+					}
+				}
+			}
+			on_remove = {
+				add_ideas = SWE_volunteers_upgraded_NHMMAP
+			}
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+				air_volunteer_cap = 1
+				send_volunteer_size = 1
+				send_volunteers_tension = -0.8
+			}
+		}
+
+		SWE_volunteers_upgraded_NHMMAP = { #less divisions required & provided
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				send_volunteer_divisions_required = -0.6
+				air_volunteer_cap = 2
+				send_volunteer_size = 2
+				send_volunteers_tension = -0.8
+			}
+		}
 	}
 }

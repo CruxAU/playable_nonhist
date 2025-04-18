@@ -1014,12 +1014,6 @@ country_event = {
 
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 0
-				FROM = {
-					is_ai = no
-				}
-			}
 		}
 
 		FROM = {
@@ -2843,7 +2837,11 @@ country_event = {
 			}
 			every_other_country = {
 				limit = {
-					is_in_faction_with = ROOT
+					OR = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+					
 				}
 				white_peace = FROM
 			}
@@ -2863,7 +2861,10 @@ country_event = {
 				}
 				every_other_country = {
 					limit = {
-						is_in_faction_with = ROOT
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 						has_war_with = FROM
 					}
 					white_peace = FROM
@@ -3055,11 +3056,38 @@ country_event = {
 		white_peace = FROM
 		if = {
 			limit = {
+				FROM = {
+					OR = {
+						is_subject = yes
+						is_faction_leader = yes
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_subject_of = FROM
+						is_in_faction_with = FROM
+					}
+				}
+				white_peace = ROOT
+			}
+			FROM = {
+				OVERLORD = {
+					white_peace = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
 				is_faction_leader = yes
 			}
 			every_other_country = {
 				limit = {
-					is_in_faction_with = ROOT
+					OR = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
 				}
 				white_peace = FROM
 			}
@@ -3079,7 +3107,10 @@ country_event = {
 				}
 				every_other_country = {
 					limit = {
-						is_in_faction_with = ROOT
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 						has_war_with = FROM
 					}
 					white_peace = FROM
@@ -3124,6 +3155,19 @@ country_event = {
 				216 = { has_state_flag = FIN_demanded_by_finland_in_winter_war_flag }
 			}
 			transfer_state = 216
+		}
+		if = {
+			limit = {
+				KAR = {
+					is_subject_of = ROOT
+				}
+			}
+			ROOT = {
+				annex_country = {
+					target = KAR
+					transfer_troops = yes
+				}
+			}
 		}
 	}
 }
@@ -3699,6 +3743,19 @@ country_event = {
 			transfer_state = 722
 		}
 
+		#KARELIA
+		IF = {
+			limit = {
+				KAR = {
+					is_subject_of = FROM
+				}
+			}
+			annex_country = {
+				target = KAR
+				transfer_troops = no
+			}
+		}
+
 		FIN = {
 			add_ai_strategy = {
 				type = antagonize
@@ -4073,6 +4130,15 @@ country_event = {
 			base = 10
 			modifier = { #Don't if FIN is AI and this might screw a player in either side
 				factor = 0.01
+				NOT = {
+					has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALTERNATE
+				}
+				NOT = {
+					has_game_rule = {
+						rule = FIN_ai_behavior
+						option = KOKOOMUS_ALTERNATE
+					}
+				}
 				FROM = { is_ai = yes }
 				OR = {
 					FROM = {
@@ -4152,15 +4218,35 @@ country_event = {
 			}
 		}
 
+		IF = {
+			limit = {
+				KAR = {
+					exists = yes
+					is_subject_of = FIN
+				}
+			}
+			annex_country = {
+				target = KAR
+				transfer_troops = no
+			}
+		}
+
 		ROOT = {
 			add_to_faction = FROM
 		}
 
-		FROM = {
-			add_to_war = {
-			    targeted_alliance = ROOT
-			    enemy = GER
-			    hostility_reason = asked_to_join
+		if = {
+			limit = {
+				ROOT = {
+					has_war_with = GER
+				}
+			}
+			FROM = {
+				add_to_war = {
+					targeted_alliance = ROOT
+					enemy = GER
+					hostility_reason = asked_to_join
+				}
 			}
 		}
 
@@ -4283,6 +4369,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				FIN_is_historical_ai = yes
+				is_historical_focus_on = yes
 			}
 		}
 
@@ -4295,6 +4382,10 @@ country_event = {
 
 		ai_chance = {
 			base = 10
+			modifier = {
+				factor = 0
+				FIN_is_monarchist_ai = yes
+			}
 		}
 
 		FIN_kallio_becomes_country_leader = yes
@@ -4631,6 +4722,7 @@ country_event = {
 		puppet = KAR
 
 		hidden_effect = {
+			set_country_flag = NHMMAP_FIN_karelian_uprising_flag
 			KAR = {
 				if = {
 					limit = {
@@ -4816,7 +4908,7 @@ country_event = {
 			base = 2
 			modifier = {
 				factor = 0
-				has_completed_focus = FIN_finnish_march_of_conquest
+				FIN_is_expansionist_ai = yes
 			}
 		}
 

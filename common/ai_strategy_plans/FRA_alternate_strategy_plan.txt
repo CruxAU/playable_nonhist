@@ -6,7 +6,7 @@ FRA_alternate_plan_1 = {
 		original_tag = FRA
 	}
 	enable = {
-		OR = {
+		AND = {
 			ENG = { has_completed_focus = ENG_a_change_in_course }
 			GER = { has_completed_focus = GER_oppose_hitler }
 		}
@@ -14,12 +14,12 @@ FRA_alternate_plan_1 = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_rhineland }
+			GER = { has_completed_focus = GER_remilitarize_the_rhineland }
 			GER = { has_completed_focus = GER_reestablish_free_elections }
 			GER = { has_completed_focus = GER_re_establish_free_elections_ww }
-			GER = { has_completed_focus = GER_expatriate_the_communists }
-			GER = { has_completed_focus = GER_expatriate_the_communists_ww }
-			GER = { has_completed_focus = GER_focus_on_the_true_enemy }
+			GER = { has_completed_focus = GER_accept_british_naval_dominance }
+			GER = { has_completed_focus = GER_accept_british_naval_dominance_ww }
+			GER = { has_completed_focus = GER_rebuild_the_high_seas_fleet }
 			GER = { has_completed_focus = GER_the_second_naval_race }
 		}
 	}
@@ -104,7 +104,7 @@ FRA_alternate_plan_2 = {
 			OR = {
 				has_completed_focus = GER_focus_on_the_true_enemy 
 				AND = {
-					has_completed_focus = GER_the_second_naval_race
+					has_completed_focus = GER_rebuild_the_high_seas_fleet
 					has_completed_focus = GER_revive_the_kaiserreich_ww
 				}
 			}
@@ -197,8 +197,8 @@ FRA_alternate_plan_3_regular = {
 		}
 	
 		OR = {
-			GER = { has_completed_focus = GER_expatriate_the_communists }
-			GER = { has_completed_focus = GER_expatriate_the_communists_ww  }
+			GER = { has_completed_focus = GER_accept_british_naval_dominance }
+			GER = { has_completed_focus = GER_accept_british_naval_dominance_ww  }
 			ENG = { has_completed_focus = ENG_a_change_in_course }
 		}
 		has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
@@ -275,8 +275,8 @@ FRA_alternate_plan_3_lar = {
 			GER = { has_completed_focus = GER_oppose_hitler_ww }
 		}
 		OR = {
-			GER = { has_completed_focus = GER_expatriate_the_communists }
-			GER = { has_completed_focus = GER_expatriate_the_communists_ww }
+			GER = { has_completed_focus = GER_accept_british_naval_dominance }
+			GER = { has_completed_focus = GER_accept_british_naval_dominance_ww }
 			ENG = { has_completed_focus = ENG_a_change_in_course }
 		}
 		has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
@@ -292,13 +292,14 @@ FRA_alternate_plan_3_lar = {
 		FRA_womens_suffrage
 		FRA_legal_equality
 		FRA_force_the_issue
+		FRA_celebrate_the_commune
+		FRA_reconciliation 								#September 30 1937	
+		FRA_constitutional_convention
+		FRA_loyalty_to_moscow
 		FRA_invest_in_the_metropole
 		FRA_metropolitan_france 					#February 30 1937	
 		FRA_algerie_france 							#June 30 1939
 		FRA_industrial_expansion 					#May 10 1937		
-		FRA_reconciliation 								#September 30 1937	
-		FRA_constitutional_convention
-		FRA_loyalty_to_moscow
 		FRA_capital_ship_focus 						#December 10 1937
 		FRA_defensive_focus 						#February 20 1938	
 		FRA_fortification_focus 					#April 30 1938	
@@ -423,6 +424,15 @@ FRA_alternate_plan_4_lar = {
 		FRA_economic_devolution
 		FRA_diplomatic_freedom
 		FRA_latin_entente
+		FRA_form_the_popular_front
+		FRA_invite_communist_ministers
+		FRA_strengthen_the_unions
+		FRA_womens_suffrage
+		FRA_legal_equality
+		FRA_celebrate_the_commune
+		FRA_force_the_issue
+		FRA_revolution_to_the_utmost
+		FRA_destroy_the_counter_revolution
 		FRA_invest_in_the_metropole
 		FRA_metropolitan_france 					#February 30 1937	
 		FRA_algerie_france 							#June 30 1939
@@ -466,7 +476,10 @@ FRA_alternate_plan_4_lar = {
          FRA_invite_portugal = 10
          FRA_intervention_in_greece = 10
          FRA_the_congress_of_paris = 10
-         FRA_the_natural_borders_of_france = 10                                                          
+         FRA_the_natural_borders_of_france = 10    
+		 FRA_loyalty_to_moscow = 10
+		 FRA_loyalty_to_the_cause = 10
+		 FRA_revolutionary_zeal = 5                                                      
     }   
 	research = {
 
@@ -540,6 +553,8 @@ FRA_alternate_plan_little_entente = {
 						option = COMMUNIST
 					}
 					fascism > 0.25
+					communism > 0.25
+					neutrality > 0.25
 				}
 			}
 			AND = {
@@ -609,7 +624,7 @@ FRA_alternate_plan_little_entente = {
 	}
 }
 
-FRA_stresa_front = {
+FRA_stresa_front_plan = {
 	name = "France Stresa Front plan"
 	desc = "Democratic behavior for France - ratify the stresa front with italy"
 
@@ -707,7 +722,11 @@ FRA_stresa_front = {
 							rule = CZE_ai_behavior
 							option = COMMUNIST
 						}
+						exists = no
+						is_subject = yes
 						fascism > 0.25
+						communism > 0.25
+						neutrality > 0.25
 					}
 				}
 			}
@@ -816,7 +835,7 @@ FRA_stresa_front = {
 
 }
 
-FRA_stresa_front = {
+FRA_franco_soviet = {
 	name = "France Stresa Front plan"
 	desc = "Democratic behavior for France - ratify the stresa front with italy"
 
@@ -960,6 +979,8 @@ FRA_alternate_plan_fascist_regular = {
 		FRA_join_germany
 		FRA_motorized_focus
 		FRA_mechanized_focus
+		FRA_woo_italy
+		FRA_france_first
 		FRA_light_medium_armor
 		#1940
 		FRA_army_reform
@@ -1004,7 +1025,25 @@ FRA_alternate_plan_fascist_lar = {
 		}
 	}
 	abort = {
-		
+		AND = {
+			has_country_flag = FRA_AI_FASCIST
+			OR = {
+				GER = {
+					has_completed_focus = GER_oppose_hitler
+				}
+				GER = {
+					has_completed_focus = GER_oppose_hitler_ww
+				}
+				GER = { has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW }
+				GER = { 
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = FASCIST_BERLIN_MOSCOW
+					} 
+				}
+			}
+			
+		}
 	}
 
 	ai_national_focuses = {
@@ -1232,6 +1271,7 @@ FRA_alternate_plan_communist_regular = {
 		#1939
 		FRA_national_mobilization
 		FRA_join_comintern
+		FRA_humanite_unie
 		FRA_motorized_focus
 		FRA_mechanized_focus
 		FRA_light_medium_armor
@@ -1278,7 +1318,10 @@ FRA_alternate_plan_communist_lar = {
 		}
 	}
 	abort = {
-		
+		has_country_flag = FRA_AI_COMMUNIST
+		SOV = {
+			has_completed_focus = SOV_beaten_but_not_defeated
+		}
 	}
 
 	ai_national_focuses = {
@@ -1376,6 +1419,15 @@ FRA_alternate_plan_communist_antifa_coalition_lar = {
 	}
 	enable = {
 		OR = {
+			AND = {
+				has_country_flag = FRA_AI_COMMUNIST
+				SOV = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+				}
+				ENG = {
+					has_completed_focus = ENG_steady_as_she_goes
+				}
+			}
 			has_country_flag = FRA_AI_COMMUNIST_ANTIFA
 			has_game_rule = {
 				rule = FRA_ai_behavior
@@ -1479,6 +1531,15 @@ FRA_alternate_plan_communist_revolutionary_lar = {
 	}
 	enable = {
 		OR = {
+			AND = {
+				has_country_flag = FRA_AI_COMMUNIST
+				SOV = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+				}
+				ENG = {
+					has_completed_focus = ENG_a_change_in_course
+				}
+			}
 			has_country_flag = FRA_AI_COMMUNIST_REVOLUTIONARY
 			has_game_rule = {
 				rule = FRA_ai_behavior

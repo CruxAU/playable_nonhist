@@ -22,8 +22,7 @@ SWE_historical_plan = {
 		}	
 	}
 	abort = {
-		is_subject = yes 
-		has_war = no 
+		 
 	}
 
 	ai_national_focuses = {
@@ -51,11 +50,11 @@ SWE_historical_plan = {
 		SWE_standardize_equipment
 		SWE_radiojanst
 		SWE_research_slot_1
-		
 
 		#1939
 		SWE_continue_the_second_industrial_revolution
-		SWE_deep_mining_complexes
+		SWE_infrastructure
+		SWE_allow_landsverk_to_operate
 		SWE_as_the_barometer_falls
 		SWE_swedes_not_sweden_to_finlands_aid
 		SWE_coalition_war_cabinet
@@ -69,14 +68,14 @@ SWE_historical_plan = {
 		SWE_per_albin_bus
 		SWE_rationing
 		SWE_totalforsvar
+		SWE_form_rfsu
 		SWE_train_the_sheltered
-		#SWE_hedgehog_defense
 
 		#1941
-		
-		SWE_train_the_sheltered
 		SWE_secret_mobilization
 		SWE_per_albin_line
+		SWE_license_skf_ball_bearings
+		SWE_retool_dockyards
 		
 		#1942
 		
@@ -90,7 +89,12 @@ SWE_historical_plan = {
 	}
 
 	focus_factors = {
-		
+		SWE_the_narvik_solution = 0
+		SWE_operation_save_denmark = 0
+		SWE_operation_save_norway = 0
+		SWE_scandinavian_defense_union = 0
+		SWE_the_threat_of_the_iron_curtain = 0
+		SWE_preemptive_strike = 0
 	}
 
 	research = {

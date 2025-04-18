@@ -107,6 +107,17 @@ focus_tree = {
 				has_war_with = SOV
 				factor = 0.5
 			}
+			modifier = {
+				is_chinese_warlord = yes
+				PRC = {
+					has_completed_focus = PRC_marxist_orthodoxy
+				}
+				factor = 0
+			}
+			modifier = {
+				original_tag = SIK
+				factor = 10
+			}
 		}
 
 		available = {
@@ -282,6 +293,24 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				is_chinese_warlord = yes
+				PRC = {
+					has_completed_focus = PRC_agrarian_socialism
+				}
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					original_tag = XSM
+					original_tag = YUN
+				}
+				factor = 2
+			}
+			modifier = {
+				original_tag = SHX
+				factor = 5
+			}
 		}
 
 		available = {
@@ -524,6 +553,21 @@ focus_tree = {
 				has_war_with = event_target:WTT_current_china_leader
 				factor = 0.5
 			} 
+			modifier = {
+				is_chinese_warlord = yes
+				PRC = {
+					has_completed_focus = PRC_social_democracy
+				}
+				factor = 0
+			}
+			modifier = {
+				original_tag = XSM
+				factor = 2
+			}
+			modifier = {
+				original_tag = GXC
+				factor = 5
+			}
 		}
 
 		available = {
@@ -764,7 +808,7 @@ focus_tree = {
 		}
 
 		available = {
-			622 = { is_fully_controlled_by = ROOT }
+			
 		}
 
 		bypass = {
@@ -777,7 +821,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			622 = {
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -788,7 +835,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			622 = {
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1473,16 +1523,16 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				SHX = { can_ROOT_get_wargoal_on_THIS = yes }
-				XSM = { can_ROOT_get_wargoal_on_THIS = yes }
+			any_neighbor_country = {
+				is_chinese_warlord = yes
+				can_ROOT_get_wargoal_on_THIS = yes
 			}
 		}
 
 		bypass = {
-			OR = {
-				has_war_with = SHX
-				has_war_with = XSM
+			any_neighbor_country = {
+				is_chinese_warlord = yes
+				has_war_with = ROOT
 			}
 		}
 
@@ -1492,23 +1542,18 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			if = {
+			every_neighbor_country = {
 				limit = {
-					SHX = { can_ROOT_get_wargoal_on_THIS = yes }
+					is_chinese_warlord = yes
+					can_ROOT_get_wargoal_on_THIS = yes
 				}
-				create_wargoal = {
-					type = annex_everything
-					target = SHX
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
 				}
-			}
-			if = {
-				limit = {
-					XSM = { can_ROOT_get_wargoal_on_THIS = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = XSM
-				}
+				
 			}
 		}
 	}

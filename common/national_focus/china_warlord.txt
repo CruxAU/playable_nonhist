@@ -910,6 +910,12 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_politics = { ruling_party = communism elections_allowed = no }
+			}
 			custom_effect_tooltip = CHI_the_yanan_incident_effect_tt
 			save_event_target_as = warlord
 			add_ideas = PRC_soviet_tribute_1

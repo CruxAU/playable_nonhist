@@ -58,6 +58,10 @@ FIN_is_lone_wolf_finland = {
 FIN_country_can_be_invited_into_faction_socialist = {
 	exists = yes
 	is_subject = no
+	OR = {
+		has_government = democratic
+		has_government = communism
+	}
 	NOT = { has_war_with = ROOT }
 	is_in_faction = no
 }
@@ -223,30 +227,135 @@ FIN_is_historical_ai = {
 			rule = FIN_ai_behavior
 			option = HISTORICAL
 		}
-		has_country_flag = FIN_AI_RANDOM_HISTORICAL_ALTERNATE
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALTERNATE
 		has_game_rule = {
 			rule = FIN_ai_behavior
-			option = HISTORICAL_ALTERNATE
+			option = KOKOOMUS_ALTERNATE
 		}
-		has_country_flag = FIN_AI_RANDOM_HISTORICAL_BALTIC
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_BALTIC
 		has_game_rule = {
 			rule = FIN_ai_behavior
-			option = HISTORICAL_BALTIC
+			option = KOKOOMUS_BALTIC
 		}
-		has_country_flag = FIN_AI_RANDOM_HISTORICAL_EXP
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_EXP
 		has_game_rule = {
 			rule = FIN_ai_behavior
-			option = HISTORICAL_EXP
+			option = KOKOOMUS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_NORDIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_NORDIC
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_NORDIC_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_NORDIC_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_ALLIES
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_ALLIES_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_ALLIES
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_NORDIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_NORDIC
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST
 		}
 	}
 }
 
 FIN_is_fascist_ai = {
 	OR = {
-		has_country_flag = FIN_AI_RANDOM_FASCIST_PLAN
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS
 		has_game_rule = {
 			rule = FIN_ai_behavior
-			option = FIN_FASCIST_PLAN
+			option = FIN_FASCIST_COUP_AXIS
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_AXIS_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_AXIS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_NORDIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_NORDIC
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_AXIS
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_AXIS
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_AXIS_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_AXIS_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_AXIS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_AXIS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_NORDIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_NORDIC
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_NORDIC_EXP
 		}
 	}
 }
@@ -377,6 +486,212 @@ FIN_is_democratic_ai = {
 		has_game_rule = {
 			rule = FIN_ai_behavior
 			option = FIN_DEMOCRATIC_FINNO_RUSSIAN
+		}
+	}
+}
+
+
+FIN_is_expansionist_ai = {
+	OR = {
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ALLIES_FEDERATION
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_DEMOCRATIC_ALLIES_FEDERATION
+		}
+		has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN_RED_FINLAND
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_COMMUNIST_COMINTERN_RED_FINLAND
+		}
+		has_country_flag = FIN_AI_RANDOM_COMMUNIST_FINNO_RUSSIAN
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_COMMUNIST_FINNO_RUSSIAN
+		}
+		has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ALLIES_FEDERATION
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_DEMOCRATIC_ALLIES_FEDERATION
+		}
+		has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_FINNO_RUSSIAN
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_DEMOCRATIC_FINNO_RUSSIAN
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_AXIS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_AXIS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_AXIS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_NORDIC_EXP
+		}
+	}
+}
+
+FIN_is_monarchist_ai = {
+	OR = {
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_ALLIES
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_NORDIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_NORDIC
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_NORDIC_EXP
+		}
+	}
+}
+
+FIN_is_baltic_ai = {
+	OR = {
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_ALLIES_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_KOKOOMUS_NORDIC_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = KOKOOMUS_NORDIC_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_ALLIES_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_ALLIES_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_MONARCHIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = MONARCHIST_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_COMMUNIST_COMINTERN_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_COMMUNIST_COMINTERN_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_COMMUNIST_PRO_SOV_NORDIC_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV_NORDIC_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_COMMUNIST_ANTISOV_NORDIC_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_DEMOCRATIC_ANTISOV_NORDIC_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ALLIES_SAMPI
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_DEMOCRATIC_ALLIES_SAMPI
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_AXIS_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_AXIS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_COUP_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_COUP_NORDIC_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_AXIS_BALTIC
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_AXIS_BALTIC
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_AXIS_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_AXIS_EXP
+		}
+		has_country_flag = FIN_AI_RANDOM_FASCIST_NORDIC_EXP
+		has_game_rule = {
+			rule = FIN_ai_behavior
+			option = FIN_FASCIST_NORDIC_EXP
 		}
 	}
 }

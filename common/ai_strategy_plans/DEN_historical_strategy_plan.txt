@@ -125,7 +125,7 @@ name = "Denmark's Historical Plan"
 			AND = {
 				is_historical_focus_on = yes 
 				has_game_rule = {
-					rule = DEN_AI_BEHAVIOR
+					rule = DEN_ai_overlord_behavior
 					option = DEFAULT
 				}
 			}

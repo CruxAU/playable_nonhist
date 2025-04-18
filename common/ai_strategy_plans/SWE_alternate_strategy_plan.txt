@@ -1,3 +1,114 @@
+SWE_welfare_alternate_plan = {
+	name = "Swedish Historical Plan"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_SDP_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SDP_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+		 
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		SWE_defense_act
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_government_weapons_contract
+		
+		#1937
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_norma_projektilfabrik
+		SWE_bofors_fly_swatter
+		SWE_bofors_anti_tank_gun
+		SWE_affordable_housing
+		SWE_saltsjobaden_agreement
+		SWE_education_reform
+
+		#1938
+		SWE_husqvarna_vapenfabrik
+		SWE_standardize_equipment
+		SWE_radiojanst
+		SWE_research_slot_1
+
+		#1939
+		SWE_continue_the_second_industrial_revolution
+		SWE_infrastructure
+		SWE_sieze_landsverk
+		SWE_as_the_barometer_falls
+		SWE_the_aland_question
+		SWE_coalition_war_cabinet
+		SWE_land_air_warfare
+		SWE_en_svensk_tiger
+
+		#1940
+		SWE_winter_drill
+		SWE_varnplikt
+		SWE_per_albin_bus
+		SWE_rationing
+		SWE_totalforsvar
+		SWE_form_rfsu
+		SWE_the_narvik_solution #able to trade with allies
+		SWE_train_the_sheltered
+
+		#1941
+		SWE_rapid_mobilization
+		SWE_per_albin_line
+		SWE_license_skf_ball_bearings
+		SWE_retool_dockyards
+		SWE_form_saab
+		
+		#1942
+		
+		
+		#1943
+		
+		
+		#1944
+		
+		
+	}
+
+	focus_factors = {
+		SWE_operation_save_denmark = 0
+		SWE_operation_save_norway = 0
+		SWE_scandinavian_defense_union = 0
+		SWE_the_threat_of_the_iron_curtain = 0
+		SWE_preemptive_strike = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
 SWE_alt_democratic_plan = {
 	name = "Democratic Alternative Plan"
 	desc = "The Swedish AI will go down the democratic tree but will be more likely to become actively involved in the war by rearming faster."
@@ -42,51 +153,45 @@ SWE_alt_democratic_plan = {
 		SWE_reject_saltsjobaden
 		SWE_research_slot_1
 		SWE_government_weapons_contract
-		SWE_sieze_landsverk
+		SWE_allow_landsverk_to_operate
 		SWE_continue_the_second_industrial_revolution
 		
-
 		#1938
 		SWE_form_rfsu
+		SWE_economic_deregulation
+		SWE_swedes_not_sweden_to_finlands_aid
 		SWE_sami_reconcilliation
-		SWE_totalforsvar
 		SWE_secret_mobilization
 		SWE_gotaverken
-
+		
 		#1939
 		SWE_deep_mining_complexes
-		SWE_the_aland_question
 		SWE_coalition_war_cabinet
 		SWE_en_svensk_tiger
 
 		#1940
-
+		
 		SWE_winter_drill
 		SWE_varnplikt
 		SWE_per_albin_bus
 		SWE_rationing
 		SWE_totalforsvar
-		SWE_hedgehog_defense
+		SWE_gotaverken
+		SWE_italian_destroyers
 
 		#1941
-		
 		SWE_train_the_sheltered
-		SWE_secret_mobilization
+		SWE_rapid_mobilization
 		SWE_per_albin_line
-		
-		#1942
-		
-		
-		#1943
-		
-		
-		#1944
-		
-		
 	}
 
 	focus_factors = {
-		
+		SWE_operation_save_denmark = 0
+		SWE_operation_save_norway = 0
+		SWE_scandinavian_defense_union = 0
+		SWE_the_threat_of_the_iron_curtain = 0
+		SWE_preemptive_strike = 0
+		SWE_the_narvik_solution = 0
 	}
 
 	research = {
@@ -105,10 +210,222 @@ SWE_alt_democratic_plan = {
 			factor = 1.0
 		}
 	}
-
 }
 
-SWE_communism = {
+SWE_avenge_scandinavia_plan = {
+	name = "Democratic Alternative Plan"
+	desc = "The Swedish AI will go down the democratic tree but will be more likely to become actively involved in the war by rearming faster."
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_DEMOCRATIC_ALLIES
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_DEMOCRATIC_ALLIES
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+		#has_war = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_government_weapons_contract #35
+		SWE_continue_the_second_industrial_revolution
+
+		#37
+		SWE_radiojanst
+		SWE_defense_above_all
+		SWE_standardize_equipment  #35
+		SWE_allow_landsverk_to_operate
+		SWE_norma_projektilfabrik  #35
+		SWE_husqvarna_vapenfabrik
+		SWE_deep_mining_complexes
+
+		#38
+		SWE_paid_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_research_slot_1
+		SWE_infrastructure #35
+		SWE_coalition_war_cabinet
+		SWE_economic_deregulation
+		
+		
+		#39
+		SWE_finlands_cause_is_ours #35
+		SWE_winter_drill
+		SWE_varnplikt #35
+		SWE_per_albin_bus #35
+		SWE_en_svensk_tiger #35
+		SWE_as_the_barometer_falls #35
+		SWE_land_air_warfare
+		
+		
+		#40
+		SWE_rapid_response_force
+		SWE_totalforsvar
+		SWE_bofors_fly_swatter #35
+		SWE_tank_development
+		SWE_train_the_sheltered
+		
+
+		#41
+		SWE_rationing #35
+		SWE_sami_reconcilliation
+		SWE_rapid_mobilization
+		SWE_the_threat_of_the_iron_curtain #usually bypassed
+		SWE_hemvarnet
+
+		
+		SWE_operation_save_norway #35
+		SWE_the_cross_we_bear
+		SWE_operation_save_denmark #35
+		SWE_form_saab
+		
+	}
+
+	focus_factors = {
+		SWE_scandinavian_defense_union = 0
+		SWE_preemptive_strike = 0
+		SWE_the_narvik_solution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_expansionist_democratic_plan = {
+	name = "Democratic Alternative Plan"
+	desc = "The Swedish AI will go down the democratic tree but will be more likely to become actively involved in the war by rearming faster."
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_DEMOCRATIC_ALLIES_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_DEMOCRATIC_ALLIES_EXP
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+		#has_war = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_government_weapons_contract #35
+		SWE_continue_the_second_industrial_revolution
+
+		#37
+		SWE_radiojanst
+		SWE_defense_above_all
+		SWE_standardize_equipment  #35
+		SWE_sieze_landsverk
+		SWE_norma_projektilfabrik  #35
+		SWE_husqvarna_vapenfabrik
+		
+		#38
+		SWE_deep_mining_complexes
+		SWE_paid_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_research_slot_1
+		SWE_infrastructure #35
+		SWE_coalition_war_cabinet		
+		
+		#39
+		SWE_economic_deregulation
+		SWE_the_aland_question #35
+		SWE_winter_drill
+		SWE_varnplikt #35
+		SWE_per_albin_bus #35
+		SWE_en_svensk_tiger #35
+		SWE_as_the_barometer_falls #35
+		SWE_land_air_warfare
+		
+		#40
+		SWE_rapid_response_force
+		SWE_totalforsvar
+		SWE_bofors_fly_swatter #35
+		SWE_the_narvik_solution
+		SWE_tank_development
+		
+		#41
+		SWE_train_the_sheltered
+		SWE_sami_reconcilliation
+		SWE_rapid_mobilization
+		SWE_operation_save_norway #35
+		SWE_rationing #35
+		SWE_the_cross_we_bear
+
+		#42
+		SWE_operation_save_denmark #35
+		SWE_the_threat_of_the_iron_curtain #usually bypassed
+		SWE_hemvarnet
+		SWE_form_saab
+		SWE_special_forces
+		SWE_extend_the_time_of_preparedness
+
+		#43
+		SWE_specialized_equipment
+		SWE_the_lion_of_the_north_rises
+		SWE_karnvapenprogram
+		SWE_war_games
+		SWE_preemptive_strike
+		
+	}
+
+	focus_factors = {
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_communism_neu = { #FLYG is pro-german and anti-soviet
 	name = "Communism "
 	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
 
@@ -116,11 +433,21 @@ SWE_communism = {
 		SWE_AAT = yes
 	}
 	enable = {
-		OR = {
-			has_country_flag = SWE_AI_RANDOM_COMMUNISM
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG
 			has_game_rule = {
 				rule = SWE_ai_behavior
-				option = SWE_COMMUNISM
+				option = SWE_COMMUNIST_FLYG
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_KILBOM
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_LINDEROT
 			}
 		}	
 	}
@@ -129,70 +456,54 @@ SWE_communism = {
 	}
 
 	ai_national_focuses = {
-		
-		#1936
-		SWE_standardize_equipment #As soon as possible
-		SWE_continue_the_second_industrial_revolution
-		SWE_strike_the_capitalist_beast_down #As soon as possible
-		SWE_police_reforms #As soon as possible
-		SWE_liquidate_the_monarchy #As soon as possible
-		SWE_socialist_reforms #As soon as possible
-		SWE_establish_politburo #As soon as possible
-		SWE_five_year_plan #As soon as possible
-		SWE_starve_the_fascists_of_iron #As soon as possible
-		SWE_peoples_commissar_for_defense #As soon as possible
-
-		SWE_as_the_barometer_falls #As soon as possible
-		SWE_defense_in_depth #As soon as possible
-		SWE_beneath_sticks_and_stones #As soon as possible
-		SWE_per_albin_line #As soon as possible
-		SWE_end_the_fubkrieg #As soon as possible
-
-
-
-		SWE_defense_act
+		SWE_defense_act #35
 		SWE_urbanization
 		SWE_hygenic_housing
-		SWE_individual_liberty_and_prosperity_for_all #poverty reduction
-		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_work_projects_for_the_unemployed
+		SWE_individual_liberty_and_prosperity_for_all #35
 		SWE_affordable_housing
 		
-		
 		SWE_radiojanst
-
-		SWE_en_svensk_tiger
-		SWE_paid_holidays
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
 		SWE_saltsjobaden_agreement
-		SWE_research_slot_1
-		SWE_government_weapons_contract
-		SWE_sieze_landsverk
-		SWE_gotaverken
-		SWE_norma_projektilfabrik
-
+		SWE_continue_the_second_industrial_revolution
 		
-		 
-		#1937
-		SWE_defense_above_all
-		SWE_reject_saltsjobaden
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
 		SWE_research_slot_1
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		SWE_swedes_not_sweden_to_finlands_aid #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
 		
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron #for flyg it embargoes ussr otherwise germany
+		SWE_peoples_commissar_for_defense
+		SWE_finnish_buffer_state
 
-		#1938
-		SWE_form_rfsu
-
-		#1939
-		SWE_deep_mining_complexes
-		SWE_the_aland_question
-
-		#1941
-		SWE_train_the_sheltered
-		SWE_secret_mobilization
-			
+		SWE_defense_in_depth
+		SWE_universal_basic_income
+		
+		
 		
 	}
 
 	focus_factors = {
-		
+		SWE_the_old_enemy_stirs = 0
+		SWE_coalition_war_cabinet = 0
+		SWE_support_danish_communists = 0
+		SWE_support_norwegian_communists = 0
+		SWE_scandinavian_defense_union = 0
+		SWE_the_threat_of_the_iron_curtain = 0
+		SWE_preemptive_strike = 0
 	}
 
 	research = {
@@ -211,10 +522,688 @@ SWE_communism = {
 			factor = 1.0
 		}
 	}
-
 }
 
-SWE_fascist_independent = {
+SWE_landsverk_policy1 = { #FLYG is pro-german and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_FLYG
+			}
+		}	
+	}
+	abort = {
+		has_completed_focus = SWE_allow_landsverk_to_operate
+	}
+
+	ai_national_focuses = {
+		SWE_allow_landsverk_to_operate
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 2.0
+		}
+	}
+}
+
+SWE_landsverk_policy2 = { 
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_KILBOM
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_LINDEROT
+			}
+		}	
+	}
+	abort = {
+		has_completed_focus = SWE_sieze_landsverk
+	}
+
+	ai_national_focuses = {
+		SWE_sieze_landsverk
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 2.0
+		}
+	}
+}
+
+SWE_communism_flyg_axis = { #FLYG is pro-german and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_AXIS
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_FLYG_AXIS
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_individual_liberty_and_prosperity_for_all #35
+		SWE_affordable_housing
+		
+		SWE_radiojanst
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
+		SWE_allow_landsverk_to_operate
+		SWE_saltsjobaden_agreement
+		SWE_continue_the_second_industrial_revolution
+		
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
+		SWE_research_slot_1
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		SWE_swedes_not_sweden_to_finlands_aid #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
+		
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron #for this leader it embargoes USSR
+		SWE_peoples_commissar_for_defense
+		SWE_finnish_buffer_state #35
+		SWE_universal_basic_income
+		SWE_defense_in_depth
+		SWE_license_skf_ball_bearings #35
+		SWE_ga_pa_tactics #35
+		SWE_hedgehog_defense
+
+		SWE_bofors_fly_swatter #35
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik #35
+		SWE_bofors_anti_tank_gun	
+		SWE_beneath_sticks_and_stones
+		SWE_per_albin_line
+		SWE_the_threat_of_the_iron_curtain #joins axis
+
+	}
+
+	focus_factors = {
+		SWE_the_old_enemy_stirs = 0
+		SWE_coalition_war_cabinet = 0
+		SWE_support_danish_communists = 0
+		SWE_support_norwegian_communists = 0
+		SWE_scandinavian_defense_union = 0
+		SWE_preemptive_strike = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_communism_flyg_axis_agressive = { #FLYG is pro-german and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_AXIS_AGGR
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_FLYG_AXIS_AGGR
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_defense_above_all #35
+		SWE_deep_mining_complexes
+		
+		SWE_radiojanst
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
+		SWE_allow_landsverk_to_operate
+		SWE_saltsjobaden_agreement
+		SWE_continue_the_second_industrial_revolution
+		
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
+		SWE_research_slot_1
+		SWE_the_aland_question #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron #for this leader it embargoes USSR
+
+		SWE_peoples_commissar_for_defense
+		SWE_finnish_buffer_state #35
+		SWE_universal_basic_income
+		SWE_the_threat_of_the_iron_curtain #joins axis
+		SWE_special_forces
+
+		SWE_specialized_equipment
+		SWE_the_lion_of_the_north_rises
+		SWE_preemptive_strike
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		
+		SWE_defense_in_depth
+		SWE_license_skf_ball_bearings #35
+		SWE_ga_pa_tactics #35
+		SWE_hedgehog_defense
+		SWE_bofors_fly_swatter #35
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik #35
+		SWE_bofors_anti_tank_gun	
+		SWE_beneath_sticks_and_stones
+		SWE_per_albin_line
+	}
+
+	focus_factors = {
+		SWE_the_old_enemy_stirs = 0
+		SWE_coalition_war_cabinet = 0
+		SWE_support_danish_communists = 0
+		SWE_support_norwegian_communists = 0
+		SWE_scandinavian_defense_union = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_communism_flyg_nord = { #FLYG is pro-german and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_NORDIC
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_FLYG_NORDIC
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_NORDIC
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_LINDEROT_NORDIC
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_defense_above_all #35
+		SWE_deep_mining_complexes
+		
+		SWE_radiojanst
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
+		SWE_allow_landsverk_to_operate
+		SWE_saltsjobaden_agreement
+		SWE_continue_the_second_industrial_revolution
+		
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
+		SWE_research_slot_1
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		SWE_swedes_not_sweden_to_finlands_aid #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
+		
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron
+		SWE_peoples_commissar_for_defense
+		SWE_finnish_buffer_state #35
+		SWE_universal_basic_income
+		SWE_defense_in_depth
+		SWE_license_skf_ball_bearings #35
+		SWE_scandinavian_defense_union
+		SWE_ga_pa_tactics #35
+		
+		SWE_hedgehog_defense
+
+		SWE_bofors_fly_swatter #35
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik #35
+		SWE_bofors_anti_tank_gun	
+		
+
+	}
+
+	focus_factors = {
+		SWE_the_old_enemy_stirs = 0
+		SWE_coalition_war_cabinet = 0
+		SWE_support_danish_communists = 0
+		SWE_support_norwegian_communists = 0
+		SWE_the_threat_of_the_iron_curtain = 0
+		SWE_preemptive_strike = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_communism_flyg_nord_agressive = { #FLYG is pro-german and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_NORDIC_AGGR
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_FLYG_NORDIC_AGGR
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_NORDIC_AGGR
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_LINDEROT_NORDIC_AGGR
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_defense_above_all #35
+		SWE_deep_mining_complexes
+		
+		SWE_radiojanst
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
+		SWE_sieze_landsverk
+		SWE_saltsjobaden_agreement
+		SWE_continue_the_second_industrial_revolution
+		
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
+		SWE_research_slot_1
+		SWE_finlands_cause_is_ours #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
+		SWE_peoples_commissar_for_defense
+		SWE_support_norwegian_communists
+		SWE_support_danish_communists
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron
+		SWE_universal_basic_income
+		SWE_scandinavian_defense_union
+		SWE_special_forces
+
+		SWE_specialized_equipment
+		SWE_the_lion_of_the_north_rises
+		SWE_preemptive_strike
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		
+		SWE_defense_in_depth
+		SWE_license_skf_ball_bearings #35
+		SWE_ga_pa_tactics #35
+		SWE_hedgehog_defense
+		SWE_bofors_fly_swatter #35
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik #35
+		SWE_bofors_anti_tank_gun	
+		SWE_beneath_sticks_and_stones
+		SWE_per_albin_line
+	}
+
+	focus_factors = {
+		SWE_the_old_enemy_stirs = 0
+		SWE_the_threat_of_the_iron_curtain = 0
+		SWE_coalition_war_cabinet = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_communism_kilbom = { #KILBOM is pro-allies and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM_ALLIES
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_KILBOM_ALLIES
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_COMINTERN
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_LINDEROT_COMINTERN
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_individual_liberty_and_prosperity_for_all #35
+		SWE_affordable_housing
+		
+		SWE_radiojanst
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
+		SWE_sieze_landsverk
+		SWE_saltsjobaden_agreement
+		SWE_continue_the_second_industrial_revolution
+		
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
+		SWE_research_slot_1
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		SWE_swedes_not_sweden_to_finlands_aid #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
+		
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron 
+		SWE_peoples_commissar_for_defense
+		SWE_finnish_buffer_state #35
+		SWE_universal_basic_income
+		SWE_defense_in_depth
+		SWE_the_threat_of_the_iron_curtain #joins allies
+		SWE_license_skf_ball_bearings #35
+		SWE_ga_pa_tactics #35
+		SWE_hedgehog_defense
+
+		SWE_bofors_fly_swatter #35
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik #35
+		SWE_bofors_anti_tank_gun	
+		SWE_beneath_sticks_and_stones
+		SWE_per_albin_line
+		
+
+	}
+
+	focus_factors = {
+		SWE_the_old_enemy_stirs = 0
+		SWE_coalition_war_cabinet = 0
+		SWE_support_danish_communists = 0
+		SWE_support_norwegian_communists = 0
+		SWE_scandinavian_defense_union = 0
+		SWE_preemptive_strike = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_communism_kilbom_allies_exp = {  #KILBOM is pro-allies and anti-soviet
+	name = "Communism "
+	desc = "The Swedish AI will go down the communism tree and either join the Axis or the Allies"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = { 
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_KILBOM_ALLIES_AGGR
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_KILBOM_ALLIES_AGGR
+			}
+			has_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_COMINTERN_AGGR
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_COMMUNIST_LINDEROT_COMINTERN_AGGR
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_work_projects_for_the_unemployed
+		SWE_defense_above_all #35
+		SWE_deep_mining_complexes
+		
+		SWE_radiojanst
+		SWE_paid_holidays #35
+		SWE_government_weapons_contract #35
+		SWE_sieze_landsverk
+		SWE_saltsjobaden_agreement
+		SWE_continue_the_second_industrial_revolution
+		
+		SWE_align_more_closely_with_the_landsorganisationen
+		SWE_strike_the_capitalist_beast_down #35
+		SWE_socialist_reforms
+		SWE_police_reforms
+		SWE_refuge_from_war
+		SWE_liquidate_the_monarchy #35
+
+		SWE_research_slot_1
+		SWE_the_aland_question #35
+		SWE_refuge_for_revolutionaries
+		SWE_establish_politburo
+		SWE_five_year_plan #35
+		SWE_starve_the_fascists_of_iron 
+
+		SWE_peoples_commissar_for_defense
+		SWE_finnish_buffer_state #35
+		SWE_universal_basic_income
+		SWE_the_threat_of_the_iron_curtain #joins axis
+		SWE_special_forces
+
+		SWE_specialized_equipment
+		SWE_the_lion_of_the_north_rises
+		SWE_preemptive_strike
+		SWE_education_reform #35
+		SWE_infrastructure #35
+		SWE_en_svensk_tiger #35
+		
+		SWE_defense_in_depth
+		SWE_license_skf_ball_bearings #35
+		SWE_ga_pa_tactics #35
+		SWE_hedgehog_defense
+		SWE_bofors_fly_swatter #35
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik #35
+		SWE_bofors_anti_tank_gun	
+		SWE_beneath_sticks_and_stones
+		SWE_per_albin_line
+	}
+
+	focus_factors = {
+		SWE_the_old_enemy_stirs = 0
+		SWE_coalition_war_cabinet = 0
+		SWE_support_danish_communists = 0
+		SWE_support_norwegian_communists = 0
+		SWE_scandinavian_defense_union = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+SWE_fascist_independent_plan = {
 	name = "Independant Fascist "
 	desc = "The Swedish AI will go down the fascist tree and remain independent"
 
@@ -242,62 +1231,1093 @@ SWE_fascist_independent = {
 		SWE_urbanization
 		SWE_radiojanst
 		SWE_work_projects_for_the_unemployed
-		SWE_defense_above_all
+		SWE_hygenic_housing
 
 		#Rush these fascists focuses as soon as possible
 		SWE_the_old_enemy_stirs 							#As soon as possible
 		SWE_prevent_a_red_dictatorship 						#As soon as possible
-		SWE_revoke_anti_militia_laws 						#As soon as possible
-		SWE_appeal_for_support 								#As soon as possible
-		SWE_unify_the_national_socialist_movement 			#As soon as possible
-		SWE_organize_a_putsch 								#As soon as possible
-		SWE_restoring_order 								#As soon as possible
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
 		SWE_mythologize_swedish_history 					#As soon as possible
-		SWE_join_the_anti_soviet_pact 						#As soon as possible
 
-		SWE_narvik_crisis 									#As soon as possible
-		SWE_united_kingdoms_of_sweden_and_norway 			#As soon as possible
-		SWE_bornholm_crisis 								#As soon as possible
-		SWE_demand_atlantic_resource_rights 				#As soon as possible
-		SWE_danish_alignment 								#As soon as possible
-		SWE_the_aland_issue 								#As soon as possible
-		SWE_demand_demilitarization_of_finnish_border 		#As soon as possible
-		SWE_finnish_integration 							#As soon as possible
-		SWE_greater_nordic_reich
-
-		#Otherwise do the barometer falls as soon as possible as prio 2
+		SWE_government_weapons_contract
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_allow_landsverk_to_operate
 		SWE_as_the_barometer_falls #As soon as possible
-		SWE_land_air_warfare #As soon as possible
 		SWE_defense_in_depth #As soon as possible
 		SWE_ga_pa_tactics #As soon as possible
-		SWE_rapid_response_force #As soon as possible
-		SWE_tank_development #As soon as possible
 		SWE_end_the_fubkrieg #As soon as possible
-		
+		SWE_swedes_not_sweden_to_finlands_aid
 		SWE_standardize_equipment #As soon as possible
-		SWE_bofors_anti_tank_gun
 
 
-		SWE_privately_managed_holidays
-		SWE_reject_saltsjobaden
 		SWE_research_slot_1
-		SWE_government_weapons_contract
-		SWE_allow_landsverk_to_operate
+		
+		
 		SWE_norma_projektilfabrik
 		SWE_bofors_fly_swatter
 		SWE_landverk_l_62
-		SWE_form_saab
-		SWE_domestic_designs
-		SWE_formation_flying
-		SWE_airforce_modernization
+		SWE_form_saab 
 		
-		SWE_deep_mining_complexes
+		SWE_education_reform
+		SWE_rule_the_baltic
+		SWE_domestic_designs
 		
 		
 	}
 
 	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_approach_the_allies = 0
+		SWE_narvik_crisis = 0
+		SWE_bornholm_crisis = 0
+		SWE_the_aland_issue = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_fascist_assertive = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_NEU_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_NEU_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
 		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_deep_mining_complexes #35
+		SWE_government_weapons_contract #35
+		SWE_narvik_crisis #35
+		SWE_allow_landsverk_to_operate
+		SWE_demand_atlantic_resource_rights #35
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+
+		SWE_defense_in_depth
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_approach_the_allies = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_united_kingdoms_of_sweden_and_norway = 0
+		SWE_danish_alignment = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_expansion = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_NEU_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_NEU_EXP
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_narvik_crisis #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_united_kingdoms_of_sweden_and_norway
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_economic_deregulation
+		SWE_finnish_integration
+		
+		SWE_greater_nordic_reich
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_approach_the_allies = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_expansion_soviet = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_NEU_ANTI_SOV
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_NEU_ANTI_SOV
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours #35
+		SWE_the_aland_issue  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_narvik_crisis #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_united_kingdoms_of_sweden_and_norway
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_finnish_integration
+		SWE_scramble_for_the_baltic
+		SWE_economic_deregulation
+
+		SWE_greater_nordic_reich
+		SWE_join_the_anti_soviet_pact
+		SWE_rapid_response_force
+		SWE_tank_development
+		SWE_let_fly_all_guns
+		SWE_crusade_against_bolshevism
+		SWE_reclaiming_the_rus
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_approach_the_allies = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_allies = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_ALLIES
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+
+		#Rush these fascists focuses as soon as possible
+		SWE_the_old_enemy_stirs 							#As soon as possible
+		SWE_prevent_a_red_dictatorship 						#As soon as possible
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history 					#As soon as possible
+
+		SWE_government_weapons_contract
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_allow_landsverk_to_operate
+		SWE_as_the_barometer_falls #As soon as possible
+		SWE_defense_in_depth #As soon as possible
+		SWE_ga_pa_tactics #As soon as possible
+		SWE_end_the_fubkrieg #As soon as possible
+		SWE_swedes_not_sweden_to_finlands_aid
+		SWE_standardize_equipment #As soon as possible
+
+
+		SWE_research_slot_1
+		
+		
+		SWE_norma_projektilfabrik
+		SWE_approach_the_allies
+		SWE_bofors_fly_swatter
+		SWE_landverk_l_62
+		SWE_form_saab 
+		
+		
+		SWE_education_reform
+		SWE_rule_the_baltic
+		SWE_domestic_designs
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_narvik_crisis = 0
+		SWE_bornholm_crisis = 0
+		SWE_the_aland_issue = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_assertive_allies = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_ALLIES_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_deep_mining_complexes #35
+		SWE_government_weapons_contract #35
+		SWE_approach_the_allies #35
+		SWE_sieze_landsverk
+		SWE_demand_atlantic_resource_rights #35
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_join_allies_for_colonies
+
+		SWE_defense_in_depth
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_narvik_crisis = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_united_kingdoms_of_sweden_and_norway = 0
+		SWE_danish_alignment = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_expansion_allies = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_ALLIES_EXP
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_approach_the_allies #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_join_allies_for_colonies
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_economic_deregulation
+		SWE_finnish_integration
+		
+		SWE_greater_nordic_reich
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_narvik_crisis = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_expansion_soviet_ALLIES = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_ALLIES_ANTI_SOV
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_ALLIES_ANTI_SOV
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours #35
+		SWE_the_aland_issue  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_approach_the_allies #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_finnish_integration
+		SWE_scramble_for_the_baltic
+		SWE_economic_deregulation
+
+		SWE_greater_nordic_reich
+		SWE_join_allies_for_colonies
+		SWE_join_the_anti_soviet_pact
+		SWE_rapid_response_force
+		SWE_tank_development
+		SWE_let_fly_all_guns
+		SWE_crusade_against_bolshevism
+		SWE_reclaiming_the_rus
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_narvik_crisis = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_swedish_finnish_defense_agreement = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_finland = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_FIN
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_FIN
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+
+		#Rush these fascists focuses as soon as possible
+		SWE_the_old_enemy_stirs 							#As soon as possible
+		SWE_prevent_a_red_dictatorship 						#As soon as possible
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history 					#As soon as possible
+
+		SWE_government_weapons_contract
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_allow_landsverk_to_operate
+		SWE_as_the_barometer_falls #As soon as possible
+		SWE_the_aland_issue
+		SWE_swedish_finnish_defense_agreement
+		SWE_defense_in_depth #As soon as possible
+		SWE_ga_pa_tactics #As soon as possible
+		SWE_end_the_fubkrieg #As soon as possible
+		SWE_finlands_cause_is_ours
+		SWE_standardize_equipment #As soon as possible
+
+
+		SWE_research_slot_1
+		
+		
+		SWE_norma_projektilfabrik
+		SWE_approach_the_allies
+		SWE_bofors_fly_swatter
+		SWE_landverk_l_62
+		SWE_form_saab 
+		SWE_finnish_integration #just in case
+		
+		
+		SWE_education_reform
+		SWE_rule_the_baltic
+		SWE_domestic_designs
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_narvik_crisis = 0
+		SWE_bornholm_crisis = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_assertive_finland = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_FIN_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_FIN_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours
+		SWE_the_aland_issue
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_deep_mining_complexes #35
+		SWE_government_weapons_contract #35
+		SWE_swedish_finnish_defense_agreement
+		SWE_finnish_integration
+		SWE_narvik_crisis
+		SWE_sieze_landsverk
+		SWE_demand_atlantic_resource_rights #35
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+
+		SWE_defense_in_depth
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_approach_the_allies = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_united_kingdoms_of_sweden_and_norway = 0
+		SWE_danish_alignment = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_FASCIST_expansion_soviet_finland = {
+	name = "FASCIST Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_FIN_ANTI_SOV
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_FIN_ANTI_SOV
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_revoke_anti_militia_laws 				
+		SWE_appeal_for_support
+		SWE_unify_the_national_socialist_movement
+		SWE_organize_a_putsch
+		SWE_restoring_order
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours #35
+		SWE_the_aland_issue  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_swedish_finnish_defense_agreement #35
+		SWE_narvik_crisis
+		SWE_demand_atlantic_resource_rights #35
+		SWE_danish_alignment
+		SWE_united_kingdoms_of_sweden_and_norway #35
+		
+		SWE_sieze_landsverk
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_scramble_for_the_baltic
+		SWE_economic_deregulation
+
+		SWE_greater_nordic_reich
+		SWE_join_the_anti_soviet_pact
+		SWE_finnish_integration #in case something went awry
+		SWE_rapid_response_force
+		SWE_tank_development
+		SWE_let_fly_all_guns
+		SWE_crusade_against_bolshevism
+		SWE_reclaiming_the_rus
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_undermine_the_fascists = 0
+		SWE_delegation_to_berlin = 0
+		SWE_approach_the_allies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
 	}
 
 	research = {
@@ -358,9 +2378,7 @@ SWE_fascist_puppet = {
 		SWE_delegation_to_berlin 								#As soon as possible
 		SWE_economic_integration 								#As soon as possible
 		SWE_military_integration
-		SWE_germanify_sweden 									#As soon as possible
-		SWE_finland_claims 										#As soon as possible
-		SWE_establish_nordland 									#As soon as possible
+		SWE_germanify_sweden 									#As soon as possible 				
 		SWE_uranium_project
 
 		#Otherwise do the barometer falls as soon as possible as prio 2
@@ -379,6 +2397,105 @@ SWE_fascist_puppet = {
 		SWE_privately_managed_holidays
 		SWE_reject_saltsjobaden
 		SWE_research_slot_1
+		SWE_establish_nordland 							
+		SWE_government_weapons_contract
+		SWE_allow_landsverk_to_operate
+		SWE_norma_projektilfabrik
+		SWE_bofors_fly_swatter
+		SWE_landverk_l_62
+		SWE_form_saab
+		SWE_domestic_designs
+		SWE_formation_flying
+		SWE_airforce_modernization
+		
+		SWE_deep_mining_complexes
+		
+		
+	}
+
+	focus_factors = {
+		SWE_finland_claims = 0
+		SWE_establish_nordland = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_fascist_puppet_alt = {
+	name = "Puppet Fascist"
+	desc = "The Swedish AI will align itself with Germany, become a puppet and stay loyal to them"
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_FASCIST_PUPPET_NORDLAND
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_FASCIST_PUPPET_NORDLAND
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_defense_above_all
+
+		#Rush these fascists focuses as soon as possible
+		SWE_the_old_enemy_stirs 							#As soon as possible
+		SWE_prevent_a_red_dictatorship 						#As soon as possible
+		SWE_revoke_anti_militia_laws 						#As soon as possible
+		SWE_appeal_for_support 								#As soon as possible
+		SWE_unify_the_national_socialist_movement 			#As soon as possible
+		SWE_delegation_to_berlin 								#As soon as possible
+		SWE_economic_integration 								#As soon as possible
+		SWE_military_integration
+		SWE_germanify_sweden 									#As soon as possible
+		SWE_finland_claims 										#As soon as possible
+		SWE_uranium_project
+
+		#Otherwise do the barometer falls as soon as possible as prio 2
+		SWE_as_the_barometer_falls #As soon as possible
+		SWE_land_air_warfare #As soon as possible
+		SWE_defense_in_depth #As soon as possible
+		SWE_ga_pa_tactics #As soon as possible
+		SWE_rapid_response_force #As soon as possible
+		SWE_tank_development #As soon as possible
+		SWE_end_the_fubkrieg #As soon as possible
+		
+		SWE_standardize_equipment #As soon as possible
+		SWE_bofors_anti_tank_gun
+
+
+		SWE_privately_managed_holidays
+		SWE_reject_saltsjobaden
+		SWE_research_slot_1
+		SWE_establish_nordland 							
 		SWE_government_weapons_contract
 		SWE_allow_landsverk_to_operate
 		SWE_norma_projektilfabrik
@@ -456,9 +2573,6 @@ SWE_fascist_puppet_backstabber = {
 		SWE_economic_independence 							#As soon as possible
 		SWE_military_independence 							#As soon as possible
 		SWE_promote_nordic_identity
-		SWE_betray_germany_plan
-		SWE_finland_claims 									#As soon as possible
-		SWE_the_new_order 									#As soon as possible
 
 		#Otherwise do the barometer falls as soon as possible as prio 2
 		SWE_as_the_barometer_falls #As soon as possible
@@ -487,12 +2601,15 @@ SWE_fascist_puppet_backstabber = {
 		SWE_airforce_modernization 
 		
 		SWE_deep_mining_complexes
+
 		
 		
 	}
 
 	focus_factors = {
-		
+		SWE_betray_germany_plan = 10
+		SWE_finland_claims = 10 									
+		SWE_the_new_order = 10 									
 	}
 
 	research = {
@@ -542,7 +2659,7 @@ SWE_unaligned = {
 		SWE_urbanization
 		SWE_radiojanst
 		SWE_work_projects_for_the_unemployed
-		SWE_defense_above_all
+		SWE_hygenic_housing
 
 		#Rush these fascists focuses as soon as possible
 		SWE_the_old_enemy_stirs 							#As soon as possible
@@ -553,51 +2670,1071 @@ SWE_unaligned = {
 		SWE_attack_Landsorganisationen
 		SWE_king_in_council
 		SWE_mythologize_swedish_history 					#As soon as possible
-		SWE_join_the_anti_soviet_pact 						#As soon as possible
 
-		SWE_narvik_crisis 									#As soon as possible
-		SWE_united_kingdoms_of_sweden_and_norway 			#As soon as possible
-		SWE_bornholm_crisis 								#As soon as possible
-		SWE_demand_atlantic_resource_rights 				#As soon as possible
-		SWE_danish_alignment 								#As soon as possible
-		SWE_the_aland_issue 								#As soon as possible
-		SWE_demand_demilitarization_of_finnish_border 		#As soon as possible
-		SWE_finnish_integration 							#As soon as possible
-		SWE_greater_nordic_reich
-
-		#Otherwise do the barometer falls as soon as possible as prio 2
+		SWE_government_weapons_contract
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_allow_landsverk_to_operate
 		SWE_as_the_barometer_falls #As soon as possible
-		SWE_land_air_warfare #As soon as possible
 		SWE_defense_in_depth #As soon as possible
 		SWE_ga_pa_tactics #As soon as possible
-		SWE_rapid_response_force #As soon as possible
-		SWE_tank_development #As soon as possible
 		SWE_end_the_fubkrieg #As soon as possible
-		
+		SWE_swedes_not_sweden_to_finlands_aid
 		SWE_standardize_equipment #As soon as possible
-		SWE_bofors_anti_tank_gun
 
 
-		SWE_privately_managed_holidays
-		SWE_reject_saltsjobaden
 		SWE_research_slot_1
-		SWE_government_weapons_contract
-		SWE_allow_landsverk_to_operate
+		
+		
 		SWE_norma_projektilfabrik
 		SWE_bofors_fly_swatter
 		SWE_landverk_l_62
-		SWE_form_saab
-		SWE_domestic_designs
-		SWE_formation_flying
-		SWE_airforce_modernization 
+		SWE_form_saab 
 		
-		SWE_deep_mining_complexes
+		SWE_education_reform
+		SWE_rule_the_baltic
+		SWE_domestic_designs
 		
 		
 	}
 
 	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_approach_the_allies = 0
+		SWE_narvik_crisis = 0
+		SWE_bornholm_crisis = 0
+		SWE_the_aland_issue = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_assertive = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_NEU_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_NEU_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
 		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_deep_mining_complexes #35
+		SWE_government_weapons_contract #35
+		SWE_narvik_crisis #35
+		SWE_allow_landsverk_to_operate
+		SWE_demand_atlantic_resource_rights #35
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+
+		SWE_defense_in_depth
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_approach_the_allies = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_united_kingdoms_of_sweden_and_norway = 0
+		SWE_danish_alignment = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_expansion = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_NEU_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_NEU_EXP
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_narvik_crisis #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_united_kingdoms_of_sweden_and_norway
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_economic_deregulation
+		SWE_finnish_integration
+		
+		SWE_greater_nordic_reich
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_approach_the_allies = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_expansion_soviet = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_NEU_ANTI_SOV
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_NEU_ANTI_SOV
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours #35
+		SWE_the_aland_issue  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_narvik_crisis #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_united_kingdoms_of_sweden_and_norway
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_finnish_integration
+		SWE_scramble_for_the_baltic
+		SWE_economic_deregulation
+
+		SWE_greater_nordic_reich
+		SWE_join_the_anti_soviet_pact
+		SWE_rapid_response_force
+		SWE_tank_development
+		SWE_let_fly_all_guns
+		SWE_crusade_against_bolshevism
+		SWE_reclaiming_the_rus
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_approach_the_allies = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_allies = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_ALLIES
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+
+		#Rush these fascists focuses as soon as possible
+		SWE_the_old_enemy_stirs 							#As soon as possible
+		SWE_prevent_a_red_dictatorship 						#As soon as possible
+		SWE_undermine_the_fascists 						#As soon as possible
+		SWE_appeal_for_support
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen
+		SWE_king_in_council
+		SWE_mythologize_swedish_history 					#As soon as possible
+
+		SWE_government_weapons_contract
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_allow_landsverk_to_operate
+		SWE_as_the_barometer_falls #As soon as possible
+		SWE_defense_in_depth #As soon as possible
+		SWE_ga_pa_tactics #As soon as possible
+		SWE_end_the_fubkrieg #As soon as possible
+		SWE_swedes_not_sweden_to_finlands_aid
+		SWE_standardize_equipment #As soon as possible
+
+
+		SWE_research_slot_1
+		
+		
+		SWE_norma_projektilfabrik
+		SWE_approach_the_allies
+		SWE_bofors_fly_swatter
+		SWE_landverk_l_62
+		SWE_form_saab 
+		
+		
+		SWE_education_reform
+		SWE_rule_the_baltic
+		SWE_domestic_designs
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_narvik_crisis = 0
+		SWE_bornholm_crisis = 0
+		SWE_the_aland_issue = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_assertive_allies = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_ALLIES_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_deep_mining_complexes #35
+		SWE_government_weapons_contract #35
+		SWE_approach_the_allies #35
+		SWE_sieze_landsverk
+		SWE_demand_atlantic_resource_rights #35
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_join_allies_for_colonies
+
+		SWE_defense_in_depth
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_narvik_crisis = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_united_kingdoms_of_sweden_and_norway = 0
+		SWE_danish_alignment = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_finnish_integration = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_expansion_allies = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_ALLIES_EXP
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_the_aland_question
+		SWE_the_aland_issue #bypassed most games  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_approach_the_allies #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_join_allies_for_colonies
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_economic_deregulation
+		SWE_finnish_integration
+		
+		SWE_greater_nordic_reich
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_narvik_crisis = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_swedish_finnish_defense_agreement = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_expansion_soviet_ALLIES = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_ALLIES_ANTI_SOV
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_ALLIES_ANTI_SOV
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours #35
+		SWE_the_aland_issue  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_approach_the_allies #35
+		SWE_demand_atlantic_resource_rights #35
+		SWE_danish_alignment
+		SWE_sieze_landsverk
+		
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_demand_demilitarization_of_finnish_border #35
+		SWE_finnish_integration
+		SWE_scramble_for_the_baltic
+		SWE_economic_deregulation
+
+		SWE_greater_nordic_reich
+		SWE_join_allies_for_colonies
+		SWE_join_the_anti_soviet_pact
+		SWE_rapid_response_force
+		SWE_tank_development
+		SWE_let_fly_all_guns
+		SWE_crusade_against_bolshevism
+		SWE_reclaiming_the_rus
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_narvik_crisis = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_swedish_finnish_defense_agreement = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_finland = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_FIN
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_FIN
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+
+		#Rush these fascists focuses as soon as possible
+		SWE_the_old_enemy_stirs 							#As soon as possible
+		SWE_prevent_a_red_dictatorship 						#As soon as possible
+		SWE_undermine_the_fascists 						#As soon as possible
+		SWE_appeal_for_support
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen
+		SWE_king_in_council
+		SWE_mythologize_swedish_history 					#As soon as possible
+
+		SWE_government_weapons_contract
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_allow_landsverk_to_operate
+		SWE_as_the_barometer_falls #As soon as possible
+		SWE_the_aland_issue
+		SWE_swedish_finnish_defense_agreement
+		SWE_defense_in_depth #As soon as possible
+		SWE_ga_pa_tactics #As soon as possible
+		SWE_end_the_fubkrieg #As soon as possible
+		SWE_finlands_cause_is_ours
+		SWE_standardize_equipment #As soon as possible
+
+
+		SWE_research_slot_1
+		
+		
+		SWE_norma_projektilfabrik
+		SWE_approach_the_allies
+		SWE_bofors_fly_swatter
+		SWE_landverk_l_62
+		SWE_form_saab 
+		SWE_finnish_integration #just in case
+		
+		
+		SWE_education_reform
+		SWE_rule_the_baltic
+		SWE_domestic_designs
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_narvik_crisis = 0
+		SWE_bornholm_crisis = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_join_allies_for_colonies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_assertive_finland = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_FIN_ASSERTIVE
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_FIN_ASSERTIVE
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours
+		SWE_the_aland_issue
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_deep_mining_complexes #35
+		SWE_government_weapons_contract #35
+		SWE_swedish_finnish_defense_agreement
+		SWE_finnish_integration
+		SWE_narvik_crisis
+		SWE_sieze_landsverk
+		SWE_demand_atlantic_resource_rights #35
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+
+		SWE_defense_in_depth
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_approach_the_allies = 0
+		SWE_scramble_for_the_baltic = 0
+		SWE_join_the_anti_soviet_pact = 0
+		SWE_greater_nordic_reich = 0
+		SWE_united_kingdoms_of_sweden_and_norway = 0
+		SWE_danish_alignment = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
+		SWE_crusade_against_bolshevism = 0
+		SWE_reclaiming_the_rus = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_monarchist_expansion_soviet_finland = {
+	name = "Monarchist Sweden"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_MONARCHIST_FIN_ANTI_SOV
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_MONARCHIST_FIN_ANTI_SOV
+			}
+		}	
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+
+		SWE_defense_act #35
+		SWE_urbanization
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		SWE_hygenic_housing
+		SWE_the_old_enemy_stirs #35 ASAP
+		
+		#37
+		SWE_prevent_a_red_dictatorship #ASAP
+		SWE_undermine_the_fascists #35
+		SWE_appeal_for_support #35
+		SWE_meet_with_the_king
+		SWE_attack_Landsorganisationen #35
+		SWE_king_in_council
+		SWE_mythologize_swedish_history #35
+
+		SWE_defense_above_all
+		SWE_bornholm_crisis
+		SWE_privately_managed_holidays #35
+		SWE_reject_saltsjobaden
+		SWE_finlands_cause_is_ours #35
+		SWE_the_aland_issue  #35
+		SWE_license_skf_ball_bearings  #35
+
+		SWE_research_slot_1
+		SWE_government_weapons_contract #35
+		SWE_swedish_finnish_defense_agreement #35
+		SWE_narvik_crisis
+		SWE_demand_atlantic_resource_rights #35
+		SWE_danish_alignment
+		SWE_united_kingdoms_of_sweden_and_norway #35
+		
+		SWE_sieze_landsverk
+		SWE_as_the_barometer_falls #35
+		SWE_standardize_equipment #35
+		SWE_deep_mining_complexes #35
+		SWE_land_air_warfare
+		SWE_scramble_for_the_baltic
+		SWE_economic_deregulation
+
+		SWE_greater_nordic_reich
+		SWE_join_the_anti_soviet_pact
+		SWE_finnish_integration #in case something went awry
+		SWE_rapid_response_force
+		SWE_tank_development
+		SWE_let_fly_all_guns
+		SWE_crusade_against_bolshevism
+		SWE_reclaiming_the_rus
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+		
+		
+	}
+
+	focus_factors = {
+		SWE_revoke_anti_militia_laws = 0
+		SWE_approach_the_allies = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_demand_demilitarization_of_finnish_border = 0
 	}
 
 	research = {
@@ -644,12 +3781,99 @@ SWE_nordic_defence_council = {
 		SWE_the_old_enemy_stirs #As soon as possible
 		SWE_the_nordic_defense_council 
 
-		SWE_standardize_equipment #As soon as possible
-		SWE_as_the_barometer_falls #As soon as possible
-		SWE_defense_in_depth #As soon as possible
-		SWE_hedgehog_defense #As soon as possible
-		SWE_beneath_sticks_and_stones #As soon as possible
-		SWE_end_the_fubkrieg #As soon as possible
+		SWE_defense_act
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		 
+		#1937
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_privately_managed_holidays
+		SWE_saltsjobaden_agreement
+		SWE_research_slot_1
+		SWE_government_weapons_contract
+		SWE_allow_landsverk_to_operate
+
+		SWE_gotaverken
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik
+		SWE_bofors_fly_swatter
+		SWE_form_saab
+		SWE_bofors_anti_tank_gun
+		SWE_swedes_not_sweden_to_finlands_aid
+
+		SWE_standardized_equipment
+		SWE_as_the_barometer_falls 
+		SWE_defense_in_depth 
+
+		SWE_central_nordic_army_command
+		SWE_nordic_defense_fleet
+		
+		SWE_nordic_centralized_air_command
+		SWE_cement_control_of_the_baltic
+		SWE_neither_death_nor_dishonor
+
+		SWE_centralized_military_aid
+		SWE_merge_army_complexes
+		SWE_nordljus
+
+		SWE_deep_mining_complexes
+		SWE_per_albin_line
+		
+		
+		
+	}
+
+	focus_factors = {
+		SWE_prevent_a_red_dictatorship = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_preemptive_strike = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_nordic_defence_council_alt = {
+	name = "Nordic Defence Council"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_EXP
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		
+		SWE_the_old_enemy_stirs #As soon as possible
+		SWE_the_nordic_defense_council 
 
 		SWE_defense_act
 		SWE_urbanization
@@ -671,6 +3895,11 @@ SWE_nordic_defence_council = {
 		SWE_bofors_fly_swatter
 		SWE_form_saab
 		SWE_bofors_anti_tank_gun
+		SWE_finlands_cause_is_ours
+
+		SWE_standardized_equipment
+		SWE_as_the_barometer_falls 
+		SWE_defense_in_depth 
 
 		SWE_central_nordic_army_command
 		SWE_nordic_defense_fleet
@@ -683,17 +3912,192 @@ SWE_nordic_defence_council = {
 		SWE_merge_army_complexes
 		SWE_nordljus
 
-		#1939
 		SWE_deep_mining_complexes
 		SWE_per_albin_line
-		#1941
+		SWE_hedgehog_defense
+		SWE_the_cross_we_bear
+		SWE_the_threat_of_the_iron_curtain #bypassed
+		SWE_special_forces
+		SWE_beneath_sticks_and_stones
+		SWE_rule_the_baltic
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+		SWE_specialized_equipment
+		SWE_the_lion_of_the_north_rises
+		SWE_extend_the_time_of_preparedness
+		SWE_domestic_designs
+		SWE_mobilization_of_society
+		SWE_preemptive_strike
 		
 		
 		
 	}
 
 	focus_factors = {
+		SWE_prevent_a_red_dictatorship = 0
+		SWE_continue_the_second_industrial_revolution = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_nordic_defence_decentralised_council = {
+	name = "Nordic Defence Council"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_FACTION
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
 		
+		SWE_the_old_enemy_stirs #As soon as possible
+		SWE_the_nordic_defense_council 
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		 
+		#1937
+		SWE_individual_liberty_and_prosperity_for_all
+		SWE_paid_holidays
+		SWE_saltsjobaden_agreement
+		SWE_research_slot_1
+		SWE_government_weapons_contract
+		SWE_allow_landsverk_to_operate
+
+		SWE_gotaverken
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik
+		SWE_bofors_fly_swatter
+		SWE_form_saab
+		SWE_bofors_anti_tank_gun
+		SWE_swedes_not_sweden_to_finlands_aid
+
+		SWE_standardized_equipment
+		SWE_as_the_barometer_falls 
+		SWE_defense_in_depth 
+
+		SWE_decentralized_nordic_army_command
+		NORDIC_form_joint_alliance
+	}
+
+	focus_factors = {
+		SWE_prevent_a_red_dictatorship = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_central_nordic_army_command = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SWE_nordic_defence_decentralised_council_war = {
+	name = "Nordic Defence Council"
+	desc = ""
+
+	allowed = {
+		SWE_AAT = yes
+	}
+	enable = {
+		OR = {
+			has_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_FACTION_EXP
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = SWE_DEMOCRATIC_NORDIC_DEFENCE_FACTION_EXP
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		
+		SWE_the_old_enemy_stirs #As soon as possible
+		SWE_the_nordic_defense_council 
+
+		SWE_defense_act
+		SWE_urbanization
+		SWE_hygenic_housing
+		SWE_radiojanst
+		SWE_work_projects_for_the_unemployed
+		 
+		#1937
+		SWE_defense_above_all
+		SWE_paid_holidays
+		SWE_reject_saltsjobaden
+		SWE_research_slot_1
+		SWE_government_weapons_contract
+		SWE_sieze_landsverk
+
+		SWE_gotaverken
+		SWE_norma_projektilfabrik
+		SWE_husqvarna_vapenfabrik
+		SWE_bofors_fly_swatter
+		SWE_form_saab
+		SWE_bofors_anti_tank_gun
+		SWE_the_aland_question
+
+		SWE_standardized_equipment
+		SWE_as_the_barometer_falls 
+		SWE_defense_in_depth 
+
+		SWE_decentralized_nordic_army_command
+		NORDIC_form_joint_alliance
+		SWE_domestic_designs
+		SWE_rule_the_baltic
+	}
+
+	focus_factors = {
+		SWE_prevent_a_red_dictatorship = 0
+		SWE_continue_the_second_industrial_revolution = 0
+		SWE_central_nordic_army_command = 0
 	}
 
 	research = {
