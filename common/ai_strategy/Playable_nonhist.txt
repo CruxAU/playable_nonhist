@@ -7252,18 +7252,318 @@ DEN_make_potential_allies_like_me_GER = {
 		original_tag = DEN
 	}
 	enable = {
-		focus_progress = {
-			focus = DEN_ask_for_support
-			progress > 0.01
+		OR = {
+			AND = {
+				focus_progress = {
+					focus = DEN_strength_in_numbers
+					progress > 0.01
+				}
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_FP_REARM_GER
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FP_REARM_GER
+					}
+					AND = {
+						OR = {
+							has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+							has_game_rule = {
+								rule = DEN_ai_behavior
+								option = DEMOCRATIC_REARM_EURO
+							}
+						}
+						GER = {
+							OR = {
+								has_government = democratic
+								has_government = neutrality
+							}
+						}
+					}
+					AND = {
+						OR = {
+							has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+							has_game_rule = {
+								rule = DEN_ai_behavior
+								option = COMMUNIST_REARM_EURO
+							}
+						}
+						GER = {
+							has_government = communism
+						}
+					}
+					AND = {
+						OR = {
+							has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+							has_game_rule = {
+								rule = DEN_ai_behavior
+								option = MONARCHIST_ALLIANCE_ROYAL
+							}
+						}
+						GER = {
+							has_government = neutrality
+						}
+					}
+				}
+			}
+			focus_progress = {
+				focus = DEN_ask_for_support
+				progress > 0.01
+			}
 		}
+		
 	}
 	abort = {
-		has_completed_focus = DEN_ask_for_support
+		OR = {
+			has_completed_focus = DEN_ask_for_support
+			has_completed_focus = DEN_strength_in_numbers
+		}
 	}
 	
 	ai_strategy = {
 		type = diplo_action_desire
 		id = GER
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_allies_like_me_ENG = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		focus_progress = {
+			focus = DEN_strength_in_numbers
+			progress > 0.01
+		}
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEMOCRATIC_REARM_ENG
+			}
+			has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = MONARCHIST_ALLIANCE_ENG
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FP_REARM_EURO
+					}
+				}
+				ENG = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = COMMUNIST_REARM_EURO
+					}
+				}
+				ENG = {
+					has_government = communism
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ROYAL
+					}
+				}
+				ENG = {
+					has_government = neutrality
+				}
+			}
+		}
+		
+	}
+	abort = {
+		has_completed_focus = DEN_strength_in_numbers
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_allies_like_me_FRA = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		focus_progress = {
+			focus = DEN_strength_in_numbers
+			progress > 0.01
+		}
+		OR = {
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = DEMOCRATIC_REARM_EURO
+					}
+				}
+				FRA = {
+					OR = {
+						AND = {
+							has_government = neutrality
+							is_faction_leader = yes
+						}
+						has_government = democratic
+						has_completed_focus = FRA_anti_fascist_coalition
+					}
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FP_REARM_EURO
+					}
+				}
+				FRA = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = COMMUNIST_REARM_EURO
+					}
+				}
+				FRA = {
+					has_government = communism
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ROYAL
+					}
+				}
+				FRA = {
+					has_government = neutrality
+				}
+			}
+		}
+		
+	}
+	abort = {
+		has_completed_focus = DEN_strength_in_numbers
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
+		target = improve_relation
+		value = 500
+	}	
+}
+
+DEN_make_potential_allies_like_me_SOV = {
+	allowed = {
+		original_tag = DEN
+	}
+	enable = {
+		focus_progress = {
+			focus = DEN_strength_in_numbers
+			progress > 0.01
+		}
+		OR = {
+			has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_SOV
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = COMMUNIST_REARM_SOV
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = DEMOCRATIC_REARM_EURO
+					}
+				}
+				SOV = {
+					OR = {
+						AND = {
+							has_government = neutrality
+							has_completed_focus = SOV_romanov_reconstruction
+						}
+						has_completed_focus = SOV_coup_detat
+					}
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = FP_REARM_EURO
+					}
+				}
+				SOV = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = COMMUNIST_REARM_EURO
+					}
+				}
+				FRA = {
+					has_government = communism
+				}
+			}
+			AND = {
+				OR = {
+					has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+					has_game_rule = {
+						rule = DEN_ai_behavior
+						option = MONARCHIST_ALLIANCE_ROYAL
+					}
+				}
+				SOV = {
+					has_government = neutrality
+					has_completed_focus = SOV_romanov_reconstruction
+				}
+			}
+		}
+		
+	}
+	abort = {
+		has_completed_focus = DEN_strength_in_numbers
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
 		target = improve_relation
 		value = 500
 	}	
@@ -7416,6 +7716,37 @@ DEN_make_overlord_like_me_compliance_NOR = {
 #########################################################################################
 ######################### FIN ###########################################################
 #########################################################################################
+
+FIN_dont_like_to_join_factions_unless_focus = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		FIN = {
+			has_government = neutrality
+			is_in_faction = no
+			has_war = yes
+			NOT = {
+				has_completed_focus = FIN_join_the_allies
+			}
+			NOT = {
+				has_completed_focus = FIN_the_lone_wolf
+			}
+			NOT = {
+				has_completed_focus = FIN_northern_defense_front
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	reversed = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = FIN
+		value = -200
+	}
+}
 
 FIN_approach_soviets_relations = {
 	allowed = {

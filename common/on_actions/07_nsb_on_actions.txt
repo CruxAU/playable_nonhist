@@ -602,6 +602,42 @@ on_actions = {
 				}
 				clr_global_flag = SOV_soviet_civil_war
 				set_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						SOV = {
+							is_faction_leader = yes
+						}
+						any_other_country = {
+							OR = {
+								has_country_flag = NHMMAP_was_soviet_ally_flag
+								has_country_flag = NHMMAP_was_soviet_puppet_flag
+							}
+						}
+					}
+					every_other_country = {
+						limit = {
+							has_country_flag = NHMMAP_was_soviet_ally_flag
+							is_in_faction = no
+							is_subject = no
+							has_capitulated = no
+							has_war_with_major = no
+						}
+						add_to_faction = SOV
+						clr_country_flag = NHMMAP_was_soviet_ally_flag
+					}
+					every_other_country = {
+						limit = {
+							has_country_flag = NHMMAP_was_soviet_puppet_flag
+							is_in_faction = no
+							is_subject = no
+							has_capitulated = no
+						}
+						SOV = {
+							puppet = PREV 
+						}
+						clr_country_flag = NHMMAP_was_soviet_puppet_flag
+					}
+				}
 				IF = {
 					limit = { ROOT = { NOT = { SOV_is_stalinist = yes } } } 
 					SOV = { 

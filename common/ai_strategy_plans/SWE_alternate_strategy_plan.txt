@@ -87,6 +87,7 @@ SWE_welfare_alternate_plan = {
 		SWE_scandinavian_defense_union = 0
 		SWE_the_threat_of_the_iron_curtain = 0
 		SWE_preemptive_strike = 0
+		SWE_align_more_closely_with_the_landsorganisationen = 0
 	}
 
 	research = {
@@ -192,6 +193,7 @@ SWE_alt_democratic_plan = {
 		SWE_the_threat_of_the_iron_curtain = 0
 		SWE_preemptive_strike = 0
 		SWE_the_narvik_solution = 0
+		SWE_align_more_closely_with_the_landsorganisationen = 0
 	}
 
 	research = {
@@ -296,6 +298,7 @@ SWE_avenge_scandinavia_plan = {
 		SWE_scandinavian_defense_union = 0
 		SWE_preemptive_strike = 0
 		SWE_the_narvik_solution = 0
+		SWE_align_more_closely_with_the_landsorganisationen = 0
 	}
 
 	research = {
@@ -404,7 +407,7 @@ SWE_expansionist_democratic_plan = {
 	}
 
 	focus_factors = {
-
+		SWE_align_more_closely_with_the_landsorganisationen = 0
 	}
 
 	research = {
@@ -2087,7 +2090,6 @@ SWE_FASCIST_finland = {
 		
 		
 		SWE_norma_projektilfabrik
-		SWE_approach_the_allies
 		SWE_bofors_fly_swatter
 		SWE_landverk_l_62
 		SWE_form_saab 
@@ -2103,6 +2105,7 @@ SWE_FASCIST_finland = {
 
 	focus_factors = {
 		SWE_undermine_the_fascists = 0
+		SWE_approach_the_allies = 0
 		SWE_delegation_to_berlin = 0
 		SWE_narvik_crisis = 0
 		SWE_bornholm_crisis = 0

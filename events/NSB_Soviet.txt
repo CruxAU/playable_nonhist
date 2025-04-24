@@ -8127,6 +8127,27 @@ country_event = {
 	hidden = no
 
 	immediate = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = SOV
+				NOT = {
+					is_subject_of = SOV
+				}
+				NOT = {
+					original_tag = MON
+				}
+				NOT = {
+					original_tag = TAN
+				}
+			}
+			set_country_flag = NHMMAP_was_soviet_ally_flag
+		}
+		every_other_country = {
+			limit = {
+				is_subject_of = SOV
+			}
+			set_country_flag = NHMMAP_was_soviet_puppet_flag
+		}
 		hidden_effect = { SOV_initiate_civil_war = yes }
 	}
 	trigger = { NOT = { has_global_flag = SOV_soviet_civil_war } }
@@ -8724,6 +8745,27 @@ country_event = {
 	hidden = no
 
 	immediate = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = SOV
+				NOT = {
+					is_subject_of = SOV
+				}
+				NOT = {
+					original_tag = MON
+				}
+				NOT = {
+					original_tag = TAN
+				}
+			}
+			set_country_flag = NHMMAP_was_soviet_ally_flag
+		}
+		every_other_country = {
+			limit = {
+				is_subject_of = SOV
+			}
+			set_country_flag = NHMMAP_was_soviet_puppet_flag
+		}
 		hidden_effect = { SOV_initiate_civil_war = yes }
 	}
 

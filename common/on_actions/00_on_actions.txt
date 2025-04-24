@@ -1447,7 +1447,6 @@ on_actions = {
 	on_startup = {
 
 		effect = {
-
 			GER = { #Axis and Poland just didn't get along
 				add_ai_strategy = {
 				   type = alliance
@@ -2807,6 +2806,1651 @@ on_actions = {
 					}
 				}
 			}
+			SOV = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = NONHIST_ai_behavior
+							option = NO_AI_STRATEGY
+						}
+					}
+					set_country_flag = NO_AI_STRATEGY_RULE
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = HISTORICAL_PATHS
+							}
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = MINORS_ONLY
+							}
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = MINORS_FACTIONS
+							}
+						}
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = SOV_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = SOV_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = NONHIST_ai_behavior
+							option = TRUE_RANDOM
+						}
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = SOV_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = SOV_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_ALTERNATE } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_AGGRESSIVE } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_TROTSKY } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_KAMENEV } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_SMIRNOV } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_MIL } }
+						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION_COOPERATIVE } }
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_BUKHARIN } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_RYKOV } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_ZINOVYEV } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_MIL } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS_AMERICAS } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET_REBEL } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_PACIFIC } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_PROTECTOR } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_ROME } 
+						}
+						1 = { 
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_SLAVIC } 
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = SOV_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = SOV_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						25 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 1.5
+								GER = {
+									OR = { # make stalin more likely if germany is on historical AI for balance reasons
+										has_country_flag = GER_AI_RANDOM_FASCIST
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST
+										}
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = ANTI_HISTORICAL
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL }
+							set_add_communist_weight_large  = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						20 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							# modifier = {
+							# 	factor = 2
+							# 	GER = {
+							# 		OR = { # make this more likely if germany is on democratic AI for balance reasons
+							# 			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+							# 			has_game_rule = {
+							# 				rule = GER_ai_behavior
+							# 				option = DEMOCRATIC
+							# 			}
+							# 		}
+							# 	}
+							# }
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_ALTERNATE }
+							set_add_communist_weight_large  = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						5 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							# modifier = {
+							# 	factor = 5
+							# 	GER = {
+							# 		OR = { # make this more likely if germany is on democratic AI for balance reasons
+							# 			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+							# 			has_game_rule = {
+							# 				rule = GER_ai_behavior
+							# 				option = DEMOCRATIC
+							# 			}
+							# 		}
+							# 	}
+							# }
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_AGGRESSIVE }
+							set_add_communist_weight_large  = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						5 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.40
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_TROTSKY }
+							set_add_communist_weight_large  = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						3 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.40
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								 }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_SMIRNOV }
+							set_add_communist_weight_large = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						2 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.40
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								 }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_KAMENEV }
+							set_add_communist_weight_large = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						1 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.40
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								 }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_MIL }
+							set_add_communist_weight_large = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						4 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								 }
+							}
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION_COOPERATIVE }
+							set_add_communist_weight_large = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						5 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_BUKHARIN }
+							set_add_communist_weight_large = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						3 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_RYKOV }
+							set_add_communist_weight_small = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						2 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_ZINOVYEV }
+							set_add_communist_weight_small = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						1 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_MIL }
+							set_add_communist_weight_small = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						4 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE }
+							set_add_communist_weight_small = yes
+							set_global_flag = NHMMAP_has_euro_communist_leader
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						4 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_PROTECTOR }
+							set_add_unaligned_weight_small = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_democratic = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+						}
+						3 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_ROME }
+							set_add_unaligned_weight_small = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_unaligned = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+						}
+						3 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_SLAVIC }
+							set_add_unaligned_weight_small = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_unaligned = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+						}
+						2 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS }
+							set_add_fascist_game_weight_large = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						2 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS_AMERICAS }
+							set_add_fascist_game_weight_large = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+						}
+						2 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_PACIFIC }
+							set_add_fascist_weight_small = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							
+						}
+						2 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET }
+							set_add_fascist_weight_small = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							
+						}
+						2 = {
+							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET_REBEL }
+							set_add_fascist_weight_small = yes
+							modifier = {
+								factor = 0
+								NOT = { has_dlc = "No Step Back" }
+							}
+							modifier = {
+								factor = 0
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = {
+								factor = 0
+								has_dlc = "No Step Back"
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
+								factor = 0.01
+								GER = { 
+									OR = {
+										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
+										has_game_rule = {
+											rule = GER_ai_behavior
+											option = FASCIST_BERLIN_MOSCOW
+										}
+									}
+								}
+							}
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							
+						}	
+					}
+			
+				}
+			}
+			ENG = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+						has_game_rule = {
+							rule = NONHIST_ai_behavior
+							option = NO_AI_STRATEGY
+						}
+					}
+					set_country_flag = NO_AI_STRATEGY_RULE
+				}
+				else_if = {
+					limit = {
+						has_dlc = "Man the Guns"
+						OR = {
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = HISTORICAL_PATHS
+							}
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = MINORS_ONLY
+							}
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = MINORS_FACTIONS
+							}
+						}
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ENG_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ENG_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+				}
+				else_if = {
+					limit = {
+						has_dlc = "Man the Guns"
+						has_game_rule = {
+							rule = NONHIST_ai_behavior
+							option = TRUE_RANDOM
+						}
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ENG_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ENG_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						1 = { set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL }
+						1 = { set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE }
+						1 = { set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_DECOLONIZE }
+						1 = { set_country_flag = ENG_AI_RANDOM_FASCIST }
+						1 = { set_country_flag = ENG_AI_RANDOM_FASCIST_ANTI_GERMAN }
+						1 = { set_country_flag = ENG_AI_RANDOM_NEUTRALITY }
+						1 = { set_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS }
+						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA }
+						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA_2 }
+						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN }
+						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN_2 }						
+					}
+				}
+				else_if = {
+					limit = {
+						has_dlc = "Man the Guns"
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ENG_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ENG_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						5 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_communist_weight_small = yes
+							set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN
+						}
+						4 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_communist_weight_small = yes
+							set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN_2
+						}
+						2 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_communist_weight_large  = yes
+							set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						4 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_communist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_communist_weight_small = yes
+							set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA_2
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
+						}
+						20 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_democratic = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_democratic_game_weight_large = yes
+							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
+							set_global_flag = NHMMAP_has_euro_democratic_leader
+						}
+						30 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_democratic = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = ANTI_HISTORICAL
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_democratic_game_weight_large = yes
+							set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+							set_global_flag = NHMMAP_has_euro_democratic_leader
+						}
+						5 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_democratic = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = {
+								factor = 0.2
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = REALISTIC
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_democratic_weight_small = yes
+							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_DECOLONIZE
+							set_global_flag = NHMMAP_has_euro_democratic_leader
+						}
+						10 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_unaligned = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_unaligned_game_weight_large = yes
+							set_country_flag = ENG_AI_RANDOM_NEUTRALITY
+						}
+						10 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = FASCIST_ONLY
+									}
+								}
+							}
+							set_add_fascist_game_weight_large = yes
+							set_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS
+						}
+						10 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_fascist = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							set_add_fascist_game_weight_large = yes
+							set_country_flag = ENG_AI_RANDOM_FASCIST
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
+						}
+						10 = {
+							modifier = {
+								factor = 0.40
+								game_weight_can_add_unaligned = no
+								NOT = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							modifier = { 
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							set_add_unaligned_game_weight_large = yes
+							set_country_flag = ENG_AI_RANDOM_FASCIST_ANTI_GERMAN
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
+						}
+					}
+				}
+			}
 			ITA = {
 				if = {
 					limit = {
@@ -3031,6 +4675,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_fascist_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_fascist_leader
 								random_list = {
 									5 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_DIPLO } }
 									3 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_GI } }
@@ -3178,6 +4833,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_fascist_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_fascist_leader
 								random_list = {
 									5 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_DIPLO } }
 									3 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_MUSSOLINI_IF_GI } }
@@ -3348,6 +5014,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_fascist_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_fascist_leader
 								random_list = {
 									3 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_IF_DIPLO } }
 									4 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_IF_GI } }
@@ -3518,6 +5195,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_fascist_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_fascist_leader
 								random_list = {
 									3 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_IF_DIPLO } }
 									5 = { ITA = { set_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_IF_GI } }
@@ -3826,6 +5514,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_democratic_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_democratic_leader
 								random_list = {
 									6 = { ITA = { set_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_IF_DIPLO } }
 									2 = { ITA = { set_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_IF_GI } }
@@ -3984,6 +5683,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_communist_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_communist_leader
 								ITA = {
 									set_country_flag = ITA_AI_RANDOM_COMMUNIST_PERTINI_PLAN
 								}
@@ -4058,6 +5768,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_democratic_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_democratic_leader
 								ITA = {
 									set_country_flag = ITA_AI_RANDOM_DEMOCRATIC_FREESTATES_PLAN
 								}
@@ -5762,1107 +7483,6 @@ on_actions = {
 					}
 				}
 			}
-			SOV = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = NONHIST_ai_behavior
-							option = NO_AI_STRATEGY
-						}
-					}
-					set_country_flag = NO_AI_STRATEGY_RULE
-				}
-				else_if = {
-					limit = {
-						OR = {
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = HISTORICAL_PATHS
-							}
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = MINORS_ONLY
-							}
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = MINORS_FACTIONS
-							}
-						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SOV_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SOV_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
-				}
-				else_if = {
-					limit = {
-						has_game_rule = {
-							rule = NONHIST_ai_behavior
-							option = TRUE_RANDOM
-						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SOV_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SOV_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_ALTERNATE } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_AGGRESSIVE } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_TROTSKY } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_KAMENEV } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_SMIRNOV } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_MIL } }
-						1 = { SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION_COOPERATIVE } }
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_BUKHARIN } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_RYKOV } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_ZINOVYEV } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_MIL } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS_AMERICAS } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET_REBEL } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_PACIFIC } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_PROTECTOR } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_ROME } 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_SLAVIC } 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = SOV_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = SOV_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						25 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 1.5
-								GER = {
-									OR = { # make stalin more likely if germany is on historical AI for balance reasons
-										has_country_flag = GER_AI_RANDOM_FASCIST
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST
-										}
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = ANTI_HISTORICAL
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL }
-							set_add_communist_weight_large  = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							# modifier = {
-							# 	factor = 2
-							# 	GER = {
-							# 		OR = { # make this more likely if germany is on democratic AI for balance reasons
-							# 			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
-							# 			has_game_rule = {
-							# 				rule = GER_ai_behavior
-							# 				option = DEMOCRATIC
-							# 			}
-							# 		}
-							# 	}
-							# }
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_ALTERNATE }
-							set_add_communist_weight_large  = yes
-						}
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							# modifier = {
-							# 	factor = 5
-							# 	GER = {
-							# 		OR = { # make this more likely if germany is on democratic AI for balance reasons
-							# 			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
-							# 			has_game_rule = {
-							# 				rule = GER_ai_behavior
-							# 				option = DEMOCRATIC
-							# 			}
-							# 		}
-							# 	}
-							# }
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_STALIN_AGGRESSIVE }
-							set_add_communist_weight_large  = yes
-						}
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.40
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_TROTSKY }
-							set_add_communist_weight_large  = yes
-						}
-						3 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.40
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								 }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_SMIRNOV }
-							set_add_communist_weight_large = yes
-						}
-						2 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.40
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								 }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_KAMENEV }
-							set_add_communist_weight_large = yes
-						}
-						1 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.40
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								 }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_MIL }
-							set_add_communist_weight_large = yes
-						}
-						4 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								 }
-							}
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_LEFT_OPPOSITION_COOPERATIVE }
-							set_add_communist_weight_large = yes
-						}
-						5 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_BUKHARIN }
-							set_add_communist_weight_large = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						3 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_RYKOV }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						2 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_ZINOVYEV }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						1 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_MIL }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						4 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_COMMUNIST_RIGHT_OPPOSITION_COOPERATIVE }
-							set_add_communist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						4 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_PROTECTOR }
-							set_add_democratic_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-						}
-						3 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_ROME }
-							set_add_unaligned_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_unaligned = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-						}
-						3 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_TSARIST_SLAVIC }
-							set_add_unaligned_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_unaligned = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-						}
-						2 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS }
-							set_add_fascist_game_weight_large = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						2 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_AXIS_AMERICAS }
-							set_add_fascist_game_weight_large = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-						}
-						2 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_PACIFIC }
-							set_add_fascist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							
-						}
-						2 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET }
-							set_add_fascist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							
-						}
-						2 = {
-							SOV = { set_country_flag = SOV_AI_RANDOM_EXILES_FASCIST_JAPAN_PUPPET_REBEL }
-							set_add_fascist_weight_small = yes
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "No Step Back" }
-							}
-							modifier = {
-								factor = 0
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = {
-								factor = 0
-								has_dlc = "No Step Back"
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							modifier = { # DONT DO IF GERMANY WILL DO BERLIN MOSCOW
-								factor = 0.01
-								GER = { 
-									OR = {
-										has_country_flag = GER_AI_RANDOM_FASCIST_BERLIN_MOSCOW
-										has_game_rule = {
-											rule = GER_ai_behavior
-											option = FASCIST_BERLIN_MOSCOW
-										}
-									}
-								}
-							}
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							
-						}	
-					}
-			
-				}
-			}
 			FRA = {
 				if = {
 					limit = {
@@ -7085,6 +7705,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_country_flag = FRA_AI_COMMUNIST_ANTIFA
 							set_add_communist_weight_small = yes
 						}
@@ -7127,6 +7758,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_country_flag = FRA_AI_COMMUNIST_REVOLUTIONARY
 							set_add_communist_weight_small = yes
 						}
@@ -7161,6 +7803,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = FRA_AI_DEMOCRATIC_ALTERNATE
 							set_add_democratic_game_weight_large = yes
 						}
@@ -7361,6 +8014,17 @@ on_actions = {
 								factor = 0
 								NOT = { has_dlc = "La Resistance" }
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
 							set_country_flag = FRA_AI_FASCIST_LATIN_ENTENTE
 							set_add_fascist_game_weight_large = yes
 						}
@@ -9012,6 +9676,17 @@ on_actions = {
 										}
 									}
 								}
+								modifier = {
+									factor = 2
+									NOT = {
+										has_global_flag = NHMMAP_has_euro_democratic_leader
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								set_global_flag = NHMMAP_has_euro_democratic_leader
 								set_country_flag = HUN_AI_RANDOM_DEMOCRATIC_BALKAN
 								set_add_democratic_weight_small = yes
 							}
@@ -9057,8 +9732,34 @@ on_actions = {
 								}
 								set_add_democratic_weight_small = yes
 								random_list = {
-									2 = { set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY }
-									1 = { set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_AGGR }
+									2 = { 
+										modifier = {
+											factor = 2
+											NOT = {
+												has_global_flag = NHMMAP_has_euro_democratic_leader
+												has_game_rule = {
+													rule = NONHIST_ai_behavior
+													option = NO_GAME_BALANCE
+												}
+											}
+										}
+										set_global_flag = NHMMAP_has_euro_democratic_leader
+										set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY 
+									}
+									1 = { 
+										modifier = {
+											factor = 2
+											NOT = {
+												has_global_flag = NHMMAP_has_euro_democratic_leader
+												has_game_rule = {
+													rule = NONHIST_ai_behavior
+													option = NO_GAME_BALANCE
+												}
+											}
+										}
+										set_global_flag = NHMMAP_has_euro_democratic_leader
+										set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_AGGR 
+									}
 									2 = { set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_NEU }
 									2 = { set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_EXPANSIONIST }
 									1 = { set_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_EXPANSIONIST_AGGR }
@@ -9662,6 +10363,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = CZE_AI_RANDOM_DEMOCRATIC_ALTERNATE
 							set_add_democratic_weight_small = yes
 						}
@@ -9956,6 +10668,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_country_flag = YUG_AI_RANDOM_COMMUNIST_SLAVIC
 							set_add_communist_weight_small = yes
 						}
@@ -9999,6 +10722,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_country_flag = YUG_AI_RANDOM_COMMUNIST_BALKAN
 							set_add_communist_weight_small = yes
 						}
@@ -12619,6 +13353,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = POL_AI_RANDOM_LEFT_BALTIC
 							set_add_democratic_weight_small = yes
 						}
@@ -12661,6 +13406,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = POL_AI_RANDOM_LEFT_INTERMARIUM
 							set_add_democratic_game_weight_large = yes
 						}
@@ -13072,6 +13828,17 @@ on_actions = {
 								factor = 0
 								NOT = { has_dlc = "No Step Back" }
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = POL_AI_RANDOM_DEMOCRATIC_MORGES
 							set_add_democratic_weight_small = yes
 						}
@@ -13122,6 +13889,17 @@ on_actions = {
 								factor = 0
 								NOT = { has_dlc = "No Step Back" }
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = POL_AI_RANDOM_DEMOCRATIC_MIEDZYMORZE
 							set_add_democratic_game_weight_large = yes
 						}
@@ -13221,6 +13999,17 @@ on_actions = {
 							set_add_fascist_weight_small = yes
 						}
 						2 = {
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
 							set_country_flag = POL_AI_RANDOM_FALANGE_INTERNATIONAL
 							set_add_fascist_weight_small = yes
 							modifier = {
@@ -14011,490 +14800,6 @@ on_actions = {
 					}
 				}
 			}
-			ENG = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						has_game_rule = {
-							rule = NONHIST_ai_behavior
-							option = NO_AI_STRATEGY
-						}
-					}
-					set_country_flag = NO_AI_STRATEGY_RULE
-				}
-				else_if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						OR = {
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = HISTORICAL_PATHS
-							}
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = MINORS_ONLY
-							}
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = MINORS_FACTIONS
-							}
-						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ENG_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ENG_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-				}
-				else_if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						has_game_rule = {
-							rule = NONHIST_ai_behavior
-							option = TRUE_RANDOM
-						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ENG_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ENG_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						1 = { set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL }
-						1 = { set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE }
-						1 = { set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_DECOLONIZE }
-						1 = { set_country_flag = ENG_AI_RANDOM_FASCIST }
-						1 = { set_country_flag = ENG_AI_RANDOM_FASCIST_ANTI_GERMAN }
-						1 = { set_country_flag = ENG_AI_RANDOM_NEUTRALITY }
-						1 = { set_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS }
-						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA }
-						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA_2 }
-						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN }
-						1 = { set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN_2 }						
-					}
-				}
-				else_if = {
-					limit = {
-						has_dlc = "Man the Guns"
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = ENG_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = ENG_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN
-						}
-						4 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = ENG_AI_RANDOM_COMMUNIST_COMINTERN_2
-						}
-						2 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_communist_weight_large  = yes
-							set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA
-						}
-						4 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_communist_weight_small = yes
-							set_country_flag = ENG_AI_RANDOM_COMMUNIST_BCA_2
-						}
-						20 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_democratic_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
-						}
-						30 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = ANTI_HISTORICAL
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_democratic_game_weight_large = yes
-							set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-						}
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0.2
-								has_game_rule = {
-									rule = NONHIST_ai_behavior
-									option = REALISTIC
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_democratic_weight_small = yes
-							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_DECOLONIZE
-						}
-						10 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_unaligned = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_unaligned_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_NEUTRALITY
-						}
-						10 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-								}
-							}
-							set_add_fascist_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_NEUTRALITY_AXIS
-						}
-						10 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							set_add_fascist_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_FASCIST
-						}
-						10 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_unaligned = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = { 
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = COMMUNIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = DEMOCRATIC_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-								}
-							}
-							set_add_unaligned_game_weight_large = yes
-							set_country_flag = ENG_AI_RANDOM_FASCIST_ANTI_GERMAN
-						}
-					}
-				}
-			}
 			USA = {
 				if = {
 					limit = {
@@ -15194,6 +15499,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_add_democratic_weight_small = yes
 							set_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_3
 						}
@@ -15233,6 +15549,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_add_democratic_weight_small = yes
 							set_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE_4
 						}
@@ -18612,6 +18939,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							set_country_flag = BUL_AI_RANDOM_COMMUNIST_BALKAN_FEDERATION
 						}
@@ -18655,6 +18993,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							set_country_flag = BUL_AI_RANDOM_COMMUNIST_BALKAN_FEDERATION_AUTONOMY
 						}
@@ -18941,6 +19290,17 @@ on_actions = {
 								}
 							}
 							set_add_democratic_weight_small = yes
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = BUL_AI_RANDOM_DEMOCRATIC_SOCIALIST_BALKANS 
 						}
 						6 = {
@@ -19023,6 +19383,17 @@ on_actions = {
 								}
 							}
 							set_add_democratic_weight_small = yes
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = BUL_AI_RANDOM_DEMOCRATIC_TSARDOM_BALKANS
 						}
 					}
@@ -19314,6 +19685,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							set_country_flag = GRE_AI_RANDOM_COMMUNIST_ALTERNATE
 						}
@@ -24286,6 +24668,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = SWI_AI_RANDOM_EXPANSIONIST_NE
 							set_add_democratic_weight_small = yes
 						}
@@ -24442,6 +24835,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_country_flag = SWI_AI_RANDOM_AP_NE 
 							set_add_democratic_weight_small = yes
 						}
@@ -24806,6 +25210,17 @@ on_actions = {
 											option = MINORS_FACTIONS
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = SWE_AI_RANDOM_FASCIST_FIN
 								}
 								7 = {
@@ -24816,6 +25231,17 @@ on_actions = {
 											option = MINORS_FACTIONS
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = SWE_AI_RANDOM_FASCIST_FIN_ASSERTIVE
 								}
 								2 = {
@@ -24826,6 +25252,17 @@ on_actions = {
 											option = MINORS_FACTIONS
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = SWE_AI_RANDOM_FASCIST_FIN_ANTI_SOV
 								}
 							}
@@ -24922,6 +25359,17 @@ on_actions = {
 											}
 										}										
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 									set_add_democratic_game_weight_large = yes
 								}
@@ -24939,6 +25387,17 @@ on_actions = {
 											}
 										}										
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL_EXP
 									set_add_democratic_game_weight_large = yes
 								}
@@ -24956,6 +25415,17 @@ on_actions = {
 											}
 										}										
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_FACTION
 									set_add_democratic_weight_small = yes
 								}
@@ -24973,6 +25443,17 @@ on_actions = {
 											}
 										}										
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = SWE_AI_RANDOM_DEMOCRATIC_NORDIC_DEFENCE_FACTION_EXP
 									set_add_democratic_weight_small = yes
 								}
@@ -25061,6 +25542,17 @@ on_actions = {
 											}	
 										}								
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_NORDIC
 								}
 								5 = {
@@ -25077,6 +25569,17 @@ on_actions = {
 											}	
 										}										
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = SWE_AI_RANDOM_COMMUNIST_FLYG_NORDIC_AGGR
 								}
 								10 = {
@@ -25159,6 +25662,17 @@ on_actions = {
 											}	
 										}								
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_NORDIC
 								}
 								4 = {
@@ -25175,6 +25689,17 @@ on_actions = {
 											}	
 										}										
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = SWE_AI_RANDOM_COMMUNIST_LINDEROT_NORDIC_AGGR
 								}
 							}
@@ -25654,6 +26179,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = FIN_AI_RANDOM_FASCIST_NORDIC 
 								}
 								5 = { 
@@ -25670,6 +26206,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = FIN_AI_RANDOM_FASCIST_NORDIC_EXP 
 								}
 								17 = { set_country_flag = FIN_AI_RANDOM_FASCIST_COUP_AXIS }
@@ -25707,6 +26254,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = FIN_AI_RANDOM_FASCIST_COUP_NORDIC 
 								}
 								3 = { 
@@ -25723,6 +26281,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_fascist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_fascist_leader
 									set_country_flag = FIN_AI_RANDOM_FASCIST_COUP_NORDIC_EXP 
 								}
 							}
@@ -25823,6 +26392,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC 
 								}
 								2 = { 
@@ -25839,6 +26419,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC_BALTIC 
 								}
 								1 = { 
@@ -25855,6 +26446,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = FIN_AI_RANDOM_COMMUNIST_PRO_SOV_NORDIC_SAMPI 
 								}
 								13 = { 
@@ -25881,6 +26483,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV_NORDIC 
 								}
 								2 = { 
@@ -25897,6 +26510,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = FIN_AI_RANDOM_COMMUNIST_ANTISOV_NORDIC_BALTIC 
 								}	
 								5 = { 
@@ -25913,6 +26537,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_communist_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_communist_leader
 									set_country_flag = FIN_AI_RANDOM_COMMUNIST_FINNO_RUSSIAN 
 								}
 							}
@@ -26003,6 +26638,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ANTISOV_NORDIC 
 								}
 								2 = { 
@@ -26019,6 +26665,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = FIN_AI_RANDOM_DEMOCRATIC_ANTISOV_NORDIC_BALTIC 
 								}
 								5 = { 
@@ -26035,6 +26692,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = FIN_AI_RANDOM_DEMOCRATIC_FINNO_RUSSIAN 
 								}
 								20 = { 
@@ -26061,6 +26729,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC 
 								}
 								2 = { 
@@ -26077,6 +26756,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC_BALTIC 
 								}
 								1 = { 
@@ -26093,6 +26783,17 @@ on_actions = {
 											}
 										}
 									}
+									modifier = {
+										factor = 2
+										NOT = {
+											has_global_flag = NHMMAP_has_euro_democratic_leader
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = NO_GAME_BALANCE
+											}
+										}
+									}
+									set_global_flag = NHMMAP_has_euro_democratic_leader
 									set_country_flag = FIN_AI_RANDOM_DEMOCRATIC_PRO_SOV_NORDIC_SAMPI 
 								}
 							}
@@ -26478,6 +27179,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_add_democratic_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_DEMOCRATIC_NORDIC
@@ -26519,6 +27231,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_add_democratic_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_DEMOCRATIC_NORDIC_EXP
@@ -26942,6 +27665,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
 							set_add_fascist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_FASCIST_PAN_GERMANIC
@@ -26983,6 +27717,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
 							set_add_fascist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_FASCIST_PAN_GERMANIC_V_RU
@@ -27024,6 +27769,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_fascist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_fascist_leader
 							set_add_fascist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_FASCIST_PAN_GERMANIC_V_UK
@@ -27262,6 +28018,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL
@@ -27303,6 +28070,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL_NORD
@@ -27344,6 +28122,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL_GER
@@ -27385,6 +28174,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_communist_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_communist_leader
 							set_add_communist_weight_small = yes
 							NOR = {
 								set_country_flag = NOR_AI_RANDOM_TROSTSKYIST_INTERNATIONAL_SOV
@@ -30005,6 +30805,17 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 2
+								NOT = {
+									has_global_flag = NHMMAP_has_euro_democratic_leader
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = NO_GAME_BALANCE
+									}
+								}
+							}
+							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_add_democratic_game_weight_large = yes
 							AUS = { 
 								set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_FEDERATIVE 

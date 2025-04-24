@@ -7315,14 +7315,34 @@ focus_tree = {
 					is_subject = yes
 					has_capitulated = yes
 					exists = no
-					has_war = yes
 					has_government = fascism
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							is_major = yes
+							has_government = fascism
+						}
+					}
 				}
 			}
 		}
 
 		bypass = {
-			is_subject = yes
+			OR = {
+				is_subject = yes
+				AND = {
+					DEN = {
+						has_capitulated = no
+						has_war = yes
+						NOT = {
+							any_enemy_country = {
+								is_major = yes
+								has_government = fascism
+							}
+						}
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -7384,6 +7404,10 @@ focus_tree = {
 						has_war = yes
 						is_subject = no
 						NOT = { has_government = fascism }
+						any_enemy_country = {
+							is_major = yes
+							has_government = fascism
+						}
 					}
 				}
 
@@ -7438,20 +7462,39 @@ focus_tree = {
 		}
 
 		available = {
-
 			NOR = {
 				OR = {
 					is_subject = yes
 					has_capitulated = yes
 					exists = no
-					has_war = yes
 					has_government = fascism
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							is_major = yes
+							has_government = fascism
+						}
+					}
 				}
 			}
 		}
 
 		bypass = {
-			is_subject = yes
+			OR = {
+				is_subject = yes
+				AND = {
+					NOR = {
+						has_war = yes
+						has_capitulated = no
+						NOT = {
+							any_enemy_country = {
+								is_major = yes
+								has_government = fascism
+							}
+						}
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -7513,9 +7556,12 @@ focus_tree = {
 						has_war = yes
 						is_subject = no
 						NOT = { has_government = fascism }
+						any_enemy_country = {
+							is_major = yes
+							has_government = fascism
+						}
 					}
 				}
-
 				NOR = {
 					every_enemy_country = {
 						SWE = {
@@ -8445,6 +8491,15 @@ focus_tree = {
 		available = {
 			is_subject_of = GER
 			has_government = fascism
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				OR = {
+					date > 1941.04.01
+					has_war_with = SOV
+				}
+			}
 		}
 	    bypass = {
 	    	OR = {

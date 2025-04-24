@@ -6645,6 +6645,7 @@ DEN_danish_security_category = {
 			FROM = {
 				is_subject = no
 				NOT = { 
+					has_idea = FIN_the_lone_wolf
 					has_war_with = ROOT
 					is_in_faction_with = ROOT
 					has_variable = DEN_guaranteeing_nation
@@ -6674,16 +6675,6 @@ DEN_danish_security_category = {
 				AND = {
 					ROOT = { has_government = neutrality }
 					FROM = { NOT = { has_government = communism } }
-				}
-				AND = {
-					ROOT = { has_government = communism }
-					FROM = { has_government = communism }
-					FROM = {
-						OR = {
-							original_tag = SOV
-							is_faction_leader = yes
-						}
-					}
 				}
 			}			
 			FROM = {

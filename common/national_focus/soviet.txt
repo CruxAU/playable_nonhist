@@ -17228,6 +17228,13 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_rule = can_join_factions }
+				}
+				custom_effect_tooltip = SOV_recognized_country_tt
+				set_rule = { can_join_factions = yes }
+			}
 			hidden_effect = {
 				set_temp_variable = {
 					var = dismantle_the_zemsky_sobor_var
@@ -17372,6 +17379,13 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_rule = can_join_factions }
+				}
+				custom_effect_tooltip = SOV_recognized_country_tt
+				set_rule = { can_join_factions = yes }
+			}
 			add_timed_idea = {
 				idea = SOV_romanov_reconstruction
 				days = 730
@@ -17634,13 +17648,6 @@ ai_will_do = {
 		}
 
 		completion_reward = { 
-			if = {
-				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
 			every_other_country = {
 	 		 	limit = {
 	     			OR = {
@@ -17686,13 +17693,6 @@ ai_will_do = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
 			random_country = {
 	 		 	limit = {
 	     			 owns_state = 2
@@ -18137,13 +18137,6 @@ ai_will_do = {
 		completion_reward = {
 			if = {
 				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
-			if = {
-				limit = {
 					ENG = {
 						is_faction_leader = yes
 						NOT = { has_war_with = ROOT }
@@ -18369,13 +18362,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
 			effect_tooltip = {
 				every_country = {
 	 			 	limit = {
@@ -18780,13 +18766,6 @@ ai_will_do = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
 			if = {
 				limit = {
 					is_in_faction = no
@@ -19215,13 +19194,6 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
 			custom_effect_tooltip = SOV_an_empire_in_the_pacific_tt
 			hidden_effect = {
 				every_state = {
@@ -19274,13 +19246,6 @@ ai_will_do = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_rule = can_join_factions }
-				}
-				custom_effect_tooltip = SOV_recognized_country_tt
-				set_rule = { can_join_factions = yes }
-			}
 			GER = {
 				country_event = { id = NSB_soviet_fascist_tsarist.22 hours = 6 }
 			}

@@ -6133,6 +6133,10 @@ SWI_military_readiness_decisions_category = {
 			}
 			modifier = {
 				factor = 0
+				SWI_council_not_filled = yes
+			}
+			modifier = {
+				factor = 0
 				OR = {
 					SWI_AI_is_communist = yes
 					SWI_AI_is_imperial = yes
@@ -6196,6 +6200,10 @@ SWI_military_readiness_decisions_category = {
 			}
 			modifier = {
 				factor = 0
+				SWI_council_not_filled = yes
+			}
+			modifier = {
+				factor = 0
 				OR = {
 					SWI_AI_is_communist = yes
 					SWI_AI_is_imperial = yes
@@ -6252,6 +6260,10 @@ SWI_military_readiness_decisions_category = {
 			modifier = {
 				factor = 0
 				SWI_MR_full = yes 
+			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
 			}
 			modifier = {
 				factor = 0
@@ -6317,6 +6329,10 @@ SWI_military_readiness_decisions_category = {
 				SWI_MR_full = yes 
 			}
 			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
+			}
+			modifier = {
 				factor = 0.1
 				check_variable = {
 					var = SWI_max_mil_readiness
@@ -6344,6 +6360,10 @@ SWI_military_readiness_decisions_category = {
 			modifier = {
 				factor = 10
 				check_variable = { SWI_militia_division_cap < 20 }
+			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
 			}
 			modifier = {
 				factor = 0 
@@ -6435,6 +6455,10 @@ SWI_military_readiness_decisions_category = {
 			}
 			modifier = {
 				factor = 0
+				SWI_council_not_filled = yes
+			}
+			modifier = {
+				factor = 0
 				SWI_MR_full = yes 
 			}
 		}
@@ -6489,6 +6513,10 @@ SWI_military_readiness_decisions_category = {
 				SWI_MR_full = yes
 				check_variable = { SWI_military_readiness > 150 }
 			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
+			}
 		}
 	}
  
@@ -6542,6 +6570,10 @@ SWI_military_readiness_decisions_category = {
 				factor = 2
 				SWI_MR_full = yes
 				check_variable = { SWI_military_readiness > 150 }
+			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
 			}
 		}
 	}
@@ -6613,6 +6645,10 @@ SWI_military_readiness_decisions_category = {
 				factor = 0 
 				check_variable = { SWI_militia_template_level > 7 }
 			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
+			}
 		}
 	}
 
@@ -6666,6 +6702,10 @@ SWI_military_readiness_decisions_category = {
 				SWI_MR_full = yes
 				check_variable = { SWI_military_readiness > 150 }
 			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
+			}
 		}
 	}
 
@@ -6715,6 +6755,10 @@ SWI_military_readiness_decisions_category = {
 				factor = 3
 				SWI_MR_full = yes
 				check_variable = { SWI_military_readiness > 150 }
+			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
 			}
 		}
 	}
@@ -6773,6 +6817,10 @@ SWI_military_readiness_decisions_category = {
 				factor = 3
 				SWI_MR_full = yes
 				check_variable = { SWI_military_readiness > 150 }
+			}
+			modifier = {
+				factor = 0
+				SWI_council_not_filled = yes
 			}
 		}
 	}
