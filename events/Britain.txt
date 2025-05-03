@@ -336,6 +336,11 @@ country_event = {
 			factor = 4 
 		}
 		name = britain.10.a
+
+		trigger = { #MM: This option should not appear if Churchill is not in the country - GoE content if he is transferred to India via event chain triggered by focus RAJ_the_jewel_becomes_the_crown
+		has_character = ENG_winston_churchill
+	}
+	
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Winston Churchill"

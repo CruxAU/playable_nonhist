@@ -165,7 +165,7 @@ SPR_caaaarl_that_kills_people = {
 		SPA_the_army_of_africa
 		SPA_secure_the_northern_garrisons
 		SPA_foment_a_carlist_split
-		SPA_con_paquito
+		SPA_sin_paquito
 		SPA_supremacy_of_the_communion
 	}
 

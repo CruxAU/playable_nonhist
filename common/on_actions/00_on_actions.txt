@@ -1447,6 +1447,7 @@ on_actions = {
 	on_startup = {
 
 		effect = {
+
 			GER = { #Axis and Poland just didn't get along
 				add_ai_strategy = {
 				   type = alliance
@@ -12626,6 +12627,14 @@ on_actions = {
 							}
 						}
 						random_list = {
+							30 = {
+								modifier = {
+									factor = 0.25
+									game_weight_can_add_democratic = no
+								}
+								set_country_flag = RAJ_AI_RANDOM_INDIA_LOYALTY
+								set_add_democratic_weight_small = yes
+							}
 							20 = {
 								modifier = { 
 									factor = 0
@@ -12899,6 +12908,14 @@ on_actions = {
 									}
 								}
 								set_country_flag = RAJ_AI_RANDOM_INDIA_COMMUNISM
+								set_add_communist_weight_small = yes
+							}
+							5 = {
+								modifier = {
+									factor = 0.15
+									game_weight_can_add_communist = no
+								}
+								set_country_flag = RAJ_AI_RANDOM_INDIA_COMMUNISM_URBAN
 								set_add_communist_weight_small = yes
 							}
 						}

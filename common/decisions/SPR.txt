@@ -5653,14 +5653,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -5832,14 +5832,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -6011,14 +6011,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -6190,14 +6190,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -6369,14 +6369,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -6548,14 +6548,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -6727,14 +6727,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -6906,14 +6906,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -7085,14 +7085,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -7264,14 +7264,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -7443,14 +7443,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -7622,14 +7622,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -7801,14 +7801,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -7980,14 +7980,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -8159,14 +8159,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -8338,14 +8338,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -8517,14 +8517,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -8696,14 +8696,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -8875,14 +8875,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -9054,14 +9054,14 @@ SPR_opposition_civil_war_preparations = {
 						date > 1936.7.19
 						date < 1936.9.16
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 21 }
 				}
 				if = {
 					limit = {
 						ROOT = { has_completed_focus = SPR_the_popular_front }
 						date > 1936.9.15
 					}
-					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 45 }
+					set_state_flag = { flag = SPR_ai_recently_expanded_influence_flag value = 1 days = 30 }
 				}
 			}
 			if = {
@@ -15032,7 +15032,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15094,7 +15094,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15156,7 +15156,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15218,7 +15218,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15280,7 +15280,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15342,7 +15342,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15404,7 +15404,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15466,7 +15466,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15528,7 +15528,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15590,7 +15590,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15652,7 +15652,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15714,7 +15714,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15776,7 +15776,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15838,7 +15838,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15900,7 +15900,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -15962,7 +15962,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -16024,7 +16024,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -16086,7 +16086,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -16148,7 +16148,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -16210,7 +16210,7 @@ SPA_preparing_the_carlist_insurrection = {
 
 		fire_only_once = no
 
-		days_remove = 90
+		days_remove = 75
 
 		visible = {
 			has_global_flag = spanish_civil_war
@@ -17361,14 +17361,18 @@ SPR_the_seeds_of_revolution = {
 			}
 		}
 
-		cost = 50
+		cost = 25
 
 		fire_only_once = yes
 
-		days_remove = 60
+		days_remove = 50
 
 		modifier = {
-			political_power_gain = -1
+			political_power_gain = -0.25
+		}
+
+		ai_will_do = {
+			base = 10
 		}
 
 		visible = {
@@ -17462,14 +17466,14 @@ SPR_the_seeds_of_revolution = {
 			}
 		}
 
-		cost = 150
+		cost = 75
 
 		fire_only_once = yes
 
-		days_remove = 90
+		days_remove = 75
 
 		modifier = {
-			political_power_gain = -1
+			political_power_gain = -0.5
 		}
 
 		visible = {
@@ -17480,6 +17484,10 @@ SPR_the_seeds_of_revolution = {
 
 		complete_effect = {
 
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 
 		remove_effect = {

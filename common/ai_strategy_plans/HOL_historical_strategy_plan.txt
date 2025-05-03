@@ -22,7 +22,18 @@ HOL_historical_plan = {
 		}
 	}
 	abort = {
-		
+		date > 1939.4.1
+		has_completed_focus = HOL_gateway_to_europe
+		OR = {
+			AND = {
+				check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+				check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			}
+			AND = {
+				check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
+				check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			}
+		}
 	}
 
 	ai_national_focuses = {
@@ -56,12 +67,20 @@ HOL_historical_plan = {
 
 	}
 
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_maintain_trade_neutrality = 0
+		HOL_cave_to_the_british = 0
+		HOL_germany_is_the_greater_threat = 0
+		HOL_protect_against_britain = 0
+	}
+
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
 		factor = 1.0
 		modifier = {
-			factor = 1.0
+			factor = 2.0
 		}
 	}
 
@@ -76,8 +95,13 @@ HOL_historical_plan_everyone_is_hist = {
 	}
 	enable = {
 		AND = {
+			date > 1939.4.1
 			has_completed_focus = HOL_gateway_to_europe
 			check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			ENG = {
+				has_completed_focus = ENG_steady_as_she_goes
+			}
 			OR = {
 				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
 				has_game_rule = {
@@ -96,25 +120,7 @@ HOL_historical_plan_everyone_is_hist = {
 		
 	}
 	abort = {
-		OR = {
-			AND = {
-				OR = {
-					has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
-					has_game_rule = {
-						rule = HOL_ai_behavior 
-						option = DEMOCRATIC_HISTORICAL
-					}
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = HOL_ai_behavior 
-							option = DEFAULT
-						}
-					}
-				}
-				ENG = { has_completed_focus = ENG_a_change_in_course }
-			}
-		}
+		ENG = { has_completed_focus = ENG_a_change_in_course }
 	}
 
 	ai_national_focuses = {
@@ -178,8 +184,16 @@ HOL_historical_plan_germans_more_influence = {
 	}
 	enable = {
 		AND = {
+			date > 1939.4.1
 			has_completed_focus = HOL_gateway_to_europe
 			check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			GER = {
+				OR = {
+					has_completed_focus = GER_rhineland
+					has_completed_focus = GER_remilitarize_the_rhineland
+				}
+			}
 			OR = {
 				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
 				has_game_rule = {
@@ -198,28 +212,12 @@ HOL_historical_plan_germans_more_influence = {
 		
 	}
 	abort = {
-		OR = {
-			AND = {
-				OR = {
-					has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
-					has_game_rule = {
-						rule = HOL_ai_behavior 
-						option = DEMOCRATIC_HISTORICAL
-					}
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = HOL_ai_behavior 
-							option = DEFAULT
-						}
-					}
-				}
-				GER = { has_completed_focus = GER_oppose_hitler }
+		GER = {
+			OR = {
+				has_completed_focus = GER_oppose_hitler
+				has_completed_focus = GER_oppose_hitler_ww
 			}
 		}
-		
-	
-		
 	}
 
 	ai_national_focuses = {

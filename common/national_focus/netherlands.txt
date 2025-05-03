@@ -3428,35 +3428,7 @@ focus_tree = {
 			
 		}
 		bypass = {
-			OR = {
-				GER = { NOT = { has_government = fascism } }
-				GER = { exists = no }
-				GER = {
-					if = {
-						limit = {
-							NOT = { has_dlc = "Gotterdammerung" }
-						}
-						has_completed_focus = GER_oppose_hitler
-					}
-					else = {
-						has_completed_focus = GER_oppose_hitler_ww
-					}
-				}
-				has_war_with = ENG
-			}
-			NOT = {
-				OR = {
-					focus_progress = {
-						focus = HOL_cave_to_the_british
-						progress > 0
-					}
-					focus_progress = {
-						focus = HOL_maintain_trade_neutrality
-						progress > 0
-					}
-
-				}
-			}
+			
 		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
@@ -3482,31 +3454,7 @@ focus_tree = {
 				}
 				check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
 			}
-			modifier = {
-				factor = 0
-				AND = {
-					OR = {
-						AND = {
-							is_historical_focus_on = yes
-							has_game_rule = {
-								rule = HOL_ai_behavior 
-								option = DEFAULT
-							}
-						}
-						has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
-						has_game_rule = {
-							rule = HOL_ai_behavior 
-							option = DEMOCRATIC_HISTORICAL
-						}
-					}
-					has_war_with = GER
-					OR = {
-						ENG = { has_government = democratic }
-						ENG = { is_in_faction_with = ROOT }
-					}
-					
-				}
-			}
+		
 			modifier = {
 				factor = 100
 				AND = {
@@ -3591,23 +3539,7 @@ focus_tree = {
 			NOT = { has_war_with = GER }
 		}
 		bypass = {
-			OR = {
-				GER = { NOT = { has_government = fascism } }
-				ENG = { NOT = { has_government = democratic } }
-			}
-			NOT = {
-				OR = {
-					focus_progress = {
-						focus = HOL_cave_to_the_british
-						progress > 0
-					}
-					focus_progress = {
-						focus = HOL_cave_to_the_germans
-						progress > 0
-					}
-
-				}
-			}
+			
 		}
 		ai_will_do = {
 			factor = 5
@@ -3665,24 +3597,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			OR = {
-				ENG = { NOT = { has_government = democratic } }
-				ENG = { exists = no }
-				has_war_with = GER
-			}
-			NOT = {
-				OR = {
-					focus_progress = {
-						focus = HOL_maintain_trade_neutrality
-						progress > 0
-					}
-					focus_progress = {
-						focus = HOL_cave_to_the_germans
-						progress > 0
-					}
-
-				}
-			}
+			
 		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
@@ -3724,30 +3639,6 @@ focus_tree = {
 						ENG = { is_in_faction_with = ROOT }
 					}
 					
-				}
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					OR = {
-						AND = {
-							is_historical_focus_on = yes
-							has_game_rule = {
-								rule = HOL_ai_behavior 
-								option = DEFAULT
-							}
-						}
-						has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
-						has_game_rule = {
-							rule = HOL_ai_behavior 
-							option = DEMOCRATIC_HISTORICAL
-						}
-					}
-					has_war_with = ENG
-					OR = {
-						GER = { has_government = democratic }
-						GER = { is_in_faction_with = ROOT }
-					}
 				}
 			}
 		}
@@ -3986,7 +3877,7 @@ focus_tree = {
 		id = HOL_german_technological_exchange
 		prerequisite = { focus = HOL_join_germany }
 		icon = GFX_goal_tfv_generic_tech_sharing
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = HOL_join_the_major_fascist_powers
 		cost = 10
@@ -4017,7 +3908,7 @@ focus_tree = {
 			}
 		}
 		icon = GFX_focus_generic_tank_production
-		x = -1
+		x = 0
 		y = 3
 		relative_position_id = HOL_german_technological_exchange
 		cost = 10
@@ -4793,95 +4684,6 @@ focus_tree = {
 				}
 				add_ideas = HOL_saul_de_groot
 				add_political_power = -150
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						ENG = {
-							NOT = { has_government = communism }
-						}
-					}
-					ENG = {
-						add_ai_strategy = {
-							type = alliance
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = befriend
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = protect
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = antagonize
-							id = ROOT
-							value = 200
-						}
-					}
-				}
-				if = {
-					limit = {
-						USA = {
-							NOT = { has_government = communism }
-						}
-					}
-					USA = {
-						add_ai_strategy = {
-							type = alliance
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = befriend
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = protect
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = antagonize
-							id = ROOT
-							value = 200
-						}
-					}
-				}
-				if = {
-					limit = {
-						FRA = {
-							NOT = { has_government = communism }
-						}
-					}
-					FRA = {
-						add_ai_strategy = {
-							type = alliance
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = befriend
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = protect
-							id = ROOT
-							value = -200
-						}
-						add_ai_strategy = {
-							type = antagonize
-							id = ROOT
-							value = 200
-						}
-					}
-				}
 			}
 		}
 	}
@@ -6203,10 +6005,16 @@ focus_tree = {
 					is_in_faction = yes
 					NOT = { has_war_with = GER }
 					GER = {
-						has_completed_focus = GER_revive_the_kaiserreich
+						OR = {
+							has_completed_focus = GER_revive_the_kaiserreich 
+							has_completed_focus = GER_revive_the_kaiserreich_ww
+						}
 					}
 				}
 				leave_faction = yes
+				every_enemy_country = {
+					white_peace = ROOT
+				}
 				GER = { country_event = { id = generic.2 } }
 			}
 			if = {
@@ -6214,7 +6022,10 @@ focus_tree = {
 					is_in_faction = no
 					NOT = { has_war_with = GER }
 					GER = {
-						has_completed_focus = GER_revive_the_kaiserreich
+						OR = {
+							has_completed_focus = GER_revive_the_kaiserreich 
+							has_completed_focus = GER_revive_the_kaiserreich_ww
+						}
 					}
 				}
 				GER = { country_event = { id = generic.2 } }

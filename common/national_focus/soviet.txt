@@ -14958,6 +14958,7 @@ ai_will_do = {
 		available = {
 			country_exists = PER
 			NOT = { has_war_with = PER }
+			NOT = { is_in_faction_with = PER}
 			is_subject = no
 			any_enemy_country = { is_major = yes }
 		}
@@ -17693,6 +17694,7 @@ ai_will_do = {
 		}
 
 		completion_reward = {
+
 			random_country = {
 	 		 	limit = {
 	     			 owns_state = 2
@@ -18772,6 +18774,7 @@ ai_will_do = {
 				}
 				create_faction = NPTO
 			}
+
 			every_other_country = {
 				limit = {
 					capital_scope = {
@@ -18786,6 +18789,7 @@ ai_will_do = {
 					days = 730
 				}
 			}
+			
 			custom_effect_tooltip = SOV_intervention_in_the_americas_tt
 			hidden_effect = {
 				every_other_country = {

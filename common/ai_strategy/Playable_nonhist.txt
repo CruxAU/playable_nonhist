@@ -4746,7 +4746,7 @@ RAJ_east_asian_conquests_f = {
 	ai_strategy = {
 		type = antagonize
 		id = BHU
-		value = 200
+		value = 50
 	}
 	ai_strategy = {
 		type = declare_war
@@ -4756,7 +4756,7 @@ RAJ_east_asian_conquests_f = {
 	ai_strategy = {
 		type = antagonize
 		id = NEP
-		value = 200
+		value = 50
 	}
 	ai_strategy = {
 		type = declare_war
@@ -4766,7 +4766,7 @@ RAJ_east_asian_conquests_f = {
 	ai_strategy = {
 		type = antagonize
 		id = TIB
-		value = 200
+		value = 50
 	}
 }
 
@@ -4785,7 +4785,7 @@ RAJ_east_asian_liberation_c = {
 	ai_strategy = {
 		type = antagonize
 		id = PER
-		value = 200
+		value = 50
 	}
 	ai_strategy = {
 		type = declare_war
@@ -4795,7 +4795,7 @@ RAJ_east_asian_liberation_c = {
 	ai_strategy = {
 		type = antagonize
 		id = AFG
-		value = 200
+		value = 50
 	}
 	ai_strategy = {
 		type = declare_war
@@ -5026,7 +5026,7 @@ SOV_exiles_actually_can_win_civilwar = {
 	}	
 }
 
-SOV_opposition_exiles_faction_logic = {
+SOV_opposition_exiles_faction_logic = { #russian exiles do not really want to join a faction.
 	allowed = { tag = SOV }
 	enable = {
 		SOV = {

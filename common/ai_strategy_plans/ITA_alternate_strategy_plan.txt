@@ -3631,7 +3631,7 @@ ITA_christian_democracy_pact_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -3761,7 +3761,7 @@ ITA_christian_democracy_italy_first_diplomatic_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -3899,7 +3899,7 @@ ITA_christian_democracy_italy_first_greater_italy_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4039,7 +4039,7 @@ ITA_christian_democracy_italy_first_roman_empire_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4164,7 +4164,7 @@ ITA_christian_democracy_guarantee_austria_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4292,7 +4292,7 @@ ITA_christian_democracy_stresa_front_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4421,7 +4421,7 @@ ITA_christian_democracy_stresa_front_aggro_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4549,7 +4549,7 @@ ITA_democratic_king_pact_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4679,7 +4679,7 @@ ITA_democratic_king_italy_first_diplomatic_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4817,7 +4817,7 @@ ITA_democratic_king_italy_first_greater_italy_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -4957,7 +4957,7 @@ ITA_democratic_king_italy_first_roman_empire_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -5082,7 +5082,7 @@ ITA_democratic_king_guarantee_austria_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -5210,7 +5210,7 @@ ITA_democratic_king_stresa_front_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -5340,7 +5340,7 @@ ITA_democratic_king_stresa_front_aggro_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 		ITA_guido_de_ruggiero = 100
 	}
 
@@ -5496,7 +5496,7 @@ ITA_king_pact_diplomatic_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -5665,7 +5665,7 @@ ITA_king_pact_expansion_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -5825,7 +5825,7 @@ ITA_king_italy_first_roman_empire_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -5984,7 +5984,7 @@ ITA_king_italy_first_greater_italy_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -6144,7 +6144,7 @@ ITA_king_italy_first_diplomatic_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -6282,7 +6282,7 @@ ITA_king_guarantee_austria_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -6422,7 +6422,7 @@ ITA_king_stresa_front_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -6563,7 +6563,7 @@ ITA_king_stresa_front_aggro_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -7464,7 +7464,7 @@ ITA_pope_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -7607,7 +7607,7 @@ ITA_pope_rome_plan = {
 	}
 
 	ideas = {
-		ITA_pietro_d_acquarone = 100
+		 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

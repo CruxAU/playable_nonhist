@@ -2194,6 +2194,22 @@ RAJ_ai_behavior = {
 		allow_achievements = yes
 	}
 
+	option = {
+		name = GOE_INDIA_COMMUNISM_URBAN
+		text = "RULE_OPTION_GOE_INDIA_COMMUNISM_URBAN"
+		desc = "RULE_OPTION_DEMOCRATIC_HISTORICAL_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = GOE_INDIA_LOYALTY 
+		text = "RULE_OPTION_OBEDIENCE"
+		desc = "RULE_OPTION_DEMOCRATIC_HISTORICAL_RAJ_AI_DESC"
+		required_dlc = "Graveyard of Empires"
+		allow_achievements = yes
+	}
+
 	#END GOE
 
 	#TFV ONLY

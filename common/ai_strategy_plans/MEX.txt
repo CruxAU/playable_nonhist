@@ -1307,7 +1307,7 @@ mexico_communism_bolivarian = {
 }
 
 mexico_communism_trotsky = {
-	name = "Cárdenismo"
+	name = "Trotskyite"
 	desc = "Lázaro Cárdenas and his left-wing successors will create a Bolivarian Alliance and strike at the Yanqui imperialists."
 
 	allowed = {

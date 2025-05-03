@@ -9953,7 +9953,13 @@ focus_tree = {
 					NOT = { CZE = { controls_state = 664 } }
 					NOT = { owns_state = 664 }
 				}
-				HUN = { is_friend_or_potential_friend_of_GER = no }
+				HUN = { 
+					OR = {
+						is_friend_or_potential_friend_of_GER = no
+						has_government = communism
+						has_government = democratic
+					}
+				}
 				CZE = { is_puppet_of = GER }
 				CZE = { is_in_faction_with = GER }
 			}
@@ -14458,7 +14464,7 @@ focus_tree = {
 				add_ai_strategy = {
 					type = declare_war
 					id = SOV
-					value = 50
+					value = 25
 				}
 			}
 
@@ -27568,6 +27574,7 @@ focus_tree = {
 					target = AUS
 					transfer_troops = yes
 				}
+				GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
 
 				custom_effect_tooltip =  generic_skip_one_line_tt
 				
@@ -28207,6 +28214,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
+					GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
 					CZE = {
 						every_controlled_state = {
 							limit = {
@@ -30163,10 +30171,12 @@ focus_tree = {
 							add_ideas = GER_paying_tributes_to_germany_idea
 						}
 					}
-					LIT = {
-						add_ideas = anti_soviet_pact
-					}
+					LIT = {	add_ideas = anti_soviet_pact }
 					give_guarantee = LIT
+
+					ROOT = {
+						GER_lower_CGFF_small = yes
+					}
 
 					custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -30187,6 +30197,10 @@ focus_tree = {
 					custom_effect_tooltip = we_will_gain_tt
 					give_guarantee = EST
 					give_guarantee = LAT
+
+					ROOT = {
+						GER_lower_CGFF_big = yes
+					}
 
 					custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -30275,10 +30289,16 @@ focus_tree = {
 				transfer_state = 807 
 				transfer_state = 86 
 				transfer_state = 762 
+
 				ROOT = {
 					add_ideas = anti_soviet_pact 
 				}
 				give_guarantee = POL
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				GER_lower_CGFF_big = yes
+
 				custom_effect_tooltip = generic_skip_one_line_tt
 				POL = {
 					add_ideas = anti_soviet_pact
@@ -31391,6 +31411,18 @@ focus_tree = {
 			event_option_tooltip = wuw_GER_realpolitik.5.a
 			custom_effect_tooltip = one_of_the_options_tt
 			event_option_tooltip = wuw_GER_realpolitik.5.b
+
+			if = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }	
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = if_they_accept_tt
+				custom_effect_tooltip = lithuania_mefo_bills_tt
+			}
 		}
 	}
 
@@ -31467,6 +31499,11 @@ focus_tree = {
 				}	
 				custom_effect_tooltip = if_they_accept_tt 
 				effect_tooltip = {
+
+					GER_poland_modify_mefo_bills_or_economy_of_conquest = yes
+
+					custom_effect_tooltip = generic_skip_one_line_tt
+
 					POL =  {
 						every_controlled_state = {
 							limit = {
@@ -31563,6 +31600,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = if_they_accept_tt 
 			effect_tooltip = {
+				GER_poland_modify_mefo_bills_or_economy_of_conquest = yes
 				POL = {
 					every_controlled_state = {
 						limit = {
@@ -31623,6 +31661,14 @@ focus_tree = {
 						hours = 2
 					}	
 				}
+				custom_effect_tooltip = if_they_accept_tt
+				ROOT = {
+					annex_country = {
+						target = POL
+						transfer_troops = yes
+					}
+				}
+				GER_lower_CGFF_small = yes
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			ELSE = {
@@ -31637,11 +31683,9 @@ focus_tree = {
 				limit = {
 					any_country = {
 						NOT = {
-							OR = {
-								original_tag = ROOT
-								original_tag = POL
-								is_ally_with = ROOT
-							}
+							original_tag = ROOT
+							original_tag = POL
+							is_ally_with = ROOT
 						}
 						OR = {
 							controls_state = 10
@@ -31924,6 +31968,9 @@ focus_tree = {
 							set_cosmetic_tag = FIN_kingdom_of_finland
 						}
 					} 
+					ROOT = {
+						GER_lower_CGFF_small = yes
+					}
 				}
 			}
 			ELSE = {
@@ -31939,6 +31986,9 @@ focus_tree = {
 					add_political_power = 75
 
 					puppet = FIN
+					ROOT = {
+						GER_lower_CGFF_small = yes
+					}
 				}
 			}
 

@@ -1,3 +1,543 @@
+HOL_historical_plan_eng_is_communist = {
+	name = "Netherlands historical plan if things are going down the historical path - join allies"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			ENG = {
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		ENG = { has_completed_focus = ENG_follow_moscow }
+	}
+
+	ai_national_focuses = {
+		HOL_maintain_trade_neutrality
+		HOL_legacy_of_the_de_zeven_provincien_mutiny
+		HOL_germany_is_the_greater_threat			
+		HOL_red_is_the_new_orange
+		HOL_decolonization		
+		HOL_join_the_western_alliance
+		HOL_socialist_industrial_support
+		HOL_french_military_mission
+		HOL_for_the_common_good
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10		
+		HOL_mobilize_the_masses
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_cave_to_the_british = 0
+		HOL_oranje_boven = 0
+		HOL_bring_socialism_south = 0
+		HOL_pre_empt_western_intervention = 0
+		HOL_affirm_loyalty_to_moscow = 0.1
+		HOL_bastion_of_true_communism = 0.1
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOL_historical_plan_eng_is_fascist = {
+	name = "Netherlands historical plan if things are going down the historical path - join allies"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			ENG = {
+				has_completed_focus = ENG_organize_the_blackshirts
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		HOL_cave_to_the_germans
+		HOL_de_jeugdstorm
+		HOL_strength_over_blood	
+		HOL_germany_is_the_greater_threat		
+		HOL_join_the_major_fascist_powers
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10		
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_maintain_trade_neutrality = 0
+		HOL_cave_to_the_british = 0
+		HOL_the_united_netherlands = 0
+		HOL_taking_back_our_old_colonies = 0
+		HOL_beginnings_of_a_dutch_blitzkrieg = 0
+		HOL_imperial_ambitions = 0
+		HOL_the_netherlands_first = 0.1
+		HOL_join_germany = 0.1
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+HOL_historical_plan_eng_is_monarchist = {
+	name = "Netherlands historical plan if things are going down the historical path - join allies"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			ENG = {
+				has_completed_focus = ENG_the_kings_party
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		ENG = { has_completed_focus = ENG_alliance_with_germany }
+	}
+
+	ai_national_focuses = {
+		HOL_maintain_trade_neutrality
+		HOL_oranje_boven
+		HOL_go_with_britain
+		HOL_symbol_of_resistance
+		HOL_the_only_man_in_the_dutch_government
+		HOL_replace_the_defeatist_government
+		HOL_germany_is_the_greater_threat					
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+							#January 20 1941
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+		HOL_de_vaarplicht
+		HOL_the_singapore_conferences					#March 20 1942
+		HOL_ship_a_day_sinking_quotas					#May 30 1942	
+		HOL_allied_technological_developments					#August 10 1942
+		HOL_zandery_military_airport					#December 30 1942	
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+		HOL_request_allied_favors				#May 20 1943	
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_cave_to_the_british = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOL_historical_plan_germans_are_monarchist = {
+	name = "Netherlands historical plan if the germans scrounge up more influence than britain"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			GER = {
+				OR = {
+					has_completed_focus = GER_revive_the_kaiserreich 
+					has_completed_focus = GER_revive_the_kaiserreich_ww
+				}
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		HOL_maintain_trade_neutrality
+		HOL_oranje_boven
+		HOL_protect_against_britain
+		HOL_symbol_of_resistance
+		HOL_replace_the_defeatist_government
+		HOL_the_only_man_in_the_dutch_government
+		HOL_depillarization
+		HOL_de_vernieuwing
+		HOL_a_new_dutch_unity
+		HOL_wilhelminism
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_legacy_of_the_de_zeven_provincien_mutiny = 0
+		HOL_go_with_britain = 0
+		HOL_cave_to_the_british = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOL_historical_plan_germans_are_democratic = {
+	name = "Netherlands historical plan if the germans scrounge up more influence than britain"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			GER = {
+				OR = {
+					has_completed_focus = GER_the_monarchy_compromise
+					has_completed_focus = GER_the_monarchy_compromise_ww
+				}
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		HOL_protect_against_britain
+		HOL_cave_to_the_british
+		HOL_unity_through_democracy
+		HOL_lead_the_minor_democracies
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	ai_strategy = { #compensate for there being no actual path
+		type = alliance
+		id = GER
+		value = 500
+	}
+
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_maintain_trade_neutrality = 0
+		HOL_go_with_britain = 0
+		HOL_form_the_benelux = 0
+		HOL_foundations_for_a_european_union = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOL_historical_plan_germans_are_communist = {
+	name = "Netherlands historical plan if the germans scrounge up more influence than britain"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			GER = {
+				OR = {
+					has_completed_focus = GER_start_the_proletarian_revolution 
+					has_government = communism
+				}
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		HOL_maintain_trade_neutrality
+		HOL_legacy_of_the_de_zeven_provincien_mutiny
+		HOL_red_is_the_new_orange
+		HOL_decolonization
+		HOL_join_the_western_alliance
+		HOL_protect_against_britain
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+		HOL_the_foundations_of_defense					#July 30 1943
+		HOL_socialist_industrial_support
+		HOL_for_the_common_good
+		HOL_mobilize_the_masses
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_oranje_boven = 0
+		HOL_go_with_britain = 0
+		HOL_affirm_loyalty_to_moscow = 0.1
+		HOL_bastion_of_true_communism = 0.1
+		HOL_cave_to_the_british = 0
+		HOL_bring_socialism_south = 0
+		HOL_pre_empt_western_intervention = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
 HOL_colonial_alternate_democratic_plan = {
 	name = "Netherlands Colonial Alternate Democratic plan"
 	desc = "Democratic Netherlands will build up in the colonies rather than on the continent."
@@ -97,8 +637,6 @@ HOL_colonial_alternate_democratic_plan = {
 			factor = 1.0
 		}
 	}
-
-
 
 }
 
@@ -401,6 +939,29 @@ HOL_alternate_communist_plan = {
 			has_game_rule = {
 				rule = HOL_ai_behavior 
 				option = COMMUNIST_COMINTERN
+			}
+			AND = {
+				date > 1939.4.1
+				has_completed_focus = HOL_gateway_to_europe
+				check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+				check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+				ENG = {
+					has_completed_focus = ENG_follow_moscow
+				}
+				OR = {
+					has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEMOCRATIC_HISTORICAL
+					}
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = HOL_ai_behavior 
+							option = DEFAULT
+						}
+					}
+				}
 			}
 		}
 	}
@@ -720,6 +1281,29 @@ HOL_alternate_fascist_plan = {
 			has_game_rule = {
 				rule = HOL_ai_behavior 
 				option = FASCIST_AXIS
+			}
+			AND = {
+				date > 1939.4.1
+				has_completed_focus = HOL_gateway_to_europe
+				check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+				check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+				ENG = {
+					has_completed_focus = ENG_alliance_with_germany
+				}
+				OR = {
+					has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEMOCRATIC_HISTORICAL
+					}
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = HOL_ai_behavior 
+							option = DEFAULT
+						}
+					}
+				}
 			}
 		}
 	}

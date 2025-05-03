@@ -773,6 +773,7 @@ country_event = {
 								state = 680
 								state = 677
 								state = 458
+								state = 799
 							}
 							controller = { # FRA not controller
 								original_tag = FRA
@@ -784,6 +785,7 @@ country_event = {
 								state = 680
 								state = 677
 								state = 458
+								state = 799
 							}						
 						}
 					}					
@@ -1020,6 +1022,13 @@ country_event = {
             }
         }
 		FRA = {
+			if = {
+	        	limit = {
+	        		has_dlc = "La Resistance"
+	        	}
+		        add_ideas = FRA_defeatism
+		        load_focus_tree = free_french_focus
+	        }
 			set_capital = { state = 539 }
 			hidden_effect = {
 					set_state_controller = 26
@@ -1129,7 +1138,7 @@ country_event = {
 				ideology = neutrality
 				size = 0.5
 				capital = 26
-				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 459 460 665 553 272 556 543 706 708 713 268 557 514 515 851 }
+				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 459 460 665 553 272 556 543 706 708 713 268 557 514 515 851 899 }
 				states_filter = {
 					owner = { original_tag = FRA }
 					OR = {		
@@ -1140,6 +1149,7 @@ country_event = {
 								state = 680
 								state = 677
 								state = 458
+								state = 799
 							}
 							controller = { # FRA not controller
 								original_tag = FRA
@@ -1151,6 +1161,7 @@ country_event = {
 								state = 680
 								state = 677
 								state = 458
+								state = 799
 							}						
 						}
 					}					

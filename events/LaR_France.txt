@@ -1110,12 +1110,12 @@ country_event = {
 					is_subject_of = ROOT
 				}
 			}
-			OVERLORD = {
-				set_autonomy = {
-					target = SYR
-					autonomy_state = autonomy_free
-				}
+
+			set_autonomy = {
+				target = SYR
+				autonomy_state = autonomy_free
 			}
+
 		}
 		if = {
 			limit = {
@@ -1124,16 +1124,14 @@ country_event = {
 					is_subject_of = ROOT
 				}
 			}
-			OVERLORD = {
-				set_autonomy = {
-					target = LEB
-					autonomy_state = autonomy_free
-				}
+			
+			set_autonomy = {
+				target = LEB
+				autonomy_state = autonomy_free
 			}
 		}
 		every_owned_state = {
 			limit = {
-				is_controlled_by = ROOT
 				OR = {
 					is_core_of = LEB
 					is_core_of = SYR
