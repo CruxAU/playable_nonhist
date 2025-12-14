@@ -3096,6 +3096,7 @@ ideas = {
 				land_doctrine_cost_factor = 0.2
 				naval_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
+				land_mastery_gain_factor = -0.25
 
 				drift_defence_factor = 0.1
 				army_core_defence_factor = 0.03
@@ -3145,6 +3146,7 @@ ideas = {
 				land_doctrine_cost_factor = 0.2
 				naval_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
+				land_mastery_gain_factor = -0.25
 
 				drift_defence_factor = 0.15
 				army_core_defence_factor = 0.03

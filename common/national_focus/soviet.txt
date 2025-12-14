@@ -15378,6 +15378,12 @@ ai_will_do = {
 				}
 			}
 		}
+		historical_ai = { # Setting this so that they can actually go down the Gobi gambit if CHI doesn't exist.
+			OR = {
+				country_exists = CHI
+				NOT = { has_subject = SIK }
+			}
+		}
 		
 		mutually_exclusive = { focus = SOV_the_gobi_gambit focus = SOV_two_red_flags }
 

@@ -7198,7 +7198,7 @@ PHI_AI_BEHAVIOR = {
 	}
 	option = {
 		name = MONARCHIST
-		text = "RULE_OPTION_MONARCHIST"
+		text = "RULE_OPTION_MONARCHIST_PHI_AI"
 		desc = "RULE_OPTION_MONARCHIST_PHI_AI_DESC"
 		allow_achievements = no
 	}

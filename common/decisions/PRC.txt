@@ -2915,7 +2915,7 @@ PRC_the_communist_power_struggle_balance_of_power_category = {
 		days_remove = 90
 
 		modifier = {
-			stability_weekly_factor = 0.0025
+			stability_weekly = 0.0025
 		}
 
 		cost = 50
@@ -2984,7 +2984,7 @@ PRC_the_communist_power_struggle_balance_of_power_category = {
 		}
 
 		modifier = {
-			stability_weekly_factor = -0.0015
+			stability_weekly = -0.0015
 		}
 
 		days_remove = 180
@@ -3927,7 +3927,7 @@ PRC_the_communist_power_struggle_balance_of_power_category = {
 		days_remove = 180
 
 		modifier = {
-			stability_weekly_factor = -0.005
+			stability_weekly = -0.005
 			political_power_factor = -0.15
 		}
 
@@ -5275,6 +5275,9 @@ PRC_guerilla_suppression_sea_cat = {
 		}
 
 		visible = {
+			FROM = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
 			IF = {
 				limit = {
 					original_tag = JAP
@@ -5356,9 +5359,7 @@ PRC_guerilla_suppression_sea_cat = {
 
 		cancel_trigger = {
 			FROM = {
-				NOT = {
-					is_fully_controlled_by = ROOT
-				}
+				state_is_fully_controlled_by_ROOT_or_subject = no
 			}
 		}
 
@@ -5427,6 +5428,12 @@ PRC_guerilla_suppression_sea_cat = {
 	PRC_root_out_guerilla_fighters_upgraded = {
 		priority = 90
 		icon = GFX_decision_oppression
+
+		visible = {
+			FROM = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
 
 		available = {
 			NOT = { 
@@ -5534,9 +5541,7 @@ PRC_guerilla_suppression_sea_cat = {
 
 		cancel_trigger = {
 			FROM = {
-				NOT = {
-					is_fully_controlled_by = ROOT
-				}
+				state_is_fully_controlled_by_ROOT_or_subject = no 
 			}
 		}
 
@@ -7671,7 +7676,17 @@ political_actions = {
 		days_remove = 90
 		fire_only_once = yes
 
+		allowed = {
+			original_tag = PRC
+		}
 
+		visible = {
+			1046 = {
+				has_dynamic_modifier = {
+					modifier = PRC_the_yulin_garrison
+				}
+			}
+		}
 
 		available = {
 			controls_state = 1046
@@ -7682,18 +7697,11 @@ political_actions = {
 			}
 		}
 
-		allowed = {
-			original_tag = PRC
-		}
-
-
 		cancel_trigger = {
 			NOT = {
 				controls_state = 1046
 			}
 		}
-
-
 		
 		ai_hint_pp_cost = 50
 
@@ -7702,7 +7710,6 @@ political_actions = {
 			has_political_power > 49
 		}
 		custom_cost_text = decision_cost_CP_50_pp_50
-
 		
 		complete_effect = {
 			hidden_effect = {
@@ -7725,11 +7732,9 @@ political_actions = {
 			}
 		}
 
-
 		cancel_effect = {
 
 		}
-
 
 	}
 
@@ -7750,463 +7755,463 @@ political_actions = {
 ###############NEW STUFF###############
 #######################################
 
-PRC_take_over_states = { 
+# PRC_take_over_states = { 
 
-	PRC_remove_Yan_Xishan = { #he clearly is incapable of defending china. We will take his land
-		icon = generic_ignite_civil_war
-		visible = {
-			has_government = communism
-			has_completed_focus = PRC_peoples_liberation_army
-			NOT = { has_completed_focus = PRC_social_democracy }
+# 	PRC_remove_Yan_Xishan = { #he clearly is incapable of defending china. We will take his land
+# 		icon = generic_ignite_civil_war
+# 		visible = {
+# 			has_government = communism
+# 			has_completed_focus = PRC_peoples_liberation_army
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
 			
-			615 = {
-				is_owned_by = SHX
-				OWNER = {
-					is_in_faction_with = event_target:WTT_communist_china
-					NOT = { tag = event_target:WTT_communist_china }
-				}
-			}
-		}
+# 			615 = {
+# 				is_owned_by = SHX
+# 				OWNER = {
+# 					is_in_faction_with = event_target:WTT_communist_china
+# 					NOT = { tag = event_target:WTT_communist_china }
+# 				}
+# 			}
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			OR = {
-				SHX = { has_capitulated = yes }	
-				615 = {
-					is_owned_by = SHX
-					NOT = { is_controlled_by = SHX }
-				} 
-			}
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-			NOT = { has_war_with = SHX }
-			hidden_trigger = {
-				SHX = {
-					NOT = {
-						has_country_flag = PRC_cannot_integrate_me
-					}
-				}
-			}
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 615
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			OR = {
+# 				SHX = { has_capitulated = yes }	
+# 				615 = {
+# 					is_owned_by = SHX
+# 					NOT = { is_controlled_by = SHX }
+# 				} 
+# 			}
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 			NOT = { has_war_with = SHX }
+# 			hidden_trigger = {
+# 				SHX = {
+# 					NOT = {
+# 						has_country_flag = PRC_cannot_integrate_me
+# 					}
+# 				}
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 615
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -1
-		}
+# 		modifier = {
+# 			political_power_gain = -1
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
+# 		days_re_enable = 1
 	
-		cost = 30
+# 		cost = 30
 
-		remove_effect = {
-			event_target:WTT_communist_china = {
-				annex_country = {
-					target = SHX
-					transfer_troops = yes
-				}
-			}
-		}
-	}
+# 		remove_effect = {
+# 			event_target:WTT_communist_china = {
+# 				annex_country = {
+# 					target = SHX
+# 					transfer_troops = yes
+# 				}
+# 			}
+# 		}
+# 	}
 	
-	PRC_take_Ordos = {
-		icon = generic_prepare_civil_war
-		visible = {
-			has_government = communism
-		}
+# 	PRC_take_Ordos = {
+# 		icon = generic_prepare_civil_war
+# 		visible = {
+# 			has_government = communism
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			746 = {
-				CONTROLLER = {
-					has_war_with = event_target:WTT_communist_china
-				}
-				OWNER = {
-					is_in_faction_with = event_target:WTT_communist_china
-				}
-			}			
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 746
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy }
+# 			746 = {
+# 				CONTROLLER = {
+# 					has_war_with = event_target:WTT_communist_china
+# 				}
+# 				OWNER = {
+# 					is_in_faction_with = event_target:WTT_communist_china
+# 				}
+# 			}			
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 746
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -0.5
-		}
+# 		modifier = {
+# 			political_power_gain = -0.5
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_TAKE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_TAKE_STATE
+# 		days_re_enable = 1
 	
-		cost = 15
+# 		cost = 15
 
-		remove_effect = {
-			746 = {
-				set_state_owner_to = event_target:WTT_communist_china
-			}
-		}
-	}
+# 		remove_effect = {
+# 			746 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 			}
+# 		}
+# 	}
 
-	PRC_take_Suiyuan = {
-		icon = generic_prepare_civil_war
-		visible = {
-			has_government = communism
-		}
+# 	PRC_take_Suiyuan = {
+# 		icon = generic_prepare_civil_war
+# 		visible = {
+# 			has_government = communism
+# 		}
 		
-		available = {
-			event_target:WTT_communist_china = {
-				owns_state = 746
-			}
-			NOT = { has_completed_focus = PRC_social_democracy }
-			621 = {
-				CONTROLLER = {
-					has_war_with = event_target:WTT_communist_china
-				}
-				OWNER = {
-					is_in_faction_with = event_target:WTT_communist_china
-				}
-			}			
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 621
-			} 
-		}
+# 		available = {
+# 			event_target:WTT_communist_china = {
+# 				owns_state = 746
+# 			}
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			621 = {
+# 				CONTROLLER = {
+# 					has_war_with = event_target:WTT_communist_china
+# 				}
+# 				OWNER = {
+# 					is_in_faction_with = event_target:WTT_communist_china
+# 				}
+# 			}			
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 621
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -0.5
-		}
+# 		modifier = {
+# 			political_power_gain = -0.5
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_TAKE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_TAKE_STATE
+# 		days_re_enable = 1
 	
-		cost = 15
+# 		cost = 15
 
-		remove_effect = {
-			621 = {
-				set_state_owner_to = event_target:WTT_communist_china
-			}
-		}
-	}
+# 		remove_effect = {
+# 			621 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 			}
+# 		}
+# 	}
 
-	PRC_take_Xian = {
-		icon = generic_prepare_civil_war
-		visible = {
-			has_government = communism
-		}
+# 	PRC_take_Xian = {
+# 		icon = generic_prepare_civil_war
+# 		visible = {
+# 			has_government = communism
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			744 = {
-				CONTROLLER = {
-					has_war_with = event_target:WTT_communist_china
-				}
-				OWNER = {
-					is_in_faction_with = event_target:WTT_communist_china
-				}
-			}			
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 744
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			744 = {
+# 				CONTROLLER = {
+# 					has_war_with = event_target:WTT_communist_china
+# 				}
+# 				OWNER = {
+# 					is_in_faction_with = event_target:WTT_communist_china
+# 				}
+# 			}			
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 744
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -0.5
-		}
+# 		modifier = {
+# 			political_power_gain = -0.5
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_TAKE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_TAKE_STATE
+# 		days_re_enable = 1
 	
-		cost = 15
+# 		cost = 15
 
-		remove_effect = {
-			744 = {
-				set_state_owner_to = event_target:WTT_communist_china
-			}
-		}
-	}
+# 		remove_effect = {
+# 			744 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 			}
+# 		}
+# 	}
 
-	PRC_take_Gansu = {
-		icon = generic_prepare_civil_war
-		visible = {
-			has_government = communism
-		}
+# 	PRC_take_Gansu = {
+# 		icon = generic_prepare_civil_war
+# 		visible = {
+# 			has_government = communism
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			283 = {
-				CONTROLLER = {
-					has_war_with = event_target:WTT_communist_china
-				}
-				OWNER = {
-					is_in_faction_with = event_target:WTT_communist_china
-				}
-			}			
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 283
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			283 = {
+# 				CONTROLLER = {
+# 					has_war_with = event_target:WTT_communist_china
+# 				}
+# 				OWNER = {
+# 					is_in_faction_with = event_target:WTT_communist_china
+# 				}
+# 			}			
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 283
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -0.5
-		}
+# 		modifier = {
+# 			political_power_gain = -0.5
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_TAKE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_TAKE_STATE
+# 		days_re_enable = 1
 	
-		cost = 15
+# 		cost = 15
 
-		remove_effect = {
-			283 = {
-				set_state_owner_to = event_target:WTT_communist_china
-			}
-		}
-	}
+# 		remove_effect = {
+# 			283 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 			}
+# 		}
+# 	}
 
-	PRC_take_inner_mongolia = {
-		icon = generic_ignite_civil_war
-		visible = {
-			has_government = communism
-		}
+# 	PRC_take_inner_mongolia = {
+# 		icon = generic_ignite_civil_war
+# 		visible = {
+# 			has_government = communism
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			OR = {
-				611 = {
-					OWNER = {
-						has_war_with = event_target:WTT_communist_china
-						has_capitulated = yes
-						is_subject = yes
-					}
-					CONTROLLER = {
-						OR = {
-							tag = event_target:WTT_communist_china
-							is_in_faction_with = event_target:WTT_communist_china
-						}
-					}
-				}
-			}
-			event_target:WTT_communist_china = {
-				owns_state = 621
-			}
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-			has_war = yes
-			hidden_trigger = {
-				MEN = {
-					NOT = {
-						has_country_flag = PRC_cannot_integrate_me
-					}
-				}
-			}
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 611
-				state = 612
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			OR = {
+# 				611 = {
+# 					OWNER = {
+# 						has_war_with = event_target:WTT_communist_china
+# 						has_capitulated = yes
+# 						is_subject = yes
+# 					}
+# 					CONTROLLER = {
+# 						OR = {
+# 							tag = event_target:WTT_communist_china
+# 							is_in_faction_with = event_target:WTT_communist_china
+# 						}
+# 					}
+# 				}
+# 			}
+# 			event_target:WTT_communist_china = {
+# 				owns_state = 621
+# 			}
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 			has_war = yes
+# 			hidden_trigger = {
+# 				MEN = {
+# 					NOT = {
+# 						has_country_flag = PRC_cannot_integrate_me
+# 					}
+# 				}
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 611
+# 				state = 612
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -1
-		}
+# 		modifier = {
+# 			political_power_gain = -1
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
+# 		days_re_enable = 1
 	
-		cost = 30
+# 		cost = 30
 
-		remove_effect = {
-			611 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-			612 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-		}
-	}
+# 		remove_effect = {
+# 			611 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 			612 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 		}
+# 	}
 
-	PRC_take_upper_manchuria = {
-		icon = generic_ignite_civil_war
-		visible = {
-			has_government = communism
-		}
+# 	PRC_take_upper_manchuria = {
+# 		icon = generic_ignite_civil_war
+# 		visible = {
+# 			has_government = communism
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			OR = {
-				328 = {
-					OWNER = {
-						has_war_with = event_target:WTT_communist_china
-						has_capitulated = yes
-						is_subject = yes
-					}
-					CONTROLLER = {
-						OR = {
-							tag = event_target:WTT_communist_china
-							is_in_faction_with = event_target:WTT_communist_china
-						}
-					}
-				}
-			}
-			event_target:WTT_communist_china = {
-				owns_state = 611
-				owns_state = 612
-			}
-			NOT = { has_war_with = event_target:WTT_current_china_leader }
-			has_war = yes
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 715
-				state = 717
-				state = 328
-				state = 714
-				state = 761
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			OR = {
+# 				328 = {
+# 					OWNER = {
+# 						has_war_with = event_target:WTT_communist_china
+# 						has_capitulated = yes
+# 						is_subject = yes
+# 					}
+# 					CONTROLLER = {
+# 						OR = {
+# 							tag = event_target:WTT_communist_china
+# 							is_in_faction_with = event_target:WTT_communist_china
+# 						}
+# 					}
+# 				}
+# 			}
+# 			event_target:WTT_communist_china = {
+# 				owns_state = 611
+# 				owns_state = 612
+# 			}
+# 			NOT = { has_war_with = event_target:WTT_current_china_leader }
+# 			has_war = yes
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 715
+# 				state = 717
+# 				state = 328
+# 				state = 714
+# 				state = 761
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -2
-		}
+# 		modifier = {
+# 			political_power_gain = -2
+# 		}
 		
-		ai_will_do = {
-			base = 120
-		}
+# 		ai_will_do = {
+# 			base = 120
+# 		}
 
-		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
+# 		days_re_enable = 1
 	
-		cost = 100
+# 		cost = 100
 
-		remove_effect = {
-			715 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-			717 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-			328 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-			714 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-			761 = {
-				set_state_owner_to = event_target:WTT_communist_china
-				set_state_controller_to = event_target:WTT_communist_china
-			}
-		}
-	}
+# 		remove_effect = {
+# 			715 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 			717 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 			328 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 			714 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 			761 = {
+# 				set_state_owner_to = event_target:WTT_communist_china
+# 				set_state_controller_to = event_target:WTT_communist_china
+# 			}
+# 		}
+# 	}
 
-	PRC_remove_sheng_shikai = { #there can only be one
-		icon = generic_ignite_civil_war
-		visible = {
-			has_government = communism
-			has_completed_focus = PRC_peoples_liberation_army
-			NOT = { has_completed_focus = PRC_social_democracy }
+# 	PRC_remove_sheng_shikai = { #there can only be one
+# 		icon = generic_ignite_civil_war
+# 		visible = {
+# 			has_government = communism
+# 			has_completed_focus = PRC_peoples_liberation_army
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
 			
-			617 = {
-				is_owned_by = SIK
-				OWNER = {
-					is_in_faction_with = event_target:WTT_communist_china
-					NOT = { tag = event_target:WTT_communist_china }
-				}
-			}
-		}
+# 			617 = {
+# 				is_owned_by = SIK
+# 				OWNER = {
+# 					is_in_faction_with = event_target:WTT_communist_china
+# 					NOT = { tag = event_target:WTT_communist_china }
+# 				}
+# 			}
+# 		}
 		
-		available = {
-			NOT = { has_completed_focus = PRC_social_democracy }
-			any_controlled_state = {
-				is_fully_controlled_by = ROOT
-				any_neighbor_state = {
-					is_controlled_by = SIK
-				}
-			}
-			SIK = {
-				has_government = ROOT
-				has_focus_tree = china_warlord_focus
-			}
-			is_in_faction_with = SIK
-		}
-		fire_only_once = yes
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 617
-			} 
-		}
+# 		available = {
+# 			NOT = { has_completed_focus = PRC_social_democracy_focus }
+# 			any_controlled_state = {
+# 				is_fully_controlled_by = ROOT
+# 				any_neighbor_state = {
+# 					is_controlled_by = SIK
+# 				}
+# 			}
+# 			SIK = {
+# 				has_government = ROOT
+# 				has_focus_tree = china_warlord_focus
+# 			}
+# 			is_in_faction_with = SIK
+# 		}
+# 		fire_only_once = yes
+# 		highlight_states = {
+#  			highlight_state_targets = {
+# 				state = 617
+# 			} 
+# 		}
 
-		modifier = {
-			political_power_gain = -1
-		}
+# 		modifier = {
+# 			political_power_gain = -1
+# 		}
 		
-		ai_will_do = {
-			base = 1
-		}
+# 		ai_will_do = {
+# 			base = 1
+# 		}
 
-		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
-		days_re_enable = 1
+# 		days_remove = @DAYS_REMOVE_INFILTRATE_STATE
+# 		days_re_enable = 1
 	
-		cost = 30
+# 		cost = 30
 
-		remove_effect = {
-			event_target:WTT_communist_china = {
-				annex_country = {
-					target = SIK
-					transfer_troops = yes
-				}
-			}
-			build_railway = {
-				path = { 8049 12356 7314 4986 8081 3742 7511 5057 12732 10490 10750 12846 7940 10865 2074 5736 7792 10545 4709 }
-			}
-		}
-	}
-}
+# 		remove_effect = {
+# 			event_target:WTT_communist_china = {
+# 				annex_country = {
+# 					target = SIK
+# 					transfer_troops = yes
+# 				}
+# 			}
+# 			build_railway = {
+# 				path = { 8049 12356 7314 4986 8081 3742 7511 5057 12732 10490 10750 12846 7940 10865 2074 5736 7792 10545 4709 }
+# 			}
+# 		}
+# 	}
+# }

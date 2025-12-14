@@ -453,6 +453,14 @@ SIC_xikang_offensive = {
 
 		cost = 25
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_idea = SIC_push_into_xikang_idea
+			}
+		}
+
 		complete_effect = {
 
 			activate_mission = SIC_push_into_xikang_mission
@@ -783,6 +791,10 @@ CHI_tsr_power_struggle_cat = {
 
 		icon = GFX_decision_hol_exchange_intelligence_data
 
+		visible = {
+			NOT = { original_tag = event_target:WTT_current_china_leader }
+		}
+
 		available = {
 			is_subject = no
 			is_in_faction_with = event_target:WTT_current_china_leader
@@ -817,15 +829,16 @@ CHI_tsr_power_struggle_cat = {
 		priority = 50
 	
 		icon = generic_civil_support
+
+		visible = {
+			has_country_flag = tsr_warlord_support
+			NOT = { original_tag = event_target:WTT_current_china_leader }
+		}	
 	
 		available = {
 			is_subject = no
 			is_in_faction_with = event_target:WTT_current_china_leader
 		}
-
-		visible = {
-			has_country_flag = tsr_warlord_support
-		}	
 	
 		target_root_trigger = {
 			has_country_flag = tsr_political_struggle
@@ -1027,6 +1040,7 @@ CHI_tsr_power_struggle_cat = {
 
 		visible = {
 			has_country_flag = tsr_warlord_propaganda
+			NOT = { original_tag = event_target:WTT_current_china_leader }
 		}	
 
 		available = {
@@ -1060,6 +1074,7 @@ CHI_tsr_power_struggle_cat = {
 
 		visible = {
 			has_country_flag = tsr_warlord_propaganda
+			NOT = { original_tag = event_target:WTT_current_china_leader }
 		}	
 
 		available = {
@@ -1093,6 +1108,7 @@ CHI_tsr_power_struggle_cat = {
 
 		visible = {
 			has_country_flag = tsr_warlord_propaganda
+			NOT = { original_tag = event_target:WTT_current_china_leader }
 		}	
 
 		available = {
@@ -1126,6 +1142,7 @@ CHI_tsr_power_struggle_cat = {
 
 		visible = {
 			has_country_flag = tsr_warlord_propaganda
+			NOT = { original_tag = event_target:WTT_current_china_leader }
 		}	
 
 		available = {
@@ -1162,6 +1179,7 @@ CHI_tsr_power_struggle_cat = {
 				is_subject = no
 			}
 			is_in_faction_with = event_target:WTT_current_china_leader
+			NOT = { original_tag = event_target:WTT_current_china_leader }
 			faction_influence_ratio > 0.35
 			event_target:WTT_current_china_leader = {
 				faction_influence_ratio < 0.35

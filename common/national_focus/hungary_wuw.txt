@@ -1079,7 +1079,6 @@ focus_tree = {
 				name = HUN_feldmarchall_augusts_expertise
 				bonus = 0.15
 				days = 180
-				grand_doctrine = grand_battleplan
 			}
 
 			add_doctrine_cost_reduction = {
@@ -5407,9 +5406,8 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = wuw_HUN_the_legacy_of_the_isonzo_front
-				bonus = 0.25
+				bonus = 0.2
 				days = 180
-				grand_doctrine = grand_battleplan
 				track = combat_support
 			}
 
@@ -17287,44 +17285,29 @@ focus_tree = {
 
 		completion_reward = {
 
-			155 = {
-				add_resource = {
-					type = oil
-					amount = 5
+			IF = {
+				limit = {
+					155 = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				155 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}				
+					add_resource = {
+						type = coal
+						amount = 8 
+					}
 				}
 			}
-			974 = {
-				add_resource = {
-					type = oil
-					amount = 4
-				}
-			}
-
-			973 = {
-				add_resource = {
-					type = oil
-					amount = 6
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = {
-				decision = HUN_tap_the_nagylengyel_oil_field
-				show_effect_tooltip = no # default is no
-				show_modifiers = no # default is no
-			}
-
-			unlock_decision_tooltip = {
-				decision = HUN_explore_the_oil_fields_around_nagykanizsa
-				show_effect_tooltip = no # default is no
-				show_modifiers = no # default is no
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = HUN_maort
 
 		}
 	}

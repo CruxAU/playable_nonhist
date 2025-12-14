@@ -2020,3 +2020,5 @@ RULE_ALLOW_RELEASE_NATIONS_NO_SLOVAKIA_TOOLTIP: "§Y[HUN.GetName]§! and §Y[CZE
  RULE_OPTION_COMMUNIST_PHI_AI_DESC: "The red sun will rise over the Philippines, as maritime communism takes hold and seeks to spread the spirit of equality across the world's oceans."
  RULE_OPTION_MACARTHUR_PHI_AI: "Declare Military Emergency"
  RULE_OPTION_MACARTHUR_PHI_AI_DESC: "After the fall of the Philippine government, a military figure will rise and lead the nation against any and all aggressors."
+ RULE_ALLOW_RELEASE_NATIONS_WARLORD_CHINA_TOOLTIP: "§Y[ROOT.GetNameDefCap]§! may not release §Y[CHI.GetNameDef]§! or §Y[PRC.GetNameDef]§!."
+ RULE_OPTION_MONARCHIST_PHI_AI: "Hispanic"

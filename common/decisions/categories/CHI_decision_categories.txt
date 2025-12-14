@@ -83,6 +83,7 @@ CHI_industrial_evacuations = {
 	allowed = {
 		is_literally_china = yes
 	}
+	priority = 110
 	icon = generic_industry
 	visible = {
 		OR = {
@@ -361,15 +362,32 @@ CHI_internal_politics_cat = {
 		has_dlc = "No Compromise, No Surrender"
 		tag = CHI
 	}
-	available = {
-		
-	}
 	visible = {
 		OR = {
 			has_completed_focus = CHI_promote_the_national_currency
 			has_completed_focus = CHI_empower_the_mtac
 			has_completed_focus = CHI_postpone_the_tutelage
+			has_completed_focus = CHI_cradle_of_civilization
+			has_completed_focus = CHI_crackdown_on_corruption_in_recruitment
 		}
+	}
+	on_map_area = {
+		target_array = FROM.core_and_claimed_states
+		target_trigger = {
+			ROOT = {
+				has_completed_focus = CHI_cradle_of_civilization
+			}
+			FROM = {
+				is_claimed_by = ROOT
+				NOT = { 
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+		name = CHI_core_asian_state_cat_name
+		zoom = 200
+
 	}
 }
 
@@ -531,19 +549,6 @@ SND_unclear_loyalties_cat = {
 	}
 	priority = 100
 }
-
-#CHI_opium_cat = {
-#	icon = generic_independence
-#	allowed = {
-#		tag = CHI
-#		has_dlc = "No Compromise, No Surrender"
-#	}
-#
-#	visible = {
-#		#has_completed_focus = CHI_take_a_stance_on_illicit_trade
-#		
-#	}
-#}
 
 CHI_build_up_our_faction_cat = {
 	icon = GFX_decision_category_jap_intervene_in_china

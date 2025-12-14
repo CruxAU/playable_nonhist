@@ -3214,11 +3214,10 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_idea = ROM_king_carol_ii_hedonist
+					has_completed_focus = ROM_iron_guard
 				}
-				remove_ideas = ROM_king_carol_ii_hedonist
+				remove_ideas = ROM_iron_guard
 			}
-			remove_ideas = ROM_iron_guard
 			hidden_effect = {
 				news_event = { id = news.322 days = 1 }
 				set_country_flag = can_change_sides_dem
@@ -3673,7 +3672,6 @@ focus_tree = {
 				bonus = 0.2
 				days = 240
 				grand_doctrine = new_operational_integrity
-				track = fighter_aircraft
 			}
 			add_doctrine_cost_reduction = {
 				name = ROM_air_defense
@@ -3718,7 +3716,6 @@ focus_tree = {
 				bonus = 0.2
 				days = 240
 				grand_doctrine = new_battlefield_support
-				track = strike_aircraft
 			}
 			add_doctrine_cost_reduction = {
 				name = ROM_ground_support

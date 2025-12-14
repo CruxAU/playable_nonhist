@@ -1698,3 +1698,23 @@ ITA_gotta_have_enough_light_tanks = {
 		value = 1  # Italy need light tanks to crush the enemies!
 	}
 }
+
+ITA_dont_invade_uk_early = {
+	allowed = { 
+		original_tag = ITA
+	}
+	
+	enable = {
+		is_historical_focus_on = yes
+		ITA_is_historical_ai = yes
+		date < 1941.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = invade
+		id = ENG
+		value = -500
+	}
+}
