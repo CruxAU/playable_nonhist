@@ -119,7 +119,7 @@ governments_in_exile = {
 			IF = {
 				limit = {
 					check_variable = { ETH.host_nation = GER }
-					NOT = {
+					NOT = { #NHMMAP
 						has_country_flag = ETH_false_flag_border_incident_completed
 					}
 				}
@@ -131,7 +131,7 @@ governments_in_exile = {
 				}
 
 			}
-			IF = {
+			IF = { #NHMMAP
 				limit = {
 					check_variable = { ETH.host_nation = JAP }
 				}
@@ -254,7 +254,7 @@ governments_in_exile = {
 					hours = 1
 				}
 			}
-			hidden_effect = {
+			hidden_effect = { #NHMMAP
 				set_country_flag = ETH_false_flag_border_incident_completed
 			}
 		}
@@ -772,7 +772,7 @@ ETH_second_italo_ethiopian_war_category = {
 			custom_effect_tooltip = ETH_host_country_decision_tt
 		}
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			base = 0
 			modifier = {
 				add = 100
@@ -1123,8 +1123,8 @@ ETH_second_italo_ethiopian_war_category = {
 		name = ETH_time_based_war_escalation_mission
 		icon = GFX_decision_generic_operation
 		allowed = { 	
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
+			original_tag = ITA
+			has_dlc = "By Blood Alone"
 		}    
 		available = { 
 			hidden_trigger ={ always = no }
@@ -1374,7 +1374,7 @@ ETH_second_italo_ethiopian_war_category = {
 	}
 	# Hold Hararghe "dummy" mission for Italy 
 	ETH_conquer_harar_mission = {   
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_operation 
 		allowed = { tag = ITA }    
 		available = { 
 			835 = { is_controlled_by = ROOT } 
@@ -1414,7 +1414,7 @@ ETH_italian_occupation_category = {
 				}
 				RAJ = { all_owned_state = { is_controlled_by = RAJ } }
 			}
-			
+
 			if = {
 				limit = {
 					RAJ = { is_ai = no } #to block ai from stealing advisors, if mp peole have to coordinate themselves
@@ -1592,7 +1592,7 @@ ETH_italian_occupation_category = {
 	
 	# Warning mission for Ethiopia - should be replaced with targeted mission if generic
 	ETH_italian_control_mission = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_operation 
 		allowed = { original_tag = ETH }    
 		available = { 
 			var:ITA.state_integrated = { NOT = { is_controlled_by = ITA }}
@@ -1837,7 +1837,7 @@ ETH_anti_colonialism_category = {
 		}
 
 		target_array = global.colonial_powers
-
+		
 		target_root_trigger = { original_tag = ETH } 
 		# on_map_mode = map_only
 		fire_only_once = yes  

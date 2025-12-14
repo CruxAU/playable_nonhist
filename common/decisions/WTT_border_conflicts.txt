@@ -9,27 +9,10 @@ CHI_border_clashes = {
 	WTT_border_conflict_initiate_incident = {
 		icon = border_war		
 
-		available = {
-			FROM = {
-				any_owned_state = {
-					is_controlled_by = FROM
-					any_neighbor_state = {
-						is_fully_controlled_by = ROOT
-						set_temp_variable = { var:attacker_state_temp = id }
-						has_ROOT_at_least_1_div_in_current_state_scope = yes
-						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-					}
-					NOT = { has_state_flag = border_incident_active }
-					set_temp_variable = { var:defender_state_temp = id }
-				}
-			}
-			NOT = { has_non_aggression_pact_with = FROM }
-		}
 
 		visible = {
 			FROM = { exists = yes }
 			NOT = { has_war_with = FROM }
-			FROM = { has_not_initiated_border_incident_with_ROOT = yes }
 			FROM = {
 				NOT = {
 					is_subject_of = ROOT
@@ -64,26 +47,31 @@ CHI_border_clashes = {
 
 				#Completed border war on opposition and other warlord has picked a side
 				AND = {
-					has_completed_focus = CHI_anti_opposition_campaigns
+					OR = {
+						has_completed_focus = CHI_anti_opposition_campaigns
+						has_completed_focus = CHI_sea_anti_opposition_campaigns
+					}
 					OR = {
 						AND = {
-							has_completed_focus =   CHI_cooperation_with_the_nationalists
-							FROM = { 
-								OR = {
-									has_completed_focus = CHI_cooperation_with_the_communists 
-									has_completed_focus = CHI_opposition 
-								}
+							OR = {
+								has_completed_focus = CHI_cooperation_with_the_nationalists
+								has_completed_focus = CHI_sea_cooperation_with_the_nationalists
+							}
+							OR = {
+								FROM = { has_completed_focus = CHI_cooperation_with_the_communists }
+								FROM = { has_completed_focus = CHI_sea_cooperation_with_the_communists }
 							}
 							NOT = { is_subject_of = event_target:WTT_communist_china }
 							FROM = { NOT = { is_subject_of = event_target:WTT_current_china_leader } }
 						}
 						AND = {
-							has_completed_focus = CHI_cooperation_with_the_communists
-							FROM = { 
-								OR = {
-									has_completed_focus = CHI_cooperation_with_the_nationalists 
-									has_completed_focus = CHI_opposition 
-								}
+							OR = {
+								has_completed_focus = CHI_cooperation_with_the_communists
+								has_completed_focus = CHI_sea_cooperation_with_the_communists
+							}
+							OR = {
+								FROM = { has_completed_focus = CHI_cooperation_with_the_nationalists }
+								FROM = { has_completed_focus = CHI_sea_cooperation_with_the_nationalists }
 							}
 							NOT = { is_subject_of = event_target:WTT_current_china_leader }
 							FROM = { NOT = { is_subject_of = event_target:WTT_communist_china } }
@@ -94,11 +82,10 @@ CHI_border_clashes = {
 				#Communist China can start with all who goes with the nationalists
 				AND = {
 					tag = event_target:WTT_communist_china
-					has_completed_focus = PRC_focus_on_china
 					FROM = { 
 						OR = {
 							has_completed_focus = CHI_cooperation_with_the_nationalists 
-							has_completed_focus = CHI_opposition 
+							has_completed_focus = CHI_sea_cooperation_with_the_nationalists 
 						}
 					}
 				}
@@ -109,6 +96,7 @@ CHI_border_clashes = {
 				FROM = {
 					any_owned_state = {
 						is_controlled_by = FROM
+						impassable = no
 						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 						any_neighbor_state = {
 							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
@@ -117,17 +105,53 @@ CHI_border_clashes = {
 					}
 				}
 			}
+			FROM = { has_not_initiated_border_incident_with_ROOT = yes }  # NOTE this check is very expensive! Use it with caution.
+		}
+
+		available = {
+			FROM = {
+				any_owned_state = {
+					is_controlled_by = FROM
+					impassable = no
+					any_neighbor_state = {
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+						set_temp_variable = { var:attacker_state_temp = id }
+						has_ROOT_at_least_1_div_in_current_state_scope = yes
+						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					}
+					NOT = { has_state_flag = border_incident_active }
+					set_temp_variable = { var:defender_state_temp = id }
+				}
+			}
+			NOT = { has_non_aggression_pact_with = FROM }
 		}
 
 		# VPI by Yard1
 		target_root_trigger = {
 			is_literally_china = yes
 		}
-		target_array = neighbors
+		#target_array = neighbors
 
 		target_trigger = {
+
+			#any_collection_element = {
+	 		#	collection = {
+			#		input = game:scope
+			#		operators = { faction_members controlled_states }
+			#	}
+			#	is_neighbor_of = <TAG>
+			#}
+
+
 			FROM = { 
-				is_literally_china = yes
+				is_literally_china = yes 
+				any_neighbor_country = {
+					OR = {
+						tag = ROOT 
+						is_subject_of = ROOT
+					}
+				}
+				
 			}
 		}
 
@@ -137,18 +161,19 @@ CHI_border_clashes = {
 					state = FROM.defender_state_vs_@ROOT
 					AND = {
 						is_owned_and_controlled_by = FROM
+						impassable = no
 						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 						any_neighbor_state = {
 							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 							has_ROOT_at_least_1_div_in_current_state_scope = yes
-							is_fully_controlled_by = ROOT
+							state_is_fully_controlled_by_ROOT_or_subject = yes
 						}
 					}
 				}
 			}
 		}
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			base = 5
 			modifier = {
 				add = 5
@@ -174,11 +199,12 @@ CHI_border_clashes = {
 				FROM = {
 					random_owned_controlled_state = {
 						limit = {
+							impassable = no
 							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 							any_neighbor_state = {
 								hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 								has_ROOT_at_least_1_div_in_current_state_scope = yes
-								is_fully_controlled_by = ROOT
+								state_is_fully_controlled_by_ROOT_or_subject = yes
 							}
 						}
 						save_event_target_as = defender_state
@@ -189,7 +215,8 @@ CHI_border_clashes = {
 				}
 				random_state = {
 					limit = {
-						is_fully_controlled_by = ROOT
+						impassable = no
+						state_is_fully_controlled_by_ROOT_or_subject = yes
 						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 						has_ROOT_at_least_1_div_in_current_state_scope = yes
 						any_neighbor_state = {
@@ -219,9 +246,10 @@ CHI_border_clashes = {
 				FROM = {
 					random_owned_controlled_state = {
 						limit = {
+							impassable = no
 							hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 							any_neighbor_state = {
-								is_fully_controlled_by = ROOT
+								state_is_fully_controlled_by_ROOT_or_subject = yes
 								has_ROOT_at_least_1_div_in_current_state_scope = yes
 								hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 							}
@@ -231,7 +259,8 @@ CHI_border_clashes = {
 				}
 				random_state = {
 					limit = {
-						is_fully_controlled_by = ROOT
+						impassable = no
+						state_is_fully_controlled_by_ROOT_or_subject = yes
 						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
 						has_ROOT_at_least_1_div_in_current_state_scope = yes
 						any_neighbor_state = {
@@ -269,11 +298,11 @@ CHI_border_clashes = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = var:defender_state_temp
-			state = var:ROOT.defender_state_vs_@FROM
-		} 
-}
+			highlight_state_targets = {
+				state = var:defender_state_temp
+				state = var:ROOT.defender_state_vs_@FROM
+			} 
+		}
 
 		war_with_target_on_timeout = yes
 		ai_will_do = {
@@ -355,7 +384,7 @@ CHI_border_clashes = {
 
 		available = {
 			var:FROM.attacker_state_vs_@ROOT = {
-				is_fully_controlled_by = ROOT
+				state_is_fully_controlled_by_ROOT_or_subject = yes
 			}
 			divisions_in_border_state = {
 				state = var:FROM.attacker_state_vs_@ROOT

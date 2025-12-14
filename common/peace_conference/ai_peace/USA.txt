@@ -39,6 +39,9 @@ peace_ai_desires = {
         enable = {
             FROM.FROM.FROM = {
                 state = 525
+                state = 1029
+                state = 1031
+                state = 1030
             }
             FROM = {
                 original_tag = KOR
@@ -54,7 +57,7 @@ peace_ai_desires = {
                 }
             }
         }
-        ai_desire = 200
+        ai_desire = 250
     }
 
 
@@ -64,6 +67,9 @@ peace_ai_desires = {
         enable = {
             FROM.FROM.FROM = {
                 state = 525
+                state = 1029
+                state = 1031
+                state = 1030
             }
             FROM = {
                 original_tag = KOR
@@ -91,6 +97,7 @@ peace_ai_desires = {
             is_historical_focus_on = yes
             FROM.FROM.FROM = {
                 state = 527
+                state = 1028
             }
             FROM = {
                 original_tag = KOR
@@ -128,7 +135,7 @@ peace_ai_desires = {
                 pc_total_score > 800 # Only attempt if we can puppet most of Japan (with cost modifier now)
             }
         }
-        ai_desire = 200
+        ai_desire = 250
     }
 	
 	USA_take_some_islands = {

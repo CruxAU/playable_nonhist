@@ -256,6 +256,76 @@ peace_ai_desires = {
         ai_desire = -200
     }
 
+	Soviets_like_to_eat_MAN = { #don't puppet this stuff
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM = {
+				OR = {
+					original_tag = MAN
+					original_tag = JAP
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					state = 328
+					state = 610
+					state = 714
+					state = 715
+					state = 716
+					state = 717
+					state = 745
+					state = 761
+				}
+				
+            }
+            ROOT = { 
+				original_tag = SOV
+				has_government = communism
+				NOT = {
+					any_allied_country = {
+						NOT = {
+							tag = PRC
+						}
+						FROM.FROM.FROM = {
+							is_core_of = PREV
+						}
+					}
+				}
+			}
+        }
+        ai_desire = 200
+    }
+	
+	Soviets_like_to_eat_MAN_reverse = { #don't puppet this stuff holy shit
+        peace_action_type = puppet
+        enable = {
+			FROM.FROM = {
+				OR = {
+					original_tag = MAN
+					original_tag = JAP
+				}
+            }
+            FROM.FROM.FROM = {
+				OR = {
+					state = 328
+					state = 610
+					state = 714
+					state = 715
+					state = 716
+					state = 717
+					state = 745
+					state = 761
+				}
+				
+            }
+            ROOT = { 
+				original_tag = SOV
+				has_government = communism
+			}
+        }
+        ai_desire = -200
+    }
+
 	Soviets_still_puppet_rom = { #don't puppet this stuff holy shit
         peace_action_type = puppet
         enable = {

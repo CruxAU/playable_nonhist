@@ -1,0 +1,88 @@
+joining_rule_germanics_only = { 
+	type = joining_rules
+	visible = {
+		has_government = fascism
+		capital_scope = {
+			OR = {
+				region = 275 
+				region = 10
+				region = 11
+				region = 192
+				region = 276
+				region = 206
+				region = 279
+				region = 191
+				region = 161
+				region = 36 
+				region = 45 
+				region = 16
+				region = 12
+				region = 265 
+				region = 8
+				region = 6
+				state = 36
+				state = 7
+				state = 35
+				region = 7
+				region = 21
+				region = 1
+				region = 2
+				region = 36
+				state = 5
+				state = 8
+				state = 763
+				state = 189
+				state = 85
+				state = 807
+			}
+		}
+	}
+	can_remove = {
+		faction_manifest_fulfillment > 0.85
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	modifier = {
+		army_core_defence_factor = 0.035
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = is_non_colonial_germanic_country_tt
+			capital_scope = {
+				OR = {
+					region = 275 
+					region = 10
+					region = 11
+					region = 192
+					region = 276
+					region = 206
+					region = 279
+					region = 191
+					region = 161
+					region = 36 
+					region = 45 
+					region = 16
+					region = 12
+					region = 265 
+					region = 8
+					region = 6
+					region = 5
+					region = 7
+					region = 21
+					region = 1
+					region = 2
+					region = 36
+					state = 5
+					state = 8
+					state = 763
+					state = 189
+					state = 85
+					state = 807
+				}
+			}
+		}
+	}
+}

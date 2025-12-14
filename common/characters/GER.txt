@@ -512,11 +512,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = {  }
-			skill = 1
+			skill = 2
 			attack_skill = 1
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 			legacy_id = 3
 		}
 	}
@@ -1852,7 +1852,7 @@ characters = {
 				NOT = { has_completed_focus = GER_ascension_of_goring }
 			}
 			visible = {
-				always = no #MM: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
+				always = no #MM: Part of Inner Circle. NHMMAP REMOVE COMPLETELY IF NOT USED BY ALT-HIST
 				has_government = fascism
 				NOT = {
 					has_completed_focus = GER_oppose_hitler_ww
@@ -2636,7 +2636,7 @@ characters = {
 				}
 			}
 			visible = {
-				always = no #MM: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
+				always = no #MM: Part of Inner Circle. NHMMAP REMOVE COMPLETELY IF NOT USED BY ALT-HIST
 				has_government = fascism
 				NOT = {
 					has_completed_focus = GER_oppose_hitler_ww
@@ -2676,7 +2676,7 @@ characters = {
 				NOT = { has_completed_focus = GER_ascension_of_himmler }
 			}
 			visible = {
-				always = no #MM: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
+				always = no #MM: Part of Inner Circle. NHMMAP REMOVE COMPLETELY IF NOT USED BY ALT-HIST
 				has_government = fascism
 				NOT = {
 					has_completed_focus = GER_oppose_hitler_ww
@@ -2718,7 +2718,7 @@ characters = {
 				}
 			}
 			visible = {
-				always = no #MM: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
+				always = no #MM: Part of Inner Circle. NHMMAP REMOVE COMPLETELY IF NOT USED BY ALT-HIST
 				has_government = fascism
 				NOT = {
 					has_completed_focus = GER_oppose_hitler_ww
@@ -3673,7 +3673,7 @@ characters = {
 				GER_inflexible_communist_organizer 
 			}
 			ai_will_do = {
-				base = 50
+				base = 50 #NHMMAP
 			}
 		}		
 	}

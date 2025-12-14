@@ -73,6 +73,8 @@ HOL_historical_plan = {
 		HOL_cave_to_the_british = 0
 		HOL_germany_is_the_greater_threat = 0
 		HOL_protect_against_britain = 0
+		HOL_the_zuiderzee_works = 0 #dont lock it in yet
+		HOL_curtail_colonial_autonomy = 0 #dont lock it in yet
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -124,12 +126,13 @@ HOL_historical_plan_everyone_is_hist = {
 	}
 
 	ai_national_focuses = {
+		HOL_cave_to_the_british
 		HOL_germany_is_the_greater_threat					
 		HOL_antilles_defenses					
 		HOL_appoint_new_supreme_commander					#November 20 1939	
 		HOL_modernize_our_infantry_equipment					#January 30 1940
 		HOL_secret_staff_talks					#April 10 1940
-		HOL_cave_to_the_british					#June 20 1940	
+							#June 20 1940	
 		HOL_unity_through_democracy					#August 30 1940
 						#November 10 1940
 		HOL_replace_the_defeatist_government					#January 20 1941

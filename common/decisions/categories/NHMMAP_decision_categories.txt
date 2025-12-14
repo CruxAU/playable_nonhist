@@ -455,3 +455,25 @@ TUR_influence_category = {
 		}
 	}
 }
+
+MAN_restoring_russian_empire_category = {
+	
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_picture_soviet_civil_war
+	   
+	allowed = {
+		original_tag = MAN
+	}
+	priority = {
+		base = 10
+	}
+
+	visible_when_empty = no
+
+	visible = {
+		has_country_flag = NHMMAP_MAN_is_russia
+		has_capitulated = no
+		is_subject = no
+		has_completed_focus = MAN_attack_soviets
+	}
+}

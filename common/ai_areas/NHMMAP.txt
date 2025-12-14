@@ -1,5 +1,5 @@
 areas = {
-	north_pacific = {
+	north_pacific_NHMMAP = {
 		strategic_regions = {
 			87
 			177

@@ -1356,7 +1356,7 @@ focus_tree = {
 					}
 				}
 			}
-			
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			IF = {
@@ -3216,7 +3216,6 @@ focus_tree = {
 				bonus = 0.5
 				ahead_reduction = 2
 				uses = 2
-				category = cl_tech
 				category = ca_tech
 			}
 		}
@@ -3432,6 +3431,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
+		continue_if_invalid = yes
 		x = -4
 		y = 1
 		relative_position_id = HOL_gateway_to_europe
@@ -3546,6 +3546,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_positive_trade_relations
 		cancel_if_invalid = no
+		continue_if_invalid = yes
 		x = 0
 		y = 1
 		relative_position_id = HOL_gateway_to_europe
@@ -3601,6 +3602,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_trade
 		cancel_if_invalid = no
+		continue_if_invalid = yes
 		x = 4
 		y = 1
 		relative_position_id = HOL_gateway_to_europe
@@ -4210,7 +4212,7 @@ focus_tree = {
 				}
 			}
 		}
-		bypass = { #im 99 percent sure state 309 should not be included here
+		bypass = { #NHMMAP im 99 percent sure state 309 should not be included here
 			OR = {
 				JAP = { NOT = { has_government = fascism } }
 				has_war_with = JAP
@@ -4579,7 +4581,7 @@ focus_tree = {
 			add_state_claim = 275
 			add_state_claim = 719
 			add_state_claim = 422
-			
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			create_wargoal = {
@@ -6657,8 +6659,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
 			set_rule = { can_create_factions = yes }
-			create_faction = HOL_benelux
+			create_faction_from_template = {
+				template = faction_template_defensive_democratic
+				name = HOL_benelux
+				icon = GFX_faction_logo_generic_13
+			}
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			BEL = {
 				custom_effect_tooltip = HOL_form_the_benelux_bel_tt
@@ -6750,11 +6758,19 @@ focus_tree = {
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 
-				create_faction = BEL_european_union
+				create_faction_from_template = {
+					template = faction_template_european_unity
+					name = BEL_european_union
+					icon = GFX_faction_logo_eu
+				}
 			}
 
 			ELSE = {
-				create_faction = BEL_european_union
+				create_faction_from_template = {
+					template = faction_template_european_unity
+					name = BEL_european_union
+					icon = GFX_faction_logo_eu
+				}
 			}
 
 			set_cosmetic_tag = european_union_leader

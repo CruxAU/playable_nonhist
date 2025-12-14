@@ -1,15 +1,3 @@
-# befriend
-# conquer
-# antagonize
-# build_ship
-# build_army
-# unit_ratio
-# build_building
-# research_tech
-# garrison
-# protect
-# influence
-
 SOV_unit_production = {
 	allowed = {
 		original_tag = SOV
@@ -323,6 +311,7 @@ SOV_we_want_t34_asap = {
 		value = 100  # 100 essentially means we don't require a stockpile surplus
 	}
 }
+
 southern_thrust = {
 	allowed = {
 		original_tag = SOV
@@ -360,7 +349,7 @@ southern_thrust = {
 	}
 }
 
-claims_on_poland = {
+claims_on_poland = { #NHMMAP
 	allowed = {
 		original_tag = SOV
 	}
@@ -466,7 +455,7 @@ germany_ally = {
 	enable = {
 		OR = {
 			has_completed_focus = SOV_anti_capitalist_policies
-			GER = { has_completed_focus = GER_soviet_ally }
+			GER = { has_completed_focus = GER_soviet_ally }#NHMMAP
 			GER = { has_completed_focus = GER_alliance_with_the_ussr }
 		}
 		country_exists = GER
@@ -542,7 +531,7 @@ spanish_civil_war_SOV_resistance = {
 	}
 	enable = {
 		has_government = communism
-		NOT = {
+		NOT = {#NHMMAP
 			has_completed_focus = SOV_covert_support_for_spanish_poum
 		}
 		country_exists = SPD
@@ -570,6 +559,38 @@ spanish_civil_war_SOV_resistance = {
 		value = 100
 	}
 }
+
+manchukuo_soviet_aid = {
+	allowed = {
+		original_tag = SOV
+		has_dlc = "No Compromise, No Surrender"
+	}
+	enable = {
+		has_government = communism
+		country_exists = MAN
+		MAN = {
+			has_completed_focus = MAN_tsr_soviet_aid
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = befriend
+		id = MAN
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = MAN
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MAN
+		value = 100
+	}
+}
+
+
 
 SOV_template_design_1 = {
 	allowed = {
@@ -975,6 +996,71 @@ SOV_dont_send_volunteers_that_early_to_china = {
 	}
 }
 
+SOV_send_volunteers_to_sinkiang = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		SIK = { has_war_with = KHM }
+		country_exists = SIK
+	}
+
+	abort = {
+		NOT = {
+			SIK = { has_war_with = KHM }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SIK"
+		value = 999
+	}
+}
+
+SOV_dont_send_volunteers_to_japan = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		JAP = { 
+			has_war_with = CHI 
+			NOT = { has_government = communism }
+		}
+		SOV = {
+			has_government = communism
+		}
+	}
+
+	abort_when_not_enabled = yes 
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "JAP"
+		value = -800
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MAN"
+		value = -800
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MEN"
+		value = -800
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KOR"
+		value = -800
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RNG"
+		value = -800
+	}
+}
+
 SOV_dont_send_lend_lease_that_early_to_china = {
 	allowed = {
 		original_tag = SOV
@@ -1069,7 +1155,7 @@ SOV_dont_ally_us_soviet_civil_was = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = SOU
+		id = SOS #NHMMAP
 		value = -500
 	}
 }

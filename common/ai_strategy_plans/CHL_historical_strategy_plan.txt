@@ -102,8 +102,9 @@ CHL_historical_plan = {
 
 		#1944
 		SMB_merchant_marine # 70
-		CHL_protect_the_easter_island # 35
+		CHL_a_joint_application_to_the_allies # 70
 		SMB_mountain_guns # 35
+		CHL_protect_the_easter_island # 35 - They will attempt to jointly join the allies together with ARG before going for the aggressive option, two focuses above  
 		SMB_special_forces_option_1_continuation # 35
 		SMB_atacama_training # 35
 		SMB_women_in_aviation # 35

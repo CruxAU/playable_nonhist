@@ -1,0 +1,346 @@
+defined_text = { #Country
+	name = GetPoliticalSupport_MAN
+	text = {
+		trigger = {
+			has_event_target = scope_MAN			
+		}
+		localization_key = MAN_political_support
+	}
+	text = { localization_key = "" }
+}
+defined_text = { #Country
+	name = GetFullPoliticalSupport_MAN
+	text = {
+		trigger = {
+			has_event_target = scope_MAN			
+		}
+		localization_key = MAN_full_political_support
+	}
+	text = { localization_key = "" }
+}
+defined_text = { #Country
+	name = GetStateSupport
+	text = {
+		trigger = {
+			original_tag = CHI
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = CHI_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = PRC
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = PRC_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = GXC
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = GXC_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = YUN
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = YUN_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = SHX
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = SHX_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = XSM
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = XSM_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = SIK
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = SIK_state_support
+	}
+	text = {
+		trigger = {
+			original_tag = MAN
+			any_state = {
+				has_state_flag = majority_political_platform_@PREV
+			}
+		}
+		localization_key = MAN_state_support
+	}
+	text = { localization_key = "" }
+}
+
+defined_text = { #Event target scope_<TAG>
+	name = GetWarlordSupport
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = CHI
+		}
+		localization_key = CHI_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = PRC
+		}
+		localization_key = PRC_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = GXC
+		}
+		localization_key = GXC_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = YUN
+		}
+		localization_key = YUN_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = SHX
+		}
+		localization_key = SHX_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = XSM
+		}
+		localization_key = XSM_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = SIK
+		}
+		localization_key = SIK_warlord_support
+	}
+	text = {
+		trigger = {
+			any_country = {
+				is_chinese_warlord = yes
+				has_country_flag = warlord_supports_@PREV
+			}
+			original_tag = MAN
+		}
+		localization_key = MAN_warlord_support
+	}
+	text = { localization_key = "" }
+}
+defined_text = { #Country
+	name = GetWarlordSupportFromMAN
+	text = {
+		trigger = {
+			MAN = {
+				has_country_flag = warlord_supports_@PREV
+			}
+		}
+		localization_key = warlord_support_from_MAN
+	}
+	text = { localization_key = "" }
+}
+defined_text = { #Country
+	name = GetOtherSupport
+	text = {
+		trigger = {
+			original_tag = CHI
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = CHI_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = PRC
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = PRC_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = GXC
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = GXC_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = YUN
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = YUN_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = SHX
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = SHX_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = XSM
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = XSM_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = SIK
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = SIK_other_support
+	}
+	text = {
+		trigger = {
+			original_tag = MAN
+			NOT = { check_variable = { other_political_support = 0 } }
+		}
+		localization_key = MAN_other_support
+	}
+	text = { localization_key = "" }
+}
+#Call after scoping to desired state
+defined_text = { #Country
+	name = GetStateMajorityCountryName
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = CHI
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_CHI_GetNameDef
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = PRC
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_PRC_GetNameDef
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = GXC
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_GXC_GetNameDef
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = YUN
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_YUN_GetNameDef
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = SHX
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_SHX_GetNameDef
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = XSM
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_XSM_GetNameDef
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = SIK
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_SIK_GetNameDef
+	}
+	text = {
+		trigger = {
+			any_country = {
+				original_tag = MAN
+				PREV = { has_state_flag = majority_political_platform_@PREV }
+			}
+		}
+		localization_key = scope_MAN_GetNameDef
+	}
+	text = { localization_key = "" }
+}
+defined_text = { #Country
+	name =  GetLocalStateSupport_MAN
+	text = {
+		trigger = {
+			has_event_target = scope_MAN
+		}
+		localization_key = MAN_local_state_support
+	}
+	text = { localization_key = "" }
+}

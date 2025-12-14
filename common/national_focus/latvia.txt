@@ -776,7 +776,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #NHMMAP
 		id = LAT_enforce_military_rule
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = LAT_military_dictatorship }
@@ -1722,7 +1722,7 @@ focus_tree = {
 			NOT = {
 				any_other_country = {
 					is_in_faction_with = GER
-					has_war_with = LAT	
+					has_war_with = LAT	#NHMMAP FIX
 				}
 			}
 			GER = {
@@ -2231,14 +2231,25 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+
 				set_rule = {
 					can_create_factions = yes
 				}
+
 				if = {
 					limit = {
 						is_in_faction = no
 					}
-					create_faction = BROTHERHOOD
+					IF = {
+						limit = {
+							has_dlc = "No Compromise, No Surrender"
+						}
+						create_faction_from_template = faction_template_BROTHERHOOD
+						add_faction_initiative = 1
+					}
+					ELSE = {
+						create_faction = BROTHERHOOD
+					}
 					if = {
 						limit = {
 							EST = {

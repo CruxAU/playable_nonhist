@@ -1275,7 +1275,7 @@ shared_focus = {
 
 		IF = {
 			limit = {
-					has_dlc = "Arms Against Tyranny"
+				has_dlc = "Arms Against Tyranny"
 			}	
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = BALTIC_RAF_organization
@@ -1290,7 +1290,7 @@ shared_focus = {
 			mio:ENG_rsaf_enfield_organization = {
 				add_mio_size = 1
 			}
-
+			
 		}
 		ELSE = {
 			show_ideas_tooltip = BALTIC_RAF

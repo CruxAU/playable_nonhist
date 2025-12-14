@@ -9,6 +9,13 @@ CHI_warlord_historical_plan_nationalist = {
 			original_tag = XSM
 			original_tag = SHX
 			original_tag = SIK
+			original_tag = HBC
+			original_tag = SIC
+			original_tag = SND
+			original_tag = GDC
+			original_tag = XIC
+			original_tag = NXM
+			original_tag = GSM
 		}
 	}
 	enable = {
@@ -126,12 +133,19 @@ CHI_warlord_historical_plan_communist = {
 	desc = "Historical behavior for Chinese Warlord"
 
 	allowed = {
-		OR = {
+			OR = {
 			original_tag = GXC
 			original_tag = YUN
 			original_tag = XSM
 			original_tag = SHX
 			original_tag = SIK
+			original_tag = HBC
+			original_tag = SIC
+			original_tag = SND
+			original_tag = GDC
+			original_tag = XIC
+			original_tag = NXM
+			original_tag = GSM
 		}
 	}
 	enable = {

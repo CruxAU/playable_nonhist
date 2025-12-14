@@ -1,0 +1,185 @@
+#countries that are non-aligned at the start get the extra non-aligned options
+#Note: Luxembourg have an event for their ideology so keep this in mind
+#So does bolivia!
+generic_neutrality_plan = {
+	name = "yeo"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_focus_tree = generic_focus
+		has_country_flag = GENERIC_AI_RANDOM_NEU
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+	}
+	focus_factors = {
+		collectivist_ethos = 0
+		ah_collectivist_ethos = 0
+		interventionism_focus = 0
+		ah_interventionism_focus = 0
+		neutrality_focus = 2
+		political_effort = 2
+		ah_neutrality_focus = 2
+		ah_political_effort = 2
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+generic_neutrality_interventionism_plan = {
+	name = "yeo"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_focus_tree = generic_focus
+		has_country_flag = GENERIC_AI_RANDOM_INT
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+	}
+	focus_factors = {
+		collectivist_ethos = 0
+		interventionism_focus = 2
+		neutrality_focus = 0
+		political_effort = 2
+
+		ah_collectivist_ethos = 0
+		ah_interventionism_focus = 2
+		ah_neutrality_focus = 0
+		ah_political_effort = 2
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+generic_democratic_neutrality_plan = {
+	name = "yeo"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_focus_tree = generic_focus
+		has_country_flag = GENERIC_AI_RANDOM_DEM_NEU
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+	}
+	focus_factors = {
+		collectivist_ethos = 0
+		interventionism_focus = 0
+		neutrality_focus = 2
+		political_effort = 2
+
+		ah_collectivist_ethos = 0
+		ah_interventionism_focus = 0
+		ah_neutrality_focus = 2
+		ah_political_effort = 2
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+generic_democratic_interventionism_plan = {
+	name = "yeo"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_focus_tree = generic_focus
+		has_country_flag = GENERIC_AI_RANDOM_DEM_INT
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+	}
+	focus_factors = {
+		collectivist_ethos = 0
+		interventionism_focus = 2
+		neutrality_focus = 0
+		political_effort = 2
+		ah_collectivist_ethos = 0
+		ah_interventionism_focus = 2
+		ah_neutrality_focus = 0
+		ah_political_effort = 2
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+generic_communist_plan = {
+	name = "yeo"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_focus_tree = generic_focus
+		has_country_flag = GENERIC_AI_RANDOM_COM
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+	}
+	focus_factors = {
+		collectivist_ethos = 2
+		liberty_ethos = 0
+		nationalism_focus = 0
+		political_effort = 2
+		ah_collectivist_ethos = 2
+		ah_liberty_ethos = 0
+		ah_nationalism_focus = 0
+		ah_political_effort = 2
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+generic_fascist_plan = {
+	name = "yeo"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		has_focus_tree = generic_focus
+		has_country_flag = GENERIC_AI_RANDOM_FAS
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+	}
+	focus_factors = {
+		collectivist_ethos = 2
+		liberty_ethos = 0
+		internationalism_focus = 0
+		political_effort = 2
+
+		ah_collectivist_ethos = 2
+		ah_liberty_ethos = 0
+		ah_internationalism_focus = 0
+		ah_political_effort = 2
+	}
+	weight = {
+		factor = 1.0
+	}
+}

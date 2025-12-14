@@ -606,6 +606,8 @@ focus_tree = {
 			unlock_decision_tooltip = abandon_the_entente
 		}
 	}
+	
+	#NHMMAP INTENTIONAL TO HAVE IT AT BOTTOM OF TREE
 
 	focus = {
 		id = EST_beyond_the_baltic
@@ -1892,7 +1894,11 @@ focus_tree = {
 							FIN = { has_idea = FIN_the_lone_wolf }
 						}
 					}
-					create_faction = FINNO_ESTONIAN_SUPREMACY_LEAGUE
+					create_faction_from_template = {
+						template = faction_template_european_dominance
+						name = FINNO_ESTONIAN_SUPREMACY_LEAGUE
+						icon = GFX_faction_logo_generic_8
+					}
 				}
 			}
 			effect_tooltip = {
@@ -2348,9 +2354,8 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			is_subject = no
-			any_state = {
-				is_core_of = FIN
-				is_owned_by = ROOT 
+			any_owned_state = {
+				is_core_of = FIN 
 			}
 		}
 
@@ -2433,7 +2438,7 @@ focus_tree = {
 					is_subject_of = ROOT
 				}
 			}
-
+			
 		}
 
 		cancel_if_invalid = yes
@@ -2551,7 +2556,7 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			is_subject = no
-			OR = {
+			OR = { #OR intentional NHMMAP
 				143 = {
 					controls_or_subject_of = yes
 					is_core_or_compliance_60 = yes
@@ -2713,6 +2718,30 @@ focus_tree = {
 				}
 				transfer_state = 208
 			}
+			if = {
+				limit = {
+					918 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 918
+			}
+			if = {
+				limit = {
+					923 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 923
+			}
+			if = {
+				limit = {
+					924 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 924
+			}
+			if = {
+				limit = {
+					925 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 925
+			}
 			143 = {
 				add_core_of = ROOT
 			}
@@ -2765,6 +2794,18 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 			208 = {
+				add_core_of = ROOT
+			}
+			918 = {
+				add_core_of = ROOT
+			}
+			923 = {
+				add_core_of = ROOT
+			}
+			924 = {
+				add_core_of = ROOT
+			}
+			925 = {
 				add_core_of = ROOT
 			}
 		}

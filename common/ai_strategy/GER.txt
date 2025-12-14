@@ -42,7 +42,7 @@ GER_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = motorized
-		value = -1 #because doctrine this = 1
+		value = 1 #because doctrine this = 1
 	}
 
 	ai_strategy = {
@@ -54,13 +54,13 @@ GER_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mechanized
-		value = -5 #because doctrine this = 0
+		value = -3 #because doctrine this = 0
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = -7 #because doctrine this = 3
+		value = -5 #because doctrine this = 3
 	}
 
 	ai_strategy = {
@@ -113,16 +113,6 @@ GER_unit_production = {
 	}
 
 	ai_strategy = {
-		type = equipment_production_factor
-		id = armor
-		value = -10
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = motorized
-		value = -10
-	}
-	ai_strategy = {
 		type = equipment_production_min_factories_archetype #Build these up over time, don't stall
 		id = anti_air_equipment
 		value = 2
@@ -133,6 +123,12 @@ GER_unit_production = {
 		value = 4
 	}
 
+	
+	ai_strategy = { #Germany struggles with manual management of this in an endless loop
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
+		value = 1
+	}
 	ai_strategy = { #added to railway gun define (set to 0 by default, increased in default strategies)
 		type = railway_gun_divisions_ratio
 		value = 1
@@ -356,7 +352,7 @@ GER_armored_production = {
 		original_tag = GER
 	}
 	enable = {
-		date > 1938.8.1
+		date > 1938.3.1
 		ai_wants_divisions > 10 #Decreasing the amount of tanks the AI wants
 	}
 	abort = {
@@ -380,7 +376,7 @@ GER_halt_light_armor_production_in_transitioning = {
 		has_template_majority_unit = medium_armor
 		OR = {
 			has_equipment = { light_tank_chassis > 600 }
-			date > 1938.8.1
+			date > 1938.1.1
 		}
 	}
 	abort = {
@@ -479,6 +475,13 @@ GER_highered_armored_production = {
 	abort = {
 		num_of_military_factories < 60
 	}
+	
+	ai_strategy = { #Germany struggles with manual management of this in an endless loop
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
+		value = 1
+	}
+	
 
 	ai_strategy = {
 		type = role_ratio
@@ -2164,6 +2167,12 @@ AXIS_dont_mess_with_volunteers = {
 		id = MAN
 		value = -500
 	}
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MEN
+		value = -500
+	}
 }
 
 GER_industry_we_are_the_baddies = {
@@ -2444,7 +2453,7 @@ GER_market_management_after_anschluss = {
 	ai_strategy = {
 		type = equipment_market_for_sale_threshold
 		id = infantry
-		value = 10000
+		value = 100000
 	}
 	ai_strategy = {
 		type = equipment_market_for_sale_threshold
@@ -2477,7 +2486,7 @@ GER_market_management_after_sudetenland = {
 	ai_strategy = {
 		type = equipment_market_for_sale_threshold
 		id = infantry
-		value = 20000
+		value = 200000
 	}
 	ai_strategy = {
 		type = equipment_market_for_sale_threshold
@@ -2512,7 +2521,7 @@ GER_market_management_after_sudetenland = {
 	ai_strategy = {
 		type = equipment_market_for_sale_threshold
 		id = train
-		value = 200
+		value = 400
 	}
 }
 
@@ -2559,7 +2568,7 @@ GER_spain_scw_support_la_resistance = {
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SPA
-		value = 200
+		value = 200 #NHMMAP
 	}
 }
 
@@ -4074,7 +4083,7 @@ GER_gotta_have_enough_medium_tanks = {
 		original_tag = GER
 	}
 	enable = {
-		date > 1939.1.1
+		date > 1938.8.1
 		has_tech = basic_medium_tank_chassis
 		stockpile_ratio = {
 			archetype = medium_tank_chassis
@@ -4082,11 +4091,17 @@ GER_gotta_have_enough_medium_tanks = {
 		}
 	}
 	abort_when_not_enabled = yes
-
+	
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
+		value = 1
+	}
+	
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
 		id = medium_tank_chassis
-		value = 2  # Germany need medium tanks to crush the enemies!
+		value = 3  # Germany need medium tanks to crush the enemies!
 	}
 }
 
@@ -4361,6 +4376,35 @@ GER_dont_DOW_benelux = { #Don't try to bypass Around the Maginot!
 	}
 }
 
+# FACTION RELATED STRATEGIES
+
+GER_base_faction_priorities = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+	# Note these adds to the base, as defined in default
+	ai_strategy = {
+		type = spent_faction_initiative_priority
+		id = program
+		value = 15
+	}
+	ai_strategy = {
+		type = spent_faction_initiative_priority
+		id = unlock_faction_commander
+		value = 5
+	}
+	ai_strategy = {
+		type = spent_faction_initiative_priority
+		id = unlock_doctrine_sharing
+		value = 10
+	}
+}
+
+
 # SPECIAL PROJECT FACILITIES
 # Penemünde
 GER_build_an_air_facility_in_penemunde = {
@@ -4370,7 +4414,7 @@ GER_build_an_air_facility_in_penemunde = {
 	enable = {
 		62 = { is_owned_and_controlled_by = GER }
 		air_facility < 1 # one is enough
-		date > 1940.6.1 # Was 1937.2.1 Moving it to later in order to let them focus on building their indurty
+		date > 1940.6.1 # Was 1937.2.1 Moving it to later in order to let them focus on building their industry
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {

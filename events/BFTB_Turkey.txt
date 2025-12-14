@@ -2100,9 +2100,71 @@ country_event = {
 				limit = { 455 = { is_owned_by = ROOT } }
 				TUR = { transfer_state = 455 }
 			}
+			else_if = {
+				limit = {
+					has_subject = JOR
+					JOR = {
+						owns_state = 455
+					}
+				}
+				TUR = {
+					if = {
+						limit = {
+							JOR = {
+								is_puppet = no
+							}
+						}
+						set_autonomy = {
+							target = JOR
+							autonomous_state = autonomy_dominion
+							end_wars = no
+							end_civil_wars = no
+						}
+					}
+					else = {
+						set_autonomy = {
+							target = JOR
+							autonomous_state = autonomy_puppet
+							end_wars = no
+							end_civil_wars = no
+						}
+					}
+				}
+			}
 			IF = {
 				limit = { 454 = { is_owned_by = ROOT } }
 				TUR = { transfer_state = 454 }
+			}
+			else_if = {
+				limit = {
+					has_subject = PAL
+					PAL = {
+						owns_state = 454
+					}
+				}
+				TUR = {
+					if = {
+						limit = {
+							PAL = {
+								is_puppet = no
+							}
+						}
+						set_autonomy = {
+							target = PAL
+							autonomous_state = autonomy_dominion
+							end_wars = no
+							end_civil_wars = no
+						}
+					}
+					else = {
+						set_autonomy = {
+							target = PAL
+							autonomous_state = autonomy_puppet
+							end_wars = no
+							end_civil_wars = no
+						}
+					}
+				}
 			}
 			IF = {
 				limit = { 453 = { is_owned_by = ROOT } }
@@ -2150,11 +2212,83 @@ country_event = {
 			}
 			transfer_state = 455
 		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_subject = JOR
+				}
+				JOR = {
+					owns_state = 455
+				}
+			}
+			if = {
+				limit = {
+					JOR = {
+						is_puppet = no
+					}
+				}
+				set_autonomy = {
+					target = JOR
+					autonomous_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = JOR
+					autonomous_state = autonomy_puppet
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			hidden_effect = {
+				JOR = {
+					drop_cosmetic_tag = yes
+				}
+			}
+		}
 		IF = {
 			limit = {
 				454 = { is_owned_by = FROM }
 			}
 			transfer_state = 454
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_subject = PAL
+				}
+				PAL = {
+					owns_state = 454
+				}
+			}
+			if = {
+				limit = {
+					PAL = {
+						is_puppet = no
+					}
+				}
+				set_autonomy = {
+					target = PAL
+					autonomous_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = PAL
+					autonomous_state = autonomy_puppet
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			hidden_effect = {
+				PAL = {
+					drop_cosmetic_tag = yes
+				}
+			}
 		}
 		IF = {
 			limit = {
@@ -2201,15 +2335,22 @@ country_event = {
 	option = {
 		name = bftb_turkey.47.a #we need the help!
 		effect_tooltip = {
-			TUR = {
-				transfer_state = 656 # Kuwait
-				transfer_state = 658 # Trucial States
-				transfer_state = 765 # Qatar
-				transfer_state = 659 # Aden
-				# GOE States
-				transfer_state = 1014 # Bahrain
-				transfer_state = 992 # Province of Aden
-				transfer_state = 906 # Socotra
+			ENG = {
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ENG
+						OR = {
+							THIS = { state = 656 }
+							THIS = { state = 658 }
+							THIS = { state = 765 }
+							THIS = { state = 659 }
+							THIS = { state = 1014 }
+							THIS = { state = 992 }
+							THIS = { state = 906 }
+						}
+					}
+					transfer_state_to = TUR
+				}
 			}
 		}
 		hidden_effect = {
@@ -2238,14 +2379,25 @@ country_event = {
 	
 	option = {
 		name = bftb_turkey.48.a #we truly are a great power
-		transfer_state = 656 # Kuwait
-		transfer_state = 658 # Trucial States
-		transfer_state = 765 # Qatar
-		transfer_state = 659 # Aden
-		# GOE States
-		transfer_state = 1014 # Bahrain
-		transfer_state = 992 # Province of Aden
-		transfer_state = 906 # Socotra
+
+		ENG = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ENG
+					OR = {
+						THIS = { state = 656 }
+						THIS = { state = 658 }
+						THIS = { state = 765 }
+						THIS = { state = 659 }
+						THIS = { state = 1014 }
+						THIS = { state = 992 }
+						THIS = { state = 906 }
+					}
+				}
+				transfer_state_to = TUR
+			}
+		}
+		
 		if = {
 			limit = {
 				NOT = { has_tech = camelry }
@@ -5543,12 +5695,13 @@ country_event = {
 		trigger = {
 			has_completed_focus = TUR_fully_integrate_the_is_bank
 			has_completed_focus = TUR_privatize_the_anadolu_agency
+			#NHMMAP removed to make it easier for AI
 		}
 		add_stability = 0.1
 	}
 	option = {
 		name = bftb_turkey.134.b #liberal + historic = Bayar and Ismet / Bayar
-		trigger = {
+		trigger = { #NHMMAP
 			has_idea = TUR_celal_bayar
 			#OR = { #This is made like this to allow Atatürk to die even if only the two first focuses are completed. 
 			#	has_completed_focus = TUR_the_sanayiciler
@@ -5569,7 +5722,7 @@ country_event = {
 	}
 	option = { #
 		name = bftb_turkey.134.c #liberal + historic = Bayar and Ismet / Ismet
-		trigger = {
+		trigger = { #NHMMAP
 			has_idea = TUR_ismet_inonu
 			#OR = { #This is made like this to allow Atatürk to die even if only the two first focuses are completed. 
 			#	has_completed_focus = TUR_the_sanayiciler
@@ -5598,7 +5751,7 @@ country_event = {
 	option = {
 		name = bftb_turkey.134.d #nationalist
 		trigger = {
-			has_idea = TUR_fevzi_cakmak_prime_minister
+			#has_idea = TUR_fevzi_cakmak_prime_minister
 			has_completed_focus = TUR_reinvigorate_turkish_nationalism
 		}
 		add_country_leader_role = {
@@ -5707,6 +5860,11 @@ country_event = {
 				}
 			}
 			promote_leader = yes
+		}
+	}
+	after = {	#Just in case
+		hidden_effect = {
+			retire_character = TUR_mustafa_kemal_ataturk
 		}
 	}
 }

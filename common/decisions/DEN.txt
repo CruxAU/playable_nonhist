@@ -4430,6 +4430,7 @@ DEN_overlord_category = {
 		}
 
 		available = {
+			has_subject = DEN
 			DEN = {
 				NOT = { has_government = communism }
 			}
@@ -4470,6 +4471,7 @@ DEN_overlord_category = {
 		}
 
 		available = {
+			has_subject = DEN
 			DEN = {
 				NOT = { has_government = fascism }
 			}
@@ -5964,7 +5966,8 @@ DEN_military_category = {
 			state = 912
 			state = 910
 			state = 337
-			state = 101
+			state = 100		#Iceland - If reintegrated
+			#state = 101	#Greenland - Commented out because it has an impassible tile, and the raised units have more men then the entirely of Greenland
 		}
 
 		target_trigger = {
@@ -6710,57 +6713,69 @@ DEN_danish_security_category = {
 					FROM = { add_to_faction = ROOT }
 				}
 				else = {
-					set_rule = {
-						can_create_factions = yes
-					}
-					if = {
+					IF = {
 						limit = {
-							FROM = {
-								original_tag = ENG
-							}
+							has_dlc = "No Compromise, No Surrender"
 						}
-						FROM = {
-							create_faction = DEN_north_sea_alliance
-							add_to_faction = ROOT
-						}
-					}
-					else_if = {
-						limit = {
-							FROM = {
-								original_tag = FRA
-							}
-						}
-						FROM = {
-							create_faction = DEN_normandy_treaty
-							add_to_faction = ROOT
-						}
-					}
-					else_if = {
-						limit = {
-							FROM = {
-								original_tag = GER
-							}
-						}
-						FROM = {
-							create_faction = DEN_bonn_copenhagen_declarations
-							add_to_faction = ROOT
-						}
-					}
-					else_if = {
-						limit = {
-							FROM = {
-								original_tag = SOV
-							}
-						}
-						FROM = {
-							create_faction = DEN_baltic_sea_zone
-							add_to_faction = ROOT
-						}
-					}
-					else = {
-						create_faction = DEN_nordic_cooperation_alliance
+						set_rule = { can_create_factions = yes }
+						create_faction_from_template = faction_template_DEN_nordic_cooperation_alliance
+						add_faction_initiative = 1
 						add_to_faction = FROM
 					}
+					ELSE = {
+						set_rule = {
+							can_create_factions = yes
+						}
+						if = {
+							limit = {
+								FROM = {
+									original_tag = ENG
+								}
+							}
+							FROM = {
+								create_faction = DEN_north_sea_alliance
+								add_to_faction = ROOT
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									original_tag = FRA
+								}
+							}
+							FROM = {
+								create_faction = DEN_normandy_treaty
+								add_to_faction = ROOT
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									original_tag = GER
+								}
+							}
+							FROM = {
+								create_faction = DEN_bonn_copenhagen_declarations
+								add_to_faction = ROOT
+							}
+						}
+						else_if = {
+							limit = {
+								FROM = {
+									original_tag = SOV
+								}
+							}
+							FROM = {
+								create_faction = DEN_baltic_sea_zone
+								add_to_faction = ROOT
+							}
+						}
+						else = {
+							create_faction = DEN_nordic_cooperation_alliance
+							add_to_faction = FROM
+						}
+					}
+					
 				}
 			}
 			hidden_effect = {

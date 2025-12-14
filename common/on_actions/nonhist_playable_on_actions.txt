@@ -87,6 +87,347 @@ on_actions = {
 			}	
 			ENG = { country_event = nonhist_ENG.2 }
 		}
+		IF = {
+			limit = {
+				ROOT = {
+					original_tag = MAN
+					has_country_flag = NHMMAP_MAN_is_russia
+				}
+			}
+			# Set capital 
+			country_event = {
+				id = NSB_soviet_civil_war_common.002
+				days = 7
+				random_days = 5
+			}
+			# De-stalinization 
+			country_event = {
+				id = NSB_soviet_civil_war_common.010
+				days = 21
+				random_days = 7
+			}
+			hidden_effect = {
+				news_event = { id = nsb_news.10 hours = 8 }
+			}
+			if = {
+				limit = {
+					has_global_flag = MAN_fin_will_get_claims
+					FIN = {
+						exists = yes
+					}
+				}
+				clr_global_flag = MAN_fin_will_get_claims
+				FIN = {
+					transfer_state = 215
+					transfer_state = 216
+					transfer_state = 213
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								original_tag = MAN
+								original_tag = SOV
+							}
+							OR = {
+								controls_state = 722
+								controls_state = 146
+								controls_state = 147
+							}
+							
+						}
+					}
+					FIN = {
+						transfer_state = 722
+						transfer_state = 147
+						transfer_state = 146
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 146
+							state = 147
+							state = 722
+							state = 215
+							state = 216
+							state = 213
+						}
+					}
+					add_core_of = FIN
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = MAN_eng_will_get_armenia
+					ENG = {
+						exists = yes
+					}
+				}
+				ENG = { 
+					transfer_state = 230
+					release_autonomy = { 
+						target = ARM
+						autonomy_state = autonomy_puppet
+						freedom_level = 0.2
+					}
+				}
+				ARM = {
+					set_cosmetic_tag = ARM_UK 
+				}
+				every_state = {
+					limit = {
+						region = 134
+					}
+					transfer_state_to = ARM
+				}
+				231 = { add_core_of = ARM }
+				826 = { add_core_of = ARM }
+				229 = { add_core_of = ARM }
+				clr_global_flag = MAN_eng_will_get_armenia
+			}
+			if = {
+				limit = {
+					has_global_flag = MAN_ukr_blr_decision_GER_will_get_them
+					GER = {
+						exists = yes
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_controlled_by = MAN
+							is_controlled_by = SOV
+						}
+						OR = {
+							is_core_of = UKR
+							is_core_of = BLR
+						}
+					}
+					transfer_state_to = GER
+				}
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+						}
+					}
+					GER = {
+						GER_improve_rosenbergs_trait_effect = yes
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+			
+						808 = {
+							IF = {
+								limit = {
+									OWNER = {
+										NOT = {
+											original_tag = GER
+										}
+									}
+								}
+								OWNER = {
+									set_country_flag = GER_RK_capital_state_trasferred_RKO_victim_flag
+									set_country_flag = GER_reichskommissariats_puppet_flag
+								}
+							}
+							transfer_state_to = RKO
+							set_state_flag = GER_RK_capital_state_trasferred_RKO_flag
+							add_compliance = 25
+						}
+			
+						custom_effect_tooltip = GER_reichskommissariat_ostland_effect_tt
+			
+						set_autonomy = { 
+							target = RKO
+							autonomy_state = autonomy_integrated_puppet 
+						}
+			
+						hidden_effect = {
+							every_state = {
+								limit = {
+									GER_is_RKO_state = yes
+									NOT = {
+										state = 808
+									}
+									OR = {
+										is_owned_by = ROOT
+										owner = { is_subject_of = ROOT }
+									}
+								}
+								transfer_state_to = RKO
+								add_compliance = 25
+							}
+							every_state = {	
+								limit = {
+									GER_is_RKO_state = yes
+									NOT = {
+										state = 808
+									}
+									NOT = {
+										OR = {
+											is_owned_by = ROOT
+											any_country = {
+												is_subject_of = ROOT
+												owns_state = PREV
+											}
+										}
+									}
+								}
+								add_contested_owner = RKO
+								set_state_owner_to = RKO
+								add_claim_by = RKO
+								add_compliance = 25
+							}
+			
+							RKO = {
+								add_manpower = 50000
+								add_equipment_to_stockpile = { 
+									type = infantry_equipment
+									amount = 5000
+									producer = GER
+								}	
+								add_equipment_to_stockpile = { 
+									type = support_equipment
+									amount = 500
+									producer = GER
+								}	
+								inherit_technology = GER
+								add_offsite_building = { type = arms_factory level = 3 }
+								load_oob = "RK_OOB"
+							}
+						}
+			
+						custom_effect_tooltip = generic_skip_one_line_tt
+			
+						country_event = {
+							id = wuw_GER_reichskommissariats.5
+							hours = 0
+						}	
+						GER_improve_rosenbergs_trait_effect = yes
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						202 = {
+							IF = {
+								limit = {
+									OWNER = {
+										NOT = {
+											original_tag = GER
+										}
+									}
+								}
+								OWNER = {
+									set_country_flag = GER_RK_capital_state_trasferred_RKU_victim_flag
+									set_country_flag = GER_reichskommissariats_puppet_flag
+								}
+							}
+							transfer_state_to = RKU
+							set_state_flag = GER_RK_capital_state_trasferred_RKU_flag
+							add_compliance = 25
+						}
+
+						custom_effect_tooltip = GER_reichskommissariat_ukraine_effect_tt
+						
+						set_autonomy = { 
+							target = RKU 
+							autonomy_state = autonomy_integrated_puppet 
+						}
+						
+						hidden_effect = {
+							every_state = {
+								limit = {
+									GER_is_RKU_state = yes
+									NOT = {
+										GER_is_soviet_greater_romania_state = yes
+									}
+									NOT = {
+										state = 202
+									}
+									OR = {
+										is_owned_by = ROOT
+										owner = { is_subject_of = ROOT }
+									}
+								}
+								transfer_state_to = RKU
+								add_compliance = 25
+							}
+							every_state = {	
+								limit = {
+									GER_is_RKU_state = yes
+									NOT = {
+										GER_is_soviet_greater_romania_state = yes
+									}
+									NOT = {
+										state = 202
+									}
+									NOT = {
+										OR = {
+											is_owned_by = ROOT
+											any_country = {
+												is_subject_of = ROOT
+												owns_state = PREV
+											}
+										}
+									}
+								}
+								add_contested_owner = RKU
+								set_state_owner_to = RKU
+								add_claim_by = RKU
+								add_compliance = 25
+							}
+
+							RKU = {
+								add_manpower = 50000
+								add_equipment_to_stockpile = { 
+									type = infantry_equipment
+									amount = 5000
+									producer = GER
+								}	
+								add_equipment_to_stockpile = { 
+									type = support_equipment
+									amount = 500
+									producer = GER
+								}	
+								inherit_technology = GER
+								add_offsite_building = { type = arms_factory level = 3 }
+								load_oob = "RK_OOB"
+							}
+						}
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						country_event = {
+							id = wuw_GER_reichskommissariats.4
+							hours = 0
+						}	
+					}
+				}
+				else = {
+					GER = { 
+						release_autonomy = { 
+							target = UKR
+							autonomy_state = autonomy_puppet
+							freedom_level = 0.2
+						}
+					}
+				}
+				
+				ARM = {
+					set_cosmetic_tag = ARM_UK 
+				}
+				every_state = {
+					limit = {
+						region = 134
+					}
+					transfer_state_to = ARM
+				}
+				231 = { add_core_of = ARM }
+				826 = { add_core_of = ARM }
+				229 = { add_core_of = ARM }
+				clr_global_flag = MAN_ukr_blr_decision_GER_will_get_them
+			}
+		}
 		}
 	}
 	on_civil_war_end = {

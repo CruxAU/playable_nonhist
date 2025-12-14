@@ -12,6 +12,9 @@ country_event = {
 	# Accept
 	option = {
 		name = mtg_netherlands.1.a
+		ai_chance = {
+			base = 1
+		}
 		effect_tooltip = {
 			VEN = { transfer_state = 695 }
 		}
@@ -21,6 +24,9 @@ country_event = {
 	# They're just trying to get the islands for themselves...
 	option = {
 		name = mtg_netherlands.1.b
+		ai_chance = {
+			base = 1
+		}
 		effect_tooltip = {
 			VEN = { add_state_claim = 695 }
 		}
@@ -37,6 +43,9 @@ country_event = {
 			}
 		}
 		name = mtg_netherlands.1.c
+		ai_chance = {
+			base = 1
+		}
 		effect_tooltip = {
 			ENG = { transfer_state = 695 }
 		}
@@ -47,6 +56,9 @@ country_event = {
 	option = {
 		trigger = {
 			is_in_faction_with = USA
+		}
+		ai_chance = {
+			base = 1
 		}
 		name = mtg_netherlands.1.e
 		effect_tooltip = {
@@ -100,6 +112,9 @@ country_event = {
 	# Great idea!
 	option = {
 		name = mtg_netherlands.4.a
+		ai_chance = {
+			base = 3
+		}
 		effect_tooltip = {
 			transfer_state = 695
 		}
@@ -109,6 +124,9 @@ country_event = {
 	# Let's not get involved
 	option = {
 		name = mtg_netherlands.4.b
+		ai_chance = {
+			base = 1
+		}
 		HOL = { country_event = { id = mtg_netherlands.6 days = 1 random_days = 3 } }
 	}
 }
@@ -141,6 +159,9 @@ country_event = {
 	# I guess we have no choice but to let them have it
 	option = {
 		name = mtg_netherlands.6.a
+		ai_chance = {
+			base = 1
+		}
 		effect_tooltip = {
 			VEN = { transfer_state = 695 }
 		}
@@ -150,6 +171,9 @@ country_event = {
 	# We won't give it up!
 	option = {
 		name = mtg_netherlands.6.b
+		ai_chance = {
+			base = 1
+		}
 		effect_tooltip = {
 			VEN = { add_state_claim = 695 }
 		}
@@ -2785,7 +2809,7 @@ country_event = {
 		name = excellent
 		if = {
 			limit = {
-				any_state = {
+				any_controlled_state = {
 					is_fully_controlled_by = ROOT
 					is_on_continent = europe
 				}
@@ -3023,7 +3047,11 @@ country_event = {
 					autonomy_state = autonomy_free 
 				} 
 			}
-			create_faction = GER_central_powers_faction
+			create_faction_from_template = {
+				template = faction_template_GER_mitteleuropa_alliance
+				name = GER_central_powers_faction
+				icon = GFX_faction_logo_generic_13
+			}
 			add_to_faction = HOL
 		}
 	}

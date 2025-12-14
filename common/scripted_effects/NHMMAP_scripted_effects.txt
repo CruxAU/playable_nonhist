@@ -81,7 +81,7 @@ NHMMAP_inner_circle_randomiser = {
 			}
 			set_variable = { NHMMAP_inner_circle_choice = 5 } #GOEBBELLS 
 		}
-		1 = {
+		2 = { #more for PP
 			modifier = {
 				factor = 0
 				OR = {
@@ -92,11 +92,12 @@ NHMMAP_inner_circle_randomiser = {
 					check_variable = { GER_ascended_advisor_2 = 7 }
 					check_variable = { GER_ascended_advisor_3 = 7 }
 					ROOT = { has_country_flag = GER_hess_was_ascended_flag }
+					NOT = { ROOT = { has_country_flag = flight_of_hess } }
 				}
 			}
 			set_variable = { NHMMAP_inner_circle_choice = 6 } #HESS 
 		}
-		1 = {
+		2 = { #more for PP
 			modifier = {
 				factor = 0
 				OR = {

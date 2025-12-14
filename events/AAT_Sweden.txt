@@ -7703,7 +7703,7 @@ country_event = {
 	id = AAT_Sweden_nordic_defense_council.1
 	title = AAT_Sweden_nordic_defense_council.1.t
 	desc = AAT_Sweden_nordic_defense_council.1.desc
-	picture = GFX_report_event_generic_panzer_attack
+	picture = GFX_report_event_SWE_defense_act
 	is_triggered_only = yes
 	immediate = {
         hidden_effect = {
@@ -8071,6 +8071,7 @@ country_event = {
 	id = AAT_Sweden_nordic_defense_council.2	
 	title = AAT_Sweden_nordic_defense_council.2.t
 	desc = AAT_Sweden_nordic_defense_council.2.desc
+	picture = GFX_report_event_SWE_defense_act
 	is_triggered_only = yes
 
 	option = {
@@ -8084,6 +8085,7 @@ country_event = {
 	id = AAT_Sweden_nordic_defense_council.3	
 	title = AAT_Sweden_nordic_defense_council.3.t
 	desc = AAT_Sweden_nordic_defense_council.3.desc
+	picture = GFX_report_event_SWE_defense_act
 	is_triggered_only = yes
 
 	option = {

@@ -138,7 +138,7 @@ focus_tree = {
 					logistics_skill = 4
 				}
 			}
-			else = {
+			else = { #NHMMAP FIX
 				add_field_marshal_role = {
 					character = MEX_plutarco_calles
 					legacy_id = 711
@@ -1236,7 +1236,11 @@ focus_tree = {
 				}
 			}
 			else = {
-				create_faction = MEX_focus_community_of_nations
+				create_faction_from_template = {
+					template = faction_template_allies
+					name = MEX_focus_community_of_nations
+					icon = GFX_faction_logo_generic_2
+				}
 				ENG = {
 					country_event = generic.5
 				}
@@ -2080,7 +2084,7 @@ focus_tree = {
 				has_war_with = USA
 			}
 			USA = {
-				is_in_faction = yes
+				is_in_faction_with = ENG
 			}
 		}
 
@@ -4477,10 +4481,16 @@ focus_tree = {
 				limit = {
 					has_completed_focus = MEX_focus_crusade_against_atheism
 				}
-				create_faction = faction_mexico_synarchist_pact
+				create_faction_from_template = {
+					template = faction_template_hipanic_alliance_faction
+					name = faction_mexico_synarchist_pact
+				}
 			}
 			else = {
-				create_faction = faction_mexico_hispanic_alliance
+				create_faction_from_template = {
+					template = faction_template_hipanic_alliance_faction
+					name = faction_mexico_hispanic_alliance
+				}
 			}
 			hidden_effect = {
 				news_event = {
@@ -4515,7 +4525,7 @@ focus_tree = {
 						target = ROOT
 						modifier = mexico_hispanic_diplomacy
 					}
-					country_event = {
+					country_event = { #NHMMAP
 						id = south_american_events.63  
 						hours = 1
 					}
@@ -4746,7 +4756,11 @@ focus_tree = {
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			
-			create_faction = faction_mexico_bolivarian_alliance
+			create_faction_from_template = {
+				template = faction_template_pan_american
+				name = faction_mexico_bolivarian_alliance
+				icon = GFX_faction_logo_generic_14
+			}
 
 			hidden_effect = {
 				news_event = {
@@ -4778,13 +4792,13 @@ focus_tree = {
 						target = ROOT
 						modifier = mexico_hispanic_diplomacy
 					}
-					
+
 					country_event = {
-						id = south_american_events.60  
-						hours = 1
+							id = south_american_events.60  
+							hours = 1
+						}
 					}
 				}
-			}
 			else_if = {
 				limit = {
 					NOT = {
@@ -5099,7 +5113,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {
+		completion_reward = { #not asia or africa NHMMAP
 			every_other_country = { #first ask faction leaders to disband communist factions and join Trotsky, then ask the communist minors to join
 				limit = {
 					is_faction_leader = yes
@@ -5320,7 +5334,7 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP some conditions first
 			factor = 0
 			modifier = {
 				add = 200
@@ -5454,7 +5468,7 @@ focus_tree = {
 
 		cost = 10
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP some conditions first
 			factor = 0
 			modifier = {
 				add = 200
@@ -5750,7 +5764,7 @@ focus_tree = {
 
 		cost = 10
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP needs to actually be there first
 			factor = 0
 			modifier = {
 				add = 200
@@ -5865,7 +5879,7 @@ focus_tree = {
 
 		cost = 10
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP conditions
 			factor = 0
 			modifier = {
 				add = 200
@@ -6058,7 +6072,7 @@ focus_tree = {
 
 		cost = 5
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP conditions
 			factor = 0
 			modifier = {
 				add = 200
@@ -6671,7 +6685,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = dd_tech
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}

@@ -396,8 +396,8 @@ HOL_historical_plan_germans_are_democratic = {
 	}
 
 	ai_national_focuses = {
-		HOL_protect_against_britain
 		HOL_cave_to_the_british
+		HOL_protect_against_britain
 		HOL_unity_through_democracy
 		HOL_lead_the_minor_democracies
 		HOL_antilles_defenses					

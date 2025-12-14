@@ -12,6 +12,7 @@ add_namespace = nonhist_JAP
 add_namespace = nonhist_GER
 add_namespace = nonhist_TUR
 add_namespace = nonhist_NOR
+add_namespace = nonhist_AUS
 add_namespace = nonhist_generic
 add_namespace = nonhist_news
 
@@ -1695,6 +1696,1164 @@ country_event = {
 	}
 }
 
+country_event = { #event chinese leader to say manchu wants to peace out and help us
+	id = nonhist_CHI.4
+	title = nonhist_CHI.4.t
+	desc = nonhist_CHI.4.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+
+	option = { #ok
+		name = nonhist_CHI.4.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_war_with = FROM
+		}
+		white_peace = FROM
+		every_other_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			white_peace = FROM
+		}
+		
+	}
+
+	option = { #this will never happen
+		name = nonhist_CHI.4.b
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			has_war_with = FROM
+		}
+		#nothing happens
+	}
+}
+
+country_event = { #event chinese leader to say manchu wants them to make peace with communists
+	id = nonhist_CHI.5
+	title = nonhist_CHI.4.t
+	desc = nonhist_CHI.4.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+
+	option = { #ok
+		name = nonhist_CHI.4.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_war_with = PRC
+		}
+		PRC = {
+			country_event = wtt_xian_incident.301
+		}
+	}
+
+	option = { #this will never happen
+		name = nonhist_CHI.4.b
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			has_war_with = PRC
+		}
+		#nothing happens
+	}
+}
+
+country_event = { #event for manchuria to say they won borderwar against japan
+	id = nonhist_CHI.6
+	title = wtt_border_conflict_won_attacker.1.t
+	desc = wtt_border_conflict_won_attacker.1.desc
+	
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_border_conflict_won_attacker.1.a
+		add_political_power = 100
+		transfer_state = 609
+	}	
+}
+
+country_event = { #event for germany to say russia/manchuria is offering belarus and ukraine
+	id = nonhist_CHI.7
+	title = nonhist_CHI.7.t
+	desc = nonhist_CHI.7.desc
+	
+	picture = GFX_report_event_german_advisors_remain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonhist_CHI.7.a
+		ai_chance = {
+			factor = 7
+		}
+		FROM = {
+			country_event = nonhist_CHI.13
+		}
+		add_political_power = -50
+		add_timed_idea = { idea = MAN_NHMMAP_russian_volunteers days = 180 }
+		hidden_effect = {
+			set_global_flag = MAN_ukr_blr_decision_GER_will_get_them
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 16000
+			target = FROM
+		}
+		send_equipment = {
+			equipment = support_equipment
+			amount = 1600
+			target = FROM
+		}
+		send_equipment = {
+			equipment = artillery_equipment
+			amount = 2000
+			target = FROM
+		}
+		send_equipment = {
+			equipment = motorized_equipment
+			amount = 400
+			target = FROM
+		}
+		send_equipment = {
+			equipment = medium_tank_chassis
+			amount = 200
+			target = FROM
+		}
+	}	
+	option = {
+		name = nonhist_CHI.7.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = 10
+		FROM = {
+			country_event = nonhist_CHI.11
+			hidden_effect = {
+				clr_country_flag = MAN_ukr_blr_decision_made
+			}
+		}
+	}	
+}
+
+
+country_event = { #event for man to say a soviet country is having an uprising
+	id = nonhist_CHI.8 
+	title = nonhist_CHI.8.t #HIDDEN NO LOC
+	desc = nonhist_CHI.8.desc #HIDDEN NO LOC
+
+	is_triggered_only = yes
+	hidden = yes #HIDDEN NO LOC
+	fire_only_once = no
+	immediate = {
+		if = {
+			limit = {
+				ROOT = {
+					has_war_with = SOV
+				}
+			}
+			hidden_effect = {
+			
+				random_list = {
+					20 = {
+						#nothing ever happens chudface 
+						modifier = {
+							always = yes
+							factor = MAN_times_nationalist_revolted
+						}
+					}
+					6 = { # Ukrainian uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = UKR
+								is_owned_by = SOV
+								controller = {
+									NOT = {
+										original_tag = SOV
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = { 
+								has_country_flag = ukr_uprising_flag
+								UKR = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = UKR }
+						set_country_flag = ukr_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					2 = { # Belarussan uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = BLR
+								is_owned_by = SOV
+								controller = {
+									NOT = {
+										original_tag = SOV
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = blr_uprising_flag
+								BLR = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = BLR }
+						set_country_flag = blr_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # CRI uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = CRI
+								is_owned_by = SOV
+								controller = {
+									NOT = {
+										original_tag = SOV
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = CRI_uprising_flag
+								CRI = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = CRI }
+						set_country_flag = CRI_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # KAR uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = KAR
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = KAR_uprising_flag
+								KAR = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KAR }
+						set_country_flag = KAR_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+						IF = {
+							limit = {
+								FIN = {
+									exists = yes
+									NOT = {
+										has_government = communism
+									}
+								}
+							}
+							FIN = { country_event = AAT_finland_kinship_war.06 }
+						}
+						hidden_effect = {
+							#Add Repola and Uhtua VPs
+							add_victory_points = {
+								province = 6098 #Repola
+								value = 1
+							}
+							add_victory_points = {
+								province = 3067 #Uhtua
+								value = 1
+							}
+							#Add Porajärvi VP
+							add_victory_points = {
+								province = 2998 #Porajärvi
+								value = 1
+							}
+	
+							KAR = {
+								set_capital = {
+									state = 215
+								}
+	
+								division_template = {
+									name = "Karjalan Metsäsissit"
+									is_locked = yes
+									priority = 1
+									template_counter = 27
+									regiments = {
+										infantry = { x = 0 y = 0 }
+										infantry = { x = 0 y = 1 }
+										infantry = { x = 0 y = 2 }
+										infantry = { x = 1 y = 0 }
+										infantry = { x = 1 y = 1 }
+									}
+								}
+								every_owned_state = {
+									limit = { is_core_of = KAR }
+									create_unit = { 
+										division = "name = \"Karjalan Metsäsissit\" division_template = \"Karjalan Metsäsissit\" start_experience_factor = 0.05 start_equipment_factor = 0.95"
+										owner = KAR
+										count = 1
+									}
+								}
+								# Add extra country leader trait to the possible leaders (fascist & non-aligned)
+								KAR_ukki_vainamoinen = {
+									add_country_leader_trait = {
+										 ideology = fascism_ideology
+										 trait = veteran_guerrilla_fighter
+									 }
+								}
+								KAR_jalmari_takkinen = {
+									add_country_leader_trait = veteran_guerrilla_fighter
+								}
+							}
+						}
+						
+					}
+					# The Caucasus 
+					3 = { # Georgian uprising
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = geo_uprising_flag
+								GEO = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = GEO }
+						set_country_flag = geo_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					2 = { # Armenian uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = ARM
+								is_owned_by = SOV
+								controller = {
+									NOT = {
+										original_tag = SOV
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = arm_uprising_flag
+								ARM = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = ARM }
+						set_country_flag = arm_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					2 = { # Azer uprising
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = azr_uprising_flag
+								AZR = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = AZR }
+						set_country_flag = azr_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					2 = { # Kalmyk uprising
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = KAL_uprising_flag
+								KAL = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KAL }
+						set_country_flag = KAL_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # DAG uprising
+						modifier = {
+							add = SOV_civil_war_months
+							always = yes
+						}
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = DAG
+								is_controlled_by = SOV
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = DAG_uprising_flag
+								DAG = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = DAG }
+						set_country_flag = DAG_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # CIN uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = CIN
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = CIN_uprising_flag
+								CIN = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = CIN }
+						set_country_flag = CIN_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # ABK uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = ABK
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = ABK_uprising_flag
+								ABK = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = ABK }
+						set_country_flag = ABK_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+	
+					# The Urals
+					1 = { # KOM uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = KOM
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = KOM_uprising_flag
+								KOM = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KOM }
+						set_country_flag = KOM_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # NEN uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = NEN
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = NEN_uprising_flag
+								NEN = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = NEN }
+						set_country_flag = NEN_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+	
+					# Central Asia
+					1 = { # Khivan uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = KHI
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = khi_uprising_flag
+								KHI = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KHI }
+						set_country_flag = khi_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # Bukharan uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = BUK
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = buk_uprising_flag
+								BUK = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = BUK }
+						set_country_flag = buk_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # Kazakh uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = KAZ
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = kaz_uprising_flag
+								KAZ = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KAZ }
+						set_country_flag = kaz_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # UZB uprising
+						modifier = {
+							factor = 0
+							any_state = {
+								is_core_of = UZB
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = uzb_uprising_flag
+								UZB = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = UZB }
+						set_country_flag = uzb_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # KKP uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = KKP
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = kkp_uprising_flag
+								KKP = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KKP }
+						set_country_flag = kkp_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # TMS uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = TMS
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = tms_uprising_flag
+								TMS = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = TMS }
+						set_country_flag = tms_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # KYR uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = KYR
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = KYR_uprising_flag
+								KYR = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = KYR }
+						set_country_flag = KYR_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+					1 = { # TAJ uprising
+						modifier = {
+							factor = 0.25
+							any_state = {
+								is_core_of = TAJ
+								is_controlled_by = MAN
+							}
+						}
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = TAJ_uprising_flag
+								TAJ = { exists = yes }
+							}
+						}
+						set_variable = { SOV_nationalist_country = TAJ }
+						set_country_flag = TAJ_uprising_flag
+						MAN = { country_event = nonhist_CHI.9 }
+					}
+	
+				}
+				country_event = {
+					id = nonhist_CHI.8
+					days = 7
+					random_days = 35
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = nonhist_CHI.8.a
+	}
+}
+
+country_event = { #event for manchuria to say soviet nationalists are revolting (same as the NSB_soviet_nationalist.001 event)
+	id = nonhist_CHI.9
+	title = NSB_soviet_nationalist.001.t
+	desc = NSB_soviet_nationalist.001.desc
+	
+	picture = GFX_report_event_generic_rally2
+
+	is_triggered_only = yes
+	hidden = no
+
+	immediate = {
+		add_to_variable = {
+			var = MAN_times_nationalist_revolted
+			value = 1
+		}
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = SOV
+					original_tag = MAN
+				}
+			}
+			every_owned_state = {
+				limit = { is_core_of = var:MAN.SOV_nationalist_country }
+				var:MAN.SOV_nationalist_country = { transfer_state = PREV }
+			}
+		}
+		# Capture any Stalinist soldiers in our territory
+		every_state = {
+			limit = { is_owned_by = var:MAN.SOV_nationalist_country}
+			SOV = { 
+				delete_unit = { 
+					state = PREV 
+					disband = no 
+				}
+			}
+		}
+		var:MAN.SOV_nationalist_country  = {
+			division_template = {
+				name = "Resistance Fighters"
+				is_locked = yes
+				priority = 1
+				template_counter = 3
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				is_locked = yes 
+			}
+			every_owned_state = {
+				limit = { is_core_of = var:MAN.SOV_nationalist_country }
+				create_unit = { 
+					division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = var:MAN.SOV_nationalist_country count = 2
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					is_core_of = var:MAN.SOV_nationalist_country 
+					is_capital = yes
+				}
+				create_unit = { 
+					division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = var:MAN.SOV_nationalist_country count = 2
+				}
+			}
+		
+		
+		}
+		var:MAN.SOV_nationalist_country = {
+			if = { #karelia follows finland ideology
+				limit = {
+					var:MAN.SOV_nationalist_country = { tag = KAR }
+				}
+				if = { 
+					limit = {
+						FIN = {
+							has_government = fascism
+						}
+					}
+					set_popularities = {
+						communism = 20
+						democratic = 20
+						fascism = 40
+						neutrality = 20
+					}
+					set_politics = { 
+						ruling_party = fascism
+						elections_allowed = no 
+					}
+				}
+				if = { 
+					limit = {
+						FIN = {
+							has_government = communism
+						}
+					}
+					set_popularities = {
+						communism = 40
+						democratic = 20
+						fascism = 20
+						neutrality = 20
+					}
+					set_politics = { 
+						ruling_party = communism
+						elections_allowed = no 
+					}
+				}
+				if = { 
+					limit = {
+						FIN = {
+							has_government = neutrality
+						}
+					}
+					set_popularities = {
+						communism = 20
+						democratic = 20
+						fascism = 20
+						neutrality = 40
+					}
+					set_politics = { 
+						ruling_party = neutrality
+						elections_allowed = yes 
+					}
+				}
+				if = { 
+					limit = {
+						FIN = {
+							has_government = democratic
+						}
+					}
+					set_popularities = {
+						communism = 20
+						democratic = 40
+						fascism = 20
+						neutrality = 20
+					}
+					set_politics = { 
+						ruling_party = democratic
+						elections_allowed = yes 
+					}
+				}
+			}
+			else = {
+				random_list = { #chance of being an ideology based on popularity
+					100 = {
+						modifier = {
+							factor = party_popularity@fascism
+							always = yes
+						}
+						set_politics = { 
+							ruling_party = fascism
+							elections_allowed = no 
+						}
+					}
+					100 = {
+						modifier = {
+							factor = party_popularity@communism
+							always = yes
+						}
+						set_politics = { 
+							ruling_party = communism
+							elections_allowed = no 
+						}
+					}
+					100 = {
+						modifier = {
+							factor = party_popularity@democratic
+							always = yes
+						}
+						set_politics = { 
+							ruling_party = democratic
+							elections_allowed = yes 
+						}
+					}
+					100 = {
+						modifier = {
+							factor = party_popularity@neutrality
+							always = yes
+						}
+						set_politics = { 
+							ruling_party = neutrality
+							elections_allowed = yes 
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_government = communism
+					}
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			set_country_flag = SOV_breakaway_country_flag
+			set_country_flag = SOV_unrecognized_country_flag 
+			set_rule = { can_join_factions = no }
+		}
+		# Renaming of cities where apropriate 
+		IF = {
+			limit = { var:MAN.SOV_nationalist_country = { tag = KYR }}
+			set_province_name = {
+				id = 12583
+				name = SOV_Bishkek
+			}
+		}
+		ELSE_IF = {
+			limit = { var:MAN.SOV_nationalist_country = { tag = MEL }}
+			set_province_name = {
+				id = 9402
+				name = SOV_Krasnokokshaysk
+			}
+		}
+	}
+	
+	option = {
+		name = NSB_soviet_nationalist.001.a	
+		ai_chance = {
+			base = 5 # The AI needs all the help it can get
+		}
+		#Check for Karelian uprising since war against SOS (AI Stalin) is declared there
+		if = {
+			limit = {
+				check_variable = { MAN.SOV_nationalist_country = KAR }
+				FIN = {
+					exists = yes
+					has_capitulated = no
+					has_country_flag = FIN_full_support_for_karelia_flag
+				}
+			}
+			var:MAN.SOV_nationalist_country = {
+				add_named_threat = { 
+					threat = -1
+					name = indepence_war_threat
+				}
+				effect_tooltip = {
+					declare_war_on = {
+						target = SOV
+						type = independence_wargoal
+					}
+				}
+			}
+		}
+		else = {
+			var:MAN.SOV_nationalist_country = {
+				add_named_threat = { 
+					threat = -1
+					name = indepence_war_threat
+				}
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+
+		var:MAN.SOV_nationalist_country = {
+			give_military_access = ROOT
+		}
+		ROOT = {
+			give_military_access = var:MAN.SOV_nationalist_country
+		}
+	}
+
+	option = {
+		name = NSB_soviet_nationalist.001.b	
+		ai_chance = {
+			base = 1
+		}
+
+		#Check for Karelian uprising since war against SOS (AI Stalin) is declared there
+		if = {
+			limit = {
+				check_variable = { MAN.SOV_nationalist_country = KAR }
+				FIN = {
+					exists = yes
+					has_capitulated = no
+					has_country_flag = FIN_full_support_for_karelia_flag
+				}
+			}
+			effect_tooltip = {
+				var:MAN.SOV_nationalist_country = {
+					declare_war_on = {
+						target = SOV
+						type = independence_wargoal
+					}
+				}
+			}
+		}
+
+		var:MAN.SOV_nationalist_country = {
+			add_named_threat = { 
+				threat = -1.5
+				name = indepence_war_threat
+			}
+			declare_war_on = {
+				target = ROOT
+				type = independence_wargoal
+			}
+			declare_war_on = {
+				target = SOV
+				type = independence_wargoal
+			}
+		}
+
+		#Check for Karelian uprising and Finnish commitment to show in tooltip when appropriate
+		if = {
+			limit = {
+				check_variable = { MAN.SOV_nationalist_country = KAR }
+				FIN = {
+					exists = yes
+					has_capitulated = no
+					has_country_flag = FIN_full_support_for_karelia_flag
+				}
+			}
+			effect_tooltip = {
+				FIN = {
+					add_to_war = {
+						targeted_alliance = KAR
+						enemy = ROOT
+						hostility_reason = asked_to_join
+					}
+				}
+			}
+			hidden_effect = {
+				declare_war_on = {
+					target = FIN
+					type = independence_wargoal
+				}
+			}
+		}
+	}
+}
+
+country_event = { #event for eng to say russia/manchuria is offering armenia
+	id = nonhist_CHI.10
+	title = nonhist_CHI.10.t
+	desc = nonhist_CHI.10.desc
+	
+	picture = GFX_report_event_german_advisors_remain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonhist_CHI.7.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -50
+		FROM = {
+			country_event = nonhist_CHI.13
+		}
+		add_timed_idea = { idea = MAN_NHMMAP_russian_volunteers days = 180 }
+		hidden_effect = {
+			set_global_flag = MAN_eng_will_get_armenia
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 10000
+			target = FROM
+		}
+		send_equipment = {
+			equipment = support_equipment
+			amount = 800
+			target = FROM
+		}
+		send_equipment = {
+			equipment = artillery_equipment
+			amount = 1200
+			target = FROM
+		}
+		send_equipment = {
+			equipment = small_plane_airframe
+			amount = 200
+			target = FROM
+		}
+	}	
+	option = {
+		name = nonhist_CHI.7.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				IRQ = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		add_political_power = 10
+		FROM = {
+			country_event = nonhist_CHI.11
+		}
+	}	
+}
+
+country_event = { #event for MAN to say FROM (eng, fin or ger) refused
+	id = nonhist_CHI.11
+	title = nonhist_CHI.11.t
+	desc = nonhist_CHI.11.desc
+	
+	picture = GFX_report_event_german_advisors_remain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonhist_CHI.11.a
+	}	
+}
+
+country_event = { #event for fin to say russia/manchuria is offering greater finland
+	id = nonhist_CHI.12
+	title = nonhist_CHI.12.t
+	desc = nonhist_CHI.12.desc
+	
+	picture = GFX_report_event_FIN_three_country_cairn_flag_raising
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonhist_CHI.7.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -50
+		FROM = {
+			country_event = nonhist_CHI.13
+		}
+		add_timed_idea = { idea = MAN_NHMMAP_russian_volunteers days = 180 }
+		hidden_effect = {
+			set_global_flag = MAN_fin_will_get_claims
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 1500
+			target = FROM
+		}
+		send_equipment = {
+			equipment = support_equipment
+			amount = 100
+			target = FROM
+		}
+		send_equipment = {
+			equipment = artillery_equipment
+			amount = 120
+			target = FROM
+		}
+	}	
+	option = {
+		name = nonhist_CHI.7.b
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+		}
+		add_political_power = 10
+		FROM = {
+			country_event = nonhist_CHI.11
+		}
+	}	
+}
+
+country_event = { #event for MAN to say FROM (eng, fin or ger) accepted
+	id = nonhist_CHI.13
+	title = nonhist_CHI.13.t
+	desc = nonhist_CHI.13.desc
+	
+	picture = GFX_report_event_german_advisors_remain
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nonhist_CHI.13.a
+	}	
+}
+
 #####################################################
 #JAPAN ###############
 
@@ -2633,6 +3792,71 @@ country_event = { #Japan offers to buy siberian states
 
 }
 
+country_event = { #event for manchu - japan is coming
+	id = nonhist_JAP.8
+	title = nonhist_JAP.8.t
+	desc = nonhist_JAP.8.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = nonhist_JAP.8.a
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			var:faction_leader = {
+				remove_from_faction = KOR
+			}
+		}
+		if = {
+			limit = {
+				KOR = {
+					has_war = yes
+				}
+			}
+			KOR = {
+				every_enemy_country = {
+					white_peace = KOR
+				}
+			}
+		}
+		hidden_effect = {
+			KOR = {
+				set_rule = { 
+					can_join_factions = no 
+				}
+			}
+		}
+		FROM = {
+			create_wargoal = {
+				target = KOR
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+		}
+	}
+
+	option = {
+		name = nonhist_JAP.8.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			create_wargoal = {
+				target = MAN
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+		}
+	}
+
+}
 
 
 #GERMANY
@@ -4780,6 +6004,269 @@ country_event = { #event for germany, japan refuses
 	}
 }
 
+country_event = { #event for a major that used to be in the axis, when berlin moscow happens
+	id = nonhist_GER.14
+	title = nonhist_GER.14.t
+	desc = nonhist_GER.14.desc
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #maybe we should throw in with the allies!
+		name = nonhist_GER.14.a
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			any_other_country = {
+				is_faction_leader = yes
+				has_government = democratic
+				capital_scope = {
+					OR = {
+						is_on_continent = europe
+						is_on_continent = north_america
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					is_faction_leader = yes
+					has_government = democratic
+				}
+			}
+			country_event = { id = nonhist_GER.15 days = 4 }
+		}
+		else = {
+			random_other_country = {
+				limit = {
+					is_faction_leader = yes
+					has_government = democratic
+					capital_scope = {
+						OR = {
+							is_on_continent = europe
+							is_on_continent = north_america
+						}
+					}
+				}
+				country_event = { id = nonhist_GER.15 days = 4 }
+			}
+		}
+	}
+
+	option = { #let's make our own axis! invite all the old axis members who think communism is the enemy!
+		name = nonhist_GER.14.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			any_other_country = {
+				NOT = {
+					original_tag = ROOT
+				}
+				has_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+			}
+		}
+		set_rule = { can_join_factions = yes }
+		create_faction = NHMMAP_axis_alternate_faction
+		every_country = {
+			limit = {
+				has_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+			}
+			country_event = { id = nonhist_GER.18 days = 1 random_days = 3 }
+		}
+	}
+
+	option = { #we have no choice, stay in the axis
+		name = nonhist_GER.14.c
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = GER
+				value = 200 #it will be still at -300 from -500
+			}
+			every_country = {
+				limit = {
+					has_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+				}
+				hidden_effect = {
+					clr_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+					set_rule = { can_join_factions = yes }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #event for a major democratic country that a ex-axis major wants to join the allies
+	id = nonhist_GER.15
+	title = nonhist_GER.15.t
+	desc = nonhist_GER.15.desc #we cant afford to refuse entirely too, so no deny option
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #sure! bring all your friends!
+		name = nonhist_GER.15.a
+		ai_chance = {
+			base = 5
+		}
+		add_popularity = { ideology = fascism popularity = 0.075 }
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					has_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+				}
+				every_enemy_country = {
+					white_peace = PREV
+				}
+				ROOT = {
+					add_to_faction = PREV
+				}
+				add_popularity = { ideology = fascism popularity = -0.1 }
+				add_popularity = { ideology = democratic popularity = 0.1 }
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+				}
+				country_event = nonhist_GER.16
+			}
+		}
+	}
+
+	option = { #they will become our democratic puppet first
+		name = nonhist_GER.15.b
+		ai_chance = {
+			base = 5
+		}
+		trigger = {
+			ROOT.num_of_factories > FROM.num_of_factories
+		}
+		FROM = {
+			country_event = nonhist_GER.17
+		}
+		effect_tooltip = {
+			puppet = FROM
+		}
+		custom_effect_tooltip = NHMMAP_scares_off_other_axis_members_tt
+	}
+}
+
+country_event = { #event for ex-axis members to inform them they are in the allies now, no you cannot refuse.
+	id = nonhist_GER.16
+	title = nonhist_GER.16.t
+	desc = nonhist_GER.16.desc #we cant afford to refuse
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+			set_rule = { can_join_factions = yes }
+			every_enemy_country = {
+				white_peace = ROOT
+			}
+			FROM = {
+				add_to_faction = ROOT
+			}
+			add_popularity = { ideology = fascism popularity = -0.1 }
+			add_popularity = { ideology = democratic popularity = 0.1 }
+		}
+		
+	}
+	
+	option = { #well I guess we like the allies now
+		name = nonhist_GER.16.a
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			every_enemy_country = {
+				white_peace = ROOT
+			}
+			FROM = {
+				add_to_faction = ROOT
+			}
+			add_popularity = { ideology = fascism popularity = -0.1 }
+			add_popularity = { ideology = democratic popularity = 0.1 }
+		}
+	}
+}
+
+country_event = { #event for ex axis major that they are going to be puppeted
+	id = nonhist_GER.17
+	title = nonhist_GER.17.t
+	desc = nonhist_GER.17.desc #we cant afford to refuse 
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #we have no choice...
+		name = nonhist_GER.17.a
+		ai_chance = {
+			base = 10
+		}
+		every_enemy_country = {
+			white_peace = ROOT
+		}
+		FROM = {
+			puppet = ROOT
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+				}
+				hidden_effect = {
+					clr_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+					set_rule = { can_join_factions = yes }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #event for ex-axis members to inform them they are in the new axis now, they cannot refuse
+	id = nonhist_GER.18
+	title = nonhist_GER.18.t
+	desc = nonhist_GER.18.desc #we cant afford to refuse
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	option = { #well I guess this is what we are doing now.
+		name = nonhist_GER.18.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			clr_country_flag = NHMMAP_left_the_axis_after_berlin_moscow
+			set_rule = { can_join_factions = yes }
+		}
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
 ################################################################################
 ################################################################################
 ################################# TURKEY ######################################
@@ -5170,6 +6657,76 @@ country_event = { # Quisling's Historical Coup event
 
 }
 
+
+################################################################################
+################################################################################
+################################# AUSTRIA ######################################
+################################################################################
+################################################################################
+
+country_event = { # Event for major fascists who are guaranteeing austria that the anchluss is about to happen, and maybe they should retract guarantees before it leads to war. (the austrians voted yes to anchluss after all!!! :) )
+	id = nonhist_AUS.1
+	title = nonhist_AUS.1.t
+	desc = nonhist_AUS.1.desc	
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = { # nope
+		name = nonhist_AUS.1.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Italy intends to join the Axis
+						original_tag = ITA
+						OR = {
+							ITA_is_historical_ai = yes
+							ITA_is_historical_alternate_ai = yes
+						}
+					}
+					AND = { #France intends to join the Axis
+						original_tag = FRA
+						OR = {
+							has_country_flag = FRA_AI_FASCIST
+							has_game_rule = {
+								rule = FRA_ai_behavior
+								option = FASCIST
+							}
+						}
+					}
+					#the UK and USA don't have fascist-axis paths.
+				}
+			}
+		}
+
+		add_war_support = 0.025
+		add_stability = -0.01
+		
+	}
+	
+	option = { # retract our austrian guarantees after all
+		name = nonhist_AUS.1.b
+		ai_chance = {
+			base = 1
+		}
+		diplomatic_relation = { 
+			country = AUS 
+			relation = guarantee
+			active = no
+		}
+		add_ai_strategy = {
+			type = protect
+			id = AUS
+			value = -200
+		}
+		add_stability = 0.01
+		add_war_support = -0.025
+	}
+}
 
 ################################################################################
 ################################################################################

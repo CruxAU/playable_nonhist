@@ -482,6 +482,7 @@ allow_scorched_earth = {
 	name = "RULE_ALLOW_SCORCHED_EARTH"
 	group = "RULE_GROUP_GAMEPLAY"
 	icon = "GFX_scorched_earth"
+	required_dlc = "No Step Back"
 	option = {
 		name = yes
 		text = "RULE_OPTION_ALLOWED"
@@ -1089,7 +1090,7 @@ JAP_ai_behavior = {
 	}
 	option = {
 		name = FASCIST
-		text = "RULE_OPTION_FASCIST"
+		text = "RULE_OPTION_JAP_FASCIST"
 		desc = "RULE_FASCIST_JAP_AI_DESC"
 		allow_achievements = yes
 	}
@@ -1114,8 +1115,15 @@ JAP_ai_behavior = {
 	option = {
 		required_dlc = "Waking the Tiger"
 		name = COMMUNIST
-		text = "RULE_OPTION_COMMUNIST"
+		text = "RULE_OPTION_COMMUNIST_JAP_AI"
 		desc = "RULE_OPTION_COMMUNIST_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "No Compromise, No Surrender"
+		name = COMMUNIST_2
+		text = "RULE_OPTION_COMMUNIST_RONOHA_JAP_AI"
+		desc = "RULE_OPTION_COMMUNIST_RONOHA_JAP_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -1128,7 +1136,7 @@ JAP_ai_behavior = {
 	option = {
 		required_dlc = "Waking the Tiger"
 		name = DEMOCRATIC
-		text = "RULE_OPTION_DEMOCRATIC"
+		text = "RULE_OPTION_JAP_DEMOCRATIC"
 		desc = "RULE_DEMOCRATIC_JAP_AI_DESC"
 		allow_achievements = yes
 	}
@@ -2929,12 +2937,43 @@ CHI_ai_behavior = {
 		text = "RULE_OPTION_HISTORICAL"
 		desc = "RULE_OPTION_HISTORICAL_CHI_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "No Compromise, No Surrender"
 	}
 	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_OPTION_DEMOCRATIC_CHI_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "No Compromise, No Surrender"
+	}
+		### SEA
+	option = {
+		name = HISTORICAL_SEA
+		text = "RULE_OPTION_HISTORICAL_SEA"
+		desc = "RULE_OPTION_HISTORICAL_SEA_DESC"
+		required_dlc = "No Compromise, No Surrender"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = FASCIST_SEA
+		text = "RULE_OPTION_FASCIST_SEA"
+		desc = "RULE_OPTION_FASCIST_SEA_DESC"
+		required_dlc = "No Compromise, No Surrender"
+	}
+
+	option = {
+		name = WANG_JINGWEI_SEA
+		text = "RULE_OPTION_WANG_JINGWEI_SEA"
+		desc = "RULE_OPTION_WANG_JINGWEI_SEA_DESC"
+		required_dlc = "No Compromise, No Surrender"
+	}
+
+	option = {
+		name = DEMOCRATIC_SEA
+		text = "RULE_OPTION_DEMOCRATIC_SEA"
+		desc = "RULE_OPTION_DEMOCRATIC_SEA_DESC"
+		required_dlc = "No Compromise, No Surrender"
 	}
 	option = {
 		name = RANDOM
@@ -2946,6 +2985,7 @@ CHI_ai_behavior = {
 CHI_ai_behavior_focus = {
 	name = "CHI_AI_BEHAVIOR_FOCUS"
 	required_dlc = "Waking the Tiger"
+	exclude_dlc = "No Compromise, No Surrender"
 	group = "RULE_GROUP_AI_BEHAVIOR"
 	default = {
 		name = DEFAULT
@@ -2991,18 +3031,44 @@ PRC_ai_behavior = {
 		text = "RULE_OPTION_MAOIST"
 		desc = "RULE_OPTION_MAOIST_PRC_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "No Compromise, No Surrender"
 	}
 	option = {
 		name = MARXIST_ORTHODOXY
 		text = "RULE_OPTION_MARXIST_ORTHODOXY"
 		desc = "RULE_OPTION_MARXIST_ORTHODOXY_PRC_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "No Compromise, No Surrender"
 	}
 	option = {
 		name = SOCIAL_DEMOCRACY
 		text = "RULE_OPTION_SOCIAL_DEMOCRACY"
 		desc = "RULE_OPTION_SOCIAL_DEMOCRACY_PRC_AI_DESC"
 		allow_achievements = yes
+		exclude_dlc = "No Compromise, No Surrender"
+	}
+	#No Compromise, No Surrender
+	
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_PRC_AI_DESC"
+		allow_achievements = yes
+		required_dlc = "No Compromise, No Surrender"
+	}
+	option = {
+		name = ALTERNATE_1
+		text = "RULE_OPTION_BOLSHEVIK_PRC"
+		desc = "RULE_OPTION_BOLSHEVIK_PRC_DESC"
+		required_dlc = "No Compromise, No Surrender"
+		allow_achievements = no
+	}
+	option = {
+		name = ALTERNATE_2
+		text = "RULE_OPTION_ALTERNATE_GUOMAO"
+		desc = "RULE_OPTION_ALTERNATE_GUOMAO_DESC"
+		required_dlc = "No Compromise, No Surrender"
+		allow_achievements = no
 	}
 	option = {
 		name = RANDOM
@@ -3032,16 +3098,42 @@ MAN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+	exclude_dlc = "No Compromise, No Surrender"
 		name = MANCHU_QING
 		text = "RULE_OPTION_MANCHU_QING"
 		desc = "RULE_OPTION_MANCHU_QING_MAN_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = FIVE_PEOPLES_QING
-		text = "RULE_OPTION_FIVE_PEOPLES_QING"
-		desc = "RULE_OPTION_FIVE_PEOPLES_QING_MAN_AI_DESC"
+	exclude_dlc = "No Compromise, No Surrender"
+		name = MANCHU_QING_AGGR
+		text = "RULE_OPTION_MANCHU_QING_AGGR"
+		desc = "RULE_OPTION_MANCHU_QING_AGGR_MAN_AI_DESC"
 		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "No Compromise, No Surrender"
+		name = INDEPENDENCE_FAS
+		text = "RULE_OPTION_INDEPENDENCE_FAS"
+		desc = "RULE_OPTION_INDEPENDENCE_FAS_MAN_AI_DESC"
+	}
+	option = {
+		required_dlc = "No Compromise, No Surrender"
+		name = INDEPENDENCE_NEU
+		text = "RULE_OPTION_INDEPENDENCE_NEU"
+		desc = "RULE_OPTION_INDEPENDENCE_NEU_MAN_AI_DESC"
+	}
+	option = {
+		required_dlc = "No Compromise, No Surrender"
+		name = INDEPENDENCE_DEM
+		text = "RULE_OPTION_INDEPENDENCE_DEM"
+		desc = "RULE_OPTION_INDEPENDENCE_DEM_MAN_AI_DESC"
+	}
+	option = {
+		required_dlc = "No Compromise, No Surrender"
+		name = INDEPENDENCE_COM
+		text = "RULE_OPTION_INDEPENDENCE_COM"
+		desc = "RULE_OPTION_INDEPENDENCE_COM_MAN_AI_DESC"
 	}
 	option = {
 		name = RANDOM
@@ -5714,13 +5806,13 @@ NOR_ai_behavior = {
 	}
 	option = {
 		name = DEMOCRATIC_ALLIES
-		text = "RULE_OPTION_DEMOCRATIC_ALLIES"
+		text = "RULE_OPTION_DEMOCRATIC_NOR_ALLIES"
 		desc = "RULE_DEMOCRATIC_ALLIES_NOR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = DEMOCRATIC_ALLIES_EXP
-		text = "RULE_OPTION_DEMOCRATIC_ALLIES_EXP"
+		text = "RULE_OPTION_DEMOCRATIC_NOR_ALLIES_EXP"
 		desc = "RULE_DEMOCRATIC_ALLIES_EXP_NOR_AI_DESC"
 		allow_achievements = yes
 	}
@@ -6835,6 +6927,28 @@ AUS_AI_BEHAVIOR = {
 	}
 }
 
+AUS_ai_anchluss = {
+	name = "AUS_AI_ANCHLUSS"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = NEVER_DENY
+		text = "RULE_OPTION_NEVER_UNION"
+		desc = "RULE_OPTION_NEVER_DENY_AUS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALWAYS_DENY
+		text = "RULE_OPTION_ALWAYS_UNION"
+		desc = "RULE_OPTION_ALWAYS_DENY_AUS_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
 BEL_AI_BEHAVIOR = {
 	name = "BEL_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
@@ -7052,6 +7166,1849 @@ PER_ai_behavior = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+PHI_AI_BEHAVIOR = {
+	name = "PHI_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "No Compromise, No Surrender"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_PHI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FLEXIBLE
+		text = "RULE_OPTION_FLEXIBLE_PHI_AI"
+		desc = "RULE_OPTION_FLEXIBLE_PHI_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = FASCIST
+		text = "RULE_OPTION_FASCIST_PHI_AI"
+		desc = "RULE_OPTION_FASCIST_PHI_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = MONARCHIST
+		text = "RULE_OPTION_MONARCHIST"
+		desc = "RULE_OPTION_MONARCHIST_PHI_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COMMUNIST
+		text = "RULE_OPTION_COMMUNIST_PHI_AI"
+		desc = "RULE_OPTION_COMMUNIST_PHI_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = MACARTHUR
+		text = "RULE_OPTION_MACARTHUR_PHI_AI"
+		desc = "RULE_OPTION_MACARTHUR_PHI_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM" 
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = no
+	}
+}
+
+ALB_ai_behavior = {
+	name = "ALB_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+IRE_ai_behavior = {
+	name = "IRE_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+LUX_ai_behavior = {
+	name = "LUX_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_LUX_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_LUX_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_LUX_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_LUX_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI" #conservative
+		desc = "RULE_OPTION_HISTORICAL_LUX_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI" #joseph bech
+		desc = "RULE_OPTION_HISTORICAL_LUX_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+CUB_ai_behavior = {
+	name = "CUB_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+DOM_ai_behavior = {
+	name = "DOM_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+HAI_ai_behavior = {
+	name = "HAI_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+COS_ai_behavior = {
+	name = "COS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+ELS_ai_behavior = {
+	name = "ELS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+GUA_ai_behavior = {
+	name = "GUA_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+HON_ai_behavior = {
+	name = "HON_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+NIC_ai_behavior = {
+	name = "NIC_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+PAN_ai_behavior = {
+	name = "PAN_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+BOL_ai_behavior = {
+	name = "BOL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU #bolivia has event
+		text = "RULE_OPTION_HISTORICAL_BOL_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_BOL_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT #bolivia has event, retire leader for german (not a german thats just his name)
+		text = "RULE_OPTION_HISTORICAL_BOL_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_BOL_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT #embrace plurinationalism decision
+		text = "RULE_OPTION_HISTORICAL_BOL_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_BOL_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+COL_ai_behavior = {
+	name = "COL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+ECU_ai_behavior = {
+	name = "ECU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+PRU_ai_behavior = {
+	name = "PRU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+VEN_ai_behavior = {
+	name = "VEN_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+JOR_ai_behavior = {
+	name = "JOR_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+KUW_ai_behavior = {
+	name = "KUW_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+OMA_ai_behavior = {
+	name = "OMA_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+PAL_ai_behavior = {
+	name = "PAL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+LEB_ai_behavior = {
+	name = "LEB_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+SYR_ai_behavior = {
+	name = "SYR_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+SAU_ai_behavior = {
+	name = "SAU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+YEM_ai_behavior = {
+	name = "YEM_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+BHU_ai_behavior = {
+	name = "BHU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+NEP_ai_behavior = {
+	name = "NEP_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+TIB_ai_behavior = {
+	name = "TIB_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+MEN_ai_behavior = {
+	name = "MEN_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+MON_ai_behavior = {
+	name = "MON_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+TAN_ai_behavior = {
+	name = "TAN_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+BRM_ai_behavior = {
+	name = "BRM_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+MAL_ai_behavior = {
+	name = "MAL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+INS_ai_behavior = {
+	name = "INS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+SIA_ai_behavior = {
+	name = "SIA_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NA_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEM_INT
+		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COM
+		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAS
+		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
+		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 

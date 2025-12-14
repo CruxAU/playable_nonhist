@@ -254,7 +254,7 @@
  RULE_OPTION_OBEDIENCE: "Послушание" #NT!
  RULE_OPTION_CHINESE_LEADERSHIP: "Послушание – китайское лидерство" #NT!
  RULE_OPTION_MANCHU_QING: "Независимость - Маньчжурская Цин" #NT!
- RULE_OPTION_FIVE_PEOPLES_QING: "Независимость – Империя пяти народов" #NT!
+ RULE_OPTION_MANCHU_QING_AGGR: "Независимость – Империя пяти народов" #NT!
  RULE_OPTION_JUNTA: "Хунта Макартура" #NT!
  RULE_OPTION_MAOIST: "Maoism" #NT!
  RULE_OPTION_MARXIST_ORTHODOXY: "Советское марксистское православие" #NT!
@@ -467,7 +467,7 @@
  RULE_OPTION_OBEDIENCE_MAN_AI_DESC: "ИИ @MANManchu постарается оставаться лояльным и не самоутверждаться. §RЭтот путь будет работать только в том случае, если @JAPJapan является фашистской или монархической.§!" #NT!
  RULE_OPTION_CHINESE_LEADERSHIP_MAN_AI_DESC: "ИИ @MANManchu попытается сохранить лояльность и утвердить себя в качестве правительства @JAPJapanese сотрудничества в @CHIChina §RЭтот путь будет работать только в том случае, если @JAPJapan является фашистским или монархистским.§!" #NT!
  RULE_OPTION_MANCHU_QING_MAN_AI_DESC: "ИИ @MANManchu попытается вырваться на свободу, и если он получит свободу, он попытается завоевать @CHIКитай ради @MANManchurian небесного мандата." #NT!
- RULE_OPTION_FIVE_PEOPLES_QING_MAN_AI_DESC: "ИИ @MANManchu попытается вырваться на свободу, и, если он получит свободу, попытается поставить в вассальную зависимость @CHIКитай, приняв политику «пяти рас под одним союзом»." #NT!
+ RULE_OPTION_MANCHU_QING_AGGR_MAN_AI_DESC: "ИИ @MANManchu попытается вырваться на свободу, и, если он получит свободу, попытается поставить в вассальную зависимость @CHIКитай, приняв политику «пяти рас под одним союзом»." #NT!
  RULE_ALLOW_GUARANTEES_SAME_IDEOLOGY_TOOLTIP: "Правило игры: §RСтраны могут гарантировать только те страны, которые разделяют их правящую идеологию.§!" #NT!
  RULE_ALLOW_GUARANTEES_BLOCKED_TOOLTIP: "Правило игры: §RСтраны никогда не могут гарантировать другие страны.§!" #NT!
  RULE_ALLOW_MILITARY_ACCESS_SAME_IDEOLOGY_TT: "Правило игры: §RСтраны могут получить военный доступ и права на стыковку со странами, разделяющими одну и ту же правящую идеологию.§!" #NT!

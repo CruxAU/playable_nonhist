@@ -5721,7 +5721,7 @@ country_event = {
 
 		#BELLA CIAO
 		hidden_effect = {
-			if = {
+			if = { #no need to thank me
 				limit = {
 					ROOT = {
 						is_ai = no
@@ -7381,7 +7381,9 @@ country_event = {
 		}
 
 		hidden_effect = {
-			country_event = { id = BBA_italy_communist_events.07 hours = 24 random_hours = 12 }
+			FROM = {
+				country_event = { id = BBA_italy_communist_events.07 hours = 24 random_hours = 12 }
+			}
 		}
 	}
 
@@ -7394,7 +7396,9 @@ country_event = {
 		}
 
 		hidden_effect = {
-			country_event = { id = BBA_italy_communist_events.08 hours = 24 random_hours = 12 }
+			FROM = {
+				country_event = { id = BBA_italy_communist_events.08 hours = 24 random_hours = 12 }
+			}
 		}
 	}
 }
@@ -10929,6 +10933,13 @@ country_event = {
 
 		ai_chance = { 
 			base = 60
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_ai_anchluss
+					option = NEVER_DENY
+				}
+			}
 		}
 
 		GER = {
@@ -10961,7 +10972,14 @@ country_event = {
 			base = 30
 			modifier = {
 				add = 60
-				has_dino_grandi = yes
+				has_completed_focus = ITA_negotiate_italian_claims
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_ai_anchluss
+					option = NEVER_DENY
+				}
 			}
 		}
 
@@ -11034,6 +11052,13 @@ country_event = {
 
 		ai_chance = { 
 			base = 10
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = AUS_ai_anchluss
+					option = ALWAYS_DENY
+				}
+			}
 		}
 
 		GER = {
@@ -11165,7 +11190,7 @@ country_event = {
 			modifier = {
 				add = 15
 				ITA = {
-					has_dino_grandi = yes
+					has_completed_focus = ITA_ratify_the_stresa_front
 				}
 			}
 		}
@@ -11196,7 +11221,7 @@ country_event = {
 			modifier = {
 				add = 15
 				ITA = {
-					has_dino_grandi = yes
+					has_completed_focus = ITA_ratify_the_stresa_front
 				}
 			}
 		}
@@ -11260,7 +11285,7 @@ country_event = {
 			modifier = {
 				add = 15
 				ITA = {
-					has_dino_grandi = yes
+					has_completed_focus = ITA_ratify_the_stresa_front
 				}
 			}
 		}
@@ -12960,7 +12985,10 @@ country_event = {
 			}
 			else = {
 				ROOT = {
-					create_faction = stresa_front_ita
+					create_faction_from_template = {
+						template = faction_template_the_little_entente
+						name = stresa_front_ita
+					}
 					ROOT = { add_to_faction = ITA }
 					ROOT = { add_to_faction = ENG }
 				}
@@ -13064,7 +13092,10 @@ country_event = { #Hidden event
 		}
 		else = {
 			ROOT = {
-				create_faction = stresa_front_ita
+				create_faction_from_template = {
+					template = faction_template_the_little_entente
+					name = stresa_front_ita
+				}
 				ROOT = { add_to_faction = ITA }
 				if = {
 					limit = {

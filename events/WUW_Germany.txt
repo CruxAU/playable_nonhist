@@ -53,7 +53,7 @@ country_event = { #MEFO Bills have been cancelled
 		#Nuh-uh, only trigger this event if you still have the MEFO Bills to avoid exploits where you can have BOTH Economy of Conquest AND Recovering Economy. The game isn't smart enough to handle the genius that is our player base
 		has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
 	}
-	
+
 	option = { #Continue to rearm - get Economy of Conquest
 		name = germany_mefo_bills.1.a
 		ai_chance = {
@@ -2455,7 +2455,7 @@ country_event = { #FROM requests their old colonies back
 		}
 	}
 	option = { #NO
-		name = wuw_GER_diplomacy.38.a
+		name = wuw_GER_diplomacy.38.b
 		trigger = {
 			NOT = {
 				ROOT = {
@@ -3722,7 +3722,7 @@ country_event = {
 						}
 					}
 					FROM = {
-						create_faction = GER_mitteleuropa_alliance
+						create_faction_from_template = faction_template_GER_mitteleuropa_alliance
 					}
 				}
 				ROOT = {
@@ -3754,7 +3754,7 @@ country_event = {
 						}
 					}
 					FROM = {
-						create_faction = GER_mitteleuropa_alliance
+						create_faction_from_template = faction_template_GER_mitteleuropa_alliance
 					}
 				}
 				ROOT = {
@@ -3892,7 +3892,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction = GER_mitteleuropa_alliance
+				create_faction_from_template = faction_template_GER_mitteleuropa_alliance
 			}
 			FROM = {
 				add_state_claim = 977
@@ -3921,7 +3921,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction = GER_mitteleuropa_alliance
+				create_faction_from_template = faction_template_GER_mitteleuropa_alliance
 			}
 			FROM = {
 				add_state_claim = 35
@@ -3962,7 +3962,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction = GER_mitteleuropa_alliance
+				create_faction_from_template = faction_template_GER_mitteleuropa_alliance
 			}
 			FROM = {
 				add_state_claim = 977
@@ -3985,7 +3985,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction = GER_mitteleuropa_alliance
+				create_faction_from_template = faction_template_GER_mitteleuropa_alliance
 			}
 			FROM = {
 				add_state_claim = 35
@@ -4602,7 +4602,7 @@ country_event = { #Germany integrates us
 	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
-
+	
 	option = { #we had a good run
 		name = wuw_GER_diplomacy.81.a
 
@@ -4612,13 +4612,27 @@ country_event = { #Germany integrates us
 				transfer_troops = yes
 			}
 		}
-
-		every_controlled_state = {
-			limit = {
-				is_core_of = ROOT
+		
+		effect_tooltip = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_compliance = 50
+				add_extra_state_shared_building_slots = 1
 			}
-			add_compliance = 50
-			add_extra_state_shared_building_slots = 1
+		}
+		
+		hidden_effect = {
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_compliance = 50
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 
 		custom_effect_tooltip = GAME_OVER_TT
@@ -8893,12 +8907,18 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKB = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
 # A Leader for Niederlande - event for GER
-country_event = { 
+country_event = {
 	id = wuw_GER_reichskommissariats.2
 	title = wuw_GER_reichskommissariats.2.t
 	desc = wuw_GER_reichskommissariats.2.desc 
@@ -9025,7 +9045,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKN = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9077,7 +9103,13 @@ country_event = {
 				}
 			}
 		}
-
+		hidden_effect = {
+			RKN = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -9172,7 +9204,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKG = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9198,7 +9236,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKG = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -9254,7 +9298,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKU = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9282,12 +9332,18 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKU = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
 # A Leader for Ostland - event for GER
-country_event = { 
+country_event = {
 	id = wuw_GER_reichskommissariats.5
 	title = wuw_GER_reichskommissariats.5.t
 	desc = wuw_GER_reichskommissariats.5.desc 
@@ -9348,7 +9404,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKO = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9378,7 +9440,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKO = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -9434,7 +9502,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKK = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9462,7 +9536,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKK = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -9577,7 +9657,13 @@ country_event = {
 				add_ideas = GER_german_controlled_reichskommissariat
 			}
 		}
-		
+		hidden_effect = {
+			RKT = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9624,7 +9710,13 @@ country_event = {
 				}
 			}
 		}
-
+		hidden_effect = {
+			RKT = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -9651,7 +9743,7 @@ country_event = {
 					    character = SOV_konstantin_rodzayevsky
 					}
 				}
-			}
+			}	
 		}
 	}
 
@@ -9682,9 +9774,15 @@ country_event = {
 					    character = SOV_konstantin_rodzayevsky
 					}
 				}
+			}			
+		}
+		hidden_effect = {
+			RKM = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
 			}
 		}
-		
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -9714,7 +9812,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKM = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -10290,7 +10394,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			GEN = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -10323,7 +10433,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_government_general_idea
 		}
-
+		hidden_effect = {
+			GEN = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -10446,7 +10562,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKH = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -10507,7 +10629,13 @@ country_event = {
 				}
 			}
 		}
-
+		hidden_effect = {
+			RKH = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -10575,7 +10703,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKI = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -10610,7 +10744,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKI = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -10749,7 +10889,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKC = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -10765,7 +10911,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			base = 45
+			base = ´45
 		}		
 		
 		RKC = {
@@ -10815,7 +10961,13 @@ country_event = {
 				}
 			}
 		}
-
+		hidden_effect = {
+			RKC = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -10941,7 +11093,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RGB = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -10957,7 +11115,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			base = 45
+			base = ´45
 		}		
 		
 		RGB = {
@@ -11001,7 +11159,13 @@ country_event = {
 				}
 			}
 		}
-
+		hidden_effect = {
+			RGB = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -11291,7 +11455,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKA = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -11324,7 +11494,13 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKA = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -11414,7 +11590,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKV = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -11461,7 +11643,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RKV = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -11604,7 +11792,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RAN = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -11685,7 +11879,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RAN = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -11813,7 +12013,13 @@ country_event = {
 			}
 
 		}
-		
+		hidden_effect = {
+			RCO = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -11875,7 +12081,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RCO = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -12020,7 +12232,13 @@ country_event = {
 			}
 
 		}
-		
+		hidden_effect = {
+			RUS = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -12090,7 +12308,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RUS = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -12398,7 +12622,13 @@ country_event = {
 			}
 
 		}
-		
+		hidden_effect = {
+			RAR = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -12466,7 +12696,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RAR = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -12604,7 +12840,13 @@ country_event = {
 			}
 
 		}
-		
+		hidden_effect = {
+			RHD = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -12671,7 +12913,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RHD = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -12765,7 +13013,13 @@ country_event = {
 			}
 
 		}
-		
+		hidden_effect = {
+			ROA = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -12812,7 +13066,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			ROA = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -12951,7 +13211,13 @@ country_event = {
 			}
 
 		}
-		
+		hidden_effect = {
+			RAA = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -13018,7 +13284,13 @@ country_event = {
 			}
 			
 		}
-
+		hidden_effect = {
+			RAA = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
@@ -14454,6 +14726,7 @@ country_event = {
 		}
 		NOT = {
 			OR = {
+				has_global_flag = SOV_flug_and_shteifon_went_to_manchuria_flag
 				has_global_flag = SOV_flug_and_shteifon_went_to_germany_flag
 				has_global_flag = SOV_flug_and_shteifon_went_to_russia_flag
 				has_global_flag = SOV_flug_and_shteifon_decided_to_fight_for_yugoslavia_flag
@@ -16350,9 +16623,9 @@ country_event = {
 		}
 		
 		puppet = FROM
-		
-		GER_lower_CGFF_small = yes
 
+		GER_lower_CGFF_small = yes
+		
 		FROM = {
 			add_country_leader_role = {
 				character =  FIN_prince_wolfgang_von_hesse
@@ -16541,7 +16814,7 @@ country_event = {
 			annex_country = {
 				target = ROOT
 				transfer_troops = yes
-			}	
+			}
 			GER_lower_CGFF_small = yes
 		}
 	}
@@ -16606,7 +16879,7 @@ country_event = {
 				}
 			}
 		}
-
+		
 		FROM = { 
 			country_event = { 
 				id = wuw_GER_realpolitik.18
@@ -17118,7 +17391,7 @@ country_event = {
 		}
 
 		GER_seize_gold_reserves_from_polish_states_peacufully = yes
-		
+
 		IF = {
 			limit = {
 				ENG = {
@@ -20400,7 +20673,11 @@ country_event = {
 	option = { # Pierre Dupong takes the helm
 		name = wuw_GER_releasable.2.a
 		ai_chance = {
-			base = 100
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = GENERIC_AI_RANDOM_DEM_NEU
+			}
 		}
 		
 		promote_character = LUX_pierre_dupong
@@ -20412,6 +20689,10 @@ country_event = {
 		name = wuw_GER_releasable.2.b
 		ai_chance = {
 			base = 0
+			modifier = {
+				add = 100
+				has_country_flag = GENERIC_AI_RANDOM_DEM_INT
+			}
 		}
 		
 		add_political_power = 50
@@ -20427,6 +20708,13 @@ country_event = {
 		name = wuw_GER_releasable.2.c
 		ai_chance = {
 			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = GENERIC_AI_RANDOM_NEU
+					has_country_flag = GENERIC_AI_RANDOM_INT
+				}
+			}
 		}
 		
 		set_politics = {
@@ -20447,6 +20735,13 @@ country_event = {
 		name = wuw_GER_releasable.2.d
 		ai_chance = {
 			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = GENERIC_AI_RANDOM_COM
+					has_country_flag = GENERIC_AI_RANDOM_FAS
+				}
+			}
 		}
 		
 		add_popularity = {

@@ -558,7 +558,7 @@ FRA_weapons_purchases_category = {
 		}
 	}
 	FRA_order_tanks_in_USA = {
-		icon = generic_air
+		icon = GFX_decision_generic_tank
 		available = {
 			
 		}
@@ -657,6 +657,10 @@ FRA_weapons_purchases_category = {
 			
 		}
 		visible = {
+			OR = {
+				original_tag = FRA
+				has_completed_focus = PHI_aircraft_requisition
+			}
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
@@ -721,6 +725,10 @@ FRA_weapons_purchases_category = {
 			
 		}
 		visible = {
+			OR = {
+				original_tag = FRA
+				has_completed_focus = PHI_aircraft_requisition
+			}
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
@@ -1107,7 +1115,7 @@ FRA_spanish_intervention_category = {
 		}
 
 		cost = 25
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 1
 			modifier = {
 				AND = {
@@ -1150,7 +1158,7 @@ FRA_spanish_intervention_category = {
 		}
 
 		cost = 0
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 0
 		}
 	}
@@ -1160,10 +1168,10 @@ FRA_spanish_intervention_category = {
 
 		visible = { has_war = no }
 
-		targets = { SPD SPA SPB SPC SPR }
+		targets = { SPD SPA SPB SPC SPR } #NHMMAP
 
 		target_trigger = { 
-			FROM = {
+			FROM = { #NHMMAP
 				original_tag = SPR
 				has_government = ROOT
 				NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
@@ -1220,7 +1228,7 @@ FRA_spanish_intervention_category = {
 					add_to_war = { targeted_alliance = SPB enemy = SPA hostility_reason = asked_to_join }
 				}
 			}
-			else_if = {
+			else_if = { #NHMMAP
 				limit = { FROM = { tag = SPC } }
 				set_country_flag = supports_SPC_flag
 				if = {
@@ -1292,7 +1300,7 @@ FRA_spanish_intervention_category = {
 		}
 
 		cost = 25
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 1
 			modifier = {
 				has_war = yes
@@ -1688,7 +1696,7 @@ political_actions = {
 			}
 			add_stability = -0.03
 		}
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 5
 			modifier = {
 				has_stability < 0.3
@@ -1722,7 +1730,7 @@ political_actions = {
 	FRA_unleash_la_cagoule = {
 		available = { }
 
-		visible = { 
+		visible = { #NHMMAP
 			has_completed_focus = FRA_utilize_the_leagues 
 			OR = {
 				NOT = { has_government = fascism }
@@ -1738,7 +1746,7 @@ political_actions = {
 			add_stability = -0.075
 		}
 		cost = 25
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			base = 5
 			modifier = {
 				has_stability < 0.38
@@ -2216,6 +2224,7 @@ FRA_intervention_in_overseas_territories = {
 								state = 670
 								state = 286
 								state = 741
+								state = 1017
 							}
 						}
 						add_compliance = 5
@@ -2263,6 +2272,7 @@ FRA_intervention_in_overseas_territories = {
 					state = 670
 					state = 286
 					state = 741
+					state = 1017
 				}
 				CONTROLLER = {
 					NOT = {
@@ -2290,6 +2300,7 @@ FRA_intervention_in_overseas_territories = {
 						state = 670
 						state = 286
 						state = 741
+						state = 1017
 					}
 					not = { is_controlled_by = ROOT }
 					CONTROLLER = {
@@ -2715,14 +2726,14 @@ FRA_intervention_in_overseas_territories = {
 			}
 			any_state = {
 				OR = {
-						state = 557
-						state = 272
-						state = 556
-						state = 780
-						state = 779
-						state = 778
-						state = 781
-						state = 776
+					state = 557
+					state = 272
+					state = 556
+					state = 780
+					state = 779
+					state = 778
+					state = 781
+					state = 776
 				}
 				CONTROLLER = {
 					NOT = { has_war_with = ROOT }
@@ -3003,6 +3014,7 @@ FRA_decolonization = {
 			670 = { is_controlled_by = ROOT }
 			286 = { is_controlled_by = ROOT }
 			741 = { is_controlled_by = ROOT }	
+			1017 = { is_controlled_by = ROOT }	
 		}
 
 		days_mission_timeout = 180

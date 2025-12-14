@@ -1710,7 +1710,6 @@ country_event = {
 				bonus = 0.5
 				uses = 3
 				category = dd_tech
-				category = cl_tech
 				category = ca_tech
 				category = bb_tech
 			}
@@ -6834,6 +6833,14 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
+		ITA = {
+			every_allied_country = {
+				limit = {
+					has_war_with = ETH
+				}
+				white_peace = ROOT
+			}
+		}
 		white_peace = ITA
 		if = {
 			limit = {
@@ -7714,7 +7721,8 @@ country_event = {
 			type = infantry_equipment_1 
 			amount = 5000 
 			producer = JAP
-		}		
+		}	
+		add_manpower = 10000	
 	}
 }
 

@@ -217,8 +217,12 @@ ETH_befriend_uk_a_little = {
 # 				check_variable = { ETH.host_nation = JAP }
 # 			}
 # 			AND = {
-# 				JAP = { has_completed_focus = JAP_support_the_kodoha_faction }
-# 				ETH = { has_completed_focus = ETH_rally_around_the_emperor }
+# 				JAP = { 
+#					OR = {
+#						has_completed_focus = JAP_support_the_kodoha_faction 
+#						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors 
+#					}
+#				}
 # 			}
 			
 # 		}

@@ -158,7 +158,7 @@ focus_tree = {
 
 			custom_effect_tooltip = NOR_unlocking_prep_allied_dem_TT
 			remove_ideas = { NOR_complacent_cabinet_ns } 
-			
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			country_event = { id = AAT_norway.12 }
@@ -1437,7 +1437,10 @@ focus_tree = {
 						}
 					} 
 				}
-				create_faction = NORDIC_alliance_communist
+				create_faction_from_template = {
+					template = faction_template_world_revolution
+					name = NORDIC_alliance_communist
+				}
 				every_other_country = {
 					limit = {
 						NORDIC_is_nordic = yes 
@@ -1517,7 +1520,10 @@ focus_tree = {
 				limit = {
 					is_in_faction = no 
 				}
-				create_faction = NOR_northern_international
+				create_faction_from_template = {
+					template = faction_template_world_revolution
+					name = NOR_northern_international
+				}
 				every_other_country = {
 					limit = {
 						capital_scope = {
@@ -1922,7 +1928,20 @@ focus_tree = {
 					is_in_faction = no 
 					NORDIC_alliance_created_already = no 
 				}
-				create_faction = NORDIC_alliance_democratic
+				IF = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_NORDIC_alliance_democratic
+					add_faction_initiative = 1
+					add_to_faction = FROM
+				}
+				ELSE = {
+					set_rule = { can_create_factions = yes }
+					create_faction = NORDIC_alliance_democratic
+					add_to_faction = FROM
+				}
 				complete_national_focus = NORDIC_form_joint_alliance
 			}
 		}
@@ -3522,7 +3541,7 @@ focus_tree = {
 				add_idea = NOR_broken_gun_ns_3
 			}
 			remove_ideas = { NOR_complacent_cabinet_ns }
-			
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
@@ -4836,7 +4855,7 @@ focus_tree = {
 						exists = yes
 						NOT = { has_government = fascism }
 					}
-					has_variable = NOR.NOR_cw_democratic_norway	
+					has_variable = NOR.NOR_cw_democratic_norway	 #NHMMAP NEEDS TO BE NOR.NOR otherwise it won't always target the NOR tag!!!
 				}
 				var:NOR.NOR_cw_democratic_norway = {
 					OR = {
@@ -5183,7 +5202,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor
@@ -5241,7 +5260,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #changed these focuses in NHMMAP
 		id = NOR_join_the_axis
 		icon = GFX_focus_POL_beck_ribbentrop
 		prerequisite = { focus = NOR_crackdown_on_civilian_life }
@@ -5358,7 +5377,12 @@ focus_tree = {
 				}
 			}
 			else = {
-				create_faction = NOR_pan_germanic_entent
+				create_faction_from_template = {
+					template = faction_template_DEN_nordic_cooperation_alliance
+					name = NOR_pan_germanic_entent
+					icon = GFX_faction_logo_axis
+				}
+				set_faction_rule = joining_rule_germanics_only
 				every_other_country = {
 					limit = {
 						is_germanic = yes 
@@ -6630,7 +6654,10 @@ focus_tree = {
 					is_in_faction = no 
 					NORDIC_alliance_created_already = no 
 				}
-				create_faction = NORDIC_alliance_monarchist
+				create_faction_from_template = {
+					template = faction_template_DEN_nordic_cooperation_alliance
+					name = NORDIC_alliance_monarchist
+				}
 				complete_national_focus = NORDIC_form_joint_alliance
 			}
 			hidden_effect = { set_country_flag = NOR_included_in_generic_political }
@@ -6649,8 +6676,8 @@ focus_tree = {
 		relative_position_id = NOR_encourage_recruitment
 		cost = 10
 		available = {
-			any_state = {
-				is_owned_and_controlled_by = ROOT
+			any_owned_state = {
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -6660,7 +6687,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					# Just celebrating the fact that I don't need to exclude Jan Mayen this time
-					is_controlled_by = ROOT 
+					is_controlled_by = ROOT
 					# NOTE : This now triggers an error on load because bunker is a province building!
 					# Commented out for now, please fix -- RRK
 #					free_building_slots = {
@@ -9837,7 +9864,7 @@ focus_tree = {
 			add_to_variable = {
 				var = NOR.NOR_royal_navy_dmod_sortie_efficiency
 				value = 0.2
-				tooltip = CARRIER_SORTIE_EFFICIENCY_FACTOR_TT
+				tooltip = sortie_efficiency_tt
 			}
 
 		}

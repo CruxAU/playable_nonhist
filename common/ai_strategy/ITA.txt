@@ -135,7 +135,7 @@ ITA_unit_production = {
 		value = 40
 	}
 
-	ai_strategy = {
+	ai_strategy = { #NHMMAP
 		type = equipment_production_factor
 		id = armor
 		value = 2
@@ -144,7 +144,7 @@ ITA_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = artillery
-		value = 23
+		value = 23 #NHMMAP
 	}
 }
 
@@ -295,7 +295,7 @@ ITA_shore_up_against_france = {
 ITA_slow_going_against_france = {
 	allowed = { original_tag = ITA }
 	enable = {
-		OR = {
+		OR = { #NHMMAP
 			ITA_is_historical_ai = yes
 			ITA_is_historical_alternate_ai = yes
 		}
@@ -305,7 +305,7 @@ ITA_slow_going_against_france = {
 			has_capitulated = no
 			surrender_progress < 0.45
 		}
-		GER = { surrender_progress < 0.1 } 
+		GER = { surrender_progress < 0.1 }
 	}
 	abort_when_not_enabled = yes
 	
@@ -434,7 +434,7 @@ ITA_bulgaria_ally = {
 	enable = {
 		has_completed_focus = ITA_potential_allies_in_the_balkans
 		country_exists = BUL
-		ITA_is_pope_ai = no
+		ITA_is_pope_ai = no #NHMMAP
 		OR = {
 			has_government = fascism
 			has_government = neutrality
@@ -748,7 +748,7 @@ ITA_dont_take_claims_on_yug = {
 	}
 	enable = {
 		country_exists = YUG
-		OR = {
+		OR = { #NHMMAP
 			ITA_is_historical_ai = yes
 			ITA_is_historical_alternate_ai = yes
 		}
@@ -790,7 +790,7 @@ ITA_naval_role_ratios_historical = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_capital_bb
-		value = 20   
+		value = 20
 	}
 
 	ai_strategy = {
@@ -832,7 +832,7 @@ ITA_naval_role_ratios_historical = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_mine_sweeper
-		value = 5 
+		value = 5
 	}
 
 	ai_strategy = {
@@ -897,7 +897,7 @@ ITA_spain_scw_support_la_resistance = {
 		has_dlc = "La Resistance"
 	}
 	enable = {
-		OR = {
+		OR = { #NHMMAP
 			ITA_is_historical_ai = yes
 			ITA_is_historical_alternate_ai = yes
 			ITA_is_alt_fascist_balbo_ai = yes
@@ -1288,7 +1288,7 @@ ITA_communists_downplay_ethiopian_theatre = {
 	}
 	enable = {
 		has_war_with = ETH
-		OR = {	
+		OR = {
 			ITA_is_communist_ai = yes
 			ITA_is_socialist_ai = yes
 		}
@@ -1382,11 +1382,11 @@ ITA_balbo_ignore_germany = {
 	}
 	enable = {
 		ITA_is_alt_fascist_balbo_ai = yes
-		ITA_is_historical_alternate_ai = no
+		ITA_is_historical_alternate_ai = no #NHMMAP
 	}
 	abort = {
 		OR = {
-			has_completed_focus = ITA_pact_of_steel
+			has_completed_focus = ITA_pact_of_steel #NHMMAP
 			NOT = { country_exists = GER }
 			is_in_faction = yes
 			date > 1940.01.01
@@ -1404,7 +1404,7 @@ ITA_invasion_buffer = {
 		original_tag = ITA
 	}
 	enable = {
-		OR = {
+		OR = { #NHMMAP
 			ITA_is_historical_ai = yes
 			ITA_is_historical_alternate_ai = yes
 		}
@@ -1425,6 +1425,7 @@ ITA_invasion_buffer = {
 			### Oh no we forgot sicily! What could possibly go wrong.
 			115
 			### Actually we remember sicily now in NHMMAP! so nothing could possibly go wrong!... I think...
+			#Done to give non-hist italian AI a chance to defend itself
 		}
 		ratio = 0.20
 		area = italy
@@ -1448,7 +1449,7 @@ ITA_prepare_british_invasion = {
 	abort = {
 		any_other_country = {
 			original_tag = ENG
-			OR = {
+			OR = { #NHMMAP
 				has_war_with = ITA
 				is_in_faction_with = ITA
 			}
@@ -1536,7 +1537,7 @@ ITA_AXIS_dont_join_against_eth = {
 		NOT = { original_tag = ITA }
 		ITA = {
 			all_enemy_country = {
-				OR = {
+				OR = { #NHMMAP
 					is_government_in_exile = yes
 					has_capitulated = yes
 				}
@@ -1570,7 +1571,7 @@ ITA_dont_call_allies = {
 		is_in_faction_with = ITA
 		ITA = {
 			all_enemy_country = {
-				OR = {
+				OR = { #NHMMAP
 					is_government_in_exile = yes
 					has_capitulated = yes
 				}
@@ -1604,7 +1605,7 @@ ITA_dont_join_ww2_too_early = {
 			is_faction_leader = yes 
 		} 
 		ITA = {
-			OR = {
+			OR = { #NHMMAP
 				ITA_is_historical_ai = yes
 				ITA_is_historical_alternate_ai = yes
 			}
@@ -1628,7 +1629,36 @@ ITA_dont_join_ww2_too_early = {
 	}
 }
 
-ITA_gotta_have_enough_medium_tanks = {
+ITA_contest_the_med = {
+	allowed = {
+		original_tag = ENG
+	}
+	
+	enable = {
+		OR = {
+			has_war_with = ENG
+			has_war_with = SOU
+		}
+		date > 1939.10.10
+		# We just want to always do this, this is our home coast
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = naval_dominance
+		id = western_med_control_zone
+		value = 80
+	}
+	
+	ai_strategy = {
+		type = naval_dominance
+		id = eastern_med_control_zone
+		value = 80
+	}
+}
+
+ITA_gotta_have_enough_medium_tanks = { #NHMMAP
 	allowed = {
 		original_tag = GER
 	}

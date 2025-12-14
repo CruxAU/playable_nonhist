@@ -7603,8 +7603,23 @@ country_event = { #Denmark joins the alliance
 					}
 				}
 				FROM = {
-					create_faction = DEN_north_sea_alliance
-					add_to_faction = ROOT
+					IF = {
+						limit = {
+							has_dlc = "No Compromise, No Surrender"
+						}
+						set_rule = { can_create_factions = yes }
+						create_faction_from_template = {
+							template = faction_template_DEN_nordic_cooperation_alliance
+							name = DEN_north_sea_alliance
+						}
+						add_faction_initiative = 1
+						add_to_faction = ROOT
+					}
+					ELSE = {
+						set_rule = { can_create_factions = yes }
+						create_faction = DEN_north_sea_alliance
+						add_to_faction = ROOT
+					}
 				}
 			}
 			else_if = {
@@ -7614,8 +7629,23 @@ country_event = { #Denmark joins the alliance
 					}
 				}
 				FROM = {
-					create_faction = DEN_normandy_treaty
-					add_to_faction = ROOT
+					IF = {
+						limit = {
+							has_dlc = "No Compromise, No Surrender"
+						}
+						set_rule = { can_create_factions = yes }
+						create_faction_from_template = {
+							template = faction_template_DEN_nordic_cooperation_alliance
+							name = DEN_normandy_treaty
+						}
+						add_faction_initiative = 1
+						add_to_faction = ROOT
+					}
+					ELSE = {
+						set_rule = { can_create_factions = yes }
+						create_faction = DEN_normandy_treaty
+						add_to_faction = ROOT
+					}
 				}
 			}
 			else_if = {
@@ -7625,8 +7655,23 @@ country_event = { #Denmark joins the alliance
 					}
 				}
 				FROM = {
-					create_faction = DEN_bonn_copenhagen_declarations
-					add_to_faction = ROOT
+					IF = {
+						limit = {
+							has_dlc = "No Compromise, No Surrender"
+						}
+						set_rule = { can_create_factions = yes }
+						create_faction_from_template = {
+							template = faction_template_DEN_nordic_cooperation_alliance
+							name = DEN_bonn_copenhagen_declarations
+						}
+						add_faction_initiative = 1
+						add_to_faction = ROOT
+					}
+					ELSE = {
+						set_rule = { can_create_factions = yes }
+						create_faction = DEN_bonn_copenhagen_declarations
+						add_to_faction = ROOT
+					}
 				}
 			}
 			else_if = {
@@ -7636,13 +7681,40 @@ country_event = { #Denmark joins the alliance
 					}
 				}
 				FROM = {
-					create_faction = DEN_baltic_sea_zone
-					add_to_faction = ROOT
+					IF = {
+						limit = {
+							has_dlc = "No Compromise, No Surrender"
+						}
+						set_rule = { can_create_factions = yes }
+						create_faction_from_template = {
+							template = faction_template_DEN_nordic_cooperation_alliance
+							name = DEN_baltic_sea_zone
+						}
+						add_faction_initiative = 1
+						add_to_faction = ROOT
+					}
+					ELSE = {
+						set_rule = { can_create_factions = yes }
+						create_faction = DEN_baltic_sea_zone
+						add_to_faction = ROOT
+					}
 				}
 			}
 			else = {
-				create_faction = DEN_nordic_cooperation_alliance
-				add_to_faction = FROM
+				IF = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+					set_rule = { can_create_factions = yes }
+					create_faction_from_template = faction_template_DEN_nordic_cooperation_alliance
+					add_faction_initiative = 1
+					add_to_faction = FROM
+				}
+				ELSE = {
+					set_rule = { can_create_factions = yes }
+					create_faction = DEN_nordic_cooperation_alliance
+					add_to_faction = ROOT
+				}
 			}
 		}
 	}
@@ -9678,7 +9750,11 @@ country_event = { #The Question of Neutrality
 			}
 			set_rule = { can_create_factions = yes }
 		}
-		create_faction = DEN_northern_security_pact
+		create_faction_from_template = {
+			template = faction_template_DEN_nordic_cooperation_alliance
+			name = DEN_northern_security_pact
+			icon = GFX_faction_logo_generic_8
+		}
 
 		unlock_decision_tooltip = DEN_northern_security_pact_invitation
 		if = {
@@ -9812,7 +9888,11 @@ country_event = { #Germany doesn't want to become Allies
 			}
 			set_rule = { can_create_factions = yes }
 		}
-		create_faction = DEN_northern_security_pact
+		create_faction_from_template = {
+			template = faction_template_DEN_nordic_cooperation_alliance
+			name = DEN_northern_security_pact
+			icon = GFX_faction_logo_generic_8
+		}
 
 		unlock_decision_tooltip = DEN_northern_security_pact_invitation
 		if = {

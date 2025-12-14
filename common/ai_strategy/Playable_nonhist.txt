@@ -4537,7 +4537,6 @@ PRC_war_strat = {
 			NOT = { country_exists = event_target:WTT_current_china_leader }
 			has_war = no
 		}
-	
 	}
 	
 	ai_strategy = {
@@ -4664,7 +4663,7 @@ JAP_kodoha_loves_north_against_USA = {
 
 	ai_strategy = {
 		type = area_priority
-		id = north_pacific
+		id = north_pacific_NHMMAP
 		value = 150
 	}
 }
@@ -6385,10 +6384,10 @@ MAN_dont_join_JAP_against_CHI = {
 	enable = {
 		has_completed_focus = MAN_assertiveness
 		OR = {
-			has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+			has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 			has_game_rule = {
 				rule = MAN_ai_behavior
-				option = FIVE_PEOPLES_QING
+				option = MANCHU_QING_AGGR
 			}
 		}
 		is_subject = yes
@@ -6425,7 +6424,6 @@ MAN_dont_join_JAP_against_CHI = {
 		id = JAP	
 		value = 1000
 	}	
-
 	ai_strategy = {
 		type = diplo_action_desire
 		id = JAP
@@ -6474,6 +6472,152 @@ MAN_dont_join_JAP_against_CHI = {
 		id = JAP
 		value = 1000
 		target_country = SIK
+	}
+}
+
+MAN_russia_doesnt_care_about_china = { 
+	allowed = { original_tag = MAN }
+	enable = {
+		has_completed_focus = MAN_invite_russian_exiles_to_court
+	}
+	abort = {
+		OR = {
+			has_war_with = CHI
+			has_war_with = JAP
+			has_war_with = PRC
+			has_war_with = SHX
+			has_war_with = XSM
+			has_war_with = GXC
+			has_war_with = SIK
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SOV	
+		value = 35
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = CHI	
+		value = -1000
+	}	
+	ai_strategy = {
+		type = prepare_for_war
+		id = SHX	
+		value = -500
+	}	
+	ai_strategy = {
+		type = prepare_for_war
+		id = PRC	
+		value = -500
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = XSM	
+		value = -500
+	}	
+	ai_strategy = {
+		type = prepare_for_war
+		id = SIK	
+		value = -500
+	}	
+}
+
+MAN_russia_likes_to_rush_russia_but_you_better_rush_since_russia_will_lose_their_rushing_spirits = { 
+	allowed = { original_tag = MAN }
+	enable = {
+		has_completed_focus = MAN_invite_russian_exiles_to_court
+		has_war_with = SOV
+		has_idea = MAN_NHMMAP_anti_bolshevik_fervor
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			is_core_of = ROOT
+			NOT = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+		ratio = 0.2
+
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+		manual_attack = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SOV
+		area = asia
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 50
+	}	
+}
+
+MAN_russia_likes_to_rush_russia_but_you_better_rush_since_russia_will_lose_their_rushing_spirits = { 
+	allowed = { original_tag = MAN }
+	enable = {
+		has_completed_focus = MAN_invite_russian_exiles_to_court
+		has_war_with = SOV
+		has_idea = MAN_NHMMAP_siberian_planned_supply_routes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = SOV
+		area = asia
+		value = 100
+	}
+}
+
+MAN_russia_support_opposition_with_arms = {
+
+	allowed = { 
+		OR = {
+			original_tag = FIN
+			original_tag = GER
+			original_tag = ENG
+		}
+	}
+	enable = {
+		has_idea = MAN_NHMMAP_russian_volunteers
+		OR = {
+			AND = {
+				original_tag = FIN
+				has_global_flag = MAN_fin_will_get_claims
+			}
+			AND = {
+				original_tag = GER
+				has_global_flag = MAN_ukr_blr_decision_GER_will_get_them
+			}
+			AND = {
+				original_tag = ENG
+				has_global_flag = MAN_eng_will_get_armenia
+			}
+			has_country_flag = SOV_supporting_trotsky_flag
+		}
+		NOT = {
+			original_tag = SOV
+		}
+	}
+
+	abort = {
+		has_global_flag = SOV_soviet_civil_war_over
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SOV
+		value = 300
 	}
 }
 

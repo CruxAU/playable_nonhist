@@ -87,17 +87,17 @@ German_historical = {
 		GER_develop_modern_maneuver_warfare		#35
 		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
 
-		#1937
+	#1937
 		GER_adopt_new_panzer_doctrine			#35 	panzerwaffe was formed in 36
 		GER_coal_liquefaction					#35
-		#INNER CIRCLE 2, GER_ascension_of_todt	#14		(whenever) 
+		#INNER CIRCLE 2 GER_ascension_of_todt	#14		(whenever)
 		GER_establish_buna_werke				#35 	(works in 36 or 37) #MOVE DOWN TO MID-LATE 38+
 		GER_fortify_the_vaterland				#35 	started in 36, works almost whenever
 		GER_expanding_the_luftwaffe				#35
 		GER_establish_the_reichswerke			#35 	JUL 37
 		GER_aeronautical_research_institute		#35		in 36
 		GER_concentrated_armament_program		#35
-		#INNER CIRCLE 3, GER_ascension_of_goebbels #14
+		#INNER CIRCLE 3 GER_ascension_of_goebbels				#14
 		GER_panzer_troops_school				#35 	OCT 37 (works whenever)
 		GER_legion_condor						#35		JUL 36-39
 

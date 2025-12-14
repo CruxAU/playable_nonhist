@@ -578,6 +578,7 @@
 						state = 286
 						state = 671
 						state = 670
+						state = 1017
 					}
 					OWNER = { is_owned_or_subject_trigger = yes }	
 					NOT = {
@@ -732,7 +733,7 @@
 			custom_effect_tooltip = FRA_colonial_industry_effect_tt
 			every_state = {
 				limit = {
-					is_owned_or_subject_trigger = yes
+					is_owned_or_subject_trigger = yes 
 					has_state_flag = FRA_colonial_industry_target
 				}
 				add_building_construction = {
@@ -1586,7 +1587,7 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 26
 		y = 0
-		
+
 		offset = {
 			x = -3
 			y = 0
@@ -1727,7 +1728,7 @@
 			set_temp_variable = { communism_temp = party_popularity@communism }
 			multiply_temp_variable = { communism_temp = 0.25 }
 			add_stability = communism_temp
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -2630,7 +2631,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = { FRA_revolutionary_zeal}
+			add_ideas = FRA_revolutionary_zeal
 		}
 	}
 
@@ -2664,19 +2665,32 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+
 			promote_character = FRA_rene_nicod
+
 			add_trait = {
 				character = FRA_rene_nicod
 				ideology = marxism
 				trait = proletariat_internationalist
 			}
+
 			set_party_name = {
 				ideology = communism
 				long_name = FRA_union_populaire_long
 				name = FRA_union_populaire
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			set_rule = { can_create_factions = yes }
-			create_faction = FRA_communist_faction
+			create_faction_from_template = {
+				template = faction_template_POR_popular_front_bloc
+				name = FRA_communist_faction
+				icon = GFX_faction_logo_generic_14
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			create_operative_leader = {
 				name = "Jacques Duclos"
 				GFX = GFX_portrait_jacques_duclos
@@ -2685,6 +2699,7 @@
 				available_to_spy_master = yes
 				nationalities = { FRA }
 			}
+
 		}
 	}
 
@@ -3034,6 +3049,7 @@
 
 		}
 	}
+
 	focus = {
 		id = FRA_reform_the_labour_laws
 		icon = GFX_goal_generic_production
@@ -4047,7 +4063,8 @@
 					is_in_faction = no
 				}
 				set_rule = { can_create_factions = yes }
-				create_faction = FRA_little_entente
+				create_faction_from_template = faction_template_the_little_entente
+
 				CZE = { custom_effect_tooltip = invite_to_faction_tt }
 				hidden_effect = {
 					CZE = { country_event = generic.5 }
@@ -5436,7 +5453,7 @@
 
 			unlock_decision_tooltip = { decision = FRA_rally_the_leagues show_effect_tooltip = yes }
 			unlock_decision_tooltip = { decision = FRA_unleash_la_cagoule show_effect_tooltip = yes }
-			
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -5847,7 +5864,10 @@
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = FRA_latin_entente
+				create_faction_from_template = {
+					template = faction_template_european_dominance
+					name = FRA_latin_entente
+				}
 			}
 			if = {
 				limit = {
@@ -5870,9 +5890,9 @@
 				ideology = fascism
 				long_name = FRA_psf_party_long
 				name = FRA_psf_party
-			}
+			}	
 		}
-
+		
 	}
 
 	focus = {
@@ -5885,7 +5905,7 @@
 			focus = FRA_latin_entente
 		}
 		relative_position_id = FRA_latin_entente
-		
+
 		cost = 5
 
 		ai_will_do = {
@@ -5972,7 +5992,7 @@
 			focus = FRA_reach_out_to_spain
 		}
 		relative_position_id = FRA_reach_out_to_spain
-		
+
 		cost = 5
 
 		ai_will_do = {
@@ -7022,7 +7042,7 @@
 					id = lar_dominate_the_middle_east.1
 					hours = 6
 					random_hours = 12
-				}
+				}	
 			}
 		}
 	}
@@ -7837,7 +7857,11 @@
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = FRA_orleanist_faction
+				create_faction_from_template = {
+					template = faction_template_anti_fascist
+					name = FRA_orleanist_faction
+					icon = GFX_faction_logo_generic_12
+				}
 			}
 			
 			if = {
@@ -8179,9 +8203,8 @@
 				}
 			}
 			else = {
-				any_state = {
-					is_core_of = SPR
-					is_controlled_by = ROOT
+				any_controlled_state = {
+					is_core_of = SPB
 				}
 			}
 			is_subject = no
@@ -8195,7 +8218,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {
+		completion_reward = { #actually works now
 			add_stability = -0.1
 			set_cosmetic_tag = FRANCO_SPAIN
 			if = {
@@ -8283,13 +8306,17 @@
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			if = {
+			IF = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = FRA_legitimist_faction
+				create_faction_from_template = {
+					template = faction_template_anti_communist
+					name = FRA_legitimist_faction
+					icon = GFX_faction_logo_generic_5 
+				}
 			}
-			if = {
+			IF = {
 				limit = {
 					SPB = { is_in_faction = no }
 				}
@@ -8365,6 +8392,7 @@
 
 		available = {
 			is_subject = no
+			#NHMMAP leaving this out, since there are monarchist factions that invite napoleonic france (e.g. poland)
 		}
 		
 		bypass = {
@@ -8399,7 +8427,10 @@
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = FRA_continental_system
+				create_faction_from_template = {
+					template = faction_template_european_dominance_monarchist
+					name = FRA_continental_system
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
@@ -8508,9 +8539,8 @@
 				HOL = {
 					is_subject_of = ROOT
 				}
-				any_state = {
+				any_controlled_state = {
 					is_core_of = HOL
-					is_controlled_by = ROOT
 				}
 			}
 		}
@@ -8589,9 +8619,8 @@
 		available = {
 			is_subject = no
 			is_faction_leader = yes
-			any_state = { 
+			any_controlled_state = { 
 				is_core_of = GER
-				is_controlled_by = ROOT
 			}
 			GER = {
 				OR = {
@@ -8610,7 +8639,7 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {
+		completion_reward = { #NHMMAP made this all work way better
 			IF = {
 				limit = {
 					is_in_faction = no
@@ -9563,7 +9592,7 @@
 				name = FRA_improved_screen_ships
 				bonus = 2.0
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}

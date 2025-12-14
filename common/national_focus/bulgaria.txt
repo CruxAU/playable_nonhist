@@ -651,7 +651,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
+			
 			IF = {
 				limit = {
 					NOT = {
@@ -2481,7 +2481,6 @@ focus_tree = {
 				name = BUL_an_aegean_sea_fleet
 			    bonus = 0.5
 			    uses = 2
-			    category = cl_tech
 			    category = ca_tech
 			}
 
@@ -4516,8 +4515,22 @@ focus_tree = {
 				}
 				remove_ideas = BUL_vasil_kolarov
 			}
+			
 			add_stability = 0.1
-			create_faction = BUL_balkan_federation_of_socialist_republics		
+
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_BUL_balkan_federation_of_socialist_republics
+				add_faction_initiative = 1
+			}
+			ELSE = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_BUL_balkan_federation_of_socialist_republics
+			}
+
 			YUG = {
 				hidden_effect = {
 					country_event = { id = generic.5 hours = 4 random_hours = 4 }
@@ -5485,7 +5498,18 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			add_political_power = 50
-			create_faction = BUL_balkan_federation_democratic
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_BUL_balkan_federation_democratic
+				add_faction_initiative = 1
+			}
+			ELSE = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_BUL_balkan_federation_democratic
+			}
 			GRE = {
 				hidden_effect = {
 					country_event = { id = generic.5 hours = 4 random_hours = 4 }
@@ -7617,7 +7641,11 @@ focus_tree = {
 			set_rule = {
 				can_join_factions = no
 			}
-			create_faction = BUL_greater_bulgarian_federation
+			create_faction_from_template = {
+				template = faction_template_balkan_pact
+				name = BUL_greater_bulgarian_federation
+				icon = GFX_faction_logo_generic_5
+			}
 			add_timed_idea = {
 				idea = BUL_the_fate_of_the_balkans
 				days = 365
@@ -9108,7 +9136,7 @@ focus_tree = {
 		cost = 20
 
 		available = {
-			any_state = {
+			any_controlled_state = {
 				has_state_flag = BUL_historical_bulgarian_claim_flag
 				is_fully_controlled_by = BUL
 			}

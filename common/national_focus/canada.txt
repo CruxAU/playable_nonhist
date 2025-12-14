@@ -961,7 +961,7 @@ focus_tree = {
 		id = CAN_victory_aircraft_limited
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = CAN_department_of_munitions_and_supply }
-		x = -2
+		x = -3
 		y = 3
 		relative_position_id = CAN_defence_of_canada_regulations
 
@@ -1557,7 +1557,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = CAN_john_inglis_and_company }
 		prerequisite = { focus = CAN_victory_aircraft_limited }
-		x = -2
+		x = -3
 		y = 5
 		relative_position_id = CAN_defence_of_canada_regulations
 
@@ -1595,7 +1595,6 @@ focus_tree = {
 	focus = {
 		id = CAN_defense_research_grants
 		icon = GFX_focus_research
-		prerequisite = { focus = CAN_john_inglis_and_company }
 		prerequisite = { focus = CAN_if_day }
 		x = -3
 		y = 6
@@ -3147,15 +3146,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		USA = {
+			USA = {
+				add_to_tech_sharing_group = us_research
+			}
 			add_to_tech_sharing_group = us_research
-		}
-		add_to_tech_sharing_group = us_research
-		custom_effect_tooltip = generic_skip_one_line_tt
-		add_ideas = generic_secret_weapons_ns
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = generic_secret_weapons_ns
 		}
 	}
-	
+
 	focus = {
 		id = CAN_dominion_rifle_association
 		icon = GFX_focus_CAN_rifle_association
@@ -5233,7 +5232,7 @@ focus_tree = {
 				bonus = 0.5
 				ahead_reduction = 2
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 			IF = {
 				limit = {
@@ -5333,16 +5332,23 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			navy_experience = 25			
+			navy_experience = 25
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 0.15
+			}
+			
+			add_mastery_bonus = {
+				name = CAN_escort_fleet
+				bonus = 0.1
+				days = 180
+				sub_doctrine = convoy_escort
 			}
 			add_doctrine_cost_reduction = {
 				name = CAN_escort_fleet
 				cost_reduction = 0.25
 				uses = 2
-				category = convoy_defense_tree
+				category = naval_doctrine
 			}
 		}
 	}
@@ -5381,11 +5387,18 @@ focus_tree = {
 				specialization = specialization_naval
 				value = 0.15
 			}
+			add_mastery_bonus = {
+				name = CAN_fleet_in_being
+				bonus = 0.1
+				days = 180
+				grand_doctrine = new_fleet_in_being
+				track = capital_ships
+			}
 			add_doctrine_cost_reduction = {
 				name = CAN_fleet_in_being
 				cost_reduction = 0.25
 				uses = 2
-				category = cat_fleet_in_being
+				category = naval_doctrine
 			}			
 		}
 	}

@@ -1,0 +1,11 @@
+leader_traits = {
+	magnanimous_general = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		political_power_factor = -0.1
+		improve_relations_maintain_cost_factor = -0.1
+		compliance_gain = 0.025
+		enemy_justify_war_goal_time = 0.25
+	}
+}

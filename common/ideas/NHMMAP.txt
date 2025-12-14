@@ -807,5 +807,218 @@ ideas = {
 				send_volunteers_tension = -0.8
 			}
 		}
+		NHMMAP_modern_western_economic_system = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan_civilian
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				conscription_factor = -0.5	
+			}
+		}
+		NHMMAP_MAN_disgruntled_japanese_generals = {
+
+			picture = generic_japanese_conflict
+
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.50
+				defense_bonus_against = -0.25
+			}
+
+			modifier = {
+				war_support_factor = 0.1
+			}
+		}
+		MAN_moya_tvoya = {
+			picture = generic_constitutional_guarantees
+
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				conscription_factor = 0.2
+				political_power_gain = 0.1
+			}
+		}
+		MAN_NHMMAP_siberian_planned_supply_routes = {
+			picture = SOV_the_road_of_life
+
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				attrition = -0.075
+				supply_factor = 0.1
+				supply_node_range = 0.2
+				naval_attrition = -0.05
+			}
+		}
+		MAN_NHMMAP_anti_bolshevik_fervor = {
+			picture = ARG_anti_soviet
+
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.15
+			}
+		}
+
+		MAN_NHMMAP_manchus_sidelined = {
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.15
+				stability_factor = -0.3
+				war_support_factor = 0.1
+			}
+		}
+		MAN_NHMMAP_tokkeitai = {
+			picture = DEN_occupation_laws
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				local_resources_factor = 0.1
+				resistance_target = -0.1
+				resistance_damage_to_garrison = -0.1
+				resistance_garrison_penetration_chance = -0.1
+			}
+		}
+		MAN_NHMMAP_invasion_supply_routes = {
+			picture = generic_naval_invasion
+
+			allowed = {
+				original_tag = MAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				amphibious_invasion = 0.1
+				amphibious_invasion_defence = 0.2
+				invasion_preparation = -0.5
+			}
+		}
+		MAN_NHMMAP_army_morale_boost = {
+
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				army_speed_factor = 0.1
+				war_support_factor = 0.1
+				army_org_regain = 0.05
+				land_reinforce_rate = 0.02
+				army_morale_factor = 0.10
+			}
+		}
+		MAN_NHMMAP_limited_international_recognition = {
+			picture = gre_schachtplan
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			on_add = {
+				set_rule = { 
+					can_create_factions = no
+					can_join_factions = no
+					can_send_volunteers = no
+				}
+			}
+			on_remove = {
+				set_rule = { 
+					can_create_factions = yes
+					can_join_factions = yes
+					can_send_volunteers = yes
+				}
+			}
+			modifier = {
+				custom_modifier_tooltip = SOV_shocked_by_surprise_attack_cant_join_factions_tt
+			}
+		}
+		MAN_NHMMAP_russian_volunteers = { 
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_volunteer_expedition_bonus
+			on_add = {
+				set_rule = { 
+					can_send_volunteers = yes
+				}
+			}
+			modifier = {
+				send_volunteer_divisions_required = -0.1
+				air_volunteer_cap = 3
+				send_volunteer_size = 4
+				send_volunteers_tension = -0.4
+			}
+		}
 	}
 }

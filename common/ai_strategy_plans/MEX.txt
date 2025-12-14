@@ -459,12 +459,14 @@ mexico_social_catholicism = {
 		MEX_focus_rewrite_the_constitution
 		MEX_focus_knights_of_columbus # Democratic drift
 		MEX_focus_catholic_politics # Go Democratic as soon as possible
-		MEX_focus_church_schools # 3rd research slot
+		
+
+		MEX_focus_ban_political_militias # Lower Caudillo Tensions
 		
 		MEX_focus_purge_the_bureaucracy
 		MEX_focus_arrest_general_cedillo # Prevent rebellion
+		MEX_focus_church_schools # 3rd research slot
 		
-		MEX_focus_ban_political_militias # Lower Caudillo Tensions
 		MEX_focus_revolutionary_women
 		MEX_focus_womens_suffrage # Increase Church Power, Democratic drift
 		

@@ -1136,7 +1136,7 @@
 					}
 					set_state_flag = AST_volunteer_air_observers_corps_radar3
 				}
-			}
+			} #NHMMAP INTENTIONAL:
 			else = {
 				complete_special_project = {
 					project = sp:sp_air_radar
@@ -1533,9 +1533,8 @@
 		}
 
 		available = {
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 		
@@ -1605,9 +1604,8 @@
 		}
 
 		available = {
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 		
@@ -1692,12 +1690,19 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
+			
+			add_mastery_bonus = {
+				name = AST_protect_overseas_commerce
+				bonus = 0.1
+				days = 120
+				track = screens
+			}
+
 			add_doctrine_cost_reduction = {
 				name = AST_protect_overseas_commerce
 				cost_reduction = 0.25
 				uses = 2
-				category = fleet_in_being_tree
-				category = convoy_defense_tree
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1731,11 +1736,19 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
+			
+			add_mastery_bonus = {
+				name = AST_fly_the_jolly_roger
+				bonus = 0.1
+				days = 120
+				track = submarines
+			}
+
 			add_doctrine_cost_reduction = {
 				name = AST_fly_the_jolly_roger
 				cost_reduction = 0.25
-				uses = 2
-				category = submarine_doctrine
+				uses = 1
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1881,7 +1894,6 @@
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
-				category = cl_tech
 				category = ca_tech
 			}
 		}
@@ -2787,7 +2799,7 @@
 					        logistics_company = { x = 0 y = 2 }
 						}
 					}
-				}
+				} #NHMMAP INTENTIONAL:
 				else = {
 					division_template = {
 						name = "Rats of Tobruk"
@@ -3333,7 +3345,10 @@
 
 		completion_reward = {
 			ENG = {
-				country_event = { id = tfv_australia.1 }
+				country_event = { 
+					id = tfv_australia.1 
+					hours = 6
+				}
 			}
 		}
 	}
@@ -3872,7 +3887,7 @@
 			factor = 1
 		}
 
-		available = {
+		available = { #NHMMAP
 			OR = {
 				if = {
 					limit = { NOT = { ENG = {has_government = fascism} } }
@@ -4048,7 +4063,11 @@
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = south_west_pacific_initiative
+			create_faction_from_template = {
+				template = faction_template_defensive_democratic
+				name = south_west_pacific_initiative
+				icon = GFX_faction_logo_generic_12
+			}
 			if = {
 				limit = {
 					has_completed_focus = AST_protect_the_dutch_colonies
@@ -4065,6 +4084,7 @@
 						is_puppet = no
 						has_government = ROOT
 						is_in_faction = no
+						#NHMMAP
 					}
 				}
 				USA = {
@@ -4255,7 +4275,7 @@
 
 		ai_will_do = {
 			factor = 0.5
-			modifier = {
+			modifier = { #NHMMAP
 				fascism > 0.3
 				factor = 20
 			}
@@ -4536,7 +4556,7 @@
 		available = {
 			OR = {
 				is_subject = no
-				AND = {
+				AND = { #NHMMAP
 					if = {
 						limit = { not = { ENG = {has_government = fascism } } }
 						has_autonomy_state = autonomy_dominion
@@ -5016,7 +5036,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 8
+			factor = 8 #NHMMAP
 		}
 
 		available = {

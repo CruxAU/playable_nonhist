@@ -329,18 +329,18 @@ country_event = {
 		days = 30
 	}
 	
-	immediate = { set_country_flag = chamberlain_died }
+	immediate = { 
+		set_country_flag = chamberlain_died 
+		hidden_effect = { set_country_flag = winston_achievement }
+	}
 
 	option = {
-		ai_chance = { 
-			factor = 4 
-		}
 		name = britain.10.a
 
 		trigger = { #MM: This option should not appear if Churchill is not in the country - GoE content if he is transferred to India via event chain triggered by focus RAJ_the_jewel_becomes_the_crown
-		has_character = ENG_winston_churchill
-	}
-	
+			has_character = ENG_winston_churchill
+		}
+
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Winston Churchill"
@@ -353,6 +353,7 @@ country_event = {
 			}
 		}
 	}
+
 	option = {
 		ai_chance = { 
 			factor = 2 

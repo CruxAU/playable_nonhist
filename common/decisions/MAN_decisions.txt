@@ -11,10 +11,22 @@ MAN_banditry_category = {
 
 	MAN_pacify_bandits_in_the_northern_countryside = {
 
-		icon = generic_oppression
+		icon = GFX_decision_oppression
 		
 		available = {
-			has_completed_focus = MAN_pacify_the_countryside
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_pacify_the_countryside_tt
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
 			has_country_flag = MAN_northern_bandits
 			divisions_in_state = {
 				state = 714	
@@ -23,9 +35,9 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 714
-		} 
+		highlight_state_targets = {
+					state = 714
+				} 
 }
 
 		cost = 0
@@ -39,7 +51,7 @@ MAN_banditry_category = {
 					size > 5
 				}
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0
 				OR = {
 					has_country_flag = MAN_AI_RANDOM_MANCHU_QING
@@ -47,10 +59,20 @@ MAN_banditry_category = {
 						rule = MAN_ai_behavior
 						option = MANCHU_QING
 					}
-					has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+					has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 					has_game_rule = {
 						rule = MAN_ai_behavior
-						option = FIVE_PEOPLES_QING
+						option = MANCHU_QING_AGGR
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES_ALT
 					}
 				}
 			}
@@ -72,10 +94,22 @@ MAN_banditry_category = {
 
 	MAN_hunt_down_northern_bandits = {
 
-		icon = generic_oppression
+		icon = GFX_decision_generic_prepare_civil_war
 
 		available = {
-			has_completed_focus = MAN_pacify_the_countryside
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_pacify_the_countryside_tt
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
 			has_equipment = { infantry_equipment > @MAN_HUNT_BANDITS_EQUIPMENT_COST_TRIGGER }
 			has_country_flag = MAN_northern_bandits
 		}
@@ -103,7 +137,7 @@ MAN_banditry_category = {
 					size < 6
 				}
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0
 				OR = {
 					has_country_flag = MAN_AI_RANDOM_MANCHU_QING
@@ -111,10 +145,20 @@ MAN_banditry_category = {
 						rule = MAN_ai_behavior
 						option = MANCHU_QING
 					}
-					has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+					has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 					has_game_rule = {
 						rule = MAN_ai_behavior
-						option = FIVE_PEOPLES_QING
+						option = MANCHU_QING_AGGR
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES_ALT
 					}
 				}
 			}
@@ -198,10 +242,22 @@ MAN_banditry_category = {
 
 	MAN_pacify_bandits_in_the_eastern_countryside = {
 
-		icon = generic_oppression
+		icon = GFX_decision_oppression
 		
 		available = {
-			has_completed_focus = MAN_pacify_the_countryside
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_pacify_the_countryside_tt
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
 			has_country_flag = MAN_eastern_bandits
 			divisions_in_state = {
 				state = 717
@@ -226,7 +282,7 @@ MAN_banditry_category = {
 					size > 5
 				}
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0
 				OR = {
 					has_country_flag = MAN_AI_RANDOM_MANCHU_QING
@@ -234,10 +290,20 @@ MAN_banditry_category = {
 						rule = MAN_ai_behavior
 						option = MANCHU_QING
 					}
-					has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+					has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 					has_game_rule = {
 						rule = MAN_ai_behavior
-						option = FIVE_PEOPLES_QING
+						option = MANCHU_QING_AGGR
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES_ALT
 					}
 				}
 			}
@@ -258,10 +324,22 @@ MAN_banditry_category = {
 
 	MAN_hunt_down_eastern_bandits = {
 
-		icon = generic_oppression
+		icon = GFX_decision_generic_prepare_civil_war
 
 		available = {
-			has_completed_focus = MAN_pacify_the_countryside
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_pacify_the_countryside_tt
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
 			has_equipment = { infantry_equipment > @MAN_HUNT_BANDITS_EQUIPMENT_COST_TRIGGER }
 			has_country_flag = MAN_eastern_bandits
 		}
@@ -299,10 +377,20 @@ MAN_banditry_category = {
 						rule = MAN_ai_behavior
 						option = MANCHU_QING
 					}
-					has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+					has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 					has_game_rule = {
 						rule = MAN_ai_behavior
-						option = FIVE_PEOPLES_QING
+						option = MANCHU_QING_AGGR
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES_ALT
 					}
 				}
 			}
@@ -386,10 +474,22 @@ MAN_banditry_category = {
 	
 	MAN_pacify_bandits_in_the_western_countryside = {
 
-		icon = generic_oppression
+		icon = GFX_decision_oppression
 		
 		available = {
-			has_completed_focus = MAN_pacify_the_countryside
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_pacify_the_countryside_tt
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
 			has_country_flag = MAN_western_bandits
 			divisions_in_state = {
 				state = 610	
@@ -398,10 +498,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 610
-		} 
-}
+ 			highlight_state_targets = {
+				state = 610
+			} 
+		}
 
 		cost = 0
 
@@ -422,10 +522,20 @@ MAN_banditry_category = {
 						rule = MAN_ai_behavior
 						option = MANCHU_QING
 					}
-					has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+					has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 					has_game_rule = {
 						rule = MAN_ai_behavior
-						option = FIVE_PEOPLES_QING
+						option = MANCHU_QING_AGGR
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES_ALT
 					}
 				}
 			}
@@ -446,10 +556,22 @@ MAN_banditry_category = {
 
 	MAN_hunt_down_western_bandits = {
 
-		icon = generic_oppression
+		icon = GFX_decision_generic_prepare_civil_war
 
 		available = {
-			has_completed_focus = MAN_pacify_the_countryside
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_pacify_the_countryside_tt
+				OR = {
+					has_completed_focus = MAN_pacify_the_countryside
+					has_completed_focus = MAN_tsr_pacify_the_countryside
+				}
+			}
 			has_equipment = { infantry_equipment > @MAN_HUNT_BANDITS_EQUIPMENT_COST_TRIGGER }
 			has_country_flag = MAN_western_bandits
 		}
@@ -487,10 +609,20 @@ MAN_banditry_category = {
 						rule = MAN_ai_behavior
 						option = MANCHU_QING
 					}
-					has_country_flag = MAN_AI_RANDOM_FIVE_PEOPLES_QING
+					has_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR
 					has_game_rule = {
 						rule = MAN_ai_behavior
-						option = FIVE_PEOPLES_QING
+						option = MANCHU_QING_AGGR
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES
+					}
+					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = RUSSIAN_EXILES_ALT
 					}
 				}
 			}
@@ -568,7 +700,7 @@ MAN_banditry_category = {
 
 	MAN_bandit_raids = {
 
-		icon = generic_civil_support
+		icon = GFX_decision_generic_scorched_earth
 
 		available = {
 			NOT = { has_idea = MAN_banditry }
@@ -612,13 +744,27 @@ MAN_banditry_category = {
 
 		available = {
 			has_country_flag = MAN_northern_bandits
-			has_completed_focus = MAN_bolster_nationalism
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_bolster_nationalism_tt
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
 		}
 		visible = {
 			has_country_flag = MAN_northern_bandits
+			NOT = { has_completed_focus = MAN_tsr_question_the_emperors_authority }
+			NOT = { has_completed_focus = MAN_tsr_obedience }
 		}
 		ai_will_do = {
-			base = 200
+			base = 200 #NHMMAP
 		}
 		cost = 50
 		complete_effect = {
@@ -672,13 +818,27 @@ MAN_banditry_category = {
 
 		available = {
 			has_country_flag = MAN_western_bandits
-			has_completed_focus = MAN_bolster_nationalism
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_bolster_nationalism_tt
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
 		}
 		visible = {
 			has_country_flag = MAN_western_bandits
+			NOT = { has_completed_focus = MAN_tsr_question_the_emperors_authority }
+			NOT = { has_completed_focus = MAN_tsr_obedience }
 		}
 		ai_will_do = {
-			base = 200
+			base = 200 #NHMMAP
 		}
 		cost = 50
 		complete_effect = {
@@ -732,13 +892,27 @@ MAN_banditry_category = {
 
 		available = {
 			has_country_flag = MAN_eastern_bandits
-			has_completed_focus = MAN_bolster_nationalism
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_bolster_nationalism_tt
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
 		}
 		visible = {
 			has_country_flag = MAN_eastern_bandits
+			NOT = { has_completed_focus = MAN_tsr_question_the_emperors_authority }
+			NOT = { has_completed_focus = MAN_tsr_obedience }
 		}
 		ai_will_do = {
-			base = 200
+			base = 200  #NHMMAP
 		}
 		cost = 50
 		complete_effect = {
@@ -793,10 +967,24 @@ MAN_banditry_category = {
 		available = {
 		}
 		visible = {
-			has_completed_focus = MAN_bolster_nationalism
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_bolster_nationalism_tt
+				OR = {
+					has_completed_focus = MAN_bolster_nationalism
+					has_completed_focus = MAN_tsr_bolster_nationalism
+				}
+			}
+			NOT = { has_completed_focus = MAN_tsr_question_the_emperors_authority }
+			NOT = { has_completed_focus = MAN_tsr_obedience }
 		}
 		ai_will_do = {
-			base = 200
+			base = 200 #NHMMAP
 		}
 		cost = 50
 		fire_only_once = yes
@@ -850,8 +1038,10 @@ MAN_banditry_category = {
 		}
 		visible = {
 			has_country_flag = MAN_bandits_recruited
+			NOT = { has_completed_focus = MAN_tsr_question_the_emperors_authority }
+			NOT = { has_completed_focus = MAN_tsr_obedience }
 		}
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 0
 			modifier = {
 				AND = {
@@ -869,6 +1059,292 @@ MAN_banditry_category = {
 			clr_country_flag = MAN_bandits_recruited
 		}
 	}
+
+	MAN_recruit_bandits_2_north = {
+		icon = generic_civil_support
+
+		available = {
+			has_country_flag = MAN_northern_bandits
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		visible = {
+			has_dlc = "No Compromise, No Surrender"
+			has_country_flag = MAN_northern_bandits
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 50
+		complete_effect = {
+			if = {
+				limit = {
+					not = {
+						has_country_flag = MAN_bandits_recruited
+					}
+				}
+				division_template = {
+					name = "Rebel Forces"
+					priority = 1
+					is_locked = yes
+					division_names_group = MAN_CAV_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				set_country_flag = MAN_bandits_recruited
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 714 }
+				create_unit = {
+					division = "name = \"1. Heilungkiang National Salvation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"2. Heilungkiang National Salvation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"3. Heilungkiang National Salvation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+			}
+			clr_country_flag = MAN_northern_bandits
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAN_eastern_bandits }
+					NOT = { has_country_flag = MAN_western_bandits }
+				}
+				remove_ideas = MAN_banditry
+			}
+		}
+	}
+	MAN_recruit_bandits_2_west = {
+		icon = generic_civil_support
+
+		available = {
+			has_country_flag = MAN_western_bandits
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		visible = {
+			has_dlc = "No Compromise, No Surrender"
+			has_country_flag = MAN_western_bandits
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 50
+		complete_effect = {
+			if = {
+				limit = {
+					not = {
+						has_country_flag = MAN_bandits_recruited
+					}
+				}
+				division_template = {
+					name = "Rebel Forces"
+					priority = 1
+					is_locked = yes
+					division_names_group = MAN_CAV_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				set_country_flag = MAN_bandits_recruited
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 610 }
+				create_unit = {
+					division = "name = \"1. Jehol Counter-Japanese National Salvation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"2. Jehol Counter-Japanese National Salvation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"3. Jehol Counter-Japanese National Salvation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+			}
+			clr_country_flag = MAN_western_bandits
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAN_eastern_bandits }
+					NOT = { has_country_flag = MAN_northern_bandits }
+				}
+				remove_ideas = MAN_banditry
+			}
+		}
+	}
+	MAN_recruit_bandits_2_east = {
+		icon = generic_civil_support
+
+		available = {
+			has_country_flag = MAN_eastern_bandits
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		visible = {
+			has_dlc = "No Compromise, No Surrender"
+			has_country_flag = MAN_eastern_bandits
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 50
+		complete_effect = {
+			if = {
+				limit = {
+					not = {
+						has_country_flag = MAN_bandits_recruited
+					}
+				}
+				division_template = {
+					name = "Rebel Forces"
+					priority = 1
+					is_locked = yes
+					division_names_group = MAN_CAV_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				set_country_flag = MAN_bandits_recruited
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 717 }
+				create_unit = {
+					division = "name = \"1. Sungkiang National Liberation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"2. Sungkiang National Liberation Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+			}
+			clr_country_flag = MAN_eastern_bandits
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAN_western_bandits }
+					NOT = { has_country_flag = MAN_northern_bandits }
+				}
+				remove_ideas = MAN_banditry
+			}
+		}
+	}
+	MAN_recruit_bandits_2_generic = {
+		icon = generic_civil_support
+
+		available = {
+		}
+		visible = {
+			has_dlc = "No Compromise, No Surrender"
+			has_completed_focus = MAN_tsr_bandit_recruitment
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					not = {
+						has_country_flag = MAN_bandits_recruited
+					}
+				}
+				division_template = {
+					name = "Rebel Forces"
+					priority = 1
+					is_locked = yes
+					division_names_group = MAN_CAV_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				set_country_flag = MAN_bandits_recruited
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 328 }
+				create_unit = {
+					division = "name = \"1. Kirin Self-Defense Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"2. Kirin Self-Defense Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"3. Kirin Self-Defense Army\" division_template = \"Rebel Forces\" start_experience_factor = 0.5" 
+					owner = MAN
+				}
+			}
+		}
+	}
+
+	MAN_release_bandits_2 = {
+		icon = generic_civil_support
+
+		available = {
+			
+		}
+		visible = {
+			has_country_flag = MAN_bandits_recruited
+			has_completed_focus = MAN_tsr_question_the_emperors_authority
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					not = {
+						has_completed_focus = MAN_tsr_a_new_dawn_over_manchuria
+					}
+					has_war = yes	
+				}
+				factor = 0
+			}
+		}
+		cost = 10
+		
+		complete_effect = {
+			add_manpower = 20000
+			delete_unit_template_and_units = { division_template = "Rebel Forces" }
+			clr_country_flag = MAN_bandits_recruited
+		}
+	}
 }
 
 MAN_war_preparations = {
@@ -877,13 +1353,16 @@ MAN_war_preparations = {
 			has_war = yes
 		}
 		visible = {
+		OR = {
 			has_completed_focus = MAN_five_people_armies
+			has_completed_focus = MAN_tsr_five_people_armies
+		}
 			not = {
 				has_country_flag = MAN_manchu_banner_raised
 			}
 		}
 		cost = 25
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 50
 			modifier = {
 				factor = 5
@@ -969,17 +1448,46 @@ MAN_war_preparations = {
 	}
 	MAN_fund_underground_gun_shops = {
 		available = {
-			has_completed_focus = MAN_local_arms_procurement
-			has_completed_focus = MAN_purge_the_general_affairs_council
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_local_arms_procurement
+					has_completed_focus = MAN_tsr_local_arms_procurement
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_local_arms_procurement_tt
+				OR = {
+					has_completed_focus = MAN_local_arms_procurement
+					has_completed_focus = MAN_tsr_local_arms_procurement
+				}
+			}
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_purge_the_general_affairs_council
+					has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_purge_the_general_affairs_council_tt
+				OR = {
+					has_completed_focus = MAN_purge_the_general_affairs_council
+					has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+				}
+			}
 			has_war_with = JAP
 		}
 		visible = {
 			OR = {
 				has_completed_focus = MAN_local_arms_procurement
-				has_completed_focus = MAN_purge_the_general_affairs_council		
+				has_completed_focus = MAN_purge_the_general_affairs_council	
+				has_completed_focus = MAN_tsr_local_arms_procurement
+				has_completed_focus = MAN_tsr_purge_the_general_affairs_council		
 			}
 			NOT = {
-				has_completed_focus = MAN_five_equal_peoples
+				OR = {
+					has_completed_focus = MAN_five_equal_peoples
+					has_completed_focus = MAN_tsr_five_equal_peoples
+				}
 			}
 			NOT = {
 				has_idea = MAN_underground_gun_shops
@@ -1003,7 +1511,7 @@ MAN_war_preparations = {
 			has_idea = MAN_underground_gun_shops
 		}
 		cost = 0
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 0
 			modifier = {
 				AND = {
@@ -1023,7 +1531,10 @@ MAN_war_preparations = {
 			
 		}
 		visible = {
-			has_completed_focus = MAN_request_control_of_the_railways
+			OR = {
+				has_completed_focus = MAN_request_control_of_the_railways
+				has_completed_focus = MAN_tsr_request_control_of_the_railways
+			}
 			not = {
 				has_country_flag =  { 
 					flag = MAN_machine_tools 
@@ -1074,76 +1585,129 @@ MAN_war_preparations = {
 		}
 	}
 	MAN_prepare_to_seize_arms = {
+
 		available = {
-			has_completed_focus = MAN_purge_the_general_affairs_council
-			command_power > 29
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_purge_the_general_affairs_council
+					has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_purge_the_general_affairs_council_tt
+				OR = {
+					has_completed_focus = MAN_purge_the_general_affairs_council
+					has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+				}
+			}
+			hidden_trigger = {
+				command_power > 29
+			}
 		}
+
 		visible = {
-			has_completed_focus = MAN_purge_the_general_affairs_council
+			OR = {
+				has_completed_focus = MAN_purge_the_general_affairs_council
+				has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+			}
 			check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than }
 			is_subject_of = JAP
 		}
+
 		cost = 0
+
+		custom_cost_trigger = {
+			command_power > 29
+		}
+		custom_cost_text = decision_cost_CP_30
+
 		ai_will_do = {
 			factor = 10
 		}
+
 		complete_effect = {
-			add_command_power = -30
-			if = {
+
+			
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than_or_equals }
 				}
 				custom_effect_tooltip = MAN_can_prepare_more_tt
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 10 compare = less_than }
 				}
 				set_variable = { var = MAN_seize_arms_prep value = 10 }
 			}
-			else = {
+			ELSE = {
 				add_to_variable = { var = MAN_seize_arms_prep value = 10 }
 			}
+
+			hidden_effect = {
+				add_command_power = -30
+			}
 		}
+
 	}
+
 	MAN_seize_arms = {
+
 		available = {
-			has_completed_focus = MAN_independence_war
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = MAN_independence_war
+					has_completed_focus = MAN_tsr_independence_war
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = MAN_independence_war_tt
+				OR = {
+					has_completed_focus = MAN_independence_war
+					has_completed_focus = MAN_tsr_independence_war
+				}
+			}
 			has_war_with = JAP
 		}
+
 		visible = {
 			check_variable = { var = MAN_seize_arms_prep value = 0 compare = greater_than }
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 10
 		}
+
 		complete_effect = {
-			if = {
+
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than_or_equals }
 				}
 				custom_effect_tooltip = MAN_can_prepare_more_tt
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 10 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 producer = JAP }
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 20 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 producer = JAP }
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 30 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = JAP }
-				if = {
+				IF = {
 					limit = {
 						JAP = {
 							has_tech = improved_infantry_weapons
@@ -1152,7 +1716,7 @@ MAN_war_preparations = {
 					add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 2000 producer = JAP }
 				}
 			}
-			if = { 
+			IF = {
 				limit = {
 					NOT = {
 						has_dlc = "No Step Back"
@@ -1162,7 +1726,7 @@ MAN_war_preparations = {
 				add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 50 producer = JAP }
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = JAP }
 			}
-			else_if = { 
+			ELSE_IF = { 
 				limit = {
 					has_dlc = "No Step Back"
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = greater_than_or_equals }
@@ -1170,7 +1734,7 @@ MAN_war_preparations = {
 				add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 50 producer = JAP variant_name = "Type 95 Ha-Go"}
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = JAP }
 			}
-			if = {
+			IF = {
 				limit = {
 					NOT = {
 						has_dlc = "By Blood Alone"
@@ -1178,7 +1742,7 @@ MAN_war_preparations = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
 				}
 				add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = JAP }
-				if = {
+				IF = {
 					limit = {
 						JAP = {
 							has_tech = fighter1
@@ -1188,7 +1752,7 @@ MAN_war_preparations = {
 				}
 				add_equipment_to_stockpile = { type = CAS_equipment_1 amount = 50 producer = JAP }
 			}
-			else_if = {
+			ELSE_IF = {
 				limit = {
 					has_dlc = "By Blood Alone"
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
@@ -1196,7 +1760,7 @@ MAN_war_preparations = {
 				add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = 100 producer = JAP variant_name = "Ki-10" }
 				add_equipment_to_stockpile = { type = small_plane_cas_airframe_0 amount = 50 producer = JAP variant_name = "Ki-3"}
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 10 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 20 compare = less_than }
@@ -1205,7 +1769,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_1 days = 30 }
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 20 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 30 compare = less_than }
@@ -1214,7 +1778,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_1 days = 60 }
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 30 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = less_than }
@@ -1223,7 +1787,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_2 days = 60 }
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 40 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = less_than }
@@ -1232,7 +1796,7 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_2 days = 90 }
 				}
 			}
-			if = {
+			IF = {
 				limit = {
 					check_variable = { var = MAN_seize_arms_prep value = 50 compare = greater_than_or_equals }
 					check_variable = { var = MAN_seize_arms_prep value = 60 compare = less_than }
@@ -1241,8 +1805,10 @@ MAN_war_preparations = {
 					add_timed_idea = { idea = MAN_arms_seized_3 days = 90 }
 				}
 			}
+		
 		}
 	}
+
 }
 
 prospect_for_resources = {
@@ -1258,14 +1824,18 @@ prospect_for_resources = {
 		available = {
 			has_tech = excavation1
 		}
+
 		highlight_states = {
- highlight_state_targets = {
-			state = 328
-		} 
-}
+ 			highlight_state_targets = {
+				state = 328
+			} 
+		}
 
 		visible = {
-			has_completed_focus = MAN_develop_aluminum_sources
+			OR = {
+				has_completed_focus = MAN_develop_aluminum_sources
+				has_completed_focus = MAN_tsr_develop_aluminum_sources
+			}
 			controls_state = 328
 			328 = {
 				NOT = {
@@ -1306,10 +1876,10 @@ prospect_for_resources = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
-			state = 716
-		} 
-}
+ 			highlight_state_targets = {
+				state = 716
+			} 
+		}
 
 		available = {
 			has_tech = construction2
@@ -1317,7 +1887,10 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = MAN_expand_showa_steel_works
+			OR = {
+				has_completed_focus = MAN_expand_showa_steel_works
+				has_completed_focus = MAN_tsr_expand_showa_steel_works
+			}
 			controls_state = 716
 			716 = {
 				NOT = {
@@ -1349,4 +1922,1979 @@ prospect_for_resources = {
 			factor = 1
 		}
 	}
+
+	MAN_establish_the_erdaojiang_special_steel_experimental_plant = { #328
+		
+		icon = steel
+
+		allowed = {
+
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 328
+			} 
+		}
+
+		available = {
+			has_tech = construction2
+			has_tech = excavation1
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = MAN_tsr_expand_showa_steel_works
+			}
+			controls_state = 328
+			328 = {
+				NOT = {
+					has_state_flag = erdaojiang_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			328 = { set_state_flag = erdaojiang_steel_developed }
+			328 = {
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }
+
+
+
+###############
+######TSR######
+###############
+MAN_coring_decisions = {
+	
+	MAN_coring_outer_manchuria_states = {
+	
+			icon = GFX_decision_generic_form_nation
+	
+			ai_will_do = {
+				base = 50
+			}
+	
+			priority = 25
+	
+			highlight_states = {
+				highlight_state_targets = {
+					state = FROM 
+				} 
+			}
+		
+			allowed = {
+				original_tag = MAN
+			}
+			
+			visible = {
+				OR = {
+					has_completed_focus = MAN_tsr_claim_outer_manchuria
+					has_completed_focus = MAN_tsr_reclaim_our_lost_possessions
+					has_completed_focus = MAN_tsr_request_our_lost_territories
+				}
+			}
+			
+			available = {
+				FROM = {
+					NOT = { has_state_flag = MAN_coring_state_in_progress_flag }
+				}
+				FROM = {
+					compliance > 30
+				}
+			}
+	
+			state_target = any_controlled_state
+		    
+		    target_trigger = {
+		        FROM = {
+		        	NOT = { is_core_of = ROOT }
+		        	is_fully_controlled_by = ROOT
+		        	OR = {
+		        		state = 408
+		        		state = 409
+		        		state = 657
+		        		state = 560
+		        		state = 561
+		        	}
+		        }
+		    }
+		    on_map_mode = map_only
+	
+		    cost = 50		
+	
+			fire_only_once = yes
+	
+			days_remove = 35
+	
+			complete_effect = {
+				hidden_effect = {
+					FROM = {
+						set_state_flag = { flag = MAN_coring_state_in_progress_flag value = 1 	days = 31 }
+					}
+				}
+			}
+	
+			remove_effect = {
+				hidden_effect = {
+					FROM = {
+						clr_state_flag = MAN_coring_state_in_progress_flag
+					}
+				}
+	
+				FROM = {
+					add_core_of = ROOT
+				}
+				
+			}
+	
+			cancel_trigger = {
+				FROM = {
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+	
+			cancel_effect = {
+				hidden_effect = {
+					FROM = {
+						clr_state_flag = MAN_coring_state_in_progress_flag
+					}
+				}
+			}
+	}
+
+	MAN_coring_mongolia_tuva = {
+	
+			icon = GFX_decision_generic_form_nation
+	
+			ai_will_do = {
+				base = 50
+			}
+	
+			priority = 25
+	
+			highlight_states = {
+				highlight_state_targets = {
+					state = FROM 
+				} 
+			}
+		
+			allowed = {
+				original_tag = MAN
+			}
+			
+			visible = {
+				OR = {
+					has_completed_focus = MAN_tsr_reclaim_our_lost_possessions
+					has_completed_focus = MAN_tsr_request_our_lost_territories
+				}
+			}
+			
+			available = {
+				FROM = {
+					NOT = { has_state_flag = MAN_coring_state_in_progress_flag }
+				}
+				FROM = {
+					compliance > 30
+				}
+			}
+	
+			state_target = any_controlled_state
+		    
+		    target_trigger = {
+		        FROM = {
+		        	NOT = { is_core_of = ROOT }
+		        	is_fully_controlled_by = ROOT
+		        	OR = {
+		        		state = 330
+		        		state = 817
+		        		state = 818
+		        		state = 819
+		        		state = 820
+		        		state = 329
+		        	}
+		        }
+		    }
+		    on_map_mode = map_only
+	
+		    cost = 50		
+	
+			fire_only_once = yes
+	
+			days_remove = 35
+	
+			complete_effect = {
+				hidden_effect = {
+					FROM = {
+						set_state_flag = { flag = MAN_coring_state_in_progress_flag value = 1 	days = 31 }
+					}
+				}
+			}
+	
+			remove_effect = {
+				hidden_effect = {
+					FROM = {
+						clr_state_flag = MAN_coring_state_in_progress_flag
+					}
+				}
+	
+				FROM = {
+					add_core_of = ROOT
+				}
+				
+			}
+	
+			cancel_trigger = {
+				FROM = {
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+	
+			cancel_effect = {
+				hidden_effect = {
+					FROM = {
+						clr_state_flag = MAN_coring_state_in_progress_flag
+					}
+				}
+			}
+	}
+
+	MAN_coring_tibet = {
+	
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 50
+		}
+
+		priority = 25
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM 
+			} 
+		}
+	
+		allowed = {
+			original_tag = MAN
+		}
+		
+		visible = {
+			OR = {
+				has_completed_focus = MAN_tsr_reclaim_our_lost_possessions
+				has_completed_focus = MAN_tsr_proclaim_the_peoples_republic
+			}
+		}
+		
+		available = {
+			FROM = {
+				NOT = { has_state_flag = MAN_coring_state_in_progress_flag }
+			}
+			FROM = {
+				compliance > 30
+			}
+		}
+
+		state_target = any_controlled_state
+	    
+	    target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_fully_controlled_by = ROOT
+	        	OR = {
+	        		state = 322
+	        		state = 757
+	        		state = 758
+	        		state = 434
+	        		state = 601
+	        	}
+	        }
+	    }
+	    on_map_mode = map_only
+
+	    cost = 50		
+
+		fire_only_once = yes
+
+		days_remove = 35
+
+		complete_effect = {
+			hidden_effect = {
+				FROM = {
+					set_state_flag = { flag = MAN_coring_state_in_progress_flag value = 1 	days = 31 }
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				FROM = {
+					clr_state_flag = MAN_coring_state_in_progress_flag
+				}
+			}
+
+			FROM = {
+				add_core_of = ROOT
+			}
+			
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				FROM = {
+					clr_state_flag = MAN_coring_state_in_progress_flag
+				}
+			}
+		}
+	}	
+
+	MAN_coring_democratic = {
+	
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 50
+		}
+
+		priority = 25
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM 
+			} 
+		}
+	
+		allowed = {
+			original_tag = MAN
+		}
+		
+		visible = {
+			OR = {
+				has_completed_focus = MAN_tsr_proclaim_the_republic_of_china
+				has_completed_focus = MAN_tsr_division_of_power
+			}
+			
+		}
+		
+		available = {
+			FROM = {
+				NOT = { has_state_flag = MAN_coring_state_in_progress_flag }
+			}
+			FROM = {
+				compliance > 45
+			}
+		}
+
+		state_target = any_controlled_state
+	    
+	    target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_fully_controlled_by = ROOT
+	        	OR = {
+	        		state = 330
+	        		state = 817
+	        		state = 818
+	        		state = 819
+	        		state = 820
+	        		state = 329
+	        		state = 322
+	        		state = 757
+	        		state = 758
+	        		state = 434
+	        	}
+	        }
+	    }
+	    on_map_mode = map_only
+
+	    cost = 50		
+
+		fire_only_once = yes
+
+		days_remove = 35
+
+		complete_effect = {
+			hidden_effect = {
+				FROM = {
+					set_state_flag = { flag = MAN_coring_state_in_progress_flag value = 1 	days = 31 }
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				FROM = {
+					clr_state_flag = MAN_coring_state_in_progress_flag
+				}
+			}
+
+			FROM = {
+				add_core_of = ROOT
+			}
+			
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				FROM = {
+					clr_state_flag = MAN_coring_state_in_progress_flag
+				}
+			}
+		}
+	}	
+
+}
+
+MAN_state_shintoism_decisions = {
+	
+		MAN_import_imperial_way_buddhism_decision  = {
+
+			priority = 15
+
+			icon = GFX_decision_hol_exchange_intelligence_data
+
+			ai_will_do = {
+				base = 25
+			}
+		
+			allowed = {  
+				original_tag = MAN 
+			}
+
+			visible = { 
+				has_completed_focus = MAN_tsr_embrace_state_shintoism
+			}
+		
+			available = {
+			}
+
+			#days_remove = 70
+
+			#days_re_enable = 180
+
+			cost = 50
+
+			cancel_trigger = {
+			}
+
+	        cancel_effect = {
+	        }
+
+			modifier = {
+			}
+
+			complete_effect = { 
+
+				MAN_add_or_modify_state_shintoism = yes
+
+				add_to_variable = { MAN_state_shintoism_pocket_penalty = -0.05 tooltip = pocket_penalty_tt }
+				add_to_variable = { MAN_state_shintoism_surrender_limit = 0.1 tooltip = surrender_limit_tt }
+
+			}
+
+			fire_only_once = yes
+
+			remove_effect = {
+
+			}
+
+		}
+
+		
+		MAN_one_people_united_under_shinto_decision  = {
+
+			priority = 14
+
+			icon = GFX_decision_generic_civil_support
+
+			ai_will_do = {
+				base = 2
+			}
+		
+			allowed = {  
+				original_tag = MAN 
+			}
+
+			visible = { 
+				has_completed_focus = MAN_tsr_embrace_state_shintoism
+			}
+		
+			available = {
+			}
+
+			cost = 50
+
+			cancel_trigger = {
+			}
+
+	        cancel_effect = {
+	        }
+
+			modifier = {
+			}
+
+			complete_effect = { 
+
+				MAN_add_or_modify_state_shintoism = yes
+
+				add_to_variable = { MAN_state_shinotism_stability_factor = 0.075 tooltip = stability_factor_tt }
+
+			}
+
+			fire_only_once = yes
+
+			remove_effect = {
+
+			}
+
+		}
+
+		
+		MAN_incoporate_manchu_nationalism_decision  = {
+
+			priority = 13
+
+			icon = GFX_decision_eng_blackshirt_speech
+
+			ai_will_do = {
+				base = 3
+			}
+		
+			allowed = {  
+				original_tag = MAN 
+			}
+
+			visible = { 
+				has_completed_focus = MAN_tsr_embrace_state_shintoism
+			}
+		
+			available = {
+				has_completed_focus = MAN_tsr_promote_manchu_identity
+			}
+
+			cost = 50
+
+			cancel_trigger = {
+			}
+
+	        cancel_effect = {
+	        }
+
+			modifier = {
+			}
+
+			complete_effect = { 
+
+				MAN_add_or_modify_state_shintoism = yes
+
+				add_to_variable = { MAN_state_shintoism_army_core_defence_factor = 0.05 tooltip = army_core_defence_factor_tt }
+				add_to_variable = { MAN_state_shintoism_war_support_factor = 0.05 tooltip = war_support_factor_tt }
+
+			}
+
+			fire_only_once = yes
+
+			remove_effect = {
+
+			}
+
+		}
+
+		MAN_state_shinto_in_education_decision  = {
+
+			priority = 12
+
+			icon = GFX_decision_SOV_academy_of_sciences
+
+			ai_will_do = {
+				base = 10
+			}
+		
+			allowed = {  
+				original_tag = MAN 
+			}
+
+			visible = { 
+				has_completed_focus = MAN_tsr_embrace_state_shintoism
+			}
+		
+			available = {
+			}
+
+			cost = 75
+
+			cancel_trigger = {
+			}
+
+	        cancel_effect = {
+	        }
+
+			modifier = {
+			}
+
+			complete_effect = { 
+
+				MAN_add_or_modify_state_shintoism = yes
+
+				add_to_variable = { MAN_state_shintoism_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+
+			}
+
+			fire_only_once = yes
+
+			remove_effect = {
+
+			}
+
+		}
+
+}
+
+MAN_march_on_beijing_decisions = {
+	
+	MAN_march_on_hebei_chahar = {
+		icon = border_war
+		allowed = {
+			original_tag = MAN
+		}
+
+		available = {
+			has_completed_focus = MAN_tsr_the_new_beiyang_government
+			1039 = {
+				owner = {
+					NOT = {
+						has_war_with = MAN
+						is_in_faction_with = MAN
+						has_non_aggression_pact_with = MAN
+						is_puppet_of = MAN
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = MAN_tsr_the_new_beiyang_government
+			610 = {
+				is_controlled_by = MAN
+			}
+		}
+
+		highlight_states = {
+	 		highlight_state_targets = {
+				state = 610
+				state = 1039
+			} 
+		}
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		custom_cost_text = decision_cost_CP_15_pp_15
+
+		complete_effect = {
+
+			activate_mission = MAN_march_on_hebei_chahar_mission
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			start_border_war = {
+				change_state_after_war = no #overrides the transfer of state at the end of war
+				combat_width = 180 #combat width for border war
+				minimum_duration_in_days = 40 #minimum duration for combat
+				attacker = {
+					on_win = tsr_manchukuo_border_war.1
+					on_lose = tsr_manchukuo_border_war.2
+					on_cancel = tsr_manchukuo_border_war.2
+					state = 610 # state to start border war
+					num_provinces = 2 #number of provinces we want border war to be
+					#on_win = <event_id> #effect to call if wins
+					#on_lose = <event_id> #effect to call if loses
+					
+					leader_score = { # Optional score for selecting a leader 
+						base = 1
+						modifier = {
+						    skill > 2
+						    factor = 5
+						}
+						modifier = {
+						    skill > 3
+						    factor = 10
+						}
+					}
+					
+					dig_in_factor = 0 #dig in modifier factor (default value: 1.0)
+					terrain_factor = 0 #terrain modifier factor(default value: 1.0)
+				}
+				
+				defender = {
+					 state = 1039 # state to start border war
+					 num_provinces = 2 #number of provinces we want border war to be
+					# on_win = <event_id> #effect to call if wins
+					on_lose = tsr_manchukuo_border_war.1
+					on_win = tsr_manchukuo_border_war.2
+					on_cancel = tsr_manchukuo_border_war.2
+				}
+			}
+	
+		}
+	}
+
+	MAN_march_on_hebei_chahar_mission = {
+		icon = border_war
+		
+		allowed = { always = no }
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 610
+				state = 1039
+			}
+		}
+
+		days_mission_timeout = 120
+
+		cancel_trigger = {
+			1039 = {	
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cancel_effect = {
+			effect_tooltip = {
+				country_event = { id = tsr_manchukuo_border_war.1 }
+				transfer_state = 1039
+			}
+		}
+
+		timeout_effect = { #Fails
+			cancel_border_war = {
+				attacker = 610
+				defender = 1039
+			}
+		}
+	}
+
+	MAN_march_on_beijing = {
+		icon = border_war
+		allowed = {
+			original_tag = MAN
+		}
+
+		available = {
+			has_completed_focus = MAN_tsr_the_new_beiyang_government
+			608 = {
+				owner = {
+					NOT = {
+						has_war_with = MAN
+						is_in_faction_with = MAN
+						has_non_aggression_pact_with = MAN
+						is_puppet_of = MAN
+					}
+				}
+			}
+			609 = {
+				is_controlled_by = MAN
+			}
+		}
+
+		visible = {
+			has_completed_focus = MAN_tsr_the_new_beiyang_government
+		}
+
+		highlight_states = {
+	 		highlight_state_targets = {
+				state = 609
+				state = 608
+			} 
+		}
+		
+		fire_only_once = yes
+
+		cost = 25
+		
+		custom_cost_text = decision_cost_CP_15_pp_15
+
+		complete_effect = {
+
+			activate_mission = MAN_march_on_beijing_mission
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			start_border_war = {
+				change_state_after_war = no #overrides the transfer of state at the end of war
+				combat_width = 180 #combat width for border war
+				minimum_duration_in_days = 40 #minimum duration for combat
+				attacker = {
+					on_win = tsr_manchukuo_border_war.3
+					on_lose = tsr_manchukuo_border_war.4
+					on_cancel = tsr_manchukuo_border_war.4
+					state = 609 # state to start border war
+					num_provinces = 2 #number of provinces we want border war to be
+					#on_win = <event_id> #effect to call if wins
+					#on_lose = <event_id> #effect to call if loses
+					
+					leader_score = { # Optional score for selecting a leader 
+						base = 1
+						modifier = {
+						    skill > 2
+						    factor = 5
+						}
+						modifier = {
+						    skill > 3
+						    factor = 10
+						}
+					}
+					
+					dig_in_factor = 0 #dig in modifier factor (default value: 1.0)
+					terrain_factor = 0 #terrain modifier factor(default value: 1.0)
+				}
+				
+				defender = {
+					 state = 608 # state to start border war
+					 num_provinces = 2 #number of provinces we want border war to be
+					# on_win = <event_id> #effect to call if wins
+					on_lose = tsr_manchukuo_border_war.3
+					on_win = tsr_manchukuo_border_war.4
+					on_cancel = tsr_manchukuo_border_war.4
+				}
+			}
+	
+		}
+	}
+
+	MAN_march_on_beijing_mission = {
+		icon = border_war
+		
+		allowed = { always = no }
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 609
+				state = 608
+			}
+		}
+
+		days_mission_timeout = 120
+
+		cancel_trigger = {
+			608 = {	
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cancel_effect = {
+			effect_tooltip = {
+				country_event = { id = tsr_manchukuo_border_war.3 }
+				transfer_state = 608
+			}
+		}
+
+		timeout_effect = { #Fails
+			cancel_border_war = {
+				attacker = 609
+				defender = 608
+			}
+		}
+	}
+
+	MAN_march_on_hebei = {
+		icon = border_war
+		allowed = {
+			original_tag = MAN
+		}
+
+		available = {
+			has_completed_focus = MAN_tsr_the_new_beiyang_government
+			614 = {
+				owner = {
+					NOT = {
+						has_war_with = MAN
+						is_in_faction_with = MAN
+						has_non_aggression_pact_with = MAN
+						is_puppet_of = MAN
+					}
+				}
+			}
+			608 = {
+				is_controlled_by = MAN
+			}
+		}
+
+		visible = {
+			has_completed_focus = MAN_tsr_the_new_beiyang_government
+		}
+
+		highlight_states = {
+	 		highlight_state_targets = {
+				state = 608
+				state = 614
+			} 
+		}
+		
+		fire_only_once = yes
+
+		cost = 25
+		
+		custom_cost_text = decision_cost_CP_15_pp_15
+
+		complete_effect = {
+
+			activate_mission = MAN_march_on_hebei_mission
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			start_border_war = {
+				change_state_after_war = no #overrides the transfer of state at the end of war
+				combat_width = 180 #combat width for border war
+				minimum_duration_in_days = 40 #minimum duration for combat
+				attacker = {
+					on_win = tsr_manchukuo_border_war.5
+					on_lose = tsr_manchukuo_border_war.6
+					on_cancel = tsr_manchukuo_border_war.6
+					state = 608 # state to start border war
+					num_provinces = 2 #number of provinces we want border war to be
+					#on_win = <event_id> #effect to call if wins
+					#on_lose = <event_id> #effect to call if loses
+					
+					leader_score = { # Optional score for selecting a leader 
+						base = 1
+						modifier = {
+						    skill > 2
+						    factor = 5
+						}
+						modifier = {
+						    skill > 3
+						    factor = 10
+						}
+					}
+					
+					dig_in_factor = 0 #dig in modifier factor (default value: 1.0)
+					terrain_factor = 0 #terrain modifier factor(default value: 1.0)
+				}
+				
+				defender = {
+					 state = 614 # state to start border war
+					 num_provinces = 2 #number of provinces we want border war to be
+					# on_win = <event_id> #effect to call if wins
+					on_lose = tsr_manchukuo_border_war.5
+					on_win = tsr_manchukuo_border_war.6
+					on_cancel = tsr_manchukuo_border_war.6
+				}
+			}
+	
+		}
+	}
+
+	MAN_march_on_hebei_mission = {
+		icon = border_war
+		
+		allowed = { always = no }
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 608
+				state = 614
+			}
+		}
+
+		days_mission_timeout = 120
+
+		cancel_trigger = {
+			614 = {	
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cancel_effect = {
+			effect_tooltip = {
+				country_event = { id = tsr_manchukuo_border_war.5 }
+				transfer_state = 614
+			}
+		}
+
+		timeout_effect = { #Fails
+			cancel_border_war = {
+				attacker = 608
+				defender = 614
+			}
+		}
+	}
+
+}
+
+MAN_china_matters = {
+	
+	MAN_request_full_control_over_china  = {
+
+			priority = 100
+
+			icon = GFX_decision_jap_conquer_china
+
+			ai_will_do = {
+				base = 10
+			}
+		
+			allowed = {  
+				original_tag = MAN 
+			}
+
+			visible = { 
+				has_completed_focus = MAN_tsr_national_cooperation_government
+			}
+		
+			available = {
+				is_subject_of = JAP
+				RNG = {
+					exists = yes
+					is_subject_of = JAP
+				}
+				hidden_trigger = {
+					RNG = {
+						is_ai = yes
+					}
+				}
+			}
+
+			cost = 50
+
+			days_remove = 30
+
+			fire_only_once = yes
+
+			remove_effect = {
+				JAP = {
+					country_event = {
+						id = tsr_manchukuo.16
+						hours = 6
+					}
+				}
+			}	
+
+		}
+
+}
+
+MAN_yong_ying_category = {
+	
+	MAN_expand_yong_ying_recruitment = {
+		icon = GFX_decision_generic_military 
+	
+		allowed = {
+			original_tag = MAN
+		}
+	
+		available = {
+			check_variable = { MAN_levy_cap < MAN_levy_cap_max }
+			custom_trigger_tooltip = {
+				tooltip = JAP_expand_ashigaru_tt
+				check_variable = { MAN_levy_cap < MAN_levy_cap_max }
+			}
+			has_war = no
+			NOT = {
+				has_country_flag = MAN_raise_yong_yingu_active
+			}
+		}
+		
+		visible = {
+		}
+	
+	    custom_cost_trigger = {
+	    	command_power > 14.9
+	    }
+	    custom_cost_text = AFG_decision_cost_quami
+
+	    ai_will_do = {
+	    	base = 25
+	    }
+		
+		fire_only_once = no
+		days_remove = 7
+		complete_effect = {
+			add_command_power = -15
+		}
+		remove_effect = {
+
+			custom_effect_tooltip = JAP_expand_ashigaru_tt_2
+
+			hidden_effect = {
+				add_to_variable = { MAN_levy_cap = 1 }
+				clamp_variable = {
+					var = MAN_levy_cap
+					min = MAN_levy_cap_min
+					max = MAN_levy_cap_max
+				}
+				set_division_template_cap = { 
+					division_template = "Yong Ying" 
+					division_cap = MAN_levy_cap   
+				}
+			}
+		}
+	}
+
+	MAN_raise_the_yong_ying = {
+		icon = GFX_decision_generic_prepare_civil_war
+	
+		allowed = {
+			original_tag = MAN
+		}
+	
+		available = {
+			OR = {
+				has_defensive_war = yes
+				AND = {
+					has_war_support > 0.45
+					has_offensive_war = yes
+				}
+			}
+			NOT = { has_country_flag = MAN_raise_yong_yingu_active }
+			has_civil_war = no
+		}
+		
+		visible = {
+		}
+	
+		cost = 25
+
+		ai_will_do = {
+			base = 250
+		}
+		
+		fire_only_once = no
+		days_remove = 14
+		remove_effect = {
+			
+			set_country_flag = MAN_raise_yong_yingu_active
+			custom_effect_tooltip = JAP_raise_ashigaru_tt
+			add_stability = -0.05
+			set_variable = { deployed_divs = 0 }
+			while_loop_effect = {
+				limit = {
+					check_variable = { deployed_divs < MAN_levy_cap }
+				}
+				add_to_variable = { deployed_divs = 1 }
+				capital_scope = {
+					create_unit = {
+						division = "division_template =\"Yong Ying\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						owner = MAN
+						count = 1			
+						prioritize_location = 328
+					}
+				}
+			}
+		}
+	}
+
+	MAN_demobilize_the_yong_ying = {
+		icon = GFX_decision_SWI_dismiss_council
+	
+		allowed = {
+			original_tag = MAN
+		}
+	
+		available = {
+			has_country_flag = MAN_raise_yong_yingu_active
+		}
+		
+		visible = {
+		}
+	
+		cost = 5
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				has_war = no
+			}
+		}
+		
+		fire_only_once = no
+		days_remove = 7
+		complete_effect = {
+		}
+		remove_effect = {
+			custom_effect_tooltip = JAP_send_home_ashigaru_tt
+			add_stability = 0.1
+			clr_country_flag = MAN_raise_yong_yingu_active
+			set_variable = { deployed_divs = 0 }
+			delete_units = {
+				division_template = "Yong Ying"
+				disband = no
+			}
+			
+		}
+	}
+
+}
+
+# MAN_restoring_russian_empire_category = {
+# 	MAN_use_bandits_for_border_raids = {
+# 		icon = GFX_decision_generic_wreckers
+
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+
+# 		available = {
+# 			any_enemy_country = { 
+# 				original_tag = SOV
+# 				has_government = communism 
+# 			}
+# 			has_completed_focus = MAN_strike_deal_with_bandits
+# 		}
+# 		ai_will_do = {
+# 			base = 250 
+# 			modifier = {
+# 				controls_state = 571
+# 				factor = 0.1
+# 			}
+# 		}
+		
+
+# 		fire_only_once = no
+# 		days_re_enable = 60
+
+# 		visible = {
+# 			any_enemy_country = { 
+# 				original_tag = SOV
+# 				has_government = communism 
+# 			}
+# 			NOT = {
+# 				has_global_flag = MAN_has_soviet_tree
+# 			}
+# 		}
+
+# 		complete_effect = {
+# 			hidden_effect = {
+# 				add_political_power = -25
+# 				add_command_power = -5
+# 			}
+# 			add_timed_idea = { idea = MAN_NHMMAP_army_morale_boost days = 14 }
+# 			SOV = {
+# 				random_controlled_state = {
+# 					limit = {
+# 						arms_factory  > 2
+# 					}
+# 					damage_building = {
+# 						type = arms_factory
+# 						damage = 2
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						NOT = { controls_state = 571 }
+# 					}
+# 					custom_effect_tooltip = SOV_wreckers_sabotage_railways_tt
+# 					hidden_effect = {
+# 						random_controlled_state = {
+# 							damage_building = {
+# 								type = rail_way
+# 								damage = 1
+# 							}
+# 							set_state_flag = railway_damaged_flag
+# 							#LOG = "Damage Railway 1 in [THIS.GetName]"
+# 						}
+# 						random_controlled_state = {
+# 							limit = { NOT = { has_state_flag = railway_damaged_flag }}
+# 							damage_building = {
+# 								type = rail_way
+# 								damage = 1
+# 							}
+# 							set_state_flag = railway_damaged_flag
+# 							#LOG = "Damage Railway 2 in [THIS.GetName]"
+# 						}
+# 						random_controlled_state = {
+# 							limit = { NOT = { has_state_flag = railway_damaged_flag }}
+# 							damage_building = {
+# 								type = rail_way
+# 								damage = 1
+# 							}
+# 							set_state_flag = railway_damaged_flag
+# 							#LOG = "Damage Railway 2 in [THIS.GetName]"
+# 						}
+# 						every_owned_state = {
+# 							limit = { has_state_flag = railway_damaged_flag }
+# 							clr_state_flag = railway_damaged_flag
+# 						}
+# 					}
+# 				}
+# 				else = {
+# 					custom_effect_tooltip = SOV_wreckers_sabotage_railways_tt
+# 					hidden_effect = {
+# 						random_controlled_state = {
+# 							limit = {
+# 								OR = {
+# 									region = 242
+# 									region = 255
+# 									region = 148 
+# 									region = 256 
+# 									region = 149
+# 									region = 262
+# 									region = 261
+# 									region = 151
+# 									region = 14
+# 								}
+# 							}
+# 							damage_building = {
+# 								type = rail_way
+# 								damage = 1
+# 							}
+# 							set_state_flag = railway_damaged_flag
+# 							#LOG = "Damage Railway 1 in [THIS.GetName]"
+# 						}
+# 						random_controlled_state = {
+# 							limit = { 
+# 								NOT = { has_state_flag = railway_damaged_flag }
+# 								OR = {
+# 									region = 242
+# 									region = 255
+# 									region = 148 
+# 									region = 256 
+# 									region = 149
+# 									region = 262
+# 									region = 261
+# 									region = 151
+# 									region = 14
+# 								}
+# 							}
+# 							damage_building = {
+# 								type = rail_way
+# 								damage = 1
+# 							}
+# 							set_state_flag = railway_damaged_flag
+# 							#LOG = "Damage Railway 2 in [THIS.GetName]"
+# 						}
+# 						random_controlled_state = {
+# 							limit = { 
+# 								NOT = { has_state_flag = railway_damaged_flag }
+# 								OR = {
+# 									region = 242
+# 									region = 255
+# 									region = 148 
+# 									region = 256 
+# 									region = 149
+# 									region = 262
+# 									region = 261
+# 									region = 151
+# 									region = 14
+# 								}
+# 							}
+# 							damage_building = {
+# 								type = rail_way
+# 								damage = 1
+# 							}
+# 							set_state_flag = railway_damaged_flag
+# 							#LOG = "Damage Railway 2 in [THIS.GetName]"
+# 						}
+# 						every_owned_state = {
+# 							limit = { has_state_flag = railway_damaged_flag }
+# 							clr_state_flag = railway_damaged_flag
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	MAN_claim_central_siberia = {
+# 		icon = GFX_decision_generic_operation
+
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+
+# 		available = {
+# 			OR = {
+# 				controls_state = 569
+# 				controls_state = 578
+# 				controls_state = 577
+# 				controls_state = 824
+# 			}
+# 			NOT = {
+# 				has_idea = MAN_NHMMAP_army_morale_boost
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			base = 500 
+# 		}
+# 		cost = 5
+# 		fire_only_once = yes
+
+# 		visible = {
+			
+# 		}
+
+# 		complete_effect = {
+# 			add_timed_idea = { idea = MAN_NHMMAP_army_morale_boost days = 90 }
+# 			every_state = {
+# 				limit = {
+# 					is_core_of = SOV
+# 					OR = {
+# 						region = 261
+# 						region = 151
+# 						region = 263
+# 						region = 263
+# 						region = 14
+# 						region = 138
+# 					}
+# 				}
+# 				add_core_of = ROOT
+# 			}
+# 			hidden_effect = {
+# 				set_country_flag = MAN_has_central_siberia
+# 			}
+# 			#gets cores on central siberia
+# 			#only when you control a central siberian state.
+# 		}
+		
+# 	}
+# 	MAN_claim_central_asia = {
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+
+# 		available = {
+# 			any_controlled_state = {
+# 				is_core_of = KAZ
+# 			}
+# 			has_country_flag = MAN_has_central_siberia
+# 			NOT = { has_idea = MAN_NHMMAP_army_morale_boost	}
+# 			NOT = { has_country_flag = MAN_central_asia_decision_made }
+# 		}
+# 		ai_will_do = {
+# 			base = 500 
+# 		}
+# 		cost = 75
+# 		fire_only_once = yes
+
+# 		visible = {
+			
+# 		}
+
+# 		complete_effect = {
+# 			add_timed_idea = { idea = MAN_NHMMAP_army_morale_boost days = 180 }
+# 			hidden_effect = {
+# 				set_country_flag = MAN_central_asia_decision_made
+# 			}
+# 			every_state = {
+# 				limit = {
+# 					OR = {
+# 						is_core_of = KAZ
+# 						is_core_of = TMS
+# 						is_core_of = UZB
+# 						is_core_of = BUK
+# 						is_core_of = KYR
+# 					}
+# 				}
+# 				add_core_of = ROOT
+# 			}
+# 			#gets cores on central asia
+# 			#cannot also do MAN_spur_central_asian_resistance
+# 			#only when you control a central asian state.
+# 		}
+		
+# 	}
+# 	MAN_promise_karelia_to_finland = {
+# 		icon = GFX_decision_generic_forestry
+
+# 		allowed = {
+# 			original_tag = SOV
+# 		}
+
+# 		targets = { FIN }
+# 		target_trigger = {
+# 			FROM = {
+# 				tag = FIN
+# 			}
+# 		}
+
+# 		available = {
+# 			controls_state = 563
+# 			NOT = {
+# 				has_idea = MAN_NHMMAP_army_morale_boost
+# 			}
+# 			FIN = {
+# 				is_subject = no
+# 				NOT = {
+# 					has_non_aggression_pact_with = SOV
+# 				}
+# 				NOT = {
+# 					is_in_faction_with = SOV
+# 				}
+# 				NOT = {
+# 					has_government = communism
+# 				}
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			base = 250 
+# 		}
+# 		cost = 30
+# 		fire_only_once = no
+# 		days_re_enable = 60
+
+# 		visible = {
+# 			any_enemy_country = { 
+# 				original_tag = SOV
+# 				has_government = communism 
+# 			}
+# 			NOT = {
+# 				has_global_flag = MAN_has_soviet_tree
+# 			}
+# 			FIN = {
+# 				NOT = {
+# 					controls_state = 215
+# 				}
+# 				NOT = {
+# 					controls_state = 195
+# 				}
+# 				NOT = {
+# 					controls_state = 213
+# 				}
+# 			}
+# 		}
+
+# 		complete_effect = {
+# 			add_timed_idea = { idea = MAN_NHMMAP_army_morale_boost days = 14 }
+# 			FIN = {
+# 				country_event = nonhist_CHI.12
+# 				custom_effect_tooltip = generic_skip_one_line_tt
+# 				custom_effect_tooltip = if_they_accept_tt
+# 				effect_tooltip = {
+# 					add_timed_idea = { idea = MAN_NHMMAP_russian_volunteers days = 180 }
+# 					send_equipment = {
+# 						equipment = infantry_equipment
+# 						amount = 1000
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = support_equipment
+# 						amount = 100
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = artillery_equipment
+# 						amount = 50
+# 						target = MAN
+# 					}
+# 				}
+				
+# 			}
+# 		}
+		
+# 	MAN_concessions_to_germany_RK_ukraine_ostland = {
+# 		icon = GFX_decision_generic_GER_flag
+
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+
+# 		targets = { GER }
+# 		target_trigger = {
+# 			FROM = {
+# 				tag = GER
+# 			}
+# 		}
+
+# 		available = {
+# 			NOT = { has_country_flag = MAN_ukr_blr_decision_made }
+# 			GER = {
+# 				OR = {
+# 					has_government = fascism
+# 					has_government = neutrality
+# 				}
+# 				is_faction_leader = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			base = 500
+# 			modifier = {
+# 				factor = 0
+# 				OR = {
+# 					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+# 					has_game_rule = {
+# 						rule = MAN_ai_behavior
+# 						option = RUSSIAN_EXILES_ALT
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		cost = 25
+
+# 		fire_only_once = yes
+
+# 		visible = {
+# 			any_enemy_country = { 
+# 				original_tag = SOV
+# 				has_government = communism 
+# 			}
+# 			NOT = {
+# 				has_global_flag = MAN_has_soviet_tree
+# 			}
+# 		}
+
+# 		complete_effect = {
+# 			hidden_effect = {
+# 				set_country_flag = MAN_ukr_blr_decision_made
+# 			}
+# 			GER = {
+# 				country_event = nonhist_CHI.7
+# 				custom_effect_tooltip = generic_skip_one_line_tt
+# 				custom_effect_tooltip = if_they_accept_tt
+# 				effect_tooltip = {
+# 					add_timed_idea = { idea = MAN_NHMMAP_russian_volunteers days = 180 }
+# 					send_equipment = {
+# 						equipment = infantry_equipment
+# 						amount = 16000
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = support_equipment
+# 						amount = 1600
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = artillery_equipment
+# 						amount = 2000
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = motorized_equipment
+# 						amount = 400
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = medium_tank_chassis
+# 						amount = 200
+# 						target = MAN
+# 					}
+# 				}
+				
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_dlc = "Arms Against Tyranny"
+# 				}
+# 				add_equipment_subsidy = {
+# 					cic = 500
+# 					equipment_type = medium_tank_chassis
+# 					seller_tags = { GER } 
+# 				}
+# 			}
+			
+# 			#give up ukraine and ostland claims, germany gets RK ukraine territories, germany can send volunteers
+# 			#cannot also offer ukraine indp
+# 		}
+		
+# 	}
+# 	MAN_offer_independence_to_soviet_diasporas = {
+# 		icon = GFX_decision_generic_nationalism
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+
+# 		available = {
+# 			has_country_flag = MAN_has_central_siberia
+# 			NOT = { has_idea = MAN_NHMMAP_army_morale_boost	}
+# 			NOT = { has_country_flag = MAN_ukr_blr_decision_made }
+# 			NOT = { has_country_flag = MAN_central_asia_decision_made }
+# 		}
+# 		ai_will_do = {
+# 			base = 500 
+# 		}
+# 		custom_cost_trigger = {
+# 			command_power > 49
+# 			has_political_power > 100
+# 		}
+# 		custom_cost_text = decision_cost_CP_50_PP_100
+
+# 		fire_only_once = yes
+
+# 		visible = {
+# 			any_enemy_country = { 
+# 				original_tag = SOV
+# 				has_government = communism 
+# 			}
+# 			NOT = {
+# 				has_global_flag = MAN_has_soviet_tree
+# 			}
+# 		}
+
+# 		complete_effect = {
+# 			hidden_effect = {
+# 				add_political_power = -100
+# 				add_command_power = -50
+# 			}
+# 			add_timed_idea = { idea = MAN_NHMMAP_army_morale_boost days = 90 }
+# 			effect_tooltip = {
+# 				country_event = {
+# 					id = nonhist_CHI.9
+# 					days = 7
+# 					random_days = 35
+# 				}
+# 			}
+# 			custom_effect_tooltip = MAN_NHMMAP_will_not_be_able_to_get_cores_on_ukr_and_ca
+# 			hidden_effect = {
+# 				set_variable = {
+# 					var = MAN_times_nationalist_revolted
+# 					value = 0
+# 				}
+# 				set_country_flag = MAN_central_asia_decision_made
+# 				set_country_flag = MAN_ukr_blr_decision_made
+# 				country_event = {
+# 					id = nonhist_CHI.8
+# 					days = 7
+# 					random_days = 35
+# 				}
+# 			}
+# 			#gets rebels in central asia
+# 			#cannot also do MAN_claim_central_asia
+# 		}
+# 	}
+# 	MAN_offer_uk_dominion_of_armenia_georgia_and_baku = {
+
+# 		icon = generic_political_discourse
+
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+# 		targets = { ENG }
+# 		target_trigger = {
+# 			FROM = {
+# 				tag = ENG
+# 			}
+# 		}
+
+# 		available = {
+# 			available = {
+# 				has_country_flag = MAN_has_central_siberia
+# 				ENG = {
+# 					NOT = {
+# 						has_government = communism
+# 					}
+# 					is_faction_leader = yes
+# 				}
+# 			}
+# 			229 = { CONTROLLER = { original_tag = SOV } }
+# 			230 = { CONTROLLER = { original_tag = SOV } }
+# 			231 = { CONTROLLER = { original_tag = SOV } }
+# 		}
+# 		ai_will_do = {
+# 			base = 500
+# 			modifier = {
+# 				factor = 0
+# 				OR = {
+# 					has_country_flag = MAN_AI_RANDOM_RUSSIAN_EXILES_ALT
+# 					has_game_rule = {
+# 						rule = MAN_ai_behavior
+# 						option = RUSSIAN_EXILES_ALT
+# 					}
+# 				}
+# 			}
+# 		}
+# 		cost = 25
+
+# 		fire_only_once = yes # Either you make the offer or you don't
+
+# 		visible = {
+# 			any_enemy_country = { 
+# 				original_tag = SOV
+# 				has_government = communism 
+# 			}
+# 			NOT = {
+# 				has_global_flag = MAN_has_soviet_tree
+# 			}
+# 		}
+# 		cancel_if_not_visible = yes
+
+# 		complete_effect = {
+# 			ENG = {
+# 				country_event = nonhist_CHI.10
+# 				custom_effect_tooltip = generic_skip_one_line_tt
+# 				custom_effect_tooltip = if_they_accept_tt
+# 				effect_tooltip = {
+# 					add_timed_idea = { idea = MAN_NHMMAP_russian_volunteers days = 180 }
+# 					send_equipment = {
+# 						equipment = infantry_equipment
+# 						amount = 10000
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = support_equipment
+# 						amount = 800
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = artillery_equipment
+# 						amount = 1200
+# 						target = MAN
+# 					}
+# 					send_equipment = {
+# 						equipment = small_plane_airframe
+# 						amount = 200
+# 						target = MAN
+# 					}
+# 				}
+				
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_dlc = "Arms Against Tyranny"
+# 				}
+# 				add_equipment_subsidy = {
+# 					cic = 500
+# 					equipment_type = small_plane_airframe
+# 					seller_tags = { ENG } 
+# 				}
+# 			}
+# 		}
+# 	}
+# 	MAN_claim_western_russia = {
+# 		allowed = {
+# 			original_tag = MAN
+# 		}
+
+# 		available = {
+# 			any_controlled_state = {
+# 				OR = {
+# 					region = 40
+# 					region = 264
+# 					region = 137
+# 				}
+# 			}
+# 			has_country_flag = MAN_has_central_siberia
+# 			NOT = { has_idea = MAN_NHMMAP_army_morale_boost	}
+# 		}
+# 		ai_will_do = {
+# 			base = 500 
+# 		}
+# 		cost = 75
+# 		fire_only_once = yes
+
+# 		visible = {
+			
+# 		}
+
+# 		complete_effect = {
+# 			custom_effect_tooltip = NHMMAP_MAN_swaps_focus_russia_tt
+# 			hidden_effect = {
+# 				set_global_flag = MAN_has_soviet_tree
+# 				load_focus_tree = { tree = soviet_focus keep_completed = no }
+# 				mark_focus_tree_layout_dirty = yes
+# 				unlock_national_focus = SOV_beaten_but_not_defeated
+# 				unlock_national_focus = SOV_unification_of_the_exiles
+# 				unlock_national_focus = SOV_the_true_tsars
+# 				unlock_national_focus = SOV_embrace_the_black_hundreds
+# 				unlock_national_focus = SOV_approach_semyonov
+# 				unlock_national_focus = SOV_muster_the_old_guard
+# 				unlock_national_focus = SOV_tolkachi
+# 				unlock_national_focus = SOV_the_eyes_fear
+# 				unlock_national_focus = SOV_the_hands_do
+# 			}
+# 			add_timed_idea = { idea = MAN_NHMMAP_army_morale_boost days = 180 }
+# 			every_state = {
+# 				limit = {
+# 					is_core_of = SOV
+# 					OR = {
+# 						state = 205
+# 						state = 243
+# 						state = 224
+# 						state = 242
+# 						state = 233
+# 						state = 826
+# 						state = 827
+# 						state = 828
+# 						state = 821
+# 						region = 40
+# 						region = 264
+# 						region = 137
+# 						region = 135
+# 						region = 133
+# 						region = 150
+# 					}
+# 				}
+# 				add_core_of = ROOT
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						NOT = {
+# 							has_global_flag = MAN_eng_will_get_armenia
+# 						}
+# 					}
+# 					every_state = {
+# 						limit = {
+# 							is_core_of = SOV
+# 							region = 134
+# 						}
+# 						add_core_of = ROOT
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						NOT = {
+# 							has_global_flag = MAN_ukr_blr_decision_GER_will_get_them
+# 						}
+# 					}
+# 					every_state = {
+# 						limit = {
+# 							is_core_of = SOV
+# 							OR = {
+# 								is_core_of = UKR
+# 								is_core_of = BLR
+# 							}
+# 						}
+# 						add_core_of = ROOT
+# 					}
+# 				}
+# 			}
+# 		}
+# 		#needs to be past the urals, in western russia, gets cores.
+# 		#give soviet focus, end this decision tree, give cosmetic tag russian_empire
+# 	}
+# }

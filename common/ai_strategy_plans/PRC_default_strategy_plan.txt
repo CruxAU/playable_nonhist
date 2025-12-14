@@ -7,6 +7,9 @@ PRC_default_plan = {
 			original_tag = PRC
 			is_chinese_warlord = yes
 		}
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
 	}
 	enable = {
 		has_game_rule = {
