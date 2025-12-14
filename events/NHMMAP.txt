@@ -6151,7 +6151,12 @@ country_event = { #event for a major democratic country that a ex-axis major wan
 			base = 5
 		}
 		trigger = {
-			ROOT.num_of_factories > FROM.num_of_factories
+			ROOT = {
+				ic_ratio = { #bigger industry
+					tag = FROM
+					ratio > 1
+				}
+			}
 		}
 		FROM = {
 			country_event = nonhist_GER.17

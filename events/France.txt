@@ -1873,6 +1873,7 @@ country_event = {
 					id = FRA
 					value = 200
 				}
+			}
 		}
 		if = {
 			limit = { NOT = { has_completed_focus = FRA_strengthen_the_little_entente } }
