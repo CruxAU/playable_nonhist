@@ -5584,6 +5584,11 @@ JAP_kodoha_insurgency_decisions = {
 						rule = JAP_ai_behavior
 						option = DEMOCRATIC
 					}
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY #for WTT ONLY, just in case
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC_PACIFIC_TREATY
+					}
 				}
 			}
 		}
@@ -5643,6 +5648,11 @@ JAP_kodoha_insurgency_decisions = {
 					has_game_rule = {
 						rule = JAP_ai_behavior
 						option = DEMOCRATIC
+					}
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY #for WTT ONLY, just in case
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC_PACIFIC_TREATY
 					}
 				}
 			}

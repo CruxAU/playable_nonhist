@@ -8754,428 +8754,586 @@ on_actions = {
 				else_if = {
 					limit = {
 						OR = {
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = HISTORICAL_PATHS
-							}
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = MINORS_ONLY
-							}
-							has_game_rule = {
-								rule = NONHIST_ai_behavior
-								option = MINORS_FACTIONS
-							}
+							has_dlc = "Waking the Tiger"
+							has_dlc = "No Compromise, No Surrender"
 						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
+						
+					}
+					if = {
+						limit = {
+							OR = {
 								has_game_rule = {
-									rule = JAP_ai_behavior
-									option = DEFAULT
+									rule = NONHIST_ai_behavior
+									option = HISTORICAL_PATHS
+								}
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = MINORS_ONLY
+								}
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = MINORS_FACTIONS
 								}
 							}
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = JAP_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = JAP_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						set_country_flag = JAP_AI_RANDOM_FASCIST
+					}
+				}
+				else_if = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+					if = {
+						limit = {
 							has_game_rule = {
-								rule = JAP_ai_behavior
-								option = RANDOM
+								rule = NONHIST_ai_behavior
+								option = TRUE_RANDOM
+							}
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = JAP_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = JAP_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						random_list = {
+							1 = { set_country_flag = JAP_AI_RANDOM_FASCIST }
+							1 = { set_country_flag = JAP_AI_RANDOM_COMMUNIST }
+							1 = { set_country_flag = JAP_AI_RANDOM_COMMUNIST_2 }
+							1 = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA }
+							1 = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC }
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = JAP_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = JAP_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						random_list = {
+							40 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = ANTI_HISTORICAL
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_FASCIST }
+								set_add_fascist_game_weight_large = yes
+							}
+							35 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_unaligned = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.6
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA }
+								set_add_unaligned_game_weight_large = yes
+							}
+							15 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC }
+								set_add_democratic_game_weight_large = yes
+							}
+							5 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST }
+								set_add_communist_weight_large = yes
+							}
+							5 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST_2 }
+								set_add_communist_weight_small = yes
 							}
 						}
 					}
+
+				}
+
+				else_if = {
+					limit = { 
+						has_dlc = "Waking the Tiger" 
+						NOT = { has_dlc = "No Compromise, No Surrender" }
+					}
+					if = {
+						limit = {
+							has_game_rule = {
+								rule = NONHIST_ai_behavior
+								option = TRUE_RANDOM
+							}
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = JAP_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = JAP_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						random_list = {
+							1 = { set_country_flag = JAP_AI_RANDOM_FASCIST }
+							1 = { set_country_flag = JAP_AI_RANDOM_COMMUNIST }
+							1 = { set_country_flag = JAP_AI_RANDOM_COMMUNIST_ASIAN_SOLIDARITY }
+							1 = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA }
+							1 = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN }
+							1 = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC }
+							1 = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY }
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									is_historical_focus_on = no
+									has_game_rule = {
+										rule = JAP_ai_behavior
+										option = DEFAULT
+									}
+								}
+								has_game_rule = {
+									rule = JAP_ai_behavior
+									option = RANDOM
+								}
+							}
+						}
+						random_list = {
+							40 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = ANTI_HISTORICAL
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_FASCIST }
+								set_add_fascist_game_weight_large = yes
+							}
+							20 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.6
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA }
+								set_add_fascist_game_weight_large = yes
+							}
+							15 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_fascist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0.6
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN }
+								set_add_fascist_game_weight_large = yes
+							}
+							10 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC }
+								set_add_democratic_game_weight_large = yes
+							}
+							5 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_democratic = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = COMMUNIST_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY }
+								set_add_democratic_game_weight_large = yes
+							}
+							5 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST }
+								set_add_communist_weight_small = yes
+							}
+							5 = {
+								modifier = {
+									factor = 0.40
+									game_weight_can_add_communist = no
+									NOT = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = NO_GAME_BALANCE
+										}
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = FASCIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MONARCHIST_ONLY
+										}
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = DEMOCRATIC_ONLY
+										}
+									}
+								}
+								JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST_ASIAN_SOLIDARITY }
+								set_add_communist_weight_small = yes
+							}
+						}
+					}
+
+
+				}
+				else = { #If you don't have WTT or NCNS then there is only 1 path (for now, until I do NCNS japan paths)
 					set_country_flag = JAP_AI_RANDOM_FASCIST
-				}
-				else_if = {
-					limit = {
-						has_game_rule = {
-							rule = NONHIST_ai_behavior
-							option = TRUE_RANDOM
-						}
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = JAP_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = JAP_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						1 = { set_country_flag = JAP_AI_RANDOM_FASCIST }
-						1 = { set_country_flag = JAP_AI_RANDOM_FASCIST_ALTERNATE }
-						1 = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN }
-						1 = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA }
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							set_country_flag = JAP_AI_RANDOM_COMMUNIST 
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							set_country_flag = JAP_AI_RANDOM_COMMUNIST_ASIAN_SOLIDARITY
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							set_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-						}
-						1 = { 
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							set_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							AND = {
-								is_historical_focus_on = no
-								has_game_rule = {
-									rule = JAP_ai_behavior
-									option = DEFAULT
-								}
-							}
-							has_game_rule = {
-								rule = JAP_ai_behavior
-								option = RANDOM
-							}
-						}
-					}
-					random_list = {
-						30 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = ANTI_HISTORICAL
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = DEMOCRATIC_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = COMMUNIST_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_FASCIST }
-							set_add_fascist_game_weight_large = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = DEMOCRATIC_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = COMMUNIST_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_FASCIST_ALTERNATE }
-							set_add_fascist_game_weight_large = yes
-						}
-						15 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = DEMOCRATIC_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = COMMUNIST_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN }
-							set_add_fascist_game_weight_large = yes
-						}
-						20 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_fascist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = DEMOCRATIC_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = COMMUNIST_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA }
-							set_add_fascist_game_weight_large = yes
-						}
-						10 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = COMMUNIST_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC }
-							set_add_democratic_game_weight_large = yes
-						}
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_democratic = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = COMMUNIST_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY }
-							set_add_democratic_weight_small = yes
-						}
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = DEMOCRATIC_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST }
-							set_add_communist_weight_small = yes
-						}
-						5 = {
-							modifier = {
-								factor = 0.40
-								game_weight_can_add_communist = no
-								NOT = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = NO_GAME_BALANCE
-									}
-								}
-							}
-							modifier = {
-								factor = 0
-								NOT = { has_dlc = "Waking the Tiger" }
-							}
-							modifier = {
-								factor = 0
-								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = FASCIST_ONLY
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MONARCHIST_ONLY
-									}
-									AND = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = DEMOCRATIC_ONLY
-										}
-										has_dlc = "Waking the Tiger"
-									}
-								}
-							}
-							JAP = { set_country_flag = JAP_AI_RANDOM_COMMUNIST_ASIAN_SOLIDARITY }
-							set_add_communist_weight_small = yes
-						}
-					}
 				}
 			}
 			ROM = {

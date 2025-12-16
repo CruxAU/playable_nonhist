@@ -1095,18 +1095,15 @@ JAP_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = FASCIST_ALTERNATE
-		text = "RULE_OPTION_FASCIST_ALTERNATE"
-		desc = "RULE_FASCIST_ALTERNATE_JAP_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
+		exclude_dlc = "No Compromise, No Surrender"
+		required_dlc = "Waking the Tiger"
 		name = NEUTRALITY_SHOGUN
 		text = "RULE_OPTION_NEUTRALITY_SHOGUN"
 		desc = "RULE_OPTION_NEUTRALITY_SHOGUN_JAP_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
+		required_dlc = "Waking the Tiger"
 		name = NEUTRALITY_SHOWA
 		text = "RULE_OPTION_NEUTRALITY_SHOWA"
 		desc = "RULE_OPTION_NEUTRALITY_SHOWA_JAP_AI_DESC"
@@ -1127,6 +1124,7 @@ JAP_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "No Compromise, No Surrender"
 		required_dlc = "Waking the Tiger"
 		name = COMMUNIST_ASIAN_SOLIDARITY
 		text = "RULE_OPTION_COMMUNIST_ASIAN_SOLIDARITY"
@@ -1141,6 +1139,7 @@ JAP_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "No Compromise, No Surrender"
 		required_dlc = "Waking the Tiger"
 		name = DEMOCRATIC_PACIFIC_TREATY
 		text = "RULE_OPTION_DEMOCRATIC_PACIFIC_TREATY"

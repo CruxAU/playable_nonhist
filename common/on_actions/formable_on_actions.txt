@@ -41,6 +41,12 @@ on_actions = {
 					release = TRA
 					release = MOL
 				}
+				MOL = {
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+					}	
+				}
 			}
 			# Game Rules - Formables
 			if = {

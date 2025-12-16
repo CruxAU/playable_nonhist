@@ -1,0 +1,539 @@
+JAP_alternate_plan_communist = {
+	name = "Communist Japan Plan"
+	desc = "A red sun rises"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		OR = {
+			has_country_flag = JAP_AI_RANDOM_COMMUNIST
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		JAP_the_unthinkable_option
+		JAP_approach_the_young_officers
+		JAP_army_expansion_law
+		JAP_new_naval_estimates
+		JAP_exchange_the_exiles
+		#1937	
+		JAP_cast_the_die
+		JAP_nationalize_the_zaibatsus
+		JAP_red_brigades
+		JAP_open_up_the_universities
+		JAP_public_works
+		#1938
+		JAP_the_fate_of_the_imperial_family
+		JAP_reeducation_campaign
+		JAP_rebuild_the_civil_service
+		JAP_people_owned_mines
+		JAP_small_arms_modernization
+		#1939
+		JAP_army_expansion
+		JAP_supremacy_of_technology
+		JAP_fighter_modernization
+		JAP_agility_focus
+		JAP_communist_volunteers
+		#1940
+		JAP_finish_the_fight
+		JAP_join_comintern
+		JAP_tokyo_aluminum_plant
+		JAP_carrier_warfare_experiments
+		JAP_first_air_fleet
+		#1941
+		JAP_the_zero
+		JAP_unified_fighter_development
+		JAP_expand_the_snlf
+		JAP_cruiser_modernization
+		JAP_long_lance_torpedoes
+		#1942 onwards
+		JAP_torpedo_cruisers
+	}
+
+	ideas = {
+
+		#Spirits of the Army, Airforce and Navy 
+		bold_attack_spirit = 5
+		tenacious_defense_spirit = 0
+		meticulous_preparation_spirit = 0
+		best_of_the_best_spirit = 0
+		academy_scholarships_spirit = 0
+		political_loyalty_spirit = 0.1
+		inventive_leadership_spirit = 1
+		
+		professional_officer_corps_spirit = 1
+		elevated_engineering_corps_spirit = 0
+		proper_heritage_spirit = 0
+		quick_improvisation_spirit = 0
+		state_serves_the_military_spirit = 1
+
+		static_warfare_spirit = 0
+		flexible_organization_spirit = 1
+		aggressive_reconnaisance_spirit = 0
+		reserve_officers_spirit = 0
+		victory_or_death_spirit = 1
+
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+JAP_alternate_plan_communist_asia = {
+	name = "Communist Japan Plan 2"
+	desc = "A red sun rises"
+
+	allowed = {
+		original_tag = JAP
+		has_dlc = "Waking the Tiger"
+	}
+	enable = {
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		OR = {
+			has_country_flag = JAP_AI_RANDOM_COMMUNIST_ASIAN_SOLIDARITY
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = COMMUNIST_ASIAN_SOLIDARITY
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		JAP_the_unthinkable_option
+		JAP_approach_the_young_officers
+		JAP_army_expansion_law
+		JAP_new_naval_estimates
+		JAP_exchange_the_exiles
+		#1937	
+		JAP_cast_the_die
+		JAP_nationalize_the_zaibatsus
+		JAP_red_brigades
+		JAP_open_up_the_universities
+		JAP_public_works
+		#1938
+		JAP_the_fate_of_the_imperial_family
+		JAP_reeducation_campaign
+		JAP_rebuild_the_civil_service
+		JAP_people_owned_mines
+		JAP_small_arms_modernization
+		#1939
+		JAP_army_expansion
+		JAP_communist_volunteers
+		JAP_finish_the_fight
+		JAP_asian_communist_solidarity
+		JAP_supremacy_of_technology
+		#1940
+		JAP_fighter_modernization
+		JAP_agility_focus
+		JAP_tokyo_aluminum_plant
+		JAP_carrier_warfare_experiments
+		JAP_first_air_fleet
+		#1941
+		JAP_the_zero
+		JAP_unified_fighter_development
+		JAP_expand_the_snlf
+		JAP_cruiser_modernization
+		JAP_long_lance_torpedoes
+		#1942 onwards
+		JAP_torpedo_cruisers
+	}
+
+	ideas = {
+
+		#Spirits of the Army, Airforce and Navy 
+		bold_attack_spirit = 5
+		tenacious_defense_spirit = 0
+		meticulous_preparation_spirit = 0
+		best_of_the_best_spirit = 0
+		academy_scholarships_spirit = 0
+		political_loyalty_spirit = 0.1
+		inventive_leadership_spirit = 1
+		
+		professional_officer_corps_spirit = 1
+		elevated_engineering_corps_spirit = 0
+		proper_heritage_spirit = 0
+		quick_improvisation_spirit = 0
+		state_serves_the_military_spirit = 1
+
+		static_warfare_spirit = 0
+		flexible_organization_spirit = 1
+		aggressive_reconnaisance_spirit = 0
+		reserve_officers_spirit = 0
+		victory_or_death_spirit = 1
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+JAP_alternate_plan_modern_shogunate = {
+	name = "Neutrality Japan Plan"
+	desc = "Japan pushes north"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		OR = {
+			has_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOGUN
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = NEUTRALITY_SHOGUN
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		
+		JAP_army_expansion_law
+		JAP_support_the_kodoha_faction
+		JAP_challenge_the_zaibatsus
+		JAP_army_expansion
+		JAP_national_mobilization_law
+		#1937
+		JAP_modern_shogunate
+		JAP_supremacy_of_will
+		JAP_national_research_policy
+		JAP_imperial_arsenals
+		JAP_prepare_for_war_with_the_soviet_union
+		#1938
+		JAP_fighter_modernization
+		JAP_range_focus
+		JAP_join_the_london_naval_treaty
+		JAP_build_up_the_manchurian_army
+		JAP_create_a_manchurian_imperial_air_force
+		#1939
+		JAP_non_aggression_pact_with_china
+		JAP_support_the_russian_exiles #alt focus
+		JAP_the_manchurian_project
+		JAP_fortify_the_border
+		JAP_expand_manchurian_railways
+		JAP_heavy_industry_development
+		#1940
+		JAP_expand_mengkukuo #alt focus
+		JAP_tech_sharing_with_russia #alt focus
+		JAP_technological_exchange
+		JAP_preemptive_war
+		JAP_help_from_russian_exiles #asap
+		JAP_expand_the_showa_steel_works
+		JAP_light_industry_development
+		JAP_establish_the_northern_resource_area_alt #alt focus
+		#1941
+		JAP_turn_our_gaze_eastward_alt #alt focus
+		JAP_japanese_settlement
+		JAP_new_naval_estimates
+		JAP_small_arms_modernization
+		JAP_bicycle_battalions
+		JAP_bomber_modernization
+		#1942
+		JAP_turn_our_gaze_eastward #asap
+		JAP_national_defense_state
+		JAP_spiritual_mobilization
+		JAP_warrior_spirit
+		JAP_establish_the_northern_resource_area
+		#1943
+		JAP_german_rocketry
+		JAP_supremacy_of_the_battlefleet
+		JAP_expand_the_snlf
+		JAP_unified_fighter_development
+		JAP_jet_prototypes
+		JAP_strengthen_the_divine_wind
+		#any focus in any orders from here
+		
+		
+		
+		
+		
+		
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+JAP_alternate_plan_showa_restoration = {
+	name = "Neutrality Japan Plan"
+	desc = "Japan follows the emperor"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		OR = {
+			has_country_flag = JAP_AI_RANDOM_NEUTRALITY_SHOWA
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = NEUTRALITY_SHOWA
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		JAP_army_expansion_law
+		JAP_support_the_kodoha_faction
+		JAP_challenge_the_zaibatsus
+		JAP_small_arms_modernization
+		JAP_army_expansion
+		#1937
+		JAP_showa_restoration
+		JAP_supremacy_of_technology
+		JAP_bicycle_battalions
+		JAP_modern_artillery
+		JAP_national_research_policy
+		#1938
+		JAP_national_mobilization_law
+		JAP_imperial_arsenals
+		JAP_prepare_for_war_with_the_soviet_union
+		JAP_join_the_london_naval_treaty
+		JAP_non_aggression_pact_with_china
+		#1939
+		JAP_fighter_modernization
+		JAP_range_focus
+		JAP_new_naval_estimates
+		JAP_build_up_the_manchurian_army
+		JAP_the_manchurian_project
+		#1940
+		JAP_fortify_the_border
+		JAP_expand_manchurian_railways
+		JAP_expand_the_showa_steel_works
+		JAP_create_a_manchurian_imperial_air_force
+		JAP_support_the_russian_exiles #alt focus
+		JAP_light_industry_development
+		#1941
+		JAP_tech_sharing_with_russia #alt focus
+		JAP_heavy_industry_development
+		JAP_japanese_settlement
+		JAP_armored_divisions
+		JAP_expand_mengkukuo #alt focus
+		JAP_supremacy_of_the_battlefleet
+		JAP_expand_the_snlf
+		#1942
+		JAP_technological_exchange
+		JAP_preemptive_war
+		JAP_establish_the_northern_resource_area_alt #alt focus
+		JAP_national_defense_state
+		JAP_spiritual_mobilization
+		JAP_help_from_russian_exiles
+		JAP_bomber_modernization
+		JAP_turn_our_gaze_eastward_alt #alt focus
+		#1943
+		JAP_establish_the_northern_resource_area
+		JAP_german_rocketry
+		JAP_the_ultimate_battleship
+		JAP_cruiser_modernization
+		JAP_long_lance_torpedoes
+		#1944
+		#any focus order from here
+	
+	}
+
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+JAP_alternate_plan_democratic = {
+	name = "Democracy Japan Plan"
+	desc = "Japan goes democratic"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		OR = {
+			has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		JAP_strengthen_civilian_government
+		JAP_research_spending
+		JAP_ally_with_the_zaibatsus
+		JAP_purge_the_militarists
+		JAP_pre_emptive_coup
+		#1937
+		JAP_the_showa_constitution
+		JAP_army_expansion_law
+		JAP_new_naval_estimates
+		JAP_rekindle_the_old_alliance
+		JAP_west_pacific_treaty_organization #backup if Britain non-democratic
+		JAP_cruiser_modernization
+		#1938
+		JAP_carrier_warfare_experiments
+		JAP_small_arms_modernization
+		JAP_supremacy_of_technology
+		JAP_first_air_fleet
+		JAP_fighter_modernization
+		#1939
+		JAP_range_focus
+		JAP_bomber_modernization
+		JAP_strategic_bomber_effort
+		JAP_pacific_guardian
+		JAP_the_korean_question
+		#1940
+		JAP_modern_artillery
+		JAP_armored_divisions
+		JAP_liberate_manchuria
+		JAP_anti_communist_bulwark
+		JAP_anti_communist_volunteers
+		#1941
+		JAP_ultimate_deterrence
+		JAP_modern_escorts
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+JAP_alternate_plan_democratic_pacific_treaty = {
+	name = "Democracy Japan Plan 2"
+	desc = "Japan goes democratic"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		OR = {
+			has_country_flag = JAP_AI_RANDOM_DEMOCRATIC_PACIFIC_TREATY
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = DEMOCRATIC_PACIFIC_TREATY
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		JAP_strengthen_civilian_government
+		JAP_research_spending
+		JAP_ally_with_the_zaibatsus
+		JAP_purge_the_militarists
+		JAP_pre_emptive_coup
+		#1937
+		JAP_the_showa_constitution
+		JAP_army_expansion_law
+		JAP_new_naval_estimates
+		JAP_west_pacific_treaty_organization 
+		JAP_rekindle_the_old_alliance #backup if somehow a puppet by now
+		JAP_cruiser_modernization
+		#1938
+		JAP_carrier_warfare_experiments
+		JAP_small_arms_modernization
+		JAP_the_korean_question
+		JAP_liberate_manchuria
+		JAP_supremacy_of_technology
+		#1939
+		JAP_range_focus
+		JAP_bomber_modernization
+		JAP_strategic_bomber_effort
+		JAP_pacific_guardian
+		JAP_first_air_fleet
+		#1940
+		JAP_fighter_modernization
+		JAP_modern_artillery
+		JAP_armored_divisions
+		JAP_anti_communist_bulwark
+		JAP_anti_communist_volunteers
+		#1941
+		JAP_ultimate_deterrence
+		JAP_modern_escorts
+		JAP_full_sovereignty_for_the_philippines
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
