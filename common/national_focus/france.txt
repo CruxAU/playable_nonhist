@@ -2155,7 +2155,10 @@
 					}
 				}
 				set_rule = { can_create_factions = yes }
-				create_faction = FRA_anti_fascist_coalition
+				create_faction_from_template = {
+					template = faction_template_anti_fascist
+					name = FRA_anti_fascist_coalition
+				}
 				every_neighbor_country = {
 					limit = {
 						is_in_faction = no
@@ -8082,7 +8085,10 @@
 					country_exists = SPB
 				}
 				set_rule = { can_create_factions = yes }
-				create_faction = FRA_legitimist_faction
+				create_faction_from_template = {
+					template = faction_template_legitimiste_FRA
+					name = FRA_legitimist_faction
+				}
 				SPB = { country_event = generic.5 }
 			}
 			else = {

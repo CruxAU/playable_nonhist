@@ -6733,7 +6733,10 @@ DEN_danish_security_category = {
 								}
 							}
 							FROM = {
-								create_faction = DEN_north_sea_alliance
+								create_faction_from_template = {
+									template = faction_template_DEN_nordic_cooperation_alliance
+									name = DEN_north_sea_alliance
+								}
 								add_to_faction = ROOT
 							}
 						}
@@ -6744,7 +6747,10 @@ DEN_danish_security_category = {
 								}
 							}
 							FROM = {
-								create_faction = DEN_normandy_treaty
+								create_faction_from_template = {
+									template = faction_template_DEN_nordic_cooperation_alliance
+									name = DEN_normandy_treaty
+								}
 								add_to_faction = ROOT
 							}
 						}
@@ -6755,7 +6761,10 @@ DEN_danish_security_category = {
 								}
 							}
 							FROM = {
-								create_faction = DEN_bonn_copenhagen_declarations
+								create_faction_from_template = {
+									template = faction_template_DEN_nordic_cooperation_alliance
+									name = DEN_bonn_copenhagen_declarations
+								}
 								add_to_faction = ROOT
 							}
 						}
@@ -6766,12 +6775,15 @@ DEN_danish_security_category = {
 								}
 							}
 							FROM = {
-								create_faction = DEN_baltic_sea_zone
+								create_faction_from_template = {
+									template = faction_template_DEN_nordic_cooperation_alliance
+									name = DEN_baltic_sea_zone
+								}
 								add_to_faction = ROOT
 							}
 						}
 						else = {
-							create_faction = DEN_nordic_cooperation_alliance
+							create_faction_from_template = faction_template_DEN_nordic_cooperation_alliance
 							add_to_faction = FROM
 						}
 					}

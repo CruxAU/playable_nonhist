@@ -68,11 +68,6 @@ country_event = {
 					has_government = fascism
 				}
 			}
-			modifier  = {
-				factor = 0
-				is_subject = yes
-				OVERLORD = { is_ai = no }
-			}
 		}
 		FROM = {
 			country_event = {
@@ -380,6 +375,34 @@ country_event = {
 		name = iceland_events.7.a
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				NOT = { #if they are commmunist you can't pick the other option
+					DEN = { has_government = communism}
+				}
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_CONMON
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_CONMON
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_CONMON_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_CONMON_GREENLAND
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_KING
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_KING
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_KING_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_KING_GREENLAND
+					}
+				}
+			}
 		}
 		FROM = {
 			end_puppet = ROOT
@@ -403,6 +426,21 @@ country_event = {
 		name = iceland_events.7.b
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC_GREENLAND
+					}
+				}
+			}
 		}
 		trigger = {
 			NOT = {
@@ -452,7 +490,7 @@ country_event = {
 	option = { 
 		name = iceland_events.8.b
 		ai_chance = {
-			base = 1
+			base = 0 #NHMMAP
 		}
 		FROM = {
 			country_event = {
@@ -481,6 +519,21 @@ country_event = {
 		name = iceland_events.9.a
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_CONMON
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_CONMON
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_CONMON_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_CONMON_GREENLAND
+					}
+				}
+			}
 		}
 		add_opinion_modifier = {
 			target = DEN
@@ -494,6 +547,10 @@ country_event = {
 		}
 		set_politics = {
 			ruling_party = neutrality
+		}
+		add_popularity = { #NHMMAP
+			ideology = neutrality
+			popularity = 0.35
 		}
 		set_cosmetic_tag = ICE_independent_kingdom
 		ICE_king_knud = {
@@ -519,6 +576,21 @@ country_event = {
 		name = iceland_events.9.b
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_KING
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_KING
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_KING_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_KING_GREENLAND
+					}
+				}
+			}
 		}
 		add_opinion_modifier = {
 			target = DEN
@@ -1340,9 +1412,48 @@ country_event = {
 	}
 	# Elect Svein
 	option = { 
-		name = iceland_events.45.a
+		name = iceland_events.45.a #historical guy
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 0
+				DEN = {
+					has_government = democratic
+				}
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC_GREENLAND
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_NEU_REJECT_FORK
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = NEU_REJECT_FORK
+					}
+				}
+			}
+			modifier = { #ONLY IF STILL A DANISH SUBJECT ON HISTORICAL
+				factor = 0
+				is_subject_of = DEN
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = neutrality
@@ -1354,9 +1465,55 @@ country_event = {
 	}
 	# Hermann served us well
 	option = { 
-		name = iceland_events.45.b
+		name = iceland_events.45.b #democratic neutrality guy
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				DEN = {
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC_GREENLAND
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_subject_of = USA
+					is_subject_of = ENG
+				}
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
+			modifier = { #ONLY IF STILL A DANISH SUBJECT ON HISTORICAL
+				factor = 0
+				is_subject_of = DEN
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = democratic
@@ -1369,9 +1526,51 @@ country_event = {
 
 	# Ólafur for the win 
 	option = { 
-		name = iceland_events.45.c
+		name = iceland_events.45.c #democratic independence guy
 		ai_chance = {
 			base = 1
+			modifier = {
+				factor = 0
+				DEN = {
+					has_government = neutrality
+				}
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC
+					}
+					has_country_flag = ICE_AI_RANDOM_DEN_EQUAL_REPUBLIC_GREENLAND
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = DEN_EQUAL_REPUBLIC_GREENLAND
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_DEN_NEU_REJECT_FORK
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = NEU_REJECT_FORK
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_subject_of = USA
+					is_subject_of = ENG
+				}
+				OR = {
+					has_country_flag = ICE_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = ICE_ai_behavior
+						option = HISTORICAL
+					}
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = democratic
@@ -1385,7 +1584,7 @@ country_event = {
 	option = { 
 		name = iceland_events.45.d
 		ai_chance = {
-			base = 1
+			base = 50 #always choose if available
 		}
 		trigger = {
 			has_completed_focus = ICE_fighting_as_equals
@@ -1403,7 +1602,7 @@ country_event = {
 	option = { 
 		name = iceland_events.45.e
 		ai_chance = {
-			base = 1
+			base = 50 #always choose if available
 		}
 		trigger = {
 			has_completed_focus = ICE_fighting_as_equals

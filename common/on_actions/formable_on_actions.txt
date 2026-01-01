@@ -48,6 +48,8 @@ on_actions = {
 					}	
 				}
 			}
+
+			
 			# Game Rules - Formables
 			if = {
 				limit = {
@@ -240,6 +242,7 @@ on_actions = {
 					}
 				}
 				ADU = {
+					change_tag_from = OMA
 					annex_country = {
 						target = SPR
 						transfer_troops = yes
@@ -256,7 +259,6 @@ on_actions = {
 						target = YEM
 						transfer_troops = yes
 					}
-					change_tag_from = OMA
 					annex_country = {
 						target = OMA
 						transfer_troops = yes
@@ -299,6 +301,7 @@ on_actions = {
 								is_core_of = UAE
 								is_core_of = CYP
 								is_core_of = QAT
+								is_core_of = IMO
 								state = 1
 								state = 114
 								state = 115
@@ -324,12 +327,6 @@ on_actions = {
 							NOT = { state = 430 }
 						}
 						ADU = { transfer_state = PREV }
-						add_core_of = ADU
-					}
-					every_state = {
-						limit = {
-							is_owned_by = ADU
-						}
 						add_core_of = ADU
 					}
 					set_global_flag = form_andalusia_flag
@@ -395,10 +392,11 @@ on_actions = {
 								is_core_of = IRQ
 								is_core_of = KUW
 								is_core_of = UAE
-								is_core_of = LBA
 								is_core_of = OMA
 								is_core_of = QAT
+								is_core_of = SAU
 								state = 551
+								state = 883
 							}
 						}
 						IRQ = { transfer_state = PREV }
@@ -461,10 +459,11 @@ on_actions = {
 								is_core_of = IRQ
 								is_core_of = KUW
 								is_core_of = UAE
-								is_core_of = LBA
+								is_core_of = SAU
 								is_core_of = OMA
 								is_core_of = QAT
 								state = 551
+								state = 883
 							}
 						}
 						SAU = { transfer_state = PREV }

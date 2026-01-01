@@ -786,7 +786,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_legalize_zveno
 
 		ai_will_do = {
-			base = 20
+			base = 500
 		}
 
 		allowed = { 
@@ -862,7 +862,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_legalize_bs
 
 		ai_will_do = {
-			base = 10
+			base = 500
 			modifier = {
 				factor = 0.1
 				BUL_is_historical_ai = yes #Not a prio thing for Boris
@@ -951,7 +951,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_legalize_bzns
 
 		ai_will_do = {
-			base = 10
+			base = 500
 			modifier = {
 				factor = 0
 				BUL_is_fascist_axis_ai = yes
@@ -1021,7 +1021,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_legalize_nsm
 
 		ai_will_do = {
-			base = 10
+			base = 500
 		}
 
 		allowed = { 
@@ -3363,9 +3363,9 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_destroy_zveno
 
 		ai_will_do = {
-			base = 100
+			base = 500
 			modifier = {
-				factor = 1000
+				factor = 10
 				has_country_flag = BUL_impending_zveno_coup
 			}
 		}
@@ -3439,7 +3439,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_destroy_bs
 
 		ai_will_do = {
-			base = 100
+			base = 500
 		}
 
 		allowed = { 
@@ -3485,7 +3485,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_destroy_bzns
 
 		ai_will_do = {
-			base = 100
+			base = 500
 		}
 
 		allowed = { 
@@ -3531,7 +3531,7 @@ BUL_internal_factions = {
 		icon = GFX_decision_bul_destroy_nsm
 
 		ai_will_do = {
-			base = 100
+			base = 500
 		}
 
 		allowed = { 

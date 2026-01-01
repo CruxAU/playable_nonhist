@@ -1,0 +1,105 @@
+ICE_historical_plan = {
+	name = "Iceland historical plan"
+	desc = "Historical behavior for Iceland"
+
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = ICE_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ICE_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = ICE_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	#abort = { 
+	#
+	#}
+
+	ai_national_focuses = {
+		# Do whenever possible 
+
+		#1936
+		ICE_international_trade
+		ICE_the_armed_forces_of_iceland
+		ICE_the_kingdom_of_iceland	
+		ICE_declare_absolute_neutrality
+		ICE_expand_the_fishing_industry
+
+		#1937
+		ICE_engineering_projects
+		ICE_a_naval_hub_in_the_atlantic
+		ICE_infrastructure_projects
+		ICE_agricultural_expansion
+		ICE_hydroelectric_power
+
+		#1938
+		ICE_develop_icelandic_shipping
+		ICE_expand_the_harbour
+		ICE_banking_on_the_future
+		ICE_the_icelandic_police_force
+		ICE_gardhur_airfield
+
+		#1939 
+		ICE_the_merchant_fleet
+		ICE_anglo_icelandic_relations
+		ICE_political_unity
+		ICE_expand_industrial_complexes
+		ICE_mine_iceland
+
+		#1940
+		ICE_modernizing_the_coast_guard
+		ICE_support_equipment
+		ICE_emergency_conversions
+		ICE_reykjavik_dockyards
+		ICE_expand_the_civilian_fleet
+
+		#1941
+		ICE_expanding_the_university_of_reykjavik
+		ICE_american_protection
+		ICE_modernizing_the_island
+		ICE_keflavik_airbase
+		ICE_trade_relations
+
+		#1942
+		ICE_american_investments
+		ICE_american_soldiers
+		ICE_republicanism
+		ICE_iceland_defense_force
+
+		
+
+	}
+
+	#Focuses never to take
+	focus_factors = {
+		
+	}			
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

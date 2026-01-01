@@ -1343,6 +1343,17 @@ country_event = { #Someone attacked us :'(
 		hidden_effect = {
 			clr_country_flag = DEN_neutrality_flag
 			SWE_is_denmark_mostly_occupied = yes
+			if = {
+				limit = {
+					ICE = {
+						has_completed_focus = ICE_united_we_stand
+						is_subject_of = DEN
+					}
+				}
+				ICE = {
+					set_country_flag = ICE_will_surrender_with_DEN
+				}
+			}
 		}
 	}
 	option = { #Fight On!
@@ -1638,6 +1649,25 @@ country_event = { #Denmark becomes a puppet
 		FROM = {
 			add_ideas = DEN_sahnefront_ns
 		}
+
+		IF = {
+			limit = {
+				ICE = {
+					has_country_flag = ICE_will_surrender_with_DEN
+				}
+			}
+			ROOT = { 
+				puppet = {
+					target = ICE
+					end_wars = yes
+				} 
+				ICE = {
+					restore_ideology_popularities = yes 
+					restore_ruling_party = yes
+				}
+			}
+		}
+		
 		hidden_effect = {
 			every_other_country = {
 				limit = {
@@ -10696,7 +10726,10 @@ country_event = { #Germany Rejects Denmark
 			}
 			set_rule = { can_create_factions = yes }
 		}
-		create_faction = DEN_northern_national_front
+		create_faction_from_template = {
+			template = faction_template_DEN_nordic_cooperation_alliance
+			name = DEN_northern_national_front
+		}
 		custom_effect_tooltip = DEN_remove_declaration_of_neutrality_tt
 		unlock_decision_tooltip = DEN_northern_national_front_invitation
 

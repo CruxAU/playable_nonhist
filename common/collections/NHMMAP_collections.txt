@@ -1,0 +1,47 @@
+states_in_the_north_sea = {
+	input = game:all_states
+	operators = {
+		limit = {
+			OR = {
+				region = 275 
+				region = 207
+				region = 11
+				region = 191
+				region = 16
+				region = 45
+				region = 4
+				region = 3
+				region = 2
+				region = 1
+				region = 161
+				region = 36
+			}
+		}
+	}
+	name = COLLECTION_STATES_IN_NORTH_SEA
+}
+
+faction_states_in_the_north_sea = {
+	input = game:scope
+	operators = {
+		faction_members
+		controlled_states
+		limit = {
+			OR = {
+				region = 275 
+				region = 207
+				region = 11
+				region = 191
+				region = 16
+				region = 45
+				region = 4
+				region = 3
+				region = 2
+				region = 1
+				region = 161
+				region = 36
+			}
+		}
+	}
+	name = COLLECTION_FACTION_CONTROLLED_STATES_IN_NORTH_SEA
+}

@@ -715,7 +715,7 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			base = 1
+			base = 4
 			modifier = {
 				factor = 0
 				AND = {

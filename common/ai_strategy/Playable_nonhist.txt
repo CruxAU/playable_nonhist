@@ -1795,6 +1795,146 @@ ENG_mosley_attack_germany_no_matter_what = { #makes mosley not just sit on his g
 	}
 }
 
+ENG_mosley_paths_avoid_wars = { #makes england try to avoid going to war if they are still in the middle of turning fascist (because war will drop their stability too much)
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		ENG = {
+			has_completed_focus = ENG_organize_the_blackshirts
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+	
+	abort = {
+		ENG = { has_government = fascism }
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = USA
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = POL
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = CZE
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = AUS
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = ITA
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = DEN
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = IRQ
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = RAJ
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = PER
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = DEN
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = ITA
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = AFG
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = CHI
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = VEN
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = SAF
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = JAP
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = GER
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = HOL
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = BEL
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = declare_war
+		id = COG
+		value = -500
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = JAP
+		value = -2000
+		target = join_allies
+	}
+}
+
 ENG_scw_volunteers_carlists = {
 	allowed = { original_tag = ENG }
 	enable = { 
@@ -3267,6 +3407,23 @@ italian_civil_war_GER_support = {
 		type = send_volunteers_desire
 		id = RSI
 		value = 300
+	}
+}
+
+GER_yeah_im_busy_rn_dont_at_me = { #despite how it looks, this doesn't work on the hitler german tag too. but they never use the axis anyways sooo. no issues right?
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		GER = {
+			has_civil_war = yes
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = -500
 	}
 }
 

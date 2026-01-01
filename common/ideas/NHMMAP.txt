@@ -756,10 +756,10 @@ ideas = {
 					}
 					GER = {
 						dismantle_faction = yes
-						create_faction = GER_axis_after_breakup
+						create_faction = GER_axis_after_breakup #TODO NHMMAP YOU CANNOT CREATE FROM TEMPLATE HERE!!! Creating a faction from template on an idea removal call crashes the game!!!!
 					}
 					SOV = {
-						create_faction = SOV_comintern_after_breakup
+						create_faction = SOV_comintern_after_breakup #I need to figure out a better way to do it. Maybe trigger an event that creates the factions instead!
 					}
 				}
 			}

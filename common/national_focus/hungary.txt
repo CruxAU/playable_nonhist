@@ -1980,7 +1980,10 @@ focus_tree = {
 				}
 				HUN = {
 					set_rule = { can_create_factions = yes }
-					create_faction = HUN_PACT_OF_ROME_FACTION
+					create_faction_from_template = {
+						template = faction_template_ITA_italian_league
+						name = HUN_PACT_OF_ROME_FACTION
+					}
 					ITA = { 
 						country_event = generic.5 
 						add_ai_strategy = {

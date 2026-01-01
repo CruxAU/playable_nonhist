@@ -36497,7 +36497,11 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = "GER_central_powers_faction"
+				create_faction_from_template = {
+					template = faction_template_GER_mitteleuropa_alliance
+					name = GER_central_powers_faction
+					icon = GFX_faction_logo_generic_13
+				}
 			}
 
 			if = {
@@ -38060,7 +38064,10 @@ focus_tree = {
 				limit = {
 					NOT = { is_in_faction = yes }
 				}
-				create_faction = "GER_anti_communist_bloc"
+				create_faction_from_template = {
+					template = faction_template_anti_communist
+					name = GER_anti_communist_bloc
+				}
 			}
 			create_wargoal = {
 				type = annex_everything
@@ -38309,7 +38316,10 @@ focus_tree = {
 					limit = {
 						is_in_faction = no
 					}
-					create_faction = "GER_central_european_alliance"
+					create_faction_from_template = {
+						template = faction_template_GER_mitteleuropa_alliance
+						name = GER_central_european_alliance
+					}
 				}
 			}
 			every_country = {

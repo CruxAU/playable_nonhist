@@ -715,28 +715,31 @@ SWI_federal_council_decisions_category = {
 				exists = yes 
 				is_in_faction = no
 				NOT = { has_country_flag = SWI_entente_request_sent }
+				has_war = no #countries at war don't get invited
 				OR = {
-					has_idea = neutrality_idea 
+					has_idea = neutrality_idea #at game start sweden has this idea, and iceland gets it if they do the relevant focus
 					has_idea = HOL_aloof_neutrality
-					AND = {
+					has_idea = YUG_neutral_foreign_policy
+					has_idea = ARG_maintain_neutrality_idea
+					has_idea = DEN_declaration_of_neutrality
+					#has_idea = USA_neutrality_act_aat #commented out since USA is kind of OP and also not *really* neutral since big Teddy R wants to go to war with Germany so bad.
+					#has_idea = USA_neutrality_act 
+					AND = { #portugal is neutral if they do this focus
 						original_tag = POR 
 						has_completed_focus = POR_strengthen_the_regime
 					}
-					AND = {
+					AND = { #Turkey is neutral if they aren't assertive ideologies
 						original_tag = TUR
 						NOT = {
 							has_government = communism
 							has_government = fascism
+							has_completed_focus = TUR_pivot_to_the_past
 						}
 					}
-					AND = {
-						OR = {
-							original_tag = IRE
-							original_tag = YEM
-							original_tag = SAU
-							original_tag = AFG 
-						}
-					}
+					#these countries are pretty much always neutral, and we already check if they are at war or in a faction already
+					original_tag = IRE
+					original_tag = YEM
+					original_tag = SAU
 					
 				}
 			}
@@ -755,7 +758,10 @@ SWI_federal_council_decisions_category = {
 						NOT = {	is_in_faction = yes	}
 					}
 				}
-				create_faction = SWI_neutral_entente_faction
+				create_faction_from_template = {
+					template = faction_template_defensive_neutrality
+					name = SWI_neutral_entente_faction
+				}
 			}
 		}
 

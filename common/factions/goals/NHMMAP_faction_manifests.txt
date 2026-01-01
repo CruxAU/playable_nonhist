@@ -1,0 +1,53 @@
+# Peace at any cost (SWI)
+faction_manifest_peace_at_any_cost = {
+	name = peace_at_any_cost_goal_name
+	description = protector_of_peace_goal_desc #same description as existing one
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = game:all_countries
+		completed_amount_collection = collection:world_at_peace_countries
+		
+		scale = {
+			production_speed_buildings_factor = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = { 
+					trade_opinion_factor = 0.15
+					stability_factor = 0.1
+					war_support_factor = -0.05
+				}			
+			}
+		}
+	}
+}
+
+# Nordic Defence 
+faction_manifest_north_sea_revolution = {
+	name = north_sea_revolutions_goal_name
+	description = north_sea_revolutions_goal_desc 
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_in_the_north_sea
+		completed_amount_collection = collection:faction_states_in_the_north_sea
+		
+		scale = {
+			army_attack_against_major_factor = 0.15
+			army_breakthrough_against_major_factor = 0.15
+			army_defence_against_major_factor = 0.15
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					non_core_manpower = 0.1	
+				}			
+			}
+		}
+	}
+}

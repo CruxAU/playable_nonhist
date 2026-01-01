@@ -1,3 +1,4 @@
+#Germanics only (ray-sism!)
 joining_rule_germanics_only = { 
 	type = joining_rules
 	visible = {
@@ -82,6 +83,83 @@ joining_rule_germanics_only = {
 					state = 85
 					state = 807
 				}
+			}
+		}
+	}
+}
+#Europe OR hispanic only
+joining_rule_euro_or_hispanic_only = {
+	type = joining_rules
+	visible = {
+		OR = {
+			capital_scope = { is_on_continent = europe }
+			original_tag = MEX
+			original_tag = RIG
+			original_tag = YUC
+			original_tag = ARG
+			original_tag = CHL
+			original_tag = PRU
+			original_tag = PAR
+			original_tag = URG
+			original_tag = BOL
+			original_tag = ECU
+			original_tag = COL
+			original_tag = VEN
+			original_tag = PAN
+			original_tag = PUE
+			original_tag = DOM
+			original_tag = CUB
+			original_tag = PAN
+			original_tag = COS
+			original_tag = NIC
+			original_tag = HON
+			original_tag = ELS
+			original_tag = EQG
+			original_tag = SPR
+			tag = SPA
+			tag = SPB
+			tag = SPC
+			tag = SPD
+		}
+	}
+	can_remove = {
+		faction_manifest_fulfillment > 0.7
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	modifier = {
+		war_support_factor = 0.03
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = is_euro_or_hispanic_country_tt
+			OR = {
+				original_tag = MEX
+				original_tag = RIG
+				original_tag = YUC
+				original_tag = ARG
+				original_tag = CHL
+				original_tag = PRU
+				original_tag = PAR
+				original_tag = URG
+				original_tag = BOL
+				original_tag = ECU
+				original_tag = COL
+				original_tag = VEN
+				original_tag = PAN
+				original_tag = PUE
+				original_tag = DOM
+				original_tag = CUB
+				original_tag = PAN
+				original_tag = COS
+				original_tag = NIC
+				original_tag = HON
+				original_tag = ELS
+				original_tag = EQG
+				original_tag = SPR
 			}
 		}
 	}

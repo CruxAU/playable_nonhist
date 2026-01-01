@@ -3506,7 +3506,10 @@ focus_tree = {
 					limit = {
 						has_global_flag = greek_turkish_friendship
 					}
-					create_faction = the_smyrna_friendship_pact
+					create_faction_from_template = {
+						template = faction_template_european_dominance
+						name = the_smyrna_friendship_pact
+					}
 					add_to_faction = TUR
 				}
 			}

@@ -206,18 +206,32 @@ ICE_infiltrate_the_british_isles_category = {
 						elections_allowed = no
 					}
 				}
+			}
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction_from_template = {
+					template = faction_template_ICE_north_sea_revolutions
+					name = ICE_north_sea_international
+				}
 			}	
+			else_if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				add_to_faction = SCO
+			}
+			else = {
+				#
+			}
 		}
 
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 100
-				has_war_support > 0.25
-			}
-			modifier = {
-				add = 100 
-				has_government = communism
+				add = 600
+				has_political_power > 150
 			}
 		}
 	}
@@ -313,12 +327,8 @@ ICE_infiltrate_the_british_isles_category = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 100
-				has_war_support > 0.25
-			}
-			modifier = {
-				add = 100 
-				has_government = communism
+				add = 600
+				has_political_power > 150
 			}
 		}
 	}
@@ -415,12 +425,8 @@ ICE_infiltrate_the_british_isles_category = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 100
-				has_war_support > 0.25
-			}
-			modifier = {
-				add = 100 
-				has_government = communism
+				add = 600
+				has_political_power > 150
 			}
 		}
 	}

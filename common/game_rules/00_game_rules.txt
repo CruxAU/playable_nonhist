@@ -6595,29 +6595,99 @@ ICE_ai_behavior = {
 	}
 	option = {
 		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
+		text = "RULE_OPTION_ICE_NEU_USA_PUPPET"
 		desc = "RULE_HISTORICAL_ICE_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = ICE_SUPPORT_DENMARK
-		text = "RULE_OPTION_ICE_SUPPORT"
-		desc = "RULE_OPTION_ICE_SUPPORT_AI_DESC"
+		name = NEU_ENG_PUPPET
+		text = "RULE_OPTION_ICE_NEU_ENG_PUPPET"
+		desc = "RULE_OPTION_ICE_NEU_ENG_PUPPET_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEU_REJECT_FORK
+		text = "RULE_OPTION_ICE_NEU_REJECT_FORK"
+		desc = "RULE_OPTION_ICE_NEU_REJECT_FORK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEU_REJECT_FORK_AXIS
+		text = "RULE_OPTION_ICE_NEU_REJECT_FORK_AXIS"
+		desc = "RULE_OPTION_ICE_NEU_REJECT_FORK_AXIS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_PUPPET
+		text = "RULE_OPTION_ICE_DEN_PUPPET"
+		desc = "RULE_OPTION_ICE_DEN_PUPPET_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_EQUAL_REPUBLIC
+		text = "RULE_OPTION_ICE_DEN_EQUAL_REPUBLIC"
+		desc = "RULE_OPTION_ICE_DEN_EQUAL_REPUBLIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_EQUAL_REPUBLIC_GREENLAND
+		text = "RULE_OPTION_ICE_DEN_EQUAL_REPUBLIC_GREENLAND"
+		desc = "RULE_OPTION_ICE_DEN_EQUAL_REPUBLIC_GREENLAND_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_EQUAL_CONMON
+		text = "RULE_OPTION_ICE_DEN_EQUAL_CONMON"
+		desc = "RULE_OPTION_ICE_DEN_EQUAL_CONMON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_EQUAL_CONMON_GREENLAND
+		text = "RULE_OPTION_ICE_DEN_EQUAL_CONMON_GREENLAND"
+		desc = "RULE_OPTION_ICE_DEN_EQUAL_CONMON_GREENLAND_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_EQUAL_KING
+		text = "RULE_OPTION_ICE_DEN_EQUAL_KING"
+		desc = "RULE_OPTION_ICE_DEN_EQUAL_KING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEN_EQUAL_KING_GREENLAND
+		text = "RULE_OPTION_ICE_DEN_EQUAL_KING_GREENLAND"
+		desc = "RULE_OPTION_ICE_DEN_EQUAL_KING_GREENLAND_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = ICE_FASCIST_PLAN
 		text = "RULE_OPTION_ICE_FASCIST"
 		desc = "RULE_OPTION_ICE_FASCIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ICE_FASCIST_EXP
+		text = "RULE_OPTION_ICE_FASCIST_EXP"
+		desc = "RULE_OPTION_ICE_FASCIST_EXP_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = ICE_COMMUNIST_PLAN
 		text = "RULE_OPTION_ICE_COMMUNIST"
 		desc = "RULE_OPTION_ICE_COMMUNIST_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ICE_COMMUNIST_EXP
+		text = "RULE_OPTION_ICE_COMMUNIST_EXP"
+		desc = "RULE_OPTION_ICE_COMMUNIST_EXP_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
 	}
 }
 
