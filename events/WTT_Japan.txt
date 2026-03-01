@@ -969,7 +969,7 @@ country_event = {
 				add = 10
 				OR = {
 					ITA_is_historical_ai = yes
-					ITA_is_historical_alternate_ai = yes
+					ITA_is_historical_alternate_ai = yes #NHMMAP
 					ITA_is_alt_fascist_balbo_ai = yes
 				}
 			}
@@ -1013,7 +1013,7 @@ country_event = {
 				factor = 0
 				OR = {
 					ITA_is_historical_ai = yes
-					ITA_is_historical_alternate_ai = yes
+					ITA_is_historical_alternate_ai = yes #NHMMAP
 					ITA_is_alt_fascist_balbo_ai = yes
 				}
 			}
@@ -1170,7 +1170,7 @@ country_event = {
 
 		}
 		add_popularity = { ideology = democratic popularity = 0.1 }
-		if = {
+		if = { #NHMMAP
 			limit = {
 				is_ai = yes
 			}
@@ -1728,7 +1728,7 @@ country_event = {
 		set_country_flag = achievement_JAP_sue_for_peace_CHI_completed
 		
 		ai_chance = {
-			factor = 90
+			base = 100
 		}
 	}
 
@@ -1739,71 +1739,8 @@ country_event = {
 			country_event = { id = wtt_japan.128 }
 		}
 		
-		ai_chance = { # If Japan has lots of major enemies, the AI will not make a separate peace
-			factor = 10
-			modifier = {
-				add = 50
-				USA = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = 40
-				ENG = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = 30
-				SOV = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = 20
-				FRA = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = 10
-				GER = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = 10
-				HOL = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = 10
-				ITA = {
-					has_war_with = JAP
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
-			}
+		ai_chance = { # AI never says no
+			base = 0 #NHMMAP TODO: Maybe add chance to say no if China has ambitions for japan??
 		}
 	}
 }
@@ -2067,57 +2004,225 @@ country_event = {
 				target = PRC
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = PRC
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = PRC
+			    value = -100
+			}
 			set_truce = {
 				target = CHI
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = CHI
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = CHI
+			    value = -100
 			}
 			set_truce = {
 				target = XSM
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = XSM
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = XSM
+			    value = -100
+			}
 			set_truce = {
 				target = SHX
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = SHX
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = SHX
+			    value = -100
 			}
 			set_truce = {
 				target = GXC
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = GXC
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = GXC
+			    value = -100
+			}
 			set_truce = {
 				target = YUN
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = YUN
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = YUN
+			    value = -100
 			}
 			set_truce = {
 				target = SIK
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = SIK
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = SIK
+			    value = -100
+			}
 			set_truce = {
 				target = XIC
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = XIC
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = XIC
+			    value = -100
 			}
 			set_truce = {
 				target = SND
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = SND
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = SND
+			    value = -100
+			}
 			set_truce = {
 				target = GDC
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = GDC
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = GDC
+			    value = -100
 			}
 			set_truce = {
 				target = SIC
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = SIC
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = SIC
+			    value = -100
+			}
 			set_truce = {
 				target = KHM
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = KHM
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = KHM
+			    value = -100
 			}
 			set_truce = {
 				target = NXM
 				days = 730
 			}
+			add_ai_strategy = {
+				type = antagonize
+				id = NXM
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = NXM
+			    value = -100
+			}
 			set_truce = {
 				target = GSM
 				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = GSM
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = GSM
+			    value = -100
+			}
+			set_truce = {
+				target = HBC
+				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = HBC
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = HBC
+			    value = -100
+			}
+			set_truce = {
+				target = KUM
+				days = 730
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = KUM
+				value = -100
+			}
+			add_ai_strategy = {
+			    type = conquer
+			    id = KUM
+			    value = -100
 			}
 		}
 	}

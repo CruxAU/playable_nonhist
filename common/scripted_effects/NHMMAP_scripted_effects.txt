@@ -1,4 +1,8 @@
-NHMMAP_inner_circle_randomiser = {
+NHMMAP_inner_circle_randomiser = { 
+	# This randomises the inner circle focuses that germany takes each game (only if they are fascist) 
+	# Hess and Bormann are more likely to choose, for extra PP.
+	# It should never select two advisors that are mutually exclusive, unless it has no choice. (so it shouldn't pick both Hess and Bormann for example)
+
 	random_list = {
 		1 = {
 			modifier = {

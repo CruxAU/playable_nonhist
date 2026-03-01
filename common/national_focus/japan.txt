@@ -10933,6 +10933,10 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_the_surrender_broadcast_tt
 
+			hidden_effect = {
+				set_global_flag = JAP_surrendered_through_their_focus_flag 
+			}
+
 		}
 	}
 
@@ -11159,6 +11163,10 @@ focus_tree = {
 					owns_state = 621
 					owns_state = 746
 				}
+			}
+			NOT = {
+				has_country_flag = JAP_suiyuan_campaign_has_started_flag
+				has_country_flag = JAP_suiyuan_campaign_has_ended_flag
 			}
 		}
 
@@ -23045,7 +23053,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_crush_the_internal_factions } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -23075,7 +23083,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
 
-		completion_reward = {
+		completion_reward = { #NHMMAP
 
 			add_war_support = 0.05
 
@@ -23115,8 +23123,6 @@ focus_tree = {
 					generator = { 610 716 328 715 714 717 }
 				}
 			}
-			unlock_decision_tooltip = JAP_return_manchuria
-			custom_effect_tooltip = JAP_liberate_manchuria_tt
 			
 		}
 	}

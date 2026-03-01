@@ -603,6 +603,7 @@ CHI_industrial_evacuations = {
 		available = {
 		}
 
+		on_map_mode = decision_view_only
 		highlight_states = {
 			highlight_state_targets = {
 				state = FROM
@@ -3018,7 +3019,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 
 		highlight_states = {
@@ -3084,7 +3085,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
  highlight_state_targets = {
@@ -3148,7 +3149,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 
 		highlight_states = {
@@ -3213,7 +3214,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		
 		visible = {
@@ -3277,7 +3278,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
  highlight_state_targets = {
@@ -3341,7 +3342,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
  highlight_state_targets = {
@@ -3405,7 +3406,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
  highlight_state_targets = {
@@ -3469,7 +3470,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
  highlight_state_targets = {
@@ -3533,7 +3534,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
 		 	highlight_state_targets = {
@@ -3597,7 +3598,7 @@ CHI_communist_infiltration = {
 		}
 		available = {
 			has_equipment = { infantry_equipment > 999 }
-			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration }
+			NOT = { has_global_flag = WTT_flag_china_cannot_remove_infiltration } #NHMMAP
 		}
 		highlight_states = {
 		 	highlight_state_targets = {
@@ -6128,7 +6129,7 @@ CHI_lend_lease_missions_cat = {
 
 	}
 
-	# Negotiate Economic Support from ��Y[FROM.GetNameWithFlag]��!
+	# Negotiate Economic Support from §Y[FROM.GetNameWithFlag]§!
 	CHI_use_expat_community_for_more_cic_decision  = {
 
 		priority = 45
@@ -7652,35 +7653,35 @@ CHI_internal_politics_cat = {
 		}
 	}
 
-}
-
-CHI_invest_in_officer_training = {
-	icon = GFX_decision_generic_military
-	priority = 20
-	cost = 100
-	allowed = {
-		original_tag = CHI
-	}
-	visible = {
-		has_completed_focus = CHI_crackdown_on_corruption_in_recruitment
-	}
-	available = {
-		num_of_civilian_factories_available_for_projects > 4
-		has_completed_focus = CHI_focus_on_meritocratic_principles
-	}
-
-	days_remove = 175
-	modifier = {
-		civilian_factory_use = 5
-	}
-	remove_effect = {
-		add_to_variable = { 
-			CHI_corruption_in_the_armed_forces_conscription_factor_improvement = 0.01
-			tooltip = CHI_invest_in_officer_training_tt
+	CHI_invest_in_officer_training = {
+		icon = GFX_decision_generic_military
+		priority = 20
+		cost = 100
+		allowed = {
+			original_tag = CHI
 		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = CHI_corruption_in_the_armed_forces_conscription_factor_improvement_tt
+		visible = {
+			has_completed_focus = CHI_crackdown_on_corruption_in_recruitment
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = CHI_focus_on_meritocratic_principles
+		}
+
+		days_remove = 175
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			add_to_variable = { 
+				CHI_corruption_in_the_armed_forces_conscription_factor_improvement = 0.01
+				tooltip = CHI_invest_in_officer_training_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_corruption_in_the_armed_forces_conscription_factor_improvement_tt
+		}
 	}
+
 }
 
 CHI_integrate_the_warlords_sea_cat = {
@@ -10338,7 +10339,7 @@ CHI_the_lingguang_incident_cat = {
 # The Political Tutelage 
 CHI_the_political_tutelage_cat = {
 	
-	# Expedite the Political Tutelage in ��Y[FROM.GetName]��!
+	# Expedite the Political Tutelage in §Y[FROM.GetName]§!
 	CHI_accelerate_urban_tutelage_decision = {
 		icon = GFX_decision_generic_political_rally 
 	
@@ -10394,6 +10395,9 @@ CHI_the_political_tutelage_cat = {
 	        		has_state_category = metropolis
 	        		has_state_category = large_city
 	        	}
+				NOT = {
+	        		has_state_flag = CHI_urban_political_tutelage_has_been_epedited_here_state_flag 
+	        	}
 	        }
 	    }
 	    on_map_mode = map_and_decisions_view 
@@ -10435,7 +10439,7 @@ CHI_the_political_tutelage_cat = {
 
 	}
 
-	# Expedite the Political Tutelage in ��Y[FROM.GetName]��!
+	# Expedite the Political Tutelage in §Y[FROM.GetName]§!
 	CHI_accelerate_rural_tutelage_decision = {
 		icon = GFX_decision_generic_political_address
 	
@@ -10501,6 +10505,9 @@ CHI_the_political_tutelage_cat = {
 	        		has_state_category = rural
 	        		has_state_category = town
 	        		has_state_category = enclave
+	        	}
+				NOT = {
+	        		has_state_flag = CHI_rural_political_tutelage_has_been_epedited_here_state_flag 
 	        	}
 	        }
 	    }
@@ -10637,7 +10644,7 @@ CHI_republican_interests_cat = {
 		}
 	}
 
-	# Stir Republican Sentiments in ��Y[FROM.GetNameDef]��!
+	# Stir Republican Sentiments in §Y[FROM.GetNameDef]§!
 	CHI_stir_democratic_sentiments_in_asia_decison = {
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -10663,10 +10670,9 @@ CHI_republican_interests_cat = {
 	        FROM = {
 	        	NOT = {
 	        		has_war_with = ROOT
+	        		has_government = democratic
 	        	}
-	        	NOT = {
-	        		has_government = communism
-	        	}
+	        	is_literally_china = no # They are targets of a different democratization decision
 	        }
 	    }
 
@@ -10713,6 +10719,18 @@ CHI_republican_interests_cat = {
 	CHI_oust_the_empires_decision = {
 		icon = GFX_decision_generic_political_rally
 		target_array = CHI.asian_democracies_countries_to_liberate
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					controller = {
+						NOT = {
+							original_tag = ROOT
+							is_ally_with = ROOT
+						}
+					}
+				}
+			}
+		}
 		target_root_trigger = { original_tag = CHI }
 		fire_only_once = no
 		target_non_existing = yes
@@ -10791,7 +10809,7 @@ CHI_republican_interests_cat = {
 # Reunification Intiatives
 CHI_integrate_the_warlords_democratic_sea_cat = {
 
-	# Demand ��Y[FROM.GetLeader]��! Submit to the Central Government
+	# Demand §Y[FROM.GetLeader]§! Submit to the Central Government
 	CHI_press_warlord_to_become_puppet_democratic = {
 
 		icon = GFX_decision_eng_trade_unions_demand
@@ -10861,7 +10879,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 
 	}
 
-	# ��Y[FROM.GetNameWithFlag]��! Integration Efforts
+	# §Y[FROM.GetNameWithFlag]§! Integration Efforts
 	CHI_warlord_autonomy_drift_demcoratic_decision = {
 
 		icon = generic_prepare_civil_war
@@ -10935,7 +10953,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 		}
 	}
 
-	# Demand ��Y[FROM.GetLeader]��! Apply the Principle of Minquan
+	# Demand §Y[FROM.GetLeader]§! Apply the Principle of Mínquán
 	CHI_warlord_democratic_drift_minquan_decision = {
 
 		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
@@ -11007,7 +11025,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 
 	}
 	
-	# Develop Welfare Systems and Public Works in ��Y[FROM.GetNameDef]��!
+	# Develop Welfare Systems and Public Works in §Y[FROM.GetNameDef]§!
 	CHI_develop_warlord_industry_decision = {
 
 		priority = 10

@@ -2622,8 +2622,6 @@ MAN_march_on_beijing_decisions = {
 
 		cost = 25
 
-		custom_cost_text = decision_cost_CP_15_pp_15
-
 		complete_effect = {
 
 			activate_mission = MAN_march_on_hebei_chahar_mission
@@ -2748,8 +2746,6 @@ MAN_march_on_beijing_decisions = {
 		fire_only_once = yes
 
 		cost = 25
-		
-		custom_cost_text = decision_cost_CP_15_pp_15
 
 		complete_effect = {
 
@@ -2875,8 +2871,6 @@ MAN_march_on_beijing_decisions = {
 		fire_only_once = yes
 
 		cost = 25
-		
-		custom_cost_text = decision_cost_CP_15_pp_15
 
 		complete_effect = {
 
@@ -2976,7 +2970,7 @@ MAN_china_matters = {
 			icon = GFX_decision_jap_conquer_china
 
 			ai_will_do = {
-				base = 10
+				base = 100
 			}
 		
 			allowed = {  
@@ -2984,7 +2978,7 @@ MAN_china_matters = {
 			}
 
 			visible = { 
-				has_completed_focus = MAN_tsr_national_cooperation_government
+				has_completed_focus = MAN_tsr_the_two_emperors
 			}
 		
 			available = {
@@ -3000,7 +2994,7 @@ MAN_china_matters = {
 				}
 			}
 
-			cost = 50
+			cost = 150
 
 			days_remove = 30
 
@@ -3017,7 +3011,227 @@ MAN_china_matters = {
 
 		}
 
-}
+		# Strike Down [FROM.GetNameDef]
+		MAN_unify_with_specific_japanese_puppet_decision  = {
+	
+			priority = 10
+	
+			icon = GFX_decision_border_war
+	
+			target_trigger = {
+				#Target is FROM
+				FROM = {
+					is_literally_china = yes
+					is_subject_of = JAP
+				}
+			}
+	
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 0
+					FROM = {
+						any_allied_country = {
+							is_major = yes
+							NOT = {
+								has_war_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		
+			allowed = {  
+				original_tag = MAN 
+			}
+	
+			visible = { 
+				is_subject_of = JAP 
+				has_completed_focus = MAN_tsr_chinese_leadership 
+			}
+		
+			available = {
+				NOT = {
+					has_global_flag = MAN_is_currently_seeking_to_merge_a_puppet_government_into_them_flag	
+				}
+			}
+	
+			days_re_enable = 365 
+	
+			cost = 75  
+	
+			#war_with_on_remove = FROM
+	
+			cancel_trigger = {
+			}
+	
+			cancel_effect = {
+			}
+	
+			modifier = {
+			}
+	
+			complete_effect = { 
+		
+	
+			}
+	
+			fire_only_once = no
+	
+			remove_effect = {
+	
+				FROM = {
+					set_country_flag = MAN_is_seeking_to_annexing_us_flag
+				}
+	
+				JAP = {
+					country_event = {
+						id = SEA_japan_foreign_policy.140
+						hours = 6
+					}	
+				}
+	
+				hidden_effect = {
+					set_global_flag = MAN_is_currently_seeking_to_merge_a_puppet_government_into_them_flag
+				}
+	
+			}
+	
+		}
+	
+		MAN_warlord_autonomy_drift_decision = {
+			icon = GFX_decision_eng_trade_unions_support
+	
+			ai_will_do = {
+				base = 5
+				modifier = {
+					factor = 2
+					is_faction_leader = yes
+				}
+				modifier = {
+					factor = 1.5
+					has_political_power > 75
+					command_power > 75
+				}
+				modifier = {
+					factor = 0.5
+					has_political_power < 75
+					command_power < 75
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						num_of_factories > 4
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						num_of_factories > 7
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						num_of_factories > 10
+					}
+				}
+				#Prioritize your advisors first!
+				modifier = {
+					factor = 0.5
+					amount_taken_ideas = {
+						amount < 2
+						slots = {
+							political_advisor
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					amount_taken_ideas = {
+						amount < 3
+						slots = {
+							political_advisor
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					amount_taken_ideas = {
+						amount < 1
+						slots = {
+							high_command
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					amount_taken_ideas = {
+						amount < 1
+						slots = {
+							theorist
+						}
+					}
+				}
+			}
+	
+			allowed = {
+				original_tag = MAN 
+			}
+	
+			visible = {
+				has_completed_focus = MAN_tsr_reclaim_the_empire 
+			} 
+	
+			ai_hint_pp_cost = 50
+			custom_cost_trigger = {
+				command_power > 24
+				has_political_power > 49
+			}
+			custom_cost_text = decision_cost_CP_25_pp_50
+	
+			target_array = ROOT.subjects  
+	
+			target_trigger = {
+				FROM = {
+					is_subject_of = ROOT
+					NOT = {
+						has_idea = idea_MAN_central_government_integration_pressure
+					}
+				}
+			}
+	
+			fire_only_once = no
+	
+			complete_effect = {
+				hidden_effect = {
+					add_political_power = -50
+					add_command_power = -25
+				}
+	
+				#change CHI_impair_the_control_yuan_tt_2 if changing this!
+				FROM = {
+					add_timed_idea = {
+						idea = idea_MAN_central_government_integration_pressure
+						days = 365
+					}
+				}
+			}
+	
+			cancel_trigger = {
+				FROM = {
+					OR = {
+						has_war_with = ROOT
+						exists = no
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	
+	}
 
 MAN_yong_ying_category = {
 	

@@ -876,4 +876,38 @@ on_actions = {
 			}
 		}
 	}
+
+	on_send_volunteers = { 
+
+		#sets a flag when AUS sends volunteers to spain, i've got the tags here that the DLC forgot about
+		effect = {
+			IF = { 
+				limit = {
+					original_tag = AUS
+					FROM = { 
+						tag = SPB
+					}
+				}
+				ROOT = { set_country_flag = AUS_volunteer_effort_SPB_flag }
+			}
+			IF = { 
+				limit = {
+					original_tag = AUS
+					FROM = { 
+						tag = SPC
+					}
+				}
+				ROOT = { set_country_flag = AUS_volunteer_effort_SPC_flag }
+			}
+			IF = { 
+				limit = {
+					original_tag = AUS
+					FROM = { 
+						tag = SPD
+					}
+				}
+				ROOT = { set_country_flag = AUS_volunteer_effort_SPD_flag }
+			}	
+		}
+	}
 }

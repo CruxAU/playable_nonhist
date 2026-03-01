@@ -22,12 +22,19 @@ TUR_ideology_ottoman_plan = {
 	}
 
 	ai_national_focuses = {
+
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+
 		#1936
 		TUR_the_montreux_convention
 		TUR_fully_integrate_the_is_bank #35
 		TUR_privatize_the_anadolu_agency #35
 		TUR_lift_the_ban_on_other_political_parties #35
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_the_sanayiciler #35
 		TUR_treaty_of_saadabad #35
 		#1937
@@ -102,10 +109,17 @@ TUR_ideology_democratic_plan = {
 	}
 
 	ai_national_focuses = {
+
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+
 		#1936
 		TUR_the_montreux_convention
 		TUR_fully_integrate_the_is_bank #35
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_privatize_the_anadolu_agency #35
 		TUR_lift_the_ban_on_other_political_parties #35
 		TUR_hava_okulu #35
@@ -181,10 +195,15 @@ TUR_ideology_democratic_plan_2 = {
 	}
 
 	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
 		#1936
 		TUR_the_montreux_convention
 		TUR_fully_integrate_the_is_bank #35
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_privatize_the_anadolu_agency #35
 		TUR_lift_the_ban_on_other_political_parties #35
 		TUR_hava_okulu #35
@@ -261,10 +280,15 @@ TUR_ideology_kemalist_nat_plan = {
 	}
 
 	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_peace_at_home #35
 		TUR_turkish_state_railways
 		TUR_the_sanayiciler #35
@@ -339,10 +363,15 @@ TUR_ideology_fund_plan = {
 	}
 
 	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_revive_turkish_revolutionism
 		TUR_reinvigorate_turkish_nationalism #35
 		TUR_the_sanayiciler #35
@@ -412,10 +441,15 @@ TUR_ideology_fund_nat_plan = {
 	}
 
 	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_revive_turkish_revolutionism
 		TUR_reinvigorate_turkish_nationalism #35
 		TUR_the_sanayiciler #35
@@ -489,11 +523,16 @@ TUR_ideology_fascist_plan = {
 	}
 
 	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_hava_okulu #35
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_revive_turkish_revolutionism
 		TUR_the_sanayiciler #35
 		#1937
@@ -567,11 +606,16 @@ TUR_ideology_communist_plan = {
 	}
 
 	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_hava_okulu #35
 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_revive_turkish_revolutionism
 		TUR_the_sanayiciler #35
 		#1937
@@ -1148,6 +1192,8 @@ TUR_turan_plan = { #the actual focuses are in the national_focus tree
 # 		TUR_fully_integrate_the_is_bank
 # 		TUR_hava_okulu
 # 		TUR_ratify_the_six_arrows
+#		TUR_continue_the_sumerbank_industrialization_scheme
+#		TUR_millet_mektebi_focus
 # 		TUR_privatize_the_anadolu_agency
 # 		#1937
 # 		TUR_the_sanayiciler
@@ -1944,6 +1990,8 @@ TUR_turan_plan = { #the actual focuses are in the national_focus tree
 # 		TUR_continue_the_policy_of_etatism
 # 		TUR_hava_okulu
 # 		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 # 		TUR_peace_at_home
 # 		#1937
 # 		TUR_turkish_state_railways

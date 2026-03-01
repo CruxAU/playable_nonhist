@@ -38,9 +38,11 @@ TUR_ideology_kemalist_plan = {
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_hava_okulu #35
+		TUR_continue_the_sumerbank_industrialization_scheme
 		TUR_ratify_the_six_arrows
 		TUR_peace_at_home #35
 		TUR_turkish_state_railways
+		TUR_millet_mektebi_focus
 		TUR_the_sanayiciler #35
 		
 		#1937

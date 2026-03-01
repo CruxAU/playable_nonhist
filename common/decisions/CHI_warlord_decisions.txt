@@ -6,6 +6,67 @@
 #  # #  # #    #  # #  # #     # #         # #  # #    #    #  # #  #  #  
  ##  #  # #    #  # #  # ### ##  ###     ##   ##  #    #     ##  #  #  #  
 
+ political_actions	= {
+
+	YUN_core_state = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = YUN
+		}
+		
+		visible = {
+			has_country_flag = YUN_did_burmic_ties_focus_flag
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_coring_state_in_progress }
+		}
+
+		state_target = any_controlled_state
+		
+	  target_trigger = {
+		  FROM = {
+			  NOT = { is_core_of = ROOT }
+			  is_fully_controlled_by = ROOT
+			  OR = {
+				  is_claimed_by = ROOT
+				  has_state_flag = YUN_can_integrate_this_flag
+			  }
+		  }
+	  }
+	  on_map_mode = map_only
+	  cost = 50		
+		fire_only_once = yes
+		days_remove = 7
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = { flag = IRQ_coring_state_in_progress value = 1 days = 31 }
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+		}
+	}
+
+}
+
 CHI_seek_japanese_support = {
 
 	CHI_internal_party_support_fascism = {
@@ -143,7 +204,11 @@ CHI_seek_japanese_support = {
 		}
 
 		visible = {
-			has_completed_focus = CHI_seek_japanese_support
+			OR = {
+				has_completed_focus = CHI_seek_japanese_support
+				has_completed_focus = CHI_sea_seek_japanese_support
+			}
+
 			JAP = { has_government = communism }
 		}
 

@@ -14,7 +14,7 @@ focus_tree = {
 		}
 	}
 	default = no
-
+#NHMMAP NOTE: I made a bunch of focuses here not available when capitulated. (poland could still generate wargoals on baltics when capped, I thought this was unfair for a non-player poland to do, so it was disabled entirely.)
 
 	############################
 	#### INDUSTRIAL SECTION ####
@@ -6478,7 +6478,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_invite_romania_to_morges
+		id = POL_invite_romania_to_morges #NHMMAP
 		icon = GFX_focus_invite_romania
 		prerequisite = { focus = POL_morges_economic_union }
 		relative_position_id = POL_morges_economic_union
@@ -8731,7 +8731,7 @@ focus_tree = {
 				ruling_only = yes 
 				character = POL_karl_albrecht
 			}
-			any_other_country = {
+			any_other_country = { #NHMMAP can target austria too!
 				exists = yes
 				OR = {
 					is_in_faction = no
@@ -9544,7 +9544,7 @@ focus_tree = {
 			}
 		}
 		
-		bypass = {
+		bypass = { #NHMMAP important distinction!
 			LAT = { 
 				OR = {
 					exists = no 
@@ -9924,7 +9924,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #NHMMAP NEW FOCUS!! makes the path better for AI too.
 		id = POL_the_carpathian_pathway
 		icon = GFX_focus_POL_romania_bridgehead_strategy
 		prerequisite = { focus = POL_pan_slavism }
@@ -11676,7 +11676,7 @@ focus_tree = {
 	}
 	
 	
-	focus = {
+	focus = { #New focus in NHMMAP
 		id = POL_seek_an_alliance_with_french_empire
 		icon = GFX_focus_focus_fra_third_empire
 		prerequisite = { focus = POL_assemble_the_regency_council }
@@ -11782,7 +11782,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #New focus in NHMMAP
 		id = POL_seek_an_alliance_with_byzantine
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		prerequisite = { focus = POL_assemble_the_regency_council }
@@ -11870,7 +11870,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #New focus in NHMMAP
 		id = POL_seek_an_alliance_with_tsar
 		icon = GFX_focus_SOV_the_true_tsars
 		prerequisite = { focus = POL_assemble_the_regency_council }
@@ -13962,7 +13962,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #NHMMAP changes
 		id = POL_seek_accommodation_with_germany
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = POL_go_right }
@@ -14054,7 +14054,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #NHMMAP changes
 		id = POL_seek_accommodation_with_USSR
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = POL_go_left }
@@ -14133,7 +14133,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #NHMMAP changes
 		id = POL_draw_closer_to_britain
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = POL_liberalism_focus }
@@ -15911,6 +15911,28 @@ focus_tree = {
 			}
 			has_civil_war = no
 		}
+		bypass_effect = {
+			85 = {
+				remove_dynamic_modifier = {
+					modifier = international_city
+				}
+				add_dynamic_modifier = {
+					modifier = international_city_2
+				}
+				force_enable_resistance = { 
+					clear = no
+					occupier = POL
+					occupied = DNZ
+				}
+				start_resistance = DNZ
+				set_resistance = 40
+				set_compliance = 30
+				add_resistance_target = { 
+					amount = 30
+					tooltip = clamp_down_on_danzig_tt
+				}
+			}
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -16074,6 +16096,21 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		completion_reward = {
+			85 = {
+				force_enable_resistance = { 
+					clear = yes
+					occupier = POL
+					occupied = DNZ
+				}
+				POL_remove_danzig_effect = yes
+				set_state_name = "Gdańsk"
+			}
+			set_province_name = {
+				id = 362
+				name = "Gdańsk"
+			}
+		}
+		bypass_effect = {
 			85 = {
 				force_enable_resistance = { 
 					clear = yes

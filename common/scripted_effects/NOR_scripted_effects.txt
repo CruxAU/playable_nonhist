@@ -979,6 +979,16 @@ NOR_fcw_effect_fascist_player = {
 			popularity = -0.10
 		}
 		add_manpower = 10000
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = GER
+			}
+		}
 		set_cosmetic_tag = NOR_fascism
 	}
 

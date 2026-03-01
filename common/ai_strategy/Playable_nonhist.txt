@@ -8926,3 +8926,283 @@ SWE_linderot_supports_soviets_in_barb = {
 		value = 200
 	}	
 }
+
+#########################################################################################
+######################### AUS ###########################################################
+#########################################################################################
+
+AUS_anti_anschluss_improve_relations_when_throwing_the_treaty = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		AUS = {
+			AUS_is_anti_anschluss_stress_plan = yes
+			OR = {
+				focus_progress = {
+					focus = AUS_seek_agreement_for_rearmament
+					progress > 0.01
+				}
+				focus_progress = {
+					focus = AUS_disregard_the_treaties
+					progress > 0.01
+				}
+			}
+		}		
+	}
+	abort = {
+		AUS = {
+			OR = {
+				AUS_is_anti_anschluss_stress_plan = no
+				has_completed_focus = AUS_seek_agreement_for_rearmament
+				has_completed_focus = AUS_disregard_the_treaties
+				NOT = {
+					has_idea = AUS_treaty_of_saint_germain_en_laye
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ITA
+		target = improve_relation
+		value = 150
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
+		target = improve_relation
+		value = 100
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = improve_relation
+		value = 50
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = USA
+		target = improve_relation
+		value = 50
+	}
+}
+
+AUS_support_italians_in_ethiopia = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		AUS = {
+			has_completed_focus = AUS_supporting_italy_in_ethiopia_focus
+		}
+		has_global_flag = second_italo_ethiopian_war_flag
+		ITA = {
+			all_enemy_country = {
+				OR = {
+					original_tag = ETH
+					original_tag = AFA
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+		
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ITA
+		value = 200
+	}	
+}
+
+AUS_support_nationalists_scw = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		AUS = {
+			has_completed_focus = AUS_spanish_intervention
+		}
+		has_global_flag = spanish_civil_war
+		country_exists = SPA
+		AUS_is_central_powers_plan = no
+	}
+	abort = {
+		OR = {
+			SPA = {
+				has_capitulated = yes
+			}
+			has_global_flag = scw_over
+		}
+		
+	}
+		
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPA
+		value = 500
+	}	
+}
+
+AUS_support_carlists_scw = {
+	allowed = { original_tag = AUS }
+	enable = { 
+		AUS = {
+			has_completed_focus = AUS_spanish_intervention
+		}
+		has_global_flag = spanish_civil_war
+		country_exists = SPB
+		AUS_is_central_powers_plan = yes
+	}
+	abort = {
+		OR = {
+			SPB = {
+				has_capitulated = yes
+			}
+			has_global_flag = scw_over
+		}
+		
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPB
+		value = 500
+	}
+}
+
+AUS_support_communists_scw = {
+	allowed = { original_tag = AUS }
+	enable = { 
+		AUS = {
+			has_completed_focus = AUS_intervention_in_spain
+			has_completed_focus = AUS_austromarxism_focus
+		}
+		has_global_flag = spanish_civil_war
+		country_exists = SPC
+		SPC = {
+			has_government = communism
+		}
+	}
+	abort = {
+		OR = {
+			SPC = {
+				has_capitulated = yes
+			}
+			has_global_flag = scw_over
+		}
+		
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPC
+		value = 500
+	}
+}
+
+AUS_support_republicans_scw = {
+	allowed = { original_tag = AUS }
+	enable = { 
+		AUS = {
+			has_completed_focus = AUS_intervention_in_spain
+			
+		}
+		has_global_flag = spanish_civil_war
+		country_exists = SPD
+		OR = {
+			has_completed_focus = AUS_seek_support_from_guarantors
+			AND = {
+				country_exists = SPC
+				SPC = {
+					has_government = neutrality
+				}
+			}
+			
+		}
+		
+	}
+	abort = {
+		OR = {
+			SPD = {
+				has_capitulated = yes
+			}
+			has_global_flag = scw_over
+		}
+		
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 500
+	}
+}
+
+AUS_central_powers_improve_relations = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		AUS = {			
+			focus_progress = {
+				focus = AUS_reforming_the_central_powers
+				progress > 0.01
+			}
+		}		
+	}
+	abort = {
+		AUS = {
+			has_completed_focus = AUS_reforming_the_central_powers
+		}
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GER
+		target = improve_relation
+		value = 150
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = TUR
+		target = improve_relation
+		value = 150
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = BUL
+		target = improve_relation
+		value = 150
+	}
+}
+
+AUS_axis_improve_relations = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		AUS = {			
+			focus_progress = {
+				focus = AUS_join_the_axis
+				progress > 0.01
+			}
+		}		
+	}
+	abort = {
+		AUS = {
+			has_completed_focus = AUS_join_the_axis
+		}
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GER
+		target = improve_relation
+		value = 150
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ITA
+		target = improve_relation
+		value = 75
+	}
+}

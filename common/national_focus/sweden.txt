@@ -60,7 +60,7 @@ focus_tree = {
 		}
 	}	
 
-
+#NHMMAP NOTE: I've removed all the ai_will_do stuff based on gamerules from here, and put them where they should be in the ai strategy plans
 
 	focus = {
 		id = SWE_the_old_enemy_stirs
@@ -75,6 +75,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			#NHMMAP removed
 		}
 
 		available = {
@@ -88,7 +89,7 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {  FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP }
@@ -531,6 +532,7 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			#NHMMAP removed
 		}
 
 		available = {
@@ -3948,7 +3950,7 @@ focus_tree = {
 					SPR = {
 						has_country_flag = scw_over
 						OR = { #Nat Spain WON
-							country_exists = SPA
+							country_exists = SPA  #NHMMAP
 							country_exists = SPB
 						}
 					}
@@ -5408,7 +5410,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		completion_reward = {
+		completion_reward = { #NHMMAP changes
 			set_rule = { can_create_factions = yes }
 			create_faction_from_template = faction_template_SWE_the_nordic_defense_council
 			set_cosmetic_tag = SWE_nordic_defense_council
@@ -7322,7 +7324,7 @@ focus_tree = {
 			
 		}
 
-		available = {
+		available = { #NHMMAP
 			DEN = {
 				OR = {
 					is_subject = yes
@@ -7340,7 +7342,7 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
+		bypass = { #NHMMAP
 			OR = {
 				is_subject = yes
 				AND = {
@@ -7474,7 +7476,7 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
+		available = { #NHMMAP
 			NOR = {
 				OR = {
 					is_subject = yes
@@ -7492,7 +7494,7 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
+		bypass = { #NHMMAP
 			OR = {
 				is_subject = yes
 				AND = {
@@ -8181,6 +8183,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			drop_cosmetic_tag = yes
 			set_party_name = {
 				ideology = neutrality
 				name = SWE_kings_party
@@ -8501,7 +8504,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SWE_germanify_sweden
 		cost = 10
-		available = {
+		available = { #NHMMAP
 			is_subject_of = GER
 			has_government = fascism
 			if = {
@@ -8663,7 +8666,7 @@ focus_tree = {
 		relative_position_id = SWE_promote_nordic_identity
 		cost = 10
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 10		
 			modifier = {
 				factor = 0
@@ -8917,7 +8920,7 @@ focus_tree = {
 		relative_position_id = SWE_finland_claims
 		cost = 10
 
-		ai_will_do = {
+		ai_will_do = { #NHMMAP
 			factor = 10		
 			modifier = {
 				factor = 0
@@ -9169,7 +9172,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SWE_mythologize_swedish_history
 		cost = 5
-		available = {
+		available = { #NHMMAP
 			OR = {
 				ENG = {
 					is_faction_leader = yes
@@ -9841,7 +9844,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SWE_the_aland_issue
 		cost = 10
-		available = {
+		available = { #NHMMAP
 			OR = {
 				is_in_faction = no
 				is_faction_leader = yes
@@ -9855,7 +9858,7 @@ focus_tree = {
 	                
 		search_filters = {}
 
-		completion_reward = {
+		completion_reward = { #NHMMAP
 			set_rule = { can_create_factions = yes }
 			if = {
 				limit = {
@@ -10115,13 +10118,13 @@ focus_tree = {
 		}
 	                
 		search_filters = {}
-		bypass = {
+		bypass = { #NHMMAP
 			OR = {
 				is_subject = yes
 				is_in_faction = yes
 			}
 		}
-		completion_reward = {
+		completion_reward = { #NHMMAP
 			create_faction_from_template = {
 				template = faction_template_NORDIC_alliance_democratic
 				name = scandinavian_defense_union
@@ -10171,13 +10174,13 @@ focus_tree = {
 		y = 0
 		relative_position_id = SWE_scandinavian_defense_union
 		cost = 10
-		bypass = {
+		bypass = { #NHMMAP
 			OR = {
 				is_in_faction = yes
 				is_subject = yes
 			}
 		}
-		available = {
+		available = { #NHMMAP
 			if = {
 				limit = {
 					has_country_leader = {
@@ -10293,7 +10296,7 @@ focus_tree = {
 	                
 		search_filters = {}
 
-		completion_reward = {
+		completion_reward = { #NHMMAP
 			if = {
 				limit = {
 					has_government = democratic
@@ -10997,7 +11000,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
  
-		completion_reward = { #changed focus to only target the three majors ENG GER and SOV, too messy otherwise
+		completion_reward = { #NHMMAP changed focus to only target the three majors ENG GER and SOV, too messy otherwise
 			if = {
 				limit = {
 					has_government = democratic

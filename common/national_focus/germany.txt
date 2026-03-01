@@ -1684,6 +1684,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = expand_german_coal_mines_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = GER_improve_trade_relations_tt
 			every_other_country = {
 				limit = {
@@ -3463,12 +3467,15 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_army_leader = {
-				limit = {
-					NOT = { has_trait = scavenger }
+			custom_effect_tooltip = GER_salvage_captured_equipment_custom_tt
+			hidden_effect = {
+				every_army_leader = {
+					limit = {
+						NOT = { has_trait = scavenger }
+					}
+					random_select_amount = 2
+					add_trait = { trait = scavenger }
 				}
-				random_select_amount = 2
-				add_trait = { trait = scavenger }
 			}
 		}
 	}
@@ -4570,12 +4577,12 @@ focus_tree = {
 						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
+						special_type_slot_1 = tank_radio_2
 						special_type_slot_2 = sloped_armor
 						special_type_slot_3 = smoke_launchers
 					}
 					upgrades = {
-						tank_nsb_engine_upgrade = 6
+						tank_nsb_engine_upgrade = 5
 						tank_nsb_armor_upgrade = 4
 					}
 					icon = "GFX_GER_advanced_medium_tank_medium"
@@ -4946,20 +4953,21 @@ focus_tree = {
 				category = light_air
 			}
 
+			# On historical, this focus is completed mid-late 1939
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = { 
-					name = "Ju 87 G" 
+					name = "Ju 87 D" 
 					type = small_plane_cas_airframe_2
 					allow_without_tech = no
 					design_team = mio:GER_junkers_organization
 					modules = {
 						fixed_main_weapon_slot = bomb_locks
-						fixed_auxiliary_weapon_slot_1 = tank_buster_1
-						engine_type_slot = engine_3_1x
+						fixed_auxiliary_weapon_slot_1 = bomb_locks
+						engine_type_slot = engine_2_1x
 						special_type_slot_1 = lmg_defense_turret
 						special_type_slot_2 = empty
 					}
@@ -5106,7 +5114,7 @@ focus_tree = {
 						fixed_main_weapon_slot = medium_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
 						fixed_auxiliary_weapon_slot_2 = torpedo_mounting
-						engine_type_slot = engine_3_2x
+						engine_type_slot = engine_2_2x
 						special_type_slot_1 = lmg_defense_turret_2x
 						special_type_slot_2 = empty	
 					}
@@ -5473,7 +5481,8 @@ focus_tree = {
 				tooltip = air_agility_factor_tt
 			}
 
-
+			# On historical, this focus is completed late 1939
+			#This one is not really needed, first 'FW 190'
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
@@ -5486,10 +5495,8 @@ focus_tree = {
 					design_team = mio:GER_messerschmitt_organization
 					modules = {
 						fixed_main_weapon_slot = light_mg_4x
-						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-						engine_type_slot = engine_3_1x
-						special_type_slot_1 = armor_plate_small
-						special_type_slot_2 = drop_tanks	
+						fixed_auxiliary_weapon_slot_1 = light_mg_2x
+						engine_type_slot = engine_2_1x
 					}
 					icon = "GFX_GER_fighter2_medium"
 					model = "GER_fighter_equipment_2_entity"
@@ -7686,7 +7693,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = {
-					name = "Panzer Class"
+					name = "Panzerschiff"
 					type = ship_hull_cruiser_3
 					name_group = GER_CA_HISTORICAL
 					modules = {
@@ -8844,7 +8851,7 @@ focus_tree = {
 						exists = no 
 						AND = {
 							is_in_faction = yes
-							NOT = { is_in_faction_with = GER }
+							#NOT = { is_in_faction_with = GER } #REMOVED BY NHMMAP - may cause issues so im leaving it here commented out so if it does i can bring it back and make a new event chain
 							any_other_country = {
 								is_in_faction_with = AUS
 								is_subject = no
@@ -12651,7 +12658,7 @@ focus_tree = {
 		relative_position_id = GER_war_with_france
 		cost = 5
 
-		available = {
+		available = { #NHMMAP
 			OR = {
 				has_war_with = ENG
 				ENG = {
@@ -12679,7 +12686,7 @@ focus_tree = {
 
 		search_filters = {}
 
-		completion_reward = {
+		completion_reward = { #NHMMAP
 			if = {
 				limit = {
 					NOT = {
@@ -14570,7 +14577,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			hidden_effect = {
+			hidden_effect = { #NHMMAP
 				add_ai_strategy = {
 					type = declare_war
 					id = SOV
@@ -15356,24 +15363,7 @@ focus_tree = {
 	focus = {
 		id = GER_befriend_japan
 
-		icon = {
-			trigger = {
-				JAP = {
-					NOT = {
-						has_government = communism
-					}
-				}
-			}
-			value = GFX_focus_chi_collaboration_with_the_japanese
-		}
-		icon = {
-			trigger = {
-				JAP = {
-					has_government = communism
-				}
-			}
-			value = GFX_focus_jap_manchurian_project
-		}
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		alternate_icon = GFX_focus_GER_befriend_japan
 
 		prerequisite = { focus = GER_anti_comintern_pact }
@@ -15385,7 +15375,7 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
-		available = {
+		available = { #TODO NHMMAP check this is still ok in new dlc, does japan still go to man?
 			is_subject = no
 			OR = {
 				AND = {
@@ -18086,7 +18076,7 @@ focus_tree = {
 					}
 				}
 				hidden_effect = {
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 			}
 			if = {
@@ -18274,7 +18264,7 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 				
 				if = { #If historical make sure Todt is not picked ever after being replaced by Speer in the Intrigue Event
@@ -18628,7 +18618,7 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 				
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
@@ -19132,7 +19122,7 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
@@ -19629,7 +19619,7 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
@@ -20383,7 +20373,7 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
@@ -20722,8 +20712,8 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
-				}
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
+				} 
 
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 					flag = GER_hess_was_ascended_flag
@@ -20866,7 +20856,7 @@ focus_tree = {
 					limit = {
 						is_historical_focus_on = no
 					}
-					NHMMAP_inner_circle_randomiser = yes
+					NHMMAP_inner_circle_randomiser = yes #triggers the choice of next advisor
 				}
 
 				if = { #If historical make sure Todt is not picked ever after being replaced by Speer in the Intrigue Event
@@ -25209,6 +25199,7 @@ focus_tree = {
 			PRC = { 
 				exists = yes
 				is_subject = no
+				#NHMMAP removed volunteer req
 			}
 		}
 
@@ -25678,7 +25669,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_government = democratic
-				democratic > 0.35
+				democratic > 0.35 #NHMMAP
 			}
 		}
 
@@ -26638,7 +26629,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_government = neutrality
-			neutrality > 0.35
+			neutrality > 0.35 #NHMMAP
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
@@ -29476,7 +29467,7 @@ focus_tree = {
 			ITA = {
 				OR = {
 					exists = no
-					is_subject_of = ROOT
+					is_subject_of = ROOT #NHMMAP
 					has_war_with = ROOT
 				}
 			}
@@ -31279,7 +31270,7 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
+		bypass = { #NHMMAP
 			OR = {
 				FIN = { exists = no }
 				FIN = { has_government = communism }
@@ -32313,7 +32304,7 @@ focus_tree = {
 		cost = 10
 		
 		available = {
-			has_government = neutrality
+			has_government = neutrality #NHMMAP, makes democratic paths too complex and unbalanced
 			is_subject = no
 			has_army_manpower = { size > 949999 }
 			28 = {
@@ -33619,6 +33610,7 @@ focus_tree = {
 						state = 593 # Guangdong
 						state = 729 # Macau
 						state = 743 # Qingdao
+						state = 1017 # Trung Bo 
 					}
 					NOT = {
 						is_claimed_by = ROOT
@@ -33691,6 +33683,7 @@ focus_tree = {
 							owns_state = 286 # Southern Indochina
 							owns_state = 670 # Laos
 							owns_state = 671 # Tonkin
+							owns_state = 1017 # Trung Bo 
 						}
 					}
 				}
@@ -34112,6 +34105,8 @@ focus_tree = {
 		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
 		prerequisite = { focus = GER_request_the_return_of_qingdao }
 		
+		enable_automatic_bypass = no
+
 		x = 0
 		y = 1
 		relative_position_id = GER_request_the_return_of_qingdao
@@ -35902,7 +35897,7 @@ focus_tree = {
 				NOT = { has_war_with = ROOT }
 			}
 		}
-		bypass = {	
+		bypass = {
 			OR = {
 				has_country_flag = GER_mackensen_dead
 				has_country_leader = { ruling_only = yes character = GER_wilhelm_iii }
@@ -35935,7 +35930,7 @@ focus_tree = {
 		prerequisite = { focus = GER_return_of_the_kaiser }
 		#prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_expatriate_the_communists }
-		mutually_exclusive = { focus = GER_reinstate_nazi_leadership }
+		mutually_exclusive = { focus = GER_reinstate_nazi_leadership } 
 		available = {
 			is_subject = no
 		}

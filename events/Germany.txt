@@ -1956,13 +1956,7 @@ country_event = {
 
 			modifier = {
 				factor = 0.5
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
 			}
 
 			modifier = {
@@ -2023,13 +2017,8 @@ country_event = {
 						ratio > 10
 					}
 				}
-				NOT = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = no
+				
 			}
 			modifier = {
 				GER = { has_army_size = { size > 39 } }
@@ -2044,6 +2033,7 @@ country_event = {
 				HUN = {
 					OR = {
 						has_completed_focus = HUN_protect_austria
+						has_completed_focus = wuw_HUN_protect_austria
 						is_in_faction_with = AUS
 					}
 				}
@@ -2085,13 +2075,7 @@ country_event = {
 
 			modifier = {
 				factor = 2
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
 			}
 			modifier = {
 				factor = 0
@@ -5432,7 +5416,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5545,7 +5529,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5686,7 +5670,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5799,7 +5783,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5942,7 +5926,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -6055,7 +6039,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -6192,7 +6176,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -6305,7 +6289,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {

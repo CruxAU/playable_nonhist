@@ -2982,6 +2982,9 @@ shared_focus = {
 				original_tag = EST
 			}
 			promote_character = EST_jaan_anvelt
+			hidden_effect = {
+				set_cosmetic_tag = EST_estonian_workers_commune
+			}
 		}
 	}
 }
@@ -3297,59 +3300,59 @@ shared_focus = {
 				}
 			}
 		}
-		random_country = {
-			limit = {
-				original_tag = ROOT
-				has_war_with = ROOT
-			}
-			division_template = { 
-				name = "Forest Brothers"
-				division_names_group = LAT_INF_01
-				is_locked = yes
-				regiments = { 
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 2 y = 0 }
-					infantry = { x = 3 y = 0 }
+		# random_country = {	#was previously broken, but fixing it messed up the balance of the civil war
+		# 	limit = {
+		# 		original_tag = ROOT
+		# 		has_war_with = ROOT
+		# 	}
+		# 	division_template = { 
+		# 		name = "Forest Brothers"
+		# 		division_names_group = LAT_INF_01
+		# 		is_locked = yes
+		# 		regiments = { 
+		# 			infantry = { x = 0 y = 0 }
+		# 			infantry = { x = 1 y = 0 }
+		# 			infantry = { x = 2 y = 0 }
+		# 			infantry = { x = 3 y = 0 }
 
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 2 y = 1 }
-					infantry = { x = 3 y = 1 }
+		# 			infantry = { x = 0 y = 1 }
+		# 			infantry = { x = 1 y = 1 }
+		# 			infantry = { x = 2 y = 1 }
+		# 			infantry = { x = 3 y = 1 }
 
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 1 y = 2 }
-					infantry = { x = 2 y = 2 }
-					infantry = { x = 3 y = 2 }
-				}
-				support = {
-				}
-			}
-			random_owned_controlled_state = {
-				hidden_effect = {
-					create_unit = { 
-						division = "name = \"1. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
-						owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"2. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
-						owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"3. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
-						owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"4. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
-						owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"5. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
-						owner = ROOT
-					}
-				}
-			}
-		}
+		# 			infantry = { x = 0 y = 2 }
+		# 			infantry = { x = 1 y = 2 }
+		# 			infantry = { x = 2 y = 2 }
+		# 			infantry = { x = 3 y = 2 }
+		# 		}
+		# 		support = {
+		# 		}
+		# 	}
+		# 	random_owned_controlled_state = {
+		# 		hidden_effect = {
+		# 			create_unit = { 
+		# 				division = "name = \"1. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+		# 				owner = PREV
+		# 			}
+		# 			create_unit = { 
+		# 				division = "name = \"2. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+		# 				owner = PREV
+		# 			}
+		# 			create_unit = { 
+		# 				division = "name = \"3. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+		# 				owner = PREV
+		# 			}
+		# 			create_unit = { 
+		# 				division = "name = \"4. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+		# 				owner = PREV
+		# 			}
+		# 			create_unit = { 
+		# 				division = "name = \"5. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+		# 				owner = PREV
+		# 			}
+		# 		}
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_completed_focus = BALTIC_soviet_equipment
@@ -3741,7 +3744,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = BALTIC_overthrow_the_government
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1

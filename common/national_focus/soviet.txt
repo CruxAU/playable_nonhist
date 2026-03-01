@@ -4306,17 +4306,17 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				has_tech = improved_medium_tank_chassis
+				has_tech = basic_medium_tank_chassis
 			}
 			else = {
-				has_tech = improved_medium_tank
+				has_tech = basic_medium_tank
 			}
 		}
 		
@@ -4328,7 +4328,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SOV_superior_war_machines
-				bonus = 0.75
+				bonus = 0.5
 				uses = 2
 				category = armor
 			}
@@ -4383,8 +4383,8 @@ focus_tree = {
 							special_type_slot_1 = sloped_armor
 						}
 						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
+							tank_nsb_engine_upgrade = 7
+							tank_nsb_armor_upgrade = 5
 						}
 						icon = "GFX_SOV_improved_medium_tank_medium"
 					}
@@ -4406,8 +4406,8 @@ focus_tree = {
 							special_type_slot_1 = sloped_armor
 						}
 						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
+							tank_nsb_engine_upgrade = 5
+							tank_nsb_armor_upgrade = 5
 						}
 						icon = "GFX_SOV_improved_medium_tank_medium"
 					}
@@ -4426,8 +4426,8 @@ focus_tree = {
 							special_type_slot_1 = sloped_armor
 						}
 						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
+							tank_nsb_engine_upgrade = 5
+							tank_nsb_armor_upgrade = 3
 						}
 						icon = "GFX_SOV_improved_medium_tank_medium"
 					}
@@ -4444,7 +4444,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -4458,7 +4458,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SOV_the_means_to_wage_war
-				bonus = 0.75
+				bonus = 0.5
 				uses = 2
 				category = support_tech
 			}
@@ -4581,7 +4581,7 @@ focus_tree = {
 				}
 				else_if = {
 					limit = {
-						has_tech = antitank2
+						has_tech = antitank4
 					}
 					create_equipment_variant = {
 						name = "SU-100"
@@ -4933,9 +4933,15 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_mobilization_speed = 0.05 }
-			add_to_variable = { SOV_the_red_army_conscription_factor = 0.03 }
-			custom_effect_tooltip = SOV_strengthen_the_mobilization_plan_ns_tt
+			custom_effect_tooltip = modify_the_red_army_tt
+			add_to_variable = { SOV_the_red_army_mobilization_speed = 0.05 tooltip = mobilization_speed_tt}
+			add_to_variable = { SOV_the_red_army_conscription_factor = 0.03 tooltip = conscription_factor_tt }
+			add_to_variable = { SOV_the_red_army_mastery_loss_factor = 0.05 tooltip = land_mastery_gain_factor_tt }
+
+			#Need for tooltip
+			set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+			multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+
 		}
 	}
 
@@ -6361,9 +6367,19 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			custom_effect_tooltip = SOV_rehabilitated_military_ns_tt
+			custom_effect_tooltip = modify_the_red_army_tt
+			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			if = {
+				limit = {
+					NOT = { has_completed_focus = SOV_lessons_of_war }
+				}
+				
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = 0.15 tooltip = land_mastery_gain_factor_tt }
 
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
 			add_ideas = SOV_rehabilitated_military_ns
 		}
 	}
@@ -6482,10 +6498,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
 			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
+			set_variable = { SOV_the_red_army_mastery_loss_factor = 0 }
 
 			custom_effect_tooltip = SOV_lessons_of_war_ns_tt
+			effect_tooltip = {
+				#this should be the positive of whatever the negative mastery lsos is, only used for tooltip
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = SOV_the_red_army_mastery_loss_factor_inverted tooltip = land_mastery_gain_factor_tt } 
+			}
 
 			unlock_decision_tooltip = SOV_order_227
 			custom_effect_tooltip = SOV_lessons_of_war_unlock_military_operations_tt
@@ -7181,7 +7201,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #NHMMAP new conditions for the sake of AI consistency (the AI kind of cheats but whatever?)
 		id = SOV_the_zinovyevite_terrorist_center
 		icon = GFX_focus_SOV_purge_zinovyevists
 		prerequisite = { focus = SOV_the_stalin_constitution }
@@ -7300,6 +7320,18 @@ focus_tree = {
 				SOV_trigger_great_purge_moscow_trial_effect = yes #FIRST MOSCOW TRIAL -> Zinovyev & friends
 			}
 			custom_effect_tooltip = SOV_trigger_first_moscow_trial_tt
+
+			custom_effect_tooltip = newline_tt
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor  = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
 		}
 	}
 
@@ -7588,6 +7620,19 @@ focus_tree = {
 				SOV_paranoia_modifier_update_gui_tooltip = yes
 			}		
 			custom_effect_tooltip = SOV_increase_weekly_paranoia_in_trait_tt
+
+			custom_effect_tooltip = newline_tt
+
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
 		}
 	}
 
@@ -7814,6 +7859,18 @@ focus_tree = {
 			}
 
 			set_country_flag = SOV_stalinist_military_flag #New Generals have more chances of being Stalinists after this
+
+			custom_effect_tooltip = newline_tt
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
 		}
 	}
 
@@ -7846,7 +7903,7 @@ focus_tree = {
 			set_country_flag = SOV_paranoia_do_not_cancel_focus_flag #This focus cannot be canceled
 		}
 
-		completion_reward = {
+		completion_reward = { #new conditions for AI, NHMMAP
 			clr_country_flag = SOV_paranoia_do_not_cancel_focus_flag
 			set_country_flag = { flag = SOV_paranoia_random_purge_cooldown_from_focus_flag days = 15 } #Used to prevent random purges from popping up while this is active
 			set_country_flag = SOV_third_moscow_trial_flag #Used to unlock the next purge focus
@@ -7926,6 +7983,18 @@ focus_tree = {
 			custom_effect_tooltip = SOV_trigger_third_moscow_trial_tt
 
 			SOV_remove_paranoia_effect = yes #REMOVE PARANOIA SYSTEM
+
+			custom_effect_tooltip = newline_tt
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
 		}
 	}
 
@@ -8401,7 +8470,7 @@ focus_tree = {
 				remove = stalin_heart_of_steel
 				add = stalin_father_of_nations
 			}
-			hidden_effect = { #no need to thank me
+			hidden_effect = { #NHMMAP no need to thank me
 				if = {
 					limit = {
 						is_ai = no
@@ -9043,7 +9112,7 @@ focus_tree = {
 					days = 3
 					random_days = 5
 				}
-				add_popularity = {
+				add_popularity = { #NHHMAP
 					ideology = democratic
 					popularity = 0.075
 				}
@@ -9135,7 +9204,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
+			if = { #NHMMAP
 				limit = {
 					NOT = { has_idea = war_economy }
 					NOT = { has_idea = tot_economic_mobilisation }
@@ -10052,7 +10121,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_dissent_in_the_party
+		id = SOV_dissent_in_the_party #NHMMAP halved cost and pp
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = SOV_the_need_for_policy_changes }
 		x = 0
@@ -10197,7 +10266,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = SOV_soviet_aid_to_poum_decision_category
 
 			custom_effect_tooltip = SOV_if_poum_wins_tt
-			add_popularity = {
+			add_popularity = { #NHMMAP
 				ideology = neutrality
 				popularity = 0.05
 			}
@@ -10226,7 +10295,7 @@ focus_tree = {
 			add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 1 }
 			SOV_paranoia_modifier_update_gui_tooltip = yes
 			custom_effect_tooltip = SOV_undermine_stalins_authority_paranoia_tt
-			add_popularity = {
+			add_popularity = { #NHMMAP
 				ideology = democratic
 				popularity = 0.05
 			} 
@@ -10234,7 +10303,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_clandestine_cells
+		id = SOV_clandestine_cells #NHMMAP
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = SOV_organize_uprisings_in_the_country }
 		x = 1
@@ -10255,7 +10324,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_the_plan_for_the_coup
+		id = SOV_the_plan_for_the_coup 
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SOV_undermine_stalins_authority }
 		prerequisite = { focus = SOV_clandestine_cells }
@@ -10263,7 +10332,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_undermine_stalins_authority
 		cost = 10
-		available = {
+		available = { #NHMMAP
 			SOV_soviet_civil_war_not_started = yes 
 			OR = {
 				NOT = { has_idea = SOV_lavrenty_beriya }
@@ -10285,7 +10354,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_the_plan_for_the_coup_tt 
-			add_political_power = 50
+			add_political_power = 50 #NHMMAP
 		}
 	}
 
@@ -10449,7 +10518,7 @@ focus_tree = {
 				}
 			}
 
-			ELSE_IF = {
+			ELSE_IF = { #NHMMAP
 				limit = {
 					has_game_rule = {
 						rule = SOV_ai_right_coup
@@ -10583,7 +10652,7 @@ focus_tree = {
 		                
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
 
-		completion_reward = {
+		completion_reward = { #NHMMAP
 			if = {
 				limit = {
 					NOT = { has_idea = war_economy }
@@ -10643,7 +10712,7 @@ focus_tree = {
 		relative_position_id = SOV_curtailment_of_the_collective_farms
 		cost = 10
 		available = {
-			
+			#NHMMAP removed needing rykov
 		}
 		                
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
@@ -11740,7 +11809,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_popularity = {
+			add_popularity = { #NHMMAP
 				ideology = democratic
 				popularity = 0.075
 			}
@@ -16124,7 +16193,7 @@ ai_will_do = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}
-			set_party_name = {
+			set_party_name = { #NHMMAP they should really have done this way back at NSB launch
 				ideology = neutrality
 				long_name = SOV_neutrality_party_russian
 				name = SOV_neutrality_party_russian
@@ -16612,7 +16681,7 @@ ai_will_do = {
 		
 		available = {
 			SOV = { 
-				OR = {
+				OR = { #NHMMAP
 					fascism > 0.2
 					neutrality > 0.2
 				}
@@ -16793,7 +16862,7 @@ ai_will_do = {
 			
 		}
 
-		bypass = {
+		bypass = { #NHMMAP
 			is_puppet_of = JAP
 		}
 
@@ -16931,7 +17000,7 @@ ai_will_do = {
 				days = 365
 			}
 			custom_effect_tooltip = SOV_consolidate_power_tt
-			#if = {
+			#if = { 
 			#	limit = {
 			#		original_tag = MAN
 			#	}
@@ -17119,13 +17188,13 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_rebuild_the_savior_cathedral
+		id = SOV_rebuild_the_savior_cathedral 
 		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
 		prerequisite = { focus = SOV_reopen_novodevichi }
 		x = -2
 		y = 2
 		relative_position_id = SOV_reopen_novodevichi
-		cost = 5
+		cost = 5 #NHMMAP
 		ai_will_do = {
 			factor = 1
 		}
@@ -17296,6 +17365,7 @@ ai_will_do = {
 				clr_character_flag = SOV_exiled_flag
 			} 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			#NHMMAP moved factions down the tree
 			custom_effect_tooltip = SOV_autonomous_soviet_republics_tt
 		}
 	}
@@ -17423,7 +17493,7 @@ ai_will_do = {
 		#	}
 		#}
 		completion_reward = {
-			if = {
+			if = { #NHMMAP
 				limit = {
 					NOT = { has_rule = can_join_factions }
 				}
@@ -17582,7 +17652,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			if = {
+			if = { #NHMMAP
 				limit = {
 					NOT = { has_rule = can_join_factions }
 				}
@@ -19182,7 +19252,7 @@ ai_will_do = {
 			factor = 1
 		}
 
-		bypass = {
+		bypass = { #NHMMAP
 			NOT = {
 				owns_state = 408
 				owns_state = 409
@@ -19487,6 +19557,7 @@ ai_will_do = {
 			is_in_faction_with = GER
 			GER = { is_faction_leader = yes }
 			JAP = {
+				#NHMMAP TODO: make sure this 100% works when jap is in a faction already
 				has_government = fascism
 			}
 		}

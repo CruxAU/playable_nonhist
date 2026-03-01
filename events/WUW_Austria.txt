@@ -36,6 +36,7 @@ country_event = {
 			modifier  = {
 				factor = 0
 				AUS_is_historical_ai = yes
+				is_historical_focus_on = yes
 			}
 		} 
 		
@@ -58,6 +59,7 @@ country_event = {
 			modifier  = {
 				factor = 0
 				AUS_is_historical_ai = yes
+				is_historical_focus_on = yes
 			}
 		} 
 		
@@ -872,6 +874,10 @@ country_event = { # Event for Austria Germany Objects to the DNSAP ban and deman
 				factor = 20
 				AUS_is_historical_ai = yes
 			}
+			modifier = {
+				factor = 20
+				AUS_is_axis_plan = yes
+			}
 		}
 		
 
@@ -971,24 +977,13 @@ country_event = { # Event for Austria Germany Objects to the DNSAP ban and deman
 			modifier = {
 				factor = 0.1
 				AUS_is_historical_ai = yes
-				NOT = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = no
 			}
 
 			modifier = {
 				factor = 2000
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
+				AUS_is_axis_plan = no
 			}
 		}
 
@@ -1160,13 +1155,7 @@ country_event = { #Austria seeks ROOT's support
 				AUS = {
 					is_ai = yes
 				}
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
 			}
 
 			modifier = { #if the USA has passed the neutrality pact, the answer is no
@@ -1616,12 +1605,7 @@ country_event = { #Austria finds out FROM diplomatically supports them
 			modifier = {
 				factor = 0 #kindly don't
 				AUS_is_historical_ai = yes
-				NOT = {
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = no
 			}
 
 			modifier = {
@@ -1635,13 +1619,7 @@ country_event = { #Austria finds out FROM diplomatically supports them
 
 			modifier = {
 				factor = 200
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
 			}
 		}
 
@@ -1913,13 +1891,8 @@ country_event = { #Italy requests Austria revokes their claims in turn for guara
 
 			modifier = {
 				factor = 200
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
+				AUS_is_axis_plan = no
 			}
 		}
 
@@ -1997,23 +1970,12 @@ country_event = { #Austria finds out FROM won't help
 			modifier = {
 				factor = 0.1
 				is_ai = yes
-				NOT = {
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = no
 			}
 
 			modifier = {
 				factor = 200
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
 			}
 		}
 
@@ -2470,6 +2432,14 @@ country_event = { #ROOT informed that Austria wishes to rearm, does not use FROM
 					target = FROM
 					value < 0
 				}
+			}
+			modifier = {
+				factor = 0.7
+				has_political_power < 25
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 1
 			}
 		}
 
@@ -3211,11 +3181,15 @@ country_event = { #militias causing unrest
 			base = 10
 			modifier = {
 				factor = 5
-				has_stability < 30
+				has_stability < 0.3
 			}
 			modifier = {
 				factor = 5
 				has_government = democratic
+			}
+			modifier = {
+				factor = 0
+				AUS_is_axis_plan = yes
 			}
 		}
 
@@ -3234,6 +3208,10 @@ country_event = { #militias causing unrest
 				NOT = {
 					has_government = democratic
 				}
+			}
+			modifier = {
+				factor = 0
+				AUS_is_axis_plan = yes
 			}
 		}
 
@@ -6183,13 +6161,8 @@ country_event = { #FROM complains about Jansa
 			base = 10
 			modifier = {
 				factor = 200
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
+				AUS_is_axis_plan = no
 			}
 		}
 
@@ -9017,34 +8990,19 @@ country_event = { #Austria informed of Germany upping the pressure
 				factor = 0.1
 				FROM = {
 					is_ai = no
-					NOT = {
-						has_game_rule = {
-							rule = AUS_AI_BEHAVIOR
-							option = AUS_ANTI_ANSCLUSS_STRESS
-						}
-					}
+					AUS_is_anti_anschluss_stress_plan = no
 				}
 			}
 			modifier = {
 				factor = 0.1
 				AUS_is_historical_ai = yes
-				NOT = {
-						has_game_rule = {
-							rule = AUS_AI_BEHAVIOR
-							option = AUS_ANTI_ANSCLUSS_STRESS
-						}
-					}
+				AUS_is_anti_anschluss_stress_plan = no
 			}
 
 			modifier = {
 				factor = 2000
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
+				AUS_is_anti_anschluss_stress_plan = yes
+				AUS_is_axis_plan = no
 			}
 		}
 
@@ -10410,6 +10368,87 @@ country_event = { #FROM reforms Central Powers
 				has_opinion = {
 					target = FROM
 					value > 25
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_completed_focus = TUR_kemalist_socialist_theory
+					AND = {
+						has_completed_focus = TUR_fully_integrate_the_is_bank
+						NOT = {
+							has_country_flag = TUR_AI_RANDOM_IDEO_OTTOMAN
+						}
+						NOT = {
+							tag = TUR
+							has_game_rule = {
+								rule = TUR_ideo_ai_behavior
+								option = OTTOMAN
+							}
+						}
+					}
+					has_completed_focus = BUL_oppose_the_royal_dictatorship
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						tag = GER
+						OR = {
+							has_country_flag = GER_AI_RANDOM_KAISER
+							has_country_flag = GER_AI_RANDOM_KAISER_ALT
+							has_country_flag = GER_AI_RANDOM_KAISER_BLITZKRIEG
+							has_country_flag = GER_AI_RANDOM_KAISER_CHINA_ALLY
+							has_country_flag = GER_AI_RANDOM_KAISER_DIPLO
+							has_country_flag = GER_AI_RANDOM_KAISER_ENG_ALLY
+							has_country_flag = GER_AI_RANDOM_KAISER_EXP
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_ALT
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_BLITZKRIEG
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_CHINA_ALLY
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_DIPLO
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_ENG_ALLY
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = KAISER_EXP
+							}
+						}
+					}
+					has_country_flag = TUR_AI_RANDOM_IDEO_OTTOMAN
+					AND = {
+						original_tag = TUR
+						has_game_rule = {
+							rule = TUR_ideo_ai_behavior
+							option = OTTOMAN
+						}
+					}
+					has_country_flag = BUL_AI_RANDOM_THE_RETURN_OF_FERDINAND
+					AND = {
+						original_tag = BUL
+						has_game_rule = {
+							rule = BUL_ai_behavior 
+							option = THE_RETURN_OF_FERDINAND
+						}
+					}
 				}
 			}
 		}

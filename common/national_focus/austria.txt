@@ -904,7 +904,7 @@ focus_tree = {
 	
 
 	focus = { #COMMUNIST & DEMOCRATIC
-		id = AUS_intervention_in_spain
+		id = AUS_intervention_in_spain #NHMMAP changes to these focuses
 		icon = GFX_focus_focus_fra_intervention_spain
 		prerequisite = { focus = AUS_emergency_measaures focus = AUS_seek_support_from_guarantors }
 		mutually_exclusive = { }
@@ -962,15 +962,11 @@ focus_tree = {
 					NOT = {
 						has_global_flag = scw_over
 					}
-					SPD = {
-						exists = yes
-						OR = {
-							has_government = democratic
-							has_government = communism
-						}
-					}
 				}
-
+				add_relation_rule_override = {
+					target = SPC
+					can_send_volunteers = yes
+			 	}
 				add_relation_rule_override = {
 				  	target = SPD
 				  	can_send_volunteers = yes
@@ -1018,15 +1014,12 @@ focus_tree = {
 
 		available = {
 			has_global_flag = scw_over
-
-			any_country = {
-				original_tag = SPR
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
+			SPC = {
 				exists = no
-			}	
+			}
+			SPD = {
+				exists = no
+			}
 		}
 		
 		bypass = {
@@ -1065,18 +1058,35 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = AUS_volunteer_effort_SPR_flag
-			has_global_flag = scw_over
-
-			any_country = {
-				original_tag = SPR
-				exists = yes
-				OR = {
-					has_government = democratic
-					has_government = communism
+			if = {
+				limit = {
+					has_country_flag = AUS_volunteer_effort_SPC_flag
+				}
+				SPC = {
+					exists = yes
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
 				}
 			}
-			
+			else_if = {
+				limit = {
+					has_country_flag = AUS_volunteer_effort_SPD_flag
+				}
+				SPD = {
+					exists = yes
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+			}
+			OR = {
+				has_country_flag = AUS_volunteer_effort_SPC_flag
+				has_country_flag = AUS_volunteer_effort_SPD_flag
+			}
+			has_global_flag = scw_over
 		}
 		
 		bypass = {
@@ -6521,6 +6531,7 @@ focus_tree = {
 							exists = yes
 							NOT = { has_war_with = ROOT }
 							is_in_faction = no
+							is_subject = no 
 							OR = {
 								has_government = neutrality
 								has_government = fascism
@@ -6542,6 +6553,7 @@ focus_tree = {
 							exists = yes
 							NOT = { has_war_with = ROOT }
 							is_in_faction = no
+							is_subject = no 
 							OR = {
 								has_government = neutrality
 								has_government = fascism
@@ -6563,6 +6575,7 @@ focus_tree = {
 							exists = yes
 							NOT = { has_war_with = ROOT }
 							is_in_faction = no
+							is_subject = no 
 							OR = {
 								has_government = neutrality
 								has_government = fascism
@@ -8498,6 +8511,10 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				71 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+				73 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+			}
 			NOT = {
 				has_idea = AUS_treaty_of_saint_germain_en_laye
 				has_war_with = POL
@@ -8601,6 +8618,7 @@ focus_tree = {
 		}
 
 		available = {
+			154 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
 			is_subject = no
 			NOT = {
 				has_idea = AUS_treaty_of_saint_germain_en_laye
@@ -10283,6 +10301,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_global_flag = spanish_civil_war
 			NOT = {
 				has_global_flag = scw_over
 			}
@@ -10301,8 +10320,11 @@ focus_tree = {
 			add_relation_rule_override = {
   				target = SPA
   				can_send_volunteers = yes
-  			}	
-
+  			}
+			add_relation_rule_override = {
+				target = SPB
+				can_send_volunteers = yes
+			}	
   			IF = {
   				limit = {
   					NOT = {
@@ -10338,12 +10360,35 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = scw_over
-			has_country_flag = AUS_volunteer_effort_SPA_flag
-			
-			SPA = {
-				has_capitulated = no
+			if = {
+				limit = {
+					has_country_flag = AUS_volunteer_effort_SPA_flag
+				}
+				SPA = {
+					exists = yes
+					OR = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
 			}
+			else_if = {
+				limit = {
+					has_country_flag = AUS_volunteer_effort_SPB_flag
+				}
+				SPB = {
+					exists = yes
+					OR = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
+			}
+			OR = {
+				has_country_flag = AUS_volunteer_effort_SPA_flag
+				has_country_flag = AUS_volunteer_effort_SPB_flag
+			}
+			has_global_flag = scw_over
 			
 		}
 		
@@ -10387,7 +10432,10 @@ focus_tree = {
 		available = {
 			has_global_flag = scw_over
 			SPA = {
-				has_capitulated = yes
+				exists = no
+			}
+			SPB = {
+				exists = no
 			}
 		}
 		
@@ -12072,12 +12120,8 @@ focus_tree = {
 
 		cost = 10
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.1
-				AUS_is_historical_ai = yes
-			}
+		ai_will_do = { #if you can, do it!
+			factor = 10
 		}
 
 		available = {

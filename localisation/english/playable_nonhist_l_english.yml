@@ -635,3 +635,6 @@
  north_sea_revolutions_goal_desc:0 "Our ultimate goal is the complete overthrow of capitalism in the North Sea, including our closest threats, Great Britain, Norway, Denmark, and Ireland. We must claim these lands to secure the revolution in Iceland!"
  COLLECTION_STATES_IN_NORTH_SEA:0 "All states in the North Sea"
  COLLECTION_FACTION_CONTROLLED_STATES_IN_NORTH_SEA:0 "States in the North Sea controlled by us"
+ AUS_volunteer_effort_SPB_flag: "Has sent volunteers to [SPB.GetFlag]§Y[SPB.GetNameDef]§!"
+ AUS_volunteer_effort_SPC_flag: "Has sent volunteers to [SPC.GetFlag]§Y[SPC.GetNameDef]§!"
+ AUS_volunteer_effort_SPD_flag: "Has sent volunteers to [SPD.GetFlag]§Y[SPD.GetNameDef]§!"

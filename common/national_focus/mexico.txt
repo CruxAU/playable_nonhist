@@ -1936,6 +1936,23 @@ focus_tree = {
 					}
 				}
 			}
+
+			IF = {
+				limit = {
+					has_character = MEX_leon_trotsky
+					has_global_flag = trotsky_exile_mexico	
+					NOT = { 
+						has_global_flag = flag_trotsky_dead 
+						has_global_flag = flag_mexico_invited_trotsky_to_government 
+					}
+				}
+				SOU = {
+					country_event = {
+						id = AAT_norway.8
+						days = 10 
+					}
+				}
+			}
 		}
 	}
 	
@@ -2715,7 +2732,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 500
+			factor = 100
 		}
 
 		available = {
@@ -2759,7 +2776,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 500
+			factor = 100
 		}
 
 		available = {
@@ -3831,7 +3848,7 @@ focus_tree = {
 			NOT = { has_completed_focus = MEX_focus_catholic_politics }
 			NOT = { has_completed_focus = MEX_focus_crusade_against_atheism }
 			NOT = { has_completed_focus = MEX_focus_communist_revolution }
-			#not church NHMMAP - not every fascist faction was catholic/pro church
+			#not church NHMMAP - not every fascist 'faction' is catholic/pro-church in-game
 		}
 
 		bypass = {

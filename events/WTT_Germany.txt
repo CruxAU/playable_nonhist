@@ -633,7 +633,7 @@ country_event = {
 				factor = 0
 				strength_ratio = { tag = GER ratio > 5 }
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0.5
 				has_opinion	= {
 					target = GER
@@ -691,7 +691,7 @@ country_event = {
 				factor = 0
 				strength_ratio = { tag = GER ratio < 0.2 }
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0.1
 				has_opinion	= {
 					target = GER
@@ -1057,7 +1057,7 @@ country_event = {
 		name = wtt_germany.14.a
 		ai_chance = {
 			factor = 50
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0.3
 				AND = {
 					has_government = democratic
@@ -1184,12 +1184,12 @@ country_event = {
 					add_ai_strategy = {
 						type = befriend
 						id = ROOT
-						value = 50
+						value = 50 #NHMMAP
 					}
 					add_ai_strategy = {
 						type = alliance
 						id = ROOT
-						value = 50
+						value = 50 #NHMMAP
 					}
 					add_ai_strategy = {
 						type = befriend
@@ -1244,7 +1244,7 @@ country_event = {
 		name = wtt_germany.17.a
 		ai_chance = {
 			base = 10
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0
 				OR = {
 					AND = {
@@ -1282,7 +1282,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			if = {
+			if = { #NHMMAP
 				limit = {
 					is_ai = yes
 				}
@@ -1319,7 +1319,7 @@ country_event = {
 	# Execute the head nazis Publically
 	option = {
 		name = wtt_germany.18.a
-		ai_chance = {
+		ai_chance = { #NHMMAP
 			factor = 10
 			modifier = {
 				factor = 0
@@ -1395,7 +1395,7 @@ country_event = {
 	# Imprison the head nazis for life
 	option = {
 		name = wtt_germany.18.b
-		ai_chance = {
+		ai_chance = { #NHMMAP
 			factor = 20
 			modifier = {
 				factor = 0
@@ -2218,7 +2218,7 @@ country_event = {
 	option = { # Push Ahead
 		name = germany.63.a
 		ai_chance = { 
-			factor = 40
+			factor = 40 #NHMMAP
 			modifier = {
 				factor = 3
 				strength_ratio = {
@@ -2262,7 +2262,7 @@ country_event = {
 	}
 	option = { # Back Down
 		name = germany.63.b
-		ai_chance = { 
+		ai_chance = {  #NHMMAP
 			factor = 60 
 			modifier = {
 				factor = 3
@@ -2560,7 +2560,7 @@ country_event = {
 	option = {
 		name = wtt_germany.38.a
 		ai_chance = {
-			base = 80
+			base = 80 #NHMMAP
 			modifier = {
 				factor = 0
 				has_government = democratic
@@ -2587,7 +2587,7 @@ country_event = {
 				factor = 0
 				has_war_with = JAP
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				factor = 0
 				has_government = democratic
 				GER = { has_completed_focus = GER_reinstate_nazi_leadership }
@@ -2611,7 +2611,7 @@ country_event = {
 				factor = 0
 				has_war_with = JAP
 			}
-			modifier = {
+			modifier = { #NHMMAP
 				add = 20
 				has_government = democratic
 				GER = { has_completed_focus = GER_reinstate_nazi_leadership }
@@ -3410,7 +3410,7 @@ country_event = {
 	option = {
 		name = wtt_germany.54.a
 		ai_chance = {
-			factor = 70
+			factor = 70 #NHMMAP
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		GER = { country_event = { id = wtt_germany.55 days = 1 random_days = 6 } }
@@ -3420,7 +3420,7 @@ country_event = {
 	option = {
 		name = wtt_germany.54.b	
 		ai_chance = {
-			factor = 30
+			factor = 30 #NHMMAP
 		}
 	}
 }
@@ -3868,7 +3868,7 @@ country_event = {
 	option = {
 		name = wtt_germany.65.a
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0.5
 				has_opinion = { target = GER value < 0 }
@@ -3926,7 +3926,7 @@ country_event = {
 	option = {
 		name = wtt_germany.65.b
 		ai_chance = {
-			factor = 0
+			base = 0
 			modifier = {
 				factor = 0.5
 				has_opinion = { target = GER value > 50 }

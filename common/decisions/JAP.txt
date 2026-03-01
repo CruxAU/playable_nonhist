@@ -4441,6 +4441,7 @@ operations = {
 			}
 		}
 	}
+
 }
 
 prospect_for_resources = {
@@ -7860,7 +7861,7 @@ JAP_imperial_influence_decision_cat = {
 			hidden_trigger = { always = no }
 		}
 
-		days_mission_timeout = 365
+		days_mission_timeout = 545
 
 		is_good = no
 
@@ -7921,7 +7922,7 @@ JAP_imperial_influence_decision_cat = {
 			hidden_trigger = { always = no }
 		}
 
-		days_mission_timeout = 365
+		days_mission_timeout = 545
 
 		is_good = no
 
@@ -7994,7 +7995,7 @@ JAP_imperial_influence_decision_cat = {
 			hidden_trigger = { always = no }
 		}
 
-		days_mission_timeout = 365
+		days_mission_timeout = 545
 
 		is_good = no
 
@@ -14630,6 +14631,12 @@ JAP_investing_in_foreign_industries_cat = {
 				}
 			}
 
+			hidden_effect = {
+				FROM = {
+					set_country_flag = JAP_has_already_attracted_inestments_from_here_flag
+				}
+			}
+
 		}
 
 	}
@@ -16961,3 +16968,5 @@ BRM_burmah_oils_oil_fields = {
 	}
 
 }
+
+
