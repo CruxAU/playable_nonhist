@@ -3420,6 +3420,7 @@ GER_yeah_im_busy_rn_dont_at_me = { #despite how it looks, this doesn't work on t
 		}
 	}
 	reversed = yes
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = alliance
 		id = GER
