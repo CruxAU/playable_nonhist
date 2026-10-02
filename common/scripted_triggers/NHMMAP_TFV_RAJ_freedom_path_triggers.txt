@@ -1,0 +1,11 @@
+# NHMMAP-only objects extracted from vanilla override common/scripted_triggers/TFV_RAJ_freedom_path_triggers.txt
+
+JAP_can_help_against_ENG = {
+	JAP = {
+		exists = yes
+		has_government = fascism
+		has_civil_war = no
+		NOT = { has_war_together_with = ENG }
+		is_faction_leader = yes
+	}
+}

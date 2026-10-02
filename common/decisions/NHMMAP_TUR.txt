@@ -1,0 +1,141 @@
+# NHMMAP-only objects extracted from vanilla override common/decisions/TUR.txt
+
+economy_decisions = {
+
+	#INVESTMENT DECISIONS
+	TUR_discuss_investment_possibilities_with_FROM_NHMMAP = {
+
+		icon = generic_construction
+
+		allowed = { 
+			original_tag = TUR
+		}
+
+		available = {
+			has_capitulated = no
+			is_puppet = no
+			FROM = {	
+				NOT = {
+					has_war_with = ROOT
+					#STOP PP SINK: These two checks below are so that Turkey cannot take the decision multiple times while FROM has not yet started investment (resulting in wasting PP for nothing)
+					has_country_flag = TUR_investment_in_turkey_pending_flag
+					has_idea = TUR_investment_financing_spirit
+				}
+			}
+		}
+
+		target_trigger = { #some strange logic but trust me
+			FROM = {
+				OR = {
+					AND = {
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+					}
+					AND = {
+						tag = USA
+						has_government = democratic
+					}
+					AND = {
+						OR = {
+							original_tag = SPR
+							tag = SPD
+							tag = SPC
+						}
+						OR = {
+							has_government = communism
+							has_government = democratic
+							has_completed_focus = SPA_bolster_offensive_infrastructure #is falangists
+						}
+						NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
+						has_global_flag = scw_over
+					}
+				}
+				is_puppet = no
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
+
+		days_remove = 25
+
+		cost = 50
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = TUR_investment_pursued
+			}
+			modifier = {
+				factor = 5
+				date > 1938.1.1
+				has_government = neutrality
+			}
+			modifier = {
+				add = 10
+				has_completed_focus = TUR_peace_at_home
+				NOT = { has_completed_focus = TUR_reconfigure_our_foreign_policy }
+			}
+			modifier = {
+				factor = 5
+				has_completed_focus = TUR_reconfigure_our_foreign_policy
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					NOT = { has_variable = TUR_influence }
+					NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					check_variable = { TUR_influence > 0 }
+					NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+				}
+				any_other_country = {
+					NOT = { tag = FROM }
+					check_variable = { TUR_influence = FROM.TUR_influence compare = greater_than_or_equals }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_government = FROM
+			}
+		}
+
+		visible = {
+			has_completed_focus = TUR_utilize_foreign_capital	
+			NOT = { has_completed_focus = TUR_pivot_to_the_past	}
+			NOT = { has_completed_focus = TUR_join_the_allies }
+			NOT = { has_completed_focus = TUR_the_mediterranean_entente }
+			NOT = { has_completed_focus = TUR_join_the_axis }
+			NOT = { has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc }
+			NOT = { has_completed_focus = TUR_readdress_the_montreux_convention }
+			NOT = { has_completed_focus = TUR_join_the_minor_democracies }
+			NOT = { has_completed_focus = TUR_continue_to_prioritise_balkan_integrity }
+			NOT = {
+				has_country_flag = TUR_investment_pursued
+			}
+			is_in_faction = no
+			has_capitulated = no
+			is_puppet = no
+			FROM = {
+				NOT = { has_country_flag = ROOT_rejecting_turkish_overtures }
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = TUR_investment_pursued
+		}
+
+		remove_effect = {
+			FROM = { country_event = { id = bftb_turkey.126 } }
+			custom_effect_tooltip = TUR_investment_opinion_tt
+			clr_country_flag = TUR_investment_pursued
+		}
+	}
+}
+

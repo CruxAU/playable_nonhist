@@ -1,0 +1,63 @@
+# NHMMAP-only objects extracted from vanilla override common/scripted_triggers/NOR_scripted_triggers.txt
+
+NOR_is_alt_democratic_ai = { 
+	is_ai = yes 
+	OR = {
+		has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALT
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = DEMOCRATIC_ALT
+		}
+		has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALLIES
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = DEMOCRATIC_ALLIES
+		}
+		has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_ALLIES_EXP
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = DEMOCRATIC_ALLIES_EXP
+		}
+		has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_NORDIC
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = DEMOCRATIC_NORDIC
+		}
+		has_country_flag = NOR_AI_RANDOM_DEMOCRATIC_NORDIC_EXP
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = DEMOCRATIC_NORDIC_EXP
+		}
+	}
+}
+
+NOR_is_axis_ai = { #is facsist - will join the axis
+	is_ai = yes 
+	OR = {
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST_AXIS
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST_AXIS_RK
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_RK
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST_AXIS_PUPPET
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_PUPPET
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST_AXIS_V_RU
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_V_RU
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST_AXIS_V_UK
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST_AXIS_V_UK
+	} 
+}

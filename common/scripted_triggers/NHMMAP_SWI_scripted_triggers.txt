@@ -1,0 +1,96 @@
+# NHMMAP-only objects extracted from vanilla override common/scripted_triggers/SWI_scripted_triggers.txt
+
+SWI_AI_is_pro_allies = { #AI tries to stay in strong cantons, then slowly moves to balanced, hires democrats and some socialists
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = NEUTRALITY_PRO_ALLIES
+		}
+		has_country_flag = SWI_AI_RANDOM_NEUTRALITY_PRO_ALLIES
+	}
+}
+
+SWI_AI_is_pro_axis = { #AI tries to stay in strong cantons, then slowly moves to strong council, hires democrats and fascists
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = NEUTRALITY_PRO_AXIS
+		}
+		has_country_flag = SWI_AI_RANDOM_NEUTRALITY_PRO_AXIS
+	}
+}
+
+SWI_AI_is_partial_neutrality = { #ensures AI TRIES to stay in the strong cantons range (not full cantons) loose hiring restrictions
+	OR = {
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = NEUTRALITY_ALTERNATE
+		}
+		has_country_flag = SWI_AI_RANDOM_NEUTRALITY_ALTERNATE
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = NEUTRALITY_MARTIAL_LAW
+		}
+		has_country_flag = SWI_AI_RANDOM_NEUTRALITY_MARTIAL_LAW
+	}
+}
+
+SWI_AI_is_communist = { #AI just goes straight for full council 100% of the time, hires communist guys
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_EXPANSIONIST_COMMUNIST
+		}
+		has_country_flag = SWI_AI_RANDOM_EXPANSIONIST_COMMUNIST
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_AP_COMMUNIST
+		}
+		has_country_flag = SWI_AI_RANDOM_AP_COMMUNIST
+	}
+}
+
+SWI_AI_is_protectorate = { #just so i know what focuses to go for and makes it clean
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_IMPERIAL
+		}
+		has_country_flag = SWI_AI_RANDOM_IMPERIAL
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_AP_COMMUNIST
+		}
+		has_country_flag = SWI_AI_RANDOM_AP_COMMUNIST
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_AP_DEMOCRATIC
+		}
+		has_country_flag = SWI_AI_RANDOM_AP_DEMOCRATIC
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_AP_NE
+		}
+		has_country_flag = SWI_AI_RANDOM_AP_NE
+	}	
+}
+
+SWI_AI_is_exp_conf = { #just so i know what focuses to go for and makes it clean
+	OR = {		
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_EXPANSIONIST_COMMUNIST
+		}
+		has_country_flag = SWI_AI_RANDOM_EXPANSIONIST_COMMUNIST
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_EXPANSIONIST_DEMOCRATIC
+		}
+		has_country_flag = SWI_AI_RANDOM_EXPANSIONIST_DEMOCRATIC
+		has_game_rule = {
+			rule = SWI_AI_BEHAVIOR
+			option = SWI_EXPANSIONIST_NE
+		}
+		has_country_flag = SWI_AI_RANDOM_EXPANSIONIST_NE
+	}	
+}

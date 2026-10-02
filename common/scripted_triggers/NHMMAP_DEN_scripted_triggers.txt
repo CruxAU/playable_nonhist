@@ -1,0 +1,298 @@
+# NHMMAP-only objects extracted from vanilla override common/scripted_triggers/DEN_scripted_triggers.txt
+
+DEN_welfare_ai = { #NHMMAP
+	OR = {
+		AND = {
+			is_historical_focus_on = yes
+			has_game_rule = {
+				rule = DEN_ai_behavior
+				option = DEFAULT
+			}
+		}
+		has_country_flag = DEN_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = HISTORICAL
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_WELFARE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_WELFARE
+		}
+	}
+}
+
+DEN_balancing_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_BALANCE
+		}
+	}
+}
+
+DEN_is_social_democrat_ai = { #NHMMAP, poor socialist democrats are only shown in historical, so santa might not get much screen time otherwise
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = HISTORICAL
+		}
+	}
+}
+
+DEN_is_liberal_ai = { #NHMMAP, liberals get two paths, one balanced and one rearming
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NEUTRAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_NEUTRAL
+		}
+	}
+}
+
+DEN_is_conservative_ai = { #NHMMAP, conservatives always rearm
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_DEMOCRATIC_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = DEMOCRATIC_REARM_NORD
+		}
+	}
+}
+
+DEN_is_communist_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_WELFARE
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_SOV
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_SOV
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_COMMUNIST_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = COMMUNIST_REARM_NORD
+		}
+	}
+}
+
+DEN_is_farmers_ai = { #NHMMAP, fp = farmers party (Bondepartiet), they dont care about ideology of others as long as it isn't communism
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_FP_WELFARE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_WELFARE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_BALANCE
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_BALANCE
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_EURO
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_EURO
+		}
+		has_country_flag = DEN_AI_RANDOM_FP_REARM_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FP_REARM_NORD
+		}
+	}
+}
+
+DEN_is_royal_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_ALLIANCE_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_ALLIANCE_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_ALLIANCE_ROYAL
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_ALLIANCE_ROYAL
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_NEU
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_NEU
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_NEU_EXP
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_NEU_EXP
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_DIPLO_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_DIPLO_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_DIPLO_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_DIPLO_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_EXP_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_GER
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_EXP_GER
+		}
+		has_country_flag = DEN_AI_RANDOM_MONARCHIST_EXP_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = MONARCHIST_EXP_BALTIC
+		}
+	}
+}
+
+DEN_is_fascist_ai = { #NHMMAP
+	OR = {
+		has_country_flag = DEN_AI_RANDOM_FASCIST_NEU
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_NEU
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_NEU_EXP
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_NEU_EXP
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_DIPLO_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_DIPLO_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_DIPLO_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_DIPLO_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_EXP_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_EXP_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_EXP_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_EXP_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_NEU
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_NEU_EXP
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_NEU_EXP
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_DIPLO_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_DIPLO_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_DIPLO_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_DIPLO_BALTIC
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_NORD
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_EXP_NORD
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_ENG
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_EXP_ENG
+		}
+		has_country_flag = DEN_AI_RANDOM_FASCIST_AXIS_EXP_BALTIC
+		has_game_rule = {
+			rule = DEN_ai_behavior
+			option = FASCIST_AXIS_EXP_BALTIC
+		}
+	}
+}

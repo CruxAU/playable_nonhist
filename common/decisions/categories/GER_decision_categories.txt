@@ -599,24 +599,4 @@ GER_uncertain_future_cat = {
 	}
 }
 
-GER_establish_colonial_governments = {
-	allowed = {
-		original_tag = GER
-	}
-	visible = {
-		OR = {
-			has_completed_focus = GER_exchange_for_colonies_ENG
-			has_completed_focus = GER_exchange_for_colonies_JAP
-			has_completed_focus = GER_our_place_in_the_sun
-		}
-	}
-}
 
-GER_ENG_support_royal_claim = {
-	allowed = {
-		original_tag = ENG
-	}
-	visible = {
-		has_country_flag = ENG_will_restore_monarchy
-	}
-}

@@ -1,0 +1,18 @@
+# NHMMAP-only objects extracted from vanilla override common/decisions/categories/PRC_decision_categories.txt
+
+PRC_take_over_states = { #NHMMAP
+	icon = generic_prepare_civil_war
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		is_potentially_communist_china = yes
+		NOT = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+	}
+
+	visible = {
+		has_completed_focus = PRC_peoples_liberation_army
+    		NOT = { has_completed_focus = PRC_social_democracy }	
+		is_in_faction = yes	
+	}
+}

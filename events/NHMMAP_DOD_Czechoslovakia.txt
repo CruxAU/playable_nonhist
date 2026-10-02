@@ -1,0 +1,484 @@
+﻿# NHMMAP-only objects extracted from vanilla override events/DOD_Czechoslovakia.txt
+add_namespace = czech
+
+country_event = { # event for ROM saying that CZE and SOV are going to split you down the middle...
+	id = czech.50
+	title = czech.50.t
+	desc = czech.50.d
+	picture = GFX_report_event_stalin_02
+	
+	is_triggered_only = yes
+	
+	option = { #agree
+		name = czech.50.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.4
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0.8
+				has_government = neutrality
+			}
+		}
+		CZE = { country_event = { id = czech.51 hours = 24 } }
+		SOV = { country_event = { id = czech.51 hours = 24 } }
+	}
+
+	option = { #refuse
+		name = czech.50.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+			modifier = {
+				factor = 3
+				any_country = {
+					AND = {
+						has_guaranteed = ROM
+						NOT = { tag = FRA }	
+					}
+				}
+			}
+		}
+		add_war_support = 0.2
+		if = {
+			limit = {
+				is_guaranteed_by = FRA
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		SOV = { country_event = { id = czech.52 hours = 72 } }
+		CZE = { country_event = { id = czech.53 hours = 48 } }
+	}
+}
+
+country_event = { # event for CZE and SOV - Romania Agrees
+	id = czech.51
+	title = czech.51.t
+	desc = czech.51.d
+	picture = GFX_report_event_stalin_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		if = {
+			limit = {
+				tag = CZE
+			}
+			add_threat = 4
+			ROM = {
+				if = {
+					limit = {
+						is_guaranteed_by = FRA
+					}
+					FRA = {
+						diplomatic_relation = {
+							country = ROM
+							relation = guarantee
+							active = no
+						}
+					}
+				}
+				release = TRA
+				CZE = { puppet = TRA }
+				TRA = { set_politics = { ruling_party = communism elections_allowed = no } }
+				SOV = { puppet = ROM }
+				SOV = { transfer_state = 78 }
+				SOV = { transfer_state = 766 }
+				SOV = { transfer_state = 80 }
+				TRA = { transfer_state = 76 }
+				TRA = { transfer_state = 83 }
+				TRA = { transfer_state = 84 }
+				if = {
+					limit = {
+						YUG = {
+							has_completed_focus = YUG_recognize_the_soviet_union
+						}
+					}
+					YUG = { transfer_state = 82 }
+				}
+				else = {
+					TRA = { transfer_state = 82 }
+				}
+				if = {
+					limit = {
+						BUL = {
+							has_completed_focus = BUL_appoint_communist_ministers
+						}
+					}
+					BUL = { transfer_state = 77 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #romania said no? wtf???  - - - event for SOV 
+	id = czech.52
+	title = czech.52.t
+	desc = czech.52.d
+	picture = GFX_report_event_czech_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = czech.52.a   #WAR!!!!
+		
+		CZE = {	
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				generator = { 76 83 82 84 }
+			}
+		}
+		SOV = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				generator = { 78 79 80 46 81  }
+			}
+			
+		}
+	}
+	option = { #fine WHATEVER! I like it this way anyway! Hmph...
+		ai_chance = {
+			factor = 2
+		}
+		name = czech.52.b
+		add_war_support = -0.05
+		CZE = {
+			add_war_support = -0.1
+			country_event = czech.54
+		}
+	}
+}
+
+country_event = { #romania said no? wtf???  - - - event for CZE 
+	id = czech.53
+	title = czech.52.t
+	desc = czech.53.d
+	picture = GFX_report_event_czech_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = czech.53.a   #see what russia does
+	}
+}
+
+country_event = { #Soviets refuse to go to war
+	id = czech.54
+	title = czech.54.t
+	desc = czech.54.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = czech.54.a   #FINE, jeez
+		effect_tooltip = {
+			add_war_support = -0.1
+		}
+	}
+}
+
+country_event = { #germans cap cze event for sov
+	id = czech.60
+	title = czech.60.t
+	desc = czech.60.d
+	picture = GFX_report_event_czech_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = { #well fuck, now what?
+		name = czech.60.a  
+		ai_chance = {
+			factor = 90
+		} 
+		GER = { country_event = czech.61 }
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					is_in_faction_with = GER
+				}
+				white_peace = SOV
+				white_peace = CZE
+			}
+		}
+	}
+
+	option = { #keep fighting!
+		ai_chance = {
+			factor = 0
+		} 
+		name = czech.60.b 
+		add_war_support = -0.05
+	}
+}
+
+country_event = { #sov wants peace after we took cze
+	id = czech.61
+	title = czech.61.t
+	desc = czech.61.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	is_triggered_only = yes
+	
+	option = { # ok lol
+		name = czech.61.a  
+		ai_chance = {
+			factor = 1
+		} 
+		every_country = {
+			limit = {
+				is_in_faction_with = GER
+			}
+			white_peace = SOV
+			white_peace = CZE
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = SOV
+				has_government = communism
+			}
+			white_peace = GER
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = SOV
+				NOT = {
+					has_government = communism
+				}
+			}
+			SOV = { remove_from_faction = PREV }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					70 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+				}
+				SLO = { transfer_state = 70 }
+			}
+			if = {
+				limit = {
+					country_exists = TRA
+					TRA = { has_government = communism }
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+					}
+					154 = { is_owned_by = HUN }
+				}
+				HUN = { 
+					annex_country = {
+						target = TRA
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					71 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+				}
+				SLO = { transfer_state = 71 }
+			}
+			if = {
+				limit = {
+					154 = { is_owned_by = HUN }
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+					}
+					73 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+					country_exists = HUN
+				}
+				HUN = { transfer_state = 73 }
+			}
+		
+		
+			if = {
+				limit = {
+					OR = {
+						NOT = { 154 = { is_owned_by = HUN } }
+						HUN = { is_friend_or_potential_friend_of_GER = no }
+					}
+					73 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+				}
+				SLO = { transfer_state = 73 }
+			}
+		
+			if = {
+				limit = {
+					664 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+				}
+				SLO = { transfer_state = 664 }
+			}
+			if = {
+				limit = { country_exists = CZE }
+				SLO = {
+					inherit_technology = CZE
+				}
+				annex_country = { target = CZE }
+				add_war_support = 0.1
+			}
+			puppet = SLO
+			if = {
+				limit = {
+					72 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+					country_exists = POL
+				}
+				POL = { transfer_state = 72 } # Give Poland Zaolzie
+			}
+
+			if = {
+				limit = {
+					154 = { is_owned_by = HUN }
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+					}
+					76 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+					country_exists = HUN
+				}
+				HUN = { transfer_state = 76 }
+			}
+			if = {
+				limit = {
+					154 = { is_owned_by = HUN }
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+					}
+					84 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+					country_exists = HUN
+				}
+				HUN = { transfer_state = 84 }
+			}
+			if = {
+				limit = {
+					154 = { is_owned_by = HUN }
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+					}
+					83 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+					country_exists = HUN
+				}
+				HUN = { transfer_state = 83 }
+			}
+			if = {
+				limit = {
+					154 = { is_owned_by = HUN }
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+					}
+					82 = {
+						OR = {
+							is_owned_by = CZE
+							is_owned_by = GER
+						}
+					}
+					country_exists = HUN
+				}
+				HUN = { transfer_state = 82 }
+			}
+			every_state = {
+				limit = {
+					is_core_of = CZE
+					NOT = { is_core_of = SLO }
+					NOT = { state = 72 }
+				}
+				add_claim_by = GER
+			}
+		
+			if = {
+				limit = { has_global_flag = GER_HUN_CZE_split }
+				HUN = { country_event = DOD_hungary.106 }
+			}
+		}
+	}
+
+	option = {  # nope
+		ai_chance = {
+			factor = 0
+		} 
+		name = czech.61.b 
+		add_war_support = -0.05
+		effect_tooltip = {
+			SOV = { add_war_support = 0.15 }
+		}
+		SOV = { country_event = czech.62 }
+	}
+}
+
+country_event = { #germans said no peace...
+	id = czech.62 #NHMMAP fix: id was missing
+	title = czech.62.t
+	desc = czech.62.d
+	picture = GFX_report_event_czech_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = czech.62.a   #well ok...
+		add_war_support = 0.15
+	}
+}

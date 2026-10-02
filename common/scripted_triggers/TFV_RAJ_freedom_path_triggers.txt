@@ -45,12 +45,3 @@ GER_can_help_against_ENG = {
 	}
 }
 
-JAP_can_help_against_ENG = {
-	JAP = {
-		exists = yes
-		has_government = fascism
-		has_civil_war = no
-		NOT = { has_war_together_with = ENG }
-		is_faction_leader = yes
-	}
-}

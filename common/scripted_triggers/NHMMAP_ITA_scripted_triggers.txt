@@ -1,0 +1,76 @@
+# NHMMAP-only objects extracted from vanilla override common/scripted_triggers/ITA_scripted_triggers.txt
+
+ITA_is_historical_alternate_ai = { #NHMMAP for different AI behavior
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_BALBO_POS_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_POS_AGGR
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_BALBO_POS_AGGR
+		}
+		has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_POS_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_GRANDI_POS_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_POS_AGGR
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_GRANDI_POS_AGGR
+		}
+	}
+}
+
+ITA_is_diplomatic_ai = { #NHMMAP for different AI behavior
+	OR = {
+		has_country_flag = FASCIST_MUSSOLINI_IF_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_MUSSOLINI_IF_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_FASCIST_BALBO_IF_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_BALBO_IF_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_FASCIST_GRANDI_IF_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = FASCIST_GRANDI_IF_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY_IF_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_CHRISTIAN_DEMOCRACY_IF_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_KING_IF_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_DEMOCRATIC_KING_IF_DIPLO
+		}
+		has_country_flag = ITA_AI_RANDOM_MONARCHIST_IF_DIPLO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = MONARCHIST_IF_DIPLO
+		}
+	}
+}
+
+ITA_is_pope_ai = { #NHMMAP for ai behavior, overlaps with ITA_is_monarchist_ai = yes
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_POPE_ISO
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = POPE_ISO
+		}
+		has_country_flag = ITA_AI_RANDOM_POPE_ROME
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = POPE_ROME
+		}
+	}
+}

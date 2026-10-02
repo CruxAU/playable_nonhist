@@ -402,29 +402,4 @@ BRM_burmah_oils_oil_fields = {
 	}	
 }
 
- #NHMMAP
-JAP_expand_northern_bases = {
-	allowed = {
-		original_tag = JAP
-		NOT = {
-			has_dlc = "No Compromise, No Surrender"
-		}
-	}
-	visible = {
-		is_subject = no
-		has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
-	}
-}
 
-JAP_war_with_sov = {
-	allowed = {
-		original_tag = JAP
-		NOT = {
-			has_dlc = "No Compromise, No Surrender"
-		}
-	}
-	visible = {
-		is_subject = no
-		has_completed_focus = JAP_preemptive_war
-	}
-}

@@ -635,30 +635,5 @@ BUL_cajole_the_brits = {
 	}
 }
 
-BUL_regency_is_neutral = { #reverse strategy
-	reversed = yes
-	allowed = {
-		has_dlc = "Battle for the Bosporus"
-		original_tag = BUL
-	}
-	enable = {
-		OR = {
-			BUL = { has_country_flag = BUL_AI_RANDOM_REGENCY_COUNCIL }
-			has_game_rule = {
-				rule = BUL_ai_behavior 
-				option = REGENCY_COUNCIL
-			}
-		}
-	}
-	abort = {
-		BUL = { has_war = yes }
-	}
-
-	ai_strategy = {
-		type = alliance
-		id = "BUL"
-		value = -1000
-	}
-}
 
 

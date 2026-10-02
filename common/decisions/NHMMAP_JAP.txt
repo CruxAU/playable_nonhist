@@ -1,0 +1,956 @@
+# NHMMAP-only objects extracted from vanilla override common/decisions/JAP.txt
+
+JAP_expand_northern_bases = {
+
+	JAP_SOV_prepare_magadan_invasion = { #874
+
+		icon = jap_pacific_guardian
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 874
+			}
+		} 
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+		}
+
+		visible = {
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 30			
+		}
+
+		days_remove = 120
+
+		cost = 100
+
+		complete_effect = {
+			add_command_power = -30
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						has_war_with = SOV
+					}
+				}
+				custom_effect_tooltip = JAP_magadan_invade_tt
+				division_template = { 
+					name = "Gunkō Butai"
+					division_names_group = JAP_INF_01
+					is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 2 y = 0 }
+
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				874 = {
+					create_unit = {
+						division = "name = \"Magadan Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"Magadan Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"Magadan Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes
+						province = 12683
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = JAP_magadan_prepared_tt
+				hidden_effect = {
+					set_country_flag = JAP_magadan_prepared
+				}
+			}
+		}
+	}
+
+	JAP_SOV_prepare_kamchatka_invasion = { #637
+
+		icon = jap_pacific_guardian
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 637
+			}
+		} 
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+		}
+
+		visible = {
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 30			
+		}
+
+		days_remove = 120
+
+		cost = 100
+
+		complete_effect = {
+			add_command_power = -30
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						has_war_with = SOV
+					}
+				}
+				custom_effect_tooltip = JAP_kamchatka_invade_tt
+				division_template = { 
+					name = "Gunkō Butai"
+					division_names_group = JAP_INF_01
+					is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 2 y = 0 }
+
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				637 = {
+					create_unit = {
+						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
+					}
+					create_unit = {
+						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
+					}
+					create_unit = {
+						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 1823
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 4728
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes
+						province = 1823
+					}
+				}
+				
+			}
+			else = {
+				custom_effect_tooltip = JAP_kamchatka_prepared_tt
+				hidden_effect = {
+					set_country_flag = JAP_kamchatka_prepared
+				}
+			}
+		}
+	}	
+
+	JAP_SOV_begin_invasions = {
+
+		icon = infiltrate_state
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = JAP_kamchatka_prepared
+					has_country_flag = JAP_magadan_prepared
+				}
+			}
+			has_war_with = SOV
+		}
+
+		visible = {
+			OR = {
+				has_country_flag = JAP_kamchatka_prepared
+				has_country_flag = JAP_magadan_prepared
+			}
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5			
+		}
+
+		days_remove = 10
+
+		cost = 20
+
+		complete_effect = {
+			add_command_power = -30
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						has_country_flag = JAP_kamchatka_prepared
+					}
+				}
+				custom_effect_tooltip = JAP_kamchatka_invade_tt
+				division_template = { 
+					name = "Gunkō Butai"
+					division_names_group = JAP_INF_01
+					is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 2 y = 0 }
+
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				637 = {
+					create_unit = {
+						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
+					}
+					create_unit = {
+						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4728
+					}
+					create_unit = {
+						division = "name = \"Kamchatka Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 1823
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 4728
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes
+						province = 1823
+					}
+				}
+				
+			}
+			if = {
+				limit = {
+					ROOT = {
+						has_country_flag = JAP_magadan_prepared
+					}
+				}
+				custom_effect_tooltip = JAP_magadan_invade_tt
+				division_template = { 
+					name = "Gunkō Butai"
+					division_names_group = JAP_INF_01
+					is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 2 y = 0 }
+
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				874 = {
+					create_unit = {
+						division = "name = \"Magadan Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"Magadan Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"Magadan Gunkō Butai\" division_template = \"Gunkō Butai\" start_experience_factor = 1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes
+						province = 12683
+					}
+				}
+			}
+		}
+	}
+
+	JAP_SOV_promise_small_gains = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		visible = {
+			NOT = { has_country_flag = JAP_SOV_small_gains_promised }
+			NOT = { has_country_flag = JAP_SOV_mid_gains_promised }
+			NOT = { has_country_flag = JAP_SOV_large_gains_promised }
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = SOV
+					ratio < 0.75
+				}
+			}	
+			modifier = {
+				factor = 2
+				GER = {
+					has_government = democratic
+				}
+			}	
+		}
+
+		days_remove = 5
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = JAP_SOV_small_gains_promised
+			add_command_power = -10
+		}
+
+		remove_effect = {
+			add_war_support = -0.1
+			custom_effect_tooltip = JAP_promise_expectations_small_tt
+		}
+	}
+
+	JAP_SOV_promise_mid_gains = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		visible = {
+			NOT = { has_country_flag = JAP_SOV_small_gains_promised }
+			NOT = { has_country_flag = JAP_SOV_mid_gains_promised }
+			NOT = { has_country_flag = JAP_SOV_large_gains_promised }
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = SOV
+					ratio > 0.75
+				}
+			}
+			modifier = {
+				factor = 5
+				strength_ratio = {
+					tag = SOV
+					ratio > 1
+				}
+			}		
+		}
+
+		days_remove = 5
+
+		cost = 0
+
+		complete_effect = {
+			add_command_power = -10
+			set_country_flag = JAP_SOV_mid_gains_promised
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = JAP_promise_expectations_mid_tt
+		}
+	}
+
+	JAP_SOV_promise_large_gains = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		visible = {
+			NOT = { has_country_flag = JAP_SOV_small_gains_promised }
+			NOT = { has_country_flag = JAP_SOV_mid_gains_promised }
+			NOT = { has_country_flag = JAP_SOV_large_gains_promised }
+			NOT = {
+				SOV = { is_subject_of = JAP }
+			}
+			is_subject = no
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = SOV
+					ratio > 1.1
+				}
+			}
+			modifier = {
+				factor = 5
+				strength_ratio = {
+					tag = SOV
+					ratio > 1.5
+				}
+			}
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = SOV
+					ratio > 2
+				}
+			}			
+		}
+
+		days_remove = 5
+
+		cost = 0
+
+		complete_effect = {
+			add_command_power = -10
+			set_country_flag = JAP_SOV_large_gains_promised
+		}
+
+		remove_effect = {
+			add_war_support = 0.1
+			custom_effect_tooltip = JAP_promise_expectations_large_tt
+		}
+	}
+}
+
+JAP_war_with_sov = {
+
+	JAP_war_with_sov_mission = {
+
+		icon = SOV_socialism_in_one_country
+
+		available = {
+			OR = {
+				SOV = { has_capitulated = yes }
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = JAP_north_states_tt
+						408 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						409 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						655 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						657 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						560 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						637 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						874 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						561 = {
+							CONTROLLER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = JAP_SOV_mid_gains_promised
+						}
+						custom_trigger_tooltip = {
+							tooltip = JAP_north_states_2_tt
+							563 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							564 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							822 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							OR = {
+								817 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								819 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								565 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								574 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								644 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = JAP_SOV_large_gains_promised
+						}
+						custom_trigger_tooltip = {
+							tooltip = JAP_north_states_2_tt
+							563 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							564 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							822 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							OR = {
+								817 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								819 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								565 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								574 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								644 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = JAP_north_states_3_tt
+							566 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							568 = {
+								CONTROLLER = {
+									OR = {
+										original_tag = JAP
+										is_subject_of = JAP
+										is_in_faction_with = JAP
+									}
+								}
+							}
+							OR = {
+								818 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								575 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								876 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+								570 = {
+									CONTROLLER = {
+										OR = {
+											original_tag = JAP
+											is_subject_of = JAP
+											is_in_faction_with = JAP
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			any_enemy_country = {
+				original_tag = SOV
+			}
+			has_completed_focus = JAP_preemptive_war
+			NOT = {
+				has_global_flag = JAP_SOV_peace_agreement
+			}
+		}
+
+		activation = {
+			any_enemy_country = {
+				original_tag = SOV
+			}
+			has_completed_focus = JAP_preemptive_war
+			hidden_trigger = {
+				NOT = {
+					has_global_flag = JAP_SOV_peace_agreement
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		is_good = no
+
+		days_mission_timeout = 730
+		
+		timeout_effect = { #didnt do it in time
+			if = {
+				limit = {
+					has_country_flag = JAP_SOV_small_gains_promised
+				}
+				add_stability = -0.1
+				add_war_support = -0.05
+				add_timed_idea = {
+					idea = NHMMAP_tired_in_the_east_JAP
+					days = 120
+				}
+				SOV = {
+					add_timed_idea = {
+						idea = NHMMAP_time_to_finish_the_east_SOV
+						days = 120
+					}
+					country_event = nonhist_JAP.501
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = JAP_SOV_mid_gains_promised
+				}
+				add_stability = -0.2
+				add_war_support = -0.2
+				add_timed_idea = {
+					idea = NHMMAP_tired_in_the_east_JAP
+					days = 250
+				}
+				SOV = {
+					add_timed_idea = {
+						idea = NHMMAP_time_to_finish_the_east_SOV
+						days = 250
+					}
+					country_event = nonhist_JAP.501
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = JAP_SOV_large_gains_promised
+				}
+				add_stability = -0.35
+				add_war_support = -0.35
+				add_timed_idea = {
+					idea = NHMMAP_tired_in_the_east_JAP
+					days = 365
+				}
+				SOV = {
+					add_timed_idea = {
+						idea = NHMMAP_time_to_finish_the_east_SOV
+						days = 365
+					}
+					country_event = nonhist_JAP.501
+				}
+			}
+		}
+
+		complete_effect = { #controls all required states
+			country_event = nonhist_JAP.1
+		}
+	}
+}
+

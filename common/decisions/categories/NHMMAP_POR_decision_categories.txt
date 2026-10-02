@@ -1,0 +1,17 @@
+# NHMMAP-only objects extracted from vanilla override common/decisions/categories/POR_decision_categories.txt
+
+POR_rio_saga_timers= {
+	icon = generic_prepare_civil_war
+	allowed = {
+		has_dlc = "La Resistance"
+		OR = {
+			tag = POR
+			tag = BRA
+		}
+	}
+	visible = {
+		POR = { 
+			has_completed_focus = POR_recover_brazil
+		}
+	}
+}
