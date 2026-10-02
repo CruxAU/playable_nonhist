@@ -90,7 +90,7 @@ CHI_seek_japanese_support = {
 			base = 0
 			modifier = {
 				add = 10
-				JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere }
+				JAP = { has_completed_focus = JAP_sea_greater_east_asian_co_properity_sphere }
 			}
 		}
 
@@ -133,7 +133,7 @@ CHI_seek_japanese_support = {
 			base = 0
 			modifier = {
 				add = 10
-				JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere }
+				JAP = { has_completed_focus = JAP_sea_greater_east_asian_co_properity_sphere }
 			}
 		}
 

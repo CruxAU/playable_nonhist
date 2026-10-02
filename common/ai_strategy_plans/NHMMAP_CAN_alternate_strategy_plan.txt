@@ -25,7 +25,7 @@ CAN_fascist_alternate = {
 	}
 	abort = {
 		has_country_flag = CAN_AI_RANDOM_FASCIST_ALTERNATE 
-		GER = { has_completed_focus = GER_rhineland }
+		GER = { has_completed_focus = GER_remilitarize_the_rhineland }
 		MEX = { is_in_faction_with = USA }
 	}
 

@@ -12,7 +12,7 @@ PRC_take_over_states = { #NHMMAP
 
 	visible = {
 		has_completed_focus = PRC_peoples_liberation_army
-    		NOT = { has_completed_focus = PRC_social_democracy }	
+    		NOT = { has_completed_focus = PRC_social_democracy_focus }	
 		is_in_faction = yes	
 	}
 }
