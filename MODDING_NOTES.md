@@ -24,6 +24,8 @@ git merge vanilla          # resolve only the real conflicts
    - Changed vanilla loc keys go in `localisation/english/replace/`.
    - Decisions can re-open an existing vanilla category in another file.
    - on_actions are additive: every file's `on_startup` runs, and `nonhist_*`/`formable_*` run after vanilla's `00_`–`16_`.
+   - **Exception: game rules stay in `00_game_rules.txt`.** The rules screen lists rules in load order within each group, so a country's NHMMAP rules (e.g. `FRA_ai_rhineland`) stay next to its vanilla rule.
+   - Tools: `tools/extract_objects.py` (script objects) and `tools/extract_loc.py` (loc overrides) do the moving. Check with `tools/object_inventory.py compare git:HEAD . --layer git:vanilla`: only MOVED entries should appear.
 3. **A vanilla object you edit must stay whole in the vanilla copy.** Even one added option, such as an extra `RULE_OPTION` in `FRA_ai_behavior`, means the whole rule stays in `00_game_rules.txt`. HoI4 can't append to an object from another file, and a second definition is a duplicate.
 4. **Mark edits inside vanilla copies with `#NHMMAP`.** For blocks, use `#NHMMAP begin` / `#NHMMAP end`, so merge conflicts are easy to read.
 
@@ -33,3 +35,5 @@ git merge vanilla          # resolve only the real conflicts
 |---|---|
 | `tools/import_vanilla.sh <game_dir> <version>` | Snapshot vanilla copies of all overridden files onto `vanilla` |
 | `tools/override_report.sh` | Show how far each override diverges from vanilla |
+| `tools/object_inventory.py` | Object-level dump/compare of any two versions (git refs or folders) |
+| `tools/extract_objects.py`, `tools/extract_loc.py` | Move NHMMAP-only objects / loc keys out of vanilla copies |
