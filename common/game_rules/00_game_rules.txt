@@ -2969,6 +2969,12 @@ CZE_ai_behavior = {
 		allow_achievements = yes
 	}
 
+	option = { #NHMMAP: vanilla Peace For Our Time fascist path (old tree uses FASCIST_PARTNER/ALLY/PUPPET)
+		name = FASCIST
+		text = "RULE_OPTION_FASCIST"
+		desc = "RULE_FASCIST_CZE_AI_DESC"
+		required_dlc = "Peace For Our Time"
+	}
 	option = { #NHMMAP: vanilla 1.19 Peace For Our Time option
 		name = MONARCHIST
 		text = "RULE_OPTION_NEUTRALITY_MONARCHIST"

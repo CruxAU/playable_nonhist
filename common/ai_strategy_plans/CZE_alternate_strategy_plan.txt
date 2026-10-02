@@ -1,4 +1,4 @@
-CZE_alternate_strategy_plan_entente = {
+﻿CZE_alternate_strategy_plan_entente = {
 	name = "CZE aims to form Entente"
 	desc = "Let's fight good and die well!"
 
@@ -108,6 +108,7 @@ CZE_alternate_strategy_plan_communist = {
 
 	allowed = {
 		original_tag = CZE
+		NOT = { has_dlc = "Peace For Our Time" } #NHMMAP: old tree only; vanilla CZE_mun_* plans cover the PfoT tree
 	}
 	enable = {
 		OR = {
@@ -198,6 +199,7 @@ CZE_alternate_strategy_plan_fascist = {
 
 	allowed = {
 		original_tag = CZE
+		NOT = { has_dlc = "Peace For Our Time" } #NHMMAP: old tree only; vanilla CZE_mun_* plans cover the PfoT tree
 	}
 	enable = {
 		OR = {
@@ -314,6 +316,7 @@ CZE_alternate_strategy_plan_fascist_partner = { #NHMMAP renamed: was a duplicate
 
 	allowed = {
 		original_tag = CZE
+		NOT = { has_dlc = "Peace For Our Time" } #NHMMAP: old tree only; vanilla CZE_mun_* plans cover the PfoT tree
 	}
 	enable = {
 		OR = {
@@ -434,6 +437,7 @@ CZE_alternate_strategy_plan_fascist_ally = { #NHMMAP renamed: was a duplicate of
 
 	allowed = {
 		original_tag = CZE
+		NOT = { has_dlc = "Peace For Our Time" } #NHMMAP: old tree only; vanilla CZE_mun_* plans cover the PfoT tree
 	}
 	enable = {
 		OR = {
@@ -553,6 +557,7 @@ CZE_alternate_strategy_plan_democratic = {
 
 	allowed = {
 		original_tag = CZE
+		NOT = { has_dlc = "Peace For Our Time" } #NHMMAP: old tree only; vanilla CZE_mun_* plans cover the PfoT tree
 	}
 	enable = {
 		OR = {
