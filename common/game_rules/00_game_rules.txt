@@ -5977,7 +5977,7 @@ FIN_ai_behavior = {
 	}
 	option = {
 		name = MONARCHIST
-		text = "RULE_OPTION_MONARCHIST"
+		text = "RULE_OPTION_FIN_MONARCHIST" #NHMMAP own key, RULE_OPTION_MONARCHIST is shared
 		desc = "RULE_MONARCHIST_FIN_AI_DESC"
 		allow_achievements = yes
 	}

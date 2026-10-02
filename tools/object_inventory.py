@@ -242,7 +242,18 @@ def load(spec, layer=None):
     if layer:
         for p, t in layer.items():
             files.setdefault(p, t)
-    return inventory(files)
+    return effective_loc(inventory(files))
+
+
+def effective_loc(inv):
+    """Keys in a replace/ folder win over normal loc keys, as in game."""
+    replaced = {key for kind, key, _, _ in inv if kind == "loc_replace"}
+    out = []
+    for kind, key, h, path in inv:
+        if kind == "loc" and key in replaced:
+            continue
+        out.append(("loc" if kind == "loc_replace" else kind, key, h, path))
+    return out
 
 
 # ---------------------------------------------------------------- commands

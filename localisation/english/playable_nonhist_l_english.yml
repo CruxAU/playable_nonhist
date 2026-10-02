@@ -339,7 +339,7 @@
  NHMMAP_getting_paid_40:0 "§YReceiving Massive Colonial Debts§!"
  NHMMAP_getting_paid_40_desc:0 "In exchange for some unused territories, the Germans are paying us remarkably well, truly we are masters of the deal."
  NHMMAP_supporting_kmt:0 "§YSupporting Kuomintang§!"
- NHMMAP_getting_paid_40_desc:0 "We have decided to support the interests of the Kuomintang in China."
+ NHMMAP_supporting_kmt_desc:0 "We have decided to support the interests of the Kuomintang in China."
  NHMMAP_getting_paid_SOV:0 "§YThe Siberian Purchase§!"
  NHMMAP_getting_paid_SOV_desc:0 "The Japanese have provided us with extensive financial support in exchange for some territories on the coast of siberia."
  NHMMAP_repaying_debts_JAP:0 "§YThe Siberian Purchase§!"
