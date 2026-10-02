@@ -1854,7 +1854,39 @@ AUS_italy_treaty_central_powers_expansionist_aggro = {
 
 
 
+AUS_WILL_NOT_DO_BROTHERS_WAR = {
+	name = "Austrian Historical Plan"
+	desc = ""
 
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_ITA_AXIS
+			}
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_ITA_AXIS_EXP
+			}
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
+			}
+		}
+				
+	}   
+	abort_when_not_enabled = yes
+
+	focus_factors = {
+		AUS_second_brothers_war = 0
+	}
+}
 
 
 
@@ -1871,6 +1903,11 @@ AUS_anti_anschluss_stress_italy_axis_plan = {
 			has_game_rule = {
 				rule = AUS_AI_BEHAVIOR
 				option = ANTI_ANSCLUSS_ITA_AXIS
+			}
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_2BW
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_ITA_AXIS_2BW
 			}
 		}
 		has_dlc = "Gotterdammerung"		
@@ -1929,7 +1966,6 @@ AUS_anti_anschluss_stress_italy_axis_plan = {
 
 	focus_factors = {
 		AUS_demand_part_of_spanish_winnings = 0
-		AUS_second_brothers_war = 0
 		AUS_reforming_the_central_powers = 0
 		AUS_a_royal_alliance = 0
 		AUS_the_czechoslovakian_lands = 0
@@ -1968,6 +2004,11 @@ AUS_italy_treaty_axis_expansionist = {
 			has_game_rule = {
 				rule = AUS_AI_BEHAVIOR
 				option = ANTI_ANSCLUSS_ITA_AXIS_EXP
+			}
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
 			}
 		}
 		has_dlc = "Gotterdammerung"		
@@ -2041,7 +2082,6 @@ AUS_italy_treaty_axis_expansionist = {
 	}
 
 	focus_factors = {
-		AUS_second_brothers_war = 0
 		AUS_reforming_the_central_powers = 0
 		AUS_a_royal_alliance = 0
 	}
@@ -2078,6 +2118,11 @@ AUS_italy_treaty_axis_expansionist_aggro = {
 			has_game_rule = {
 				rule = AUS_AI_BEHAVIOR
 				option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
+			}
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
 			}
 		}
 		has_dlc = "Gotterdammerung"		
@@ -2147,7 +2192,6 @@ AUS_italy_treaty_axis_expansionist_aggro = {
 	}
 
 	focus_factors = {
-		AUS_second_brothers_war = 0
 		AUS_reforming_the_central_powers = 0
 		AUS_a_royal_alliance = 0
 	}

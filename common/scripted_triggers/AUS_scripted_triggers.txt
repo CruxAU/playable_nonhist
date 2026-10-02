@@ -439,15 +439,30 @@ AUS_is_axis_plan = { #if austria is going in the axis, used to determine if we w
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		}
 		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		}
 		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
 		}
 	}
 }

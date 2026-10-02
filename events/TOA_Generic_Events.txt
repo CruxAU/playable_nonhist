@@ -919,6 +919,14 @@ country_event = {
 				OR = {
 					has_country_flag = GENERIC_AI_RANDOM_DEM_INT
 					has_country_flag = GENERIC_AI_RANDOM_DEM_NEU
+					has_game_rule = {
+						rule = BOL_AI_BEHAVIOR
+						option = DEM_INT
+					}
+					has_game_rule = {
+						rule = BOL_AI_BEHAVIOR
+						option = DEM_NEU
+					}
 				}
 			}
 		}
@@ -967,6 +975,22 @@ country_event = {
 			modifier = { #NHMMAP
 				factor = 0
 				OR = {
+					has_game_rule = {
+						rule = BOL_AI_BEHAVIOR
+						option = NA_INT
+					}
+					has_game_rule = {
+						rule = BOL_AI_BEHAVIOR
+						option = NA_NEU
+					}
+					has_game_rule = {
+						rule = BOL_AI_BEHAVIOR
+						option = COM
+					}
+					has_game_rule = {
+						rule = BOL_AI_BEHAVIOR
+						option = FAS
+					}
 					has_country_flag = GENERIC_AI_RANDOM_INT
 					has_country_flag = GENERIC_AI_RANDOM_NEU
 					has_country_flag = GENERIC_AI_RANDOM_COM

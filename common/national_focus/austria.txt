@@ -10842,6 +10842,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				strength_ratio = { tag = GER ratio > 0.9 }
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = GER ratio < 0.35 }
+			}
 		}
 
 		available = {
