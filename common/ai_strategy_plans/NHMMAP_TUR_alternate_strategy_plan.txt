@@ -1,0 +1,1047 @@
+# NHMMAP-only objects extracted from vanilla override common/ai_strategy_plans/TUR_alternate_strategy_plan.txt
+
+TUR_ideology_ottoman_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_OTTOMAN
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = OTTOMAN
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+
+		#1936
+		TUR_the_montreux_convention
+		TUR_fully_integrate_the_is_bank #35
+		TUR_privatize_the_anadolu_agency #35
+		TUR_lift_the_ban_on_other_political_parties #35
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_the_sanayiciler #35
+		TUR_treaty_of_saadabad #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_holding_our_first_multi_party_election #35
+		TUR_democratic_transition_focus
+		TUR_permit_regional_elections
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		#1938
+		TUR_expanding_our_armaments
+		TUR_privatize_our_infrastructure #35
+		TUR_peace_in_the_world #35
+		TUR_democratic_capstone_focus
+		TUR_pivot_to_the_past
+		TUR_purge_the_kemalists
+		#1939
+		TUR_restore_the_divan #35
+		TUR_rebuilding_our_nation #35
+		TUR_return_of_the_sultan
+		TUR_reclaim_macedonia
+		#end 280 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 15
+		TUR_fevzi_cakmak = 5
+	}
+
+	focus_factors = {
+		TUR_mechanising_our_army = 0
+		TUR_the_path_of_the_wolf = 0
+		TUR_patrol_the_seas = 0
+		TUR_reconfigure_our_foreign_policy = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_democratic_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_DEMOCRATIC_KEMALIST
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = DEMOCRATIC_KEMALIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+
+		#1936
+		TUR_the_montreux_convention
+		TUR_fully_integrate_the_is_bank #35
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_privatize_the_anadolu_agency #35
+		TUR_lift_the_ban_on_other_political_parties #35
+		TUR_hava_okulu #35
+		TUR_the_sanayiciler #35
+		TUR_treaty_of_saadabad #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_holding_our_first_multi_party_election #35
+		TUR_democratic_transition_focus
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		TUR_permit_regional_elections
+		#1938
+		TUR_expanding_our_armaments
+		TUR_learning_from_the_great_war #35
+		TUR_modernising_the_army #35
+		TUR_expand_the_air_bases #35
+		TUR_expand_the_golcuk_naval_base
+		TUR_privatize_our_infrastructure #35
+		TUR_peace_in_the_world #35
+		TUR_democratic_capstone_focus
+		#1939
+		TUR_mechanising_our_army #35
+		#end 70 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 15
+		TUR_celal_bayar = 5
+	}
+
+	focus_factors = {
+		TUR_embrace_military_tradition = 0
+		TUR_the_path_of_the_wolf = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_democratic_plan_2 = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_DEMOCRATIC_FUNDAMENTALIST
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = DEMOCRATIC_FUNDAMENTALIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+		#1936
+		TUR_the_montreux_convention
+		TUR_fully_integrate_the_is_bank #35
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_privatize_the_anadolu_agency #35
+		TUR_lift_the_ban_on_other_political_parties #35
+		TUR_hava_okulu #35
+		TUR_the_sanayiciler #35
+		TUR_treaty_of_saadabad #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_holding_our_first_multi_party_election #35
+		TUR_democratic_transition_focus
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		TUR_permit_regional_elections
+		#1938
+		TUR_expanding_our_armaments
+		TUR_learning_from_the_great_war #35
+		TUR_modernising_the_army #35
+		TUR_expand_the_air_bases #35
+		TUR_expand_the_golcuk_naval_base
+		TUR_privatize_our_infrastructure #35
+		TUR_peace_in_the_world #35
+		TUR_democratic_capstone_focus
+		#1939
+		TUR_embrace_military_tradition #35
+		#end 70 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 15
+		TUR_fevzi_cakmak = 5
+	}
+
+	focus_factors = {
+		TUR_mechanising_our_army = 0
+		TUR_the_path_of_the_wolf = 0
+		TUR_patrol_the_seas = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_kemalist_nat_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_KEMALIST_NATIONALIST
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = KEMALIST_NATIONALIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+		#1936
+		TUR_the_montreux_convention
+		TUR_continue_the_policy_of_etatism
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_peace_at_home #35
+		TUR_turkish_state_railways
+		TUR_the_sanayiciler #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_hava_okulu #35
+		TUR_the_second_five_year_plan
+		TUR_the_sun_language_theory #35
+		TUR_treaty_of_saadabad #35
+		TUR_learning_from_the_great_war #35
+		TUR_the_guardians_of_kemalism #35
+		#1938
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		TUR_turk_ulusu
+		TUR_modernising_the_army #35
+		TUR_expand_the_air_bases #35
+		TUR_expand_the_golcuk_naval_base
+		TUR_variant_turkish_tax_focus #35
+		#1939
+		TUR_abuse_the_office_of_soil_products
+		#end 35 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 10
+		TUR_ismet_inonu = 15
+		TUR_fevzi_cakmak = 5
+		TUR_halide_edib_adivar = 10
+	}
+
+	focus_factors = {
+		TUR_peace_in_the_world = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_fund_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_FUNDAMENTALIST_NEUTRAL
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = FUNDAMENTALIST_NEUTRAL
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+		#1936
+		TUR_the_montreux_convention
+		TUR_continue_the_policy_of_etatism
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_revive_turkish_revolutionism
+		TUR_reinvigorate_turkish_nationalism #35
+		TUR_the_sanayiciler #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_hava_okulu #35
+		TUR_the_second_five_year_plan
+		TUR_treaty_of_saadabad #35
+		TUR_learning_from_the_great_war #35
+		TUR_loosen_the_laws_on_secularism
+		#1938
+		TUR_purify_the_diyanet #35
+		TUR_restack_the_officer_corps
+		TUR_fatherland_first #35
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		TUR_turk_ulusu
+		TUR_peace_in_the_world #35
+		TUR_variant_turkish_tax_focus #35
+		#1939
+		TUR_abuse_the_office_of_soil_products
+		#end 70 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_fevzi_cakmak = 25
+		TUR_hilmi_uran = 15
+		TUR_ismet_inonu = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_fund_nat_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_FUNDAMENTALIST_NATIONALIST
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = FUNDAMENTALIST_NATIONALIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+		#1936
+		TUR_the_montreux_convention
+		TUR_continue_the_policy_of_etatism
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_revive_turkish_revolutionism
+		TUR_reinvigorate_turkish_nationalism #35
+		TUR_the_sanayiciler #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_hava_okulu #35
+		TUR_the_second_five_year_plan
+		TUR_treaty_of_saadabad #35
+		TUR_learning_from_the_great_war #35
+		TUR_loosen_the_laws_on_secularism
+		#1938
+		TUR_purify_the_diyanet #35
+		TUR_restack_the_officer_corps
+		TUR_fatherland_first #35
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		TUR_turk_ulusu
+		TUR_variant_turkish_tax_focus #35
+		#1939
+		TUR_abuse_the_office_of_soil_products
+		#end 35 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 10
+		TUR_fevzi_cakmak = 25
+		TUR_halide_edib_adivar = 10
+		TUR_ismet_inonu = 0
+	}
+
+	focus_factors = {
+		TUR_peace_in_the_world = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_fascist_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_FASCIST
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = FASCIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+		#1936
+		TUR_the_montreux_convention
+		TUR_continue_the_policy_of_etatism
+		TUR_hava_okulu #35
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_revive_turkish_revolutionism
+		TUR_the_sanayiciler #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_rehabilitate_the_kadro_movement
+		TUR_kemalism_and_the_modern_movement #35
+		TUR_treaty_of_saadabad #35
+		TUR_learning_from_the_great_war #35
+		TUR_integrate_the_fascist_council #35
+		TUR_form_the_redshirts #35
+		#1938
+		TUR_restack_the_officer_corps
+		TUR_intervene_in_the_spanish_civil_war #35
+		TUR_fatherland_first #35
+		TUR_assess_our_future #35
+		TUR_the_hatay_issue #35
+		TUR_a_common_destiny_for_all_of_turkey #35
+		TUR_hunt_down_fifth_columnist_islamists #35
+		TUR_deal_for_the_oniki_islands
+		#1939
+		TUR_salt_the_scars_of_the_great_war #35
+		#end 35 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_hilmi_uran = 10
+		TUR_ismet_inonu = 3
+		TUR_recep_peker = 5
+	}
+
+	focus_factors = {
+		TUR_peace_in_the_world = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_ideology_communist_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_IDEO_COMMUNIST
+			has_game_rule = {
+				rule = TUR_ideo_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_government = democratic
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		# Do this when possible -- If missing GOE, this should just be ignored and skipped
+		SSB_expand_turkeys_military_infrastructure
+		SSB_expand_turkish_chromium_deposits
+		#1936
+		TUR_the_montreux_convention
+		TUR_continue_the_policy_of_etatism
+		TUR_hava_okulu #35
+		TUR_ratify_the_six_arrows
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
+		TUR_revive_turkish_revolutionism
+		TUR_the_sanayiciler #35
+		#1937
+		TUR_cooperate_with_the_debt_council #35
+		TUR_utilize_foreign_capital
+		TUR_rehabilitate_the_kadro_movement
+		TUR_kemalist_socialist_theory #35
+		TUR_treaty_of_saadabad #35
+		TUR_learning_from_the_great_war #35
+		TUR_patriotism_over_internationalism #35
+		TUR_create_the_turkish_workers_militia #35
+		#1938
+		TUR_halk_ve_devlet #35
+		TUR_assess_our_future #35
+		TUR_intervene_in_the_spanish_civil_war #35
+		TUR_georgian_manganese_extraction
+		TUR_the_hatay_issue #35
+		TUR_a_common_destiny_for_all_of_turkey #35
+		TUR_hunt_down_fifth_columnist_islamists #35
+		TUR_nationalise_all_private_industry
+		#1939
+		TUR_salt_the_scars_of_the_great_war #35
+		#end 35 days into 1939
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		TUR_sevket_sureyya_aydemir = 30
+		TUR_sefik_husnu = 3
+		TUR_fevzi_cakmak = 10
+		TUR_ismet_inonu = 0
+	}
+
+	focus_factors = {
+		TUR_peace_in_the_world = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_neutrality_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		has_game_rule = {
+			rule = TUR_ai_behavior
+			option = NEUTRALITY
+		}
+	}
+	abort = {
+		is_in_faction = yes
+	}
+
+	focus_factors = {
+		TUR_join_the_minor_democracies = 0
+		TUR_join_the_allies = 0
+		TUR_the_mediterranean_entente = 0
+		TUR_join_the_axis = 0
+		TUR_anti_bolshevik_mediterranean_bloc = 0
+		TUR_readdress_the_montreux_convention = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_minors_plan = { #the actual focuses are in the national_focus tree
+ 	name = "Turkey Allies Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_EURO
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = EURO
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_join_the_allies = 0
+		TUR_the_mediterranean_entente = 0
+		TUR_join_the_axis = 0
+		TUR_anti_bolshevik_mediterranean_bloc = 0
+		TUR_readdress_the_montreux_convention = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_allies_plan = { #the actual focuses are in the national_focus tree
+ 	name = "Turkey Allies Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_ALLIES
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = ALLIES
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_join_the_minor_democracies = 0
+		TUR_the_mediterranean_entente = 0
+		TUR_join_the_axis = 0
+		TUR_anti_bolshevik_mediterranean_bloc = 0
+		TUR_readdress_the_montreux_convention = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_italy_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Allies Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_MED_F
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = MED_F
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_join_the_minor_democracies = 0
+		TUR_join_the_allies = 0
+		TUR_join_the_axis = 0
+		TUR_anti_bolshevik_mediterranean_bloc = 0
+		TUR_readdress_the_montreux_convention = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_axis_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Axis Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_AXIS
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = AXIS
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_join_the_minor_democracies = 0
+		TUR_join_the_allies = 0
+		TUR_the_mediterranean_entente = 0
+		TUR_anti_bolshevik_mediterranean_bloc = 0
+		TUR_readdress_the_montreux_convention = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_med_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Axis Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_MED_C
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = MED_C
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_join_the_minor_democracies = 0
+		TUR_join_the_allies = 0
+		TUR_the_mediterranean_entente = 0
+		TUR_join_the_axis = 0
+		TUR_readdress_the_montreux_convention = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_comintern_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Axis Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_COMINTERN
+			has_game_rule = {
+				rule = TUR_ai_behavior
+				option = COMINTERN
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		TUR_reconfigure_our_foreign_policy
+	}
+
+	focus_factors = {
+		TUR_join_the_minor_democracies = 0
+		TUR_join_the_allies = 0
+		TUR_the_mediterranean_entente = 0
+		TUR_join_the_axis = 0
+		TUR_anti_bolshevik_mediterranean_bloc = 0
+		TUR_continue_to_prioritise_balkan_integrity = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_aggressive_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Axis Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_FP_AGGR
+			has_game_rule = {
+				rule = TUR_aggr_ai_behavior
+				option = AGGR
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	focus_factors = {
+		TUR_join_the_central_powers = 0.01
+		TUR_realize_the_nightmare_of_meiji = 0
+		TUR_entice_the_greeks = 0.1
+		TUR_end_the_british_hegemony = 0.1
+		TUR_victory_or_death_against_communism = 0
+		#TUR_support_the_golden_square = 0 actually keep this the same
+		TUR_pack_for_a_long_winter = 0
+		#TUR_stop_the_stalinist_charade = 0 in national_focus file not needed here also with british one
+		TUR_extend_an_olive_branch_to_bulgaria = 0
+		TUR_misak_i_milli = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+TUR_turan_plan = { #the actual focuses are in the national_focus tree
+	name = "Turkey Axis Plan"
+	desc = "Turkey will pursue neutrality forever"
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_country_flag = TUR_AI_RANDOM_FP_TURAN
+			has_game_rule = {
+				rule = TUR_aggr_ai_behavior
+				option = TURAN
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	focus_factors = {
+		TUR_join_the_central_powers = 0.01
+		TUR_entice_the_greeks = 0.1
+		TUR_support_the_golden_square = 0 
+		TUR_pack_for_a_long_winter = 0
+		#TUR_stop_the_stalinist_charade = 0 in national_focus file not needed here also with british one
+		TUR_extend_an_olive_branch_to_bulgaria = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -1528,6 +1528,7 @@ country_event = { #sov wants peace after we took cze
 
 
 country_event = { #germans said no peace...
+	id = czech.62 #NHMMAP fix: id was missing
 	title = czech.62.t
 	desc = czech.62.d
 	picture = GFX_report_event_czech_soldiers_02

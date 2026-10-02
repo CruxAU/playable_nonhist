@@ -1,0 +1,56 @@
+# NHMMAP-only objects extracted from vanilla override common/ai_strategy_plans/NOR_historical_strategy_plan.txt
+
+NOR_historical_plan_not_quisling = {
+	name = "Norwegian Historical Plan"
+	desc = ""
+
+	allowed = {
+		NOR_AAT = yes
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = NOR_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = NOR_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = NOR_ai_behavior
+				option = HISTORICAL
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		# As soon as war breaks out
+		NOR_the_kings_no
+		NOR_arrest_quisling
+		NOR_replace_laake
+		NOR_prince_olavs_inspiration
+		NOR_establish_milorg
+		NOR_approach_the_coordinating_committee
+		NOR_approach_kretsen
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_empower_sivorg
+	}
+
+	focus_factors = {
+		NOR_quislings_coup = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 2.0
+		modifier = {
+			factor = 2.0
+		}
+	}
+}

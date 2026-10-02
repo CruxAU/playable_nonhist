@@ -1,0 +1,194 @@
+# NHMMAP-only objects extracted from vanilla override common/ai_strategy_plans/HOL_historical_strategy_plan.txt
+
+HOL_historical_plan_everyone_is_hist = {
+	name = "Netherlands historical plan if things are going down the historical path - join allies"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = ENG.eng_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			ENG = {
+				has_completed_focus = ENG_steady_as_she_goes
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		ENG = { has_completed_focus = ENG_a_change_in_course }
+	}
+
+	ai_national_focuses = {
+		HOL_cave_to_the_british
+		HOL_germany_is_the_greater_threat					
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+							#June 20 1940	
+		HOL_unity_through_democracy					#August 30 1940
+						#November 10 1940
+		HOL_replace_the_defeatist_government					#January 20 1941
+							#March 30 1941	
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+		HOL_go_with_britain		
+		HOL_de_vaarplicht
+		HOL_the_singapore_conferences					#March 20 1942
+		HOL_ship_a_day_sinking_quotas					#May 30 1942	
+		HOL_allied_technological_developments					#August 10 1942
+		HOL_american_west_indies_protectorate					#October 20 1942	
+		HOL_zandery_military_airport					#December 30 1942	
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+		HOL_request_allied_favors				#May 20 1943	
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_cave_to_the_germans = 0
+		HOL_maintain_trade_neutrality = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+HOL_historical_plan_germans_more_influence = {
+	name = "Netherlands historical plan if the germans scrounge up more influence than britain"
+	desc = "Historical behavior for Netherlands"
+
+	allowed = {
+		original_tag = HOL
+	}
+	enable = {
+		AND = {
+			date > 1939.4.1
+			has_completed_focus = HOL_gateway_to_europe
+			check_variable = { var = ger_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			GER = {
+				OR = {
+					has_completed_focus = GER_rhineland
+					has_completed_focus = GER_remilitarize_the_rhineland
+				}
+			}
+			OR = {
+				has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_HISTORICAL
+				has_game_rule = {
+					rule = HOL_ai_behavior 
+					option = DEMOCRATIC_HISTORICAL
+				}
+				AND = {
+					is_historical_focus_on = yes
+					has_game_rule = {
+						rule = HOL_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+		}
+		
+	}
+	abort = {
+		GER = {
+			OR = {
+				has_completed_focus = GER_oppose_hitler
+				has_completed_focus = GER_oppose_hitler_ww
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		HOL_cave_to_the_germans
+		HOL_volk_en_vaderland
+		HOL_protect_against_britain
+		HOL_strength_over_blood
+		HOL_join_germany
+		HOL_placate_the_japanese
+		HOL_antilles_defenses					
+		HOL_appoint_new_supreme_commander					#November 20 1939	
+		HOL_modernize_our_infantry_equipment					#January 30 1940
+		HOL_secret_staff_talks					#April 10 1940
+		HOL_german_technological_exchange				#June 20 1940	
+		HOL_beginnings_of_a_dutch_blitzkrieg					#August 30 1940
+							#November 10 1940
+							#January 20 1941	
+							#March 30 1941	
+		HOL_expand_the_mld					#June 10 1941
+		HOL_protect_the_colonies					#August 20 1941
+		HOL_java
+		HOL_reinforce_java					#October 30 1941	
+		HOL_modernize_the_air_fleet					#January 10
+							#March 20 1942
+							#May 30 1942	
+							#August 10 1942
+							#October 20 1942	
+							#December 30 1942	
+		HOL_open_second_paranam_bauxite_mine					#March 10 1943
+						#May 20 1943	
+		HOL_the_foundations_of_defense					#July 30 1943
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	focus_factors = {
+		HOL_the_united_netherlands = 0
+		HOL_taking_back_our_old_colonies = 0
+		HOL_curtail_colonial_autonomy = 0
+		HOL_cave_to_the_british = 0
+		HOL_maintain_trade_neutrality = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
