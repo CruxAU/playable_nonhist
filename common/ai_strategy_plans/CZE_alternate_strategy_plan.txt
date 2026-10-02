@@ -308,7 +308,7 @@ CZE_alternate_strategy_plan_fascist = {
 
 }
 
-CZE_alternate_strategy_plan_fascist = {
+CZE_alternate_strategy_plan_fascist_partner = { #NHMMAP renamed: was a duplicate of CZE_alternate_strategy_plan_fascist
 	name = "THE BOHEMIAN EMPIRE RIDES AGAIN"
 	desc = "DEATH OR GLORY!"
 
@@ -428,7 +428,7 @@ CZE_alternate_strategy_plan_fascist = {
 
 }
 
-CZE_alternate_strategy_plan_fascist = {
+CZE_alternate_strategy_plan_fascist_ally = { #NHMMAP renamed: was a duplicate of CZE_alternate_strategy_plan_fascist
 	name = "THE BOHEMIAN EMPIRE RIDES AGAIN"
 	desc = "DEATH OR GLORY!"
 

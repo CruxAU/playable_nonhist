@@ -154,7 +154,7 @@ German_alternate_democratic = {
 }
 
 # German democratic plan (without Götterdämerrung)
-German_alternate_democratic = {
+German_alternate_democratic_diplo = { #NHMMAP renamed: was a duplicate of German_alternate_democratic
 	name = "German Alternate plan to restore democracy"
 	desc = "UNITY! JUSTICE! FREEDOM!"
 
@@ -698,7 +698,7 @@ German_alternate_spartacist = {
 }
 
 # German spartacist plan
-German_alternate_spartacist = {
+German_alternate_spartacist_neutral = { #NHMMAP renamed: was a duplicate of German_alternate_spartacist
 	name = "German Alternate plan to establish a communist revolutionary state"
 	desc = "Javohl! Kommunismus!"
 
