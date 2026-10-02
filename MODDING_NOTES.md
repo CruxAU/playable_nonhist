@@ -37,3 +37,16 @@ git merge vanilla          # resolve only the real conflicts
 | `tools/override_report.sh` | Show how far each override diverges from vanilla |
 | `tools/object_inventory.py` | Object-level dump/compare of any two versions (git refs or folders) |
 | `tools/extract_objects.py`, `tools/extract_loc.py` | Move NHMMAP-only objects / loc keys out of vanilla copies |
+| `tools/dup_scan.py <game_dir>` | IDs defined twice in vanilla + NHMMAP (e.g. a new vanilla file clashing with ours) |
+| `tools/removed_refs.py <old_game_dir> <new_game_dir>` | NHMMAP references to things the update removed |
+| `tools/rule_option_check.py <game_dir>` | `has_game_rule` checks against rules/options that don't exist |
+| `tools/errorlog_summary.py [--baseline vanilla.log]` | Group error.log, NHMMAP-related first |
+
+## Update checklist
+
+1. `tools/import_vanilla.sh <game_dir> <version>`, then `git checkout -b update-<version>` and `git merge vanilla` (use `-c merge.conflictStyle=zdiff3` to see the base).
+2. Resolve conflicts. If both sides made the same change, take vanilla. If NHMMAP rewrote the logic, keep NHMMAP and port vanilla's additions.
+3. `tools/dup_scan.py`: watch for content vanilla added that we already had (it gets merged twice), and new vanilla files clashing with ours.
+4. `tools/removed_refs.py` and `tools/rule_option_check.py`: compare against the previous version's output; only new entries are update breakage.
+5. Check new on_actions files and DLC-reworked countries (new trees need NHMMAP plans guarded with `NOT = { has_dlc = ... }`).
+6. Launch with `-debug`; `tools/errorlog_summary.py --baseline <vanilla error.log>`.

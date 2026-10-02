@@ -7,6 +7,7 @@ AST_fascist = {
 	allowed = {
 		original_tag = AST
 		has_dlc = "Together for Victory"
+		NOT = { has_dlc = "Thunder at Our Gates" } #NHMMAP: old tree only, like vanilla 1.19
 	}
 	enable = {
 		OR = {
@@ -132,6 +133,7 @@ AST_isolation_fascist = {
 	allowed = {
 		original_tag = AST
 		has_dlc = "Together for Victory"
+		NOT = { has_dlc = "Thunder at Our Gates" } #NHMMAP: old tree only, like vanilla 1.19
 	}
 	enable = {
 		OR = {
@@ -256,6 +258,7 @@ AST_communist = {
 	allowed = {
 		original_tag = AST
 		has_dlc = "Together for Victory"
+		NOT = { has_dlc = "Thunder at Our Gates" } #NHMMAP: old tree only, like vanilla 1.19
 	}
 	enable = {
 		OR = {
@@ -383,6 +386,7 @@ AST_Isolation_communist = {
 	allowed = {
 		original_tag = AST
 		has_dlc = "Together for Victory"
+		NOT = { has_dlc = "Thunder at Our Gates" } #NHMMAP: old tree only, like vanilla 1.19
 	}
 	enable = {
 		OR = {
