@@ -8,6 +8,6 @@ tags={
 }
 name="Non-Historical Mode Made Actually Playable"
 picture="thumbnail.png"
-supported_version="1.17.4.1"
+supported_version="1.19.*"
 path="C:/Users/anon/Documents/Paradox Interactive/Hearts of Iron IV/mod/Playable_nonhist"
 remote_file_id="3140102724"
