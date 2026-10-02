@@ -209,11 +209,14 @@ mexico_fascist_latin_american_order = {
 		MEX_focus_spanish_civil_war_refugees
 		MEX_focus_falangist_veterans
 
-		MEX_focus_national_bank
+		MEX_focus_national_bank # Get the industry started before creating the Hispanic Alliance
 		MEX_focus_liberalize_the_banking_sector
 		MEX_focus_strike_breaking
 		MEX_focus_urban_development
 		MEX_focus_cientifico_camarilla # 4th research slot
+
+		MEX_focus_hispanic_alliance # Create faction
+		MEX_focus_invite_brazil
 		
 		MEX_focus_oil_field_expansion
 	}

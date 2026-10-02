@@ -30,6 +30,7 @@ NZL_alternate_democratic = {
 		#1936
 		NZL_the_first_labor_government								
 		NZL_statute_of_westminster
+		NZL_ministry_of_public_works #NHMMAP: new 1.19 focus
 		NZL_constitution_amendment_act								
 		NZL_national_roads_board									
 		NZL_wairarapa_sheep_farms										
@@ -37,7 +38,6 @@ NZL_alternate_democratic = {
 		NZL_new_zealand_steel				
 		NZL_taranaki_oil											
 		NZL_bureau_of_industry										
-		NZL_industrial_conscription									
 		NZL_department_of_scientific_and_industrial_research								
 		#1938
 		NZL_transfer_the_new_zealand_division										
@@ -145,17 +145,16 @@ NZL_alternate_fascist = {
 		#36
 		NZL_the_first_labor_government								
 		NZL_statute_of_westminster
+		NZL_ministry_of_public_works #NHMMAP: new 1.19 focus
 		NZL_in_the_darkness								
 		NZL_national_roads_board									
 		NZL_wairarapa_sheep_farms										
 		#1937	
 		NZL_new_zealand_steel								
 		NZL_taranaki_oil											
-		NZL_bureau_of_industry										
-		NZL_industrial_conscription									
-		NZL_department_of_scientific_and_industrial_research							
-		#1938
-		NZL_transfer_the_new_zealand_division										
+		NZL_department_of_scientific_and_industrial_research		
+		NZL_transfer_the_new_zealand_division						
+		#1938										
 		NZL_ratana_alliance											
 		NZL_social_security_act										
 		NZL_army_reforms																																								
@@ -260,6 +259,7 @@ NZL_alternate_communist = {
 		#1936
 		NZL_the_first_labor_government								
 		NZL_statute_of_westminster
+		NZL_ministry_of_public_works #NHMMAP: new 1.19 focus
 		NZL_the_lee_affair								
 		NZL_national_roads_board									
 		NZL_wairarapa_sheep_farms					
@@ -267,7 +267,6 @@ NZL_alternate_communist = {
 		NZL_new_zealand_steel									
 		NZL_taranaki_oil											
 		NZL_bureau_of_industry										
-		NZL_industrial_conscription									
 		NZL_department_of_scientific_and_industrial_research								
 		#1938
 		NZL_transfer_the_new_zealand_division										

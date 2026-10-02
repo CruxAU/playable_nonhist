@@ -2394,7 +2394,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_country_leader = { 
-				name = "George II"
+				character = GRE_king_george_ii
 				ruling_only = yes
 			}
 			IF = {

@@ -145,6 +145,7 @@ ENG_alternate_communist_plan = {  #some extra focuses are in here if no decoloni
 		ENG_towards_indian_independence
 		ENG_decolonization
 		
+		ENG_the_winds_of_change #NHMMAP: new 1.19 focus
 		ENG_the_fate_of_the_royal_family
 		ENG_eliminate_the_upper_class
 		ENG_for_the_good_of_the_revolution

@@ -4653,6 +4653,10 @@ operations = {
 			controls_state = 286
 			controls_state = 741
 			controls_state = 1017
+			controls_state = 1066 
+			controls_state = 1067 
+			controls_state = 1068 
+			controls_state = 1069 
 		} 
 
 		days_mission_timeout = 360
@@ -4748,6 +4752,10 @@ operations = {
 						owns_state = 670
 						owns_state = 286
 						owns_state = 1017
+						owns_state = 1066 
+						owns_state = 1067 
+						owns_state = 1068 
+						owns_state = 1069 
 						671 = {
 							OWNER = {
 								is_in_faction_with = PREV
@@ -4769,6 +4777,26 @@ operations = {
 							}
 						}
 						1017 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1066 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1067 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1068 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1069 = {
 							OWNER = {
 								is_in_faction_with = PREV
 							}
@@ -4855,6 +4883,38 @@ operations = {
 					}
 				}
 			}
+			1066 = {
+				OR = {
+					is_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+			1067 = {
+				OR = {
+					is_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+			1068 = {
+				OR = {
+					is_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+			1069 = {
+				OR = {
+					is_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+				}
+			}
 		} 
 
 		cost = 50
@@ -4870,6 +4930,10 @@ operations = {
 						owns_state = 670
 						owns_state = 286
 						owns_state = 1017
+						owns_state = 1066 
+						owns_state = 1067 
+						owns_state = 1068 
+						owns_state = 1069 
 						671 = {
 							OWNER = {
 								is_in_faction_with = PREV
@@ -4891,6 +4955,26 @@ operations = {
 							}
 						}
 						1017 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1066 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1067 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1068 = {
+							OWNER = {
+								is_in_faction_with = PREV
+							}
+						}
+						1069 = {
 							OWNER = {
 								is_in_faction_with = PREV
 							}
@@ -10395,7 +10479,7 @@ CHI_the_political_tutelage_cat = {
 	        		has_state_category = metropolis
 	        		has_state_category = large_city
 	        	}
-				NOT = {
+	        	NOT = {
 	        		has_state_flag = CHI_urban_political_tutelage_has_been_epedited_here_state_flag 
 	        	}
 	        }
@@ -10506,7 +10590,7 @@ CHI_the_political_tutelage_cat = {
 	        		has_state_category = town
 	        		has_state_category = enclave
 	        	}
-				NOT = {
+	        	NOT = {
 	        		has_state_flag = CHI_rural_political_tutelage_has_been_epedited_here_state_flag 
 	        	}
 	        }

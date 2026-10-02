@@ -5997,7 +5997,6 @@ focus_tree = {
 					name = ITA_oto_naval_guns
 					bonus = 1.0
 					uses = 2
-					category = cat_ship_medium_battery
 					category = cat_ship_heavy_battery
 				}
 			}
@@ -15659,6 +15658,7 @@ focus_tree = {
 				has_country_flag = ITA_stresa_negotiations_win
 			}
 			
+			is_subject = no 
 			OR = {
 				AND = {
 					NOT = {

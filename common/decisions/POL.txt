@@ -2458,7 +2458,7 @@ POL_support_monarchy_in_LIT_cat = {
 					check_variable = {
 						monarchist_support > 90
 					}
-				}	
+				}
 			}
 		}
 
@@ -2522,7 +2522,7 @@ POL_support_monarchy_in_LIT_cat = {
 					check_variable = {
 						monarchist_support > 90
 					}
-				}	
+				}
 			}
 		}
 

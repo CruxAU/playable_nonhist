@@ -2388,12 +2388,11 @@ focus_tree = {
 	focus = {
 		id = TUR_georgian_manganese_extraction
 		icon = {
-			value = GFX_focus_generic_steel
-			trigger = {
+			GFX_focus_generic_steel = {
 				SOV = { NOT = { controls_state = 231 } } #APPROPRIATE CONDITIONS FOR GENERIC ICON
 			}
+			GFX_focus_chi_mission_to_the_soviet_union = yes
 		}
-		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = TUR_halk_ve_devlet }
 		x = -2
 		y = 1
@@ -12514,6 +12513,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_doctrine_cost_reduction = {
 				name = TUR_turkish_air_defense_platforms
 				cost_reduction = 0.25

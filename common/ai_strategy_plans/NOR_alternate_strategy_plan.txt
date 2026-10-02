@@ -25,6 +25,7 @@ NOR_fascist_plan = {
 	}
 
 	ai_national_focuses = {
+		NOR_start_rearmament
 		NOR_the_stumbling_storting
 		NOR_lurk_in_the_shadows
 		NOR_approach_the_fatherland_league

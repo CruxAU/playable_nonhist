@@ -336,6 +336,8 @@ German_alternate_democratic_ww = {
 	ideas = {
 		goering = 0
 		GER_hans_luther = 10
+		GER_dietrich_bonhoeffer = 2
+		GER_theodor_heuss = 5
 	}
 
 	traits = {
