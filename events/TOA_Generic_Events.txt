@@ -129,6 +129,17 @@ country_event = {
 					}	
 				}	
 			}
+
+			modifier = {
+				OR = { 
+					has_country_flag = URG_AI_RANDOM_FASCIST
+					has_game_rule = {
+						rule = URG_AI_BEHAVIOR
+						option = FASCIST
+					}		
+				}
+				factor = 0
+			}
 			
 		}
 		complete_national_focus = URG_blanco_victory
@@ -229,8 +240,8 @@ country_event = {
 		if = {
 			limit = {
 				has_country_leader = {
-					ruling_only = yes# default = yes
-					character = URG_gabriel_terra # recommended<bool>
+					ruling_only = yes
+					character = URG_gabriel_terra 
 				}
 			}
 			retire_character = URG_gabriel_terra
@@ -243,16 +254,9 @@ country_event = {
 
 		add_popularity = {
 			ideology = fascism
-			popularity = 0.08
+			popularity = 0.1
 		}
 
-		#add_stability = -0.3
-
-		#news_event = { 
-		#	id = south_american_news.4 
-		#	days = 2
-		#	random_days = 5
-		#}
 	}
 
 }
@@ -681,6 +685,19 @@ country_event = {
 				modifier = {
 					add = 50
 					is_historical_focus_on = no
+					NOT = {
+						has_country_flag = PAR_AI_RANDOM_HISTORICAL
+						has_game_rule = {
+							rule = PAR_AI_BEHAVIOR
+							option = COMMUNIST
+						}
+
+						has_country_flag = PAR_AI_RANDOM_HISTORICAL
+						has_game_rule = {
+							rule = PAR_AI_BEHAVIOR
+							option = HISTORICAL
+						}
+					}
 				}
 
 				modifier = {

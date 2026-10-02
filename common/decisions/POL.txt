@@ -2451,7 +2451,15 @@ POL_support_monarchy_in_LIT_cat = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = {
+					check_variable = {
+						monarchist_support > 90
+					}
+				}
+			}
 		}
 
 	}
@@ -2507,7 +2515,15 @@ POL_support_monarchy_in_LIT_cat = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = {
+					check_variable = {
+						monarchist_support > 90
+					}
+				}
+			}
 		}
 
 	}
@@ -2584,7 +2600,15 @@ POL_support_monarchy_in_LIT_cat = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = {
+					check_variable = {
+						monarchist_support > 90
+					}
+				}
+			}
 		}
 
 	}
@@ -2657,7 +2681,15 @@ POL_support_monarchy_in_LIT_cat = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = {
+					check_variable = {
+						monarchist_support > 90
+					}
+				}
+			}
 		}
 
 	}
@@ -2735,7 +2767,15 @@ POL_support_monarchy_in_LIT_cat = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = {
+					check_variable = {
+						monarchist_support > 90
+					}
+				}
+			}
 		}
 
 	}

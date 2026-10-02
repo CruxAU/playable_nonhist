@@ -840,7 +840,7 @@
 
 			add_mastery_bonus = {
 				name = ah_flexible_navy
-				bonus = 0.15
+				bonus = 0.1
 				days = 240
 				grand_doctrine = new_convoy_raiding
 			}

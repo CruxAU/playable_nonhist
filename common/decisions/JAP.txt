@@ -2036,6 +2036,10 @@ JAP_pacific_guardian = {
 					has_full_control_of_state = 671
 					has_full_control_of_state = 286
 					has_full_control_of_state = 741
+					has_full_control_of_state = 1066 
+					has_full_control_of_state = 1067 
+					has_full_control_of_state = 1068 
+					has_full_control_of_state = 1069 
 				}
 			}
 		}
@@ -2970,10 +2974,9 @@ JAP_colonial_independence = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = JAP_liberate_manchuria
-				has_completed_focus = JAP_democratic_war_with_manchukuo
-			}
+		
+			has_completed_focus = JAP_liberate_manchuria
+			
 			609 = {
 				owner = {
 					OR = {
@@ -7806,7 +7809,7 @@ JAP_imperial_influence_decision_cat = {
 			hidden_trigger = { always = no }
 		}
 
-		days_mission_timeout = 365
+		days_mission_timeout = 545
 
 		is_good = no
 
@@ -7867,7 +7870,7 @@ JAP_imperial_influence_decision_cat = {
 			hidden_trigger = { always = no }
 		}
 
-		days_mission_timeout = 365
+		days_mission_timeout = 545
 
 		is_good = no
 
@@ -7940,7 +7943,7 @@ JAP_imperial_influence_decision_cat = {
 			hidden_trigger = { always = no }
 		}
 
-		days_mission_timeout = 365
+		days_mission_timeout = 545
 
 		is_good = no
 
@@ -10482,33 +10485,46 @@ JAP_the_co_prosperity_sphere_decisions = {
 			}
 
 			custom_effect_tooltip = if_they_accept_tt
-
-			effect_tooltip = {
-				FROM = {
+			
+			FROM = {
+				effect_tooltip = {
 					add_tech_bonus = {
 						bonus = 0.5
 						uses = 2
 						category = industry
 					}
 				}
-				random_state = {
+				random_core_state = {
 					limit = {
 						is_owned_and_controlled_by = FROM
-						is_core_of = FROM
 						free_building_slots = {
 							building = industrial_complex
-							size > 2
+							size > 1
 							include_locked = yes
-						}	
+						}
 					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}	
-				}		 
+					set_state_flag = JAP_state_development_target
+					effect_tooltip = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}	
+						IF = {
+							limit = {
+								infrastructure < 5
+							}
+							add_building_construction = {
+								type = infrastructure
+								level = 1
+								instant_build = yes
+							}	
+						}
+					}
+				}
 			}
+			
 		}
 	}
 
@@ -11245,6 +11261,10 @@ JAP_the_co_prosperity_sphere_decisions = {
 				state = 670
 				state = 741
 				state = 286
+				state = 1066 
+				state = 1067 
+				state = 1068 
+				state = 1069 
 			}
 		}
 
@@ -11284,7 +11304,18 @@ JAP_the_co_prosperity_sphere_decisions = {
 			286 = {
 				is_controlled_by_ROOT_or_subject = yes
 			}
-
+			1066 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			1067 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			1068 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			1069 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
 		}
 
 		complete_effect = {
@@ -11300,6 +11331,7 @@ JAP_the_co_prosperity_sphere_decisions = {
 							state = 671
 							state = 1017
 							state = 670
+							state = 1069 
 						}
 					}
 					transfer_state_to = VIN
@@ -11312,6 +11344,9 @@ JAP_the_co_prosperity_sphere_decisions = {
 						OR = {
 							state = 741
 							state = 286
+							state = 1066 
+							state = 1067 
+							state = 1068 
 						}
 					}
 					transfer_state_to = CAM
@@ -11377,6 +11412,7 @@ JAP_the_co_prosperity_sphere_decisions = {
 				state = 671
 				state = 1017
 				state = 286
+				state = 1066 
 			}
 		}
 
@@ -11404,6 +11440,9 @@ JAP_the_co_prosperity_sphere_decisions = {
 			286 = {
 				is_controlled_by_ROOT_or_subject = yes
 			}
+			1066 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
 
 		}
 
@@ -11420,6 +11459,7 @@ JAP_the_co_prosperity_sphere_decisions = {
 							state = 671
 							state = 1017
 							state = 286
+							state = 1066
 						}
 					}
 					transfer_state_to = VIN
@@ -11475,6 +11515,7 @@ JAP_the_co_prosperity_sphere_decisions = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 741
+				state = 1067
 			}
 		}
 
@@ -11507,6 +11548,10 @@ JAP_the_co_prosperity_sphere_decisions = {
 
 				# Cambodian States
 				741 = {
+					transfer_state_to = CAM
+					add_core_of = CAM
+				}
+				1067 = {
 					transfer_state_to = CAM
 					add_core_of = CAM
 				}
@@ -11556,6 +11601,8 @@ JAP_the_co_prosperity_sphere_decisions = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 670
+				state = 1068 
+				state = 1069 
 			}
 		}
 
@@ -11581,6 +11628,14 @@ JAP_the_co_prosperity_sphere_decisions = {
 				is_controlled_by_ROOT_or_subject = yes
 			}
 
+			1068 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+
+			1069 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+
 		}
 
 		complete_effect = {
@@ -11591,6 +11646,14 @@ JAP_the_co_prosperity_sphere_decisions = {
 
 				# Laotian States
 				670 = {
+					transfer_state_to = LAO
+					add_core_of = LAO
+				}
+				1068 = {
+					transfer_state_to = LAO
+					add_core_of = LAO
+				}
+				1069 = {
 					transfer_state_to = LAO
 					add_core_of = LAO
 				}
@@ -14573,6 +14636,12 @@ JAP_investing_in_foreign_industries_cat = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
+				}
+			}
+
+			hidden_effect = {
+				FROM = {
+					set_country_flag = JAP_has_already_attracted_inestments_from_here_flag
 				}
 			}
 

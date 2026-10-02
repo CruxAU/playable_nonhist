@@ -1253,6 +1253,33 @@ ideas = {
 			}
 		}
 
+		GRE_orthodox_church_support = {
+
+			name = GRE_an_orthodox_state
+			
+			picture = YUG_orthodox_church_support
+
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
 		GRE_metaxism = {
 				
 			allowed = {
@@ -2126,7 +2153,7 @@ ideas = {
 						has_idea = GRE_george_ii
 						has_idea = GRE_george_ii_restrained
 						has_country_leader = { 
-							name = "George II"
+							character = GRE_king_george_ii
 							ruling_only = yes
 						}
 						custom_trigger_tooltip = {

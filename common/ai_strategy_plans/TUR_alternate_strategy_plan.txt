@@ -46,6 +46,7 @@ TUR_ottoman_plan = {
 
 		#1937
 		TUR_the_sanayiciler
+		TUR_continue_the_sumerbank_industrialization_scheme
 		TUR_lift_the_ban_on_other_political_parties
 		TUR_treaty_of_saadabad
 		TUR_cooperate_with_the_debt_council
@@ -83,6 +84,7 @@ TUR_ottoman_plan = {
 		TUR_rebuilding_our_nation
 		TUR_return_of_the_sultan
 		#1942
+		TUR_millet_mektebi_focus
 		TUR_reclaim_macedonia
 		TUR_join_the_central_powers
 		TUR_aligning_bulgaria
@@ -165,6 +167,7 @@ TUR_alternate_kemalist_plan = {
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
 		TUR_hava_okulu
+		TUR_continue_the_sumerbank_industrialization_scheme
 		TUR_ratify_the_six_arrows
 		TUR_revive_turkish_revolutionism
 		SSB_military_cooperation
@@ -172,6 +175,7 @@ TUR_alternate_kemalist_plan = {
 
 		#1937
 		TUR_reinvigorate_turkish_nationalism
+		TUR_millet_mektebi_focus
 		TUR_the_second_five_year_plan
 		TUR_treaty_of_saadabad
 		TUR_the_sanayiciler
@@ -276,6 +280,8 @@ TUR_communist_plan = {
 		#1936
 		TUR_the_montreux_convention
 		TUR_continue_the_policy_of_etatism
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_hava_okulu
 		TUR_ratify_the_six_arrows
 		TUR_revive_turkish_revolutionism
@@ -407,6 +413,8 @@ TUR_alternate_communist_plan = {
 		TUR_the_hatay_issue
 		TUR_a_common_destiny_for_all_of_turkey
 		TUR_hunt_down_fifth_columnist_islamists
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		SSB_expand_road_and_rail_connections
 		SSB_coordinate_military_production
 
@@ -512,6 +520,8 @@ TUR_democratic_plan = {
 		#1936
 		TUR_the_montreux_convention
 		TUR_fully_integrate_the_is_bank
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_hava_okulu
 		TUR_ratify_the_six_arrows
 		TUR_privatize_the_anadolu_agency
@@ -638,9 +648,11 @@ TUR_alternate_democratic_plan = {
 		#1936
 		TUR_the_montreux_convention
 		TUR_fully_integrate_the_is_bank
+		TUR_continue_the_sumerbank_industrialization_scheme
 		TUR_hava_okulu
 		TUR_ratify_the_six_arrows
 		TUR_privatize_the_anadolu_agency
+		TUR_millet_mektebi_focus
 		SSB_military_cooperation
 		SSB_economic_cooperation
 
@@ -762,6 +774,8 @@ TUR_fascist_plan = {
 		TUR_kemalism_and_the_modern_movement
 		TUR_intervene_in_the_spanish_civil_war
 		TUR_integrate_the_fascist_council
+		TUR_continue_the_sumerbank_industrialization_scheme
+		TUR_millet_mektebi_focus
 		TUR_form_the_redshirts
 		SSB_joint_military_exercises
 
@@ -868,6 +882,7 @@ TUR_alternate_fascist_plan = {
 		TUR_treaty_of_saadabad
 		SSB_the_saadabad_pact
 		TUR_the_sanayiciler
+		TUR_continue_the_sumerbank_industrialization_scheme
 		TUR_the_sun_language_theory
 		SSB_joint_military_exercises
 
@@ -875,6 +890,7 @@ TUR_alternate_fascist_plan = {
 		TUR_the_pontic_redoubt
 		TUR_assess_our_future
 		TUR_the_hatay_issue
+		TUR_millet_mektebi_focus
 		TUR_variant_turkish_tax_focus
 		TUR_cooperate_with_the_debt_council
 		SSB_expand_road_and_rail_connections
@@ -972,11 +988,13 @@ TUR_balkan_pact_plan = {
 		TUR_the_second_five_year_plan
 		TUR_treaty_of_saadabad
 		TUR_the_sanayiciler
+		TUR_continue_the_sumerbank_industrialization_scheme
 		TUR_learning_from_the_great_war
 		#1938
 		TUR_the_guardians_of_kemalism
 		TUR_assess_our_future
 		TUR_the_hatay_issue
+		TUR_millet_mektebi_focus
 		TUR_turk_ulusu
 		TUR_cooperate_with_the_debt_council
 		#1939

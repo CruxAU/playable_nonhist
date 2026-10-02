@@ -1273,11 +1273,8 @@ SWE_politics = {
 
 			SWE = {
 
-				custom_effect_tooltip = SWE_proclaim_eternal_sweden_tt_name
-				hidden_effect = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = ENE
-				}
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = ENE
 
 				SWE_king_gustaf_v = {
 					swap_country_leader_traits = {

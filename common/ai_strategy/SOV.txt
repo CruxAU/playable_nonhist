@@ -42,7 +42,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = motorized
-		value = 1
+		value = -10
 	}
 
 	ai_strategy = {
@@ -54,19 +54,19 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 7
+		value = -10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = heavy_armor
-		value = 1
+		value = -5
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 70 #because doctrine 70
+		value = 75 #because doctrine 70
 	}
 
 	#Air unit factors
@@ -168,7 +168,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 15
+		value = 25
 	}
 
 	ai_strategy = {
@@ -187,6 +187,60 @@ SOV_unit_production = {
 		type = equipment_production_factor
 		id = armor
 		value = 8
+	}
+}
+
+SOV_later_unit_roles = {
+	
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date > 1940.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 11
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 13
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = heavy_armor
+		value = 6
+	}
+	
+	#ai_strategy = {
+	#	type = role_ratio
+	#	id = infantry
+	#	value = -5
+	#}
+}
+
+SOV_later_unit_roles = {
+	
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date > 1943.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
 	}
 }
 
@@ -293,7 +347,7 @@ SOV_we_want_t34_asap = {
 	ai_strategy = {
 		type = research_weight_factor
 		id = improved_medium_tank_chassis
-		value = 150
+		value = 250
 	}
 	ai_strategy = {
 		type = research_weight_factor
@@ -302,13 +356,67 @@ SOV_we_want_t34_asap = {
 	}
 	ai_strategy = {
 		type = production_upgrade_desire_offset
-		id = medium_tank_chassis_1
+		id = medium_tank_equipment_2
 		value = 100  # 100 essentially means we don't require a stockpile surplus
 	}
 	ai_strategy = {
 		type = production_upgrade_desire_offset
-		id = medium_tank_equipment_1
+		id = medium_tank_chassis_2
 		value = 100  # 100 essentially means we don't require a stockpile surplus
+	}
+}
+
+SOV_build_the_t34 = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date > 1940.3.1
+		OR = {
+			has_tech = improved_medium_tank
+			has_tech = improved_medium_tank_chassis
+		}
+	}
+	abort = {
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_tank_chassis
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
+		value = 2
+	}
+}
+
+SOV_time_to_leave_light_tanks = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		OR = {
+			has_tech = improved_medium_tank
+			has_tech = improved_medium_tank_chassis
+		}
+		has_template_ai_majority_unit = medium_armor
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -75
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = 30
 	}
 }
 
@@ -1087,7 +1195,7 @@ SOV_have_some_train_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = train
-		value = 3
+		value = 2
 	}
 }
 
@@ -1922,7 +2030,7 @@ SOV_unit_buffer_for_asian_threat = {
 			has_war = no
 			AND = {
 				has_war = yes
-				surrender_progress < 0.75
+				surrender_progress < 0.35
 			}
 		}
 	}
@@ -1940,10 +2048,7 @@ SOV_unit_buffer_for_asian_threat = {
 
 		# states to put garrison orders (if no state is friendly, strat is invalid)
 		states = {
-			564
-			563
-			566
-			567
+			563	
 			561
 			657
 			408
@@ -2043,8 +2148,7 @@ SOV_boost_div_upgrades = { #lets make sure sov upgrades divs when at war
 	}
 	enable = {
 		has_war = yes
-
-		date > 1941.1.1
+		date > 1940.1.1
 	}
 
 	abort = {
@@ -2121,7 +2225,7 @@ SOV_wants_civ = {
 		original_tag = SOV
 	}
 	enable = {
-		date < 1939.1.1
+		date < 1938.9.1
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -2540,7 +2644,7 @@ SOV_dont_send_all_convoys_on_holiday_to_vladivostok = {
 	allowed = { original_tag = SOV }
 	enable = {
 		has_equipment = {
-			convoy < 500
+			convoy < 750
 		}
 	}
 	abort_when_not_enabled = yes
@@ -2556,7 +2660,7 @@ SOV_convoys_are_needed_for_lendlease = {
 	allowed = { original_tag = SOV }
 	enable = {
 		has_equipment = {
-			convoy < 500
+			convoy < 750
 		}
 	}
 	abort_when_not_enabled = yes
@@ -2736,5 +2840,25 @@ SOV_aifc_linear_defence = {
 	ai_strategy = {
 		type = force_concentration_factor
 		value = -100  # Just don't
+	}
+}
+
+SOV_build_tank_destroyers = {
+	allowed = { original_tag = SOV }
+	enable = {
+		has_tech = basic_heavy_tank_chassis
+		date > 1942.6.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = heavy_tank_destroyer_chassis
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = modern_tank_destroyer_chassis
+		value = 1
 	}
 }

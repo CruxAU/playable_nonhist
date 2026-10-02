@@ -2960,7 +2960,8 @@ focus_tree = {
 				category = cat_anti_tank	# optional 
 				# tecnology  = technology_id # optional
 			}
-			custom_effect_tooltip = SWE_bofors_anti_tank_gun_tt
+			custom_effect_tooltip = tech_effect|SWE_bofors_antitank_gun
+			#custom_effect_tooltip = SWE_bofors_anti_tank_gun_tt
 			hidden_effect = {
 				set_technology = {
 					SWE_bofors_antitank_gun = 1
@@ -8223,6 +8224,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			drop_cosmetic_tag = yes
 			set_party_name = {
 				ideology = neutrality
 				name = SWE_kings_party
@@ -9408,7 +9410,11 @@ focus_tree = {
 		}
 
 		bypass = {
-			is_subject = yes
+			AND = {
+				144 = { is_fully_controlled_by = SWE }
+				925 = { is_fully_controlled_by =  SWE }
+				924 = { is_fully_controlled_by =  SWE }
+			}
 		}
 	                
 		search_filters = { FOCUS_FILTER_ANNEXATION }

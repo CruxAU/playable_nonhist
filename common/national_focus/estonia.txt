@@ -2343,21 +2343,18 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 				}
-				all_state = {
-					OR = {
-						state = 148
-						state = 722
-						state = 213
-						state = 925
-						state = 924
-						state = 144
-						state = 923
-						state = 143
-						state = 666
-						state = 918
-						state = 917
-					}
-					is_owned_by = ROOT
+				AND = {
+					148 = { is_fully_controlled_by = ROOT }
+					722 = { is_fully_controlled_by = ROOT }
+					213 = { is_fully_controlled_by = ROOT }
+					925 = { is_fully_controlled_by = ROOT }
+					924 = { is_fully_controlled_by = ROOT }
+					144 = { is_fully_controlled_by = ROOT }
+					923 = { is_fully_controlled_by = ROOT }
+					143 = { is_fully_controlled_by = ROOT }
+					666 = { is_fully_controlled_by = ROOT }
+					918 = { is_fully_controlled_by = ROOT }
+					917 = { is_fully_controlled_by = ROOT }
 				}
 				SMI = {
 					is_subject_of = ROOT
@@ -2656,6 +2653,54 @@ focus_tree = {
 				}
 				transfer_state = 925
 			}
+			if = {
+				limit = {
+					917 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 917
+			}
+			if = {
+				limit = {
+					879 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 879
+			}
+			if = {
+				limit = {
+					880 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 880
+			}
+			if = {
+				limit = {
+					825 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 825
+			}
+			if = {
+				limit = {
+					824 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 824
+			}
+			if = {
+				limit = {
+					577 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 577
+			}
+			if = {
+				limit = {
+					399 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 399
+			}
+			if = {
+				limit = {
+					833 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 833
+			}
 			143 = {
 				add_core_of = ROOT
 			}
@@ -2720,6 +2765,30 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 			925 = {
+				add_core_of = ROOT
+			}
+			917 = {
+				add_core_of = ROOT
+			}
+			879 = {
+				add_core_of = ROOT
+			}
+			880 = {
+				add_core_of = ROOT
+			}
+			825 = {
+				add_core_of = ROOT
+			}
+			824 = {
+				add_core_of = ROOT
+			}
+			577 = {
+				add_core_of = ROOT
+			}
+			399 = {
+				add_core_of = ROOT
+			}
+			833 = {
 				add_core_of = ROOT
 			}
 		}
