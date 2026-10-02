@@ -6716,7 +6716,7 @@ MAN_russia_likes_to_rush_russia_but_you_better_rush_since_russia_will_lose_their
 	}	
 }
 
-MAN_russia_likes_to_rush_russia_but_you_better_rush_since_russia_will_lose_their_rushing_spirits = { 
+MAN_russia_siberian_supply_routes_front_request = { #NHMMAP renamed: was a duplicate name 
 	allowed = { original_tag = MAN }
 	enable = {
 		has_completed_focus = MAN_invite_russian_exiles_to_court
