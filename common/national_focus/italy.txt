@@ -22083,8 +22083,12 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = generic_current_effects
-				every_country = { #NHMMAP: vanilla every_occupied_country didn't work here; every_possible_country also looped over non-existent tags (capital_scope errors)
+				every_possible_country = { #NHMMAP: every_possible_country so non-existent colonies can be released (vanilla every_occupied_country didn't work here)
 					limit = {
+						OR = { #NHMMAP: skip unused dynamic tags (D01...), which have no capital and would error in capital_scope
+							exists = yes
+							any_core_state = { is_on_continent = africa }
+						}
 						capital_scope = {
 							is_on_continent = africa
 							is_controlled_by = ROOT
