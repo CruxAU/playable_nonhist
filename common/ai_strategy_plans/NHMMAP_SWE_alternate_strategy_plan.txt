@@ -3403,7 +3403,7 @@ SWE_nordic_defence_council_alt = {
 		SWE_bofors_anti_tank_gun
 		SWE_finlands_cause_is_ours
 
-		SWE_standardized_equipment
+		SWE_standardize_equipment
 		SWE_as_the_barometer_falls 
 		SWE_defense_in_depth 
 
@@ -3510,7 +3510,7 @@ SWE_nordic_defence_decentralised_council = {
 		SWE_bofors_anti_tank_gun
 		SWE_swedes_not_sweden_to_finlands_aid
 
-		SWE_standardized_equipment
+		SWE_standardize_equipment
 		SWE_as_the_barometer_falls 
 		SWE_defense_in_depth 
 
@@ -3590,7 +3590,7 @@ SWE_nordic_defence_decentralised_council_war = {
 		SWE_bofors_anti_tank_gun
 		SWE_the_aland_question
 
-		SWE_standardized_equipment
+		SWE_standardize_equipment
 		SWE_as_the_barometer_falls 
 		SWE_defense_in_depth 
 

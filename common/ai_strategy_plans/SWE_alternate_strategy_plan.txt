@@ -484,7 +484,7 @@ SWE_nordic_defence_council = {
 		SWE_bofors_anti_tank_gun
 		SWE_swedes_not_sweden_to_finlands_aid
 
-		SWE_standardized_equipment
+		SWE_standardize_equipment
 		SWE_as_the_barometer_falls 
 		SWE_defense_in_depth 
 
