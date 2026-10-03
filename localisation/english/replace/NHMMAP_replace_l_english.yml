@@ -285,3 +285,9 @@
  RULE_OPTION_FASCISM_PER_DESC: "The AI will unite the country's nationalists and form SUMKA, bringing a §Lfascist§! regime to the country. It will attempt to join a §Lfascist§! faction and declare war on their neighbors."
  tfv_raj.31.b:0 "If they want to play the Great Game again, then let's play.\n\n§RWe will be unable to retaliate against an uprising unless we pursue a policy of Global Defence or make investments into India via focus.§!"
  tfv_raj.41.b:0 "We have played the Great Game in India before. Let us see how well the Germans play it.\n\n§RWe will be unable to retaliate against an uprising unless we pursue a policy of Global Defence or make investments into India via focus.§!"
+ JAP_hakko_ichiu:0 "Hakkō Ichiu"
+ TUR_join_the_allies:0 "Join Britain"
+ TUR_join_the_axis:0 "Join Germany"
+ RULE_GROUP_GAME_SETUP:0 "Game option"
+ RULE_OPTION_DEMOCRATIC_SIA_AI_DESC: "The AI will side with Pridi Banomyong and the Khana Ratsadon, follow the democratic path and champion Asian self-determination against the colonial powers." # NHMMAP: vanilla 1.19 points this at New Zealand's text
+ IRQ_join_axis: "Join the Axis" # NHMMAP: vanilla borrows TUR_join_the_axis, which NHMMAP renames to "Join Germany"

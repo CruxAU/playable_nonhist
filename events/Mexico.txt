@@ -3062,61 +3062,61 @@ country_event = {
 					size = 0.35
 					keep_all_characters = yes
 					PREV = {  # Original country
-						MEX_abelardo_rodriguez = { 
-							set_nationality = PREV.PREV
-						}
-						MEX_manuel_avila_camacho = { 
-							set_nationality = PREV.PREV
-						}
-						MEX_heriberto_corona = { 
-							set_nationality = PREV.PREV
-						} 
-						MEX_adolfo_de_la_huerta = { 
-							set_nationality = PREV.PREV
-							add_corps_commander_role = {
-								character = MEX_adolfo_de_la_huerta
-								traits = { }
-								skill = 3
-								attack_skill = 3
-								defense_skill = 3
-								planning_skill = 2
-								logistics_skill = 2
-							}				
-							add_country_leader_role = { # Exiled until 1935 following a rebellion attempt, allowed back in by Cardenas and joined the cabinet of Avila
-								character = MEX_adolfo_de_la_huerta
-								country_leader = {
-									expire = "1965.1.1"
-									ideology = conservatism
-									traits = {
-										#
-									}
-								}
-								promote_leader = yes				
-							}
-						}
-						MEX_vicente_lombardo = { 
-							set_nationality = PREV.PREV
-							add_country_leader_role = {
-								character = MEX_vicente_lombardo
-								country_leader = {
-									expire = "1965.1.1"
-									ideology = marxism
-									traits = {
-										the_dean_of_mexican_marxism
-									}
-								}
-								promote_leader = yes				
-							}
-							add_corps_commander_role = { # It's your chance to shine, my boy!
-								traits = { politically_connected }
-								skill = 1
-								attack_skill = 1
-								defense_skill = 1
-								planning_skill = 1
-								logistics_skill = 1
-							}
-						}
-						if = {
+				        MEX_abelardo_rodriguez = { 
+				            set_nationality = PREV.PREV
+				        }
+				        MEX_manuel_avila_camacho = { 
+				            set_nationality = PREV.PREV
+				        }
+				        MEX_heriberto_corona = { 
+				            set_nationality = PREV.PREV
+				        } 
+				        MEX_adolfo_de_la_huerta = { 
+				            set_nationality = PREV.PREV
+				            add_corps_commander_role = {
+				            	character = MEX_adolfo_de_la_huerta
+				            	traits = { }
+				            	skill = 3
+				            	attack_skill = 3
+				            	defense_skill = 3
+				            	planning_skill = 2
+				            	logistics_skill = 2
+				            }				
+				            add_country_leader_role = { # Exiled until 1935 following a rebellion attempt, allowed back in by Cardenas and joined the cabinet of Avila
+				            	character = MEX_adolfo_de_la_huerta
+				            	country_leader = {
+				            		expire = "1965.1.1"
+				            		ideology = conservatism
+				            		traits = {
+				            			#
+				            		}
+				            	}
+				            	promote_leader = yes				
+				            }
+				        }
+				        MEX_vicente_lombardo = { 
+				            set_nationality = PREV.PREV
+				            add_country_leader_role = {
+				            	character = MEX_vicente_lombardo
+				            	country_leader = {
+				            		expire = "1965.1.1"
+				            		ideology = marxism
+				            		traits = {
+				            			the_dean_of_mexican_marxism
+				            		}
+				            	}
+				            	promote_leader = yes				
+				            }
+				            add_corps_commander_role = { # It's your chance to shine, my boy!
+				            	traits = { politically_connected }
+				            	skill = 1
+				            	attack_skill = 1
+				            	defense_skill = 1
+				            	planning_skill = 1
+				            	logistics_skill = 1
+				            }
+				        }
+				        if = {
 				        	limit = {
 				        		NOT = { has_global_flag = flag_mexico_cedillo_has_revolted }
 				        	}

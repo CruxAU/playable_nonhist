@@ -413,7 +413,7 @@ LIT_martial_baltic_unify = {
 
 }
 
-LIT_martial_baltic_unify = {
+LIT_martial_baltic_entente = { #NHMMAP renamed: was a duplicate of LIT_martial_baltic_unify
 	name = "Lithuanian plan for martial law"
 	desc = ""
 
@@ -1165,7 +1165,7 @@ LIT_fascist_independent = {
 
 }
 
-LIT_fascist_independent = {
+LIT_falangist_livonia = { #NHMMAP renamed: was a duplicate of LIT_fascist_independent
 	name = "Lithuanian fascist plan"
 	desc = ""
 

@@ -928,7 +928,7 @@ GRE_investment_decisions_category = {
 			}
 			modifier = {
 				factor = 0
-				has_country_leader = { 
+				has_country_leader = {
 					character = GRE_king_george_ii
 					ruling_only = yes
 				}

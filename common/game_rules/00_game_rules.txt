@@ -1939,7 +1939,9 @@ AST_ai_behavior = {
 		text = "RULE_OPTION_DEFAULT"
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
+	# BASE GAME
 	option = {
+		exclude_dlc = "Thunder at Our Gates"
 		name = COMMUNIST
 		text = "RULE_OPTION_COMMUNIST"
 		desc = "RULE_OPTION_COMMUNIST_AST_AI_DESC"
@@ -1952,18 +1954,21 @@ AST_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "Thunder at Our Gates"
 		name = DEMOCRATIC_HISTORICAL
 		text = "RULE_OPTION_DEMOCRATIC_HISTORICAL"
 		desc = "RULE_OPTION_DEMOCRATIC_HISTORICAL_AST_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "Thunder at Our Gates"
 		name = DEMOCRATIC_ALTERNATE
 		text = "RULE_OPTION_DEMOCRATIC_ALTERNATE"
 		desc = "RULE_DEMOCRATIC_ALTERNATE_AST_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "Thunder at Our Gates"
 		name = FASCIST
 		text = "RULE_OPTION_FASCIST"
 		desc = "RULE_FASCIST_AST_AI_DESC"
@@ -1976,10 +1981,61 @@ AST_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "Thunder at Our Gates"
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
 		allow_achievements = yes
+	}
+	# TAOG
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = HISTORICAL
+		text = "RULE_OPTION_AST_AI_RANDOM_TAOG_HISTORICAL"
+		desc = "RULE_OPTION_AST_AI_RANDOM_TAOG_HISTORICAL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = ADELA
+		text = "RULE_OPTION_AST_ADELA_FASCIST_TAOG_AI"
+		desc = "RULE_OPTION_AST_ADELA_FASCIST_TAOG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = PETER
+		text = "RULE_OPTION_AST_PETER_FASCIST_TAOG_AI"
+		desc = "RULE_OPTION_AST_PETER_FASCIST_TAOG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = DEMOCRATIC_TAOG
+		text = "RULE_OPTION_AST_RANDOM_DEMOCRATIC_TAOG_AI"
+		desc = "RULE_OPTION_AST_RANDOM_DEMOCRATIC_TAOG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = ANTICOMMONWEALTHCOMMUNIST
+		text = "RULE_OPTION_AST_ANTI_COMMONWEALTH_COMMUNIST_TAOG_AI"
+		desc = "RULE_OPTION_AST_ANTI_COMMONWEALTH_COMMUNIST_TAOG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = COMINTERNCOMMUNIST
+		text = "RULE_OPTION_AST_COMINTERN_COMMUNIST_TAOG_AI"
+		desc = "RULE_OPTION_AST_COMINTERN_COMMUNIST_TAOG_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		required_dlc = "Thunder at Our Gates"
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM" 
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = no
 	}
 }
 
@@ -2913,6 +2969,18 @@ CZE_ai_behavior = {
 		allow_achievements = yes
 	}
 
+	option = { #NHMMAP: vanilla Peace For Our Time fascist path (old tree uses FASCIST_PARTNER/ALLY/PUPPET)
+		name = FASCIST
+		text = "RULE_OPTION_FASCIST"
+		desc = "RULE_FASCIST_CZE_AI_DESC"
+		required_dlc = "Peace For Our Time"
+	}
+	option = { #NHMMAP: vanilla 1.19 Peace For Our Time option
+		name = MONARCHIST
+		text = "RULE_OPTION_NEUTRALITY_MONARCHIST"
+		desc = "RULE_OPTION_MONARCHIST_CZE_AI_DESC"
+		required_dlc = "Peace For Our Time"
+	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
@@ -8978,7 +9046,8 @@ MAL_ai_behavior = {
 }
 
 INS_ai_behavior = {
-	name = "INS_AI_BEHAVIOR"
+	name = "INS_ai_behavior"
+	required_dlc = "Thunder at Our Gates"
 	group = "RULE_GROUP_AI_BEHAVIOR"
 	default = {
 		name = DEFAULT
@@ -8986,98 +9055,75 @@ INS_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		name = TRUE_HISTORICAL
+		text = "RULE_OPTION_TRUE_HISTORICAL_INS_AI"
+		desc = "RULE_OPTION_TRUE_HISTORICAL_INS_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = DEM_NEU
-		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
-		allow_achievements = yes
+		name = LOYALIST
+		text = "RULE_OPTION_LOYALIST_INS_AI"
+		desc = "RULE_OPTION_LOYALIST_INS_AI_DESC"
 	}
 	option = {
-		name = DEM_INT
-		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
-		allow_achievements = yes
+		name = REVOLUTION_DEMOCRATIC
+		text = "RULE_OPTION_REVOLUTION_DEMOCRATIC_INS_AI"
+		desc = "RULE_OPTION_REVOLUTION_DEMOCRATIC_INS_AI_DESC"
 	}
 	option = {
-		name = COM
-		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
-		allow_achievements = yes
+		name = REVOLUTION_UNALIGNED
+		text = "RULE_OPTION_REVOLUTION_UNALIGNED_INS_AI"
+		desc = "RULE_OPTION_REVOLUTION_UNALIGNED_INS_AI_DESC"
 	}
 	option = {
-		name = FAS
-		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
-		allow_achievements = yes
+		name = REVOLUTION_COMMUNIST
+		text = "RULE_OPTION_REVOLUTION_COMMUNIST_INS_AI"
+		desc = "RULE_OPTION_REVOLUTION_COMMUNIST_INS_AI_DESC"
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
-		allow_achievements = yes
 	}
 }
 
 SIA_ai_behavior = {
-	name = "SIA_AI_BEHAVIOR"
+	name = "SIA_ai_behavior"
+	required_dlc = "Thunder at Our Gates"
 	group = "RULE_GROUP_AI_BEHAVIOR"
+
 	default = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
+
 	option = {
 		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_AI_DESC"
+		text = "RULE_OPTION_HISTORICAL_SIA_AI"
+		desc = "RULE_OPTION_HISTORICAL_SIA_AI_DESC"
 		allow_achievements = yes
 	}
+
 	option = {
-		name = NA_NEU
-		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_NEU_AI_DESC"
-		allow_achievements = yes
+		name = MONARCHIST
+		text = "RULE_OPTION_MONARCHIST_SIA_AI"
+		desc = "RULE_OPTION_MONARCHIST_SIA_AI_DESC"
+		allow_achievements = no
 	}
+
 	option = {
-		name = NA_INT
-		text = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_NA_INT_AI_DESC"
-		allow_achievements = yes
+		name = DEMOCRATIC
+		text = "RULE_OPTION_DEMOCRATIC"
+		desc = "RULE_OPTION_DEMOCRATIC_SIA_AI_DESC"
+		allow_achievements = no
 	}
-	option = {
-		name = DEM_NEU
-		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_NEU_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = DEM_INT
-		text = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_DEM_INT_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = COM
-		text = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_COM_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = FAS
-		text = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI"
-		desc = "RULE_OPTION_HISTORICAL_GENERIC_FAS_AI_DESC"
-		allow_achievements = yes
-	}
+
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
-		allow_achievements = yes
+		
 	}
 }
 

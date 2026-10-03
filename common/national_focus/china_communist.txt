@@ -576,7 +576,7 @@ focus_tree = {
 			modifier = {
 				is_chinese_warlord = yes
 				PRC = {
-					has_completed_focus = PRC_social_democracy
+					has_completed_focus = PRC_social_democracy_focus
 				}
 				factor = 0
 			}
@@ -1424,7 +1424,7 @@ focus_tree = {
 			remove_ideas = PRC_red_army_weakened
 			if = {
 				limit = {
-					NOT = { has_completed_focus = PRC_social_democracy }
+					NOT = { has_completed_focus = PRC_social_democracy_focus }
 				}
 				unlock_decision_category_tooltip = PRC_take_over_states
 			}

@@ -630,15 +630,24 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
-	
+
 	# We will be stronger together 
 	option = { 
 		name = SEA_japan_foreign_policy.4.a
+		trigger = {
+			NOT = { has_active_mission = SIA_limited_war_indochina }
+		}
 		ai_chance = {
 			base = 70
 			modifier = {
 				strength_ratio = { tag = JAP ratio < 0.8 }
 				factor = 1.5
+			}
+
+			modifier = {
+				has_dlc = "Thunder at Our Gates"
+				is_historical_focus_on = yes
+				factor = 0
 			}
 		}
 
@@ -657,11 +666,26 @@ country_event = {
 			}
 		}
 
+		#Make sure reluctant submission is triggered via this event
+		if = {
+			limit = {
+				has_dlc = "Thunder at Our Gates"
+				NOT = { 
+					has_completed_focus = SIA_standing_our_ground 
+					has_completed_focus = SIA_reluctant_submission
+				}
+			} 
+			complete_national_focus = SIA_reluctant_submission
+		}
+
 	}
 
 	# That would go against our principals of neutrality!
 	option = { 
 		name = SEA_japan_foreign_policy.4.b
+		trigger = {
+			NOT = { has_active_mission = SIA_limited_war_indochina }
+		}
 		ai_chance = {
 			base = 30
 			modifier = {
@@ -690,6 +714,14 @@ country_event = {
 			}
 		}
 
+	}
+
+	option = { 
+		name = SEA_japan_foreign_policy.4.c
+		trigger = { has_active_mission = SIA_limited_war_indochina }
+
+		JAP = { SIA = { country_event = { id = SEA_japan_foreign_policy.4 days = 181 } } } #Scoping to JAP first for loc to work with FROM
+		custom_effect_tooltip = SEA_japan_foreign_policy.4.c_tt
 	}
 }
 
@@ -781,6 +813,12 @@ country_event = {
 		name = SEA_japan_foreign_policy.7.a
 		ai_chance = {
 			base = 90
+
+			modifier = {
+				is_historical_focus_on = yes
+				has_dlc = "Thunder at Our Gates"
+				factor = 0
+			}
 		}
 
 		FROM = {
@@ -832,7 +870,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 }
 
@@ -2999,6 +3036,7 @@ country_event = { # [FROM.GetNameDefCap] Develops our Industries - event for cou
 		name = SEA_japan_foreign_policy.48.a	
 		
 		add_tech_bonus = {
+			name = JAP_east_asia_development_board
 			bonus = 0.5
 			uses = 2
 			category = industry
@@ -14062,7 +14100,7 @@ country_event = { #Build Battleships
 		name = SEA_imperial_influence_events.00.a #Intentional
 
 		activate_mission = JAP_naval_faction_demands_more_battleships
-		
+
 	}
 }
 
@@ -15035,4 +15073,107 @@ country_event = {
 
 	}
 }
+
+# The Battle of Midway (Japanese victory) - event for JAP 
+country_event = { 
+	id = SEA_japan_popup_events.51
+	title = SEA_japan_popup_events.51.t
+	desc = SEA_japan_popup_events.51.desc
+	picture = GFX_report_event_battle_of_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.51.a
+
+		add_war_support = 0.05 
+		navy_experience = 25 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		random_unit_leader = {
+			limit = {
+				has_character_flag = was_the_japanese_admiral_in_midway
+			}
+			add_skill_level = 1
+			add_attack = 1
+			add_coordination = 1
+			add_maneuver = 1
+		}	
+
+	}
+}
+
+# The Battle of Midway (American victory) - event for USA 
+country_event = { 
+	id = SEA_japan_popup_events.52
+	title = SEA_japan_popup_events.52.t
+	desc = SEA_japan_popup_events.52.desc
+	picture = GFX_report_event_battle_of_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.52.a
+
+		add_war_support = 0.05 
+		navy_experience = 25 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		random_unit_leader = {
+			limit = {
+				has_character_flag = was_the_american_admiral_in_midway
+			}
+			add_skill_level = 1
+			add_attack = 1
+			add_coordination = 1
+			add_maneuver = 1
+		}
+
+	}
+}
+
+# The Battle of Midway (Japanese loss) - event for JAP 
+country_event = { 
+	id = SEA_japan_popup_events.53
+	title = SEA_japan_popup_events.53.t
+	desc = SEA_japan_popup_events.53.desc
+	picture = GFX_report_event_JAP_loss_at_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.53.a
+		
+		add_war_support = -0.1 
+
+	}
+}
+
+# The Battle of Midway (American loss) - event for USA  
+country_event = { 
+	id = SEA_japan_popup_events.54
+	title = SEA_japan_popup_events.54.t
+	desc = SEA_japan_popup_events.54.desc
+	picture = GFX_report_event_USA_loss_at_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.54.a
+		
+		add_war_support = -0.1 
+
+	}
+}
+
 

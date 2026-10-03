@@ -3714,7 +3714,7 @@ FIN_communist_anti_soviet_nordics_baltics_plan = {
 	}
 }
 
-FIN_communist_anti_soviet_nordics_baltics_plan = {
+FIN_communist_finno_russian_plan = { #NHMMAP renamed: was a duplicate of FIN_communist_anti_soviet_nordics_baltics_plan
 
 	allowed = {
 		original_tag = FIN
@@ -4612,7 +4612,7 @@ FIN_democratic_pro_soviet_nordic_union = {
 	}
 }
 
-FIN_democratic_pro_soviet_nordic_union = {
+FIN_democratic_pro_soviet_nordic_baltic_union = { #NHMMAP renamed: was a duplicate of FIN_democratic_pro_soviet_nordic_union
 	
 	allowed = {
 		original_tag = FIN

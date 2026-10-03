@@ -2590,7 +2590,7 @@ POL_NSB_falangist_plan = {
 
 }
 
-POL_NSB_falangist_plan = {
+POL_NSB_falangist_international_plan = { #NHMMAP renamed: was a duplicate of POL_NSB_falangist_plan
 	name = "POL fascist plan"
 	desc = ""
 

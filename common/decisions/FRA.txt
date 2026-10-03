@@ -2225,6 +2225,10 @@ FRA_intervention_in_overseas_territories = {
 								state = 286
 								state = 741
 								state = 1017
+								state = 1066 
+								state = 1067 
+								state = 1068 
+								state = 1069 
 							}
 						}
 						add_compliance = 5
@@ -2273,6 +2277,10 @@ FRA_intervention_in_overseas_territories = {
 					state = 286
 					state = 741
 					state = 1017
+					state = 1066 
+					state = 1067 
+					state = 1068 
+					state = 1069 
 				}
 				CONTROLLER = {
 					NOT = {
@@ -2301,6 +2309,10 @@ FRA_intervention_in_overseas_territories = {
 						state = 286
 						state = 741
 						state = 1017
+						state = 1066 
+						state = 1067 
+						state = 1068 
+						state = 1069 
 					}
 					not = { is_controlled_by = ROOT }
 					CONTROLLER = {

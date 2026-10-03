@@ -485,7 +485,7 @@ BUL_the_neutral_regency_plan = {
 
 }
 
-BUL_the_neutral_regency_plan = {
+BUL_boris_allies_plan = { #NHMMAP renamed: was a duplicate of BUL_the_neutral_regency_plan
 	name = "The Return of Ferdinand I"
 	desc = "Following the death of Tsar Boris III, his father Ferdinand I will sit on the throne once again, seeking revenge against those who wronged him decades ago."
 

@@ -11,7 +11,7 @@
 
 
 
-HUN_alternate_DEM = {
+HUN_alternate_DEM_GD = {
 	name = "Hungarian Alternate plan to become democratic"
 	desc = ""
 
@@ -106,7 +106,7 @@ HUN_alternate_DEM = {
 
 
 
-HUN_alternate_COM = {
+HUN_alternate_COM_GD = {
 	name = "Hungarian Alternate plan to become communist"
 	desc = ""
 
@@ -354,7 +354,6 @@ HUN_alternate_COM_FEDERATIVE_REPUBLIC = {
 	}
 
 	focus_factors = {
-		wuw_HUN_balkan_ambitions = 2
 		wuw_HUN_denounce_marxism_leninism = 2
 	}
 

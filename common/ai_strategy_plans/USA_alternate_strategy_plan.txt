@@ -584,7 +584,7 @@ USA_communist = {
 
 }
 
-USA_communist = {
+USA_communist_alternate = { #NHMMAP renamed: was a duplicate of USA_communist
 	name = "US Communist Plan"
 	desc = "Plan for the US to go Communist"
 

@@ -4760,7 +4760,7 @@ country_event = { # event for papua owner (AST OR ENG)
 				AND = {
 					has_government = democratic
 					NOT = {
-						has_completed_focus = AST_never_another_gallipol
+						has_completed_focus = AST_never_another_gallipoli
 					}
 					FROM = { has_completed_focus = GER_reinstate_nazi_leadership }
 				}
@@ -4770,7 +4770,7 @@ country_event = { # event for papua owner (AST OR ENG)
 				AND = {
 					OR = {
 						has_government = fascism
-						has_completed_focus = AST_never_another_gallipol
+						has_completed_focus = AST_never_another_gallipoli
 					}
 					FROM = { has_completed_focus = GER_reinstate_nazi_leadership }
 				}
@@ -5779,7 +5779,7 @@ country_event = { # event for palau owner (has to be either JAP or MAN for focus
 				factor = 1.5
 			}
 			modifier = {
-				has_completed_focus = JAP_strike_south_doctrine
+				has_completed_focus = JAP_nanshin_ron #NHMMAP: Strike South Doctrine became Nanshin-ron in the 1.17 tree
 				factor = 0
 			}
 			modifier = {

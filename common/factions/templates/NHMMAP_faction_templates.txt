@@ -29,7 +29,6 @@ faction_template_defensive_neutrality = {
 		war_declaration_generated_tension_25
 		change_leader_rule_manifest_below_35
 		dismissal_rule_offensive_war
-		dismissal_rule_world_tension
 		goals_only_faction_leader
 		government_in_exile_allowed
 	}

@@ -94,7 +94,7 @@ SOV_historical_plan = {
 		SOV_policy_of_individual_security #35 -> May 1939
 		SOV_secure_leningrad #70
 		SOV_superior_war_machines #35 #Let's get the AI T34 designs
-		
+
 
 		#1940
 		SOV_approach_germany #35 -> Feb 1940
@@ -107,7 +107,7 @@ SOV_historical_plan = {
 		SOV_foster_flying_clubs
 		SOV_behead_the_snake #35 -> May 1940 (raid)
 		SOV_national_academies_of_sciences #35
-		
+
 
 		#1941
 		SOV_shift_to_armaments_production # (FYP) -> Do this ASAP after dealing with claims

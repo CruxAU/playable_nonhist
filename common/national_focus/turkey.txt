@@ -1,4 +1,4 @@
-focus_tree = {
+﻿focus_tree = {
 	id = turkish_focus
 
 	country = {
@@ -2388,12 +2388,11 @@ focus_tree = {
 	focus = {
 		id = TUR_georgian_manganese_extraction
 		icon = {
-			value = GFX_focus_generic_steel
-			trigger = {
+			GFX_focus_generic_steel = {
 				SOV = { NOT = { controls_state = 231 } } #APPROPRIATE CONDITIONS FOR GENERIC ICON
 			}
+			GFX_focus_chi_mission_to_the_soviet_union = yes
 		}
-		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = TUR_halk_ve_devlet }
 		x = -2
 		y = 1
@@ -7290,17 +7289,16 @@ focus_tree = {
 
 	focus = {
 		id = TUR_the_mediterranean_entente
-		icon = {
-			value = GFX_focus_ITA_generic_fascist_workers
-			trigger = {
+		icon = { #NHMMAP: converted to 1.19 dynamic icon syntax
+			GFX_focus_ITA_generic_fascist_workers = {
 				ITA = {
 					NOT = {
 						has_government = fascism
 					}
 				}
 			}
+			GFX_focus_generic_italy_first = yes
 		}
-		icon = GFX_focus_generic_italy_first
 		mutually_exclusive = { focus = TUR_join_the_minor_democracies focus = TUR_join_the_axis focus = TUR_join_the_allies focus = TUR_anti_bolshevik_mediterranean_bloc focus = TUR_readdress_the_montreux_convention }
 		prerequisite = { focus = TUR_the_italo_turkish_naval_academy }
 		available = {
@@ -7625,17 +7623,16 @@ focus_tree = {
 
 	focus = {
 		id = TUR_join_the_axis
-		icon = {
-			value = GFX_focus_ger_revive_kaiserreich
-			trigger = {
+		icon = { #NHMMAP: converted to 1.19 dynamic icon syntax
+			GFX_focus_ger_revive_kaiserreich = {
 				GER = {
 					NOT = {
 						has_government = fascism
 					}
 				}
 			}
+			GFX_focus_ger_reichskommisariats = yes
 		}
-		icon = GFX_focus_ger_reichskommisariats
 		mutually_exclusive = { focus = TUR_join_the_minor_democracies focus = TUR_the_mediterranean_entente focus = TUR_join_the_allies focus = TUR_anti_bolshevik_mediterranean_bloc focus = TUR_readdress_the_montreux_convention }
 		prerequisite = { focus = TUR_invite_german_officers_to_izmir }
 		prerequisite = { focus = TUR_the_italo_turkish_naval_academy }
@@ -9553,9 +9550,8 @@ focus_tree = {
 
 	focus = {
 		id = TUR_anti_bolshevik_mediterranean_bloc
-		icon = {
-			value = GFX_focus_intervention_spain_republic
-			trigger = {
+		icon = { #NHMMAP: converted to 1.19 dynamic icon syntax
+			GFX_focus_intervention_spain_republic = {
 				has_global_flag = scw_over
 				any_country = {
 					is_subject = no
@@ -9573,10 +9569,7 @@ focus_tree = {
 					NOT = { is_in_faction_with = SOV }
 				}
 			}
-		}
-		icon = {
-			value = GFX_focus_chi_reach_out_to_france
-			trigger = {
+			GFX_focus_chi_reach_out_to_france = {
 				FRA = {
 					has_government = communism
 					NOT = { is_in_faction_with = ENG }
@@ -9584,10 +9577,7 @@ focus_tree = {
 					NOT = { is_in_faction_with = SOV }
 				}
 			}
-		}
-		icon = {
-			value = GFX_focus_befriend_italy
-			trigger = {
+			GFX_focus_befriend_italy = {
 				ITA = {
 					has_government = communism
 					NOT = { is_in_faction_with = ENG }
@@ -9595,10 +9585,7 @@ focus_tree = {
 					NOT = { is_in_faction_with = SOV }
 				}
 			}
-		}
-		icon = {
-			value = GFX_focus_invite_yugoslavia
-			trigger = {
+			GFX_focus_invite_yugoslavia = {
 				YUG = {
 					has_government = communism
 					NOT = { is_in_faction_with = ENG }
@@ -9606,10 +9593,7 @@ focus_tree = {
 					NOT = { is_in_faction_with = SOV }
 				}
 			}
-		}
-		icon = {
-			value = GFX_focus_generic_befriend_greece
-			trigger = {
+			GFX_focus_generic_befriend_greece = {
 				GRE = {
 					has_government = communism
 					NOT = { is_in_faction_with = ENG }
@@ -9617,10 +9601,7 @@ focus_tree = {
 					NOT = { is_in_faction_with = SOV }
 				}
 			}
-		}
-		icon = {
-			value = GFX_focus_generic_befriend_bulgaria
-			trigger = {
+			GFX_focus_generic_befriend_bulgaria = {
 				BUL = {
 					has_government = communism
 					NOT = { is_in_faction_with = ENG }
@@ -9628,8 +9609,8 @@ focus_tree = {
 					NOT = { is_in_faction_with = SOV }
 				}
 			}
+			GFX_focus_NOR_a_new_norway_Trotsky_communism = yes
 		}
-		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
 		mutually_exclusive = { focus = TUR_join_the_minor_democracies focus = TUR_the_mediterranean_entente focus = TUR_join_the_axis focus = TUR_join_the_allies focus = TUR_readdress_the_montreux_convention }
 		prerequisite = { focus = TUR_dissolve_the_ODPA }
 		available = {
@@ -12514,6 +12495,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_doctrine_cost_reduction = {
 				name = TUR_turkish_air_defense_platforms
 				cost_reduction = 0.25

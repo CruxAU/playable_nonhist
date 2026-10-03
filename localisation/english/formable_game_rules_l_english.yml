@@ -1,5 +1,4 @@
 ﻿l_english:
- RULE_GROUP_GAME_SETUP:0 "Game option"
  RULE_OPTION_FORMED:0 "Formed"
  RULE_OPTION_FORMED_DESC:0 "Formable Nation will exist at game start."
  RULE_OPTION_NOT_FORMED:0 "Unformed"

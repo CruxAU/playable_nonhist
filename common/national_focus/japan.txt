@@ -5463,7 +5463,11 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			524 = {
+				NOT = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -12940,6 +12944,9 @@ focus_tree = {
 				635 = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 				}
+				1071 = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
 				#726 = {
 				#	state_is_fully_controlled_by_ROOT_or_subject = yes
 				#}
@@ -12981,6 +12988,7 @@ focus_tree = {
 						state = 726
 						state = 648
 						state = 645
+						state = 1071
 					}
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					air_base < 2 
@@ -13011,6 +13019,7 @@ focus_tree = {
 						state = 726
 						state = 648
 						state = 645
+						state = 1071
 					}
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					any_province_building_level = {
@@ -13058,6 +13067,7 @@ focus_tree = {
 							state = 726
 							state = 648
 							state = 645
+							state = 1071
 						}
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 						radar_station < 1
@@ -13144,6 +13154,7 @@ focus_tree = {
 						state = 737
 						state = 634
 						state = 669
+						state = 1070
 						state = 734
 						state = 635
 					}
@@ -13486,6 +13497,8 @@ focus_tree = {
 					amount = 6
 				}
 			}
+
+			INS_cancel_hol_ally_strategy_entirely_effect = yes
 			
 			unlock_decision_category_tooltip = prospect_for_resources
 				
@@ -13756,6 +13769,70 @@ focus_tree = {
 					}
 				}
 			}
+
+			hidden_trigger = {
+				IF = {
+					limit = {
+						is_ai = yes 
+					}
+
+					OR = {
+						# Either Siam doesn't hold it 
+						NOT = {
+							286 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+							670 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+							1017 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+							741 = { 
+								CONTROLLER = { 
+									original_tag = SIA
+								} 
+							}
+						}
+
+						# Siam holds it and we have decided on our approach tpwards them first 
+						AND = {
+							OR = {
+								286 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+								670 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+								1017 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+								741 = { 
+									CONTROLLER = { 
+										original_tag = SIA
+									} 
+								}
+							}
+							OR = {
+								has_completed_focus = JAP_sea_pressure_siam
+								has_completed_focus = JAP_occupy_siam
+							}
+						}
+					}
+				}
+			}	
 			
 		}
 
@@ -13913,6 +13990,14 @@ focus_tree = {
 		}
 
 		available = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+				}
+				is_ai = no #I am not AI
+			}
+
+
 			is_subject = no
 			is_faction_leader = yes
 			SIA = {
@@ -13921,7 +14006,9 @@ focus_tree = {
 				is_in_faction = no
 				NOT = {
 					has_war_with = ROOT
+					
 				}
+				has_rule = can_join_factions
 			}
 		}
 
@@ -13984,7 +14071,10 @@ focus_tree = {
 
 		bypass = {
 			SIA = {
-				has_war_with = ROOT
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
 			}
 		}
 
@@ -14011,12 +14101,35 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_non_aggression_pact_with = SIA
+				}
 
-			create_wargoal = {
-				type = annex_everything
-				target = SIA
-				expire = 0
-			}	
+				diplomatic_relation = { 
+					country = SIA
+					relation = non_aggression_pact 
+					active = no 
+				}
+			}
+
+			if = {
+				limit = {
+					is_ai = yes
+					is_historical_focus_on = yes
+				}
+				declare_war_on = {
+					target = SIA
+					type = annex_everything
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = SIA
+					expire = 0
+				}	
+			}
 
 		}
 	}
@@ -14227,6 +14340,7 @@ focus_tree = {
 						}
 					}
 				}
+				INS_cancel_hol_ally_strategy_entirely_effect = yes
 			}
 			IF = {
 				limit = {
@@ -18756,10 +18870,13 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = {
-				ruling_only = yes
-				character = JAP_yamakawa_kikue
-			}	
+			OR = {
+				has_idea = JAP_yamakawa_kikue
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_yamakawa_kikue
+				}
+			}
 		}
 
 		bypass = {
@@ -18804,10 +18921,13 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = {
-				ruling_only = yes
-				character = JAP_yamakawa_kikue
-			}	
+			OR = {
+				has_idea = JAP_yamakawa_kikue
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_yamakawa_kikue
+				}
+			}
 		}
 
 		bypass = {
@@ -23088,23 +23208,13 @@ focus_tree = {
 			add_war_support = 0.05
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-				
-			IF = {
-				limit = {
-					MAN = {
-						exists = yes
-						NOT = {
-							has_war_with = ROOT
-							is_ally_with = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = topple_government
-					target = MAN
-					expire = 0
-				}
+			
+			create_wargoal = {
+				type = topple_government
+				target = MAN
+				expire = 0
 			}
+
 			IF = {
 				limit = {
 					SOV = {
@@ -29353,8 +29463,23 @@ focus_tree = {
 					name = JAP_sea_mountaineers
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_mountaineers_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = mountaineer_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = JAP_sea_mountaineers
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_1
+					}
+					add_mastery_bonus = {
+						name = JAP_sea_mountaineers
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_2
+					}
+				}				
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -29424,8 +29549,23 @@ focus_tree = {
 					name = JAP_jungle_adaptation
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_rangers_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = ranger_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = JAP_jungle_adaptation
+						bonus = 0.1
+						days = 240
+						sub_doctrine = rangers_1
+					}
+					add_mastery_bonus = {
+						name = JAP_jungle_adaptation
+						bonus = 0.1
+						days = 240
+						sub_doctrine = rangers_2
+					}
+				}				
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -31232,9 +31372,24 @@ focus_tree = {
 				add_potential_special_forces_tree = yes
 				add_doctrine_cost_reduction = {
 					name = JAP_expand_the_snlf
-					cost_reduction = 0.5
+					cost_reduction = 0.25
 					uses = 1
-					category = cat_marines_doctrine
+					category = special_forces_doctrine
+				}
+				custom_effect_tooltip = marine_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = JAP_expand_the_snlf
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_1
+					}
+					add_mastery_bonus = {
+						name = JAP_expand_the_snlf
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_2
+					}
 				}
 			}
 			
@@ -31867,6 +32022,10 @@ focus_tree = {
 			JAP_add_or_modify_army_and_naval_air_services = yes
 			add_to_variable = { JAP_airforce_sortie_efficiency = 0.1 tooltip = sortie_efficiency_tt }
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = JAP_form_the_kido_butai_tt
+
 		}
 
 	}
@@ -32100,7 +32259,7 @@ focus_tree = {
 						creator = "JAP"
 						version_name = "Shokaku Class"
 					}
-					name = "Zaikaku"
+					name = "Zuikaku"
 					requested_factories = 1
 					progress = 0.75
 					amount = 1
@@ -32791,5 +32950,620 @@ focus_tree = {
 
 
 
+
+
+	#NHMMAP: Russian exiles branch (non-NCNS tree only), restored from before the Dec 2025 tree rebuild
+	focus = {
+		id = JAP_help_from_russian_exiles
+		icon = GFX_focus_SOV_approach_semyonov
+		prerequisite = { focus = JAP_preemptive_war }
+		x = 1
+		y = 2
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war_with = SOV
+			563 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
+			has_dlc = "No Step Back"
+			NOT = {
+				SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+			
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_sea_purge_the_kodoha_faction
+						has_completed_focus = JAP_the_unthinkable_option
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
+		}
+
+		bypass = {
+			SOV = { is_puppet_of = JAP }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = JAP_exiles_will_help
+			hidden_effect = {
+				SOV = {
+					create_dynamic_country = {
+						original_tag = THIS
+						set_variable = { JAP.create_puppet = THIS }
+						ROOT = {
+							var:GER.create_puppet = {
+								transfer_state = 563
+							}
+						}
+						ROOT = {
+							puppet = JAP.create_puppet
+						}
+						clear_variable = JAP.create_puppet
+						set_politics = {
+							ruling_party = ROOT
+						}
+						
+						create_country_leader = {
+							name = "Grigory Semyonov"
+							desc = "POLITICS_GRIGORY_SEMYONOV_DESC"
+							picture = GFX_portrait_SOV_grigory_semyonov
+							expire = "1965.1.1"
+							ideology = despotism
+							traits = {
+								POL_cossack_king
+							}
+						}
+						set_cosmetic_tag = SOV_PROVISIONAL
+						set_popularities = {
+							democratic = 25
+							neutrality = 35
+							fascism = 35
+							communism = 5
+						}
+						transfer_state = 563
+						division_template = {
+							name = "Russian Exile Division"
+							priority = 1
+							division_names_group = SOV_INF_03
+							regiments = {
+								cavalry = { x = 0 y = 0 }
+								cavalry = { x = 0 y = 1 }
+								cavalry = { x = 0 y = 2 }
+					
+								cavalry = { x = 1 y = 0 }
+								cavalry = { x = 1 y = 1 }
+								cavalry = { x = 1 y = 2 }
+					
+								cavalry = { x = 2 y = 0 }
+								cavalry = { x = 2 y = 1 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+							}
+						}
+						563 = {
+							create_unit = {
+								division = "name = \"Russian Exile Division\" division_template = \"Russian Exile Division\" start_experience_factor = 0.9" 
+								owner = PREV
+								allow_spawning_on_enemy_provs = yes
+							}
+							create_unit = {
+								division = "name = \"Russian Exile Division\" division_template = \"Russian Exile Division\" start_experience_factor = 0.9" 
+								owner = PREV
+								allow_spawning_on_enemy_provs = yes
+							}
+							create_unit = {
+								division = "name = \"Russian Exile Division\" division_template = \"Russian Exile Division\" start_experience_factor = 0.9" 
+								owner = PREV
+								allow_spawning_on_enemy_provs = yes
+							}
+						}
+						set_party_name = {
+							ideology = neutrality
+							long_name = SOV_neutrality_party_russian
+							name = SOV_neutrality_party_russian
+						}
+						set_party_name = { 
+							ideology = fascism 
+							long_name = fascism 
+							name = fascism 
+						}
+						set_party_name = { 
+							ideology = democratic 
+							long_name = democratic 
+							name = democratic 
+						}
+						set_party_name = { 
+							ideology = communism 
+							long_name = communism 
+							name = communism 
+						}
+						declare_war_on = {
+							target = SOV
+							type = topple_government
+						}
+						ROOT = {
+							if = {
+								limit = {
+									has_dlc = "Waking the Tiger"
+								}
+								set_autonomy = {
+									target = PREV
+									autonomy_state = autonomy_wtt_imperial_protectorate
+								}
+							}
+							if = {
+								limit = {
+									has_dlc = "Together for Victory"
+								}
+								set_autonomy = {
+									target = PREV
+									autonomy_state = autonomy_integrated_puppet
+								}
+							}
+							else = {
+								puppet = PREV
+							}
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_global_flag = SOV_soviet_civil_war
+								}
+							}
+							set_global_flag = SOV_soviet_civil_war
+							load_focus_tree = { tree = soviet_focus keep_completed = no }
+							mark_focus_tree_layout_dirty = yes
+							unlock_national_focus = SOV_beaten_but_not_defeated
+							unlock_national_focus = SOV_unification_of_the_exiles
+							unlock_national_focus = SOV_the_true_tsars
+							unlock_national_focus = SOV_embrace_the_black_hundreds
+							complete_national_focus = SOV_approach_semyonov
+							unlock_national_focus = SOV_muster_the_old_guard
+							unlock_national_focus = SOV_tolkachi
+							unlock_national_focus = SOV_the_eyes_fear
+							unlock_national_focus = SOV_the_hands_do
+							unlock_national_focus = SOV_call_for_aid
+							unlock_national_focus = SOV_request_imperial_protection
+							set_country_flag = SOV_civil_war_triggered_flag
+						}						
+					}
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = JAP_turn_our_gaze_eastward
+		icon = GFX_focus_generic_attack_usa
+		prerequisite = { focus = JAP_preemptive_war }
+		x = -1
+		y = 2
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+			408 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			637 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+				target = USA
+				type = take_state_focus
+				expire = 0
+				generator = { 463 650 631 629 727 631 632 638 } 
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_support_the_russian_exiles
+		icon = GFX_focus_SOV_the_true_tsars
+		prerequisite = { focus = JAP_non_aggression_pact_with_china }
+		prerequisite = { focus = JAP_create_a_manchurian_imperial_air_force }
+		x = -2
+		y = -1
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SOV = {
+				OR = {
+					has_civil_war = yes
+					has_government = neutrality
+				}
+			}
+		}
+
+		allow_branch = {
+			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
+			SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
+			NOT = {
+				has_country_flag = JAP_SOV_rights_refused
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_sea_purge_the_kodoha_faction
+						has_completed_focus = JAP_the_unthinkable_option
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
+		}
+
+		bypass = {
+			SOV = { is_puppet_of = JAP }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = { id = 700 } #Hirohito
+				}
+				remove_country_leader_trait = warrior_code
+			}
+			SOV = {
+				if = {
+					limit = {
+						has_global_flag = SOV_soviet_civil_war_over
+					}
+					country_event = {
+						id = nonhist_JAP.7 days = 3
+					}
+				}
+				else = {
+					country_event = {
+						id = nonhist_JAP.6 days = 3
+					}
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = JAP_tech_sharing_with_russia
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = JAP_support_the_russian_exiles }
+		x = -3
+		y = 0
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_global_flag = SOV_soviet_civil_war_over
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_country = {
+				limit = {
+					original_tag = SOV
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Death or Dishonor"
+							has_dlc = "Waking the Tiger"
+						}
+					}
+					add_to_tech_sharing_group = JAP_technological_exchange
+					ROOT = { add_to_tech_sharing_group = JAP_technological_exchange }
+				}
+				else = {
+					add_tech_bonus = {
+						name = underground_bonus
+						bonus = 1.0
+						uses = 2
+						category = electronics		
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_in_faction = yes }
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Death or Dishonor"
+						has_dlc = "Waking the Tiger"
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_in_faction_with = ROOT
+					}
+					add_to_tech_sharing_group = JAP_technological_exchange
+				}
+				ROOT = { add_to_tech_sharing_group = JAP_technological_exchange }
+			}
+			else = {
+				add_tech_bonus = {
+					name = armor_bonus
+					bonus = 1.0
+					uses = 2
+					category = armor		
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_expand_mengkukuo
+		icon = GFX_focus_generic_attack_mongolia
+		prerequisite = { focus = JAP_support_the_russian_exiles }
+		x = -2
+		y = 1
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+		will_lead_to_war_with = SOV
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {				
+				has_war_with = MON
+				has_wargoal_against = MON
+			}
+			OR = {				
+				has_war_with = TAN
+				has_wargoal_against = TAN
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					MEN = {
+						exists = yes
+						is_puppet_of = JAP
+					}
+				}
+				MON = {
+					every_core_state = {
+						add_core_of = MEN
+					}
+				}
+				TAN = {
+					every_core_state = {
+						add_core_of = MEN
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					MAN = {
+						exists = yes
+						is_puppet_of = JAP
+					}
+					MEN = {
+						exists = no
+					}
+				}
+				MON = {
+					every_core_state = {
+						add_claim_by = MAN
+					}
+				}
+				TAN = {
+					every_core_state = {
+						add_claim_by = MAN
+					}
+				}
+			}
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = TAN
+				type = annex_everything
+				expire = 0
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_establish_the_northern_resource_area_alt
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = JAP_expand_mengkukuo }
+		prerequisite = { focus = JAP_imperial_arsenals }
+		x = -1
+		y = 3
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_tech = excavation1	
+			OR = {
+				564 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+				657 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+				408 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+				560 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			657 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			408 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			560 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			564 = {
+				add_resource = {
+					type = aluminium
+					amount = 56
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_dlc = "Waking the Tiger" }
+				unlock_decision_category_tooltip = prospect_for_resources
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_turn_our_gaze_eastward_alt
+		icon = GFX_focus_generic_attack_usa
+		prerequisite = { focus = JAP_expand_mengkukuo }
+		prerequisite = { focus = JAP_tech_sharing_with_russia }
+		x = -3
+		y = 2
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+				target = USA
+				type = take_state_focus
+				expire = 0
+				generator = { 463 650 631 629 727 631 632 638 } 
+			}
+		}
+	}
 
 }
