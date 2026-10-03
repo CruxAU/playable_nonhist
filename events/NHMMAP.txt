@@ -5779,7 +5779,7 @@ country_event = { # event for palau owner (has to be either JAP or MAN for focus
 				factor = 1.5
 			}
 			modifier = {
-				has_completed_focus = JAP_strike_south_doctrine
+				has_completed_focus = JAP_nanshin_ron #NHMMAP: Strike South Doctrine became Nanshin-ron in the 1.17 tree
 				factor = 0
 			}
 			modifier = {

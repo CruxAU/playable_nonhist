@@ -209,15 +209,15 @@ JAP_alternate_plan_modern_shogunate = {
 		JAP_create_a_manchurian_imperial_air_force
 		#1939
 		JAP_non_aggression_pact_with_china
-		#JAP_support_the_russian_exiles #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_support_the_russian_exiles #NHMMAP: Russian exiles branch (non-NCNS only)
 		#1940
-		#JAP_tech_sharing_with_russia #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_tech_sharing_with_russia #NHMMAP: Russian exiles branch (non-NCNS only)
 		JAP_technological_exchange
 		JAP_preemptive_war
-		#JAP_help_from_russian_exiles #NHMMAP: Russian exiles branch is not in the current japan.txt
-		#JAP_establish_the_northern_resource_area_alt #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_help_from_russian_exiles #NHMMAP: Russian exiles branch (non-NCNS only)
+		JAP_establish_the_northern_resource_area_alt #NHMMAP: Russian exiles branch (non-NCNS only)
 		#1941
-		#JAP_turn_our_gaze_eastward_alt #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_turn_our_gaze_eastward_alt #NHMMAP: Russian exiles branch (non-NCNS only)
 		#1942
 		JAP_national_defense_state
 		JAP_spiritual_mobilization
@@ -288,17 +288,17 @@ JAP_alternate_plan_showa_restoration = {
 		JAP_build_up_the_manchurian_army
 		#1940
 		JAP_create_a_manchurian_imperial_air_force
-		#JAP_support_the_russian_exiles #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_support_the_russian_exiles #NHMMAP: Russian exiles branch (non-NCNS only)
 		#1941
-		#JAP_tech_sharing_with_russia #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_tech_sharing_with_russia #NHMMAP: Russian exiles branch (non-NCNS only)
 		#1942
 		JAP_technological_exchange
 		JAP_preemptive_war
-		#JAP_establish_the_northern_resource_area_alt #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_establish_the_northern_resource_area_alt #NHMMAP: Russian exiles branch (non-NCNS only)
 		JAP_national_defense_state
 		JAP_spiritual_mobilization
-		#JAP_help_from_russian_exiles #NHMMAP: Russian exiles branch is not in the current japan.txt
-		#JAP_turn_our_gaze_eastward_alt #NHMMAP: Russian exiles branch is not in the current japan.txt
+		JAP_help_from_russian_exiles #NHMMAP: Russian exiles branch (non-NCNS only)
+		JAP_turn_our_gaze_eastward_alt #NHMMAP: Russian exiles branch (non-NCNS only)
 		#1943
 		JAP_establish_the_northern_resource_area
 		JAP_german_rocketry
