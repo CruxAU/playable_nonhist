@@ -24,6 +24,7 @@ git merge vanilla          # resolve only the real conflicts
    - Changed vanilla loc keys go in `localisation/english/replace/`.
    - Decisions can re-open an existing vanilla category in another file.
    - on_actions are additive: every file's `on_startup` runs, and `nonhist_*`/`formable_*` run after vanilla's `00_`–`16_`.
+   - **Startup order matters for the balance system.** Per-country random blocks that use `game_weight_can_add_*` / `set_add_*_weight_*` (the warlords, the extra SPR blocks, all vanilla-modified countries) must stay in `00_on_actions.txt`, in roll order. Blocks that only set their own country's flags from game rules can go in `nonhist_playable_on_actions.txt` (the minors and AFA are there now).
    - **Exception: game rules stay in `00_game_rules.txt`.** The rules screen lists rules in load order within each group, so a country's NHMMAP rules (e.g. `FRA_ai_rhineland`) stay next to its vanilla rule.
    - Tools: `tools/extract_objects.py` (script objects) and `tools/extract_loc.py` (loc overrides) do the moving. Check with `tools/object_inventory.py compare git:HEAD . --layer git:vanilla`: only MOVED entries should appear.
 3. **A vanilla object you edit must stay whole in the vanilla copy.** Even one added option, such as an extra `RULE_OPTION` in `FRA_ai_behavior`, means the whole rule stays in `00_game_rules.txt`. HoI4 can't append to an object from another file, and a second definition is a duplicate.
