@@ -45,6 +45,8 @@ rule_group_geographical = {
 		joining_rule_islamic_only
 		joining_rule_balkans_only
 		joining_rule_hispanic_only
+		joining_rule_germanics_only #NHMMAP (defined in NHMMAP_joining_rules.txt)
+		joining_rule_euro_or_hispanic_only #NHMMAP
 	}
 }
 
