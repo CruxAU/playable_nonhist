@@ -290,3 +290,4 @@
  TUR_join_the_axis:0 "Join Germany"
  RULE_GROUP_GAME_SETUP:0 "Game option"
  RULE_OPTION_DEMOCRATIC_SIA_AI_DESC: "The AI will side with Pridi Banomyong and the Khana Ratsadon, follow the democratic path and champion Asian self-determination against the colonial powers." # NHMMAP: vanilla 1.19 points this at New Zealand's text
+ IRQ_join_axis: "Join the Axis" # NHMMAP: vanilla borrows TUR_join_the_axis, which NHMMAP renames to "Join Germany"
