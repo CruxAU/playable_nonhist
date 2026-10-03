@@ -22083,7 +22083,7 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = generic_current_effects
-				every_possible_country = { #im pretty sure I made this different in NHMMAP because every_occupied_country doesn't work. maybe test later TODO
+				every_country = { #NHMMAP: vanilla every_occupied_country didn't work here; every_possible_country also looped over non-existent tags (capital_scope errors)
 					limit = {
 						capital_scope = {
 							is_on_continent = africa
