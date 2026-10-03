@@ -1993,7 +1993,6 @@ HUN_alternate_COM_FEDERATIVE_REPUBLIC_alt = {
 		wuw_HUN_the_second_northern_campaign = 0
 		wuw_HUN_march_south = 0
 		wuw_HUN_revenge_for_the_romanian_humiliations = 0
-		wuw_HUN_balkan_ambitions = 0
 		wuw_HUN_denounce_marxism_leninism = 0
 	}
 

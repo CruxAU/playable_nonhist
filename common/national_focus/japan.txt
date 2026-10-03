@@ -32959,7 +32959,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_preemptive_war }
 		x = 1
 		y = 2
-		relative_position_id = JAP_preemptive_war
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 
 		cost = 10
 
@@ -33158,14 +33158,11 @@ focus_tree = {
 
 	focus = {
 		id = JAP_turn_our_gaze_eastward
-		allow_branch = {
-			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
-		}
 		icon = GFX_focus_generic_attack_usa
 		prerequisite = { focus = JAP_preemptive_war }
 		x = -1
 		y = 2
-		relative_position_id = JAP_preemptive_war
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 
 		cost = 10
 
@@ -33209,9 +33206,9 @@ focus_tree = {
 		icon = GFX_focus_SOV_the_true_tsars
 		prerequisite = { focus = JAP_non_aggression_pact_with_china }
 		prerequisite = { focus = JAP_create_a_manchurian_imperial_air_force }
-		x = -1
-		y = 1
-		relative_position_id = JAP_non_aggression_pact_with_china #NHMMAP: re-laid out for the 1.17+ tree
+		x = -2
+		y = -1
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 
 		cost = 10
 
@@ -33288,14 +33285,11 @@ focus_tree = {
 
 	focus = {
 		id = JAP_tech_sharing_with_russia
-		allow_branch = {
-			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
-		}
 		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = JAP_support_the_russian_exiles }
-		x = -1
-		y = 1
-		relative_position_id = JAP_support_the_russian_exiles #NHMMAP: re-laid out for the 1.17+ tree
+		x = -3
+		y = 0
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 
 		cost = 10
 
@@ -33375,14 +33369,11 @@ focus_tree = {
 
 	focus = {
 		id = JAP_expand_mengkukuo
-		allow_branch = {
-			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
-		}
 		icon = GFX_focus_generic_attack_mongolia
 		prerequisite = { focus = JAP_support_the_russian_exiles }
-		x = 1
+		x = -2
 		y = 1
-		relative_position_id = JAP_support_the_russian_exiles #NHMMAP: re-laid out for the 1.17+ tree
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 		will_lead_to_war_with = SOV
 		cost = 10
 
@@ -33465,15 +33456,12 @@ focus_tree = {
 
 	focus = {
 		id = JAP_establish_the_northern_resource_area_alt
-		allow_branch = {
-			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
-		}
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = JAP_expand_mengkukuo }
 		prerequisite = { focus = JAP_imperial_arsenals }
-		x = 1
-		y = 2
-		relative_position_id = JAP_support_the_russian_exiles #NHMMAP: re-laid out for the 1.17+ tree
+		x = -1
+		y = 3
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 
 		cost = 10
 
@@ -33542,15 +33530,12 @@ focus_tree = {
 
 	focus = {
 		id = JAP_turn_our_gaze_eastward_alt
-		allow_branch = {
-			NOT = { has_dlc = "No Compromise, No Surrender" } #NHMMAP: Russian exiles branch is for the non-NCNS tree only
-		}
 		icon = GFX_focus_generic_attack_usa
 		prerequisite = { focus = JAP_expand_mengkukuo }
 		prerequisite = { focus = JAP_tech_sharing_with_russia }
-		x = 0
+		x = -3
 		y = 2
-		relative_position_id = JAP_support_the_russian_exiles #NHMMAP: re-laid out for the 1.17+ tree
+		relative_position_id = JAP_preemptive_war #NHMMAP: laid out for the 1.17+ tree, 2+ apart
 
 		cost = 10
 
