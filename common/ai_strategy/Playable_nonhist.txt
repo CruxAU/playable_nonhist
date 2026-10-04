@@ -51,6 +51,7 @@ AST_Isolationism = { #Makes the AI ignore calls to arms
 	enable = {
 		date < 1943.1.1
 		AST = { has_war = no }
+		NOT = { has_dlc = "Thunder at Our Gates" }
 		OR = {
 			has_game_rule = {
 				rule = AST_ai_behavior

@@ -1980,13 +1980,6 @@ AST_ai_behavior = {
 		desc = "RULE_FASCIST_ALTERNATE_AST_AI_DESC"
 		allow_achievements = yes
 	}
-	option = {
-		exclude_dlc = "Thunder at Our Gates"
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-		allow_achievements = yes
-	}
 	# TAOG
 	option = {
 		required_dlc = "Thunder at Our Gates"
@@ -2000,42 +1993,42 @@ AST_ai_behavior = {
 		name = ADELA
 		text = "RULE_OPTION_AST_ADELA_FASCIST_TAOG_AI"
 		desc = "RULE_OPTION_AST_ADELA_FASCIST_TAOG_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Thunder at Our Gates"
 		name = PETER
 		text = "RULE_OPTION_AST_PETER_FASCIST_TAOG_AI"
 		desc = "RULE_OPTION_AST_PETER_FASCIST_TAOG_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Thunder at Our Gates"
 		name = DEMOCRATIC_TAOG
 		text = "RULE_OPTION_AST_RANDOM_DEMOCRATIC_TAOG_AI"
 		desc = "RULE_OPTION_AST_RANDOM_DEMOCRATIC_TAOG_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Thunder at Our Gates"
 		name = ANTICOMMONWEALTHCOMMUNIST
 		text = "RULE_OPTION_AST_ANTI_COMMONWEALTH_COMMUNIST_TAOG_AI"
 		desc = "RULE_OPTION_AST_ANTI_COMMONWEALTH_COMMUNIST_TAOG_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Thunder at Our Gates"
 		name = COMINTERNCOMMUNIST
 		text = "RULE_OPTION_AST_COMINTERN_COMMUNIST_TAOG_AI"
 		desc = "RULE_OPTION_AST_COMINTERN_COMMUNIST_TAOG_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 	option = {
 		required_dlc = "Thunder at Our Gates"
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM" 
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
-		allow_achievements = no
+		allow_achievements = yes
 	}
 }
 

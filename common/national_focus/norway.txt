@@ -2782,51 +2782,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = NOR_arrest_quisling
-		
-		icon = GFX_focus_NOR_arrest_quisling
-		
-		prerequisite = { focus = NOR_the_kings_no }
-
-		x = -6
-		y = 1
-		relative_position_id = NOR_the_kings_no
-		
-		cost = 1
-		
-		available = {
-			has_character = NOR_vidkun_quisling
-			has_capitulated = no
-			controls_state = 110
-			NOT = {
-				has_country_flag = NOR_switched_to_fasc_hist 
-			}
-		}
-
-		bypass = {
-			NOT = { has_character = NOR_vidkun_quisling }
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
-
-		available_if_capitulated = yes		
-
-		completion_reward = {
-			remove_ideas = { NOR_anti_communist_sentiment_ns }
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.2
-			}
-			add_popularity = {
-				ideology = democratic 
-				popularity = 0.05 
-			}
-			retire_character = NOR_vidkun_quisling
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	focus = {
 		id = NOR_replace_laake
 		icon = GFX_focus_NOR_replace_laake		
 
@@ -3775,6 +3730,51 @@ focus_tree = {
 				unlock_decision_tooltip = { decision = NOR_prepare_exile show_effect_tooltip = yes}
 			}
 			hidden_effect = { set_country_flag = NOR_included_in_generic_political }
+		}
+	}
+
+	focus = {
+		id = NOR_arrest_quisling
+		
+		icon = GFX_focus_NOR_arrest_quisling
+		
+		prerequisite = { focus = NOR_the_kings_no }
+
+		x = -6
+		y = 1
+		relative_position_id = NOR_the_kings_no
+		
+		cost = 1
+		
+		available = {
+			has_character = NOR_vidkun_quisling
+			has_capitulated = no
+			controls_state = 110
+			NOT = {
+				has_country_flag = NOR_switched_to_fasc_hist 
+			}
+		}
+
+		bypass = {
+			NOT = { has_character = NOR_vidkun_quisling }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+			remove_ideas = { NOR_anti_communist_sentiment_ns }
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.05 
+			}
+			retire_character = NOR_vidkun_quisling
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 

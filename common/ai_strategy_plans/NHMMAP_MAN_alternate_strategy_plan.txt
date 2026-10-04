@@ -280,6 +280,7 @@ MAN_alternate_plan_qing_1 = {
 
 }
 
+
 MAN_alternate_plan_qing_2 = {
 	name = "Manchukuo plan for qing, five people"
 	desc = ""

@@ -1,3 +1,5 @@
+@manifest_fulfilled_value = 0.75
+
 # Peace at any cost (SWI)
 faction_manifest_peace_at_any_cost = {
 	name = peace_at_any_cost_goal_name
