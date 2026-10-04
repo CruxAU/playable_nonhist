@@ -3152,24 +3152,16 @@ MAN_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = CHINESE_LEADERSHIP
-		text = "RULE_OPTION_CHINESE_LEADERSHIP"
-		desc = "RULE_OPTION_CHINESE_LEADERSHIP_MAN_AI_DESC"
-		allow_achievements = yes
+		required_dlc = "No Compromise, No Surrender"
+		name = OBEDIENCE_CHINA
+		text = "RULE_OPTION_OBEDIENCE_CHINA"
+		desc = "RULE_OPTION_OBEDIENCE_CHINA_MAN_AI_DESC"
 	}
 	option = {
-	exclude_dlc = "No Compromise, No Surrender"
-		name = MANCHU_QING
-		text = "RULE_OPTION_MANCHU_QING"
-		desc = "RULE_OPTION_MANCHU_QING_MAN_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-	exclude_dlc = "No Compromise, No Surrender"
-		name = MANCHU_QING_AGGR
-		text = "RULE_OPTION_MANCHU_QING_AGGR"
-		desc = "RULE_OPTION_MANCHU_QING_AGGR_MAN_AI_DESC"
-		allow_achievements = yes
+		exclude_dlc = "No Compromise, No Surrender"
+		name = INDEPENDENCE
+		text = "RULE_OPTION_INDEPENDENCE"
+		desc = "RULE_OPTION_INDEPENDENCE_MAN_AI_DESC"
 	}
 	option = {
 		required_dlc = "No Compromise, No Surrender"
@@ -3199,7 +3191,6 @@ MAN_ai_behavior = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
-		allow_achievements = yes
 	}
 }
 SHX_ai_behavior = {

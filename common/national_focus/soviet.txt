@@ -17020,12 +17020,6 @@ ai_will_do = {
 				days = 365
 			}
 			custom_effect_tooltip = SOV_consolidate_power_tt
-			#if = { 
-			#	limit = {
-			#		original_tag = MAN
-			#	}
-			#	add_ideas = SOV_national_brotherhood_idea
-			#}
 		}
 	}
 
@@ -17347,28 +17341,6 @@ ai_will_do = {
 		available_if_capitulated = no
 		available = { 
 			has_civil_war = no
-		#	if = {
-		#		limit = {
-		#			original_tag = MAN
-		#		}
-		#		NOT = {
-		#			has_war_with = SOV
-		#		}
-		#		controls_state = 561
-		#		controls_state = 408
-		#	}
-		#}
-		#bypass = {
-		#	if = {
-		#		limit = {
-		#			original_tag = MAN
-		#		}
-		#		NOT = {
-		#			has_war_with = SOV
-		#		}
-		#		controls_state = 561
-		#		controls_state = 408
-		#	}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -17504,14 +17476,7 @@ ai_will_do = {
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
-		#bypass = {
-		#	if = {
-		#		limit = {
-		#			original_tag = MAN
-		#		}
-		#		has_government = fascism
-		#	}
-		#}
+
 		completion_reward = {
 			if = { #NHMMAP
 				limit = {
@@ -17660,14 +17625,6 @@ ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = no
-		#available = { 
-		#	if = {
-		#		limit = {
-		#			original_tag = MAN
-		#		}
-		#		always = no
-		#	}
-		#}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
 

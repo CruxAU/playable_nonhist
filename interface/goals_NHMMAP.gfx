@@ -1,6 +1,0 @@
-spriteTypes = {
-	SpriteType = {
-		name = "GFX_focus_MAN_merge_with_MEN"
-		texturefile = "gfx/interface/goals/focus_MAN_merge_with_MEN.dds"
-	}
-}
