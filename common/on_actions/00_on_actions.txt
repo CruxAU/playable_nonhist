@@ -6475,9 +6475,7 @@ on_actions = {
 						}
 						random_list = {
 							1 = { MAN = { set_country_flag = MAN_AI_RANDOM_OBEDIENCE } }
-							1 = { MAN = { set_country_flag = MAN_AI_RANDOM_CHINESE_LEADERSHIP } }
-							1 = { MAN = { set_country_flag = MAN_AI_RANDOM_MANCHU_QING } }
-							1 = { MAN = { set_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR } }
+							1 = { MAN = { set_country_flag = MAN_AI_RANDOM_INDEPENDENCE } } #NHMMAP: vanilla old-tree path
 						}
 					}
 					else_if = {
@@ -6498,7 +6496,7 @@ on_actions = {
 							}
 						}
 						random_list = {
-							50 = { 
+							40 = { 
 								modifier = {
 									factor = 0
 									has_game_rule = {
@@ -6508,8 +6506,7 @@ on_actions = {
 								}
 								MAN = { set_country_flag = MAN_AI_RANDOM_OBEDIENCE } 
 							}
-							15 = { MAN = { set_country_flag = MAN_AI_RANDOM_CHINESE_LEADERSHIP } }
-							20 = {
+							60 = { #NHMMAP: vanilla old-tree independence path (balance rules as the old Qing paths)
 								modifier = {
 									factor = 0
 									OR = {
@@ -6523,23 +6520,7 @@ on_actions = {
 										}
 									}
 								}
-								MAN = { set_country_flag = MAN_AI_RANDOM_MANCHU_QING } 
-							}
-							15 = { 
-								modifier = {
-									factor = 0
-									OR = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = MINORS_FACTIONS
-										}
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = REALISTIC
-										}
-									}
-								}
-								MAN = { set_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR }
+								MAN = { set_country_flag = MAN_AI_RANDOM_INDEPENDENCE }
 							}
 						}
 					}
@@ -6777,49 +6758,6 @@ on_actions = {
 							}
 
 
-							50 = { 
-								modifier = {
-									factor = 0
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = ANTI_HISTORICAL
-									}
-								}
-								MAN = { set_country_flag = MAN_AI_RANDOM_OBEDIENCE } 
-							}
-							15 = { MAN = { set_country_flag = MAN_AI_RANDOM_CHINESE_LEADERSHIP } }
-							20 = {
-								modifier = {
-									factor = 0
-									OR = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = MINORS_FACTIONS
-										}
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = REALISTIC
-										}
-									}
-								}
-								MAN = { set_country_flag = MAN_AI_RANDOM_MANCHU_QING } 
-							}
-							15 = { 
-								modifier = {
-									factor = 0
-									OR = {
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = MINORS_FACTIONS
-										}
-										has_game_rule = {
-											rule = NONHIST_ai_behavior
-											option = REALISTIC
-										}
-									}
-								}
-								MAN = { set_country_flag = MAN_AI_RANDOM_MANCHU_QING_AGGR }
-							}
 						}
 					}
 				}

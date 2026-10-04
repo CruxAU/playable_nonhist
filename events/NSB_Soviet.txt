@@ -10141,10 +10141,7 @@ country_event = {
 	desc = {
 		text = NSB_soviet_civil_war_common.010_exiles
 		trigger = { 
-			OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			}
+			SOV_is_exiles = yes
 		}
 	}
 
@@ -10195,10 +10192,7 @@ country_event = {
 		IF = {
 			limit = {
 				195 = { is_capital = no }
-				OR = {
-					SOV_is_exiles = yes 
-					original_tag = MAN
-				}
+				SOV_is_exiles = yes
 			}
 			set_province_name = {
 				id = 3151
@@ -10209,10 +10203,7 @@ country_event = {
 		# Engels / Pokrovsk / Kosakenstadt + Marksshtadt / Yekaterinograd / Baronsk
 		IF = {
 			limit = {
-				OR = {
-					SOV_is_exiles = yes 
-					original_tag = MAN
-				}
+				SOV_is_exiles = yes
 			}
 			set_province_name = {
 				id = 11523
@@ -10241,10 +10232,7 @@ country_event = {
 
 		# Ordzhonikidze / Vladikavkaz
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 9628
 				name = SOV_Vladikavkaz
@@ -10253,10 +10241,7 @@ country_event = {
 
 		# Frunze / Bishkek / Bishkek
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 12583
 				name = SOV_Bishkek
@@ -10264,10 +10249,7 @@ country_event = {
 		}
 		# Yoshkar-Ola / Tsaryovokokshaysk / Krasnokokshaysk
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 9402
 				name = SOV_Krasnokokshaysk
@@ -10275,10 +10257,7 @@ country_event = {
 		}
 		# Kyzil / Belotsarsk / Khem-Beldir
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 10627
 				name = SOV_Khem-Beldir
@@ -10286,10 +10265,7 @@ country_event = {
 		}
 		# Makhachkala / Petrovskoye / Petrovsk-Port
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 6701
 				name = SOV_Petrovsk-Port
@@ -10298,10 +10274,7 @@ country_event = {
 
 		# Sverdlovsk / Yekaterinburg /  
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 1821
 				name = SOV_Yekaterinburg
@@ -10311,10 +10284,7 @@ country_event = {
 
 		# Dnipropetrovsk / Dnipro / Yekaterinoslav
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 11437
 				name = SOV_Dnipro
@@ -10324,10 +10294,7 @@ country_event = {
 
 		# Voroshilovgrad / Luhansk / Luhansk
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 9461
 				name = SOV_Luhansk
@@ -10337,10 +10304,7 @@ country_event = {
 
 		# Krasnodar / Yekaterinodar / Yekaterinodar
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 3734
 				name = SOV_Yekaterinodar
@@ -10350,10 +10314,7 @@ country_event = {
 
 		# Kuybyshev / Samara / Samara
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 11225
 				name = SOV_Samara
@@ -10363,10 +10324,7 @@ country_event = {
 
 		# Ulyanovsk / Simbirsk / Simbirsk
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 392
 				name = SOV_Simbirsk
@@ -10383,10 +10341,7 @@ country_event = {
 			base = 10
 		}
 		trigger = {
-			OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			}
+			SOV_is_exiles = yes
 		}
 		# Stalingrad
 		set_province_name = {
@@ -10418,10 +10373,7 @@ country_event = {
 		IF = {
 			limit = {
 				195 = { is_capital = no }
-				OR = {
-					SOV_is_exiles = yes 
-					original_tag = MAN
-				}
+				SOV_is_exiles = yes
 			}
 			set_province_name = {
 				id = 3151
@@ -10432,10 +10384,7 @@ country_event = {
 		# Engels / Pokrovsk / Kosakenstadt + Marksshtadt / Yekaterinograd / Baronsk
 		IF = {
 			limit = {
-				OR = {
-					SOV_is_exiles = yes 
-					original_tag = MAN
-				}
+				SOV_is_exiles = yes
 			}
 			set_province_name = {
 				id = 11523
@@ -10463,10 +10412,7 @@ country_event = {
 
 		# Ordzhonikidze / Vladikavkaz
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 9628
 				name = SOV_Vladikavkaz
@@ -10475,10 +10421,7 @@ country_event = {
 
 		# Frunze / Bishkek / Bishkek
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 12583
 				name = SOV_Bishkek
@@ -10486,10 +10429,7 @@ country_event = {
 		}
 		# Yoshkar-Ola / Tsaryovokokshaysk / Krasnokokshaysk
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 9402
 				name = SOV_Tsaryovokokshaysk
@@ -10497,10 +10437,7 @@ country_event = {
 		}
 		# Kyzil / Belotsarsk / Khem-Beldir
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 10627
 				name = SOV_Belotsarsk
@@ -10508,10 +10445,7 @@ country_event = {
 		}
 		# Makhachkala / Petrovskoye / Petrovsk-Port
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 6701
 				name = SOV_Petrovskoye
@@ -10519,10 +10453,7 @@ country_event = {
 		}
 		# Anadyr / Novo-Mariinsk /
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 13063
 				name = SOV_Novo-Mariinsk
@@ -10531,10 +10462,7 @@ country_event = {
 
 		# Sverdlovsk / Yekaterinburg /  
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 1821
 				name = SOV_Yekaterinburg
@@ -10544,10 +10472,7 @@ country_event = {
 
 		# Dnipropetrovsk / Dnipro / Yekaterinoslav
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 11437
 				name = SOV_Yekaterinoslav
@@ -10557,10 +10482,7 @@ country_event = {
 
 		# Voroshilovgrad / Luhansk / Luhansk
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 9461
 				name = SOV_Luhansk
@@ -10570,10 +10492,7 @@ country_event = {
 
 		# Krasnodar / Yekaterinodar / Yekaterinodar
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 3734
 				name = SOV_Yekaterinodar
@@ -10583,10 +10502,7 @@ country_event = {
 
 		# Kuybyshev / Samara / Samara
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 11225
 				name = SOV_Samara
@@ -10596,10 +10512,7 @@ country_event = {
 
 		# Ulyanovsk / Simbirsk / Simbirsk
 		IF = {
-			limit = { OR = {
-				SOV_is_exiles = yes 
-				original_tag = MAN
-			} }
+			limit = { SOV_is_exiles = yes }
 			set_province_name = {
 				id = 392
 				name = SOV_Simbirsk

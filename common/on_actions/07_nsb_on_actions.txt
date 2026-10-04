@@ -434,13 +434,7 @@ on_actions = {
 			# After Soviet Communist Civil War
 			if = {
 				limit = {
-					OR = {
-						original_tag = SOV
-						AND = {
-							original_tag = MAN
-							has_country_flag = NHMMAP_MAN_is_russia
-						}
-					}
+					original_tag = SOV
 					has_global_flag = SOV_soviet_civil_war
 					NOT = {
 						any_country = {

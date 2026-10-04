@@ -52,9 +52,6 @@ shared_focus = {
 		y = 0
 		trigger = {
 			 tag = MAN 
-			 NOT = {
-				has_country_flag = NHMMAP_MAN_has_nationalist_tree
-			 }
 		}
 	}
 
