@@ -105,13 +105,7 @@ AUS_panic_train_divisions = {
 		has_dlc = Gotterdammerung
 	}
 	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
+		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
 	}
 
 	abort = {
@@ -137,13 +131,7 @@ AUS_panic_befriend_guarantors_ITA = {
 		has_dlc = Gotterdammerung
 	}
 	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
+		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
 	}
 
 	abort = {
@@ -168,13 +156,7 @@ AUS_panic_befriend_guarantors_ENG = {
 		has_dlc = Gotterdammerung
 	}
 	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
+		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
 	}
 
 	abort = {
@@ -196,13 +178,7 @@ AUS_panic_befriend_guarantors_FRA = {
 		has_dlc = Gotterdammerung
 	}
 	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
+		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
 	}
 
 	abort = {
@@ -224,13 +200,7 @@ AUS_panic_befriend_guarantors_USA = {
 		has_dlc = Gotterdammerung
 	}
 	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
+		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
 	}
 
 	abort = {

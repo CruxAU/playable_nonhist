@@ -6985,6 +6985,26 @@ AUS_AI_BEHAVIOR = {
 		desc = "RULE_OPTION_HISTORICAL_AUS_AI_DESC"
 		allow_achievements = yes
 	}
+	#NHMMAP begin
+	option = {
+		name = HISTORICAL_ALT
+		text = "RULE_OPTION_AUS_HISTORICAL_ALT_AI"
+		desc = "RULE_OPTION_AUS_HISTORICAL_ALT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AGREEMENT_ITA
+		text = "RULE_OPTION_AUS_AGREEMENT_ITA_AI"
+		desc = "RULE_OPTION_AUS_AGREEMENT_ITA_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = AGREEMENT_DEM
+		text = "RULE_OPTION_AUS_AGREEMENT_DEM_AI"
+		desc = "RULE_OPTION_AUS_AGREEMENT_DEM_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	option = {
 		name = AUS_MONARCHIST_PUPPET
 		text = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI"
@@ -7033,13 +7053,80 @@ AUS_AI_BEHAVIOR = {
 		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI_DESC"
 		allow_achievements = no
 	}
-
+	#NHMMAP begin: vanilla AUS_ANTI_ANSCLUSS_STRESS split into these variants
 	option = {
-		name = AUS_ANTI_ANSCLUSS_STRESS
-		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_STRESS_AI"
-		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_STRESS_AI_DESC"
+		name = ANTI_ANSCLUSS_ITA_NF
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_NF_EXP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_NF_EXP_AGGR
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_CP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_CP_EXP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_2BW_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM" 

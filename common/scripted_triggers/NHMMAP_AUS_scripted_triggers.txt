@@ -37,10 +37,20 @@ AUS_is_axis_plan = { #if austria is going in the axis, used to determine if we w
 
 AUS_is_central_powers_plan = { #if austria is going in the central powers, used to determine if we will lower fascist support and for scw
 	OR = {
-		has_country_flag = AUS_AI_RANDOM_
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
-			option = AUS_
+			option = ANTI_ANSCLUSS_ITA_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
 		}
 	}
 }
@@ -62,6 +72,11 @@ AUS_is_aggro_expansionist_plan = { #if austria is to annex as many countries ASA
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		}
 	}
 }
 
@@ -81,6 +96,11 @@ AUS_is_natural_expansionist_plan = { #if austria is to take the annex decisions,
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
 		}
 	}
 }
@@ -102,6 +122,11 @@ AUS_is_no_expansion_plan = { #if austria is to take the annex focuses, but but N
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		}
 	}
 }
 
@@ -122,6 +147,11 @@ AUS_is_anti_anschluss_stress_plan = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		}
 		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
@@ -137,6 +167,11 @@ AUS_is_anti_anschluss_stress_plan = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		}
 		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
@@ -151,6 +186,11 @@ AUS_is_anti_anschluss_stress_plan = {
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
 		}
 	}
 }

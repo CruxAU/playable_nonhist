@@ -31412,7 +31412,20 @@ on_actions = {
 						1 = { set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_ALLIES }
 						1 = { set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_ALPINE_FEDERATION }
 						1 = { set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_FEDERATIVE }
-						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS }
+						#NHMMAP begin: vanilla ANTI_ANSCLUSS_STRESS split into variants (_2BW variants are game-rule only)
+						1 = { set_country_flag = AUS_AI_RANDOM_HISTORICAL_ALT }
+						1 = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_ITA }
+						1 = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_DEM }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP }
+						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR }
+						#NHMMAP end
 					}
 				}
 				else_if = {
@@ -31433,7 +31446,7 @@ on_actions = {
 						}
 					}
 					random_list = {
-						39 = {
+						30 = { #NHMMAP placeholder weight: was 39, split with the historical variants below
 							modifier = {
 								factor = 0
 								OR = {
@@ -31457,6 +31470,84 @@ on_actions = {
 							}
 							AUS = { 
 								set_country_flag = AUS_AI_RANDOM_HISTORICAL 
+							}
+						}
+						3 = { #NHMMAP placeholder weight
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = ANTI_HISTORICAL
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+								}
+							}
+							AUS = { 
+								set_country_flag = AUS_AI_RANDOM_HISTORICAL_ALT 
+							}
+						}
+						3 = { #NHMMAP placeholder weight
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = ANTI_HISTORICAL
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+								}
+							}
+							AUS = { 
+								set_country_flag = AUS_AI_RANDOM_AGREEMENT_ITA 
+							}
+						}
+						3 = { #NHMMAP placeholder weight
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = ANTI_HISTORICAL
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+								}
+							}
+							AUS = { 
+								set_country_flag = AUS_AI_RANDOM_AGREEMENT_DEM 
 							}
 						}
 						10 = {
@@ -31789,7 +31880,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_FEDERATIVE 
 							}
 						}
-						7 = {
+						1 = { #NHMMAP placeholder weights: vanilla ANTI_ANSCLUSS_STRESS (7) split into variants
 							modifier = {
 								factor = 0
 								OR = {
@@ -31815,7 +31906,231 @@ on_actions = {
 									}
 								}
 							}
-							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS }
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP }
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MINORS_FACTIONS
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = DEMOCRATIC_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = MONARCHIST_ONLY
+									}
+								}
+							}
+							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR }
 						}
 					}
 				}
