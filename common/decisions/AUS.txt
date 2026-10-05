@@ -909,6 +909,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 5
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1354,6 +1366,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 10
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1514,6 +1538,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 3
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1664,6 +1700,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 3
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1803,6 +1851,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 5
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1940,6 +2000,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 2
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -2079,6 +2151,18 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 2
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes

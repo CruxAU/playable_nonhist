@@ -8425,6 +8425,11 @@ country_event = { #Otto wants to be a field marshal
 			modifier = {
 				factor = 0 #literally don't do this
 				is_ai = yes
+				AUS_is_liechtenstein_plan = no #NHMMAP
+			}
+			modifier = { #NHMMAP
+				factor = 100
+				AUS_is_liechtenstein_plan = yes
 			}
 		}
 

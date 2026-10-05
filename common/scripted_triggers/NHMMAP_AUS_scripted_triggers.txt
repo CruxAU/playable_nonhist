@@ -32,6 +32,21 @@ AUS_is_axis_plan = { #if austria is going in the axis, used to determine if we w
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
 		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_ATTACK
+		}
 	}
 }
 
@@ -61,6 +76,21 @@ AUS_is_central_powers_plan = { #if austria is going in the central powers, used 
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_ATTACK
 		}
 	}
 }
@@ -121,6 +151,56 @@ AUS_is_natural_expansionist_plan = { #if austria is to take the annex decisions,
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
 		}
 	}
 }
@@ -256,6 +336,126 @@ AUS_is_diplomatic_expansionist_plan = { #natural expansionist, but only uses the
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+	}
+}
+
+AUS_is_puppet_plan = { #Herrenhaus paths that subjugate the old lands as puppets (needs Otto: AUS_demand_hungarian_submission)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+	}
+}
+
+AUS_is_royal_alliance_plan = { #paths that form the Royal Alliance
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+	}
+}
+
+AUS_is_core_lands_only_plan = { #only subjugates/annexes Hungary and Czechoslovakia
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+	}
+}
+
+AUS_is_liechtenstein_plan = { #crowns the Prince of Liechtenstein (AUS_political_events.91)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+	}
+}
+
+AUS_has_starhemberg_monarchy = { #Hungary got Otto first, so the Herrenhaus is led by Starhemberg: no puppet branch, no non-aligned Danubian Federation, no Reclaim Habsburg
+	OR = {
+		has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
+		AND = {
+			has_completed_focus = AUS_reinstate_the_imperial_council
+			NOT = { has_global_flag = AUS_otto_von_habsburg_has_joined_austria_flag }
 		}
 	}
 }

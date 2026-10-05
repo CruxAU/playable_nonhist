@@ -7005,12 +7005,68 @@ AUS_AI_BEHAVIOR = {
 		allow_achievements = no
 	}
 	#NHMMAP end
+	#NHMMAP begin: Herrenhaus puppet paths (replace vanilla AUS_MONARCHIST_PUPPET)
 	option = {
-		name = AUS_MONARCHIST_PUPPET
-		text = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI"
-		desc = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI_DESC"
+		name = HAB_PUP_CP_CORE
+		text = "RULE_OPTION_AUS_HAB_PUP_CP_CORE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_CP_CORE_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = HAB_PUP_CP_MAX
+		text = "RULE_OPTION_AUS_HAB_PUP_CP_MAX_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_CP_MAX_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_CP_ATTACK
+		text = "RULE_OPTION_AUS_HAB_PUP_CP_ATTACK_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_CP_ATTACK_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_ROYAL_CORE
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_CORE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_CORE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_ROYAL_MAX
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_MAX_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_MAX_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_ROYAL_ATTACK
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_ATTACK_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_ATTACK_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_AXIS_CORE
+		text = "RULE_OPTION_AUS_HAB_PUP_AXIS_CORE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_AXIS_CORE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_AXIS_MAX
+		text = "RULE_OPTION_AUS_HAB_PUP_AXIS_MAX_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_AXIS_MAX_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_AXIS_ATTACK
+		text = "RULE_OPTION_AUS_HAB_PUP_AXIS_ATTACK_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_AXIS_ATTACK_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_ROYAL_LIE
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_LIE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_LIE_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	option = {
 		name = AUS_MONARCHIST_ANNEX
 		text = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI"
