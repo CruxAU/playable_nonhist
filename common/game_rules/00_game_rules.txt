@@ -7203,24 +7203,92 @@ AUS_AI_BEHAVIOR = {
 		desc = "RULE_OPTION_AUS_COMMUNIST_AI_DESC"
 		allow_achievements = no
 	}
+	#NHMMAP begin: Hold Elections paths (replace vanilla AUS_DEMOCRATIC_FEDERATIVE/ALLIES/ALPINE_FEDERATION)
 	option = {
-		name = AUS_DEMOCRATIC_FEDERATIVE
-		text = "RULE_OPTION_AUS_DEMOCRATIC_FEDERATIVE_AI"
-		desc = "RULE_OPTION_AUS_DEMOCRATIC_FEDERATIVE_AI_DESC"
+		name = DEM_DANUBE_SMALL
+		text = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_DEMOCRATIC_ALLIES
-		text = "RULE_OPTION_AUS_DEMOCRATIC_ALLIES_AI"
-		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALLIES_AI_DESC"
+		name = DEM_DANUBE_SMALL_PROT
+		text = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_PROT_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_PROT_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_DEMOCRATIC_ALPINE_FEDERATION
-		text = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI"
-		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI_DESC"
+		name = DEM_DANUBE_MID
+		text = "RULE_OPTION_AUS_DEM_DANUBE_MID_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_MID_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = DEM_DANUBE_MID_PROT
+		text = "RULE_OPTION_AUS_DEM_DANUBE_MID_PROT_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_MID_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_LARGE
+		text = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_LARGE_PROT
+		text = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_PROT_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_EU
+		text = "RULE_OPTION_AUS_DEM_DANUBE_EU_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_EU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_EU_PUP
+		text = "RULE_OPTION_AUS_DEM_DANUBE_EU_PUP_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_EU_PUP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_AUS_DEM_NEU_AI"
+		desc = "RULE_OPTION_AUS_DEM_NEU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ALLIES
+		text = "RULE_OPTION_AUS_DEM_ALLIES_AI"
+		desc = "RULE_OPTION_AUS_DEM_ALLIES_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ALLIES_ATK
+		text = "RULE_OPTION_AUS_DEM_ALLIES_ATK_AI"
+		desc = "RULE_OPTION_AUS_DEM_ALLIES_ATK_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ALPINE
+		text = "RULE_OPTION_AUS_DEM_ALPINE_AI"
+		desc = "RULE_OPTION_AUS_DEM_ALPINE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ENTENTE
+		text = "RULE_OPTION_AUS_DEM_ENTENTE_AI"
+		desc = "RULE_OPTION_AUS_DEM_ENTENTE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ENTENTE_ATK
+		text = "RULE_OPTION_AUS_DEM_ENTENTE_ATK_AI"
+		desc = "RULE_OPTION_AUS_DEM_ENTENTE_ATK_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	#NHMMAP begin: vanilla AUS_ANTI_ANSCLUSS_STRESS split into these variants
 	option = {
 		name = ANTI_ANSCLUSS_ITA_NF

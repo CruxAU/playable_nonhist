@@ -752,6 +752,16 @@ AUS_is_core_lands_only_plan = { #only subjugates/annexes Hungary and Czechoslova
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_DANUBE_SMALL_PROT
 		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
 	}
 }
 
@@ -840,7 +850,7 @@ AUS_is_annex_plan = { #Herrenhaus paths that annex the old lands (AUS_bring_hung
 	}
 }
 
-AUS_is_danube_federation_plan = { #Herrenhaus (non-aligned) Danubian Federation paths; needs Otto, see AUS_has_starhemberg_monarchy
+AUS_is_danube_federation_plan = { #Danubian Federation paths: HAB_DANUBE_* (non-aligned, needs Otto, see AUS_has_starhemberg_monarchy) and DEM_DANUBE_* (democratic)
 	OR = {
 		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
 		has_game_rule = {
@@ -882,6 +892,46 @@ AUS_is_danube_federation_plan = { #Herrenhaus (non-aligned) Danubian Federation 
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_DANUBE_EU_PUP
 		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_LARGE
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_LARGE_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_EU
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_EU_PUP
+		}
 	}
 }
 
@@ -901,6 +951,21 @@ AUS_is_danube_protector_plan = { #puppets its federation members (AUS_protector_
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_DANUBE_LARGE_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_LARGE_PROT
 		}
 	}
 }
@@ -927,6 +992,26 @@ AUS_is_danube_no_observers_plan = { #small/medium federations never invite the o
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_DANUBE_MID_PROT
 		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID_PROT
+		}
 	}
 }
 
@@ -936,6 +1021,46 @@ AUS_is_eu_federalize_plan = { #EU paths that propose limited federalization (van
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_DANUBE_EU_PUP
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_EU_PUP
+		}
+	}
+}
+
+AUS_is_allies_plan = { #Hold Elections paths that join the Allies
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_DEM_ALLIES
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ALLIES
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_ALLIES_ATK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ALLIES_ATK
+		}
+	}
+}
+
+AUS_is_alpine_federation_plan = { #Hold Elections paths that form the Alpine Federation (and maybe invite the Little Entente)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_DEM_ALPINE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ALPINE
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_ENTENTE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ENTENTE
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_ENTENTE_ATK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ENTENTE_ATK
 		}
 	}
 }
