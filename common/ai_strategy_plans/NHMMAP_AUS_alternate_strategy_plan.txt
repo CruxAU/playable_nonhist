@@ -1112,6 +1112,67 @@ AUS_WILL_NOT_DO_BROTHERS_WAR = {
 				rule = AUS_AI_BEHAVIOR
 				option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
 			}
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_NONE
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_EXP
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_EXP_DIP
+			}
+			#puppet paths keep their no-Brothers'-War rule when they fall back to an annex plan under Starhemberg
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_CP_CORE
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_CP_MAX
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_CP_ATTACK
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_ROYAL_CORE
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_ROYAL_MAX
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_ROYAL_ATTACK
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_AXIS_CORE
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_AXIS_MAX
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_PUP_AXIS_ATTACK
+			}
 		}
 				
 	}   
@@ -1870,7 +1931,7 @@ AUS_hab_puppet_cp_core_plan = { #NHMMAP skeleton from the old AUS_monarchist_pup
 				option = HAB_PUP_CP_CORE
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -1967,7 +2028,7 @@ AUS_hab_puppet_cp_max_plan = { #NHMMAP skeleton from the old AUS_monarchist_pupp
 				option = HAB_PUP_CP_MAX
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2064,7 +2125,7 @@ AUS_hab_puppet_cp_attack_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 				option = HAB_PUP_CP_ATTACK
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2162,7 +2223,7 @@ AUS_hab_puppet_royal_core_plan = { #NHMMAP skeleton from the old AUS_monarchist_
 				option = HAB_PUP_ROYAL_CORE
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2259,7 +2320,7 @@ AUS_hab_puppet_royal_max_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 				option = HAB_PUP_ROYAL_MAX
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2356,7 +2417,7 @@ AUS_hab_puppet_royal_attack_plan = { #NHMMAP skeleton from the old AUS_monarchis
 				option = HAB_PUP_ROYAL_ATTACK
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2454,7 +2515,7 @@ AUS_hab_puppet_royal_lie_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 				option = HAB_PUP_ROYAL_LIE
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2554,7 +2615,7 @@ AUS_hab_puppet_axis_core_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 				option = HAB_PUP_AXIS_CORE
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2651,7 +2712,7 @@ AUS_hab_puppet_axis_max_plan = { #NHMMAP skeleton from the old AUS_monarchist_pu
 				option = HAB_PUP_AXIS_MAX
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2748,7 +2809,7 @@ AUS_hab_puppet_axis_attack_plan = { #NHMMAP skeleton from the old AUS_monarchist
 				option = HAB_PUP_AXIS_ATTACK
 			}
 		}
-		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the annex plans take over (phase D)
+		AUS_has_starhemberg_monarchy = no #Starhemberg can't take AUS_demand_hungarian_submission; the matching AUS_hab_annex_* plan takes over
 		has_dlc = "Gotterdammerung"
 	}
 	abort = {
@@ -2811,6 +2872,954 @@ AUS_hab_puppet_axis_attack_plan = { #NHMMAP skeleton from the old AUS_monarchist
 		AUS_strike_deal_with_italy = 0
 		AUS_war_against_guarantors = 0
 		AUS_second_brothers_war = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_royal_none_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: takes Hungary back into the fold, no annexing
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_ROYAL_NONE
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_a_royal_alliance
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_join_the_axis = 0
+		AUS_the_czechoslovakian_lands = 0
+		AUS_reclaiming_yugoslavian_territories = 0
+		AUS_demand_romanian_lands = 0
+		AUS_take_back_galicia = 0
+		AUS_take_albania = 0
+		AUS_second_brothers_war = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_royal_exp_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: annexes by force (militarist preparations)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_ROYAL_EXP
+			}
+			AND = { #Starhemberg fallback: he can't take the puppet branch
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_ROYAL_ATTACK
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_ROYAL_LIE
+					}
+				}
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+		#TO BE DONE IN ORDER SLOWLY!!! - released by the natural expansion helper plans at the TOP of this file
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_a_royal_alliance
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+		AUS_for_a_better_future
+		AUS_beyond_our_old_lands
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_join_the_axis = 0
+		AUS_second_brothers_war = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_royal_exp_dip_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: annexes peacefully (diplomatic preparations)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_ROYAL_EXP_DIP
+			}
+			AND = { #Starhemberg fallback: he can't take the puppet branch
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_ROYAL_CORE
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_ROYAL_MAX
+					}
+				}
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+		#TO BE DONE IN ORDER SLOWLY!!! - released by the natural expansion helper plans at the TOP of this file
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_a_royal_alliance
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+		AUS_for_a_better_future
+		AUS_beyond_our_old_lands
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_join_the_axis = 0
+		AUS_second_brothers_war = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_cp_none_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: takes Hungary back into the fold, no annexing
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_CP_NONE
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_reforming_the_central_powers
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_a_royal_alliance = 0
+		AUS_join_the_axis = 0
+		AUS_the_czechoslovakian_lands = 0
+		AUS_reclaiming_yugoslavian_territories = 0
+		AUS_demand_romanian_lands = 0
+		AUS_take_back_galicia = 0
+		AUS_take_albania = 0
+		AUS_second_brothers_war = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_cp_exp_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: annexes by force (militarist preparations)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_CP_EXP
+			}
+			AND = { #Starhemberg fallback: he can't take the puppet branch
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_CP_ATTACK
+					}
+				}
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+		#TO BE DONE IN ORDER SLOWLY!!! - released by the natural expansion helper plans at the TOP of this file
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_reforming_the_central_powers
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+		AUS_for_a_better_future
+		AUS_beyond_our_old_lands
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_a_royal_alliance = 0
+		AUS_join_the_axis = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_cp_exp_dip_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: annexes peacefully (diplomatic preparations)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_CP_EXP_DIP
+			}
+			AND = { #Starhemberg fallback: he can't take the puppet branch
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_CP_CORE
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_CP_MAX
+					}
+				}
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+		#TO BE DONE IN ORDER SLOWLY!!! - released by the natural expansion helper plans at the TOP of this file
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_reforming_the_central_powers
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+		AUS_for_a_better_future
+		AUS_beyond_our_old_lands
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_a_royal_alliance = 0
+		AUS_join_the_axis = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_axis_none_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: takes Hungary back into the fold, no annexing; also runs the _2BW variant (AUS_WILL_NOT_DO_BROTHERS_WAR blocks the war for the base option)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_NONE
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_2BW
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_join_the_axis
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_a_royal_alliance = 0
+		AUS_the_czechoslovakian_lands = 0
+		AUS_reclaiming_yugoslavian_territories = 0
+		AUS_demand_romanian_lands = 0
+		AUS_take_back_galicia = 0
+		AUS_take_albania = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_axis_exp_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: annexes by force (militarist preparations); also runs the _2BW variant (AUS_WILL_NOT_DO_BROTHERS_WAR blocks the war for the base option)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_EXP
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_EXP_2BW
+			}
+			AND = { #Starhemberg fallback: he can't take the puppet branch
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_AXIS_ATTACK
+					}
+				}
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+		#TO BE DONE IN ORDER SLOWLY!!! - released by the natural expansion helper plans at the TOP of this file
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_join_the_axis
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+		AUS_for_a_better_future
+		AUS_beyond_our_old_lands
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_a_royal_alliance = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_annex_axis_exp_dip_plan = { #NHMMAP skeleton from the old AUS_monarchist_annex_plan: annexes peacefully (diplomatic preparations); also runs the _2BW variant (AUS_WILL_NOT_DO_BROTHERS_WAR blocks the war for the base option)
+	name = "Austrian Monarchist Plan - Annexation"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_EXP_DIP
+			}
+			has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_ANX_AXIS_EXP_DIP_2BW
+			}
+			AND = { #Starhemberg fallback: he can't take the puppet branch
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_AXIS_CORE
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_PUP_AXIS_MAX
+					}
+				}
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+		#TO BE DONE IN ORDER SLOWLY!!! - released by the natural expansion helper plans at the TOP of this file
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_legacy_of_the_empire
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_devalue_the_schilling
+		AUS_bring_back_the_habsburg_rule
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_rebellious_rearmament
+		AUS_osterreichische_bundesheer
+		AUS_repeal_the_habsburgergesetz
+
+		#1938
+		AUS_establish_bohme_plan
+		AUS_intensify_training_efforts
+		AUS_bring_hungary_back_into_the_fold
+		AUS_join_the_axis
+		AUS_heeding_the_call_of_duty
+		AUS_invest_in_erzberg_steel_mines
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		AUS_strengthen_legitimistische_corps
+		AUS_sturmscharen_support
+		AUS_eiserne_legion
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_steyr_arms_investment
+		AUS_osterreichische_akademie
+		AUS_universitat_graz
+		AUS_for_a_better_future
+		AUS_beyond_our_old_lands
+	}
+
+	focus_factors = {
+		AUS_demand_hungarian_submission = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_a_royal_alliance = 0
 	}
 
 	research = {

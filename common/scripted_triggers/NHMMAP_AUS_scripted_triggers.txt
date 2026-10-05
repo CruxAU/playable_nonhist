@@ -47,6 +47,36 @@ AUS_is_axis_plan = { #if austria is going in the axis, used to determine if we w
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_PUP_AXIS_ATTACK
 		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
 	}
 }
 
@@ -91,6 +121,21 @@ AUS_is_central_powers_plan = { #if austria is going in the central powers, used 
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_PUP_CP_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
 		}
 	}
 }
@@ -202,6 +247,46 @@ AUS_is_natural_expansionist_plan = { #if austria is to take the annex decisions,
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_PUP_ROYAL_LIE
 		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
 	}
 }
 
@@ -236,6 +321,26 @@ AUS_is_no_expansion_plan = { #if austria is to take the annex focuses, but but N
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_DEM_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_2BW
 		}
 	}
 }
@@ -337,6 +442,61 @@ AUS_is_diplomatic_expansionist_plan = { #natural expansionist, but only uses the
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
 		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
+		AND = { #Starhemberg fallback: the peaceful puppet paths annex diplomatically instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_CP_CORE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_CP_MAX
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_ROYAL_CORE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_ROYAL_MAX
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_AXIS_CORE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_AXIS_MAX
+				}
+			}
+		}
 	}
 }
 
@@ -417,6 +577,21 @@ AUS_is_royal_alliance_plan = { #paths that form the Royal Alliance
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_PUP_ROYAL_LIE
 		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
 	}
 }
 
@@ -456,6 +631,71 @@ AUS_has_starhemberg_monarchy = { #Hungary got Otto first, so the Herrenhaus is l
 		AND = {
 			has_completed_focus = AUS_reinstate_the_imperial_council
 			NOT = { has_global_flag = AUS_otto_von_habsburg_has_joined_austria_flag }
+		}
+	}
+}
+
+AUS_is_annex_plan = { #Herrenhaus paths that annex the old lands (AUS_bring_hungary_back_into_the_fold). The AUS_hab_annex_* plans also run for the puppet options under Starhemberg
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
 		}
 	}
 }

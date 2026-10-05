@@ -7067,12 +7067,80 @@ AUS_AI_BEHAVIOR = {
 		allow_achievements = no
 	}
 	#NHMMAP end
+	#NHMMAP begin: Herrenhaus annex paths (replace vanilla AUS_MONARCHIST_ANNEX)
 	option = {
-		name = AUS_MONARCHIST_ANNEX
-		text = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI"
-		desc = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI_DESC"
+		name = HAB_ANX_ROYAL_NONE
+		text = "RULE_OPTION_AUS_HAB_ANX_ROYAL_NONE_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_ROYAL_NONE_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = HAB_ANX_ROYAL_EXP
+		text = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_ROYAL_EXP_DIP
+		text = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_CP_NONE
+		text = "RULE_OPTION_AUS_HAB_ANX_CP_NONE_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_CP_NONE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_CP_EXP
+		text = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_CP_EXP_DIP
+		text = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_NONE
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_NONE_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_NONE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_2BW
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_2BW_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP_2BW
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_2BW_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP_DIP
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP_DIP_2BW
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_2BW_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	option = {
 		name = AUS_NEUTRALITY_FEDERATIVE
 		text = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI"
