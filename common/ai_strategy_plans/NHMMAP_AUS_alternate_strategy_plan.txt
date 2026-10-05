@@ -919,7 +919,7 @@ AUS_italy_treaty_central_powers_expansionist = {
 		AUS_refine_vaterlandische_front
 
 		#1937
-		AUS_disregard_the_treaties
+		AUS_seek_agreement_for_rearmament
 		
 		AUS_rapid_rearmament
 		AUS_secret_rearmament
