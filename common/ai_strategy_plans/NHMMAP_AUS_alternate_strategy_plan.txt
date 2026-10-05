@@ -608,7 +608,7 @@ AUS_italy_treaty_no_faction_expansionist = {
 		AUS_refine_vaterlandische_front
 
 		#1937
-		AUS_disregard_the_treaties
+		AUS_seek_agreement_for_rearmament
 		
 		AUS_rapid_rearmament
 		AUS_secret_rearmament
@@ -961,7 +961,6 @@ AUS_italy_treaty_central_powers_expansionist = {
 	}
 
 	focus_factors = {
-		AUS_second_brothers_war = 0
 		AUS_join_the_axis = 0
 		AUS_a_royal_alliance = 0
 	}
@@ -1066,7 +1065,6 @@ AUS_italy_treaty_central_powers_expansionist_aggro = {
 	}
 
 	focus_factors = {
-		AUS_second_brothers_war = 0
 		AUS_join_the_axis = 0
 		AUS_a_royal_alliance = 0
 	}
