@@ -1448,3 +1448,411 @@ AUS_italy_treaty_axis_expansionist_aggro = {
 	}
 
 }
+
+AUS_democratic_guarantors_no_faction_plan = { #NHMMAP skeleton from AUS_anti_anschluss_stress_italy_no_faction_plan: Italy focuses swapped for the democratic guarantors
+	name = "Austrian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_DEM_NF
+			}
+		}
+		has_dlc = "Gotterdammerung"		
+	}   
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		AUS_totalitarian_safety
+		AUS_clamp_down_on_dnsap
+		AUS_regulate_austrian_finance_sector
+		AUS_approach_democratic_guarantors
+		AUS_refine_vaterlandische_front
+
+		#1937
+		AUS_seek_agreement_for_rearmament
+		
+		AUS_rapid_rearmament
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_osterreichische_bundesheer
+		AUS_economic_resuscitation
+		AUS_devalue_the_schilling
+		AUS_follow_the_jansa_plan
+		
+		#1938
+		AUS_integrate_dnsap_remnants
+		AUS_heimwehr_support
+		AUS_spanish_intervention
+		AUS_the_homeland_front
+		AUS_seek_papal_support
+		AUS_bring_phonix_insurance_from_the_ashes
+		AUS_frontmiliz_focus
+		AUS_fit_for_fight
+
+		#1939
+		AUS_strengthen_the_arms_industry
+		AUS_steyr_arms_investment
+		AUS_improve_army_logistics
+		AUS_consolidate_industries
+
+		#1940
+		AUS_heritage_of_an_empire
+		AUS_great_austrian_economic_push
+		AUS_universitat_graz
+		
+
+		
+	}
+
+	focus_factors = {
+		AUS_bring_hungary_back_into_the_fold = 0
+		AUS_demand_part_of_spanish_winnings = 0
+		AUS_second_brothers_war = 0
+		AUS_join_the_axis = 0
+		AUS_a_royal_alliance = 0
+		AUS_reforming_the_central_powers = 0
+		AUS_the_czechoslovakian_lands = 0
+		AUS_reclaiming_yugoslavian_territories = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+AUS_democratic_guarantors_no_faction_diplomatic_expansionist = { #NHMMAP skeleton from AUS_italy_treaty_no_faction_expansionist: Italy focuses swapped for the democratic guarantors, disregard_the_treaties swapped for seek_agreement_for_rearmament
+	name = "Austrian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+			}
+		}
+		has_dlc = "Gotterdammerung"		
+	}   
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+
+		#TO BE DONE IN ORDER SLOWLY!!! - these focuses will only be done by AI once released from the natural expansion rules at the TOP of this file^^^^^
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+		
+		#1936
+		AUS_totalitarian_safety
+		AUS_clamp_down_on_dnsap
+		AUS_regulate_austrian_finance_sector
+		AUS_approach_democratic_guarantors
+		AUS_refine_vaterlandische_front
+
+		#1937
+		AUS_seek_agreement_for_rearmament
+		
+		AUS_rapid_rearmament
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_bring_hungary_back_into_the_fold
+		AUS_standardized_army_training
+		AUS_economic_resuscitation
+		AUS_devalue_the_schilling
+		AUS_establish_bohme_plan
+		
+		#1938
+		AUS_integrate_dnsap_remnants
+		AUS_heimwehr_support
+		AUS_spanish_intervention
+		
+		AUS_intensify_training_efforts
+		AUS_seek_papal_support
+		AUS_bring_phonix_insurance_from_the_ashes
+		AUS_frontmiliz_focus
+		AUS_fit_for_fight
+
+		#1939
+		AUS_heeding_the_call_of_duty
+		AUS_strengthen_the_arms_industry
+		AUS_steyr_arms_investment
+		AUS_beyond_our_old_lands
+		AUS_improve_army_logistics
+		AUS_consolidate_industries
+
+		#1940
+		AUS_heritage_of_an_empire
+		AUS_great_austrian_economic_push
+		AUS_universitat_graz
+		AUS_reestablish_austrian_navy
+		
+
+		
+	}
+
+	focus_factors = {
+		AUS_second_brothers_war = 0
+		AUS_join_the_axis = 0
+		AUS_a_royal_alliance = 0
+		AUS_reforming_the_central_powers = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+AUS_democratic_guarantors_central_powers_plan = { #NHMMAP skeleton from AUS_anti_anschluss_stress_italy_central_powers_plan: Italy focuses swapped for the democratic guarantors
+	name = "Austrian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_DEM_CP
+			}
+		}
+		has_dlc = "Gotterdammerung"		
+	}   
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		AUS_totalitarian_safety
+		AUS_clamp_down_on_dnsap
+		AUS_regulate_austrian_finance_sector
+		AUS_approach_democratic_guarantors
+		AUS_refine_vaterlandische_front
+
+		#1937
+		AUS_seek_agreement_for_rearmament
+		
+		AUS_rapid_rearmament
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_osterreichische_bundesheer
+		AUS_economic_resuscitation
+		AUS_bring_hungary_back_into_the_fold #will never take the decisions
+		AUS_reforming_the_central_powers 
+		AUS_devalue_the_schilling
+		AUS_follow_the_jansa_plan
+		
+		#1938
+		AUS_integrate_dnsap_remnants
+		AUS_heimwehr_support
+		AUS_spanish_intervention
+		AUS_the_homeland_front
+		AUS_seek_papal_support
+		AUS_bring_phonix_insurance_from_the_ashes
+		AUS_frontmiliz_focus
+		AUS_fit_for_fight
+
+		#1939
+		AUS_strengthen_the_arms_industry
+		AUS_steyr_arms_investment
+		AUS_improve_army_logistics
+		AUS_consolidate_industries
+
+		#1940
+		AUS_heritage_of_an_empire
+		AUS_great_austrian_economic_push
+		AUS_universitat_graz
+		
+
+		
+	}
+
+	focus_factors = {
+		AUS_demand_part_of_spanish_winnings = 0
+		AUS_second_brothers_war = 0
+		AUS_join_the_axis = 0
+		AUS_a_royal_alliance = 0
+		AUS_the_czechoslovakian_lands = 0
+		AUS_reclaiming_yugoslavian_territories = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+AUS_democratic_guarantors_central_powers_diplomatic_expansionist = { #NHMMAP skeleton from AUS_italy_treaty_central_powers_expansionist: Italy focuses swapped for the democratic guarantors, disregard_the_treaties swapped for seek_agreement_for_rearmament
+	name = "Austrian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+			}
+		}
+		has_dlc = "Gotterdammerung"		
+	}   
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		AUS_integrate_northwest #whichever is first
+		AUS_integrate_hungary #whichever is first
+		AUS_proclaim_austrian_empire
+
+
+		#TO BE DONE IN ORDER SLOWLY!!! - these focuses will only be done by AI once released from the natural expansion rules at the TOP of this file^^^^^
+		AUS_the_czechoslovakian_lands
+		AUS_reclaiming_yugoslavian_territories
+		AUS_demand_romanian_lands
+		AUS_take_back_galicia
+		AUS_take_albania
+		
+		#1936
+		AUS_totalitarian_safety
+		AUS_clamp_down_on_dnsap
+		AUS_regulate_austrian_finance_sector
+		AUS_approach_democratic_guarantors
+		AUS_refine_vaterlandische_front
+
+		#1937
+		AUS_seek_agreement_for_rearmament
+		
+		AUS_rapid_rearmament
+		AUS_secret_rearmament
+		AUS_militarization_effort
+		AUS_bring_hungary_back_into_the_fold
+		AUS_standardized_army_training
+		AUS_reforming_the_central_powers
+		AUS_economic_resuscitation
+		AUS_devalue_the_schilling
+		AUS_establish_bohme_plan
+		
+		#1938
+		AUS_integrate_dnsap_remnants
+		AUS_heimwehr_support
+		AUS_spanish_intervention
+		
+		AUS_intensify_training_efforts
+		AUS_seek_papal_support
+		AUS_bring_phonix_insurance_from_the_ashes
+		AUS_frontmiliz_focus
+		AUS_fit_for_fight
+
+		#1939
+		AUS_heeding_the_call_of_duty
+		AUS_strengthen_the_arms_industry
+		AUS_steyr_arms_investment
+		AUS_beyond_our_old_lands
+		AUS_improve_army_logistics
+		AUS_consolidate_industries
+
+		#1940
+		AUS_heritage_of_an_empire
+		AUS_great_austrian_economic_push
+		AUS_universitat_graz
+		AUS_reestablish_austrian_navy
+		
+
+		
+	}
+
+	focus_factors = {
+		AUS_second_brothers_war = 0
+		AUS_join_the_axis = 0
+		AUS_a_royal_alliance = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

@@ -7126,6 +7126,30 @@ AUS_AI_BEHAVIOR = {
 		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_NF
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_CP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
 	#NHMMAP end
 	option = {
 		name = RANDOM

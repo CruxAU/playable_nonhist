@@ -52,6 +52,16 @@ AUS_is_central_powers_plan = { #if austria is going in the central powers, used 
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
 	}
 }
 
@@ -102,6 +112,16 @@ AUS_is_natural_expansionist_plan = { #if austria is to take the annex decisions,
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
 	}
 }
 
@@ -126,6 +146,16 @@ AUS_is_no_expansion_plan = { #if austria is to take the annex focuses, but but N
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP
 		}
 	}
 }
@@ -191,6 +221,41 @@ AUS_is_anti_anschluss_stress_plan = {
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+	}
+}
+
+AUS_is_diplomatic_expansionist_plan = { #natural expansionist, but only uses the diplomatic preparation decisions (NAP, industrial bribery, joint exercises)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
 		}
 	}
 }
