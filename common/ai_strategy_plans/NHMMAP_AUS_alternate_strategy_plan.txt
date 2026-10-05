@@ -5862,3 +5862,747 @@ AUS_dem_support_entente_atk_plan = { #NHMMAP skeleton from the old AUS_democrati
 		}
 	}
 }
+
+AUS_com_stalin_neu_plan = { #NHMMAP skeleton from the old AUS_communist_SOV_aligned_plan: no faction, no revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_STALIN_NEU
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_STALIN_NEU
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_seek_soviet_support
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_promote_the_worthy
+		AUS_invest_in_erzberg_steel_mines
+		AUS_align_with_ussr
+
+		#1939
+		AUS_a_new_beginning
+		AUS_cut_ties_with_the_church
+		AUS_centralize_the_industrial_sector
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_raid_military_storages = 0
+		AUS_join_comintern = 0
+		AUS_danubian_socialist_communes = 0
+		AUS_spur_the_communist_resistance = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_stalin_rev_plan = { #NHMMAP skeleton from the old AUS_communist_SOV_aligned_plan: no faction, revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_STALIN_REV
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_STALIN_REV
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_seek_soviet_support
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_promote_the_worthy
+		AUS_invest_in_erzberg_steel_mines
+		AUS_align_with_ussr
+
+		#1939
+		AUS_a_new_beginning
+		AUS_cut_ties_with_the_church
+		AUS_centralize_the_industrial_sector
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_spur_the_communist_resistance
+		AUS_meticulous_preparations
+		AUS_demand_liberation_of_workers
+		AUS_union_of_danubian_socialist_republics
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_raid_military_storages = 0
+		AUS_join_comintern = 0
+		AUS_danubian_socialist_communes = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_stalin_comintern_plan = { #NHMMAP skeleton from the old AUS_communist_SOV_aligned_plan: joins the Comintern, no revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_STALIN_COMINTERN
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_seek_soviet_support
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_promote_the_worthy
+		AUS_invest_in_erzberg_steel_mines
+		AUS_align_with_ussr
+
+		#1939
+		AUS_a_new_beginning
+		AUS_join_comintern
+		AUS_cut_ties_with_the_church
+		AUS_centralize_the_industrial_sector
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_raid_military_storages = 0
+		AUS_danubian_socialist_communes = 0
+		AUS_spur_the_communist_resistance = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_stalin_comintern_rev_plan = { #NHMMAP skeleton from the old AUS_communist_SOV_aligned_plan: joins the Comintern, revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_STALIN_COMINTERN_REV
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_seek_soviet_support
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_promote_the_worthy
+		AUS_invest_in_erzberg_steel_mines
+		AUS_align_with_ussr
+
+		#1939
+		AUS_a_new_beginning
+		AUS_join_comintern
+		AUS_cut_ties_with_the_church
+		AUS_centralize_the_industrial_sector
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_spur_the_communist_resistance
+		AUS_meticulous_preparations
+		AUS_demand_liberation_of_workers
+		AUS_union_of_danubian_socialist_republics
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_raid_military_storages = 0
+		AUS_danubian_socialist_communes = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_marx_neu_plan = { #NHMMAP skeleton from the old AUS_communist_plan: no faction, no revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_MARX_NEU
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_MARX_NEU
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_raid_military_storages
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_the_peoples_army
+		AUS_properly_trained_militias
+		AUS_a_safe_harbor_for_dissidents
+
+		#1939
+		AUS_a_new_beginning
+		AUS_cut_ties_with_the_church
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_seek_soviet_support = 0
+		AUS_join_comintern = 0
+		AUS_danubian_socialist_communes = 0
+		AUS_spur_the_communist_resistance = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_marx_rev_plan = { #NHMMAP skeleton from the old AUS_communist_plan: no faction, revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_MARX_REV
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_MARX_REV
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_raid_military_storages
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_the_peoples_army
+		AUS_properly_trained_militias
+		AUS_a_safe_harbor_for_dissidents
+
+		#1939
+		AUS_a_new_beginning
+		AUS_cut_ties_with_the_church
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_spur_the_communist_resistance
+		AUS_meticulous_preparations
+		AUS_demand_liberation_of_workers
+		AUS_union_of_danubian_socialist_republics
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_seek_soviet_support = 0
+		AUS_join_comintern = 0
+		AUS_danubian_socialist_communes = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_marx_bloc_plan = { #NHMMAP skeleton from the old AUS_communist_plan: Danube Bloc (Danubian Socialist Communes), no revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_MARX_BLOC
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_raid_military_storages
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_the_peoples_army
+		AUS_properly_trained_militias
+		AUS_a_safe_harbor_for_dissidents
+
+		#1939
+		AUS_a_new_beginning
+		AUS_danubian_socialist_communes
+		AUS_cut_ties_with_the_church
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_seek_soviet_support = 0
+		AUS_join_comintern = 0
+		AUS_spur_the_communist_resistance = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_com_marx_bloc_rev_plan = { #NHMMAP skeleton from the old AUS_communist_plan: Danube Bloc, revolutions; never Galicia (the 'Silesia' focus) or GER/SOV wars
+	name = "Austrian Communist Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = COM_MARX_BLOC_REV
+			}
+		}
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_release_imprisoned_leaders
+		AUS_austromarxism_focus
+		AUS_rally_the_people
+		AUS_renounce_the_treaties
+		AUS_militarization_effort
+
+		#1937
+		AUS_schutzbund_support
+		AUS_emergency_measaures
+		AUS_ban_dnsap
+		AUS_revolution
+		AUS_raid_military_storages
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+		AUS_the_peoples_army
+		AUS_properly_trained_militias
+		AUS_a_safe_harbor_for_dissidents
+
+		#1939
+		AUS_a_new_beginning
+		AUS_danubian_socialist_communes
+		AUS_cut_ties_with_the_church
+		AUS_strengthen_the_arms_industry
+
+		#1940
+		AUS_osterreichische_luftstreitkrafte
+		AUS_steyr_arms_investment
+		AUS_preparing_the_industry
+		AUS_spur_the_communist_resistance
+		AUS_meticulous_preparations
+		AUS_demand_liberation_of_workers
+		AUS_union_of_danubian_socialist_republics
+		AUS_hirtenberger_artillery
+	}
+
+	focus_factors = {
+		AUS_hold_elections = 0
+		AUS_reinstate_the_imperial_council = 0
+		AUS_seek_soviet_support = 0
+		AUS_join_comintern = 0
+		AUS_seize_galicia = 0
+		AUS_the_correct_communism = 0
+		AUS_deal_with_the_german_threat = 0
+		AUS_end_european_fascism = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

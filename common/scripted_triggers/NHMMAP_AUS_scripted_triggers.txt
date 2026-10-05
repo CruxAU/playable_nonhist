@@ -1064,3 +1064,78 @@ AUS_is_alpine_federation_plan = { #Hold Elections paths that form the Alpine Fed
 		}
 	}
 }
+
+AUS_is_stalinist_plan = { #communist paths that seek Soviet support (AUS_seek_soviet_support)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_NEU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_NEU
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_COMINTERN
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_COMINTERN_REV
+		}
+	}
+}
+
+AUS_is_marxist_plan = { #communist paths that stay independent of Moscow (AUS_raid_military_storages)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_NEU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_NEU
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_BLOC
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_BLOC_REV
+		}
+	}
+}
+
+AUS_is_communist_revolution_plan = { #communist paths that spur revolutions in the Danubian nations (AUS_spur_the_communist_resistance)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_COMINTERN_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_BLOC_REV
+		}
+	}
+}

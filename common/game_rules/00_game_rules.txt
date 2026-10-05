@@ -7191,18 +7191,56 @@ AUS_AI_BEHAVIOR = {
 		allow_achievements = no
 	}
 	#NHMMAP end
+	#NHMMAP begin: communist paths (replace vanilla AUS_COMMUNIST_SOV_ALIGNED/AUS_COMMUNIST)
 	option = {
-		name = AUS_COMMUNIST_SOV_ALIGNED
-		text = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI"
-		desc = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI_DESC"
+		name = COM_STALIN_NEU
+		text = "RULE_OPTION_AUS_COM_STALIN_NEU_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_NEU_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_COMMUNIST
-		text = "RULE_OPTION_AUS_COMMUNIST_AI"
-		desc = "RULE_OPTION_AUS_COMMUNIST_AI_DESC"
+		name = COM_STALIN_REV
+		text = "RULE_OPTION_AUS_COM_STALIN_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_REV_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = COM_STALIN_COMINTERN
+		text = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_STALIN_COMINTERN_REV
+		text = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_REV_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_NEU
+		text = "RULE_OPTION_AUS_COM_MARX_NEU_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_NEU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_REV
+		text = "RULE_OPTION_AUS_COM_MARX_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_REV_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_BLOC
+		text = "RULE_OPTION_AUS_COM_MARX_BLOC_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_BLOC_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_BLOC_REV
+		text = "RULE_OPTION_AUS_COM_MARX_BLOC_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_BLOC_REV_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	#NHMMAP begin: Hold Elections paths (replace vanilla AUS_DEMOCRATIC_FEDERATIVE/ALLIES/ALPINE_FEDERATION)
 	option = {
 		name = DEM_DANUBE_SMALL
