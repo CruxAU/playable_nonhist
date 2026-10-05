@@ -1,4 +1,4 @@
-CZE_alternate_strategy_plan_entente = {
+﻿CZE_alternate_strategy_plan_entente = {
 	name = "CZE aims to form Entente"
 	desc = "Let's fight good and die well!"
 

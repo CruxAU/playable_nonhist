@@ -1,4 +1,4 @@
-GER_unit_production = {
+﻿GER_unit_production = {
 	allowed = {
 		original_tag = GER
 	}
