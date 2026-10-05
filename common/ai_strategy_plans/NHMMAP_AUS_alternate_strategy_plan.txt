@@ -2906,6 +2906,21 @@ AUS_hab_annex_royal_none_plan = { #NHMMAP skeleton from the old AUS_monarchist_a
 				rule = AUS_AI_BEHAVIOR
 				option = HAB_ANX_ROYAL_NONE
 			}
+			AND = { #Starhemberg fallback: he can't found the non-aligned Danubian Federation
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_EU
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_EU_PUP
+					}
+				}
+			}
 		}
 		has_dlc = "Gotterdammerung"
 	}
@@ -3121,6 +3136,41 @@ AUS_hab_annex_royal_exp_dip_plan = { #NHMMAP skeleton from the old AUS_monarchis
 					has_game_rule = {
 						rule = AUS_AI_BEHAVIOR
 						option = HAB_PUP_ROYAL_MAX
+					}
+				}
+			}
+			AND = { #Starhemberg fallback: he can't found the non-aligned Danubian Federation
+				AUS_has_starhemberg_monarchy = yes
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_SMALL
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_SMALL_PROT
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_MID
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_MID_PROT
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_LARGE
+					}
+					has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = HAB_DANUBE_LARGE_PROT
 					}
 				}
 			}
@@ -3820,6 +3870,748 @@ AUS_hab_annex_axis_exp_dip_plan = { #NHMMAP skeleton from the old AUS_monarchist
 		AUS_demand_hungarian_submission = 0
 		AUS_reforming_the_central_powers = 0
 		AUS_a_royal_alliance = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_small_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: invites HUN and CZE only (decision hook); nothing more
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_SMALL
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_inviting_the_observers = 0
+		AUS_unexpected_alliances = 0
+		AUS_protector_of_the_danube = 0
+		AUS_via_danube_to_europe = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_small_prot_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: invites HUN and CZE only (decision hook); becomes Protector of the Danube and puppets the members
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_SMALL_PROT
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_inviting_the_observers #only to unlock AUS_diplomatic_effort; its invites are skipped (decision hook / plan)
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		AUS_diplomatic_effort
+		AUS_protector_of_the_danube
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_unexpected_alliances = 0
+		AUS_via_danube_to_europe = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_mid_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: invites the Danubian nations, no observers; nothing more
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_MID
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_inviting_the_observers = 0
+		AUS_unexpected_alliances = 0
+		AUS_protector_of_the_danube = 0
+		AUS_via_danube_to_europe = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_mid_prot_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: invites the Danubian nations, no observers; becomes Protector of the Danube and puppets the members
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_MID_PROT
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_inviting_the_observers #only to unlock AUS_diplomatic_effort; its invites are skipped (decision hook / plan)
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		AUS_diplomatic_effort
+		AUS_protector_of_the_danube
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_unexpected_alliances = 0
+		AUS_via_danube_to_europe = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_large_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: invites the Danubian nations, the observers, GER and SOV; nothing more
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_LARGE
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_inviting_the_observers
+		AUS_unexpected_alliances
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		AUS_diplomatic_effort
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_protector_of_the_danube = 0
+		AUS_via_danube_to_europe = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_large_prot_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: invites the Danubian nations, the observers, GER and SOV; becomes Protector of the Danube and puppets the members
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_LARGE_PROT
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_inviting_the_observers
+		AUS_unexpected_alliances
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		AUS_diplomatic_effort
+		AUS_protector_of_the_danube
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_via_danube_to_europe = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_eu_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: large federation, then Via Danube to Europe
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_EU
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_inviting_the_observers
+		AUS_unexpected_alliances
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		AUS_diplomatic_effort
+		AUS_via_danube_to_europe
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_protector_of_the_danube = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+AUS_hab_danube_eu_pup_plan = { #NHMMAP skeleton from the old AUS_neutrality_federative_plan: large federation, then Via Danube to Europe; also proposes limited federalization (vanilla BEL EU decision)
+	name = "Austrian Non-Aligned Federative"
+	desc = ""
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		OR = {
+			has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+			has_game_rule = {
+				rule = AUS_AI_BEHAVIOR
+				option = HAB_DANUBE_EU_PUP
+			}
+		}
+		AUS_has_starhemberg_monarchy = no #the non-aligned federation needs Otto; AUS_hab_annex_royal_* takes over
+		has_dlc = "Gotterdammerung"
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			AUS_has_starhemberg_monarchy = yes
+		}
+	}
+
+	ai_national_focuses = {
+		#1936
+		AUS_repeal_the_may_constitution
+		AUS_austria_against_fascism
+		AUS_reinstate_the_imperial_council
+		AUS_the_danubian_federation
+		AUS_regulate_austrian_finance_sector
+		AUS_economic_resuscitation
+
+		#1937
+		AUS_invite_danubian_countries
+		AUS_secret_rearmament
+		AUS_the_right_to_rearm
+		HABSBURG_part_of_something_bigger
+		AUS_osterreichische_bundesheer
+		AUS_follow_the_jansa_plan
+
+		#1938
+		AUS_fortify_the_traun_line
+		AUS_defence_of_the_homeland
+		AUS_extend_the_traun_line
+		AUS_invest_in_erzberg_steel_mines
+		AUS_danubian_unity
+		AUS_inviting_the_observers
+		AUS_unexpected_alliances
+		AUS_courting_the_princess_of_industry
+
+		#1939
+		HABSBURG_reform_gemeinsame_armee
+		HABSBURG_the_strength_of_the_common_man
+		HABSBURG_economic_cooperation_policy
+		AUS_strengthen_the_arms_industry
+		HABSBURG_technology_sharing
+		AUS_steyr_arms_investment
+
+		#1940
+		AUS_the_political_front
+		AUS_diplomatic_effort
+		AUS_via_danube_to_europe
+		HABSBURG_joint_training_initiative
+		HABSBURG_meeting_the_logistical_challenge
+		HABSBURG_for_the_glory_of_the_empire
+	}
+
+	focus_factors = {
+		AUS_legacy_of_the_empire = 0
+		AUS_hold_elections = 0
+		AUS_protector_of_the_danube = 0
 	}
 
 	research = {

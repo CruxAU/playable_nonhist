@@ -7141,12 +7141,56 @@ AUS_AI_BEHAVIOR = {
 		allow_achievements = no
 	}
 	#NHMMAP end
+	#NHMMAP begin: Herrenhaus Danubian Federation paths (replace vanilla AUS_NEUTRALITY_FEDERATIVE)
 	option = {
-		name = AUS_NEUTRALITY_FEDERATIVE
-		text = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI"
-		desc = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI_DESC"
+		name = HAB_DANUBE_SMALL
+		text = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = HAB_DANUBE_SMALL_PROT
+		text = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_PROT_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_MID
+		text = "RULE_OPTION_AUS_HAB_DANUBE_MID_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_MID_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_MID_PROT
+		text = "RULE_OPTION_AUS_HAB_DANUBE_MID_PROT_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_MID_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_LARGE
+		text = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_LARGE_PROT
+		text = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_PROT_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_EU
+		text = "RULE_OPTION_AUS_HAB_DANUBE_EU_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_EU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_EU_PUP
+		text = "RULE_OPTION_AUS_HAB_DANUBE_EU_PUP_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_EU_PUP_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	option = {
 		name = AUS_COMMUNIST_SOV_ALIGNED
 		text = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI"

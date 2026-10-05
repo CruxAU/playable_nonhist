@@ -287,6 +287,41 @@ AUS_is_natural_expansionist_plan = { #if austria is to take the annex decisions,
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_ANX_AXIS_EXP_DIP_2BW
 		}
+		AND = { #Starhemberg fallback: the federation paths annex diplomatically instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE_PROT
+				}
+			}
+		}
 	}
 }
 
@@ -341,6 +376,21 @@ AUS_is_no_expansion_plan = { #if austria is to take the annex focuses, but but N
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_ANX_AXIS_2BW
+		}
+		AND = { #Starhemberg fallback: the EU paths take Hungary back into the fold, no annexing
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU_PUP
+				}
+			}
 		}
 	}
 }
@@ -497,6 +547,41 @@ AUS_is_diplomatic_expansionist_plan = { #natural expansionist, but only uses the
 				}
 			}
 		}
+		AND = { #Starhemberg fallback: the federation paths annex diplomatically instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE_PROT
+				}
+			}
+		}
 	}
 }
 
@@ -592,6 +677,51 @@ AUS_is_royal_alliance_plan = { #paths that form the Royal Alliance
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_ANX_ROYAL_EXP_DIP
 		}
+		AND = { #Starhemberg fallback: the Danube paths form a Royal Alliance instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU_PUP
+				}
+			}
+		}
 	}
 }
 
@@ -611,6 +741,16 @@ AUS_is_core_lands_only_plan = { #only subjugates/annexes Hungary and Czechoslova
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
 		}
 	}
 }
@@ -696,6 +836,96 @@ AUS_is_annex_plan = { #Herrenhaus paths that annex the old lands (AUS_bring_hung
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
+	}
+}
+
+AUS_is_danube_federation_plan = { #Herrenhaus (non-aligned) Danubian Federation paths; needs Otto, see AUS_has_starhemberg_monarchy
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_LARGE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_LARGE_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_EU
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_EU_PUP
+		}
+	}
+}
+
+AUS_is_danube_protector_plan = { #puppets its federation members (AUS_protector_of_the_danube)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_LARGE_PROT
+		}
+	}
+}
+
+AUS_is_danube_no_observers_plan = { #small/medium federations never invite the observers (FRA TUR GRE HOL BEL...)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID_PROT
 		}
 	}
 }

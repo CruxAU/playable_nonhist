@@ -2695,6 +2695,16 @@ AUS_the_danubian_federation_category = {
 		priority = 80
 		ai_will_do = {
 			base = 5
+			modifier = { #NHMMAP: core-lands paths only invite Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					NOT = {
+						original_tag = HUN
+						original_tag = CZE
+					}
+				}
+			}
 			modifier = {
 				factor = 10
 				FROM = {
@@ -2806,6 +2816,10 @@ AUS_the_danubian_federation_category = {
 		priority = 70
 		ai_will_do = {
 			base = 2
+			modifier = { #NHMMAP: small/medium federations don't invite the observers
+				factor = 0
+				AUS_is_danube_no_observers_plan = yes
+			}
 			modifier = {
 				factor = 5
 				FROM = {
