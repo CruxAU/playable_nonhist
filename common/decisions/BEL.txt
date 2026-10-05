@@ -1032,6 +1032,11 @@ BEL_closer_european_union_cat =  {
 	
 		ai_will_do = {
 			base = 10
+			modifier = { #NHMMAP: Austria only federalizes its EU members on the "puppet too" EU paths
+				factor = 0
+				original_tag = AUS
+				AUS_is_eu_federalize_plan = no
+			}
 		}
 
 		target_array = ROOT.faction_members

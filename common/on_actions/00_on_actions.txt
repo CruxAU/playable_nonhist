@@ -31479,7 +31479,7 @@ on_actions = {
 						}
 					}
 					random_list = {
-						30 = { #NHMMAP placeholder weight: was 39, split with the historical variants below
+						120 = { #NHMMAP: vanilla 39 x4, split 120/12/12/12 with the historical variants below
 							modifier = {
 								factor = 0
 								OR = {
@@ -31505,7 +31505,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HISTORICAL 
 							}
 						}
-						3 = { #NHMMAP placeholder weight
+						12 = { #NHMMAP placeholder weight
 							modifier = {
 								factor = 0
 								OR = {
@@ -31531,7 +31531,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HISTORICAL_ALT 
 							}
 						}
-						3 = { #NHMMAP placeholder weight
+						12 = { #NHMMAP placeholder weight
 							modifier = {
 								factor = 0
 								OR = {
@@ -31557,7 +31557,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_AGREEMENT_ITA 
 							}
 						}
-						3 = { #NHMMAP placeholder weight
+						12 = { #NHMMAP placeholder weight
 							modifier = {
 								factor = 0
 								OR = {
@@ -31583,7 +31583,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_AGREEMENT_DEM 
 							}
 						}
-						1 = { #NHMMAP placeholder weights: vanilla MONARCHIST_PUPPET (10) split into the Herrenhaus puppet paths
+						4 = { #NHMMAP placeholder weights (all AUS weights x4): vanilla MONARCHIST_PUPPET (10) split into the Herrenhaus puppet paths
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31625,7 +31625,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31667,7 +31667,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31709,7 +31709,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31751,7 +31751,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31793,7 +31793,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31835,7 +31835,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31877,7 +31877,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31919,7 +31919,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31961,7 +31961,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK 
 							}
 						}
-						2 = { #NHMMAP placeholder weights: vanilla MONARCHIST_ANNEX (16) split into the Herrenhaus annex paths
+						8 = { #NHMMAP placeholder weights (all AUS weights x4): vanilla MONARCHIST_ANNEX (16) split into the Herrenhaus annex paths
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32002,7 +32002,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32043,7 +32043,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32084,7 +32084,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32125,7 +32125,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32166,7 +32166,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32207,7 +32207,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32248,7 +32248,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32289,7 +32289,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP 
 							}
 						}
-						2 = {
+						8 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32330,7 +32330,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP 
 							}
 						}
-						1 = { #NHMMAP placeholder weights: vanilla NEUTRALITY_FEDERATIVE was 2, now 1 per Danube path
+						1 = { #NHMMAP: all AUS weights are x4, so vanilla NEUTRALITY_FEDERATIVE (2 -> 8) is exactly 1 per Danube path
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -32658,7 +32658,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP 
 							}
 						}
-						6 = {
+						24 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_communist = no
@@ -32695,7 +32695,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_COMMUNIST_SOV_ALIGNED 
 							}
 						}
-						6 = {
+						24 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_communist = no
@@ -32736,7 +32736,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_COMMUNIST 
 							}
 						}
-						7 = {
+						28 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_democratic = no
@@ -32771,7 +32771,7 @@ on_actions = {
 							set_add_democratic_weight_small = yes
 							AUS = { set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_ALLIES }
 						}
-						5 = {
+						20 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_democratic = no
@@ -32812,7 +32812,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_ALPINE_FEDERATION 
 							}
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_democratic = no
@@ -32864,7 +32864,7 @@ on_actions = {
 								set_country_flag = AUS_AI_RANDOM_DEMOCRATIC_FEDERATIVE 
 							}
 						}
-						1 = { #NHMMAP placeholder weights: vanilla ANTI_ANSCLUSS_STRESS (7) split into variants
+						4 = { #NHMMAP placeholder weights (all AUS weights x4): vanilla ANTI_ANSCLUSS_STRESS (7) split into variants
 							modifier = {
 								factor = 0
 								OR = {
@@ -32892,7 +32892,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -32920,7 +32920,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -32948,7 +32948,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -32976,7 +32976,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33004,7 +33004,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33032,7 +33032,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33060,7 +33060,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33088,7 +33088,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33116,7 +33116,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33144,7 +33144,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33172,7 +33172,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {
@@ -33200,7 +33200,7 @@ on_actions = {
 							}
 							AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP }
 						}
-						1 = {
+						4 = {
 							modifier = {
 								factor = 0
 								OR = {

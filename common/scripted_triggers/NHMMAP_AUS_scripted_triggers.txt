@@ -929,3 +929,13 @@ AUS_is_danube_no_observers_plan = { #small/medium federations never invite the o
 		}
 	}
 }
+
+AUS_is_eu_federalize_plan = { #EU paths that propose limited federalization (vanilla BEL_propose_limited_federalization_descision, blocked for Austria otherwise)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_EU_PUP
+		}
+	}
+}
