@@ -936,8 +936,8 @@ AUS_subjugating_the_lands_of_old_category = {
 					}
 				}
 			}
-			modifier = {
-				factor = 100
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision (aggressive preps are x100, max 10000)
+				add = 60000
 				AUS_is_aggro_expansionist_plan = yes
 				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
@@ -966,8 +966,8 @@ AUS_subjugating_the_lands_of_old_category = {
 					}
 				}
 			}
-			modifier = { #NHMMAP: a ready target's demand outranks the preparation decisions on other targets
-				add = 300
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision on other targets (max 500 on diplomatic paths)
+				add = 600
 				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
 					AUS_is_natural_expansionist_plan = yes
 					AUS_is_core_lands_only_plan = yes
@@ -1160,8 +1160,8 @@ AUS_subjugating_the_lands_of_old_category = {
 					}
 				}
 			}
-			modifier = {
-				factor = 100
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision (aggressive preps are x100, max 10000)
+				add = 60000
 				AUS_is_aggro_expansionist_plan = yes
 				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
@@ -1190,8 +1190,8 @@ AUS_subjugating_the_lands_of_old_category = {
 					}
 				}
 			}
-			modifier = { #NHMMAP: a ready target's demand outranks the preparation decisions on other targets
-				add = 300
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision on other targets (max 500 on diplomatic paths)
+				add = 600
 				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
 					AUS_is_natural_expansionist_plan = yes
 					AUS_is_core_lands_only_plan = yes
