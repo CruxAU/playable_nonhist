@@ -1621,14 +1621,20 @@ AUS_subjugating_the_lands_of_old_category = {
 					OWNER = {
 						is_neighbor_of = ROOT
 						ROOT = {
-							any_controlled_state = {
-								ROOT = {
-									divisions_in_state = { 
-										state = PREV size > 2 
-									} 
+							OR = {
+								any_controlled_state = {
+									ROOT = {
+										divisions_in_state = { 
+											state = PREV size > 2 
+										} 
+									}
+									any_neighbor_state = { 
+										is_fully_controlled_by = FROM.OWNER
+									}
 								}
-								any_neighbor_state = { 
-									is_fully_controlled_by = FROM.OWNER
+								AND = { #NHMMAP: the AI doesn't move troops to the border for this, so it only needs the divisions
+									is_ai = yes
+									num_divisions > 2
 								}
 							}
 						}
