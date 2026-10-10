@@ -1139,3 +1139,58 @@ AUS_is_communist_revolution_plan = { #communist paths that spur revolutions in t
 		}
 	}
 }
+
+### Lands of Old (AUS_subjugating/annexing_the_lands_of_old_decision) AI readiness. Scope: the target country, ROOT = Austria.
+### count_triggers ignores < and >: amount = N means "at least N".
+AUS_lands_of_old_target_ready_2 = { #2+ of the readiness conditions
+	count_triggers = {
+		amount = 2
+		strength_ratio = { #the target is weaker than us
+			tag = ROOT
+			ratio < 1
+		}
+		has_country_flag = AUS_militarist_expansion_attempt_flag
+		has_non_aggression_pact_with = ROOT
+		has_country_flag = AUS_held_military_exercises_on_border_flag
+		has_country_flag = AUS_armed_guards_on_border_flag
+		has_country_flag = AUS_sent_industrial_suuport_flag
+		has_country_flag = AUS_held_joint_military_exercises_flag
+	}
+}
+
+AUS_lands_of_old_target_ready_3 = { #3+ of the readiness conditions
+	count_triggers = {
+		amount = 3
+		strength_ratio = { #the target is weaker than us
+			tag = ROOT
+			ratio < 1
+		}
+		has_country_flag = AUS_militarist_expansion_attempt_flag
+		has_non_aggression_pact_with = ROOT
+		has_country_flag = AUS_held_military_exercises_on_border_flag
+		has_country_flag = AUS_armed_guards_on_border_flag
+		has_country_flag = AUS_sent_industrial_suuport_flag
+		has_country_flag = AUS_held_joint_military_exercises_flag
+	}
+}
+
+AUS_lands_of_old_preparations_exhausted = { #Austria has tried every preparation decision it can on this target, so it should stop waiting and make the demand
+	OR = {
+		AND = { #diplomatic route fully tried (accepted or not)
+			has_country_flag = AUS_lands_of_old_nap_offered_flag
+			has_country_flag = AUS_lands_of_old_bribery_done_flag
+			has_country_flag = AUS_lands_of_old_joint_exercises_offered_flag
+		}
+		AND = { #militarist route fully tried
+			has_country_flag = AUS_militarist_expansion_attempt_flag
+			has_country_flag = AUS_lands_of_old_border_exercises_done_flag
+			has_country_flag = AUS_lands_of_old_border_guards_done_flag
+		}
+		AND = { #NAP refused, and threats are off-limits on diplomatic paths
+			has_country_flag = AUS_lands_of_old_nap_offered_flag
+			NOT = { has_non_aggression_pact_with = ROOT }
+			NOT = { has_country_flag = AUS_diplomatic_expansion_attempt_flag }
+			ROOT = { AUS_is_diplomatic_expansionist_plan = yes }
+		}
+	}
+}

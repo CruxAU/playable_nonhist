@@ -927,19 +927,10 @@ AUS_subjugating_the_lands_of_old_category = {
 				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
-						NOT = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							count_triggers = {
-								amount = 2
-								strength_ratio = {
-									tag = ROOT
-									ratio < 1
-								}
-								has_country_flag = AUS_militarist_expansion_attempt_flag
-								has_non_aggression_pact_with = ROOT
-								has_country_flag = AUS_held_military_exercises_on_border_flag
-								has_country_flag = AUS_armed_guards_on_border_flag
-								has_country_flag = AUS_sent_industrial_suuport_flag
-								has_country_flag = AUS_held_joint_military_exercises_flag
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_2 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
 						}
 					}
@@ -951,18 +942,9 @@ AUS_subjugating_the_lands_of_old_category = {
 				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
-						count_triggers = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							amount = 3
-							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
-								tag = ROOT
-								ratio < 1
-							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
@@ -975,19 +957,10 @@ AUS_subjugating_the_lands_of_old_category = {
 				}
 				FROM = {
 					OWNER = {
-						NOT = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							count_triggers = {
-								amount = 3
-								strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
-									tag = ROOT
-									ratio < 1
-								}
-								has_country_flag = AUS_militarist_expansion_attempt_flag
-								has_non_aggression_pact_with = ROOT
-								has_country_flag = AUS_held_military_exercises_on_border_flag
-								has_country_flag = AUS_armed_guards_on_border_flag
-								has_country_flag = AUS_sent_industrial_suuport_flag
-								has_country_flag = AUS_held_joint_military_exercises_flag
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_3 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
 						}
 					}
@@ -1001,18 +974,9 @@ AUS_subjugating_the_lands_of_old_category = {
 				}
 				FROM = {
 					OWNER = {
-						count_triggers = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							amount = 3
-							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
-								tag = ROOT
-								ratio < 1
-							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
@@ -1187,19 +1151,10 @@ AUS_subjugating_the_lands_of_old_category = {
 				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
-						NOT = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							count_triggers = {
-								amount = 2
-								strength_ratio = {
-									tag = ROOT
-									ratio < 1
-								}
-								has_country_flag = AUS_militarist_expansion_attempt_flag
-								has_non_aggression_pact_with = ROOT
-								has_country_flag = AUS_held_military_exercises_on_border_flag
-								has_country_flag = AUS_armed_guards_on_border_flag
-								has_country_flag = AUS_sent_industrial_suuport_flag
-								has_country_flag = AUS_held_joint_military_exercises_flag
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_2 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
 						}
 					}
@@ -1211,18 +1166,9 @@ AUS_subjugating_the_lands_of_old_category = {
 				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
-						count_triggers = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							amount = 3
-							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
-								tag = ROOT
-								ratio < 1
-							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
@@ -1235,19 +1181,10 @@ AUS_subjugating_the_lands_of_old_category = {
 				}
 				FROM = {
 					OWNER = {
-						NOT = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							count_triggers = {
-								amount = 3
-								strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
-									tag = ROOT
-									ratio < 1
-								}
-								has_country_flag = AUS_militarist_expansion_attempt_flag
-								has_non_aggression_pact_with = ROOT
-								has_country_flag = AUS_held_military_exercises_on_border_flag
-								has_country_flag = AUS_armed_guards_on_border_flag
-								has_country_flag = AUS_sent_industrial_suuport_flag
-								has_country_flag = AUS_held_joint_military_exercises_flag
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_3 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
 						}
 					}
@@ -1261,18 +1198,9 @@ AUS_subjugating_the_lands_of_old_category = {
 				}
 				FROM = {
 					OWNER = {
-						count_triggers = { #NHMMAP: count_triggers ignores < and >; amount = N means 'at least N'
-							amount = 3
-							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
-								tag = ROOT
-								ratio < 1
-							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
@@ -1746,6 +1674,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_border_exercises_done_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 			army_experience = 10
@@ -1896,6 +1825,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_border_guards_done_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 
 			FROM = {
@@ -2045,6 +1975,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_nap_offered_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			FROM = { 
 				clr_state_flag = AUS_currently_targets_this_landd_of_old_flag
 				OWNER = {
@@ -2198,6 +2129,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_bribery_done_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 
 			FROM = {
@@ -2343,6 +2275,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_joint_exercises_offered_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 
 			FROM = {
