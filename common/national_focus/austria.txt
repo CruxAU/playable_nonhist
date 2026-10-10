@@ -8978,13 +8978,15 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = { #NHMMAP: we own Hungary but none of the Czech lands, so take AUS_integrate_hungary instead
+			modifier = { #NHMMAP: we own some of Hungary but none of the Czech lands, so take AUS_integrate_hungary instead
 				factor = 0
-				owns_state = 155
-				owns_state = 974
-				owns_state = 973
-				owns_state = 154
-				owns_state = 43 #Budapest
+				OR = {
+					owns_state = 155
+					owns_state = 974
+					owns_state = 973
+					owns_state = 154
+					owns_state = 43 #Budapest
+				}
 				NOT = {
 					OR = {
 						owns_state = 69
