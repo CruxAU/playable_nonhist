@@ -924,13 +924,14 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
 						count_triggers = {
 							amount > 1
-							strength_ratio = {
+							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
-								ratio > 1
+								ratio < 1
 							}
 							has_country_flag = AUS_militarist_expansion_attempt_flag
 							has_non_aggression_pact_with = ROOT
@@ -944,14 +945,17 @@ AUS_subjugating_the_lands_of_old_category = {
 			}
 			modifier = {
 				factor = 0
-				AUS_is_natural_expansionist_plan = yes
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
 						count_triggers = {
 							amount < 3
-							strength_ratio = {
+							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
-								ratio > 1
+								ratio < 1
 							}
 							has_country_flag = AUS_militarist_expansion_attempt_flag
 							has_non_aggression_pact_with = ROOT
@@ -965,14 +969,17 @@ AUS_subjugating_the_lands_of_old_category = {
 			}
 			modifier = {
 				add = 100
-				AUS_is_natural_expansionist_plan = yes
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
 						count_triggers = {
-							amount > 1
-							strength_ratio = {
+							amount > 2 #NHMMAP: was > 1, which overrode the factor 0 above at exactly 2
+							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
-								ratio > 1
+								ratio < 1
 							}
 							has_country_flag = AUS_militarist_expansion_attempt_flag
 							has_non_aggression_pact_with = ROOT
@@ -1151,13 +1158,14 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
 						count_triggers = {
 							amount > 1
-							strength_ratio = {
+							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
-								ratio > 1
+								ratio < 1
 							}
 							has_country_flag = AUS_militarist_expansion_attempt_flag
 							has_non_aggression_pact_with = ROOT
@@ -1171,14 +1179,17 @@ AUS_subjugating_the_lands_of_old_category = {
 			}
 			modifier = {
 				factor = 0
-				AUS_is_natural_expansionist_plan = yes
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
 						count_triggers = {
 							amount < 3
-							strength_ratio = {
+							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
-								ratio > 1
+								ratio < 1
 							}
 							has_country_flag = AUS_militarist_expansion_attempt_flag
 							has_non_aggression_pact_with = ROOT
@@ -1192,14 +1203,17 @@ AUS_subjugating_the_lands_of_old_category = {
 			}
 			modifier = {
 				add = 100
-				AUS_is_natural_expansionist_plan = yes
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
 						count_triggers = {
-							amount > 1
-							strength_ratio = {
+							amount > 2 #NHMMAP: was > 1, which overrode the factor 0 above at exactly 2
+							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
-								ratio > 1
+								ratio < 1
 							}
 							has_country_flag = AUS_militarist_expansion_attempt_flag
 							has_non_aggression_pact_with = ROOT
