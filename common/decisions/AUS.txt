@@ -921,6 +921,28 @@ AUS_subjugating_the_lands_of_old_category = {
 					}
 				}
 			}
+			modifier = { #NHMMAP: aggressive expansionists need 2+ conditions (2 = base weight, 3+ = x100 below)
+				factor = 0
+				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
+				FROM = {
+					OWNER = {
+						count_triggers = {
+							amount < 2
+							strength_ratio = {
+								tag = ROOT
+								ratio < 1
+							}
+							has_country_flag = AUS_militarist_expansion_attempt_flag
+							has_non_aggression_pact_with = ROOT
+							has_country_flag = AUS_held_military_exercises_on_border_flag
+							has_country_flag = AUS_armed_guards_on_border_flag
+							has_country_flag = AUS_sent_industrial_suuport_flag
+							has_country_flag = AUS_held_joint_military_exercises_flag
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -928,7 +950,7 @@ AUS_subjugating_the_lands_of_old_category = {
 				FROM = {
 					OWNER = {
 						count_triggers = {
-							amount > 1
+							amount > 2 #NHMMAP: was > 1
 							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
 								ratio < 1
@@ -1155,6 +1177,28 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 2
+			modifier = { #NHMMAP: aggressive expansionists need 2+ conditions (2 = base weight, 3+ = x100 below)
+				factor = 0
+				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
+				FROM = {
+					OWNER = {
+						count_triggers = {
+							amount < 2
+							strength_ratio = {
+								tag = ROOT
+								ratio < 1
+							}
+							has_country_flag = AUS_militarist_expansion_attempt_flag
+							has_non_aggression_pact_with = ROOT
+							has_country_flag = AUS_held_military_exercises_on_border_flag
+							has_country_flag = AUS_armed_guards_on_border_flag
+							has_country_flag = AUS_sent_industrial_suuport_flag
+							has_country_flag = AUS_held_joint_military_exercises_flag
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1162,7 +1206,7 @@ AUS_subjugating_the_lands_of_old_category = {
 				FROM = {
 					OWNER = {
 						count_triggers = {
-							amount > 1
+							amount > 2 #NHMMAP: was > 1
 							strength_ratio = { #NHMMAP: the target is weaker than us (was ratio > 1, the opposite of what makes them accept in AUS_political_events.37)
 								tag = ROOT
 								ratio < 1
