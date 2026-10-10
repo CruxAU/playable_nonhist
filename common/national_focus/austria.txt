@@ -9144,6 +9144,24 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = { #NHMMAP: we own none of the Hungarian or Czech lands, so prefer coring the Czech lands (AUS_integrate_northwest)
+				factor = 0
+				NOT = {
+					OR = {
+						owns_state = 155
+						owns_state = 974
+						owns_state = 973
+						owns_state = 154
+						owns_state = 43
+						owns_state = 69
+						owns_state = 972
+						owns_state = 9
+						owns_state = 75
+						owns_state = 74
+						owns_state = 72
+					}
+				}
+			}
 		}
 
 		available = {
