@@ -1194,3 +1194,23 @@ AUS_lands_of_old_preparations_exhausted = { #Austria has tried every preparation
 		}
 	}
 }
+
+AUS_lands_of_old_target_in_progress = { #Austria has started preparing this target and hasn't made its demand yet. Scope: a country, ROOT = Austria. The AI finishes it before starting another
+	OR = { #a preparation decision has been tried on it
+		has_country_flag = AUS_lands_of_old_nap_offered_flag
+		has_country_flag = AUS_militarist_expansion_attempt_flag
+		has_country_flag = AUS_lands_of_old_bribery_done_flag
+		has_country_flag = AUS_lands_of_old_joint_exercises_offered_flag
+		has_country_flag = AUS_lands_of_old_border_exercises_done_flag
+		has_country_flag = AUS_lands_of_old_border_guards_done_flag
+	}
+	NOT = { has_country_flag = AUS_sent_ultimatum_flag } #set when the subjugate/annex demand is taken, accepted or not
+	exists = yes
+	NOT = { has_war_with = ROOT }
+	NOT = { is_subject_of = ROOT }
+	NOT = { is_in_faction_with = ROOT }
+	any_owned_state = { #still a valid target, so a dead target never blocks the rest
+		is_in_array = { AUS.expansion_targets = THIS }
+		NOT = { has_state_flag = AUS_no_longer_expansion_target }
+	}
+}
