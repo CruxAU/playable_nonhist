@@ -1403,10 +1403,10 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "gamesetup_custom_gameplay_settings_window"
-		position = { x = -339 y = -360 }
+		position = { x = -410 y = -360 } #NHMMAP: wider game rules window (was -339)
 		show_position = { x = -150 y = -300 }
 		hide_position = { x = -150 y = 10 }
-		size = { width = 678 height = 600 }
+		size = { width = 820 height = 600 } #NHMMAP: wider game rules window (was 678)
 		Orientation = center
 		moveable = yes
 		fade_time = 500
@@ -1421,7 +1421,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "window_title_bar"
 			position = { x = 15 y = 15 }
-			size = { width = 636 height = 40 }
+			size = { width = 778 height = 40 } #NHMMAP: wider game rules window (was 636)
 
 #			background = {
 #				name = "group_header_bg"
@@ -1467,7 +1467,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "button_bar"
 			position = { x = 15 y = 545 }
-			size = { width = 636 height = 40 }
+			size = { width = 778 height = 40 } #NHMMAP: wider game rules window (was 636)
 
 			buttonType = {
 				name = "close_button"
@@ -1552,7 +1552,7 @@ guiTypes = {
 	containerWindowType = {
 		name ="difficulty_setting_item"
 		position = { x = 3 y = 0 }
-		size = { width = 630 height = 40 }
+		size = { width = 772 height = 40 } #NHMMAP: wider game rules window (was 630)
 
 		background = {
 			name = "background"
@@ -1584,7 +1584,7 @@ guiTypes = {
 
 		extendedScrollbarType = {
 			name = "difficulty_slider"
-			position = { x = 326 y = 10 }
+			position = { x = 466 y = 10 } #NHMMAP: wider game rules window, right-aligned with the dropdowns (was 326)
 			size = { width = 294 height = 18 }
 			tileSize = { width = 12 height = 12 }
 			maxValue = 1
@@ -1632,7 +1632,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "difficulty_setting_group_window"
 		position = { x = 0 y = 0 }
-		size = { width = 636 height = 40 }
+		size = { width = 778 height = 40 } #NHMMAP: wider game rules window (was 636)
 
 		gridboxtype = {
 			name = "difficulty_grid"
@@ -1647,7 +1647,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "game_rule_option_dropdown_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 268 height = 24 }
+		size = { width = 408 height = 24 } #NHMMAP: wider game rules window (was 268)
 		margin = { top = 2 bottom = 2 right = 2 left = 2 }
 
 		background = {
@@ -1660,7 +1660,7 @@ guiTypes = {
 			position = { x = 4 y = 2 }
 			textureFile = ""
 			font = "hoi_16mbs"
-			maxWidth = 230
+			maxWidth = 370 #NHMMAP: wider game rules window (was 230)
 			maxHeight = 16
 			borderSize = { x = 0 y = 0 }
 			fixedsize = yes
@@ -1672,7 +1672,7 @@ guiTypes = {
 		iconType = {
 			name = "disallow_achievements"
 			spriteType = "GFX_game_rule_option_disallow_achievements"
-			position = { x = 236 y = 0 }
+			position = { x = 376 y = 0 } #NHMMAP: wider game rules window (was 236)
 			alwaystransparent = yes
 		}
 	}
@@ -1680,7 +1680,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "game_rule_window"
 		position = { x = 3 y = 0 }
-		size = { width = 630 height = 40 }
+		size = { width = 772 height = 40 } #NHMMAP: wider game rules window (was 630)
 
 		background = {
 			name = "background"
@@ -1707,7 +1707,7 @@ guiTypes = {
 		dropDownBoxType = {
 			name = "game_rule_options_dropdown"
 			position = { x = 326 y = 4 }
-			size = { width = 300 height = 31 }
+			size = { width = 440 height = 31 } #NHMMAP: wider game rules window (was 300)
 
 			containerWindowType = {
 				name = "current_option"
@@ -1722,6 +1722,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "name_textbox"
 					position = { x = 15 y = 6 }
+					maxWidth = 360 #NHMMAP: wider game rules window
 					font = "hoi_18mbs"
 					fixedsize = yes
 					format = left
@@ -1732,7 +1733,7 @@ guiTypes = {
 				iconType = {
 					name = "disallow_achievements"
 					spriteType = "GFX_game_rule_option_disallow_achievements"
-					position = { x = 246 y = 6 }
+					position = { x = 386 y = 6 } #NHMMAP: wider game rules window (was 246)
 					alwaystransparent = yes
 				}
 			}
@@ -1753,7 +1754,7 @@ guiTypes = {
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
 				animation_time = 300
-				size = { width = 300 height = 300 }
+				size = { width = 440 height = 300 } #NHMMAP: wider game rules window (was 300 wide)
 				verticalScrollbar = "right_vertical_slider"
 				margin = { top = 7 bottom = 7 right = 6 }
 
@@ -1766,8 +1767,8 @@ guiTypes = {
 				gridBoxType = {
 					name = "options_grid"
 					position = { x = 8 y = 0 }
-					size = { width = 300 height = 100%% }
-					slotsize = { width = 284 height = 24 }
+					size = { width = 440 height = 100%% } #NHMMAP: wider game rules window (was 300)
+					slotsize = { width = 424 height = 24 } #NHMMAP: wider game rules window (was 284)
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
 				}
@@ -1777,7 +1778,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "game_rule_group_window"
-		size = { width = 636 height = 40 }
+		size = { width = 778 height = 40 } #NHMMAP: wider game rules window (was 636)
 
 		gridboxtype = {
 			name = "game_rule_grid"
