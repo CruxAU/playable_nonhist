@@ -1967,9 +1967,8 @@ AUS_hab_puppet_cp_core_plan = { #NHMMAP skeleton from the old AUS_monarchist_pup
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2064,9 +2063,8 @@ AUS_hab_puppet_cp_max_plan = { #NHMMAP skeleton from the old AUS_monarchist_pupp
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2161,9 +2159,8 @@ AUS_hab_puppet_cp_attack_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2259,9 +2256,8 @@ AUS_hab_puppet_royal_core_plan = { #NHMMAP skeleton from the old AUS_monarchist_
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2356,9 +2352,8 @@ AUS_hab_puppet_royal_max_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2453,9 +2448,8 @@ AUS_hab_puppet_royal_attack_plan = { #NHMMAP skeleton from the old AUS_monarchis
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2551,9 +2545,8 @@ AUS_hab_puppet_royal_lie_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2651,9 +2644,8 @@ AUS_hab_puppet_axis_core_plan = { #NHMMAP skeleton from the old AUS_monarchist_p
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2748,9 +2740,8 @@ AUS_hab_puppet_axis_max_plan = { #NHMMAP skeleton from the old AUS_monarchist_pu
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
@@ -2845,9 +2836,8 @@ AUS_hab_puppet_axis_attack_plan = { #NHMMAP skeleton from the old AUS_monarchist
 		AUS_courting_the_princess_of_industry
 
 		#1939
-		AUS_strengthen_legitimistische_corps
-		AUS_sturmscharen_support
-		AUS_eiserne_legion
+		AUS_legitimistische_studentenverbindung
+		AUS_legitimistische_jugend
 		AUS_strengthen_the_arms_industry
 		AUS_subjugate_lands_of_old
 		AUS_steyr_arms_investment
