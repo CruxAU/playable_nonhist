@@ -31404,18 +31404,16 @@ on_actions = {
 					}
 					random_list = {
 						1 = { set_country_flag = AUS_AI_RANDOM_HISTORICAL }
-						#NHMMAP begin: Herrenhaus puppet paths (HAB_PUP_ROYAL_LIE is game-rule only)
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK }
+						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK }
-						#NHMMAP end
-						#NHMMAP begin: Herrenhaus annex paths (_2BW variants are game-rule only)
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP }
@@ -31425,8 +31423,6 @@ on_actions = {
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP }
-						#NHMMAP end
-						#NHMMAP begin: Herrenhaus Danubian Federation paths
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID }
@@ -31435,7 +31431,6 @@ on_actions = {
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU }
 						1 = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP }
-						#NHMMAP end
 						1 = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_NEU }
 						1 = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_REV }
 						1 = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN }
@@ -31458,7 +31453,6 @@ on_actions = {
 						1 = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT }
 						1 = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU }
 						1 = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP }
-						#NHMMAP begin: vanilla ANTI_ANSCLUSS_STRESS split into variants (_2BW variants are game-rule only)
 						1 = { set_country_flag = AUS_AI_RANDOM_HISTORICAL_ALT }
 						1 = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_ITA }
 						1 = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_DEM }
@@ -31475,7 +31469,6 @@ on_actions = {
 						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP }
 						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP }
 						1 = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP }
-						#NHMMAP end
 					}
 				}
 				else_if = {
