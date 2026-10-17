@@ -38,13 +38,13 @@ difficulty_settings = {
 	difficulty_setting = {
 		key = "custom_diff_strong_jap"
 		modifier = diff_strong_ai_generic
-		countries = { JAP MEN MAN }
+		countries = { JAP } #NHMMAP: Japan only (was JAP MEN MAN)
 		multiplier = 2.0
 	}
 	difficulty_setting = {
 		key = "custom_diff_strong_chi"
 		modifier = diff_strong_ai_generic
-		countries = { CHI PRC }
+		countries = { CHI } #NHMMAP: China only (was CHI PRC)
 		multiplier = 2.0
 	}
 }
