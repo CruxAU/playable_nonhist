@@ -255,7 +255,7 @@
  RULE_OPTION_DEMOCRATIC_PAR_AI_DESC: "The AI will fight against Rafael Franco's coup and enter a civil war to try and keep its §Cdemocratic§! government intact."
  RULE_OPTION_DEMOCRATIC_ALT_AI_URG_DESC: "The AI will attempt to keep out of world affairs and focus on internal industrialization, putting the §CBlanco party§! in power. Only joining the allies at the end of the war."
  RULE_OPTION_FASCIST_AI_URG_DESC: "The AI will align with the Axis, turning the country into a §Lspringboard§! for a South American conquest."
- RULE_OPTION_HISTORICAL_AUS_AI_DESC: "The AI will turn §Lfascist§! and attempt to stave off the Anschluss with the Vaterländische Front at the helm."
+ RULE_OPTION_HISTORICAL_AUS_AI_DESC: "@AUSAUstria will turn to the §Lfascist§! Fatherland Front to §Ypoorly§! attempt to stave off the @GERAnchluss with a §Yflimsy§! @ITAItalian guarantee. The AI will otherwise maintain neutrality and follow the defensive doctrines of Alfred Jansa. This is historical behavior."
  RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI_DESC: "The AI will attempt to form the Danubian Federation by inviting other nations along the Danube under a §gnon-aligned§! rule."
  RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI_DESC: "The AI will attempt to go §Rcommunist§! and overthrow the government before aligning with the USSR and joining the Comintern"
  RULE_OPTION_AUS_COMMUNIST_AI_DESC: "The AI will attempt to go §Rcommunist§! and overthrow the government. Adhering to a strict Austromarxist agenda they will create a faction of their own"
