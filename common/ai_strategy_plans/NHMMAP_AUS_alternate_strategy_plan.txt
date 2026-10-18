@@ -5367,6 +5367,7 @@ AUS_dem_support_neu_plan = { #NHMMAP skeleton from the old AUS_democratic_allied
 		AUS_release_imprisoned_leaders
 		AUS_hold_elections
 		AUS_a_new_constitution
+		AUS_rebuild_democratic_systems #prerequisite of AUS_seek_support_from_guarantors as well
 		AUS_seek_support_from_guarantors
 		AUS_regulate_austrian_finance_sector
 
@@ -5374,7 +5375,8 @@ AUS_dem_support_neu_plan = { #NHMMAP skeleton from the old AUS_democratic_allied
 		AUS_economic_resuscitation
 		AUS_secret_rearmament
 		AUS_the_right_to_rearm
-		AUS_stabilize_the_political_climate
+		AUS_stabilize_the_political_climate #only available to the AI above 45% democratic support
+		AUS_outlaw_the_radicals #taken instead when Stabilize can't reach 50%
 		AUS_strengthen_the_cabinet
 
 		#1938
@@ -5446,6 +5448,7 @@ AUS_dem_support_allies_plan = { #NHMMAP skeleton from the old AUS_democratic_all
 		AUS_release_imprisoned_leaders
 		AUS_hold_elections
 		AUS_a_new_constitution
+		AUS_rebuild_democratic_systems #prerequisite of AUS_seek_support_from_guarantors as well
 		AUS_seek_support_from_guarantors
 		AUS_regulate_austrian_finance_sector
 
@@ -5453,7 +5456,8 @@ AUS_dem_support_allies_plan = { #NHMMAP skeleton from the old AUS_democratic_all
 		AUS_economic_resuscitation
 		AUS_secret_rearmament
 		AUS_the_right_to_rearm
-		AUS_stabilize_the_political_climate
+		AUS_stabilize_the_political_climate #only available to the AI above 45% democratic support
+		AUS_outlaw_the_radicals #taken instead when Stabilize can't reach 50%
 		AUS_strengthen_the_cabinet
 		AUS_join_the_allies
 
@@ -5534,6 +5538,7 @@ AUS_dem_support_allies_atk_plan = { #NHMMAP skeleton from the old AUS_democratic
 		AUS_release_imprisoned_leaders
 		AUS_hold_elections
 		AUS_a_new_constitution
+		AUS_rebuild_democratic_systems #prerequisite of AUS_seek_support_from_guarantors as well
 		AUS_seek_support_from_guarantors
 		AUS_regulate_austrian_finance_sector
 
@@ -5541,7 +5546,8 @@ AUS_dem_support_allies_atk_plan = { #NHMMAP skeleton from the old AUS_democratic
 		AUS_economic_resuscitation
 		AUS_secret_rearmament
 		AUS_the_right_to_rearm
-		AUS_stabilize_the_political_climate
+		AUS_stabilize_the_political_climate #only available to the AI above 45% democratic support
+		AUS_outlaw_the_radicals #taken instead when Stabilize can't reach 50%
 		AUS_strengthen_the_cabinet
 		AUS_join_the_allies
 
@@ -5622,6 +5628,7 @@ AUS_dem_support_alpine_plan = { #NHMMAP skeleton from the old AUS_democratic_alp
 		AUS_release_imprisoned_leaders
 		AUS_hold_elections
 		AUS_a_new_constitution
+		AUS_rebuild_democratic_systems #prerequisite of AUS_seek_support_from_guarantors as well
 		AUS_seek_support_from_guarantors
 		AUS_regulate_austrian_finance_sector
 
@@ -5629,7 +5636,8 @@ AUS_dem_support_alpine_plan = { #NHMMAP skeleton from the old AUS_democratic_alp
 		AUS_economic_resuscitation
 		AUS_secret_rearmament
 		AUS_the_right_to_rearm
-		AUS_stabilize_the_political_climate
+		AUS_stabilize_the_political_climate #only available to the AI above 45% democratic support
+		AUS_outlaw_the_radicals #taken instead when Stabilize can't reach 50%
 		AUS_strengthen_the_cabinet
 		AUS_alpine_federation_focus
 
@@ -5704,6 +5712,7 @@ AUS_dem_support_entente_plan = { #NHMMAP skeleton from the old AUS_democratic_al
 		AUS_release_imprisoned_leaders
 		AUS_hold_elections
 		AUS_a_new_constitution
+		AUS_rebuild_democratic_systems #prerequisite of AUS_seek_support_from_guarantors as well
 		AUS_seek_support_from_guarantors
 		AUS_regulate_austrian_finance_sector
 
@@ -5711,7 +5720,8 @@ AUS_dem_support_entente_plan = { #NHMMAP skeleton from the old AUS_democratic_al
 		AUS_economic_resuscitation
 		AUS_secret_rearmament
 		AUS_the_right_to_rearm
-		AUS_stabilize_the_political_climate
+		AUS_stabilize_the_political_climate #only available to the AI above 45% democratic support
+		AUS_outlaw_the_radicals #taken instead when Stabilize can't reach 50%
 		AUS_strengthen_the_cabinet
 		AUS_alpine_federation_focus
 
@@ -5792,6 +5802,7 @@ AUS_dem_support_entente_atk_plan = { #NHMMAP skeleton from the old AUS_democrati
 		AUS_release_imprisoned_leaders
 		AUS_hold_elections
 		AUS_a_new_constitution
+		AUS_rebuild_democratic_systems #prerequisite of AUS_seek_support_from_guarantors as well
 		AUS_seek_support_from_guarantors
 		AUS_regulate_austrian_finance_sector
 
@@ -5799,7 +5810,8 @@ AUS_dem_support_entente_atk_plan = { #NHMMAP skeleton from the old AUS_democrati
 		AUS_economic_resuscitation
 		AUS_secret_rearmament
 		AUS_the_right_to_rearm
-		AUS_stabilize_the_political_climate
+		AUS_stabilize_the_political_climate #only available to the AI above 45% democratic support
+		AUS_outlaw_the_radicals #taken instead when Stabilize can't reach 50%
 		AUS_strengthen_the_cabinet
 		AUS_alpine_federation_focus
 

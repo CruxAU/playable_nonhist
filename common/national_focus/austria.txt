@@ -3146,7 +3146,10 @@ focus_tree = {
 		}
 
 		available = {
-
+			OR = { #NHMMAP: the AI only stabilizes if the +5% gets democracy past the 50% that AUS_strengthen_the_cabinet needs; otherwise it moves on to AUS_outlaw_the_radicals
+				is_ai = no
+				democratic > 0.45
+			}
 		}
 		
 		bypass = {
