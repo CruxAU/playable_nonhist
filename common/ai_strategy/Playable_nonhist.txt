@@ -8971,3 +8971,80 @@ AUS_axis_improve_relations = {
 		value = 75
 	}
 }
+
+#########################################################################################
+######################### EU FEDERALIZATION (BEL AUS HOL) ###############################
+#########################################################################################
+
+# While an EU leader is proposing limited federalization to a member (BEL_propose_limited_federalization_descision, 30 days),
+# it works on relations with that member. The decision sets NHMMAP_eu_federalization_proposed_flag on the target and clears it
+# when the proposal is sent or cancelled. reversed = yes: the scope country is the member, the id country is the EU leader.
+
+NHMMAP_EU_federalization_courted_by_AUS = {
+	reversed = yes
+
+	enable_reverse = {
+		AUS = {
+			has_country_flag = BEL_currently_taking_eu_decision_flag
+		}
+	}
+
+	enable = {
+		has_country_flag = NHMMAP_eu_federalization_proposed_flag
+		is_in_faction_with = AUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = AUS
+		target = improve_relation
+		value = 150
+	}
+}
+
+NHMMAP_EU_federalization_courted_by_BEL = {
+	reversed = yes
+
+	enable_reverse = {
+		BEL = {
+			has_country_flag = BEL_currently_taking_eu_decision_flag
+		}
+	}
+
+	enable = {
+		has_country_flag = NHMMAP_eu_federalization_proposed_flag
+		is_in_faction_with = BEL
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = BEL
+		target = improve_relation
+		value = 150
+	}
+}
+
+NHMMAP_EU_federalization_courted_by_HOL = {
+	reversed = yes
+
+	enable_reverse = {
+		HOL = {
+			has_country_flag = BEL_currently_taking_eu_decision_flag
+		}
+	}
+
+	enable = {
+		has_country_flag = NHMMAP_eu_federalization_proposed_flag
+		is_in_faction_with = HOL
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = HOL
+		target = improve_relation
+		value = 150
+	}
+}
