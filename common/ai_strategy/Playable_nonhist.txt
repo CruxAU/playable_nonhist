@@ -9049,15 +9049,18 @@ NHMMAP_EU_federalization_courted_by_HOL = {
 	}
 }
 
-# Once a member is federalized (EU member subject), stop improving relations with it; ending the courting strategy alone
-# doesn't make the AI cancel an improve-relations action already running.
+# Once a member has answered the federalization proposal (accepted or rejected; the decision fires once per member),
+# stop improving relations with it. Ending the courting strategy alone doesn't make the AI cancel an action already running.
 
-NHMMAP_EU_federalized_member_of_AUS = {
+NHMMAP_EU_federalization_answered_AUS = {
 	reversed = yes
 
 	enable = {
-		is_subject_of = AUS
-		has_autonomy_state = autonomy_eu_member
+		has_country_flag = NHMMAP_eu_federalization_answered_flag
+		OR = {
+			is_subject_of = AUS
+			is_in_faction_with = AUS
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -9069,12 +9072,15 @@ NHMMAP_EU_federalized_member_of_AUS = {
 	}
 }
 
-NHMMAP_EU_federalized_member_of_BEL = {
+NHMMAP_EU_federalization_answered_BEL = {
 	reversed = yes
 
 	enable = {
-		is_subject_of = BEL
-		has_autonomy_state = autonomy_eu_member
+		has_country_flag = NHMMAP_eu_federalization_answered_flag
+		OR = {
+			is_subject_of = BEL
+			is_in_faction_with = BEL
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -9086,12 +9092,15 @@ NHMMAP_EU_federalized_member_of_BEL = {
 	}
 }
 
-NHMMAP_EU_federalized_member_of_HOL = {
+NHMMAP_EU_federalization_answered_HOL = {
 	reversed = yes
 
 	enable = {
-		is_subject_of = HOL
-		has_autonomy_state = autonomy_eu_member
+		has_country_flag = NHMMAP_eu_federalization_answered_flag
+		OR = {
+			is_subject_of = HOL
+			is_in_faction_with = HOL
+		}
 	}
 	abort_when_not_enabled = yes
 

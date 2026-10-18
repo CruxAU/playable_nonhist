@@ -1102,7 +1102,12 @@ BEL_closer_european_union_cat =  {
 
 		remove_effect = {
 			clr_country_flag = BEL_currently_taking_eu_decision_flag
-			hidden_effect = { FROM = { clr_country_flag = NHMMAP_eu_federalization_proposed_flag } } #NHMMAP: proposal sent, stop courting
+			hidden_effect = { #NHMMAP: proposal sent, stop courting; the decision fires once per member, so stop improving relations whatever they answer
+				FROM = {
+					clr_country_flag = NHMMAP_eu_federalization_proposed_flag
+					set_country_flag = NHMMAP_eu_federalization_answered_flag
+				}
+			}
 			FROM = {
 				country_event = {
 					id = ww_BEL_event_diplomatic.26
