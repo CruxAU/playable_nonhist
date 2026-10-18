@@ -9048,3 +9048,57 @@ NHMMAP_EU_federalization_courted_by_HOL = {
 		value = 150
 	}
 }
+
+# Once a member is federalized (EU member subject), stop improving relations with it; ending the courting strategy alone
+# doesn't make the AI cancel an improve-relations action already running.
+
+NHMMAP_EU_federalized_member_of_AUS = {
+	reversed = yes
+
+	enable = {
+		is_subject_of = AUS
+		has_autonomy_state = autonomy_eu_member
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = AUS
+		target = improve_relation
+		value = -200
+	}
+}
+
+NHMMAP_EU_federalized_member_of_BEL = {
+	reversed = yes
+
+	enable = {
+		is_subject_of = BEL
+		has_autonomy_state = autonomy_eu_member
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = BEL
+		target = improve_relation
+		value = -200
+	}
+}
+
+NHMMAP_EU_federalized_member_of_HOL = {
+	reversed = yes
+
+	enable = {
+		is_subject_of = HOL
+		has_autonomy_state = autonomy_eu_member
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = HOL
+		target = improve_relation
+		value = -200
+	}
+}
