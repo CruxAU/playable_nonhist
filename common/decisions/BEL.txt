@@ -1091,15 +1091,18 @@ BEL_closer_european_union_cat =  {
 
 		cancel_effect = {
 			clr_country_flag = BEL_currently_taking_eu_decision_flag
+			FROM = { clr_country_flag = NHMMAP_eu_federalization_proposed_flag } #NHMMAP: ends the AI courting (common/ai_strategy/NHMMAP_EU_federalization.txt)
 		}
 
 		complete_effect = {
 			set_country_flag = BEL_currently_taking_eu_decision_flag
+			hidden_effect = { FROM = { set_country_flag = NHMMAP_eu_federalization_proposed_flag } } #NHMMAP: the AI courts this member while the proposal is pending (common/ai_strategy/NHMMAP_EU_federalization.txt)
 
 		}
 
 		remove_effect = {
 			clr_country_flag = BEL_currently_taking_eu_decision_flag
+			hidden_effect = { FROM = { clr_country_flag = NHMMAP_eu_federalization_proposed_flag } } #NHMMAP: proposal sent, stop courting
 			FROM = {
 				country_event = {
 					id = ww_BEL_event_diplomatic.26
