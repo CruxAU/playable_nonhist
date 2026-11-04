@@ -714,6 +714,7 @@ SWI_federal_council_decisions_category = {
 			FROM = {
 				exists = yes 
 				is_in_faction = no
+				has_rule = can_join_factions
 				NOT = { has_country_flag = SWI_entente_request_sent }
 				has_war = no #countries at war don't get invited
 				OR = {
@@ -1337,8 +1338,8 @@ SWI_federal_council_decisions_category = {
 		
 		modifier = {
 			democratic_drift = 0.1
-			stability_weekly_factor = 0.02
-			war_support_weekly_factor = -0.01 
+			stability_weekly = 0.02
+			war_support_weekly = -0.01 
 		}
 
 		complete_effect = {
@@ -1355,6 +1356,17 @@ SWI_federal_council_decisions_category = {
 
 		ai_will_do = {
 			base = 100 
+			modifier = {
+				factor = 0
+				SWI_is_historical_ai = yes
+				OR = {
+					has_stability > 0.95
+					AND = {
+						has_completed_focus = SWI_allied_gold
+						democratic < 0.9
+					}
+				}
+			}
 			modifier = {
 				add = 400 
 				has_political_power > 500
@@ -1691,7 +1703,7 @@ SWI_federal_council_decisions_category = {
 		modifier = {
 			fascism_drift = -0.15
 			democratic_drift = -0.05
-			war_support_weekly_factor = 0.07
+			war_support_weekly = 0.007
 			communism_drift = 0.07
 		}
 
@@ -1872,7 +1884,7 @@ SWI_federal_council_decisions_category = {
 			communism_drift = 0.3
 			democratic_drift = 0.3
 			stability_weekly = 0.02
-			war_support_weekly_factor = -0.05 
+			war_support_weekly = -0.005 
 		}
 
 		complete_effect = {
@@ -2047,7 +2059,7 @@ SWI_federal_council_decisions_category = {
 			democratic_drift = -0.3
 			stability_weekly = 0.01
 			production_speed_bunker_factor = 0.5
-			war_support_weekly_factor = -0.05
+			war_support_weekly = -0.005
 			industrial_capacity_factory = -0.2
 			opinion_gain_monthly_factor = -0.3
 
@@ -2222,7 +2234,7 @@ SWI_federal_council_decisions_category = {
 		cost = SWI_president_initiative_cost
 		
 		modifier = {
-			war_support_weekly_factor = 0.05
+			war_support_weekly = 0.005
 			industrial_capacity_factory = 0.5
 			democratic_drift = -0.3
 			opinion_gain_monthly_factor = -0.2
@@ -2939,7 +2951,7 @@ SWI_federal_council_decisions_category = {
 		cost = SWI_president_initiative_cost
 		
 		modifier = {
-			war_support_weekly_factor = -0.05
+			war_support_weekly = -0.005
 			opinion_gain_monthly_factor = 0.2
 		}
 
@@ -3830,6 +3842,26 @@ SWI_centralization_power_balance_decisions = {
 				SWI_is_historical_ai = no 
 			}
 			modifier = {
+				factor = 0
+				SWI_is_historical_ai = yes				#May also be a good idea for other plans?
+				SWI_someone_is_about_to_be_angry = no	#Sanity check
+				OR = {
+					NOT = {		#Slowly drifts right, so don't take it prematurely
+						has_completed_focus = SWI_reaffirm_spiritual_defense
+					}
+					has_completed_focus = SWI_allied_gold	#End of focuses that need low support
+					power_balance_value = {
+						id = SWI_centralization_bop
+						value < 0.7
+					}
+				}
+			}
+			modifier = {								#Don't take it if council diplo effort is cheaper, unless you're rushing
+				factor = 0
+				SWI_is_historical_ai = yes				#May also be a good idea for other plans?
+				check_variable = { SWI_diplomatic_effort_cost < 70 }
+			}
+			modifier = {
 				add = 200 
 				has_political_power > 800
 			}
@@ -4026,10 +4058,10 @@ SWI_centralization_power_balance_decisions = {
 
 		ai_will_do = {
 			base = 125
-			modifier = {
-				add = 100
-				SWI_is_historical_ai = yes 
-			}
+			# modifier = {
+			# 	add = 100
+			# 	SWI_is_historical_ai = yes 
+			# }
 			modifier = {
 				add = 150 
 				has_political_power > 700
@@ -4229,6 +4261,21 @@ SWI_centralization_power_balance_decisions = {
 			modifier = {
 				add = 75
 				SWI_is_historical_ai = no 
+			}
+			modifier = {
+				factor = 0
+				SWI_is_historical_ai = yes				#May also be a good idea for other plans?
+				SWI_someone_is_about_to_be_angry = no	#Sanity check
+				OR = {
+					NOT = {		#Slowly drifts right, so don't take it prematurely
+						has_completed_focus = SWI_reaffirm_spiritual_defense
+					}
+					has_completed_focus = SWI_allied_gold	#End of focuses that need low support
+					power_balance_value = {
+						id = SWI_centralization_bop
+						value < 0.7
+					}
+				}
 			}
 			modifier = {
 				factor = 10 
@@ -4743,6 +4790,10 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 		}
 
+		available = {
+			NOT = { has_country_flag = SWI_concessions_to_fascists_active }
+		}
+
 		cost = 100
 
 		days_remove = 120 
@@ -4752,6 +4803,7 @@ SWI_absolute_neutrality_decisions_category = {
 		}
 
 		complete_effect = {
+			set_country_flag = { flag = SWI_concessions_to_fascists_active days = 120 value = 1 } #in sync with days_remove
 			SWI_concessions_to_party_effects = yes
 		}
 
@@ -4787,6 +4839,10 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 		}
 
+		available = {
+			NOT = { has_country_flag = SWI_concessions_to_democrats_active }
+		}
+
 		cost = 100
 
 		days_remove = 120 
@@ -4796,6 +4852,7 @@ SWI_absolute_neutrality_decisions_category = {
 		}
 
 		complete_effect = {
+			set_country_flag = { flag = SWI_concessions_to_democrats_active days = 120 value = 1 } #in sync with days_remove
 			SWI_concessions_to_party_effects = yes
 		}
 		ai_will_do = {
@@ -4839,6 +4896,10 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 		}
 
+		available = {
+			NOT = { has_country_flag = SWI_concessions_to_communists_active }
+		}
+
 		cost = 100
 
 		days_remove = 120 
@@ -4848,6 +4909,7 @@ SWI_absolute_neutrality_decisions_category = {
 		}
 
 		complete_effect = {
+			set_country_flag = { flag = SWI_concessions_to_communists_active days = 120 value = 1 } #in sync with days_remove
 			SWI_concessions_to_party_effects = yes
 		}
 		ai_will_do = {
@@ -4882,6 +4944,10 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 		}
 
+		available = {
+			NOT = { has_country_flag = SWI_concessions_to_monarchists_active }
+		}
+
 		cost = 100
 
 		days_remove = 120 
@@ -4891,6 +4957,7 @@ SWI_absolute_neutrality_decisions_category = {
 		}
 
 		complete_effect = {
+			set_country_flag = { flag = SWI_concessions_to_monarchists_active days = 120 value = 1 } #in sync with days_remove
 			SWI_concessions_to_party_effects = yes
 		}
 		ai_will_do = {
@@ -5332,14 +5399,42 @@ SWI_absolute_neutrality_decisions_category = {
 			NOT = {
 				any_other_country = {
 					has_government = fascism 
-					has_country_flag = SWI_gold_trading_partner
+					OR = {
+						has_country_flag = SWI_gold_trading_partner
+						has_country_flag = SWI_waiting_for_answer_timeout #offer already pending
+					}
+				}
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SWI_already_has_gold_partner_tt
+				NOT = {
+					any_other_country = {
+						has_government = fascism
+						has_country_flag = SWI_gold_trading_partner
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SWI_gold_offer_still_pending_tt
+				NOT = {
+					any_other_country = {
+						has_government = fascism
+						has_country_flag = SWI_waiting_for_answer_timeout
+					}
 				}
 			}
 		}
 
 		cost = 50 
 		complete_effect = {
-			FROM = { country_event = { id = BBA_switzerland_trade.8 hours = 4 } }
+			FROM = {
+				#a second offer to another fascist nation is blocked while this one is pending
+				set_country_flag = { flag = SWI_waiting_for_answer_timeout days = 14 value = 1 } #in sync with EVENT_TIMEOUT_DEFAULT = 13
+				country_event = { id = BBA_switzerland_trade.8 hours = 4 }
+			}
 			effect_tooltip = {
 				custom_effect_tooltip = if_they_accept_tt
 				SWI_increase_gold_trade = yes 
@@ -5364,7 +5459,6 @@ SWI_absolute_neutrality_decisions_category = {
 
 		allowed = { original_tag = SWI }
 
-		
 		visible = {
 			original_tag = SWI
 			has_completed_focus = SWI_allied_gold
@@ -5385,16 +5479,44 @@ SWI_absolute_neutrality_decisions_category = {
 			NOT = {
 				any_other_country = {
 					has_government = democratic 
-					has_country_flag = SWI_gold_trading_partner
+					OR = {
+						has_country_flag = SWI_gold_trading_partner
+						has_country_flag = SWI_waiting_for_answer_timeout # offer already pending
+					}
 				}
 			}
 
 
 		}
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SWI_already_has_gold_partner_tt
+				NOT = {
+					any_other_country = {
+						has_government = democratic
+						has_country_flag = SWI_gold_trading_partner
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SWI_gold_offer_still_pending_tt
+				NOT = {
+					any_other_country = {
+						has_government = democratic
+						has_country_flag = SWI_waiting_for_answer_timeout
+					}
+				}
+			}
+		}
+
 		cost = 50 
 		complete_effect = {
-			FROM = { country_event = { id = BBA_switzerland_trade.8 hours = 4 } }
+			FROM = {
+				#a second offer to another democratic nation is blocked while this one is pending
+				set_country_flag = { flag = SWI_waiting_for_answer_timeout days = 14 value = 1 } #in sync with EVENT_TIMEOUT_DEFAULT
+				country_event = { id = BBA_switzerland_trade.8 hours = 4 }
+			}
 			effect_tooltip = {
 				custom_effect_tooltip = if_they_accept_tt
 				SWI_increase_gold_trade = yes 
@@ -5421,10 +5543,13 @@ SWI_absolute_neutrality_decisions_category = {
 		}
 		target_trigger = {
 			FROM = {											
+				NOT = { has_war_with = ROOT }
 				has_dynamic_modifier = { modifier = SWI_gold_trade_with_switzerland }
 				check_variable = { SWI_country_gold_trading_level < SWI.SWI_max_country_gold_trading_level }
 			}
 		}
+
+		days_re_enable = 90 # Prevent event spam, whether the target accepts, refuses or ignores
 
 		cost = 50 
 
@@ -5745,6 +5870,14 @@ SWI_absolute_neutrality_decisions_category = {
 				FROM = { SWI_country_about_to_be_angry = no }
 			}
 			modifier = {
+				factor = 0
+				SWI_is_historical_ai = yes
+				has_deployed_air_force_size = {
+					size > 199
+					type = fighter
+				}
+			}
+			modifier = {
 				factor = 0.1
 				OR = {
 					has_equipment = { 
@@ -5815,6 +5948,10 @@ SWI_absolute_neutrality_decisions_category = {
 		
 		ai_will_do = {
 			base = 75
+			modifier = {
+				factor = 0
+				SWI_is_historical_ai = yes
+			}
 			modifier = {
 				factor = 0.1 
 				SWI_someone_is_about_to_be_angry = yes 

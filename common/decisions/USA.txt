@@ -591,8 +591,8 @@ war_measures = {
 				tooltip = USB_available_factories_tt
 				check_variable = { USB.USB_factories_available > 5 }
 			}
-			any_neighbor_country = {
-				tag = USB
+			USB = {
+				is_neighbor_of = ROOT
 			}
 		}
 		visible = {
@@ -648,8 +648,8 @@ war_measures = {
 				tooltip = USB_available_factories_tt
 				check_variable = { USB.USB_factories_available > 5 }
 			}
-			any_neighbor_country = {
-				tag = USB
+			USB = {
+				is_neighbor_of = ROOT
 			}
 		}
 		visible = {
@@ -705,8 +705,8 @@ war_measures = {
 				tooltip = USB_available_factories_tt
 				check_variable = { USB.USB_factories_available > 5 }
 			}
-			any_neighbor_country = {
-				tag = USB
+			USB = {
+				is_neighbor_of = ROOT
 			}
 		}
 		visible = {
@@ -795,8 +795,8 @@ war_measures = {
 				tooltip = USB_available_factories_tt
 				check_variable = { USB.USB_factories_available > 5 }
 			}
-			any_neighbor_country = {
-				tag = USB
+			USB = {
+				is_neighbor_of = ROOT
 			}
 		}
 		visible = {
@@ -1055,12 +1055,15 @@ foreign_support = {
 				has_global_flag = USA_support_the_anti_fascist_war_flag
 			}
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				OR = {
+					has_completed_focus = CHI_mission_to_the_us
+					has_completed_focus = CHI_sea_mission_to_the_us
+				}
 				has_war_with = JAP
 			}
 		}
 
-		targets = { CHI PRC GXC YUN SHX XSM SIK }
+		target_array = global.is_literally_china
 		targets_dynamic = yes
 
 		target_root_trigger = {
@@ -1072,7 +1075,10 @@ foreign_support = {
 
 		target_trigger = {
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				OR = {
+					has_completed_focus = CHI_mission_to_the_us
+					has_completed_focus = CHI_sea_mission_to_the_us
+				}
 				has_war_with = JAP
 			}
 		}
@@ -1080,7 +1086,10 @@ foreign_support = {
 		visible = {
 			has_government = democratic
 			FROM = {
-				has_completed_focus = CHI_mission_to_the_us
+				OR = {
+					has_completed_focus = CHI_mission_to_the_us
+					has_completed_focus = CHI_sea_mission_to_the_us
+				}
 				has_war_with = JAP
 			}
 		}
@@ -1090,7 +1099,7 @@ foreign_support = {
 			factor = 50
 			modifier = {
 				factor = 3
-				any_other_country = {
+				CHI = {
 					has_completed_focus = CHI_mission_to_the_us
 					has_idea = CHI_soong_mei_ling
 					surrender_progress > 0.2
@@ -1141,6 +1150,9 @@ foreign_support = {
 
 		allowed = {
 			original_tag = USA
+			NOT = {
+				has_dlc = "No Compromise, No Surrender"	#only non-NCNS CHI can access both the focus and advisor
+			}
 		}
 
 		available = {
@@ -1152,7 +1164,7 @@ foreign_support = {
 			}
 		}
 
-		targets = { CHI PRC GXC YUN SHX XSM SIK }
+		targets = { CHI }
 		targets_dynamic = yes
 
 		target_trigger = {

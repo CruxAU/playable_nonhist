@@ -1993,8 +1993,8 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.3
-				any_other_country = {
-					is_major = yes
+				any_collection_element = {
+					collection = game:all_majors
 					has_guaranteed = ROOT
 				}
 			}

@@ -402,6 +402,15 @@ focus_tree = {
 		available = {
 			is_subject = no
 			country_exists = CZE
+			CZE = {
+				OR = {
+					has_war = no
+					surrender_progress < 0.05
+					all_enemy_country = {
+						has_war_with = ROOT
+					}
+				}
+			}
 		}
 
 		bypass = {

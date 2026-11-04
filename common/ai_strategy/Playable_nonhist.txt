@@ -9049,8 +9049,8 @@ NHMMAP_EU_federalization_courted_by_HOL = {
 	}
 }
 
-# Once a member has answered the federalization proposal (accepted or rejected; the decision fires once per member),
-# stop improving relations with it. Ending the courting strategy alone doesn't make the AI cancel an action already running.
+# Once a member has answered the federalization proposal (accepted or rejected), stop improving relations with it until
+# the next proposal (since 1.19.4 the decision can be retaken 180 days after a rejection; a new proposal clears the answer flag). Ending the courting strategy alone doesn't make the AI cancel an action already running.
 
 NHMMAP_EU_federalization_answered_AUS = {
 	reversed = yes

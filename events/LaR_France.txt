@@ -2351,7 +2351,10 @@ country_event = {
 			factor = 70
 		}
 		FROM = {
-			country_event = lar_align_belgium.2
+			country_event = {
+				id = lar_align_belgium.2
+				hours = 2
+			}
 		}
 		effect_tooltip = {
 			FROM = {
@@ -2374,7 +2377,10 @@ country_event = {
 			factor = 30
 		}
 		FROM = {
-			country_event = lar_align_belgium.3
+			country_event = {
+				id = lar_align_belgium.3
+				hours = 2
+			}
 		}
 		effect_tooltip = {
 			create_wargoal = {
@@ -3271,7 +3277,12 @@ country_event = {
 				has_government = democratic
 			}
 			country_event = lar_end_the_occupation.4
-			effect_tooltip = { annex_country = { target = VIC transfer_troops = yes } }
+			if = {
+				limit = {
+					VIC = { FRA_vichy_can_rejoin_free_france = yes }
+				}
+				effect_tooltip = { annex_country = { target = VIC transfer_troops = yes } }
+			}
 		}
 	}
 	option = {
@@ -3303,8 +3314,13 @@ country_event = {
 			factor = 80
 		}
 		FROM = { country_event = lar_end_the_occupation.5 }
-		effect_tooltip = {
-			annex_country = { target = VIC transfer_troops = yes }
+		if = {
+			limit = {
+				VIC = { FRA_vichy_can_rejoin_free_france = yes }
+			}
+			effect_tooltip = {
+				annex_country = { target = VIC transfer_troops = yes }
+			}
 		}
 	}
 	option = {
@@ -3335,7 +3351,10 @@ country_event = {
 				if = {
 					limit = {
 						is_ai = yes
-						VIC = { is_ai = no }
+						VIC = {
+							is_ai = no
+							FRA_vichy_can_rejoin_free_france = yes
+						}
 					}
 					change_tag_from = VIC
 				}
@@ -3349,7 +3368,14 @@ country_event = {
 			factor = 80
 		}
 		FRA = {
-			annex_country = { target = VIC transfer_troops = yes }
+			if = { #do not swallow a Vichy that answers to somebody else
+				limit = {
+					VIC = { #ROOT is Vichy in this event, so name Free France explicitly
+						FRA_vichy_can_rejoin_free_france = yes
+					}
+				}
+				annex_country = { target = VIC transfer_troops = yes }
+			}
 			load_focus_tree = french_focus
 			unlock_national_focus = FRA_revive_the_national_bloc
 			unlock_national_focus = FRA_laissez_faire
@@ -4160,15 +4186,21 @@ country_event = {
 		ai_chance = {
 			factor = 80
 		}
-		if = {
+		if = { #failsafe - Vichy may have been puppeted by a third party between the demand and this answer
 			limit = {
-				FROM = { is_ai = no }
-				is_ai = yes
+				FROM = {
+					FRA_vichy_can_rejoin_free_france = yes
+				}
 			}
-			change_tag_from = FROM #if Vichy is played by player and FRA is AI, player gets to keep playing
+			if = {
+				limit = {
+					FROM = { is_ai = no }
+					is_ai = yes
+				}
+				change_tag_from = FROM #if Vichy is played by player and FRA is AI, player gets to keep playing
+			}
+			annex_country = { target = FROM transfer_troops = yes }
 		}
-		
-		annex_country = { target = FROM transfer_troops = yes } 
 	}
 }
 

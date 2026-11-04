@@ -360,7 +360,7 @@ GRE_alternate_communist_plan = {
 
 	ai_national_focuses = {
 		GRE_reevaluating_the_drachma #March 10 1936	
-		GRE_force_the_farmers_into_factories #May 20 1936	
+		GRE_utilize_our_strengths #May 20 1936	
 		GRE_bring_home_the_exiled_republicans #July 30 1936	
 		GRE_request_communist_support #October 10 1936
 		GRE_a_socialist_economy #October 10 1936	

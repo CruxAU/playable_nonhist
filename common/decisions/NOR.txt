@@ -2698,19 +2698,20 @@ NOR_fascist_preparation_decisions_category = {
 		cost = 75 
 		
 		visible = {
+			has_completed_focus = NOR_nasjonal_samling
+			has_war = no
+			has_country_flag = NOR_going_fascist
+			NOT = { has_government = fascism } 
 		
-			any_country = {
-				original_tag = GER
+			any_country_with_original_tag = {
+				exists = yes
+				original_tag_to_check = GER
 				has_government = fascism
 				ROOT = {
 					NOT = { has_country_flag = NOR_already_asked_a_fascist@PREV } 
 				}
 			}
 			
-			has_country_flag = NOR_going_fascist
-			has_completed_focus = NOR_nasjonal_samling
-			has_war = no
-			NOT = { has_government = fascism } 
 		}
 		
 		available = {
@@ -2823,7 +2824,7 @@ NOR_fascist_deploy_prep_decisions_category = {
 		}
 
 		visible = {
-			has_war = yes 
+			has_civil_war = yes 
 			OR = {
 				ROOT = {
 					has_completed_focus = NOR_lurk_in_the_shadows

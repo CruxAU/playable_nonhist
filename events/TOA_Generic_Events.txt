@@ -1095,6 +1095,8 @@ country_event = {
 		
 		date > 1939.1.18
 
+		has_start_date < 1939.01.01
+
 		has_dlc = "Trial of Allegiance"
 	}
 

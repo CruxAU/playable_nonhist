@@ -65,9 +65,17 @@ SWI_historical_placate_GER = {
 			has_war_with = GER
 			GER = {
 				OR = {
+					#NOT = {	has_government = fascism }
 					has_opinion	= {
 						target = ROOT
 						value > 50
+					}
+					AND = {
+						has_opinion_modifier = SWI_light_sentence_for_frankfurter
+						has_opinion	= {
+							target = ROOT
+							value > 50
+						}
 					}
 					has_capitulated = yes
 					is_subject = yes
@@ -111,6 +119,7 @@ SWI_historical_placate_ITA = {
 			has_war_with = ITA
 			ITA = {
 				OR = {
+					#NOT = {	has_government = fascism }
 					has_opinion	= {
 						target = ROOT
 						value > 50
@@ -151,12 +160,13 @@ SWI_historical_placate_FRA = {
 	}
 
 	abort = {
-		date > 1945.1.1
 		OR = {
+			date > 1945.1.1
 			NOT = { country_exists = FRA }
 			has_war_with = FRA
 			FRA = {
 				OR = {
+					#NOT = {	has_government = fascism }
 					has_opinion	= {
 						target = ROOT
 						value > 50
@@ -207,7 +217,7 @@ SWI_historical_placate_ENG = {
 			has_war_with = ENG
 			ENG = {
 				OR = {
-					NOT = {	has_government = fascism }
+					#NOT = {	has_government = fascism }
 					has_opinion	= {
 						target = ROOT
 						value > 50
@@ -251,7 +261,7 @@ SWI_template_design = {
 	}
 	ai_strategy = {
 		type = template_prio
-		id = militias 
+		id = militia
 		value = 100000
 	}
 }

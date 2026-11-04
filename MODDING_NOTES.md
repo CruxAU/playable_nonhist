@@ -42,11 +42,15 @@ git merge vanilla          # resolve only the real conflicts
 | `tools/removed_refs.py <old_game_dir> <new_game_dir>` | NHMMAP references to things the update removed |
 | `tools/rule_option_check.py <game_dir>` | `has_game_rule` checks against rules/options that don't exist |
 | `tools/errorlog_summary.py [--baseline vanilla.log]` | Group error.log, NHMMAP-related first |
+| `tools/conflicts.py list / show FILE [N] / resolve FILE N ours\|theirs\|both\|file:PATH` | Inspect and resolve zdiff3 merge conflict hunks |
+| `tools/near_merges.py BASE OURS THEIRS` | Spots where NHMMAP's and vanilla's edits sat a few lines apart and merged silently |
 
 ## Update checklist
 
 1. `tools/import_vanilla.sh <game_dir> <version>`, then `git checkout -b update-<version>` and `git merge vanilla` (use `-c merge.conflictStyle=zdiff3` to see the base).
 2. Resolve conflicts. If both sides made the same change, take vanilla. If NHMMAP rewrote the logic, keep NHMMAP and port vanilla's additions.
+   - Then run `tools/near_merges.py <old vanilla tag> master vanilla-<version>` and look at near-misses in files that merged *without* conflicts. A vanilla iterator refactor (e.g. `any_other_country = { original_tag = SOV }` → `any_other_country_with_original_tag_of = { target = { SOV } }`) next to a line NHMMAP loosened can silently undo NHMMAP's change (this hit norway.txt in 1.19.4).
+   - Before Steam updates the game, copy common/events/history/interface/localisation/documentation of the old version (e.g. to e:/HOI4UPDATE/<version>) and save the check-tool outputs as baselines in tools/logs/baseline-<version>/.
 3. `tools/dup_scan.py`: watch for content vanilla added that we already had (it gets merged twice), and new vanilla files clashing with ours.
 4. `tools/removed_refs.py` and `tools/rule_option_check.py`: compare against the previous version's output; only new entries are update breakage.
 5. Check new on_actions files and DLC-reworked countries (new trees need NHMMAP plans guarded with `NOT = { has_dlc = ... }`).

@@ -709,14 +709,6 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			#make sure Germany doesn't force ideology on France for the achievement
-			if = {
-				limit = {
-					FROM = { original_tag = FRA }
-					tag = GER
-				}
-				set_country_flag = invalid_for_danzig_achievement
-			}
 			#make sure warlords don't use the same guy
 			if = {
 				limit = {
@@ -1137,6 +1129,27 @@ on_actions = {
 							original_tag = TUR
 						}
 					}
+				}
+				#ok, so if a country starts a civil war, and loses, a dynamic country with the generic focus tree will take its place
+				#if germany capitulates this dynamic country, it will lose its cores as the game will merge the original country and dynamic country, deleting the dynamic tag to clear space
+				#this means the country capitulated technically has "no cores"
+				#this if statement exists to mitigate the edge case:
+				if = {
+					limit = {
+						is_dynamic_country = yes
+						all_country_with_original_tag = { #confirm that this dynamic country has in fact "taken over" the original country, and that the original country doesn't still exist
+							original_tag_to_check = ROOT
+							OR = {
+								tag = ROOT
+								exists = no
+							}
+						}
+					}
+					set_variable = {
+						var = GER_has_capitulated_to_germany_dynamic_country_original_tag #D04=POL for instance. if the flag below is set, the value of this variable will be used instead of the tag of the country for calculating cores
+						value = ROOT.original_tag
+					}
+					set_country_flag = GER_has_capitulated_to_germany_is_dynamic_country
 				}
 				ROOT = {
 					set_country_flag = GER_has_capitulated_to_germany
@@ -12181,7 +12194,7 @@ on_actions = {
 							}
 						}
 					}
-					set_country_flag = AST_AI_DEMOCRATIC_HISTORICAL
+					set_country_flag = AST_AI_RANDOM_DEMOCRATIC_HISTORICAL
 				}
 				else_if = {
 					limit = {
@@ -12205,7 +12218,7 @@ on_actions = {
 						}
 					}
 					random_list = {
-						1 = { set_country_flag = AST_AI_DEMOCRATIC_HISTORICAL }
+						1 = { set_country_flag = AST_AI_RANDOM_DEMOCRATIC_HISTORICAL }
 						1 = { set_country_flag = AST_AI_RANDOM_DEMOCRATIC_ALTERNATE }
 						1 = { set_country_flag = AST_AI_RANDOM_COMMUNIST }
 						1 = { set_country_flag = AST_AI_RANDOM_COMMUNIST_ALTERNATE }
@@ -12339,7 +12352,7 @@ on_actions = {
 									}
 								}
 							}
-							set_country_flag = AST_AI_DEMOCRATIC_HISTORICAL 
+							set_country_flag = AST_AI_RANDOM_DEMOCRATIC_HISTORICAL 
 						}
 						15 = { 
 							modifier = {
@@ -12442,7 +12455,7 @@ on_actions = {
 							}
 						}
 					}
-					set_country_flag = CAN_AI_DEMOCRATIC_HISTORICAL
+					set_country_flag = CAN_AI_RANDOM_DEMOCRATIC_HISTORICAL
 				}
 				else_if = {
 					limit = {
@@ -12466,7 +12479,7 @@ on_actions = {
 						}
 					}
 					random_list = {
-						1 = { set_country_flag = CAN_AI_DEMOCRATIC_HISTORICAL }
+						1 = { set_country_flag = CAN_AI_RANDOM_DEMOCRATIC_HISTORICAL }
 						1 = { set_country_flag = CAN_AI_RANDOM_DEMOCRATIC_ALTERNATE }
 						1 = { set_country_flag = CAN_AI_RANDOM_COMMUNIST }
 						1 = { set_country_flag = CAN_AI_RANDOM_COMMUNIST_ALTERNATE }
@@ -12643,7 +12656,7 @@ on_actions = {
 									}
 								}
 							}
-							set_country_flag = CAN_AI_DEMOCRATIC_HISTORICAL 
+							set_country_flag = CAN_AI_RANDOM_DEMOCRATIC_HISTORICAL 
 						}
 						13 = { 
 							modifier = {
@@ -12746,7 +12759,7 @@ on_actions = {
 							}
 						}
 					}
-					set_country_flag = SAF_AI_DEMOCRATIC_HISTORICAL
+					set_country_flag = SAF_AI_RANDOM_DEMOCRATIC_HISTORICAL
 				}
 				else_if = {
 					limit = {
@@ -12775,7 +12788,7 @@ on_actions = {
 						1 = { set_country_flag = SAF_AI_RANDOM_COMMUNIST_ALTERNATE }
 						1 = { set_country_flag = SAF_AI_RANDOM_FASCIST }
 						1 = { set_country_flag = SAF_AI_RANDOM_FASCIST_ALTERNATE }
-						1 = { set_country_flag = SAF_AI_DEMOCRATIC_HISTORICAL }
+						1 = { set_country_flag = SAF_AI_RANDOM_DEMOCRATIC_HISTORICAL }
 					}
 				}
 				else_if = {
@@ -12910,7 +12923,7 @@ on_actions = {
 									}
 								}
 							}
-							set_country_flag = SAF_AI_DEMOCRATIC_HISTORICAL 
+							set_country_flag = SAF_AI_RANDOM_DEMOCRATIC_HISTORICAL 
 						}
 						20 = { 
 							modifier = {
@@ -13016,7 +13029,7 @@ on_actions = {
 							}
 						}
 					}
-					set_country_flag = NZL_AI_DEMOCRATIC_HISTORICAL
+					set_country_flag = NZL_AI_RANDOM_DEMOCRATIC_HISTORICAL
 				}
 				else_if = {
 					limit = {
@@ -13040,7 +13053,7 @@ on_actions = {
 						}
 					}
 					random_list = {
-						1 = { set_country_flag = NZL_AI_DEMOCRATIC_HISTORICAL }
+						1 = { set_country_flag = NZL_AI_RANDOM_DEMOCRATIC_HISTORICAL }
 						1 = { set_country_flag = NZL_AI_RANDOM_DEMOCRATIC_ALTERNATE }
 						1 = { set_country_flag = NZL_AI_RANDOM_COMMUNIST }
 						1 = { set_country_flag = NZL_AI_RANDOM_FASCIST }
@@ -13140,7 +13153,7 @@ on_actions = {
 									}
 								}
 							}
-							set_country_flag = NZL_AI_DEMOCRATIC_HISTORICAL 
+							set_country_flag = NZL_AI_RANDOM_DEMOCRATIC_HISTORICAL 
 						}
 						20 = { 
 							modifier = {
@@ -35965,6 +35978,23 @@ on_actions = {
 				}
 			}
 		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { original_tag = FRA }
+							tag = GER
+						}
+						AND = {
+							FROM = { tag = GER }
+							original_tag = FRA
+						}
+					}
+				}
+				set_country_flag = invalid_for_danzig_achievement
+			}
+		}
 	}
 	#ROOT - country that just went to peace
 	on_peaceconference_ended = {
@@ -35978,6 +36008,44 @@ on_actions = {
 					JAP = { has_government = democratic }
 				}
 				play_guns_are_silent_effect = yes
+			}
+		}
+		effect = {
+			# A Hungary that ends the war as someone's subject gives up its irredentist name
+			FROM = {
+				if = {
+					limit = {
+						original_tag = HUN
+						is_subject = yes
+						OR = {
+							has_cosmetic_tag = HUN_GREATER
+							has_cosmetic_tag = HUN_GREATER_COMMUNIST_STATE
+						}
+					}
+					drop_cosmetic_tag = yes
+				}
+			}
+		}
+		effect = {
+			# Libyan Desert follows Sirte, civil war winners otherwise sweep it up
+			if = {
+				limit = {
+					273 = {
+						owner = {
+							NOT = { owns_state = 662 }
+						}
+					}
+					662 = {
+						owner = {
+							NOT = { has_war_with = 273.owner }
+						}
+					}
+				}
+				662 = {
+					owner = {
+						transfer_state = 273
+					}
+				}
 			}
 		}
 		effect = {
@@ -36105,8 +36173,16 @@ on_actions = {
 			if = {
 				limit = {
 					OR = {
-						TAG = ENG
 						TAG = USA
+						AND = {
+							TAG = ENG
+							USA = {
+								divisions_in_state = {
+									state = 126
+									size > 0
+								}
+							}
+						}
 					}
 					FROM = { original_tag = GER }
 					FROM = { has_war_with = ROOT }
