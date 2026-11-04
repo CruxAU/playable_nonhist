@@ -32,15 +32,110 @@ AUS_is_axis_plan = { #if austria is going in the axis, used to determine if we w
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
 		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
 	}
 }
 
 AUS_is_central_powers_plan = { #if austria is going in the central powers, used to determine if we will lower fascist support and for scw
 	OR = {
-		has_country_flag = AUS_AI_RANDOM_
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
-			option = AUS_
+			option = ANTI_ANSCLUSS_ITA_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
 		}
 	}
 }
@@ -62,6 +157,11 @@ AUS_is_aggro_expansionist_plan = { #if austria is to annex as many countries ASA
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		}
 	}
 }
 
@@ -81,6 +181,146 @@ AUS_is_natural_expansionist_plan = { #if austria is to take the annex decisions,
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
+		AND = { #Starhemberg fallback: the federation paths annex diplomatically instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE_PROT
+				}
+			}
 		}
 	}
 }
@@ -102,6 +342,56 @@ AUS_is_no_expansion_plan = { #if austria is to take the annex focuses, but but N
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_2BW
+		}
+		AND = { #Starhemberg fallback: the EU paths take Hungary back into the fold, no annexing
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU_PUP
+				}
+			}
+		}
 	}
 }
 
@@ -122,6 +412,11 @@ AUS_is_anti_anschluss_stress_plan = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		}
 		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
@@ -136,6 +431,11 @@ AUS_is_anti_anschluss_stress_plan = {
 		has_game_rule = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_2BW
 		}
 		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP
 		has_game_rule = {
@@ -152,5 +452,784 @@ AUS_is_anti_anschluss_stress_plan = {
 			rule = AUS_AI_BEHAVIOR
 			option = ANTI_ANSCLUSS_ITA_AXIS_EXP
 		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+	}
+}
+
+AUS_is_diplomatic_expansionist_plan = { #natural expansionist, but only uses the diplomatic preparation decisions (NAP, industrial bribery, joint exercises)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
+		AND = { #Starhemberg fallback: the peaceful puppet paths annex diplomatically instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_CP_CORE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_CP_MAX
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_ROYAL_CORE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_ROYAL_MAX
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_AXIS_CORE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_PUP_AXIS_MAX
+				}
+			}
+		}
+		AND = { #Starhemberg fallback: the federation paths annex diplomatically instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE_PROT
+				}
+			}
+		}
+	}
+}
+
+AUS_is_puppet_plan = { #Herrenhaus paths that subjugate the old lands as puppets (needs Otto: AUS_demand_hungarian_submission)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+	}
+}
+
+AUS_is_royal_alliance_plan = { #paths that form the Royal Alliance
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_MAX
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_ATTACK
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		AND = { #Starhemberg fallback: the Danube paths form a Royal Alliance instead
+			AUS_has_starhemberg_monarchy = yes
+			OR = {
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_SMALL_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_MID_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_LARGE_PROT
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU
+				}
+				has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+				has_game_rule = {
+					rule = AUS_AI_BEHAVIOR
+					option = HAB_DANUBE_EU_PUP
+				}
+			}
+		}
+	}
+}
+
+AUS_is_core_lands_only_plan = { #only subjugates/annexes Hungary and Czechoslovakia
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_CP_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_AXIS_CORE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+	}
+}
+
+AUS_is_liechtenstein_plan = { #crowns the Prince of Liechtenstein (AUS_political_events.91)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_LIE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_PUP_ROYAL_LIE
+		}
+	}
+}
+
+AUS_has_starhemberg_monarchy = { #Hungary got Otto first, so the Herrenhaus is led by Starhemberg: no puppet branch, no non-aligned Danubian Federation, no Reclaim Habsburg
+	OR = {
+		has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
+		AND = {
+			has_completed_focus = AUS_reinstate_the_imperial_council
+			NOT = { has_global_flag = AUS_otto_von_habsburg_has_joined_austria_flag }
+		}
+	}
+}
+
+AUS_is_annex_plan = { #Herrenhaus paths that annex the old lands (AUS_bring_hungary_back_into_the_fold). The AUS_hab_annex_* plans also run for the puppet options under Starhemberg
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_ROYAL_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_CP_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_NONE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_2BW
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP_2BW
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_ANX_AXIS_EXP_DIP_2BW
+		}
+	}
+}
+
+AUS_is_danube_federation_plan = { #Danubian Federation paths: HAB_DANUBE_* (non-aligned, needs Otto, see AUS_has_starhemberg_monarchy) and DEM_DANUBE_* (democratic)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_LARGE
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_LARGE_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_EU
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_EU_PUP
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_LARGE
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_LARGE_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_EU
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_EU_PUP
+		}
+	}
+}
+
+AUS_is_danube_protector_plan = { #puppets its federation members (AUS_protector_of_the_danube)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_LARGE_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_LARGE_PROT
+		}
+	}
+}
+
+AUS_is_danube_no_observers_plan = { #small/medium federations never invite the observers (FRA TUR GRE HOL BEL...)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_MID_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_SMALL_PROT
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_MID_PROT
+		}
+	}
+}
+
+AUS_is_eu_federalize_plan = { #EU paths that propose limited federalization (vanilla BEL_propose_limited_federalization_descision, blocked for Austria otherwise)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = HAB_DANUBE_EU_PUP
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_DANUBE_EU_PUP
+		}
+	}
+}
+
+AUS_is_allies_plan = { #Hold Elections paths that join the Allies
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_DEM_ALLIES
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ALLIES
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_ALLIES_ATK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ALLIES_ATK
+		}
+	}
+}
+
+AUS_is_alpine_federation_plan = { #Hold Elections paths that form the Alpine Federation (and maybe invite the Little Entente)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_DEM_ALPINE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ALPINE
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_ENTENTE
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ENTENTE
+		}
+		has_country_flag = AUS_AI_RANDOM_DEM_ENTENTE_ATK
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = DEM_ENTENTE_ATK
+		}
+	}
+}
+
+AUS_is_stalinist_plan = { #communist paths that seek Soviet support (AUS_seek_soviet_support)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_NEU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_NEU
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_COMINTERN
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_COMINTERN_REV
+		}
+	}
+}
+
+AUS_is_marxist_plan = { #communist paths that stay independent of Moscow (AUS_raid_military_storages)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_NEU
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_NEU
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_BLOC
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_BLOC_REV
+		}
+	}
+}
+
+AUS_is_communist_revolution_plan = { #communist paths that spur revolutions in the Danubian nations (AUS_spur_the_communist_resistance)
+	OR = {
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_STALIN_COMINTERN_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_REV
+		}
+		has_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV
+		has_game_rule = {
+			rule = AUS_AI_BEHAVIOR
+			option = COM_MARX_BLOC_REV
+		}
+	}
+}
+
+### Lands of Old (AUS_subjugating/annexing_the_lands_of_old_decision) AI readiness. Scope: the target country, ROOT = Austria.
+### count_triggers ignores < and >: amount = N means "at least N".
+AUS_lands_of_old_target_ready_2 = { #2+ of the readiness conditions
+	count_triggers = {
+		amount = 2
+		strength_ratio = { #the target is weaker than us
+			tag = ROOT
+			ratio < 1
+		}
+		has_country_flag = AUS_militarist_expansion_attempt_flag
+		has_non_aggression_pact_with = ROOT
+		has_country_flag = AUS_held_military_exercises_on_border_flag
+		has_country_flag = AUS_armed_guards_on_border_flag
+		has_country_flag = AUS_sent_industrial_suuport_flag
+		has_country_flag = AUS_held_joint_military_exercises_flag
+	}
+}
+
+AUS_lands_of_old_target_ready_3 = { #3+ of the readiness conditions
+	count_triggers = {
+		amount = 3
+		strength_ratio = { #the target is weaker than us
+			tag = ROOT
+			ratio < 1
+		}
+		has_country_flag = AUS_militarist_expansion_attempt_flag
+		has_non_aggression_pact_with = ROOT
+		has_country_flag = AUS_held_military_exercises_on_border_flag
+		has_country_flag = AUS_armed_guards_on_border_flag
+		has_country_flag = AUS_sent_industrial_suuport_flag
+		has_country_flag = AUS_held_joint_military_exercises_flag
+	}
+}
+
+AUS_lands_of_old_preparations_exhausted = { #Austria has tried every preparation decision it can on this target, so it should stop waiting and make the demand
+	OR = {
+		AND = { #diplomatic route fully tried (accepted or not)
+			has_country_flag = AUS_lands_of_old_nap_offered_flag
+			has_country_flag = AUS_lands_of_old_bribery_done_flag
+			has_country_flag = AUS_lands_of_old_joint_exercises_offered_flag
+		}
+		AND = { #militarist route fully tried
+			has_country_flag = AUS_militarist_expansion_attempt_flag
+			has_country_flag = AUS_lands_of_old_border_exercises_done_flag
+			has_country_flag = AUS_lands_of_old_border_guards_done_flag
+		}
+		AND = { #NAP refused, and threats are off-limits on diplomatic paths
+			has_country_flag = AUS_lands_of_old_nap_offered_flag
+			NOT = { has_non_aggression_pact_with = ROOT }
+			NOT = { has_country_flag = AUS_diplomatic_expansion_attempt_flag }
+			ROOT = { AUS_is_diplomatic_expansionist_plan = yes }
+		}
+	}
+}
+
+AUS_lands_of_old_target_in_progress = { #Austria has started preparing this target and hasn't made its demand yet. Scope: a country, ROOT = Austria. The AI finishes it before starting another
+	OR = { #a preparation decision was tried on it in the last year (each step refreshes this; a year with no progress means we're stuck, so let it go)
+		has_country_flag = {
+			flag = AUS_lands_of_old_nap_offered_flag
+			days < 365
+		}
+		has_country_flag = {
+			flag = AUS_militarist_expansion_attempt_flag
+			days < 365
+		}
+		has_country_flag = {
+			flag = AUS_lands_of_old_bribery_done_flag
+			days < 365
+		}
+		has_country_flag = {
+			flag = AUS_lands_of_old_joint_exercises_offered_flag
+			days < 365
+		}
+		has_country_flag = {
+			flag = AUS_lands_of_old_border_exercises_done_flag
+			days < 365
+		}
+		has_country_flag = {
+			flag = AUS_lands_of_old_border_guards_done_flag
+			days < 365
+		}
+	}
+	NOT = { has_country_flag = AUS_sent_ultimatum_flag } #set when the subjugate/annex demand is taken, accepted or not
+	exists = yes
+	NOT = { has_war_with = ROOT }
+	NOT = { is_subject_of = ROOT }
+	is_subject = no #someone else's subject: the NAP/bribery/joint exercises can't target it any more
+	NOT = { is_in_faction_with = ROOT }
+	any_owned_state = { #still a valid target, so a dead target never blocks the rest
+		is_in_array = { AUS.expansion_targets = THIS }
+		NOT = { has_state_flag = AUS_no_longer_expansion_target }
 	}
 }

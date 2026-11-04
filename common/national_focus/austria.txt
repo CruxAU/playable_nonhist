@@ -3146,7 +3146,10 @@ focus_tree = {
 		}
 
 		available = {
-
+			OR = { #NHMMAP: the AI only stabilizes if democracy can reach the 50% AUS_strengthen_the_cabinet needs (the +5% plus drift during the focus); otherwise it moves on to AUS_outlaw_the_radicals
+				is_ai = no
+				democratic > 0.4
+			}
 		}
 		
 		bypass = {
@@ -8978,10 +8981,30 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = { #NHMMAP: we own some of Hungary but none of the Czech lands, so take AUS_integrate_hungary instead
+				factor = 0
+				OR = {
+					owns_state = 155
+					owns_state = 974
+					owns_state = 973
+					owns_state = 154
+					owns_state = 43 #Budapest
+				}
+				NOT = {
+					OR = {
+						owns_state = 69
+						owns_state = 972
+						owns_state = 9
+						owns_state = 75
+						owns_state = 74
+						owns_state = 72
+					}
+				}
+			}
 		}
 
 		available = {
-			
+
 			NOT = {
 				69 = {
 					is_core_of = ROOT
@@ -9126,6 +9149,24 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = { #NHMMAP: we own none of the Hungarian or Czech lands, so prefer coring the Czech lands (AUS_integrate_northwest)
+				factor = 0
+				NOT = {
+					OR = {
+						owns_state = 155
+						owns_state = 974
+						owns_state = 973
+						owns_state = 154
+						owns_state = 43
+						owns_state = 69
+						owns_state = 972
+						owns_state = 9
+						owns_state = 75
+						owns_state = 74
+						owns_state = 72
+					}
+				}
+			}
 		}
 
 		available = {
@@ -10560,6 +10601,15 @@ focus_tree = {
 					value = yes
 				}
 				set_country_flag = AUS_seyss_inquart_can_be_fired_flag
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					remove_advisor_role = {
+						character = AUS_arthur_seyss-inquart
+						slot = political_advisor 
+					}
+				}
 			}
 		}
 	}

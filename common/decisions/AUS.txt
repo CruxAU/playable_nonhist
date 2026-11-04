@@ -909,65 +909,81 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 5
-			modifier = {
-				factor = 100
-				AUS_is_aggro_expansionist_plan = yes
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
 				FROM = {
 					OWNER = {
-						count_triggers = {
-							amount > 1
-							strength_ratio = {
-								tag = ROOT
-								ratio > 1
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
+			modifier = { #NHMMAP: aggressive expansionists need 2+ conditions (2 = base weight, 3+ = x100 below)
+				factor = 0
+				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
+				FROM = {
+					OWNER = {
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_2 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						}
+					}
+				}
+			}
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision (aggressive preps are x100, max 10000)
+				add = 60000
+				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
+				FROM = {
+					OWNER = {
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
 			}
 			modifier = {
 				factor = 0
-				AUS_is_natural_expansionist_plan = yes
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
-						count_triggers = {
-							amount < 3
-							strength_ratio = {
-								tag = ROOT
-								ratio > 1
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_3 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
 						}
 					}
 				}
 			}
-			modifier = {
-				add = 100
-				AUS_is_natural_expansionist_plan = yes
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision on other targets (max 500 on diplomatic paths)
+				add = 600
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
-						count_triggers = {
-							amount > 1
-							strength_ratio = {
-								tag = ROOT
-								ratio > 1
-							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
@@ -1136,65 +1152,69 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 2
-			modifier = {
-				factor = 100
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: aggressive expansionists need 2+ conditions (2 = base weight, 3+ = x100 below)
+				factor = 0
 				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
 				FROM = {
 					OWNER = {
-						count_triggers = {
-							amount > 1
-							strength_ratio = {
-								tag = ROOT
-								ratio > 1
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_2 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						}
+					}
+				}
+			}
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision (aggressive preps are x100, max 10000)
+				add = 60000
+				AUS_is_aggro_expansionist_plan = yes
+				AUS_is_core_lands_only_plan = no #NHMMAP: core-lands paths use the 3+ rule below
+				FROM = {
+					OWNER = {
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
 			}
 			modifier = {
 				factor = 0
-				AUS_is_natural_expansionist_plan = yes
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
-						count_triggers = {
-							amount < 3
-							strength_ratio = {
-								tag = ROOT
-								ratio > 1
+						NOT = {
+							OR = {
+								AUS_lands_of_old_target_ready_3 = yes
+								AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
 						}
 					}
 				}
 			}
-			modifier = {
-				add = 100
-				AUS_is_natural_expansionist_plan = yes
+			modifier = { #NHMMAP: a ready target's demand outranks every preparation decision on other targets (max 500 on diplomatic paths)
+				add = 600
+				OR = { #NHMMAP: natural expansionists and core-lands (HUN/CZE only) paths wait for 3+ conditions
+					AUS_is_natural_expansionist_plan = yes
+					AUS_is_core_lands_only_plan = yes
+				}
 				FROM = {
 					OWNER = {
-						count_triggers = {
-							amount > 1
-							strength_ratio = {
-								tag = ROOT
-								ratio > 1
-							}
-							has_country_flag = AUS_militarist_expansion_attempt_flag
-							has_non_aggression_pact_with = ROOT
-							has_country_flag = AUS_held_military_exercises_on_border_flag
-							has_country_flag = AUS_armed_guards_on_border_flag
-							has_country_flag = AUS_sent_industrial_suuport_flag
-							has_country_flag = AUS_held_joint_military_exercises_flag
+						OR = {
+							AUS_lands_of_old_target_ready_3 = yes
+							AUS_lands_of_old_preparations_exhausted = yes #NHMMAP: no preparations left, demand anyway
 						}
 					}
 				}
@@ -1354,6 +1374,25 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 10
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1361,6 +1400,10 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 0
 				AUS_is_no_expansion_plan = yes
+			}
+			modifier = { #NHMMAP: diplomatic expansionists avoid threats
+				factor = 0
+				AUS_is_diplomatic_expansionist_plan = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1424,7 +1467,10 @@ AUS_subjugating_the_lands_of_old_category = {
 
 			FROM = {
 				OWNER = {
-					is_neighbor_of = ROOT
+					OR = { #NHMMAP: borders us, or borders one of our subjects
+						is_neighbor_of = ROOT
+						any_neighbor_country = { is_subject_of = ROOT }
+					}
 				}
 			}
 		}
@@ -1510,6 +1556,25 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 3
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1517,6 +1582,10 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 0
 				AUS_is_no_expansion_plan = yes
+			}
+			modifier = { #NHMMAP: diplomatic expansionists avoid threats
+				factor = 0
+				AUS_is_diplomatic_expansionist_plan = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1581,16 +1650,37 @@ AUS_subjugating_the_lands_of_old_category = {
 				tooltip = AUS_military_exercises_on_border_decision_tt
 				FROM = {
 					OWNER = {
-						is_neighbor_of = ROOT
+						OR = { #NHMMAP: borders us, or borders one of our subjects
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_subject_of = ROOT }
+						}
 						ROOT = {
-							any_controlled_state = {
-								ROOT = {
-									divisions_in_state = { 
-										state = PREV size > 2 
-									} 
+							OR = {
+								any_controlled_state = {
+									ROOT = {
+										divisions_in_state = { 
+											state = PREV size > 2 
+										} 
+									}
+									any_neighbor_state = { 
+										is_fully_controlled_by = FROM.OWNER
+									}
 								}
-								any_neighbor_state = { 
-									is_fully_controlled_by = FROM.OWNER
+								any_subject_country = { #NHMMAP: or our troops in a subject's state on the border
+									any_controlled_state = {
+										ROOT = {
+											divisions_in_state = {
+												state = PREV size > 2
+											}
+										}
+										any_neighbor_state = {
+											is_fully_controlled_by = FROM.OWNER
+										}
+									}
+								}
+								AND = { #NHMMAP: the AI doesn't move troops to the border for this, so it only needs the divisions
+									is_ai = yes
+									num_divisions > 2
 								}
 							}
 						}
@@ -1636,6 +1726,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_border_exercises_done_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 			army_experience = 10
@@ -1656,6 +1747,25 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 3
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1663,6 +1773,10 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 0
 				AUS_is_no_expansion_plan = yes
+			}
+			modifier = { #NHMMAP: diplomatic expansionists avoid threats
+				factor = 0
+				AUS_is_diplomatic_expansionist_plan = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1726,7 +1840,10 @@ AUS_subjugating_the_lands_of_old_category = {
 
 			FROM = {
 				OWNER = {
-					is_neighbor_of = ROOT
+					OR = { #NHMMAP: borders us, or borders one of our subjects
+						is_neighbor_of = ROOT
+						any_neighbor_country = { is_subject_of = ROOT }
+					}
 				}
 			}
 		}
@@ -1770,6 +1887,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_border_guards_done_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 
 			FROM = {
@@ -1791,6 +1909,25 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 5
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1798,6 +1935,10 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 0
 				AUS_is_no_expansion_plan = yes
+			}
+			modifier = { #NHMMAP: diplomatic expansionists prefer diplomatic pressure
+				factor = 5
+				AUS_is_diplomatic_expansionist_plan = yes
 			}
 			modifier = {
 				factor = 10
@@ -1903,6 +2044,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_nap_offered_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			FROM = { 
 				clr_state_flag = AUS_currently_targets_this_landd_of_old_flag
 				OWNER = {
@@ -1924,6 +2066,25 @@ AUS_subjugating_the_lands_of_old_category = {
 		priority = 80
 		ai_will_do = {
 			base = 2
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -1931,6 +2092,10 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 0
 				AUS_is_no_expansion_plan = yes
+			}
+			modifier = { #NHMMAP: diplomatic expansionists prefer diplomatic pressure
+				factor = 5
+				AUS_is_diplomatic_expansionist_plan = yes
 			}
 
 			modifier = {
@@ -2040,6 +2205,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_bribery_done_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 
 			FROM = {
@@ -2058,7 +2224,26 @@ AUS_subjugating_the_lands_of_old_category = {
 		icon = GFX_decision_generic_military
 		priority = 80
 		ai_will_do = {
-			base = 2
+			base = 5
+			modifier = { #NHMMAP: one target at a time - finish the target we've started preparing before touching another
+				factor = 0
+				any_country = {
+					AUS_lands_of_old_target_in_progress = yes
+					NOT = { owns_state = FROM }
+				}
+			}
+			modifier = { #NHMMAP: core-lands paths only target Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					OWNER = {
+						NOT = {
+							original_tag = HUN
+							original_tag = CZE
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 100
 				AUS_is_aggro_expansionist_plan = yes
@@ -2066,6 +2251,10 @@ AUS_subjugating_the_lands_of_old_category = {
 			modifier = {
 				factor = 0
 				AUS_is_no_expansion_plan = yes
+			}
+			modifier = { #NHMMAP: diplomatic expansionists prefer diplomatic pressure
+				factor = 5
+				AUS_is_diplomatic_expansionist_plan = yes
 			}
 			modifier = {
 				factor = 10
@@ -2169,6 +2358,7 @@ AUS_subjugating_the_lands_of_old_category = {
 		}
 
 		remove_effect = {
+			FROM = { OWNER = { set_country_flag = AUS_lands_of_old_joint_exercises_offered_flag } } #NHMMAP: tried, accepted or not (AUS_lands_of_old_preparations_exhausted)
 			clr_country_flag = AUS_currently_undertaking_subjugating_lands_of_old_flag
 
 			FROM = {
@@ -2587,6 +2777,16 @@ AUS_the_danubian_federation_category = {
 		priority = 80
 		ai_will_do = {
 			base = 5
+			modifier = { #NHMMAP: core-lands paths only invite Hungary and Czechoslovakia
+				factor = 0
+				AUS_is_core_lands_only_plan = yes
+				FROM = {
+					NOT = {
+						original_tag = HUN
+						original_tag = CZE
+					}
+				}
+			}
 			modifier = {
 				factor = 10
 				FROM = {
@@ -2698,6 +2898,10 @@ AUS_the_danubian_federation_category = {
 		priority = 70
 		ai_will_do = {
 			base = 2
+			modifier = { #NHMMAP: small/medium federations don't invite the observers
+				factor = 0
+				AUS_is_danube_no_observers_plan = yes
+			}
 			modifier = {
 				factor = 5
 				FROM = {

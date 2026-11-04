@@ -8293,6 +8293,19 @@ country_event = { #Electing a new democratic leader
 		name = AUS_political_events.90.a
 		ai_chance = {
 			base = 1
+			modifier = { #NHMMAP: Schuschnigg leads the centralist (Danube Protector) and neutral democratic paths
+				factor = 100
+				OR = {
+					AUS_is_danube_protector_plan = yes
+					NOT = {
+						OR = {
+							AUS_is_allies_plan = yes
+							AUS_is_alpine_federation_plan = yes
+							AUS_is_danube_federation_plan = yes
+						}
+					}
+				}
+			}
 		}
 		hidden_effect = {
 			news_event = {
@@ -8342,6 +8355,17 @@ country_event = { #Electing a new democratic leader
 		name = AUS_political_events.90.b
 		ai_chance = {
 			base = 10
+			modifier = { #NHMMAP: Renner leads the Allied and supranational (Large / EU Danube) democratic paths
+				factor = 10
+				OR = {
+					AUS_is_allies_plan = yes
+					AND = {
+						AUS_is_danube_federation_plan = yes
+						AUS_is_danube_protector_plan = no
+						AUS_is_danube_no_observers_plan = no
+					}
+				}
+			}
 		}
 
 		promote_character = AUS_karl_renner
@@ -8364,6 +8388,16 @@ country_event = { #Electing a new democratic leader
 		name = AUS_political_events.90.c
 		ai_chance = {
 			base = 1
+			modifier = { #NHMMAP: Schumy leads the regional, agrarian cooperation paths (small/mid Danube, Alpine / Little Entente)
+				factor = 100
+				OR = {
+					AUS_is_alpine_federation_plan = yes
+					AND = {
+						AUS_is_danube_no_observers_plan = yes
+						AUS_is_danube_protector_plan = no
+					}
+				}
+			}
 		}
 
 		promote_character = AUS_vinzenz_schumy
@@ -8425,6 +8459,11 @@ country_event = { #Otto wants to be a field marshal
 			modifier = {
 				factor = 0 #literally don't do this
 				is_ai = yes
+				AUS_is_liechtenstein_plan = no #NHMMAP
+			}
+			modifier = { #NHMMAP
+				factor = 100
+				AUS_is_liechtenstein_plan = yes
 			}
 		}
 

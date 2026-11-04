@@ -6985,61 +6985,446 @@ AUS_AI_BEHAVIOR = {
 		desc = "RULE_OPTION_HISTORICAL_AUS_AI_DESC"
 		allow_achievements = yes
 	}
+	#NHMMAP begin
 	option = {
-		name = AUS_MONARCHIST_PUPPET
-		text = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI"
-		desc = "RULE_OPTION_MONARCHIST_PUPPET_AUS_AI_DESC"
+		name = HISTORICAL_ALT
+		text = "RULE_OPTION_AUS_HISTORICAL_ALT_AI"
+		desc = "RULE_OPTION_AUS_HISTORICAL_ALT_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_MONARCHIST_ANNEX
-		text = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI"
-		desc = "RULE_OPTION_MONARCHIST_ANNEX_AUS_AI_DESC"
+		name = AGREEMENT_ITA
+		text = "RULE_OPTION_AUS_AGREEMENT_ITA_AI"
+		desc = "RULE_OPTION_AUS_AGREEMENT_ITA_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_NEUTRALITY_FEDERATIVE
-		text = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI"
-		desc = "RULE_OPTION_AUS_NEUTRALITY_FEDERATIVE_AI_DESC"
+		name = AGREEMENT_DEM
+		text = "RULE_OPTION_AUS_AGREEMENT_DEM_AI"
+		desc = "RULE_OPTION_AUS_AGREEMENT_DEM_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
+	#NHMMAP begin: Herrenhaus puppet paths (replace vanilla AUS_MONARCHIST_PUPPET)
+	option = {
+		name = HAB_PUP_CP_CORE
+		text = "RULE_OPTION_AUS_HAB_PUP_CP_CORE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_CP_CORE_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_COMMUNIST_SOV_ALIGNED
-		text = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI"
-		desc = "RULE_OPTION_AUS_COMMUNIST_SOV_ALIGNED_AI_DESC"
+		name = HAB_PUP_CP_MAX
+		text = "RULE_OPTION_AUS_HAB_PUP_CP_MAX_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_CP_MAX_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_COMMUNIST
-		text = "RULE_OPTION_AUS_COMMUNIST_AI"
-		desc = "RULE_OPTION_AUS_COMMUNIST_AI_DESC"
+		name = HAB_PUP_CP_ATTACK
+		text = "RULE_OPTION_AUS_HAB_PUP_CP_ATTACK_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_CP_ATTACK_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_DEMOCRATIC_FEDERATIVE
-		text = "RULE_OPTION_AUS_DEMOCRATIC_FEDERATIVE_AI"
-		desc = "RULE_OPTION_AUS_DEMOCRATIC_FEDERATIVE_AI_DESC"
+		name = HAB_PUP_ROYAL_CORE
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_CORE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_CORE_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_DEMOCRATIC_ALLIES
-		text = "RULE_OPTION_AUS_DEMOCRATIC_ALLIES_AI"
-		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALLIES_AI_DESC"
+		name = HAB_PUP_ROYAL_MAX
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_MAX_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_MAX_AI_DESC"
 		allow_achievements = no
 	}
 	option = {
-		name = AUS_DEMOCRATIC_ALPINE_FEDERATION
-		text = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI"
-		desc = "RULE_OPTION_AUS_DEMOCRATIC_ALPINE_FEDERATION_AI_DESC"
+		name = HAB_PUP_ROYAL_ATTACK
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_ATTACK_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_ATTACK_AI_DESC"
 		allow_achievements = no
 	}
-
 	option = {
-		name = AUS_ANTI_ANSCLUSS_STRESS
-		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_STRESS_AI"
-		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_STRESS_AI_DESC"
+		name = HAB_PUP_AXIS_CORE
+		text = "RULE_OPTION_AUS_HAB_PUP_AXIS_CORE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_AXIS_CORE_AI_DESC"
 		allow_achievements = no
 	}
+	option = {
+		name = HAB_PUP_AXIS_MAX
+		text = "RULE_OPTION_AUS_HAB_PUP_AXIS_MAX_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_AXIS_MAX_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_AXIS_ATTACK
+		text = "RULE_OPTION_AUS_HAB_PUP_AXIS_ATTACK_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_AXIS_ATTACK_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_PUP_ROYAL_LIE
+		text = "RULE_OPTION_AUS_HAB_PUP_ROYAL_LIE_AI"
+		desc = "RULE_OPTION_AUS_HAB_PUP_ROYAL_LIE_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
+	#NHMMAP begin: Herrenhaus annex paths (replace vanilla AUS_MONARCHIST_ANNEX)
+	option = {
+		name = HAB_ANX_ROYAL_NONE
+		text = "RULE_OPTION_AUS_HAB_ANX_ROYAL_NONE_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_ROYAL_NONE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_ROYAL_EXP
+		text = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_ROYAL_EXP_DIP
+		text = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_ROYAL_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_CP_NONE
+		text = "RULE_OPTION_AUS_HAB_ANX_CP_NONE_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_CP_NONE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_CP_EXP
+		text = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_CP_EXP_DIP
+		text = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_CP_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_NONE
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_NONE_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_NONE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_2BW
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_2BW_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP_2BW
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_2BW_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP_DIP
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_ANX_AXIS_EXP_DIP_2BW
+		text = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_2BW_AI"
+		desc = "RULE_OPTION_AUS_HAB_ANX_AXIS_EXP_DIP_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
+	#NHMMAP begin: Herrenhaus Danubian Federation paths (replace vanilla AUS_NEUTRALITY_FEDERATIVE)
+	option = {
+		name = HAB_DANUBE_SMALL
+		text = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_SMALL_PROT
+		text = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_PROT_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_SMALL_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_MID
+		text = "RULE_OPTION_AUS_HAB_DANUBE_MID_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_MID_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_MID_PROT
+		text = "RULE_OPTION_AUS_HAB_DANUBE_MID_PROT_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_MID_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_LARGE
+		text = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_LARGE_PROT
+		text = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_PROT_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_LARGE_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_EU
+		text = "RULE_OPTION_AUS_HAB_DANUBE_EU_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_EU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = HAB_DANUBE_EU_PUP
+		text = "RULE_OPTION_AUS_HAB_DANUBE_EU_PUP_AI"
+		desc = "RULE_OPTION_AUS_HAB_DANUBE_EU_PUP_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
+	#NHMMAP begin: communist paths (replace vanilla AUS_COMMUNIST_SOV_ALIGNED/AUS_COMMUNIST)
+	option = {
+		name = COM_STALIN_NEU
+		text = "RULE_OPTION_AUS_COM_STALIN_NEU_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_NEU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_STALIN_REV
+		text = "RULE_OPTION_AUS_COM_STALIN_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_REV_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_STALIN_COMINTERN
+		text = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_STALIN_COMINTERN_REV
+		text = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_STALIN_COMINTERN_REV_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_NEU
+		text = "RULE_OPTION_AUS_COM_MARX_NEU_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_NEU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_REV
+		text = "RULE_OPTION_AUS_COM_MARX_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_REV_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_BLOC
+		text = "RULE_OPTION_AUS_COM_MARX_BLOC_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_BLOC_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = COM_MARX_BLOC_REV
+		text = "RULE_OPTION_AUS_COM_MARX_BLOC_REV_AI"
+		desc = "RULE_OPTION_AUS_COM_MARX_BLOC_REV_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
+	#NHMMAP begin: Hold Elections paths (replace vanilla AUS_DEMOCRATIC_FEDERATIVE/ALLIES/ALPINE_FEDERATION)
+	option = {
+		name = DEM_DANUBE_SMALL
+		text = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_SMALL_PROT
+		text = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_PROT_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_SMALL_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_MID
+		text = "RULE_OPTION_AUS_DEM_DANUBE_MID_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_MID_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_MID_PROT
+		text = "RULE_OPTION_AUS_DEM_DANUBE_MID_PROT_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_MID_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_LARGE
+		text = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_LARGE_PROT
+		text = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_PROT_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_LARGE_PROT_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_EU
+		text = "RULE_OPTION_AUS_DEM_DANUBE_EU_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_EU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_DANUBE_EU_PUP
+		text = "RULE_OPTION_AUS_DEM_DANUBE_EU_PUP_AI"
+		desc = "RULE_OPTION_AUS_DEM_DANUBE_EU_PUP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_NEU
+		text = "RULE_OPTION_AUS_DEM_NEU_AI"
+		desc = "RULE_OPTION_AUS_DEM_NEU_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ALLIES
+		text = "RULE_OPTION_AUS_DEM_ALLIES_AI"
+		desc = "RULE_OPTION_AUS_DEM_ALLIES_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ALLIES_ATK
+		text = "RULE_OPTION_AUS_DEM_ALLIES_ATK_AI"
+		desc = "RULE_OPTION_AUS_DEM_ALLIES_ATK_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ALPINE
+		text = "RULE_OPTION_AUS_DEM_ALPINE_AI"
+		desc = "RULE_OPTION_AUS_DEM_ALPINE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ENTENTE
+		text = "RULE_OPTION_AUS_DEM_ENTENTE_AI"
+		desc = "RULE_OPTION_AUS_DEM_ENTENTE_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = DEM_ENTENTE_ATK
+		text = "RULE_OPTION_AUS_DEM_ENTENTE_ATK_AI"
+		desc = "RULE_OPTION_AUS_DEM_ENTENTE_ATK_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
+	#NHMMAP begin: vanilla AUS_ANTI_ANSCLUSS_STRESS split into these variants
+	option = {
+		name = ANTI_ANSCLUSS_ITA_NF
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_NF_EXP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_NF_EXP_AGGR
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_CP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_CP_EXP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_CP_EXP_AGGR
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_2BW
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_2BW_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR_2BW_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_NF
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_NF_EXP_DIP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_NF_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_CP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = ANTI_ANSCLUSS_DEM_CP_EXP_DIP
+		text = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_EXP_DIP_AI"
+		desc = "RULE_OPTION_AUS_ANTI_ANSCLUSS_DEM_CP_EXP_DIP_AI_DESC"
+		allow_achievements = no
+	}
+	#NHMMAP end
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM" 

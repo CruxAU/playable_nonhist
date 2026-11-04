@@ -105,13 +105,7 @@ AUS_panic_train_divisions = {
 		has_dlc = Gotterdammerung
 	}
 	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
+		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
 	}
 
 	abort = {
@@ -131,117 +125,93 @@ AUS_panic_train_divisions = {
 	}
 }
 
-AUS_panic_befriend_guarantors_ITA = {
-	allowed = {
-		original_tag = AUS
-		has_dlc = Gotterdammerung
-	}
-	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
-	}
+# AUS_panic_befriend_guarantors_ITA = {
+# 	allowed = {
+# 		original_tag = AUS
+# 		has_dlc = Gotterdammerung
+# 	}
+# 	enable = {
+# 		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
+# 	}
 
-	abort = {
-		OR = {
-			has_war_with = ITA
-			is_guaranteed_by = ITA
-			has_completed_focus = AUS_reach_out_to_italy
-		}
+# 	abort = {
+# 		OR = {
+# 			has_war_with = ITA
+# 			is_guaranteed_by = ITA
+# 			has_completed_focus = AUS_reach_out_to_italy
+# 		}
 		
-	}
+# 	}
 
-	ai_strategy = { 
-		type = befriend
-		id = ITA
-		value = 500
-	}
-}
+# 	ai_strategy = { 
+# 		type = befriend
+# 		id = ITA
+# 		value = 500
+# 	}
+# }
 
-AUS_panic_befriend_guarantors_ENG = {
-	allowed = {
-		original_tag = AUS
-		has_dlc = Gotterdammerung
-	}
-	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
-	}
+# AUS_panic_befriend_guarantors_ENG = {
+# 	allowed = {
+# 		original_tag = AUS
+# 		has_dlc = Gotterdammerung
+# 	}
+# 	enable = {
+# 		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
+# 	}
 
-	abort = {
-		has_war_with = ENG
-		is_guaranteed_by = ENG
-		has_completed_focus = AUS_approach_democratic_guarantors
-	}
+# 	abort = {
+# 		has_war_with = ENG
+# 		is_guaranteed_by = ENG
+# 		has_completed_focus = AUS_approach_democratic_guarantors
+# 	}
 
-	ai_strategy = { 
-		type = befriend
-		id = ENG
-		value = 250
-	}
-}
+# 	ai_strategy = { 
+# 		type = befriend
+# 		id = ENG
+# 		value = 250
+# 	}
+# }
 
-AUS_panic_befriend_guarantors_FRA = {
-	allowed = {
-		original_tag = AUS
-		has_dlc = Gotterdammerung
-	}
-	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
-	}
+# AUS_panic_befriend_guarantors_FRA = {
+# 	allowed = {
+# 		original_tag = AUS
+# 		has_dlc = Gotterdammerung
+# 	}
+# 	enable = {
+# 		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
+# 	}
 
-	abort = {
-		has_war_with = FRA
-		is_guaranteed_by = FRA
-		has_completed_focus = AUS_approach_democratic_guarantors
-	}
+# 	abort = {
+# 		has_war_with = FRA
+# 		is_guaranteed_by = FRA
+# 		has_completed_focus = AUS_approach_democratic_guarantors
+# 	}
 
-	ai_strategy = { 
-		type = befriend
-		id = FRA
-		value = 250
-	}
-}
+# 	ai_strategy = { 
+# 		type = befriend
+# 		id = FRA
+# 		value = 250
+# 	}
+# }
 
-AUS_panic_befriend_guarantors_USA = {
-	allowed = {
-		original_tag = AUS
-		has_dlc = Gotterdammerung
-	}
-	enable = {
-		OR = {
-			has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-			has_game_rule = {
-				rule = AUS_AI_BEHAVIOR
-				option = AUS_ANTI_ANSCLUSS_STRESS
-			}
-		}
-	}
+# AUS_panic_befriend_guarantors_USA = {
+# 	allowed = {
+# 		original_tag = AUS
+# 		has_dlc = Gotterdammerung
+# 	}
+# 	enable = {
+# 		AUS_is_anti_anschluss_stress_plan = yes #NHMMAP: vanilla AUS_ANTI_ANSCLUSS_STRESS is split into variants
+# 	}
 
-	abort = {
-		has_war_with = USA
-		is_guaranteed_by = USA
-		has_completed_focus = AUS_approach_democratic_guarantors
-	}
+# 	abort = {
+# 		has_war_with = USA
+# 		is_guaranteed_by = USA
+# 		has_completed_focus = AUS_approach_democratic_guarantors
+# 	}
 
-	ai_strategy = { 
-		type = befriend
-		id = USA
-		value = 150
-	}
-}
+# 	ai_strategy = { 
+# 		type = befriend
+# 		id = USA
+# 		value = 150
+# 	}
+# }

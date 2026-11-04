@@ -1,0 +1,268 @@
+# NHMMAP: "Strengthen X" sliders for every nation with its own focus tree (vanilla only has the 8 majors).
+# Shared trees (Chinese warlords, Austro-Hungarian releasables, Horn of Africa, generic) don't get one.
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_afg"
+		modifier = diff_strong_ai_generic
+		countries = { AFG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_arg"
+		modifier = diff_strong_ai_generic
+		countries = { ARG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ast"
+		modifier = diff_strong_ai_generic
+		countries = { AST }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_aus"
+		modifier = diff_strong_ai_generic
+		countries = { AUS }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_bel"
+		modifier = diff_strong_ai_generic
+		countries = { BEL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_bra"
+		modifier = diff_strong_ai_generic
+		countries = { BRA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_bul"
+		modifier = diff_strong_ai_generic
+		countries = { BUL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_can"
+		modifier = diff_strong_ai_generic
+		countries = { CAN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_chl"
+		modifier = diff_strong_ai_generic
+		countries = { CHL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_prc"
+		modifier = diff_strong_ai_generic
+		countries = { PRC }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_cog"
+		modifier = diff_strong_ai_generic
+		countries = { COG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_cze"
+		modifier = diff_strong_ai_generic
+		countries = { CZE }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_den"
+		modifier = diff_strong_ai_generic
+		countries = { DEN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_est"
+		modifier = diff_strong_ai_generic
+		countries = { EST }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_eth"
+		modifier = diff_strong_ai_generic
+		countries = { ETH }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_fin"
+		modifier = diff_strong_ai_generic
+		countries = { FIN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_gre"
+		modifier = diff_strong_ai_generic
+		countries = { GRE }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_hun"
+		modifier = diff_strong_ai_generic
+		countries = { HUN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ice"
+		modifier = diff_strong_ai_generic
+		countries = { ICE }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_raj"
+		modifier = diff_strong_ai_generic
+		countries = { RAJ }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ins"
+		modifier = diff_strong_ai_generic
+		countries = { INS }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_per"
+		modifier = diff_strong_ai_generic
+		countries = { PER }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_irq"
+		modifier = diff_strong_ai_generic
+		countries = { IRQ }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_lat"
+		modifier = diff_strong_ai_generic
+		countries = { LAT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_lit"
+		modifier = diff_strong_ai_generic
+		countries = { LIT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_man"
+		modifier = diff_strong_ai_generic
+		countries = { MAN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_mex"
+		modifier = diff_strong_ai_generic
+		countries = { MEX }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_hol"
+		modifier = diff_strong_ai_generic
+		countries = { HOL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_nzl"
+		modifier = diff_strong_ai_generic
+		countries = { NZL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_nor"
+		modifier = diff_strong_ai_generic
+		countries = { NOR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_par"
+		modifier = diff_strong_ai_generic
+		countries = { PAR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_phi"
+		modifier = diff_strong_ai_generic
+		countries = { PHI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_pol"
+		modifier = diff_strong_ai_generic
+		countries = { POL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_por"
+		modifier = diff_strong_ai_generic
+		countries = { POR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_rng"
+		modifier = diff_strong_ai_generic
+		countries = { RNG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_rom"
+		modifier = diff_strong_ai_generic
+		countries = { ROM }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_sia"
+		modifier = diff_strong_ai_generic
+		countries = { SIA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_saf"
+		modifier = diff_strong_ai_generic
+		countries = { SAF }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_spr"
+		modifier = diff_strong_ai_generic
+		countries = { SPR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_swe"
+		modifier = diff_strong_ai_generic
+		countries = { SWE }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_swi"
+		modifier = diff_strong_ai_generic
+		countries = { SWI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_tur"
+		modifier = diff_strong_ai_generic
+		countries = { TUR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_urg"
+		modifier = diff_strong_ai_generic
+		countries = { URG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_yug"
+		modifier = diff_strong_ai_generic
+		countries = { YUG }
+		multiplier = 2.0
+	}
+}
