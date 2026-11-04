@@ -129,6 +129,12 @@ SAF_alternate_communist = {
 	}
 
 	ai_national_focuses = {
+		# Break with Britain first, so the new regime is in place before the war
+		SAF_abandon_westminster
+		SAF_empower_the_workers
+		SAF_repeal_the_native_representation_act
+		SAF_burn_the_kings_portraits
+		SAF_anti_colonialist_crusade
 		SAF_south_african_railways
 		SAF_expand_the_mining_industry
 		SAF_heavy_engineering
@@ -141,21 +147,16 @@ SAF_alternate_communist = {
 		SAF_seaward_defence_force
 		SAF_pretoria_arms
 		#1938
-		SAF_abandon_westminster
-		SAF_empower_the_workers
 		SAF_support_spain
 		SAF_special_service_battalion
 		SAF_improve_the_three_oh_three
 		#1939
 		SAF__south_african_military_college
-		SAF_repeal_the_native_representation_act	
 		SAF_commit_to_the_five_year_plan
 		SAF_equal_opportunity_employment
 		SAF_improve_the_hawker_hartbees
 		#1940
 		SAF_war_measures_act 								#should probably do this as soon as possible
-		SAF_burn_the_kings_portraits
-		SAF_anti_colonialist_crusade
 		SAF_expand_the_south_african_artillery
 		SAF_mechanization_effort
 		#1941
@@ -242,6 +243,12 @@ SAF_alternate_fascist = {
 	}
 
 	ai_national_focuses = {
+		# Break with Britain first, so the new regime is in place before the war
+		SAF_abandon_westminster
+		SAF_support_the_afrikaner_broederbond
+		SAF_support_ossewabrandwag
+		SAF_support_nazification_of_south_west_africa
+		SAF_support_the_german_coup
 		SAF_south_african_railways
 		SAF_expand_the_mining_industry
 		SAF_heavy_engineering
@@ -255,25 +262,20 @@ SAF_alternate_fascist = {
 		SAF_pretoria_arms
 		#1938
 		SAF_special_service_battalion
-		SAF_abandon_westminster
-		SAF_support_the_afrikaner_broederbond
 		SAF_improve_the_three_oh_three
 		SAF__south_african_military_college
 		#1939
-		SAF_native_laws_amendment_act	
+		SAF_native_laws_amendment_act
 		SAF_work_for_all_poor
 		SAF_commit_to_the_five_year_plan
 		SAF_voortrekker_monument
 		SAF_improve_the_hawker_hartbees
 		SAF_war_measures_act 								#should probably do this as soon as possible
 		#1940
-		SAF_support_ossewabrandwag	
-		SAF_celebrate_the_great_trek 
-		SAF_support_nazification_of_south_west_africa
+		SAF_celebrate_the_great_trek
 		SAF_expand_the_south_african_artillery
 		SAF_commemorate_the_battle_of_blood_river
 		#1941
-		SAF_support_the_german_coup
 		SAF_mechanization_effort
 		SAF_german_scientists
 		SAF_equipment_effort
@@ -355,6 +357,12 @@ SAF_alternate_fascist_2 = {
 	}
 
 	ai_national_focuses = {
+		# Break with Britain first, so the new regime is in place before the war
+		SAF_abandon_westminster
+		SAF_support_the_afrikaner_broederbond
+		SAF_celebrate_the_great_trek
+		SAF_south_africa_first
+		SAF_support_ossewabrandwag
 		SAF_south_african_railways
 		SAF_expand_the_mining_industry
 		SAF_heavy_engineering
@@ -368,21 +376,16 @@ SAF_alternate_fascist_2 = {
 		SAF_pretoria_arms
 		#1938
 		SAF_special_service_battalion
-		SAF_abandon_westminster
-		SAF_support_the_afrikaner_broederbond
 		SAF_improve_the_three_oh_three
 		SAF__south_african_military_college
 		#1939
-		SAF_native_laws_amendment_act	
+		SAF_native_laws_amendment_act
 		SAF_work_for_all_poor
 		SAF_commit_to_the_five_year_plan
 		SAF_voortrekker_monument
 		SAF_improve_the_hawker_hartbees
 		SAF_war_measures_act 								#should probably do this as soon as possible
 		#1940
-		SAF_support_ossewabrandwag	
-		SAF_celebrate_the_great_trek 
-		SAF_south_africa_first
 		SAF_expand_the_south_african_artillery
 		SAF_commemorate_the_battle_of_blood_river
 		#1941

@@ -73,7 +73,10 @@ peace_ai_desires = {
                     has_government = communism
                 }
             }
-            # ROOT.FROM.FROM.FROM = { NOT = { is_core_of = ROOT } } #It is not ours
+            ROOT.FROM.FROM.FROM = { NOT = { is_core_of = ROOT } } #It is not ours
+            #NOTE: deliberately ROOT and not ROOT.FROM, unlike the democratic rule above. This rule also covers
+            #liberate and puppet, whose taker is the released tag and who therefore always cores the target state,
+            #so ROOT.FROM here would switch the whole cutoff off for those two action types.
             ROOT.FROM.FROM.FROM = {
                 NOT = { is_claimed_by = ROOT.FROM }
                 ROOT = { pc_is_winner = yes }
@@ -108,13 +111,14 @@ peace_ai_desires = {
                 }
             } #It is not claimed by us
             #Special Japan China Handling; this has logic elsewhere which we reluctantly have to special case.
+            #Covers every Chinese tag, not just CHI, or Japan abandons the inland warlord states it is meant to finish off.
             NOT = {
                 AND = { #NOT is sneakily NOR
                     ROOT = {
                         original_tag = JAP
                     }
                     ROOT.FROM.FROM = {
-                        original_tag = CHI
+                        WTT_is_chinese_country = yes
                     }
                 }
             }
@@ -995,6 +999,61 @@ peace_ai_desires = {
         ai_desire = 100
     }
 
+    ### A loser that keeps even one unclaimed state keeps its own tag, government, ideas and leader, and the puppet
+    ### or new government we spent the whole conference building becomes a nameless dynamic country instead.
+    ### Once we have committed to remaking a loser, mop up whatever is left of it late in the conference, even where
+    ### the influence cutoff would normally stop us. Restricted to states nobody but the loser cores, so this never
+    ### steals land that is going to be liberated or handed back to an ally.
+
+    finish_the_puppet_before_a_rump_survives = {
+        peace_action_type = { puppet }
+        enable = {
+            pc_turn > 2
+            ROOT.FROM = {
+                tag = ROOT.FROM.FROM #We are puppeting the loser itself, not carving a sub-puppet out of it
+                pc_is_puppeted_by = ROOT
+            }
+            ROOT.FROM.FROM.FROM = {
+                NOT = {
+                    any_country_with_core = {
+                        exists = yes #dead tags core most of China and would otherwise block every state here
+                        NOT = { tag = ROOT.FROM.FROM }
+                    }
+                }
+                NOT = {
+                    any_country = {
+                        NOT = { tag = ROOT.FROM.FROM }
+                        PREV = { is_claimed_by = PREV }
+                    }
+                }
+            }
+        }
+        ai_desire = 1100 #Finite offset, has to clear the influence cutoff
+    }
+
+    finish_the_force_government_before_a_rump_survives = {
+        peace_action_type = { force_government }
+        enable = {
+            pc_turn > 2
+            ROOT.FROM.FROM = { pc_is_forced_government_by = ROOT }
+            ROOT.FROM.FROM.FROM = {
+                NOT = {
+                    any_country_with_core = {
+                        exists = yes #dead tags core most of China and would otherwise block every state here
+                        NOT = { tag = ROOT.FROM.FROM }
+                    }
+                }
+                NOT = {
+                    any_country = {
+                        NOT = { tag = ROOT.FROM.FROM }
+                        PREV = { is_claimed_by = PREV }
+                    }
+                }
+            }
+        }
+        ai_desire = 1100 #Finite offset, has to clear the influence cutoff
+    }
+
     leave_player_controlled_land_until_later_in_the_process = {
         peace_action_type = { take_states puppet force_government liberate }
         enable = {
@@ -1016,6 +1075,28 @@ peace_ai_desires = {
                 is_major = no
             }
             ROOT.FROM.FROM.FROM = {
+                OR = {
+                    pc_is_state_claimed = yes
+                    ROOT = {
+                        any_other_country = {
+                            OR = {
+                                AND = {  #losers can be on the winning side when they capitulated during the war
+                                    NOT = {
+                                        has_war_with = ROOT
+                                    }
+                                    pc_is_loser = yes
+                                }
+                                pc_is_winner = yes
+                            }
+                            FROM.FROM.FROM = {
+                                OR = {
+                                    is_core_of = PREV
+                                    is_claimed_by = PREV
+                                }
+                            }
+                        }
+                    }
+                }
                 NOT = {
                     OR = {
                         is_claimed_by = ROOT
@@ -1032,7 +1113,7 @@ peace_ai_desires = {
 
         enable = {
             ROOT.FROM.FROM = { check_variable = { num_owned_states > 30 } }
-			ROOT.FROM.FROM = { NOT = { tag = GER } } #Special handling
+			ROOT.FROM.FROM = { NOT = { pc_has_authored_wholesale_puppet_plan = yes } } #Special handling, see the trigger
         }
         ai_desire = -200
     }
@@ -1046,14 +1127,21 @@ peace_ai_desires = {
         ai_desire = -200
     }
 
-    dont_take_state_if_already_puppeted_by_us = { ###Too messy
-        peace_action_type = { take_state }
-
-        enable = {
-            ROOT.FROM = { pc_is_puppeted_by = ROOT }
-        }
-        ai_desire = -200
-    }
+    ### DISABLED ON PURPOSE. This rule had been inert since it was written because its action type was misspelled
+    ### take_state, and enabling it turns out to be a regression either way it is scoped. As written the taker is
+    ### the beneficiary, so it means "give our new puppet nothing", which cancels return_puppet_cores (+70, and
+    ### commented "This simply has to be the highest priority") on exactly the same condition and leaves every
+    ### conference-created puppet without its own cores. Rescoped to the giver it would instead block a winner from
+    ### taking agreed states off a country it is puppeting, which kills JAP_take_chinese_cities_if_possible.
+    ### Left off until someone decides which behaviour is actually wanted. Do not simply fix the token.
+    # dont_take_state_if_already_puppeted_by_us = { ###Too messy
+    #     peace_action_type = { take_states }
+    #
+    #     enable = {
+    #         ROOT.FROM = { pc_is_puppeted_by = ROOT }
+    #     }
+    #     ai_desire = -200
+    # }
 
     puppet_their_puppets = {
         peace_action_type = { puppet }
@@ -1211,6 +1299,23 @@ peace_ai_desires = {
             }
         }
         ai_desire = 50
+    }
+
+    minors_should_puppet_big_countries = {  #If minors have a bunch of warscore, dont directly annex massive countries like Indonesia/USSR
+        peace_action_type = { puppet }
+        enable = {
+            is_major = no
+            ROOT.FROM = {   #this being FROM instead of FROM.FROM means fragmentating is avoided
+                check_variable = { num_core_states > 6 }
+            }
+            ROOT.FROM.FROM.FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                    is_claimed_by = ROOT
+                }
+            }
+        }
+        ai_desire = 1000
     }
 
 }

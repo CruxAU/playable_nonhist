@@ -144,7 +144,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = strategic_bomber
-		value = -20
+		value = -100
 	}
 
 	ai_strategy = {
@@ -256,12 +256,6 @@ SOV_bomber_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = tactical_bomber
-		value = 1
-	}
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = strategic_bomber
 		value = 1
 	}
 }
@@ -1199,6 +1193,26 @@ SOV_have_some_train_production = {
 	}
 }
 
+# Industry relocation borrows 80 trains per move
+SOV_more_train_production = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		date > 1941.1.1
+		NOT = { has_equipment = { train_equipment > 399 } }
+		num_of_military_factories > 50
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 6
+	}
+}
+
 # Make people sceptic about sending support to the Whites - again
 SOV_dont_support_whites = {
 
@@ -1682,6 +1696,28 @@ SOV_dont_do_so_many_naval_invasions_please = {
 		type = invasion_unit_request
 		tag = FIN
 		value = -50
+	}
+}
+
+SOV_do_not_naval_invade_romania_early_on = {
+	allowed = { original_tag = SOV }
+	enable = {
+		is_historical_focus_on = yes
+		date > 1939.01.01
+	}
+
+	abort = {
+		date > 1943.01.01
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = ROM
+		value = -100
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = BUL
+		value = -100
 	}
 }
 

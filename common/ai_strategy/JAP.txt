@@ -1107,6 +1107,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 			AND = {
@@ -1128,33 +1129,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 		}
 	}
 
-	abort = {
-		OR = {
-			NOT = { country_exists = SIK }
-			SIK = {
-				OR = {
-					is_in_faction_with = JAP
-					is_subject_of = JAP
-				}
-			}
-			AND = {
-				OR = {
-					AND = {
-						has_global_flag = SOV_soviet_japanese_reconciliation_flag
-						NOT = { has_war_with = SOU }
-					}
-					has_non_aggression_pact_with = SOU
-					is_in_faction_with = SOU
-				}
-				SIK = {
-					OR = {
-						is_in_faction_with = SOU
-						is_subject_of = SOU
-					}
-				}
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1181,20 +1156,13 @@ all_china_must_prosper_in_my_prosperity_sphere_XSM = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = XSM }
-		XSM = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1221,20 +1189,13 @@ all_china_must_prosper_in_my_prosperity_sphere_GXC = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = GXC }
-		GXC = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1261,20 +1222,13 @@ all_china_must_prosper_in_my_prosperity_sphere_SHX = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = SHX }
-		SHX = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1301,20 +1255,13 @@ all_china_must_prosper_in_my_prosperity_sphere_YUN = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = YUN }
-		YUN = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1342,20 +1289,13 @@ all_china_must_prosper_in_my_prosperity_sphere_SND = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = SND }
-		SND = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1383,20 +1323,13 @@ all_china_must_prosper_in_my_prosperity_sphere_GDC = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = GDC }
-		GDC = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1424,20 +1357,13 @@ all_china_must_prosper_in_my_prosperity_sphere_SIC = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = SIC }
-		SIC = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1465,20 +1391,13 @@ all_china_must_prosper_in_my_prosperity_sphere_XIC = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = XIC }
-		XIC = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1506,20 +1425,13 @@ all_china_must_prosper_in_my_prosperity_sphere_NXM = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = NXM }
-		NXM = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1547,20 +1459,13 @@ all_china_must_prosper_in_my_prosperity_sphere_GSM = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = GSM }
-		GSM = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1588,20 +1493,13 @@ all_china_must_prosper_in_my_prosperity_sphere_HBC = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = HBC }
-		HBC = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
@@ -1629,25 +1527,356 @@ all_china_must_prosper_in_my_prosperity_sphere_PRC = {
 				OR = {
 					is_in_faction_with = JAP
 					is_subject_of = JAP
+					CHI_is_soviet_protected = yes
 				}
 			}
 		}
 	}
 
-	abort = {
-		NOT = { country_exists = PRC }
-		PRC = {
-			OR = {
-				is_in_faction_with = JAP
-				is_subject_of = JAP
-			}
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
 		id = PRC
 		value = 5000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_SIK = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = SIK
+		NOT = { has_war_with = SOU }
+		SIK = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = SIK
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = SIK
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_XSM = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = XSM
+		NOT = { has_war_with = SOU }
+		XSM = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = XSM
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = XSM
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_GXC = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = GXC
+		NOT = { has_war_with = SOU }
+		GXC = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = GXC
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = GXC
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_SHX = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = SHX
+		NOT = { has_war_with = SOU }
+		SHX = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = SHX
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = SHX
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_YUN = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = YUN
+		NOT = { has_war_with = SOU }
+		YUN = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = YUN
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = YUN
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_SND = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = SND
+		NOT = { has_war_with = SOU }
+		SND = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = SND
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = SND
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_GDC = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = GDC
+		NOT = { has_war_with = SOU }
+		GDC = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = GDC
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = GDC
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_SIC = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = SIC
+		NOT = { has_war_with = SOU }
+		SIC = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = SIC
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = SIC
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_XIC = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = XIC
+		NOT = { has_war_with = SOU }
+		XIC = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = XIC
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = XIC
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_NXM = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = NXM
+		NOT = { has_war_with = SOU }
+		NXM = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = NXM
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = NXM
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_GSM = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = GSM
+		NOT = { has_war_with = SOU }
+		GSM = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = GSM
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = GSM
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_HBC = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = HBC
+		NOT = { has_war_with = SOU }
+		HBC = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = HBC
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = HBC
+		value = 1000
+	}
+}
+
+### Comintern-backed warlord - a wargoal here calls in the USSR, so stay out unless we are already fighting them.
+JAP_do_not_provoke_the_comintern_PRC = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		country_exists = PRC
+		NOT = { has_war_with = SOU }
+		PRC = {
+			CHI_is_soviet_protected = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = PRC
+		value = -2000
+	}
+	ai_strategy = {
+		type = ignore
+		id = PRC
+		value = 1000
 	}
 }
 
@@ -2239,6 +2468,219 @@ JAP_unit_buffer_for_home_islands_invasion_force = {
 	}
 }
 
+### Okinawa is the gateway to the home islands - garrison it once a real naval power is in the war, not for the China war.
+JAP_garrison_okinawa_against_naval_majors = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_war = yes
+		any_enemy_country = {
+			is_major = yes
+		}
+		enemies_naval_strength_ratio > 0.75
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.03
+		order_id = 7
+		states = {
+			526
+		}
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+### Taiwan screens the approach to the Ryukyus and south China - hold it once a real naval power is in the war.
+JAP_garrison_taiwan_against_naval_majors = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_war = yes
+		any_enemy_country = {
+			is_major = yes
+		}
+		enemies_naval_strength_ratio > 0.75
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.04
+		order_id = 8
+		states = {
+			524
+		}
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+### Once an approach is breached, throw the submarine force at the invader's supply line - subs are the only hulls the convoy raiding objective can claim, so it does not need to outrank invasion defence.
+### Approaches are mutually exclusive so only one raid target is ever live - convoy_raiding_target values sum per naval base and the objective asserts past 150.
+JAP_raid_the_pacific_approach = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_war = yes
+		JAP_pacific_approach_breached = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = convoy_raiding_target
+		id = 90 # coast of japan
+		value = 150
+	}
+
+	ai_strategy = {
+		type = naval_dominance
+		id = 90
+		value = 100
+	}
+}
+
+JAP_raid_the_western_approach = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_war = yes
+		JAP_western_approach_breached = yes
+		NOT = {
+			JAP_pacific_approach_breached = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = convoy_raiding_target
+		id = 76 # east china sea
+		value = 150
+	}
+
+	ai_strategy = {
+		type = naval_dominance
+		id = 76
+		value = 100
+	}
+}
+
+JAP_raid_the_northern_approach = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_war = yes
+		JAP_northern_approach_breached = yes
+		NOT = {
+			JAP_pacific_approach_breached = yes
+			JAP_western_approach_breached = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = convoy_raiding_target
+		id = 79 # sea of japan
+		value = 150
+	}
+
+	ai_strategy = {
+		type = naval_dominance
+		id = 79
+		value = 100
+	}
+}
+
+### Okinawa is the outer approach, so the raiding starts there before anything touches the home islands.
+JAP_raid_the_outer_approach = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_war = yes
+		526 = { NOT = { is_fully_controlled_by = JAP } }
+		NOT = {
+			JAP_pacific_approach_breached = yes
+			JAP_western_approach_breached = yes
+			JAP_northern_approach_breached = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = convoy_raiding_target
+		id = 78 # philippine sea
+		value = 150
+	}
+
+	ai_strategy = {
+		type = naval_dominance
+		id = 78
+		value = 100
+	}
+}
+
+# The "Launch an Offensive in [FROM.GetNameDef]" decisions tag their target state with
+# JAP_chinese_offensive_military_offensive for 70 days, so use that as the AI's cue to actually push there.
+JAP_press_declared_state_offensive = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	enable = {
+		has_war = yes
+		OR = {
+			has_completed_focus = JAP_strategic_offensives
+			has_completed_focus = JAP_revoke_the_peace_preservation_law
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	# Rush any front section that touches the state we declared an offensive in.
+	ai_strategy = {
+		type = front_control
+
+		state_trigger = {
+			has_dynamic_modifier = { modifier = JAP_chinese_offensive_military_offensive scope = JAP }
+		}
+
+		priority = 200 # Above JAP_hold_up_in_china so a declared offensive overrides the careful posture
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+
+	# Ask for more divisions on that front while the offensive lasts.
+	ai_strategy = {
+		type = front_unit_request
+
+		state_trigger = {
+			has_dynamic_modifier = { modifier = JAP_chinese_offensive_military_offensive scope = JAP }
+		}
+
+		value = 30
+	}
+
+	# Point the armoured spearheads at the offensive state.
+	ai_strategy = {
+		type = force_concentration_target_weight
+
+		state_trigger = {
+			has_dynamic_modifier = { modifier = JAP_chinese_offensive_military_offensive scope = JAP }
+		}
+
+		value = 50
+	}
+}
+
 JAP_hold_up_in_china = { #We got this far but there are bigger targets to worry about for a while
 	allowed = {
 		original_tag = JAP
@@ -2478,10 +2920,14 @@ JAP_get_the_rubber_islands = {
 
 }
 
+# Go in overland from Western Siam and land at Rangoon
 JAP_invade_burma = {
+	allowed = {
+		original_tag = JAP
+	}
 	enable = {
-		SIA = { is_ally_with = JAP }
-		336 = {
+		has_war_with = BRM
+		289 = {
 			controller = {
 				OR = {
 					is_ally_with = JAP
@@ -2490,6 +2936,7 @@ JAP_invade_burma = {
 			}
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = invade
@@ -2498,35 +2945,117 @@ JAP_invade_burma = {
 	}
 
 	ai_strategy = {
-	    type = invasion_unit_request
-	    state = 431
-	    value = 120
+		type = front_unit_request
+		tag = BRM
+		value = 50
 	}
 
 	ai_strategy = {
-	    type = invasion_unit_request
-	    state = 430
-	    value = 100
+		type = invasion_unit_request
+		state = 995
+		value = 200
 	}
 
 	ai_strategy = {
-	    type = invasion_unit_request
-	    state = 997
-	    value = 60
-	}
-
-	ai_strategy = {
-	    type = invasion_unit_request
-	    state = 995 
-	    value = 50 
+		type = invasion_unit_request
+		state = 997
+		value = 60
 	}
 
 	ai_strategy = {
 		type = naval_invasion_focus
 		value = 200
 	}
+}
+
+# Only push on into Bengal once we have promised to help Bose
+JAP_invade_bengal_for_bose = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_country_flag = agreed_to_help_bose
+		has_war_with = RAJ
+	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 431
+		value = 120
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 430
+		value = 100
+	}
+}
+
+# Once the southern resource area is ours, send the freed divisions up through Burma towards Bengal
+JAP_push_into_india = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		OR = {
+			has_war_with = BRM
+			has_war_with = RAJ
+		}
+		surrender_progress < 0.2
+		336 = {
+			controller = {
+				OR = {
+					original_tag = JAP
+					is_ally_with = JAP
+				}
+			}
+		}
+		335 = {
+			controller = {
+				OR = {
+					original_tag = JAP
+					is_ally_with = JAP
+				}
+			}
+		}
+		327 = {
+			controller = {
+				OR = {
+					original_tag = JAP
+					is_ally_with = JAP
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = BRM
+		value = 40
+	}
+
+	# The road over Manipur and Assam into Bengal
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = {
+			OR = {
+				state = 990
+				state = 432
+				state = 430
+				state = 431
+			}
+		}
+		value = 60
+	}
+
+	# Keep the China line manned so the new front does not strip it bare
+	ai_strategy = {
+		type = front_unit_request
+		tag = CHI
+		value = 25
+	}
 }
 
 JAP_avoid_hong_kong_invasion_if_no_need = {
@@ -2701,3 +3230,176 @@ JAP_prioritize_navy_chief = {
 	}
 }
 
+
+JAP_prioritize_army_chief = {
+	allowed = { original_tag = JAP }
+	enable = {
+		date > 1936.7.1
+		NOT = {
+			any_character = {
+				has_advisor_role = army_chief
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = army_chief
+		value = 200
+	}
+}
+
+JAP_satisfy_political_advisor_demands = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		OR = {
+			has_active_mission = JAP_government_faction_demands_political_appointment
+			has_active_mission = JAP_zaibatsu_faction_demands_political_appointment
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = political_advisor
+		value = 150
+	}
+}
+
+JAP_satisfy_industrial_concern_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_zaibatsu_faction_demands_industrial_company_employment
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = industrial_concern
+		value = 150
+	}
+}
+
+JAP_satisfy_army_size_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_larger_army
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 25
+	}
+}
+
+# Army demands count the free stockpile, but only bank it in peacetime or the army stops growing
+JAP_satisfy_army_truck_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_more_trucks
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
+		value = 2
+	}
+}
+
+JAP_bank_army_truck_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_more_trucks
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = save_equipment
+		id = motorized_equipment
+		value = 220
+	}
+}
+
+JAP_satisfy_army_artillery_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_more_artillery
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = artillery_equipment
+		value = 2
+	}
+}
+
+JAP_bank_army_artillery_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_more_artillery
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = save_equipment
+		id = artillery_equipment
+		value = 320
+	}
+}
+
+# Only the medium branch, banking the 1000 light chassis the other branch asks for would strip the armour divisions.
+JAP_satisfy_army_tank_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_more_tanks
+		has_tech = basic_medium_tank_chassis
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_tank_chassis
+		value = 3
+	}
+}
+
+JAP_bank_army_tank_demand = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		has_active_mission = JAP_army_faction_demands_more_tanks
+		has_tech = basic_medium_tank_chassis
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = save_equipment
+		id = medium_tank_chassis
+		value = 320
+	}
+}

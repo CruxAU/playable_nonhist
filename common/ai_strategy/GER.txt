@@ -5189,6 +5189,7 @@ GER_im_getting_stalled_out_in_war_with_CZE_try_to_break_out_in_the_south_and_go_
 		value = 80 # +80% Need alot to break forts
 	}
 }
+#Pfot ends
 
 GER_dont_send_air_to_middle_east = {
 	allowed = { original_tag = GER }
@@ -5234,4 +5235,3 @@ GER_build_tank_destroyers = {
 		value = 1
 	}
 }
-#Pfot ends

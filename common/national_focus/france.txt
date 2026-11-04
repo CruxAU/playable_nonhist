@@ -489,17 +489,9 @@
 		}
 
 		available = {
-			any_state = {
-				OR = {
-					state = 272
-					state = 780
-					state = 556
-					state = 779
-					state = 778
-					state = 781
-					state = 776
-					state = 777
-				}	
+			any_state_of = {
+				target = {272 780 556 779 778 781 776 777}
+	
 				is_owned_or_subject_trigger = yes
 			}
 		}
@@ -1166,11 +1158,11 @@
 				}
 				capital_scope = {
 					create_unit = {
-						division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_0 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
+						division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_1 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_0 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
+						division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_1 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
 						owner = ROOT
 					}
 				}
@@ -2349,22 +2341,26 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			every_neighbor_country = {
-				limit = {
-					has_government = fascism
-					NOT = { has_non_aggression_pact_with = ROOT }
-					NOT = { is_guaranteed_by = ROOT }
-					NOT = { is_in_faction_with = ROOT }
-					NOT = { has_war_with = ROOT }
-				}
-				ROOT = {
-					create_wargoal = {
-						type = topple_government
-						target = PREV
-						expire = 0
+			custom_override_tooltip = { #Standard tt only shows last entry
+				tooltip = FRA_pre_empt_the_fascist_attack_tt
+				every_neighbor_country = {
+					limit = {
+						has_government = fascism
+						NOT = { has_non_aggression_pact_with = ROOT }
+						NOT = { is_guaranteed_by = ROOT }
+						NOT = { is_in_faction_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+					ROOT = {
+						create_wargoal = {
+							type = topple_government
+							target = PREV
+							expire = 0
+						}
 					}
 				}
 			}
+			
 		}
 	}
 
@@ -3881,12 +3877,16 @@
 		}
 
 		available = {
-			country_exists = CZE
 			is_subject = no
 		}
 		
 		bypass = {
-
+			is_in_faction = yes
+			is_faction_leader = no
+			has_war = yes
+		}
+		bypass_effect = {
+			set_rule = { can_create_factions = yes }
 		}
 
 		cancel_if_invalid = yes
@@ -3908,6 +3908,7 @@
 			else_if = {
 				limit = {
 					CZE = {
+						exists = yes
 						has_government = ROOT
 						OR = {
 							is_subject = no
@@ -3921,6 +3922,7 @@
 			else_if = {
 				limit = {
 					CZE = {
+						exists = yes
 						has_government = ROOT
 						is_in_faction = no
 						OR = {
@@ -3928,7 +3930,7 @@
 							is_subject_of = ROOT
 						}
 					}
-					is_in_faction = no
+					#is_in_faction = no		#focus now bypasses if in a faction and war, let them leave the faction and do this otherwise
 				}
 				set_rule = { can_create_factions = yes }
 				create_faction_from_template = faction_template_the_little_entente
@@ -3937,6 +3939,10 @@
 				hidden_effect = {
 					CZE = { country_event = generic.5 }
 				}
+			}
+			else = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_the_little_entente
 			}
 		}
 	}
@@ -4017,8 +4023,7 @@
 
 		available = {
 			is_in_faction = yes
-			any_other_country = {
-				is_in_faction_with = ROOT
+			any_allied_country = {
 				custom_trigger_tooltip = {
 					tooltip = FRA_invest_in_our_weaker_allies_trigger_tt
 					check_variable = { num_of_military_factories < FRA.num_of_military_factories }
@@ -4183,12 +4188,13 @@
 		}
 
 		available = {
+			is_subject = no
+			is_faction_leader = yes
 			ENG = {
 				is_faction_leader = yes
-			}
-			is_subject = no
-			NOT = {
-				has_war_with = ENG
+				NOT = {
+					has_war_with = ROOT
+				}
 			}
 		}
 		
@@ -4535,22 +4541,20 @@
 			}
 			
 			AND = {
-				OR = {
-					ITA = { 
-						controls_state = 550 
-					}					
-					any_country = {
-						is_subject_of = ITA
-						controls_state = 550 
+				550 = {
+					controller = {
+						OR = {
+							tag = ITA
+							is_subject_of = ITA
 						}
+					}
 				}
-				OR = {
-					ITA = { 
-						controls_state = 559 
-					}					
-					any_country = {
-						is_subject_of = ITA
-						controls_state = 559 
+				559 = {
+					controller = {
+						OR = {
+							tag = ITA
+							is_subject_of = ITA
+						}
 					}
 				}
 			}
@@ -4608,22 +4612,20 @@
 				is_subject = no 
 			}
 			AND = {
-				OR = {
-					ITA = { 
-						controls_state = 550 
-					}					
-					any_country = {
-						is_subject_of = ITA
-						controls_state = 550 
+				550 = {
+					controller = {
+						OR = {
+							tag = ITA
+							is_subject_of = ITA
+						}
 					}
 				}
-				OR = {
-					ITA = { 
-						controls_state = 559 
-					}					
-					any_country = {
-						is_subject_of = ITA
-						controls_state = 559 
+				559 = {
+					controller = {
+						OR = {
+							tag = ITA
+							is_subject_of = ITA
+						}
 					}
 				}
 			}
@@ -5658,14 +5660,9 @@
 		
 		bypass = {
 			NOT = {
-				any_other_country = {
-					OR = {
-						tag = POL
-						tag = CZE
-						tag = YUG
-						tag = ROM
-						tag = HUN
-					}
+				any_country_of = {
+					target = {POL CZE YUG ROM HUN}
+					exists = yes
 					is_guaranteed_by = ROOT
 				}
 			}
@@ -5773,8 +5770,9 @@
 		}
 
 		available = {
-			any_other_country = {
-				original_tag = SPR
+			any_country_with_original_tag = {
+				exists = yes
+				original_tag_to_check = SPR
 				OR = {
 					has_government = ROOT
 					AND = {
@@ -5980,8 +5978,7 @@
 				has_war_with = GRE
 				has_subject = GRE
 			}
-			any_country = {
-				is_in_faction_with = ROOT
+			any_allied_country = {
 				OR = {
 					has_war_with = GRE
 					has_subject = GRE
@@ -6391,42 +6388,29 @@
 		}
 
 		available = {
-			OR = {
-				BEL = {
-					is_subject_of = ROOT
-				}
-				COG = {
-					is_subject_of = ROOT
-				}
-			}
-			OR = { 
-				is_subject = no
-				is_subject_of = GER
-			}
-			all_state = {
+
+			AND = {
 				OR = {
-					state = 295
-					state = 538
-					state = 718
-					state = 769
-					state = 768
-					state = 890
-					state = 888
-					state = 889
+					BEL = { is_subject_of = ROOT }
+					COG = { is_subject_of = ROOT }
 				}
-				CONTROLLER = { 
-					OR = { 
-						AND = {
-							original_tag = BEL 
-							is_subject_of = ROOT
-						}
-						is_subject_of = BEL 
-						AND = {
-							original_tag = COG 
-							is_subject_of = ROOT
-						}
-					} 
-				} 
+				is_subject = no
+
+				#All states would have to evaluate true for ALL STATES it's easier this way
+
+				custom_trigger_tooltip = {
+					tooltip = FRA_grow_the_empire_available_tt
+					295 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					538 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					718 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					769 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					768 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					890 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					888 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					889 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+				}
+				
+				
 			}
 		}
 		

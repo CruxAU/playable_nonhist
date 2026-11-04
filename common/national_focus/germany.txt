@@ -1058,50 +1058,142 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = GER_autobahn_tt
-			hidden_effect = {
-				64 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+			if = {
+				limit = {
+					64 = {
+						
+							infrastructure < 5
+											
 					}
-				}
-				59 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
+					59 = {
 
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
+							infrastructure < 5 
+						
+					}
+					60 = {
+
+							infrastructure < 5 
+						
+					}
+					54 = {
+						
+							infrastructure < 5 
+						
+					}
+				}
+				custom_effect_tooltip = GER_autobahn_tt
+				hidden_effect = {
+					64 = {
+						if = {
+							limit = { is_controlled_by = ROOT }
+							add_building_construction = {
+								type = infrastructure
+								level = 5
+								instant_build = yes
+							}
+						}
+					}
+					59 = {
+						if = {
+							limit = { is_controlled_by = ROOT }
+
+							add_building_construction = {
+								type = infrastructure
+								level = 5
+								instant_build = yes
+							}
+						}
+					}
+					60 = {
+						if = {
+							limit = { is_controlled_by = ROOT }
+							add_building_construction = {
+								type = infrastructure
+								level = 5
+								instant_build = yes
+							}
+						}
+					}
+					54 = {
+						if = {
+							limit = { is_controlled_by = ROOT }
+							add_building_construction = {
+								type = infrastructure
+								level = 5
+								instant_build = yes
+							}
 						}
 					}
 				}
-				60 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
+			}
+
+			else = {
+				custom_override_tooltip = {
+					tooltip = GER_autobahn_fallback_tt
+					random_core_state = {
+						limit = {
+							
+								infrastructure < 5
+							
+						}
 						add_building_construction = {
 							type = infrastructure
-							level = 5
+							level = 1
 							instant_build = yes
 						}
+						set_state_flag = GER_autobahn_built
 					}
-				}
-				54 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
+					random_core_state = {
+						limit = {
+							
+								infrastructure < 5
+							
+							NOT = {
+								has_state_flag = GER_autobahn_built
+							}
+						}
 						add_building_construction = {
 							type = infrastructure
-							level = 5
+							level = 1
 							instant_build = yes
 						}
+						set_state_flag = GER_autobahn_built
+					}
+					random_core_state = {
+						limit = {
+							
+								infrastructure < 5
+							
+							NOT = {
+								has_state_flag = GER_autobahn_built
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						set_state_flag = GER_autobahn_built
+					}
+					random_core_state = {
+						limit = {
+							
+								infrastructure < 5
+							
+							NOT = {
+								has_state_flag = GER_autobahn_built
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						set_state_flag = GER_autobahn_built
 					}
 				}
-			}		
+			}
+					
 		}
 	}
 	
@@ -3183,7 +3275,7 @@ focus_tree = {
 
 				create_equipment_variant = {
 					name = "Nashorn"
-					design_team = mio:GER_alkett_organization #We feed on your tears
+					design_team = mio:GER_daimler_benz_organization
 					parent_version = 0
 					type = medium_tank_destroyer_chassis_1
 					modules = {
@@ -6868,7 +6960,7 @@ focus_tree = {
 							fixed_ship_deck_slot_1 = ship_deck_space
 							fixed_ship_deck_slot_2 = ship_deck_space
 							fixed_ship_anti_air_slot = ship_anti_air_1
-							fixed_ship_engine_slot = carrier_ship_engine_3
+							fixed_ship_engine_slot = carrier_ship_engine_2
 							fixed_ship_secondaries_slot = empty
 							front_1_custom_slot = ship_deck_space
 						}
@@ -6899,7 +6991,7 @@ focus_tree = {
 							fixed_ship_deck_slot_1 = ship_deck_space
 							fixed_ship_deck_slot_2 = ship_deck_space
 							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_engine_slot = carrier_ship_engine_2
+							fixed_ship_engine_slot = carrier_ship_engine_3
 							fixed_ship_secondaries_slot = empty
 							front_1_custom_slot = ship_deck_space
 							mid_1_custom_slot = ship_deck_space
@@ -8284,8 +8376,9 @@ focus_tree = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
 				}
-				any_other_country = {
-					original_tag = SPR
+				any_other_country_with_original_tag_of = {
+					exists = yes
+					target = {SPR}
 					has_government = fascism
 					has_volunteers_amount_from = {
 						tag = ROOT
@@ -8933,8 +9026,7 @@ focus_tree = {
 						AND = {
 							is_in_faction = yes
 							NOT = { is_in_faction_with = GER }
-							any_other_country = {
-								is_in_faction_with = AUS
+							any_allied_country = {
 								is_subject = no
 							}
 						}
@@ -9087,8 +9179,9 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					any_other_country = {
-						original_tag = AUS
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = AUS
 						has_civil_war = yes
 						OR = {
 							owns_state = 4
@@ -9115,15 +9208,17 @@ focus_tree = {
 							AND = {
 								has_government = neutrality
 								NOT = {
-									any_other_country = {
-										original_tag = AUS
+									any_country_with_original_tag = {
+										exists = yes
+										original_tag_to_check = AUS
 										has_government = fascism
 									}
 								}
 							}
 							NOT = {
-								any_other_country = {
-									original_tag = AUS
+								any_country_with_original_tag = {
+									exists = yes
+									original_tag_to_check = AUS
 									OR = {
 										has_government = fascism
 										has_government = neutrality
@@ -9962,30 +10057,30 @@ focus_tree = {
 				if = { # HOL has formed EU and CZE is part of it - Alt-hist
 					limit = {
 						CZE = {
-							is_in_faction_with = HOL
 							is_subject = no
+							is_in_faction = yes
+							is_faction_leader = no
+							# faction_leader = {	#theres an event option for this
+							# 	NOT = {
+							# 		has_war_with = ROOT
+							# 	}
+							# }
 						}
-						HOL = {
-							has_completed_focus = HOL_foundations_for_a_european_union
-							is_faction_leader = yes
-							is_subject = no
-							exists = yes
-						}
-						NOT = { has_war_with = HOL }
-						NOT = { has_war_with = FRA }
-						OR = {
-							HUN = {
-								NOT = {
-									has_completed_focus = HUN_protect_czechoslovakia #DOD only
-								}
-							}
-							CZE = {
-								has_country_flag = HUN_AH_CZE_refused
-							}
-						}
+						# OR = {
+						# 	HUN = {
+						# 		NOT = {
+						# 			has_completed_focus = HUN_protect_czechoslovakia #DOD only
+						# 		}
+						# 	}
+						# 	CZE = {
+						# 		has_country_flag = HUN_AH_CZE_refused
+						# 	}
+						# }
 					}
-					HOL = {
-						country_event = germany.40
+					CZE = {
+						faction_leader = {
+							country_event = germany.40
+						}
 					}
 				}
 				else_if = { #THIS IS THE HISTORICAL OUTCOME THAT SHOULD HAPPEN ON HISTORICAL - HISTORICAL HERE!! 
@@ -10665,18 +10760,20 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_improve_national_spirit_tooltip
-				OR = {
-					GER = { controls_state = 126 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 126
+				126 = {
+					controller = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
 					}
 				}
-				OR = {
-					GER = { controls_state = 16 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 16
+				16 = {
+					controller = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
 					}
 				}
 			}
@@ -10904,6 +11001,15 @@ focus_tree = {
 							is_core_of = LIT
 						}
 					}
+					NOT = {
+						AND = {
+							tag = LIT
+							has_country_flag = cave_to_enemy_pressure_flag
+							NOT = {    #Appeased the wrong side
+								has_completed_focus = LIT_appease_soviets
+							}
+						}
+					}
 				}
 				display_individual_scopes = yes
 				every_controlled_state = {
@@ -10925,6 +11031,27 @@ focus_tree = {
 						target = PREV
 						generator = PREV.GER_baltic_target_states_array
 					}
+				}
+			}
+			if = {
+				limit = {
+					LIT = {
+						has_country_flag = cave_to_enemy_pressure_flag
+						NOT = {    #Appeased the wrong side
+							has_completed_focus = LIT_appease_soviets
+						}
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_global_flag = GER_wishes_to_puppet_lithuania_flag
+				custom_effect_tooltip = LIT_occupation_tt
+				LIT = {
+					# Germany demands we become their vassal
+					country_event = {
+						id = wuw_GER_realpolitik.7
+						hours = 6
+						random_hours = 12
+					}	
 				}
 			}
 		}
@@ -11762,8 +11889,9 @@ focus_tree = {
 				#custom_trigger_tooltip = {
 					#tooltip = GER_danzig_trigger_polish_civil_war
 					AND = {
-						any_other_country = {
-							original_tag = POL
+						any_country_with_original_tag = {
+							exists = yes
+							original_tag_to_check = POL
 							has_civil_war = yes
 							OR = {
 								is_in_faction_with = ROOT
@@ -12583,8 +12711,8 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					any_country = {
-						original_tag = FRA
+					any_country_with_original_tag = {
+						original_tag_to_check = FRA
 						exists = yes
 					}
 				}
@@ -12594,8 +12722,8 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = {
-						original_tag = LUX
+					any_country_with_original_tag = {
+						original_tag_to_check = LUX
 						exists = yes
 					}
 				}
@@ -12913,6 +13041,7 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				OR = {
+					surrender_progress > 0.05
 					has_government = democratic
 					has_government = communism
 				}
@@ -13950,8 +14079,7 @@ focus_tree = {
 			OR = {
 				has_war_with = YUG
 				NOT = { country_exists = YUG }
-				any_other_country = {
-					is_in_faction_with = ROOT
+				any_allied_country = {
 					OR = {
 						has_war_with = YUG
 						YUG = {
@@ -15072,7 +15200,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Panzer VII Löwe"
 						type = heavy_tank_chassis_2
-						design_team = mio:GER_daimler_benz_organization #We feed on your tears
+						design_team = mio:GER_porsche_organization
 						parent_version = 0
 						modules = {
 							main_armament_slot = tank_heavy_cannon_2
@@ -16861,8 +16989,7 @@ focus_tree = {
 								}
 								
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 333
 								NOT = {
 									has_country_flag = {
@@ -16902,8 +17029,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 334
 								NOT = {
 									has_country_flag = {
@@ -16944,8 +17070,7 @@ focus_tree = {
 								}
 								
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 335
 								NOT = {
 									has_country_flag = {
@@ -16985,8 +17110,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 336
 								NOT = {
 									has_country_flag = {
@@ -17026,8 +17150,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 667
 								NOT = {
 									has_country_flag = {
@@ -17067,8 +17190,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 668
 								NOT = {
 									has_country_flag = {
@@ -17108,8 +17230,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 672
 								NOT = {
 									has_country_flag = {
@@ -17150,8 +17271,7 @@ focus_tree = {
 								}
 								
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 673
 								NOT = {
 									has_country_flag = {
@@ -17191,8 +17311,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 721
 								NOT = {
 									has_country_flag = {
@@ -17232,8 +17351,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 738
 								NOT = {
 									has_country_flag = {
@@ -17273,8 +17391,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 684
 								NOT = {
 									has_country_flag = {
@@ -17314,8 +17431,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 647
 								NOT = {
 									has_country_flag = {
@@ -17355,8 +17471,7 @@ focus_tree = {
 									}
 								}	
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 646
 								NOT = {
 									has_country_flag = {
@@ -17396,8 +17511,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 633
 								NOT = {
 									has_country_flag = {
@@ -17437,8 +17551,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 979
 								NOT = {
 									has_country_flag = {
@@ -17478,8 +17591,7 @@ focus_tree = {
 									}
 								}
 							}
-							any_other_country = {
-								is_in_faction_with = ROOT
+							any_allied_country = {
 								controls_state = 737
 								NOT = {
 									has_country_flag = {
@@ -25210,8 +25322,8 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = { has_idea = GER_fernostliche_legion_ns }
-			any_country = {
-				original_tag = SPR 
+			any_country_with_original_tag = {
+				original_tag_to_check = SPR 
 				exists = yes
 				OR = {
 					has_government = democratic
@@ -25394,8 +25506,9 @@ focus_tree = {
 					is_guaranteed_by = SOV
 					has_guaranteed = SOV
 				}
-				any_country = {
-					original_tag = SOV #in the event of cw weirdness
+				any_country_with_original_tag = {
+					exists = yes
+					original_tag_to_check = SOV #in the event of cw weirdness
 					OR = {
 						exists = no
 						NOT = { has_government = communism }
@@ -26648,19 +26761,10 @@ focus_tree = {
 					value > 50
 				}	
 			}
-			any_state = {
+			any_state_of = {
+				target = {777 773 895 894 541 893 768 769 546}
+
 				is_owned_and_controlled_by = FRA
-				OR = {
-					state = 777
-					state = 773
-					state = 895
-					state = 894
-					state = 541
-					state = 893
-					state = 768
-					state = 769
-					state = 546
-				}
 			}
 		}
 
@@ -27961,9 +28065,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_faction_leader = yes
-			any_other_country = {
-				is_in_faction_with = ROOT
-			}
+			num_faction_members > 1
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -27996,9 +28098,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_faction_leader = yes
-			any_other_country = {
-				is_in_faction_with = ROOT
-			}
+			num_faction_members > 1
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -28012,11 +28112,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					NOT = {
-						any_other_country = {
-							is_in_faction_with = ROOT
-						}
-					}
+					num_faction_members < 2 #I am the only faction member
 				}
 				custom_effect_tooltip = GER_integrated_economies_tt
 				custom_effect_tooltip = if_they_accept_tt
@@ -28063,9 +28159,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_faction_leader = yes
-			any_other_country = {
-				is_in_faction_with = ROOT
-			}
+			num_faction_members > 1
 			64 = {
 				is_fully_controlled_by = ROOT
 			}
@@ -30573,12 +30667,14 @@ focus_tree = {
 		relative_position_id = GER_safeguard_poland
 		cost = 5
 		available = {
-			any_other_country = {
-				OR = {
-					is_guaranteed_by = ROOT
-					is_in_faction_with = ROOT
+			SOV = {
+				any_neighbor_country = {
+					NOT = { tag = ROOT }
+					OR = {
+						is_guaranteed_by = ROOT
+						is_in_faction_with = ROOT
+					}
 				}
-				is_neighbor_of = SOV
 			}
 		}
 
@@ -30609,6 +30705,8 @@ focus_tree = {
 								owns_state = PREV
 								controls_state = PREV
 							}
+
+							
 						}
 					}
 					add_building_construction = {
@@ -30743,18 +30841,9 @@ focus_tree = {
 		cost = 5
 		
 		available = {
-			any_country = {
-				OR = {
-					original_tag = LIT
-					original_tag = LAT
-					original_tag = POL
-					original_tag = EST
-					original_tag = UBD
-					original_tag = BLR
-					original_tag = KSH
-					original_tag = SIL
-					original_tag = UKR
-				}
+			any_country_with_original_tag_of = {
+				exists = yes
+				target = {LIT LAT POL EST UBD BLR KSH SIL UKR}
 				OR = {
 					is_guaranteed_by = ROOT
 					is_in_faction_with = ROOT
@@ -30776,18 +30865,9 @@ focus_tree = {
 			IF = {
 				limit = {
 					NOT = {
-						any_country = {
-							OR = {
-								original_tag = LIT
-								original_tag = LAT
-								original_tag = POL
-								original_tag = EST
-								original_tag = UBD
-								original_tag = BLR
-								original_tag = KSH
-								original_tag = SIL
-								original_tag = UKR
-							}
+						any_country_with_original_tag_of = {
+							exists = yes
+							target = {LIT LAT POL EST UBD BLR KSH SIL UKR}
 							OR = {
 								is_guaranteed_by = ROOT
 								is_in_faction_with = ROOT
@@ -31107,20 +31187,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			any_country = {
-				OR = {
-					original_tag = FIN
-					original_tag = LIT
-					original_tag = LAT
-					original_tag = POL
-					original_tag = EST
-					original_tag = UBD
-					original_tag = BLR
-					original_tag = KSH
-					original_tag = SIL
-					original_tag = UKR
-					original_tag = KAR
-				}
+			any_country_with_original_tag_of = {
+				exists = yes
+				target = {FIN LIT LAT POL EST UBD BLR KSH SIL UKR KAR}
 				is_guaranteed_by = ROOT
 				is_in_faction = no
 			}
@@ -31579,13 +31648,35 @@ focus_tree = {
 		completion_reward = {
 
 			add_named_threat = { threat = 5 name = GER_demand_lithuanian_integration }
-			country_event = {
-				id = wuw_GER_realpolitik.5
-			}	
-			custom_effect_tooltip = one_of_the_options_tt
-			event_option_tooltip = wuw_GER_realpolitik.5.a
-			custom_effect_tooltip = one_of_the_options_tt
-			event_option_tooltip = wuw_GER_realpolitik.5.b
+			if = {
+				limit = {
+					LIT = {
+						has_country_flag = cave_to_enemy_pressure_flag
+						NOT = {    #Appeased the wrong side
+							has_completed_focus = LIT_appease_soviets
+						}
+					}
+				}
+				set_global_flag = GER_wishes_to_puppet_lithuania_flag
+				custom_effect_tooltip = LIT_occupation_tt
+				LIT = {
+					# Germany demands we become their vassal
+					country_event = {
+						id = wuw_GER_realpolitik.7
+						hours = 6
+						random_hours = 12
+					}	
+				}
+			}
+			else = {
+				country_event = {
+					id = wuw_GER_realpolitik.5
+				}	
+				custom_effect_tooltip = one_of_the_options_tt
+				event_option_tooltip = wuw_GER_realpolitik.5.a
+				custom_effect_tooltip = one_of_the_options_tt
+				event_option_tooltip = wuw_GER_realpolitik.5.b
+			}
 
 			if = {
 				limit = {
@@ -31977,8 +32068,10 @@ focus_tree = {
 				IF = {
 					limit = {
 						POL = {
-							exists = no
-							NOT = {	has_completed_focus = POL_restore_bermontians }
+							OR = {
+								exists = no
+								NOT = {	has_completed_focus = POL_restore_bermontians }
+							}
 						}
 					}
 					POL = {
@@ -32728,8 +32821,8 @@ focus_tree = {
 				FRA = { has_capitulated = yes }
 				FRA = { is_subject_of = GER }
 				NOT = {
-					any_country = {
-						original_tag = FRA
+					any_country_with_original_tag = {
+						original_tag_to_check = FRA
 						exists = yes
 					}
 				}
@@ -33461,29 +33554,10 @@ focus_tree = {
 					value > 50
 				}	
 			}
-			any_state = {
+			any_state_of = {
+				target = {773 777 546 768 769 895 894 541 893 743 647 979 737 684 633 1070 646 726 725 }
+
 				is_owned_and_controlled_by = ENG
-				OR = {
-					state = 773
-					state = 777
-					state = 546
-					state = 768
-					state = 769
-					state = 895
-					state = 894
-					state = 541
-					state = 893
-					state = 743
-					state = 647
-					state = 979
-					state = 737
-					state = 684
-					state = 633
-					state = 1070
-					state = 646
-					state = 726
-					state = 725
-				}
 			}
 		}
 
@@ -35682,8 +35756,9 @@ focus_tree = {
 			is_subject = no
 			has_war = no
 			NOT = {
-				any_country = {
-					original_tag = GER
+				any_country_with_original_tag = {
+					exists = yes
+					original_tag_to_check = GER
 					has_government = fascism
 				}
 			}
@@ -36874,8 +36949,8 @@ focus_tree = {
 				FRA = { has_capitulated = yes }
 				FRA = { is_subject_of = GER }
 				NOT = {
-					any_country = {
-						original_tag = FRA
+					any_country_with_original_tag = {
+						original_tag_to_check = FRA
 						exists = yes
 					}
 				}
@@ -36927,9 +37002,10 @@ focus_tree = {
 		}
 
 		bypass = {
-			any_country = {
-				owns_state = 188
-				is_in_faction_with = GER
+			188 = {
+				owner = {
+					is_in_faction_with = GER
+				}
 			}	
 		}
 		
@@ -37431,8 +37507,9 @@ focus_tree = {
 		prerequisite = { focus = GER_tackle_the_communist_threat }
 		available = {
 			is_subject = no
-			any_country = {
-				original_tag = SPR
+			any_country_with_original_tag = {
+				exists = yes
+				original_tag_to_check = SPR
 				has_government = communism
 				NOT = { has_war_with = ROOT }
 			}
@@ -37935,23 +38012,10 @@ focus_tree = {
 		prerequisite = { focus = GER_danubian_expansion }
 		available = {
 			is_subject = no
-			OR = {
-				any_country = { 
-					original_tag = HUN
-					has_government = communism 
-				}
-				any_country = { 
-					original_tag = ROM
-					has_government = communism 
-				}
-				any_country = { 
-					original_tag = YUG
-					has_government = communism 
-				}
-				any_country = { 
-					original_tag = BUL
-					has_government = communism 
-				}
+			any_country_with_original_tag_of = {
+				exists = yes
+				target = {HUN ROM YUG BUL}
+				has_government = communism	
 			}
 		}
 		x = 0
@@ -37966,8 +38030,9 @@ focus_tree = {
 			custom_effect_tooltip = GER_no_balkan_communism_tt
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = HUN
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = HUN
 						has_government = communism 
 					}
 				}
@@ -37990,8 +38055,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = ROM
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = ROM
 						has_government = communism 
 					}
 				}
@@ -38014,8 +38080,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = YUG
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = YUG
 						has_government = communism 
 					}
 				}
@@ -38038,8 +38105,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = BUL
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = BUL
 						has_government = communism 
 					}
 				}
@@ -38153,23 +38221,11 @@ focus_tree = {
 		prerequisite = { focus = GER_low_countries_membership }
 		available = {
 			is_subject = no
-			OR = {
-				any_country = { 
-					original_tag = FRA
-					has_government = communism 
-				}
-				any_country = { 
-					original_tag = HOL
-					has_government = communism 
-				}
-				any_country = { 
-					original_tag = BEL
-					has_government = communism 
-				}
-				any_country = { 
-					original_tag = LUX
-					has_government = communism 
-				}
+
+			any_country_with_original_tag_of = {
+				exists = yes
+				target = {FRA HOL BEL LUX}
+				has_government = communism
 			}
 		}
 		x = 0
@@ -38184,8 +38240,9 @@ focus_tree = {
 			custom_effect_tooltip = GER_no_reds_in_western_europe_tt
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = FRA
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = FRA
 						has_government = communism 
 					}
 				}
@@ -38208,8 +38265,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = HOL
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = HOL
 						has_government = communism 
 					}
 				}
@@ -38232,8 +38290,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = BEL
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = BEL
 						has_government = communism 
 					}
 				}
@@ -38256,8 +38315,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = { 
-						original_tag = LUX
+					any_country_with_original_tag = {
+						exists = yes
+						original_tag_to_check = LUX
 						has_government = communism 
 					}
 				}

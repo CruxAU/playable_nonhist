@@ -3938,8 +3938,19 @@ focus_tree = {
 		cost = 10
 	
 		bypass = {
-			NOR = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OR = {
+					overlord = {
+						is_ally_with = NOR
+					}
+					is_ally_with = NOR
+				}
+			}
+			else = {
+				is_ally_with = NOR
 			}
 		}
 	
@@ -4023,9 +4034,69 @@ focus_tree = {
 	
 		available = {
 			OR = {
-				100 = { NOT = {	is_controlled_by = ROOT }}
-				101 = { NOT = {	is_controlled_by = ROOT }}
-				337 = { NOT = {	is_controlled_by = ROOT }}
+				100 = {
+					controller = {
+						NOT = {
+							tag = ROOT
+							is_ally_with = ROOT
+							if = {
+								limit = {
+									ROOT = {
+										is_subject = yes
+									}
+								}
+								is_ally_with = ROOT.overlord
+								else = {
+									hidden_trigger = {
+										always = no
+									}
+								}
+							}
+						}
+					}
+				}
+				101 = {
+					controller = {
+						NOT = {
+							tag = ROOT
+							is_ally_with = ROOT
+							if = {
+								limit = {
+									ROOT = {
+										is_subject = yes
+									}
+								}
+								is_ally_with = ROOT.overlord
+								else = {
+									hidden_trigger = {
+										always = no
+									}
+								}
+							}
+						}
+					}
+				}
+				337 = {
+					controller = {
+						NOT = {
+							tag = ROOT
+							is_ally_with = ROOT
+							if = {
+								limit = {
+									ROOT = {
+										is_subject = yes
+									}
+								}
+								is_ally_with = ROOT.overlord
+								else = {
+									hidden_trigger = {
+										always = no
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	
@@ -4043,13 +4114,20 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					ICE = {
-						exists = no
-					}
 					NOT = {
-						100 = {is_controlled_by = ROOT }
-						any_allied_country = {
-							controls_state = 100
+						100 = {
+							controller = {
+								OR = {
+									tag = ROOT
+									is_ally_with = ROOT
+									ROOT = {
+										is_subject = yes
+										overlord = {
+											has_subject = PREV.PREV
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -4064,26 +4142,23 @@ focus_tree = {
 						}
 					}
 				}
-				else_if = {
-					limit = {
-						NOT = {
-							any_allied_country = {
-								has_subject = ICE
-							}
-						}
-					}
-					declare_war_on = {
-					    target = ICE
-					    type = annex_everything
-					}
-				}
 			}
 			if = {
 				limit = {
 					101 = { NOT = {	is_controlled_by = ROOT }}
 					NOT = {
-						any_allied_country = {
-							controls_state = 101
+						101 = {
+							controller = {
+								OR = {
+									is_ally_with = ROOT
+									ROOT = {
+										is_subject = yes
+										overlord = {
+											has_subject = PREV.PREV
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -4103,8 +4178,18 @@ focus_tree = {
 				limit = {
 					337 = { NOT = {	is_controlled_by = ROOT }}
 					NOT = {
-						any_allied_country = {
-							controls_state = 337
+						337 = {
+							controller = {
+								OR = {
+									is_ally_with = ROOT
+									ROOT = {
+										is_subject = yes
+										overlord = {
+											has_subject = PREV.PREV
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -4136,8 +4221,19 @@ focus_tree = {
 		cost = 10
 	
 		bypass = {
-			SWE = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OR = {
+					overlord = {
+						is_ally_with = SWE
+					}
+					is_ally_with = SWE
+				}
+			}
+			else = {
+				is_ally_with = SWE
 			}
 		}
 	
@@ -4219,9 +4315,20 @@ focus_tree = {
 		}
 	
 		available = {
-			FIN = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
 				NOT = {
-					is_in_faction_with = ROOT
+					overlord = {
+						is_ally_with = FIN
+					}
+					is_ally_with = FIN
+				}
+			}
+			else = {
+				NOT = {
+					is_ally_with = FIN
 				}
 			}
 		}

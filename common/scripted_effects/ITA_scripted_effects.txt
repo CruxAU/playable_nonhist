@@ -5558,7 +5558,7 @@ ITA_add_improved_light_tank_templates = {
 		type = light_tank_destroyer_chassis_2
 		parent_version = 0
 		modules = {
-			main_armament_slot = tank_medium_cannon
+			main_armament_slot = tank_high_velocity_cannon
 			turret_type_slot = tank_light_fixed_superstructure_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
@@ -5927,7 +5927,7 @@ ITA_add_modern_musculus_sh_tank_template_and_production = {
 		equipment = {
 			type = super_heavy_tank_chassis_1
 			creator = "ITA"
-			version_name = "Caesar"
+			version_name = "Cataphract Mortis"
 		}
 
 		requested_factories = 1

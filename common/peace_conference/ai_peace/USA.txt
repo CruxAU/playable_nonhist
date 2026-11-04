@@ -144,6 +144,27 @@ peace_ai_desires = {
         ai_desire = 250
     }
 
+    # MacArthur on a budget. Without this the two rules above switch off together below 800 and nothing is left
+    # that positively wants Japan, so the conference ends with Japan untouched and still fascist.
+    USA_change_gov_japan_if_we_cannot_afford_to_puppet = {
+        peace_action_type = { force_government }
+        enable = {
+            FROM.FROM.FROM = {
+                is_core_of = JAP
+                NOT = { state = 526 } # Keep Okinawa, taken outright above
+            }
+            FROM = {
+                original_tag = JAP
+            }
+            ROOT = {
+                original_tag = USA
+                has_government = democratic
+                NOT = { pc_total_score > 800 } # Cannot afford the puppet, so insist on the government instead
+            }
+        }
+        ai_desire = 250
+    }
+
     # MacArthur
     USA_dont_change_gov_japan = {
         peace_action_type = { force_government }
@@ -174,6 +195,12 @@ peace_ai_desires = {
 				NOT = {
 					state = 526 #Okinawa
 				}
+            }
+            FROM = {
+                tag = ROOT
+            }
+            ROOT = {
+                original_tag = USA
             }
         }
         ai_desire = 1100 #Finite offset

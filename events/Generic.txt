@@ -59,20 +59,6 @@ country_event = {
 				add_offsite_building = { type = arms_factory level = 2 }
 			}
 		}
-		if = { #If Finland is suffering Estonian Fascist stuff - Super frankenstein'ed tooltip due to loc limitations :) 
-			limit = {
-				original_tag = FIN
-				FROM = { original_tag = EST }
-				has_idea = EST_vaps_organizing_in_FIN
-			}
-			effect_tooltip = {
-				add_ideas = EST_vaps_organizing_in_FIN
-			}
-			custom_effect_tooltip = DECISION_WILL_BE_REMOVED_IF
-			effect_tooltip = {
-				activate_decision = ban_fascist_party
-			}
-		}
 	}
 }
 
@@ -698,7 +684,22 @@ country_event = {
 # Generic invitaton to join major Alliance
 country_event = {
 	id = generic.5
-	title = generic.5.t
+	title = {
+		text = generic.5.t
+		trigger = {
+			FROM = {
+				is_in_faction = yes
+			}
+		}
+	}
+	title = {
+		text = generic.5.t.backup
+		trigger = {
+			FROM = {
+				is_in_faction = no
+			}
+		}
+	}
 	desc = { # FROM and ROOT are Democratic
 		text = generic.5.d.a
 		trigger = {

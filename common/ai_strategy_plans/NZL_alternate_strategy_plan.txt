@@ -8,13 +8,6 @@ NZL_alternate_democratic = {
 	}
 	enable = {
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = NZL_ai_behavior
-					option = DEFAULT
-				}
-			}
 			has_country_flag = NZL_AI_RANDOM_DEMOCRATIC_ALTERNATE 
 			has_game_rule = {
 				rule = NZL_ai_behavior
@@ -33,7 +26,9 @@ NZL_alternate_democratic = {
 		NZL_national_roads_board		
 		NZL_bureau_of_industry							
 		NZL_wairarapa_sheep_farms
-		NZL_new_zealand_steel										
+		NZL_restart_the_onekaka_ironworks
+		NZL_new_zealand_steel
+		NZL_full_employment
 		#1937									
 		NZL_taranaki_oil								
 		NZL_department_of_scientific_and_industrial_research		
@@ -114,13 +109,6 @@ NZL_alternate_fascist = {
 	}
 	enable = {
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = NZL_ai_behavior
-					option = DEFAULT
-				}
-			}
 			has_country_flag = NZL_AI_RANDOM_FASCIST 
 			has_game_rule = {
 				rule = NZL_ai_behavior
@@ -133,13 +121,18 @@ NZL_alternate_fascist = {
 	}
 
 	ai_national_focuses = {
-		NZL_the_first_labor_government								
-		NZL_statute_of_westminster		
+		# Break with Britain first, so the new regime is in place before the war
+		NZL_the_first_labor_government
+		NZL_statute_of_westminster
+		NZL_in_the_darkness
+		NZL_befriend_japan
 		NZL_ministry_of_public_works	
 		NZL_bureau_of_industry					
 		NZL_national_roads_board									
 		NZL_wairarapa_sheep_farms
-		NZL_new_zealand_steel										
+		NZL_restart_the_onekaka_ironworks
+		NZL_new_zealand_steel
+		NZL_full_employment
 		#1937									
 		NZL_taranaki_oil											
 		NZL_department_of_scientific_and_industrial_research		
@@ -152,10 +145,8 @@ NZL_alternate_fascist = {
 		NZL_domestic_arms_industry									
 		#1939						
 		NZL_think_big
-		NZL_in_the_darkness												
 		NZL_expand_the_nzpaf										
 		NZL_maori_affairs_act
-		NZL_befriend_japan									
 		#1940
 		NZL_bob_semple_tank											
 		NZL_form_the_rnzn											
@@ -221,13 +212,6 @@ NZL_alternate_communist = {
 	}
 	enable = {
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = NZL_ai_behavior
-					option = DEFAULT
-				}
-			}
 			has_country_flag = NZL_AI_RANDOM_COMMUNIST 
 			has_game_rule = {
 				rule = NZL_ai_behavior
@@ -240,13 +224,19 @@ NZL_alternate_communist = {
 	}
 
 	ai_national_focuses = {
-		NZL_the_first_labor_government								
-		NZL_statute_of_westminster		
+		# Break with Britain first, so the new regime is in place before the war
+		NZL_the_first_labor_government
+		NZL_statute_of_westminster
+		NZL_the_lee_affair
+		NZL_empower_the_working_class
+		NZL_join_comintern
 		NZL_ministry_of_public_works						
 		NZL_national_roads_board		
 		NZL_bureau_of_industry							
 		NZL_wairarapa_sheep_farms
-		NZL_new_zealand_steel										
+		NZL_restart_the_onekaka_ironworks
+		NZL_new_zealand_steel
+		NZL_full_employment
 		#1937									
 		NZL_taranaki_oil			
 		NZL_department_of_scientific_and_industrial_research		
@@ -259,15 +249,12 @@ NZL_alternate_communist = {
 		NZL_domestic_arms_industry									
 		#1939						
 		NZL_think_big
-		NZL_the_lee_affair												
 		NZL_expand_the_nzpaf										
 		NZL_maori_affairs_act
-		NZL_empower_the_working_class									
 		#1940
 		NZL_bob_semple_tank											
 		NZL_form_the_rnzn											
 		NZL_expand_devonport_naval_base								
-		NZL_join_comintern
 		NZL_form_the_rnzaf											
 		#1941
 		NZL_the_manpower_act										
