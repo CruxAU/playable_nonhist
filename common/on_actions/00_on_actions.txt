@@ -31525,13 +31525,13 @@ on_actions = {
 								}
 							}
 							random_list = { #NHMMAP placeholder path weights
-								10 = { AUS = { set_country_flag = AUS_AI_RANDOM_HISTORICAL } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HISTORICAL_ALT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_ITA } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_DEM } }
+								60 = { AUS = { set_country_flag = AUS_AI_RANDOM_HISTORICAL } }
+								15 = { AUS = { set_country_flag = AUS_AI_RANDOM_HISTORICAL_ALT } }
+								13 = { AUS = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_ITA } }
+								12 = { AUS = { set_country_flag = AUS_AI_RANDOM_AGREEMENT_DEM } }
 							}
 						}
-						10 = { #Herrenhaus puppet paths (MONARCHIST_PUPPET). NHMMAP base weight; the path is picked below
+						8 = { #Herrenhaus puppet paths (MONARCHIST_PUPPET). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31543,16 +31543,21 @@ on_actions = {
 								}
 							}
 							modifier = {
-								factor = 0
+								factor = 0.66
 								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = MINORS_FACTIONS
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = REALISTIC
+									}
+								}
+							}
+							modifier = {
+								factor = 0
+								OR = {
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = FASCIST_ONLY
@@ -31564,23 +31569,108 @@ on_actions = {
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = COMMUNIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
 									}
 								}
 							}
 							set_add_unaligned_game_weight_large = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK } }
+								20 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_CORE } 
+								}
+								8 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_MAX } 
+								}
+								5 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_CP_ATTACK } 
+								}
+								20 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_CORE } }
+								8 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_MAX } 
+								}
+								5 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_ROYAL_ATTACK } 
+								}
+								21 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_CORE } }
+								8 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_MAX } 
+								}
+								5 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_PUP_AXIS_ATTACK } 
+								}
 							}
 						}
-						16 = { #Herrenhaus annex paths (MONARCHIST_ANNEX). NHMMAP base weight; the path is picked below
+						7 = { #Herrenhaus annex paths (MONARCHIST_ANNEX). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_unaligned = no
@@ -31592,15 +31682,18 @@ on_actions = {
 								}
 							}
 							modifier = {
+								factor = 0.66
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = MINORS_FACTIONS
+								}
+							}
+							modifier = {
 								factor = 0
 								OR = {
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MINORS_FACTIONS
 									}
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
@@ -31614,19 +31707,50 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = COMMUNIST_ONLY
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
+									}
 								}
 							}
 							set_add_unaligned_weight_small = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP } }
+								20 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_NONE } }
+								8 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP } }
+								5 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_ROYAL_EXP_DIP } }
+								20 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_NONE } 
+								}
+								8 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP } 
+								}
+								5 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_CP_EXP_DIP } 
+								}
+								21 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_NONE } }
+								8 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP } }
+								5 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_ANX_AXIS_EXP_DIP } }
 							}
 						}
 						2 = { #Herrenhaus Danubian Federation paths (NEUTRALITY_FEDERATIVE). NHMMAP base weight; the path is picked below
@@ -31663,21 +31787,25 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = COMMUNIST_ONLY
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
+									}
 								}
 							}
 							set_add_unaligned_game_weight_large = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP } }
+								17 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL } }
+								18 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_SMALL_PROT } }
+								15 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID } }
+								16 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_MID_PROT } }
+								9 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE } }
+								10 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_LARGE_PROT } }
+								7 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU } }
+								8 = { AUS = { set_country_flag = AUS_AI_RANDOM_HAB_DANUBE_EU_PUP } }
 							}
 						}
-						6 = { #Stalinist paths (COMMUNIST_SOV_ALIGNED). NHMMAP base weight; the path is picked below
+						5 = { #Stalinist paths (COMMUNIST_SOV_ALIGNED). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_communist = no
@@ -31686,6 +31814,13 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = NO_GAME_BALANCE
 									}
+								}
+							}
+							modifier = {
+								factor = 0.7
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = MINORS_FACTIONS
 								}
 							}
 							modifier = {
@@ -31707,17 +31842,39 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = MONARCHIST_ONLY
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
+									}
 								}
 							}
 							set_add_communist_weight_small = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_NEU } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_REV } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV } }
+								20 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_NEU } 
+								}
+								10 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_REV } 
+								}
+								50 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN } }
+								20 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_STALIN_COMINTERN_REV } }
 							}
 						}
-						6 = { #Austromarxist paths (COMMUNIST). NHMMAP base weight; the path is picked below
+						7 = { #Austromarxist paths (COMMUNIST). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_communist = no
@@ -31751,17 +31908,21 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = MONARCHIST_ONLY
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
+									}
 								}
 							}
 							set_add_communist_weight_small = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_NEU } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_REV } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV } }
+								30 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_NEU } }
+								10 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_REV } }
+								35 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC } }
+								25 = { AUS = { set_country_flag = AUS_AI_RANDOM_COM_MARX_BLOC_REV } }
 							}
 						}
-						7 = { #Hold Elections: neutral and Allies paths (DEMOCRATIC_ALLIES). NHMMAP base weight; the path is picked below
+						12 = { #Hold Elections: neutral and Allies paths (DEMOCRATIC_ALLIES). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_democratic = no
@@ -31773,12 +31934,15 @@ on_actions = {
 								}
 							}
 							modifier = {
+								factor = 0.66
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = MINORS_FACTIONS
+								}
+							}
+							modifier = {
 								factor = 0
 								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = FASCIST_ONLY
@@ -31791,16 +31955,29 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = MONARCHIST_ONLY
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
+									}
 								}
 							}
 							set_add_democratic_weight_small = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_NEU } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ALLIES } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ALLIES_ATK } }
+								34 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_DEM_NEU } 
+								}
+								36 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ALLIES } }
+								30 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ALLIES_ATK } }
 							}
 						}
-						5 = { #Hold Elections: Alpine and Entente paths (DEMOCRATIC_ALPINE_FEDERATION). NHMMAP base weight; the path is picked below
+						6 = { #Hold Elections: Alpine and Entente paths (DEMOCRATIC_ALPINE_FEDERATION). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_democratic = no
@@ -31834,16 +32011,20 @@ on_actions = {
 										rule = NONHIST_ai_behavior
 										option = MONARCHIST_ONLY
 									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
+									}
 								}
 							}
 							set_add_democratic_weight_small = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ALPINE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ENTENTE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ENTENTE_ATK } }
+								45 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ALPINE } }
+								35 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ENTENTE } }
+								20 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_ENTENTE_ATK } }
 							}
 						}
-						1 = { #Hold Elections: Danubian Federation paths (DEMOCRATIC_FEDERATIVE). NHMMAP base weight; the path is picked below
+						3 = { #Hold Elections: Danubian Federation paths (DEMOCRATIC_FEDERATIVE). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0.40
 								game_weight_can_add_democratic = no
@@ -31876,6 +32057,10 @@ on_actions = {
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = MONARCHIST_ONLY
+									}
+									has_game_rule = {
+										rule = NONHIST_ai_behavior
+										option = AUTHORITARIAN_ONLY
 									}
 								}
 							}
@@ -31902,18 +32087,10 @@ on_actions = {
 								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP } }
 							}
 						}
-						7 = { #Anti-Anschluss paths (ANTI_ANSCLUSS_STRESS). NHMMAP base weight; the path is picked below
+						13 = { #Anti-Anschluss paths (ANTI_ANSCLUSS_STRESS). NHMMAP base weight; the path is picked below
 							modifier = {
 								factor = 0
 								OR = {
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = REALISTIC
-									}
-									has_game_rule = {
-										rule = NONHIST_ai_behavior
-										option = MINORS_FACTIONS
-									}
 									has_game_rule = {
 										rule = NONHIST_ai_behavior
 										option = DEMOCRATIC_ONLY
@@ -31928,20 +32105,172 @@ on_actions = {
 									}
 								}
 							}
+							modifier = {
+								factor = 0.5
+								has_game_rule = {
+									rule = NONHIST_ai_behavior
+									option = MINORS_FACTIONS
+								}
+							}
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP } }
+								18 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF } 
+								}
+								4 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP } 
+								}
+								2 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_NF_EXP_AGGR } 
+								}
+								7 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP } 
+								}
+								4 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP } 
+								}
+								2 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_CP_EXP_AGGR } 
+								}
+								18 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS } }
+								4 = { AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP } }
+								2 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = REALISTIC
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_ITA_AXIS_EXP_AGGR } 
+								}
+								16 = { 
+									modifier = {
+										factor = 0
+										has_game_rule = {
+											rule = NONHIST_ai_behavior
+											option = MINORS_FACTIONS
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF } 
+								}
+								2 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_NF_EXP_DIP } 
+								}
+								6 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP } }
+								2 = { 
+									modifier = {
+										factor = 0
+										OR = {
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = MINORS_FACTIONS
+											}
+											has_game_rule = {
+												rule = NONHIST_ai_behavior
+												option = REALISTIC
+											}
+										}
+									}
+									AUS = { set_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_DEM_CP_EXP_DIP } }
 							}
 						}
 					}
