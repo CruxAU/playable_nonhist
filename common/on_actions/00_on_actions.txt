@@ -32077,14 +32077,14 @@ on_actions = {
 							set_global_flag = NHMMAP_has_euro_democratic_leader
 							set_add_democratic_game_weight_large = yes
 							random_list = { #NHMMAP placeholder path weights
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU } }
-								1 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP } }
+								17 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL } }
+								18 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_SMALL_PROT } }
+								15 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID } }
+								16 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_MID_PROT } }
+								9 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE } }
+								10 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_LARGE_PROT } }
+								7 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU } }
+								8 = { AUS = { set_country_flag = AUS_AI_RANDOM_DEM_DANUBE_EU_PUP } }
 							}
 						}
 						13 = { #Anti-Anschluss paths (ANTI_ANSCLUSS_STRESS). NHMMAP base weight; the path is picked below
