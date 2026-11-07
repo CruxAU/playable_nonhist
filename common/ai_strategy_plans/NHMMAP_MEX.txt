@@ -23,6 +23,10 @@ fp_usa_mex = {
 				option = FP_USA 
 			}
 		}
+		#NHMMAP: wait for the main path's list to finish (every Mexican main plan ends on Oil Field Expansion,
+		#where vanilla's historical list moved on to these focuses). Otherwise the AI interleaves both lists,
+		#e.g. taking XEFO before Professional Army, and misses the Cedillo deadline.
+		has_completed_focus = MEX_focus_oil_field_expansion
 	}
 	abort = {
 		has_war_with = USA
@@ -60,6 +64,10 @@ fp_sov_mex = {
 				option = FP_SOV 
 			}
 		}
+		#NHMMAP: wait for the main path's list to finish (every Mexican main plan ends on Oil Field Expansion,
+		#where vanilla's historical list moved on to these focuses). Otherwise the AI interleaves both lists,
+		#e.g. taking XEFO before Professional Army, and misses the Cedillo deadline.
+		has_completed_focus = MEX_focus_oil_field_expansion
 	}
 	abort = {
 		has_war_with = SOV
@@ -96,6 +104,10 @@ fp_ger_mex = {
 				option = FP_GER
 			}
 		}
+		#NHMMAP: wait for the main path's list to finish (every Mexican main plan ends on Oil Field Expansion,
+		#where vanilla's historical list moved on to these focuses). Otherwise the AI interleaves both lists,
+		#e.g. taking XEFO before Professional Army, and misses the Cedillo deadline.
+		has_completed_focus = MEX_focus_oil_field_expansion
 	}
 	abort = {
 		has_war_with = GER
@@ -132,6 +144,10 @@ fp_uk_mex = {
 				option = FP_ENG
 			}
 		}
+		#NHMMAP: wait for the main path's list to finish (every Mexican main plan ends on Oil Field Expansion,
+		#where vanilla's historical list moved on to these focuses). Otherwise the AI interleaves both lists,
+		#e.g. taking XEFO before Professional Army, and misses the Cedillo deadline.
+		has_completed_focus = MEX_focus_oil_field_expansion
 	}
 	abort = {
 		has_war_with = USA
@@ -168,6 +184,10 @@ fp_hispanic_mexico = {
 				option = FP_HISPANIC
 			}
 		}
+		#NHMMAP: wait for the main path's list to finish (every Mexican main plan ends on Oil Field Expansion,
+		#where vanilla's historical list moved on to these focuses). Otherwise the AI interleaves both lists,
+		#e.g. taking XEFO before Professional Army, and misses the Cedillo deadline.
+		has_completed_focus = MEX_focus_oil_field_expansion
 	}
 	abort = {
 		OR = {
@@ -209,6 +229,10 @@ fp_bolivarian_mexico = {
 				option = FP_BOLIVARIAN
 			}
 		}
+		#NHMMAP: wait for the main path's list to finish (every Mexican main plan ends on Oil Field Expansion,
+		#where vanilla's historical list moved on to these focuses). Otherwise the AI interleaves both lists,
+		#e.g. taking XEFO before Professional Army, and misses the Cedillo deadline.
+		has_completed_focus = MEX_focus_oil_field_expansion
 	}
 	abort = {
 		OR = {
