@@ -9111,3 +9111,90 @@ NHMMAP_EU_federalization_answered_HOL = {
 		value = -200
 	}
 }
+
+
+#==============================================================================
+#====================================AUS=======================================
+#==============================================================================
+
+AUS_royal_alliance_befriend_ENG = { #A Royal Alliance asks to join England's faction (or invites England to ours), England's answer depends a lot on its opinion of us
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		focus_progress = {
+			focus = AUS_a_royal_alliance
+			progress > 0.01
+		}
+		ENG = {
+			has_opinion	= {
+				target = ROOT
+				value < 65
+			}
+			not = { has_war_with = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = ENG }
+			ENG = {
+				OR = {
+					has_opinion	= {
+						target = ROOT
+						value > 90
+					}
+					has_war_with = ROOT
+				}
+			}
+			has_completed_focus = AUS_a_royal_alliance
+		}
+	}
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = improve_relation
+		value = 100
+	}
+}
+
+AUS_royal_alliance_befriend_FRA = { #A Royal Alliance invites France if it isn't in a faction yet, so make France like us too
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		focus_progress = {
+			focus = AUS_a_royal_alliance
+			progress > 0.01
+		}
+		FRA = {
+			has_opinion	= {
+				target = ROOT
+				value < 65
+			}
+			not = { has_war_with = ROOT }
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = {
+				OR = {
+					has_opinion	= {
+						target = ROOT
+						value > 90
+					}
+					has_war_with = ROOT
+				}
+			}
+			has_completed_focus = AUS_a_royal_alliance
+		}
+	}
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
+		target = improve_relation
+		value = 100
+	}
+}
