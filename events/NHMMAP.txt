@@ -302,6 +302,10 @@ country_event = { #event for transnistria controller, if the controller is in th
 				factor = 0.5
 				834 = { is_claimed_by = ROOT }
 			}
+			modifier = { #don't hand over our own core lands (e.g. the Soviets when Romania is in the Comintern)
+				factor = 0.1
+				834 = { is_core_of = ROOT }
+			}
 		}
 		FROM = {
 			country_event = { id = nonhist_ROM.2 days = 3 }
@@ -328,6 +332,10 @@ country_event = { #event for transnistria controller, if the controller is in th
 			modifier = {
 				add = 10
 				834 = { is_claimed_by = ROOT }
+			}
+			modifier = {
+				add = 10
+				834 = { is_core_of = ROOT }
 			}
 			modifier = {
 				add = 5
