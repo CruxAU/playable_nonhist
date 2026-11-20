@@ -2698,6 +2698,7 @@ ROM_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "To The Bitter End" #NHMMAP: old tree only
 		name = FASCIST_ALTERNATE
 		text = "RULE_OPTION_FASCIST_ALTERNATE"
 		desc = "RULE_FASCIST_ALTERNATE_ROM_AI_DESC"
@@ -2716,6 +2717,7 @@ ROM_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		exclude_dlc = "To The Bitter End" #NHMMAP: old tree only
 		name = SANITAIRE
 		text = "RULE_OPTION_SANITAIRE"
 		desc = "RULE_OPTION_SANITAIRE_ROM_AI_DESC"

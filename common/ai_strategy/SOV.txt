@@ -2880,8 +2880,19 @@ SOV_cant_stop_wont_stop = {
 	enable = {
 		has_government = communism #NHMMAP
 		OR = {
-			is_historical_focus_on = yes
-			threat > 0.25
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = DEFAULT
+				}
+				date > 1943.9.1
+			}
+			AND = {
+				is_historical_focus_on = no
+				threat > 0.75
+			}
+			
 		}
 	}
 	abort_when_not_enabled = yes
