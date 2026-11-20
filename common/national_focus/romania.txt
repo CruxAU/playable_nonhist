@@ -3553,7 +3553,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ROM_local_development
+			add_ideas = ROM_local_development_idea
 		}
 	}
 

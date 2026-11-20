@@ -66,14 +66,14 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 75 #because doctrine 70
+		value = 70 #because doctrine 70
 	}
 
 	#Air unit factors
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = 20
+		value = 18
 	}
 
 	ai_strategy = {
@@ -85,7 +85,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 5
+		value = 3
 	}
 
 	ai_strategy = {
@@ -97,7 +97,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = naval_bomber
-		value = 4
+		value = 1
 	}
 
 
@@ -180,7 +180,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
 		id = artillery_equipment
-		value = 4
+		value = 3
 	}
 
 	ai_strategy = {
@@ -204,29 +204,29 @@ SOV_later_unit_roles = {
 	ai_strategy = {
 		type = role_ratio
 		id = motorized
-		value = 11
+		value = 5
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 13
+		value = 10
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = heavy_armor
-		value = 6
+		value = 5
 	}
 	
-	#ai_strategy = {
-	#	type = role_ratio
-	#	id = infantry
-	#	value = -5
-	#}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
 }
 
-SOV_later_unit_roles = {
+SOV_even_later_unit_roles = {
 	
 	allowed = {
 		original_tag = SOV
@@ -240,7 +240,7 @@ SOV_later_unit_roles = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 5
+		value = 8
 	}
 }
 
@@ -380,7 +380,7 @@ SOV_build_the_t34 = {
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
 		id = medium_tank_chassis
-		value = 5
+		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
@@ -949,29 +949,6 @@ SOV_naval_role_ratios_historical = {
 	}
 }
 
-
-#SOV_dont_upgrade_to_weapons_2_too_early = {
-#	allowed = {
-#		original_tag = SOV
-#	}
-#	enable = {
-#		OR = {
-#			date < "1943.1.1" # stock up on lots of rifles, we got the manpower
-#			AND = {
-#				date > "1943.8.1"
-#				surrender_progress < 0.1 # if we arent losing badly its ok now
-#			}
-#		}
-#	}
-#
-#	abort_when_not_enabled = yes
-#
-#	ai_strategy = {
-#		type = production_upgrade_desire_offset
-#		id = infantry_equipment_2
-#		value = -100
-#	}
-#}
 
 SOV_home_land_is_safe = {
 	allowed = {
@@ -2077,10 +2054,10 @@ SOV_unit_buffer_for_asian_threat = {
 		type = put_unit_buffers
 
 		# ratio of total armeis in country to be buffered
-		ratio = 0.1
+		ratio = 0.05
 
 		# you can specify an order id. ratio of same orders ids will be share same ratio
-		#order_id = 2
+		order_id = 1
 
 		# states to put garrison orders (if no state is friendly, strat is invalid)
 		states = {
@@ -2096,6 +2073,41 @@ SOV_unit_buffer_for_asian_threat = {
 
 		# by default if you have orders in target areas, the buffer will request less units.
 		# you can override this to disable the feature
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+}
+
+# Released once Japan is busy with the USA, so these divisions can go west (the Siberian divisions)
+SOV_unit_buffer_for_asian_threat_extra = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		surrender_progress < 0.35
+		NOT = {
+			AND = {
+				has_war_with = GER
+				JAP = { has_war_with = USA }
+				NOT = { has_war_with = JAP }
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		order_id = 2 # must differ from SOV_unit_buffer_for_asian_threat, otherwise they split the ratio instead of adding up
+		states = {
+			563
+			561
+			657
+			408
+			409
+		}
+		area = asia
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = yes
 	}
@@ -2200,13 +2212,14 @@ SOV_boost_div_upgrades = { #lets make sure sov upgrades divs when at war
 	}
 }
 
-SOV_defend_blitzkrieg  = {#Only perform careful attacks, we want to defend while germany has buffs.
+#Only perform careful attacks, we want to defend while germany has buffs.
+SOV_defend_blitzkrieg  = {
 	allowed = {
 		original_tag = SOV
 	}
 
 	enable = {
-		date < 1943.1.1 #To space!
+		date < 1943.1.1
 		has_war_with = GER
 		GER = { has_idea = GER_barbarossa }
 	}
@@ -2218,13 +2231,39 @@ SOV_defend_blitzkrieg  = {#Only perform careful attacks, we want to defend while
 
 		tag = GER
 
-		ratio = 0.4
+		ratio = 0.2
 
 		priority = 100
 		ordertype = front
 		execution_type = careful
 		execute_order = no
 	}
+	
+	ai_strategy = {
+		type = front_control
+
+		tag = ROM
+
+		ratio = 0.2
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+		tag = GER
+		value = 20
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = ROM
+		value = 10
+	}
+
 
 }
 
@@ -2247,12 +2286,37 @@ SOV_defend_blitzkrieg_2  = {#Only perform careful attacks, we want to defend for
 
 		tag = GER
 
-		ratio = 0.4
+		ratio = 0.45
 
 		priority = 100
 		ordertype = front
 		execution_type = careful
 	}
+	
+	ai_strategy = {
+		type = front_control
+
+		tag = ROM
+
+		ratio = 0.2
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+		tag = GER
+		value = 40
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = ROM
+		value = 20
+	}
+
 
 }
 
@@ -2261,13 +2325,115 @@ SOV_wants_civ = {
 		original_tag = SOV
 	}
 	enable = {
-		date < 1938.9.1
+		is_historical_focus_on = yes
+		date < 1938.3.1
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 85
+		value = 95
+	}
+}
+
+# We need a minimal amount of dockyards for lend-lease convoys
+SOV_wants_dockyards = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		is_historical_focus_on = yes
+		date > 1938.1.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 10
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 17
+	}
+	 ai_strategy = {
+          type = build_building
+          id = dockyard
+          target = 408    # Vladivostok
+          value = 100
+  }
+}
+
+SOV_wants_only_mils_in_great_patriotic_war = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		is_historical_focus_on = yes
+		date > 1939.6.1
+		date < 1943.6.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 220
+	}
+}
+
+SOV_support_equipment_priority = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		date > 1938.9.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = support_equipment
+		value = 4
+	}
+}
+
+SOV_convoys_for_lend_lease = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		is_historical_focus_on = yes
+		has_equipment = {
+			convoy < 1000
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 200
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -1000
 	}
 }
 
@@ -2368,37 +2534,6 @@ SOV_ultimatum_EST = {
 	}
 }
 
-#No longer necessary
-#SOV_nothing_bad_could_possibly_happen_now = {
-#	allowed = {
-#		original_tag = SOV
-#	}
-#	enable = {
-#		is_historical_focus_on = yes
-#		NOT = { has_war_with = GER }
-#		date < 1942.2.1
-#	}
-#
-#	abort_when_not_enabled = yes
-#
-#	ai_strategy = {
-#		type = front_unit_request
-#
-#		tag = GER
-#
-#		value = -30 # we have a lovely non-aggression pact, so there's no reason to be worried. At all.
-#	}
-#
-#	ai_strategy = {
-#		type = front_unit_request
-#
-#		tag = ROM
-#
-#		value = -20 # we have a lovely non-aggression pact, so there's no reason to be worried. At all.
-#	}
-#
-#}
-
 SOV_defense_in_depth = {
 	allowed = {
 		original_tag = SOV
@@ -2406,7 +2541,7 @@ SOV_defense_in_depth = {
 	enable = {
 		is_historical_focus_on = yes
 		date > 1940.1.1 
-		date < 1943.1.1 #Maybe this isn't such a good idea now?
+		date < 1942.4.1 #Maybe this isn't such a good idea now?
 		OR = {
 			has_war = no
 			GER = { has_idea = GER_barbarossa }
@@ -2419,7 +2554,7 @@ SOV_defense_in_depth = {
 		type = put_unit_buffers
 
 		# ratio of total armeis in country to be buffered
-		ratio = 0.15
+		ratio = 0.12
 
 		# you can specify an order id. ratio of same orders ids will be share same ratio
 		order_id = 5
@@ -2431,6 +2566,9 @@ SOV_defense_in_depth = {
 			253 #Ivanovo
 			248 #Yaroslavl
 			223 #Tula
+			242 #Smolensk
+			246 #Rzhev
+			247 #Kalinin
 		}
 
 		area = defend_moscow_zone #Hold in reserve until the line encroaches
@@ -2692,27 +2830,6 @@ SOV_dont_send_all_convoys_on_holiday_to_vladivostok = {
 	}
 }
 
-SOV_convoys_are_needed_for_lendlease = {
-	allowed = { original_tag = SOV }
-	enable = {
-		has_equipment = {
-			convoy < 750
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = convoy
-		value = 100
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = convoy
-		value = 4
-	}
-}
-
 SOV_historical_dont_attack_poland_too_early = {
 	allowed = { original_tag = SOV }
 	enable = {
@@ -2732,7 +2849,7 @@ SOV_cant_stop_wont_stop = {
 	allowed = { original_tag = SOV }
 	enable = {
 		is_historical_focus_on = yes
-		date > 1941.9.1
+		date > 1943.9.1
 	}
 	abort_when_not_enabled = yes
 
@@ -2742,12 +2859,48 @@ SOV_cant_stop_wont_stop = {
 	}
 }
 
+SOV_dont_build_extra = {
+	allowed = { original_tag = SOV }
+	enable = {
+		is_historical_focus_on = yes
+		date > 1941.6.1
+		date < 1942.3.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = -0.30 
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -25
+	}
+}
+
+SOV_prepare_for_war = {
+	allowed = { original_tag = SOV }
+	enable = {
+		date > 1939.9.1
+		threat > 0.5
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 0.10
+	}
+}
+
+
+
 SOV_lets_prep_for_more_advanced_heavy_tanks = {
 	allowed = {
 		original_tag = SOV
 	}
 	enable = {
-		date > 1937.1.1
+		date > 1938.6.1
 		OR = {
 			has_tech = basic_medium_tank
 			has_tech = basic_medium_tank_chassis
@@ -2834,7 +2987,7 @@ SOV_we_need_more_tanks_to_smash_the_german_lines = {
 		any_enemy_country = {
 			is_major = yes 
 		}
-		surrender_progress < 0.6 # Stop when pushed back too far as we won't have resources
+		surrender_progress < 0.25 # Stop when pushed back too far as we won't have resources
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {	

@@ -61,9 +61,9 @@ SOV_historical_plan = {
 		#1937
 		SOV_the_comintern #35
 		SOV_the_anti_soviet_trotskyist_center #35 -> Early 1937
+		SOV_send_military_advisors_to_spain #35
 		SOV_addressing_internal_affairs #35
 		SOV_the_workers_dictatorship
-		SOV_pc_of_mechanical_engineering #35 -> Aug 1937
 		SOV_transpolar_flights #35 -> 1937
 		SOV_the_military_conspiracy #35 -> Mid 1937
 
@@ -76,7 +76,7 @@ SOV_historical_plan = {
 		SOV_expand_the_agitprop #35
 		SOV_national_specialists #35
 		SOV_eastern_development #35
-		SOV_expand_the_red_fleet #35
+		# SOV_expand_the_red_fleet #35
 		SOV_support_the_kuomintang #35
 
 		#1939
@@ -85,6 +85,8 @@ SOV_historical_plan = {
 		SOV_the_gobi_gambit # 35 - try to do if support the kuomintang previously has not been done 
 		SOV_baltic_security #35 -> 1939
 		SOV_claims_in_baltic #70 -> 1940
+		#SOV_the_komsomol #35
+		SOV_the_new_soviet_woman #35 -> Extra PP we need to do the claims in the baltic
 		SOV_policy_of_individual_security #35 -> May 1939
 		SOV_secure_leningrad #70
 		SOV_superior_war_machines #35 #Let's get the AI T34 designs
@@ -92,33 +94,36 @@ SOV_historical_plan = {
 
 		#1940
 		SOV_approach_germany #35 -> Feb 1940
-		SOV_pc_of_the_ussr_navy #35
+		#SOV_pc_of_the_ussr_navy #35
+		SOV_pc_of_mechanical_engineering #35 -> Aug 1937
 		SOV_military_engineering_university #35
 		SOV_anti_capitalist_policies #35
 		SOV_claims_on_poland
 		SOV_demand_eastern_poland # (IN CASE NO MOLOTOV-RIBENTROP)
 		SOV_claim_on_bessarabia # -> Jul 1940
-		SOV_foster_flying_clubs
+		SOV_middle_east_diplomacy #35 #Need to be earlier for Iran reasons
 		SOV_behead_the_snake #35 -> May 1940 (raid)
 		SOV_national_academies_of_sciences #35
 
 
 		#1941
 		SOV_shift_to_armaments_production # (FYP) -> Do this ASAP after dealing with claims
+		SOV_optimize_production_lines # (FYP) -> Needs 150 factories, locked once at war with a major
 		SOV_rehabilitated_military
 		SOV_move_industry_to_the_urals
 		SOV_military_reorganization
 		SOV_the_defense_of_moscow #35
-		SOV_middle_east_diplomacy #35 #Need to be earlier for Iran reasons
 
 		#1942
 		SOV_support_afghan_ideology #35 #Need to be earlier for Iran reasons
 		SOV_preemptive_invasion_of_iran #35 -> Aug 1941 #Need to be earlier for Iran reasons
+		SOV_foster_flying_clubs
 		SOV_women_in_aviation
 		SOV_pc_of_mortar_armament # -> Nov 1941
 		SOV_the_means_to_wage_war
 		SOV_leningrad_polytechnical_institute
 		SOV_lessons_of_war #35
+		SOV_the_komsomol #35
 		SOV_raskovas_aviation_group # -> 1942/43 (Oct 41 formation)
 		SOV_penal_battalions #35 -> 1942+
 
@@ -133,7 +138,6 @@ SOV_historical_plan = {
 		#1944
 		SOV_war_heroes
 		SOV_swap_to_political_advisors
-		SOV_the_komsomol #35
 		SOV_smersh
 		SOV_barrier_troops #35
 		SOV_development_aid_for_eastern_allies #35
