@@ -2763,6 +2763,7 @@ ROM_ai_loyalty = {
 		name = LOYAL
 		text = "RULE_OPTION_LOYAL"
 		desc = "RULE_OPTION_LOYAL_ROM_AI_DESC"
+		exclude_dlc = "To The Bitter End" #NHMMAP: rule only gates old-tree side swaps
 		allow_achievements = yes
 	}
 }
