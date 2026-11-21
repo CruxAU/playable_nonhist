@@ -2754,6 +2754,7 @@ ROM_ai_loyalty = {
 	name = "ROM_AI_LOYALTY"
 	group = "RULE_GROUP_AI_BEHAVIOR"
 	required_dlc = "Death or Dishonor"
+	exclude_dlc = "To The Bitter End" #NHMMAP: rule only gates old-tree side swaps
 	default = {
 		name = STANDARD
 		text = "RULE_OPTION_STANDARD"
@@ -2763,7 +2764,6 @@ ROM_ai_loyalty = {
 		name = LOYAL
 		text = "RULE_OPTION_LOYAL"
 		desc = "RULE_OPTION_LOYAL_ROM_AI_DESC"
-		exclude_dlc = "To The Bitter End" #NHMMAP: rule only gates old-tree side swaps
 		allow_achievements = yes
 	}
 }
